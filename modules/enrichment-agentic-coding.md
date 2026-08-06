@@ -1,7 +1,7 @@
 # Enrichment module — Agentic coding for clinicians
 
 **Format:** one 75-minute Zoom session · **Prereq:** none (no coding background assumed)
-**Competencies:** practical use; critical appraisal; ethics/regulation (SaMD boundary); privacy/PHI
+**Competencies:** AIM-5 (clinical application and practical use), AIM-2 (critical appraisal), AIM-4 (ethics, law, regulation — the device boundary and PHI)
 
 ## The claim this module tests
 

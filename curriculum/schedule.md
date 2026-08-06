@@ -64,6 +64,33 @@ content as the standing five-minute frame that opens every lab.
 **If interest runs to policy.** Run both `enrichment-workforce-economics` and
 `enrichment-environment` in week 4 and drop `core-foundations` to pre-work.
 
+## Three throughlines
+
+Modules are independent, but three ideas recur across all of them. Name them
+explicitly in week one and call them by name whenever they reappear — they are
+what turns eight disconnected sessions into a course, and they are what students
+will still have in five years when every tool taught here has been replaced.
+
+**1. Proxies fail.** Almost every AI failure in medicine is a substitution that
+looked reasonable. Cost stood in for need in the Obermeyer algorithm. Light skin
+stood in for normal reflectance in pulse oximetry. Race stood in for unmeasured
+biology in eGFR. A benchmark score stood in for clinical performance in FDA
+clearance data. The question to train is always: *what is this actually
+measuring, and what did it get substituted for?*
+
+**2. Jevons eats efficiency gains.** Per-unit improvement gets swallowed by volume
+growth, and this shows up independently in three separate literatures. Google cut
+per-prompt energy 33x while total emissions rose 48%. AI made radiologists more
+productive and imaging demand grew faster. AI scribes cut documentation time per
+note, and the time went into seeing more patients rather than going home earlier.
+Efficiency is not the same as less.
+
+**3. The published number is the optimistic one.** Pre/post pilots run on
+self-selected early adopters beat randomized trials. Vendor benchmarks on curated
+hard cases beat real-world deployment. The flagship statistic is nearly always the
+best case, and the gap between it and the trial result is the most reliable
+teaching material in this entire field.
+
 ## Standing session structure
 
 Zoom attention decays faster than in a room, so every session runs in blocks with
