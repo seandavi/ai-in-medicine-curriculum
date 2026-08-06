@@ -37,13 +37,25 @@ in the whole portfolio and was invisible from its stub description.
 
 ## Before you teach from this
 
-The research files flag uncertain claims with **`[VERIFY]`**, **`[CONFLICTING]`**,
-or **`[UNVERIFIED]`**. Those flags are load-bearing and were carried forward into
-the modules deliberately. Re-check flagged figures against primary sources before
-they go on a slide — the fast-moving ones are payer litigation status, FDA
-guidance status, NRMP and BLS figures, and the Lancet colonoscopy deskilling
-numbers.
+The research files flag uncertain claims — `[VERIFY]`, `[CONFLICTING]`, and
+`[UNVERIFIED]` in most files, inline ⚠ marks in
+`research/enrichment-activities.md`. Those flags are load-bearing and were carried
+forward into the modules deliberately. `research/enrichment-activities.md` ends
+with a consolidated re-verification list triaged by how badly a mistake would
+hurt; **read it before building slides.**
 
-Two topics in `research/enrichment-activities.md` are marked **NOT RESEARCHED**
-rather than filled in from memory: patient consent/transparency requirements, and
-the EU AI Act. Fill those before running `core-ethics-regulation`.
+The claims most likely to be stale or wrong by the time you teach:
+
+- **Regulatory status**, which moved twice during this research. The FDA Clinical
+  Decision Support guidance students may know from 2022 was replaced in January
+  2026, and the EU AI Act's high-risk deadline was deferred via the Digital
+  Omnibus. Both need a fresh check.
+- **Payer litigation** (Lokken, Kisting-Leung, Humana) — active dockets.
+- **NRMP Match and BLS employment figures** — secondary-sourced.
+- **The Lancet colonoscopy deskilling numbers** (28.4% → 22.4% adenoma detection)
+  — the most quotable statistic in that literature, and the primary abstract was
+  paywall-blocked.
+
+Known genuine gaps, still unfilled: ACGME and LCME AI expectations, the status of
+the NAM AI Code of Conduct, and any 2024–2026 patient-facing clinical chatbot
+safety incident (the 2023 NEDA "Tessa" case remains the canonical example).
