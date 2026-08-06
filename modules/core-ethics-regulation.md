@@ -131,11 +131,18 @@ evidence that showing reasoning did not help.
 
 The **regulatory scavenger hunt** (30–40 min, async-friendly) substitutes for the
 moot court when time is short or when the cohort has already had a heavy
-discussion session. Each group takes one question this course could not resolve —
-the status of the January 2026 CDS revision, whether the lifecycle guidance is
-still draft, ACGME expectations for AI training, the status of the NAM AI Code of
-Conduct, EU AI Act high-risk timing — and finds the current primary-source
-answer, with the URL and the date they checked.
+discussion session. Each group takes one open question and finds the current
+primary-source answer, with the URL and the date they checked.
+
+Use the genuinely unresolved ones: **ACGME and LCME expectations for AI training**
+(never researched), the **status of the NAM AI Code of Conduct** (could not be
+confirmed), and whether any **patient-facing clinical chatbot safety incident**
+has been documented since the 2023 NEDA "Tessa" case. Two questions that were open
+earlier in this course's development — the EU AI Act high-risk timeline and the
+scope of the January 2026 CDS revision — now have verified answers in
+`../research/enrichment-activities.md` §5.3 and §5.4, so assign them only if you
+want a group to *check whether the answer has already moved again*, which on
+current form is a live possibility.
 
 Run it as a real exercise, not a homework assignment: the finding students bring
 back is that several of these questions do not have a clean answer even from the
