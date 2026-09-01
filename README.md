@@ -13,6 +13,11 @@ medical students. ~40 students, Zoom-only, ungraded. Successor to IDPT 8079.
    assembly, plus variants for a one-session-per-week or hands-on-heavy cohort.
 3. **`curriculum/design-constraints.md`** — the fixed facts and what each one
    forces. Check any new module against this.
+4. **`CONTEXT.md`** — who directs and teaches the course, the guest-lecturer
+   roster, evaluation and CQI mechanics, registration quirks, and the open
+   decision about the student-facing tool. The design files are deliberately
+   name-free and date-free so they travel; `CONTEXT.md` is where the CU
+   Anschutz specifics live.
 
 ## Layout
 
@@ -25,6 +30,23 @@ medical students. ~40 students, Zoom-only, ungraded. Successor to IDPT 8079.
 Modules are independent by design. Each tags its competencies, assumes no prior
 module, and can be reordered or dropped without breaking the rest — because in a
 four-week ungraded elective, students *will* miss sessions.
+
+## Working on another machine
+
+This repo assumes the [`seandavi/talks`](https://github.com/seandavi/talks) repo is
+checked out **as a sibling directory** (`../talks`). Roughly 45 references across
+`research/` and `modules/` point into it, and `research/talks-inventory.md` still
+carries absolute paths from the machine it was written on. Clone both under the same
+parent and the relative paths resolve:
+
+```
+git clone git@github.com:seandavi/ai-in-medicine-curriculum.git
+git clone git@github.com:seandavi/talks.git
+```
+
+Where a module cites reusable material, it also gives the published URL under
+`https://talks.seandavis.net/` — archive slugs are immutable, so those links are safe
+to follow (and safe to hard-code in a syllabus) even without the sibling checkout.
 
 ## Source material
 

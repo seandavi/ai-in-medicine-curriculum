@@ -1,0 +1,10 @@
+{
+  "extraKnownMarketplaces": {
+    "education-agent-skills": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/GarethManning/education-agent-skills.git"
+      }
+    }
+  }
+}
