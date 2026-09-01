@@ -1,6 +1,6 @@
 # Talks Repo Inventory for a 4-Week AI-in-Medicine Curriculum
 
-**Repo:** `/home/davsean/Documents/git/talks` · published at `https://talks.seandavis.net`
+**Repo:** `../talks` · published at `https://talks.seandavis.net`
 
 The short version: the two richest reusable assets are the **`agentic-coding` venue decks** (fully sourced Quarto, 1,000–1,750 lines each, with speaker notes that read as prose) and the **`archive/` legacy decks from the IDPT 8079 medical-student course** (rendered HTML only, but exactly the right audience and altitude). Everything under `talks/` other than `agentic-coding` and `microbiome` is a stub pointing at a Google Drive PowerPoint — title and abstract only, no extractable content.
 
@@ -18,7 +18,7 @@ The repo's own stance on reuse (ADR-0008) is that **reuse across talks is agent-
 
 ### `agentic-coding` — the flagship reusable asset
 
-A fragment topic: nine shared fragments in `/home/davsean/Documents/git/talks/talks/agentic-coding/slides/`, composed by five full Quarto venue decks plus one external stub. Fragments (all with substantive speaker notes): `opener`, `chatbot-vs-agent`, `mental-model`, `tokens`, `context-window`, `working-well`, `good-session`, `pricing`, `takeaways`.
+A fragment topic: nine shared fragments in `../talks/talks/agentic-coding/slides/`, composed by five full Quarto venue decks plus one external stub. Fragments (all with substantive speaker notes): `opener`, `chatbot-vs-agent`, `mental-model`, `tokens`, `context-window`, `working-well`, `good-session`, `pricing`, `takeaways`.
 
 | Venue deck | Title | Length | Audience |
 |---|---|---|---|
@@ -35,18 +35,18 @@ Key topics across the family:
 - **Mental model** — "a capable but junior colleague, not an oracle"; your job shifts from writing to directing and reviewing; model vs. framework distinction
 - **Tokens and the context window as a budget** — input vs. output cost asymmetry (output 4–8× input), "lost in the middle" (Liu et al. 2023), context rot
 - **Working well** — Markdown as persistent memory (`CLAUDE.md`/`AGENTS.md`), one objective per conversation, clear/compact between tasks, skills vs. one giant instructions file, MCP as "USB-C for AI"
-- **Privacy, PHI, and trust** (bigcare, umihc, harvard-agents) — consumer chat accounts are not for PHI; BAA-covered institutional deployments differ; IRB and DUAs outrank the slides; local open-weight models when data can't leave; "verify before it counts — you sign the note." ~500 words of notes; **directly liftable into a medical-student ethics/safety session**. Source: `/home/davsean/Documents/git/talks/talks/agentic-coding/venues/2026-07-28-umihc.qmd:560-616`
+- **Privacy, PHI, and trust** (bigcare, umihc, harvard-agents) — consumer chat accounts are not for PHI; BAA-covered institutional deployments differ; IRB and DUAs outrank the slides; local open-weight models when data can't leave; "verify before it counts — you sign the note." ~500 words of notes; **directly liftable into a medical-student ethics/safety session**. Source: `../talks/talks/agentic-coding/venues/2026-07-28-umihc.qmd:560-616`
 - **AI safety / misuse** (bigcare, umihc, harvard-agents) — agentic capability pointed at security, autonomous multi-step attacks, an agent escaping its sandbox, "when capability meets policy," and an honest "what it does and doesn't mean"
 - **Cost and access** (`pricing.qmd`) — free tiers are demo-grade; the $20/mo on-ramp framed explicitly as an equity question, with notes warning against the free path quietly failing students
 - **Where this is going** (bigcare) — agents built for biomedical research, multi-agent systems that propose and test, agents in cancer research, and the honest evaluation
 
-**Hands-on/demo:** yes, and it's the best one in the repo. `/home/davsean/Documents/git/talks/talks/agentic-coding/demo/` drives a live two-act demo — the agent reads `papers.csv`, downloads 10 open-access single-cell/immunotherapy PDFs, then extracts a structured `extraction.csv` and writes a synthesis. The paper set is deliberately constructed around a **real scientific disagreement** (what predicts checkpoint-blockade response), plus a review with no sample size, so the teachable failure is the agent either smoothing over the disagreement or inventing a missing field. There's a `fetch_papers.py` fallback script and a pre-talk rehearsal checklist. `harvard-skills-mcp` additionally has hands-on "write a skill right now" and a workshop `.mcp.json` with live biomedical MCP servers (`biocontext`, `pdbe`, `gget`, biomcp.org).
+**Hands-on/demo:** yes, and it's the best one in the repo. `../talks/talks/agentic-coding/demo/` drives a live two-act demo — the agent reads `papers.csv`, downloads 10 open-access single-cell/immunotherapy PDFs, then extracts a structured `extraction.csv` and writes a synthesis. The paper set is deliberately constructed around a **real scientific disagreement** (what predicts checkpoint-blockade response), plus a review with no sample size, so the teachable failure is the agent either smoothing over the disagreement or inventing a missing field. There's a `fetch_papers.py` fallback script and a pre-talk rehearsal checklist. `harvard-skills-mcp` additionally has hands-on "write a skill right now" and a workshop `.mcp.json` with live biomedical MCP servers (`biocontext`, `pdbe`, `gget`, biomcp.org).
 
 **Medicine relevance:** high for the umihc/bigcare variants; the Harvard pair is bioinformatics-only.
 
 ### `microbiome` — Microbiome and Metagenomics in Cancer
 
-Full Quarto project (`/home/davsean/Documents/git/talks/talks/microbiome/index.qmd`, ~1,560 lines, 60 min, BigCare audience). Four parts: establishing causation (Koch's postulates from the molecular to the sequencing age), measuring the microbiome (16S vs. shotgun, MetaPhlAn 4, reference databases, the count matrix), the microbiome in cancer (single microbes that cause cancer, indirect effects, microbiome-based diagnostics, therapy), and analysis/data resources (differential abundance, alpha/beta diversity, MicroBioMap, curatedMetagenomicData, BugSigDB). Includes a well-built **cautionary tale** section — a high-profile pan-cancer microbiome result that "was wrong," with a slide explicitly marked "Do not quote the last three rows" and a distinction between what's real and what collapsed. That retraction narrative is genuinely reusable in a curriculum unit on evaluating AI/ML claims in medicine, but the rest is **bioinformatics-only** and too deep for 4th-year med students. No hands-on component; ships a handout build (`make-handout.sh`).
+Full Quarto project (`../talks/talks/microbiome/index.qmd`, ~1,560 lines, 60 min, BigCare audience). Four parts: establishing causation (Koch's postulates from the molecular to the sequencing age), measuring the microbiome (16S vs. shotgun, MetaPhlAn 4, reference databases, the count matrix), the microbiome in cancer (single microbes that cause cancer, indirect effects, microbiome-based diagnostics, therapy), and analysis/data resources (differential abundance, alpha/beta diversity, MicroBioMap, curatedMetagenomicData, BugSigDB). Includes a well-built **cautionary tale** section — a high-profile pan-cancer microbiome result that "was wrong," with a slide explicitly marked "Do not quote the last three rows" and a distinction between what's real and what collapsed. That retraction narrative is genuinely reusable in a curriculum unit on evaluating AI/ML claims in medicine, but the rest is **bioinformatics-only** and too deep for 4th-year med students. No hands-on component; ships a handout build (`make-handout.sh`).
 
 ### Stub-only topics (Drive PowerPoints, no extractable content)
 
@@ -60,7 +60,7 @@ Full Quarto project (`/home/davsean/Documents/git/talks/talks/microbiome/index.q
 
 ## 3. Archive (rendered HTML, verbatim, still linkable)
 
-Ordered by usefulness to this curriculum. All under `/home/davsean/Documents/git/talks/archive/`.
+Ordered by usefulness to this curriculum. All under `../talks/archive/`.
 
 **`2024-10-23-ai-in-medical-education` — the single most on-target deck.** Opens with the Bernard Chang (HMS dean) quote about a once-in-decades revolution in medical education. Covers: an academic-medical-center governance framework (campus-llm-kb); a discussion prompt about ChatGPT drafting residency LoRs; what LLMs know about medicine (Med-PaLM 2 / MedQA); adult-learning principles; a scoping review of AI in medical education; then domain-by-domain — admissions and selection, AI-augmented instruction, teaching clinical reasoning with simulated patients, assessment, AI-generated MCQs, procedural-skills tracking; student attitudes; ethics. Second half is a **ready-made faculty/policy module**: a four-tier taxonomy of classroom AI policies (prohibited / allowed with attribution / limited instances / broadly encouraged), academic-integrity appeals (logical, moral, personal), twelve practical tips for ethical AI in medical education, and the FACETS reporting framework. Discussion-driven; no technical hands-on.
 
