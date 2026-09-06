@@ -25,7 +25,7 @@ medical students. ~40 students, Zoom-only, ungraded. Successor to IDPT 8079.
 |---|---|
 | `curriculum/` | Competency framework, module catalog, design constraints |
 | `modules/` | One self-contained file per module — session plan, activities, rubrics |
-| `research/` | The background research the design rests on, with citations |
+| `research/` | The background research the design rests on, with citations; `comparable-courses.md` reviews external courses for what to borrow |
 
 Modules are independent by design. Each tags its competencies, assumes no prior
 module, and can be reordered or dropped without breaking the rest — because in a
