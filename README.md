@@ -13,7 +13,9 @@ medical students. ~40 students, Zoom-only, ungraded. Successor to IDPT 8079.
    assembly, plus variants for a one-session-per-week or hands-on-heavy cohort.
 3. **`curriculum/design-constraints.md`** — the fixed facts and what each one
    forces. Check any new module against this.
-4. **`CONTEXT.md`** — who directs and teaches the course, the guest-lecturer
+4. **`curriculum/chapter-pattern.md`** — the skeleton every student-facing
+   chapter follows: 1–2 h budget, one video or podcast, specialty-choice literature.
+5. **`CONTEXT.md`** — who directs and teaches the course, the guest-lecturer
    roster, evaluation and CQI mechanics, registration quirks, and the open
    decision about the student-facing tool. The design files are deliberately
    name-free and date-free so they travel; `CONTEXT.md` is where the CU
