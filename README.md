@@ -23,7 +23,7 @@ medical students. ~40 students, Zoom-only, ungraded. Successor to IDPT 8079.
 
 | Path | What's in it |
 |---|---|
-| `curriculum/` | Competency framework, module catalog, design constraints |
+| `curriculum/` | Competency framework, module catalog, design constraints, and `delivery-modes.md` — an untested idea about which sessions need live Zoom and what a chat-based async path would look like |
 | `modules/` | One self-contained file per module — session plan, activities, rubrics |
 | `research/` | The background research the design rests on, with citations; `comparable-courses.md` reviews external courses for what to borrow |
 
