@@ -1,2 +1,14 @@
 .claude/settings.local.json
 .DS_Store
+
+# quartobot
+_book/
+_freeze/
+.quarto/
+references.resolved.bib
+references.json
+*.bak-*
+*_files/
+**/*.quarto_ipynb
+
+/.quarto/

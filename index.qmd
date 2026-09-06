@@ -1,0 +1,27 @@
+# Preface {.unnumbered}
+
+This is the student-facing book for a four-week, ungraded elective on AI in
+medicine for fourth-year medical students. Each chapter is one module: one to two
+hours of reading, watching, and doing that stands alone, so a missed week costs
+one chapter, not the course.
+
+Every chapter follows the same shape:
+
+1. **Why this matters** — what changes in residency in three months
+2. **The idea** — the concept, in prose, with figures and tables
+3. **Watch or listen** — one video or podcast episode
+4. **Do** — the activity, written so you can finish it alone; wherever it touches
+   the literature, you choose your specialty
+5. **Check** — a rubric you score yourself against
+6. **The standing question** — *what does this change about how you'll practice?*
+7. **Go deeper** — papers, talks, and videos, with unverified claims flagged
+
+Three rules hold everywhere: **no patient information enters any tool, ever;
+verify before it counts; you sign the note.**
+
+Three ideas recur in every chapter. Proxies fail. Efficiency gains get eaten by
+volume. The published number is the optimistic one. They are named the first time
+they appear and called by name after that.
+
+The design behind this book — competencies, constraints, schedule — lives in the
+`curriculum/` directory of the repository.

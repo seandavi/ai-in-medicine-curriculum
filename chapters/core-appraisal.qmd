@@ -1,0 +1,75 @@
+---
+title: "Critical appraisal: tools, outputs, and the evidence about both"
+subtitle: "AIM-2 · AIM-9"
+---
+
+::: {.callout-note title="Status"}
+Pilot chapter. Structure is final; prose is being lifted from
+`modules/core-appraisal.md`. Sections marked *draft* are placeholders.
+:::
+
+## Why this matters {.unnumbered}
+
+*Draft.* Two paragraphs on what changes in residency: you will be handed a tool
+that produces references, and you will be the one who signs whatever those
+references support.
+
+## The idea
+
+*Draft.* The claim this chapter tests: a citation from a language model is a
+prediction of what a citation looks like, not a lookup. When a group of medical
+questions was put to a general chatbot, most of the references it produced did not
+exist [@pmid:40206627; @pmid:37499282]. Tools that index the literature directly
+behave differently — one head-to-head scored zero fabrications for a retrieval-based
+tool against double-digit rates for general models [@pmid:42232526]. The rate is
+not a constant; it is a property of the tool and the month.
+
+The second half of the idea is that the same skepticism applies to the *evidence
+about* AI. Regulatory clearance is not evidence of clinical benefit
+[@pmid:33820998], and a randomized trial of physicians with model access found no
+improvement in diagnostic reasoning over physicians without it, while the model
+alone outperformed both [@pmid:39466245]. The published number is the optimistic
+one.
+
+## Watch or listen
+
+*Draft.* One episode, confirmed and linked, with a note on what to listen for.
+Candidate: *NEJM AI Grand Rounds* on evidence for ambient documentation.
+`[VERIFY: pick episode]`
+
+## Do
+
+### Part A — The fabrication hunt
+
+*Draft.* Ask a general chatbot for five references on a clinical question in
+**your specialty**, then score each 2/1/0 against PubMed using the scoring key in
+@sec-check. Search recipe:
+
+```
+("large language model" OR "artificial intelligence") AND <your specialty>
+AND (validation OR "external validation")
+```
+
+Filter to the last three years and choose one review-style question from what you
+find.
+
+### Part B — Grading the evidence
+
+*Draft.* Ten claims about ambient documentation, each with its source. Grade the
+study design behind each, then compare the pre/post pilots with the multi-system
+cohort [@pmid:41920565].
+
+## Check {#sec-check}
+
+*Draft.* The 2/1/0 citation scoring key and the evidence-grading sheet, both from
+the module. The answer key lives in `_answers/` and is not rendered.
+
+## The standing question
+
+What does this change about how you'll practice? Write it down before moving on.
+One word is not an answer.
+
+## Go deeper
+
+*Draft.* Papers, talks, videos. Talk archive: prompt engineering
+(<https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/>).

@@ -27,11 +27,29 @@ medical students. ~40 students, Zoom-only, ungraded. Successor to IDPT 8079.
 |---|---|
 | `curriculum/` | Competency framework, module catalog, design constraints, and `delivery-modes.md` — an untested idea about which sessions need live Zoom and what a chat-based async path would look like |
 | `modules/` | One self-contained file per module — session plan, activities, rubrics |
+| `chapters/`, `index.qmd`, `_quarto.yml` | The student-facing Quarto book; one chapter per module following `curriculum/chapter-pattern.md`. `_answers/` holds answer keys that are never rendered |
 | `research/` | The background research the design rests on, with citations; `comparable-courses.md` reviews external courses for what to borrow |
 
 Modules are independent by design. Each tags its competencies, assumes no prior
 module, and can be reordered or dropped without breaking the rest — because in a
 four-week ungraded elective, students *will* miss sessions.
+
+## Building the book
+
+```
+uv tool install git+https://github.com/seandavi/quartobot   # once
+quarto render                                                 # → _book/
+```
+
+Cite with persistent-identifier keys — `@pmid:40206627`, `@doi:10.1126/science.aax2342` —
+and the pre-render hook resolves them into `references.resolved.bib`. To verify every
+key against PubMed and Crossref without rendering:
+
+```
+quartobot resolve --from-scan . --id-mode citation-key
+```
+
+Hand-curated entries (talks, videos, reports without a DOI) go in `references.bib`.
 
 ## Working on another machine
 

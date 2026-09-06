@@ -1,0 +1,37 @@
+project:
+  type: book
+  # quartobot resolves @doi:/@pmid: keys into references.resolved.bib before
+  # every render. Run it by hand (with network) before pushing:
+  #   quartobot resolve --from-scan . --id-mode citation-key
+  pre-render: quartobot resolve --from-scan . --id-mode citation-key
+  render:
+    - index.qmd
+    - chapters/
+
+book:
+  title: "AI in Medicine"
+  subtitle: "A four-week elective for fourth-year medical students"
+  author: "Sean Davis"
+  date: today
+  chapters:
+    - index.qmd
+    - chapters/core-appraisal.qmd
+  search: true
+  page-navigation: true
+  repo-url: https://github.com/seandavi/ai-in-medicine-curriculum
+
+bibliography:
+  - references.bib
+  - references.resolved.bib
+# Author-year so a citation reads aloud in a breakout and is self-describing in
+# the rendered markdown the tutor is fed. See curriculum/chapter-pattern.md.
+csl: apa.csl
+link-citations: true
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    citations-hover: true
+    code-tools: false
