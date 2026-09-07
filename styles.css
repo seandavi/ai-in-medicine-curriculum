@@ -35,3 +35,15 @@
 .chat .user { background: #e8f0fe; margin-left: 3em; }
 .chat .bot { background: #f3f4f6; margin-right: 3em; }
 .chat .fine { font-size: .7em; color: #7a8592; text-align: center; }
+/* enrichment-agentic-coding: a resident-built calculator drawn as a mock browser window, so the artifact under appraisal is obviously illustrative. */
+.app-mock { max-width: 520px; margin: 1.2em auto; border: 1px solid #cfd4da; border-radius: 8px; background: #fff; box-shadow: 0 6px 18px rgba(0,0,0,.15); font-family: "Segoe UI", Helvetica, Arial, sans-serif; overflow: hidden; }
+.app-mock .bar { background: #e9ecef; padding: .4em .8em; font-size: .75em; color: #555; border-bottom: 1px solid #cfd4da; }
+.app-mock .body { padding: .9em 1.1em; }
+.app-mock h4 { margin: 0 0 .5em; font-weight: 600; }
+.app-mock .row { display: flex; justify-content: space-between; padding: .25em 0; border-bottom: 1px dotted #e2e6ea; font-size: .9em; }
+.app-mock .score { text-align: center; margin: .7em 0 .3em; }
+.app-mock .score b { display: block; font-size: 2.6em; line-height: 1; }
+.app-mock .score span { font-size: .85em; color: #555; }
+.app-mock .banner { background: #c62828; color: #fff; text-align: center; font-size: .78em; padding: .35em; }
+.app-mock .fine { font-size: .65em; color: #777; padding: .4em 1.1em .6em; }
+.app-mock .flag { background: #fff4cc; }
