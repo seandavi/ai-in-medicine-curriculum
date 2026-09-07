@@ -25,6 +25,7 @@ book:
     - chapters/enrichment-workforce-economics.qmd
     - chapters/enrichment-environment.qmd
     - chapters/core-ethics-regulation.qmd
+    - chapters/enrichment-prompting-lab.qmd
   appendices:
     - appendix/about.qmd
     - appendix/personas.qmd

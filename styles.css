@@ -54,3 +54,13 @@
 .ehr-note p { margin: .3em 0; }
 .ehr-note mark { background: #ffe9a8; }
 .ehr-note .foot { font-size: .72em; color: #5a6470; border-top: 1px dashed #cfd4d9; margin-top: .8em; padding-top: .4em; }
+/* enrichment-prompting-lab: two chatbot answers side by side, drawn in CSS so they are obviously illustrative. */
+.chat-pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1em; margin: 1.2em 0; }
+.chat-pane { background: #f7f7f9; border: 1px solid #d9d9e0; border-radius: 8px; padding: .8em 1em; font-size: .9em; }
+.chat-pane .prompt { font-family: "Segoe UI", Helvetica, Arial, sans-serif; background: #e8eefb; border-radius: 6px; padding: .5em .7em; margin-bottom: .7em; color: #1a2a4a; }
+.chat-pane .prompt::before, .chat-pane .reply::before { display: block; font-size: .7em; letter-spacing: .08em; text-transform: uppercase; opacity: .6; }
+.chat-pane .prompt::before { content: "You"; }
+.chat-pane .reply::before { content: "Assistant"; }
+.chat-pane .reply table { font-size: .85em; margin: .4em 0; border-collapse: collapse; }
+.chat-pane .reply th, .chat-pane .reply td { border: 1px solid #d9d9e0; padding: .25em .5em; vertical-align: top; }
+.chat-pane .fine { font-size: .7em; opacity: .55; margin-top: .6em; }
