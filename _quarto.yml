@@ -19,6 +19,7 @@ book:
     - chapters/core-appraisal.qmd
     - chapters/core-foundations.qmd
     - chapters/core-centaur-cyborg.qmd
+    - chapters/core-bias-equity.qmd
   appendices:
     - appendix/about.qmd
     - appendix/personas.qmd
