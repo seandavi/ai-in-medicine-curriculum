@@ -29,6 +29,21 @@ collapsed solution in the chapter for the full reasoning.
 - Frutuoso Maia et al. 2026, Br J Oral Maxillofac Surg (GPT-4 36%, Gemini 14%,
   DeepSeek 8.8%). [VERIFY: not found in PubMed 2026-09-06]
 
+## Specimen panel provenance
+
+The "Three specimens" callout in Part A records a real run: clinician-framed
+prompt, anticoagulation in AF with stage 4 CKD, Claude (claude-fable-5-1), no
+retrieval, 2026-09-07. Five references generated; all five resolved in PubMed
+with correct authors, journal, volume, and pages (pmid:29954737, 36335914,
+36335915, 32160801, 31976865). The score-2 specimen (Stanifer) is from that run.
+The score-1 and score-0 specimens are constructed and labeled as such in the
+chapter; the score-1 misreading of RENAL-AF is the documented common one (the
+trial was underpowered, not positive). Re-run the prompt before each cohort and
+replace the panel if the live run produces a real 0 or 1.
+
+Part B tiers are now printed in the chapter's collapsed solution so a student
+can close the loop without the tutor. Sources stay here.
+
 ## Instructor prep
 
 Run the demo query the morning of the session. If it produces five real

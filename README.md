@@ -31,6 +31,7 @@ medical students. ~40 students, Zoom-only, ungraded. Successor to IDPT 8079.
 | `modules/` | One self-contained file per module — session plan, activities, rubrics |
 | `chapters/`, `appendix/`, `index.qmd`, `_quarto.yml` | The student-facing Quarto book; one chapter per module following `curriculum/chapter-pattern.md`. `appendix/` renders how the book was made, the review personas, and the AI ledger. `_answers/` holds answer keys that are never rendered |
 | `AI-LEDGER.md` | Where AI was used to build the course and who checked it; one row per content commit. The appendices (`appendix/`) describe the *current* process; when the design, review, or AI-use practice changes, update them in the same commit. They track content, not length |
+| `reviews/` | Dated six-persona reviews of chapters, one file per review; findings are also filed as GitHub issues |
 | `research/` | The background research the design rests on, with citations; `comparable-courses.md` reviews external courses for what to borrow |
 
 Modules are independent by design. Each tags its competencies, assumes no prior

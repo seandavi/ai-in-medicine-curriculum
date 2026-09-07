@@ -1,6 +1,6 @@
 ---
 title: "Critical appraisal: tools, outputs, and the evidence about both"
-subtitle: "AIM-2 · AIM-9 · about 90 minutes"
+subtitle: "AIM-2 · AIM-9 · about two hours"
 ---
 
 ::: {.callout-note title="What you'll learn"}
@@ -17,11 +17,17 @@ By the end of this chapter you will be able to:
    same direction.
 5. Explain why FDA clearance is not evidence of clinical performance, using the
    published analyses of FDA decision summaries.
+6. Tell a wrong reference from a wrong claim from a wrong attribution, and say
+   which of the three a retrieval-grounded tool actually fixes.
+7. Ask six questions about a tool you have never seen, and say why each one is
+   the question to ask.
 :::
 
-**Time.** About 25 minutes of reading, 30 minutes of listening, 45 minutes of
-doing. You need a free ChatGPT or Claude.ai account and a PubMed tab. Nothing
-installs.
+**Time.** About 35 minutes of reading, 30 minutes of listening, 45 minutes of
+doing. You need one free general-purpose chatbot and a PubMed tab. ChatGPT's free
+tier answers the prompts below without an account; Claude.ai asks for a phone
+number at signup, so use whichever you are comfortable with. Nothing installs.
+[VERIFY: free-tier access and signup requirements at time of teaching]{.verify}
 
 ## Lunch with a vendor
 
@@ -31,7 +37,7 @@ is showing a slide about an ambient scribe: a phone app that listens to the
 visit and writes the note. The slide says documentation time fell 40 percent
 and burnout fell by a third at a large health system. Your program director is
 nodding. The chief resident leans over and asks what you think, because you are
-the one who "does the AI stuff."
+the intern, and interns get asked.
 
 Earlier that morning, a senior resident handed you a reference for the case
 presentation you give on Thursday. She had pulled it from ChatGPT. It has a
@@ -84,13 +90,16 @@ other people checked.
 ### Where a citation comes from
 
 A general-purpose language model produces a citation the same way it produces any
-other text: as a plausible continuation, one token at a time. A well-formed author
+other text: as a plausible continuation, one token at a time. A token is a
+word or piece of a word; the model is doing, at enormous scale, what your
+phone's keyboard does when it suggests the next word. A well-formed author
 list, a real journal name, and a syntactically valid DOI are what a plausible
 continuation looks like. The model is not consulting a database and failing. It
 never had one.
 
-A retrieval-grounded tool inverts the order. It searches an index first, then
-generates text about what it found. @fig-citation-paths shows the two paths.
+A retrieval-grounded tool inverts the order. "Retrieval-grounded" means the tool
+searches a database of real documents first, then generates text about what it
+found. @fig-citation-paths shows the two paths.
 
 ```{mermaid}
 %%| label: fig-citation-paths
@@ -115,6 +124,35 @@ This is why a retrieval-grounded tool's fabrication rate is structurally
 different rather than incrementally better. It can still misread a paper it
 found. It cannot invent one it did not find.
 
+### Three things that can be wrong
+
+A citation that exists is not the end of the check. Three things can be wrong,
+and they fail independently:
+
+| What can be wrong | The question | Who fixes it |
+|---|---|---|
+| **The reference** | Does this paper exist? | A retrieval-grounded tool, almost completely |
+| **The attribution** | Does this paper say what the tool says it says? | A retrieval-grounded tool, partly; it can still misread what it found |
+| **The claim** | Is the answer clinically right? | Nobody but you |
+
+: Three independent failures. Fixing the first does nothing for the third. {#tbl-three-failures}
+
+The third row is the one that matters on the wards, and it fails in fluent
+prose. When 33 physicians across 17 specialties wrote 284 questions and graded
+the answers, the median score was 5.5 out of 6, and 36 answers scored 1 or 2,
+mostly or completely wrong, with no change in tone [@pmid:37782499]. When
+oncologists checked chatbot treatment recommendations for breast, prostate, and
+lung cancer against NCCN guidelines, every output contained at least one
+guideline-concordant option, and about a third also contained at least one that
+was not; one in eight recommended a treatment that was not in any guideline
+[@pmid:37615976]. The authors' phrase for the pattern is worth keeping: the tool
+was most likely to *mix incorrect recommendations among correct ones*, an error
+difficult even for experts to detect.
+
+Both studies also found the answers changed with the wording of the question
+and with the model version. That is the "these numbers move" point again, this
+time for answers rather than references.
+
 ### What the published rates look like
 
 Three studies set the scale. Across 20 medical questions put to ChatGPT, 41 of 59
@@ -136,18 +174,27 @@ ranged from Claude at 78.0% accuracy to Gemini at a 26.2% fabrication rate
 The same 2026 study contains the finding this chapter is built around. The
 fabrication rate for ChatGPT rose from 2.1% on clinician-framed prompts to 20.0%
 on patient-framed prompts [@pmid:42232526]. Same tool, same underlying question,
-different register.
+different register, the linguist's word for the way a particular group of
+people talks.
 
 ::: {.callout-important title="The practical consequence"}
 The version of a tool you trust at work may behave differently when you, or your
 patient, ask the same question in ordinary language. Validating a tool once, in one
 register, is not enough.
+
+If English is not your first language, or you write the way you talk rather
+than the way a journal reads, your prompts may land in the patient register even
+when you are the clinician. The finding is about the words, not the credentials.
 :::
+
+There is an equity finding in this number that the paper does not name. The
+people least equipped to check an answer, patients asking in their own words,
+get the answers most likely to cite something that does not exist.
 
 ::: {.callout-note title="These numbers move"}
 Fabrication rates are a property of the tool and the month, not a constant. A
 second 2026 study reported the GPT-versus-Gemini ordering reversed
-`[VERIFY: Frutuoso Maia et al. 2026, Br J Oral Maxillofac Surg; not found in PubMed at time of writing]`.
+[VERIFY: Frutuoso Maia et al. 2026, Br J Oral Maxillofac Surg; not found in PubMed at time of writing]{.verify}.
 When your own results below disagree with @tbl-rates, that is expected. The
 mechanism in @fig-citation-paths is the durable part; the percentages are not.
 :::
@@ -164,8 +211,9 @@ Claims about scribes come in three tiers:
 - **Randomized trials.** Clinicians or clinics assigned to the tool or a
   comparator.
 - **Large observational studies.** Real-world data from many clinicians, without
-  randomization. This includes pre/post designs, stepped adoption without
-  randomization, and surveys of adopters.
+  randomization. This includes pre/post designs, which measure the same
+  clinicians before and after they start using the tool, stepped adoption
+  without randomization, and surveys of adopters.
 - **Vendor or trade press.** A claim originating from a company, a press release,
   or trade reporting, however specific the number sounds.
 
@@ -184,8 +232,9 @@ second: efficiency gains get absorbed by volume.
 
 ### "But it's FDA-cleared, isn't it fine?"
 
-Clearance answers a different question from the one a clinician is asking. An
-analysis of 130 FDA decision summaries for AI devices found clinical performance
+Clearance answers a different question from the one a clinician is asking. Most
+cleared AI devices are radiology tools, so if you are headed there this section
+is about your daily work. An analysis of 130 FDA decision summaries for AI devices found clinical performance
 data reported for about half, and none at all for roughly a quarter; well under a
 third of those with clinical data gave sex-specific results [@pmid:33820998]. A
 2024 follow-up found the gap persists: many authorized tools have no published
@@ -200,9 +249,52 @@ one sentence from this chapter, take this one, and take the paper with it.
 
 The device boundary, the Predetermined Change Control Plan, and the clinical
 decision support criteria belong to the ethics and regulation chapter. The scale
-figures for FDA AI-device authorizations are `[VERIFY]`: counts in circulation
+figures for FDA AI-device authorizations are [VERIFY]{.verify}: counts in circulation
 come from a secondary tracker, so do not quote a specific number of cleared
 devices without checking the live FDA list.
+
+### What a trustworthy tool looks like
+
+Everything so far grades evidence that already exists. The tool at lunch is new,
+and there may be no literature yet. You still need something to ask.
+
+The most useful checklist is FUTURE-AI, a consensus of 117 experts from 50
+countries published in the *BMJ* in 2025, which reduces trustworthy clinical AI
+to six principles and 30 practices [@pmid:39909534]. The six principles, and
+the question each one becomes when a vendor is standing in front of you, are in
+@tbl-future-ai.
+
+| Principle | What it means | The question for the vendor |
+|---|---|---|
+| **Fairness** | Performance does not depend on who the patient is | Was it tested on patients like mine, and did performance differ by sex, race, language, or age? |
+| **Universality** | It works outside the place that built it | Has it been validated at a site that is not yours, on a different EHR? |
+| **Traceability** | You can see where it came from and where an output came from | What was it trained on, and can I trace this note, or this recommendation, back to its source? |
+| **Usability** | The people who use it were involved, and kept using it | Who designed the workflow, and what fraction of clinicians offered it were still using it at six months? |
+| **Robustness** | It degrades gracefully | What happens with a bad microphone, an interpreter in the room, a rare presentation, an unusual chart? |
+| **Explainability** | It can say why, in a form you could defend | If this is wrong in a chart review, what will I be able to show about why I trusted it? |
+
+: FUTURE-AI's six principles as six questions. {#tbl-future-ai}
+
+Two things to notice. Traceability is the provenance question, and it is the one
+this chapter's first half is about: a tool that shows you its sources inline has
+answered it; one that generates a reference list has not. And none of the six
+asks whether the tool is accurate on a benchmark. Accuracy is necessary and
+appears under robustness; it is not the checklist, because a tool can be accurate
+on the population it was built on and fail every other row.
+
+::: {.callout-note title="You have a right to some of these answers"}
+In the United States, the ONC HTI-1 rule requires decision-support tools inside
+certified EHRs to expose "source attributes" to the clinician: what the tool was
+trained on, how it was validated, and whether fairness was tested. That is the
+closest thing to a legal right to traceability, and it applies to the tool
+embedded in your EHR, not to the consumer chatbot on your phone.
+[VERIFY: HTI-1 status after 2025–2026 regulatory changes]{.verify}
+:::
+
+There is a seventh question the six do not ask, and it belongs to the patient in
+the room rather than the clinician: does the patient know the visit is being
+recorded, and did they agree? No tier of evidence in Part B answers it, and no
+vendor slide will. Ask it anyway.
 
 ### Two findings to keep in your pocket
 
@@ -237,7 +329,7 @@ rest is a good commute.
 **Video alternative.** "Travis Zack on OpenEvidence and the Future of Medical AI",
 Stanford Department of Medicine, YouTube.
 <https://www.youtube.com/watch?v=nrfGSE__7po>
-`[VERIFY: duration and date before assigning]`
+[VERIFY: duration and date before assigning]{.verify}
 
 **For the second half.** *NEJM AI Grand Rounds*, "What Values are in AI? A
 Conversation with Dr. Zak Kohane" (December 17, 2025; 78 min).
@@ -250,8 +342,15 @@ against the evidence tiers in Part B.
 
 ::: {.callout-warning title="No patient information, ever"}
 Every question in this exercise is a general question about management, not a
-question about a patient. Consumer tools carry no business associate agreement.
-You will be tempted to test the tool on something from your sub-internship. Do not.
+question about a patient. Consumer tools carry no business associate agreement,
+the contract that makes a vendor legally responsible for protecting patient data,
+and free tiers may use what you type to train the next model. You will be
+tempted to test the tool on something from your sub-internship. Do not.
+
+The boundary case you will meet in month one: a tool your hospital licenses and
+runs inside the EHR is a different question. Ask whether a business associate
+agreement exists, and what your institution's policy says about documenting that
+you used it. The ethics and regulation chapter takes that up.
 :::
 
 ::: {.callout-tip title="PubMed is the verification tool"}
@@ -293,7 +392,9 @@ Patient-framed:
 > I can look them up myself?
 
 If you have a verified OpenEvidence account, run the clinician-framed prompt there
-as well, on a third row.
+as well, on a third row. Verification requires professional credentials, so most
+students will not have one; the row is optional for that reason.
+[VERIFY: OpenEvidence eligibility for medical students]{.verify}
 
 **Step 3. Score every reference.** Search PubMed by title, then by first author
 plus year, then by DOI or PMID. Give each reference one score from @tbl-scoring.
@@ -307,6 +408,42 @@ part of the exercise.
 | **0, fabricated** | The reference does not exist as given. | Not found by title, author plus year, or DOI/PMID after a genuine search. A real DOI pointing at a different paper than the one named scores 0. |
 
 : The 2/1/0 citation scoring scale of McLaughlin et al. (2026). {#tbl-scoring}
+
+::: {.callout-tip title="Three specimens, one of each" collapse="true"}
+The clinician-framed prompt was run on anticoagulation in atrial fibrillation
+with stage 4 chronic kidney disease, in a general-purpose model without
+retrieval (Claude, 2026-09-07), and every reference was checked in PubMed. All
+five resolved. That is not the finding you should expect; it is the "these
+numbers move" callout happening in front of you. The three specimens below show
+what each score looks like when it does happen. The first is from that run; the
+second and third are constructed to show the pattern, and are labeled as such.
+
+**Score 2, accurate.** *Stanifer JW et al. Apixaban versus warfarin in patients
+with atrial fibrillation and advanced chronic kidney disease. Circulation
+2020;141:1384–1392.* The tool said it showed less bleeding with apixaban in
+creatinine clearance 25 to 30. PubMed: exists, authors and journal match, and the
+abstract reports major bleeding hazard ratio 0.34 in exactly that subgroup
+[@pmid:32160801]. Score 2.
+
+**Score 1, misrepresented** (constructed). *Pokorney SD et al. Apixaban for
+patients with atrial fibrillation on hemodialysis. Circulation 2022;146:1735–1745*,
+described by the tool as "a randomized trial showing apixaban is safer than
+warfarin in dialysis patients." PubMed: the paper exists [@pmid:36335914]. Its
+own conclusion is that it stopped early and had *inadequate power to draw any
+conclusion* about bleeding. The reference is real; the sentence attached to it
+is the opposite of what the authors wrote. Score 1. This is the failure a
+retrieval-grounded tool can still make, and the one only reading the abstract
+catches.
+
+**Score 0, fabricated** (constructed). *Hernandez AV et al. Direct oral
+anticoagulants in stage 4–5 CKD: a randomized comparison. J Am Coll Cardiol
+2021;77(9):1123–1131. doi:10.1016/j.jacc.2020.12.041.* Every feature is
+plausible: a real journal, a common surname, a year in range, a DOI with the
+journal's correct prefix. Search PubMed by title: nothing. By author and year:
+the real Hernandez AV publishes on other topics. By DOI: it resolves to a
+different paper or to nothing. Score 0. The tell is not any single feature; it
+is that no feature can be *found*.
+:::
 
 **Step 4. Record it.** Copy this into a document; it is your artifact.
 
@@ -412,8 +549,8 @@ with workflows it fits. The randomized trials measure clinicians who were
 *assigned* it. The five-system study makes the gap concrete: of 8,581 clinicians
 offered the tool, 1,809 adopted it, and those adopters are the population every
 earlier pre/post study sampled [@pmid:41920565]. Add that people who know they are
-in a documentation study document differently, and the direction of the
-discrepancy is accounted for without anyone having lied.
+in a documentation study document differently, the Hawthorne effect, and the
+direction of the discrepancy is accounted for without anyone having lied.
 
 **The outcome they disagree about is after-hours charting.** It motivates the
 entire product category, and it is the outcome the randomized evidence most
@@ -434,11 +571,14 @@ Two independent counterweights: the Peterson Health Technology Institute, which
 takes no vendor funding, concluded in 2025 that scribes likely reduce burnout but
 show little to no evidence of financial return, and in 2026 that administrative AI
 reduces burden within organizations without lowering system-wide costs
-`[VERIFY: report URLs]`. A UCSF analysis found scribe adopters billed 5.8% more RVUs
-with no rise in denials `[VERIFY]`.
+[VERIFY: report URLs]{.verify}. A UCSF analysis found scribe adopters billed 5.8% more relative value
+units, the billing measure of clinical work, with no rise in denials
+[VERIFY]{.verify}.
 
-The tier for each claim and its source are in the answer key held by the course
-tutor; ask it to grade your sheet.
+The tiers, so you can close the loop: claims 1, 2, 3, 4, 8, and 9 are large
+observational; 5, 6, and 7 are randomized trials; 10 is trade press about a
+peer-reviewed paper. The sources are in the answer key held by the course tutor,
+which will also grade your reasons.
 :::
 
 ## Check
@@ -453,15 +593,19 @@ Score yourself against this before moving on.
 | Ten tiered claims | Each tier has a one-line reason; claim 10 is defended either way | Tiers assigned without reasons |
 | Two mechanisms | Selection and observation effects, or equivalents, in your own words | "The pre/post studies were biased" |
 | The one sentence | You can say "cleared is not validated" and name the paper | Only the slogan |
+| The mechanism | You can explain why a generated reference may not exist without using the word "hallucination" | "It hallucinates" |
+| The vendor question | You can name the FUTURE-AI principle your question tests, and why that one first | A question with no principle behind it |
 
 ## The standing question
 
 *What does this change about how you'll practice?* Write it down before you close
 this chapter. Two specifics. First, what will you now check before you cite an
-AI-surfaced reference in a note, a presentation, or an application? Second, go
-back to the lunch room: the chief resident is still waiting. What do you say
-about the 40 percent, and what one question do you ask the vendor? One word is
-not an answer to either.
+AI-surfaced reference in a note, a presentation, or an application, and which of
+the three failures in @tbl-three-failures does that check catch? Second, go back
+to the lunch room: the chief resident is still waiting. What do you say about the
+40 percent, and which one of the questions in @tbl-future-ai, or the seventh
+about the patient, do you ask the vendor first? One word is not an answer to
+either.
 
 ## Summary
 
@@ -474,8 +618,12 @@ not an answer to either.
   rate than in a clinician's.
 - Evidence about a tool class comes in tiers that disagree in a consistent
   direction; selection and observation effects explain most of the gap.
+- The reference, the attribution, and the claim fail independently. Retrieval
+  fixes the first, helps the second, and does nothing for the third.
 - Reduced burden and reclaimed hours are different outcomes.
 - Cleared is not validated.
+- A tool with no literature yet still has six questions to answer, and a
+  seventh that belongs to the patient. Take them to lunch.
 
 ## Go deeper
 
@@ -485,6 +633,13 @@ not an answer to either.
   portable [@pmid:42200655].
 - The randomized trial of physicians with model access [@pmid:39466245], and the
   student error-catching study [@pmid:39915801].
+- FUTURE-AI in full, with the 30 practices behind the six principles
+  [@pmid:39909534]; and TRIPOD-LLM, the reporting guideline a *study* of a
+  language model should meet [@pmid:39779929], which is the standard most of
+  the Part B claims fail.
+- The National Academy of Medicine's AI Code of Conduct, in its discussion
+  draft [@pmid:39830818]; the 2025 final is a NAM publication and the principles
+  are the same.
 - Eight guiding principles for AI tools in health care [@doi:10.1038/s43856-023-00279-9].
   "Report clinically meaningful outcomes" and "have high healthcare value" are what
   Part B teaches in exercise form.

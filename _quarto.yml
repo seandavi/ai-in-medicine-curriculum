@@ -36,6 +36,7 @@ link-citations: true
 format:
   html:
     theme: cosmo
+    css: styles.css
     toc: true
     toc-depth: 3
     citations-hover: true
