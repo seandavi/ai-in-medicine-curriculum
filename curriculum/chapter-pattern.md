@@ -58,6 +58,51 @@ Candidate feeds to draw from — each entry must be confirmed before it goes in 
 
 If no good episode exists for a chapter, say so in the chapter rather than padding.
 
+## Visuals
+
+A chapter should look like a book chapter, not a handout. Aim for one visual per
+major section, each doing a job the prose cannot. Five kinds have earned a place;
+use them in roughly this order of preference.
+
+1. **The artifact under appraisal, drawn.** A vendor slide, a chatbot answer, a
+   model card, an EHR alert, built in CSS or as a styled block and labeled
+   *illustrative*. It is the thing the student is being asked to judge, it can
+   be exactly as misleading as the lesson needs, and nobody owns it.
+2. **Redrawn data.** Data are not copyrightable. A figure from a paper, rebuilt
+   from the paper's own numbers with a citation, is always clean and usually
+   clearer than the original. Prefer this over copying a panel.
+3. **Open-access figures.** Where a paper is CC BY (most of *JAMA Network
+   Open*, *BMJ Open*, *npj Digital Medicine*, *Nature Medicine* open-access
+   articles), reuse the figure with credit. Check the article's license line,
+   not the journal's reputation; the same journal publishes under several.
+   CC BY-NC and CC BY-SA carry conditions; note them in the caption.
+4. **Press clippings.** Quote the headline, name the outlet, link the piece,
+   style it as a clipping. Never a screenshot. Three headlines about one paper
+   is a better lesson in evidence tiers than any diagram.
+5. **Photos and comics.** Wikimedia Commons and Openverse for CC or public
+   domain photos; xkcd for humor (CC BY-NC 2.5, so note the non-commercial
+   condition). A comic that assumes the reader already knows the field fails
+   the avoider; pick ones that land cold.
+
+**Fair use is a defense, not a permission.** Nonprofit teaching with commentary
+and attribution is the strongest fact pattern there is, and a publicly hosted
+book is weaker than a classroom handout. Reserve it for a figure that cannot be
+redrawn and is essential, and say in the caption that it is reproduced under
+fair use for commentary.
+
+Mechanics:
+
+- Files live in `images/`, named for what they show, sized for the page
+  (about 900 px wide for photos; comics displayed at 420 px via `.comic`).
+- Every image has a `fig-alt` for screen readers and a caption that carries the
+  credit: creator, license with link, source with link. The caption is the
+  attribution; there is no separate credits page.
+- Styled components (`.vendor-slide`, `.press-clips`) are in `styles.css`.
+  Reuse them rather than styling per chapter.
+- A figure that is only decoration is cut. The test: cover the caption and ask
+  what a student learns from the image alone. If the answer is "nothing", it
+  goes.
+
 ## Specialty choice
 
 Wherever the Do engages with literature, students pick their own specialty. Two

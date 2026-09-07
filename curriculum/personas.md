@@ -63,6 +63,8 @@ Her questions on review:
   obstacle to overcome?
 - Do the results depend on how fluently I phrase the prompt, and does the
   chapter say so?
+- Do the comics and pictures make sense without already knowing the field, or
+  are they in-jokes?
 
 Fails the chapter when: it opens with a demo she cannot follow, uses vendor
 vocabulary without defining it, requires a paid tier, or reads as enthusiasm.
@@ -111,7 +113,9 @@ Their questions on review:
   window?
 - Can a student who missed the previous chapter follow this one?
 - Are the multimedia and readings accessible (captions, transcripts, no
-  paywall) and do they survive a broken link?
+  paywall) and do they survive a broken link? Does every image have alt text?
+- Does each visual teach something the prose does not, or is it decoration
+  adding to the load?
 - Is the Check a rubric a student can self-apply, or does it need an instructor?
 
 Fails the chapter when: objectives and activities drift apart, the scenario at
@@ -138,6 +142,8 @@ Their questions on review:
 - Which parts are institution-specific and need swapping, and are they marked?
 - Is anything here likely to be wrong or stale in twelve months, and does the
   chapter say so?
+- Can I reuse the images if I adopt the chapter, or do their licenses (NC,
+  SA, fair use) stop at this course?
 
 Fails the chapter when: it assumes the reader already knows the field, the
 answer key requires judgment the key does not teach, or the tools it depends on
@@ -164,6 +170,8 @@ Their questions on review:
   direction?
 - Does the course disclose its own use of AI (the tutor, the citation pipeline)
   where a student would reasonably want to know?
+- Is every image licensed for this use and credited, and could any illustrative
+  artifact be mistaken for a real company's or person's material?
 
 Fails the chapter when: an activity would not pass an IRB sniff test, harm is
 described without saying to whom, or the chapter's certainty exceeds the

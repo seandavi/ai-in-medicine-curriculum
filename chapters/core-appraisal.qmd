@@ -75,7 +75,7 @@ to do: generate its own references, and get sold to your department over lunch.
 patient and a decision. Cardiologist Juan Manuel Romero in a telemedicine
 consultation, Ciudad Obregón, Mexico. Photo: Intel Free Press,
 [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0), via
-[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Telemedicine_Consult.jpg).](../images/telemedicine-consult.jpg){#fig-screens}
+[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Telemedicine_Consult.jpg).](../images/telemedicine-consult.jpg){#fig-screens fig-alt="A physician in a white coat seen from behind, facing four monitors showing an ECG, an echocardiogram, and a video call with two people."}
 
 The reference problem will find you within the year. Someone on your team will
 hand you a tool that produces citations, or you will open one yourself at 2 a.m.
@@ -120,7 +120,7 @@ never had one.
 
 ![What is inside. The mechanism really is closer to this than to a librarian.
 xkcd 1838, *Machine Learning*, by Randall Munroe,
-[CC BY-NC 2.5](https://xkcd.com/license.html).](../images/machine_learning.png){#fig-xkcd-ml .comic}
+[CC BY-NC 2.5](https://xkcd.com/license.html).](../images/machine_learning.png){#fig-xkcd-ml .comic fig-alt="xkcd comic. One figure asks how a machine learning system works; the other explains you pour data into a big pile of linear algebra and collect the answers on the other side, and if they are wrong you stir the pile until they look right."}
 
 A retrieval-grounded tool inverts the order. "Retrieval-grounded" means the tool
 searches a database of real documents first, then generates text about what it
@@ -166,7 +166,7 @@ and they fail independently:
 citation, the citation gets cited, and the loop closes without anyone checking
 the source. Retrieval-grounded tools trained on the web inherit every loop like
 this. xkcd 978, *Citogenesis*, by Randall Munroe,
-[CC BY-NC 2.5](https://xkcd.com/license.html).](../images/citogenesis.png){#fig-xkcd-cito .comic}
+[CC BY-NC 2.5](https://xkcd.com/license.html).](../images/citogenesis.png){#fig-xkcd-cito .comic fig-alt="xkcd comic in four panels titled Citogenesis: a writer invents a fact and adds it to Wikipedia, a journalist cites Wikipedia, Wikipedia then cites the journalist, and the loop closes with the fact now sourced."}
 
 The third row is the one that matters on the wards, and it fails in fluent
 prose. When 33 physicians across 17 specialties wrote 284 questions and graded

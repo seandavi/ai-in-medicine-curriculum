@@ -62,9 +62,9 @@ questions, are in the [Review personas](personas.qmd) appendix.
 | Elena | MS4, avoids AI, free tiers only | Chapters that assume you already use these tools, or read as enthusiasm |
 | Marcus | MS4, uses AI daily, matching radiology | Chapters that are all warnings, or slower than the tool itself |
 | Priya | MS4, wants to use it safely on the wards | Practical guidance buried under mechanism |
-| Jordan | Instructional designer | Objectives with no matching activity; dishonest time estimates |
+| Jordan | Instructional designer | Objectives with no matching activity; dishonest time estimates; images without alt text or without a job |
 | Dr. Okafor | Educator at another school, not an AI expert | Chapters that cannot be taught without the author in the room |
-| Dr. Lindqvist | Clinical ethicist | Activities that would not pass an IRB sniff test; harm without a named population; false certainty |
+| Dr. Lindqvist | Clinical ethicist | Activities that would not pass an IRB sniff test; harm without a named population; false certainty; unlicensed or misattributable images |
 
 The order matters: Elena reads first, because if the avoider cannot get in the
 door nothing after matters, and Dr. Lindqvist reads last. When readers disagree,
