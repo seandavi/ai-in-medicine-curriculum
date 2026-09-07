@@ -22,3 +22,11 @@
 
 /* Comics and photos: keep them modest on the page. */
 .figure img.comic { max-width: 420px; }
+
+/* core-ethics-regulation: an EHR progress note drawn in CSS, illustrative, synthetic patient. */
+.ehr-note { max-width: 620px; margin: 1.2em auto; padding: .9em 1.2em; background: #fbfbf9; border: 1px solid #cfd4d9; border-radius: 4px; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: .92em; box-shadow: 0 3px 10px rgba(0,0,0,.12); }
+.ehr-note .hdr { display: flex; justify-content: space-between; font-size: .75em; letter-spacing: .06em; text-transform: uppercase; color: #4a5560; border-bottom: 1px solid #cfd4d9; padding-bottom: .4em; margin-bottom: .6em; }
+.ehr-note .sec { font-weight: 700; color: #1f3a5f; margin-top: .6em; }
+.ehr-note p { margin: .3em 0; }
+.ehr-note mark { background: #ffe9a8; }
+.ehr-note .foot { font-size: .72em; color: #5a6470; border-top: 1px dashed #cfd4d9; margin-top: .8em; padding-top: .4em; }
