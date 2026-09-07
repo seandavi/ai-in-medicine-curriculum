@@ -51,6 +51,21 @@ quartobot resolve --from-scan . --id-mode citation-key
 
 Hand-curated entries (talks, videos, reports without a DOI) go in `references.bib`.
 
+## Deploying
+
+Published at <https://ai-in-medicine.seandavi.workers.dev> as a Cloudflare Workers
+static-assets site, the same pattern as the talks repo. Every push to `main` renders
+and deploys via `.github/workflows/deploy.yml`. To deploy by hand:
+
+```
+export CLOUDFLARE_API_TOKEN="$(gcloud secrets versions access latest --secret cdsci-cloudflare-workers-token --project cdsci-infra)"
+export CLOUDFLARE_ACCOUNT_ID="$(gcloud secrets versions access latest --secret cdsci-r2-account-id --project cdsci-infra)"
+quarto render && npm run deploy
+```
+
+The two GitHub repository secrets the workflow uses are copies of those same two
+Google Secret Manager entries.
+
 ## Working on another machine
 
 This repo assumes the [`seandavi/talks`](https://github.com/seandavi/talks) repo is
