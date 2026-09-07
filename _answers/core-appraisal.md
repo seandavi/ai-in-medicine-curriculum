@@ -15,7 +15,7 @@ Not rendered. Fed to the tutor; used by the instructor in the live session.
 | 7 | RCT (crossover, n=136) | Chowdhury et al., JAMIA 2026. pmid:41729180. Duke. |
 | 8 | Large observational (n=23, pre/post) | Emory/CHOA pediatrics. [VERIFY: source not located in PubMed] |
 | 9 | Large observational (five systems, 8,581 clinicians, 1,809 adopters) | Rotenstein et al., JAMA 2026. pmid:41920565 |
-| 10 | Trade press attached to a peer-reviewed paper | STAT coverage of Rotenstein et al. [VERIFY: link] |
+| 10 | Trade press attached to a peer-reviewed paper | STAT, 1 April 2026, "Large AI scribe study finds modest time savings, inconsistent use": https://www.statnews.com/2026/04/01/ai-ambient-scribes-modest-time-savings-clinical-documentation/ (the 79% is derived from 1,809 adopters of 8,581 offered in Rotenstein et al.) |
 
 ## Closing questions
 

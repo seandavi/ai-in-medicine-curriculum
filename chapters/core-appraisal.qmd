@@ -38,6 +38,22 @@ and burnout fell by a third at a large health system. Your program director is
 nodding. The chief resident leans over and asks what you think, because you are
 the intern, and interns get asked.
 
+::: {.vendor-slide}
+<div class="brand">Ambient documentation · outcomes at scale</div>
+<h4>Give your clinicians their evenings back</h4>
+<div class="stats">
+<div class="stat"><b>−40%</b><span>documentation time</span></div>
+<div class="stat"><b>−33%</b><span>burnout</span></div>
+<div class="stat"><b>96%</b><span>would recommend</span></div>
+</div>
+<div class="foot">Results from a large integrated health system, 2024–2025</div>
+<div class="fine">Illustrative slide for this chapter; not a real vendor's material.</div>
+:::
+
+Look at the slide for a moment before reading on. Every number on it is the
+kind of number you will be shown, and nothing on it tells you where any of
+them came from.
+
 Earlier that morning, a senior resident handed you a reference for the case
 presentation you give on Thursday. She had pulled it from ChatGPT. It has a
 plausible first author, a real journal, a well-formed DOI, and a finding that
@@ -54,6 +70,12 @@ it critical appraisal. This chapter extends it to two things a paper never used
 to do: generate its own references, and get sold to your department over lunch.
 
 ## Why this matters
+
+![Every tool in this chapter arrives through a screen like these, between a
+patient and a decision. Cardiologist Juan Manuel Romero in a telemedicine
+consultation, Ciudad Obregón, Mexico. Photo: Intel Free Press,
+[CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0), via
+[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Telemedicine_Consult.jpg).](../images/telemedicine-consult.jpg){#fig-screens}
 
 The reference problem will find you within the year. Someone on your team will
 hand you a tool that produces citations, or you will open one yourself at 2 a.m.
@@ -96,6 +118,10 @@ list, a real journal name, and a syntactically valid DOI are what a plausible
 continuation looks like. The model is not consulting a database and failing. It
 never had one.
 
+![What is inside. The mechanism really is closer to this than to a librarian.
+xkcd 1838, *Machine Learning*, by Randall Munroe,
+[CC BY-NC 2.5](https://xkcd.com/license.html).](../images/machine_learning.png){#fig-xkcd-ml .comic}
+
 A retrieval-grounded tool inverts the order. "Retrieval-grounded" means the tool
 searches a database of real documents first, then generates text about what it
 found. @fig-citation-paths shows the two paths.
@@ -135,6 +161,12 @@ and they fail independently:
 | **The claim** | Is the answer clinically right? | Nobody but you |
 
 : Three independent failures. Fixing the first does nothing for the third. {#tbl-three-failures}
+
+![The attribution failure, before language models existed. A claim gets a
+citation, the citation gets cited, and the loop closes without anyone checking
+the source. Retrieval-grounded tools trained on the web inherit every loop like
+this. xkcd 978, *Citogenesis*, by Randall Munroe,
+[CC BY-NC 2.5](https://xkcd.com/license.html).](../images/citogenesis.png){#fig-xkcd-cito .comic}
 
 The third row is the one that matters on the wards, and it fails in fluent
 prose. When 33 physicians across 17 specialties wrote 284 questions and graded
@@ -215,6 +247,20 @@ Claims about scribes come in three tiers:
   without randomization, and surveys of adopters.
 - **Vendor or trade press.** A claim originating from a company, a press release,
   or trade reporting, however specific the number sounds.
+
+Here is what one study looks like as it passes through the tiers on its way to
+you. All three headlines are about the same paper, the five-system study cited
+below.
+
+::: {.press-clips}
+<div class="press-clip"><div class="src">EurekAlert! · press release</div><a class="hl" href="https://www.eurekalert.org/news-releases/1122192">AI scribes linked to modest reductions in electronic health record use and clinical documentation time</a><div class="date">April 2026</div></div>
+<div class="press-clip"><div class="src">STAT · news</div><a class="hl" href="https://www.statnews.com/2026/04/01/ai-ambient-scribes-modest-time-savings-clinical-documentation/">Large AI scribe study finds modest time savings, inconsistent use</a><div class="date">1 April 2026</div></div>
+<div class="press-clip"><div class="src">AMA · practice management</div><a class="hl" href="https://www.ama-assn.org/practice-management/physician-health/how-much-can-ambient-ai-scribes-help-cut-doctor-burnout">How much can ambient AI scribes help cut doctor burnout?</a><div class="date">2026</div></div>
+:::
+
+Same paper, three framings: the institution's press office, a journalist, and a
+professional society. None of them is wrong. Which one would the vendor at lunch
+have put on the slide?
 
 The three tiers disagree in the same direction. Pre/post studies of health-system
 rollouts report large drops in burnout. Randomized trials report smaller effects,
