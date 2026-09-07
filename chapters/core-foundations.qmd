@@ -1,0 +1,654 @@
+---
+title: "How these systems actually work: from the eGFR on a chemistry panel to the next word"
+subtitle: "AIM-1 · AIM-2 · about 75 minutes"
+---
+
+::: {.callout-note title="What you'll learn"}
+By the end of this chapter you will be able to:
+
+1. Explain, using eGFR as the worked example, what it means for a formula to be
+   *learned from data* rather than derived, and name its predictors, its
+   response, and the population it was learned from.
+2. Tell supervised from unsupervised learning by asking what the training data
+   contains, and classification from regression by asking what the model
+   emits.
+3. Say why a model's performance on data it has already seen tells you nothing
+   useful, and why separating training from test data is the non-negotiable
+   minimum.
+4. Describe in plain words what a language model computes at each step, and
+   use that description to explain a fabricated citation or a confident wrong
+   answer as a property of the mechanism rather than a bug.
+5. Name two structural limits of the context window, that it is a shared budget
+   and that material buried in the middle is attended to less reliably, and say
+   what each one changes about how you will prompt.
+:::
+
+**Time.** About 22 minutes of reading, 27 minutes of watching, 20 minutes of
+doing, and 6 minutes for the check and the standing question. No math and no
+coding are assumed; the only equation in the chapter is one you already use.
+You need a browser and your institutional ChatGPT Edu or Microsoft Copilot
+account. Nothing installs, and nothing asks you for a phone number.
+
+## The number nobody measured
+
+Pre-operative clinic, your surgery sub-internship. A 62-year-old woman is being
+worked up for a laparoscopic cholecystectomy. Her basic metabolic panel is
+back, and one line is flagged.
+
+::: {.lab-report}
+<div class="hdr">Basic metabolic panel · collected 07:12</div>
+<table>
+<tr><td>Sodium</td><td>139</td><td></td><td>136–145 mmol/L</td></tr>
+<tr><td>Potassium</td><td>4.1</td><td></td><td>3.5–5.1 mmol/L</td></tr>
+<tr><td>Creatinine</td><td>1.10</td><td></td><td>0.50–1.10 mg/dL</td></tr>
+<tr><td>eGFR (CKD-EPI 2021)</td><td>57</td><td class="flag">L</td><td>&gt;60 mL/min/1.73 m²</td></tr>
+</table>
+<div class="fine">Illustrative panel for this chapter; not a real patient's result.</div>
+:::
+
+The attending asks whether her kidneys are all right for the contrast CT the
+surgeon wants. You answer the way everyone answers: "eGFR 57, stage 3a, mildly
+reduced, probably fine with hydration." The attending nods. That is the whole
+conversation, and it is a conversation you will have several hundred times in
+intern year.
+
+Now the question this chapter hangs on. Nobody measured her glomerular
+filtration rate. Measuring it means infusing a marker the kidney filters and
+does nothing else with, such as inulin or iohexol, and timing how fast it
+clears; it takes hours and it is done almost exclusively in research studies.
+The 57 on the panel was *computed* from three things the lab did have: her
+creatinine, her age, and her sex. Something turned those three numbers into a
+kidney function, and you trusted it enough to clear her for contrast.
+
+Where did that formula come from? Not from physiology. Nobody derived it from
+first principles about nephrons. It was **learned from data**: from a few
+thousand people who did have their GFR measured, and whose creatinine, age, and
+sex were fed to a computer with the instruction to find the formula that best
+predicted the measured number. The eGFR is a model. It is the model you already
+trust most, and you have never once asked what it was trained on.
+
+Hold on to the patient. She weighs 45 kilograms and has lost a good deal of
+muscle over a year of intermittent illness. We will come back to her.
+
+## Why this matters
+
+In three months you will be handed a dozen of these. A sepsis alert that fires
+in the EHR. A risk score that decides who gets a phone call after discharge. A
+scribe that drafts your note. A chatbot that answers a dosing question at 2
+a.m. Every one of them is the same kind of object as the eGFR: a formula
+learned from some population, applied to your patient, with failures that
+follow from how it was built. The skill this chapter teaches is not building
+these things. It is looking at one and predicting how it will fail, in the
+thirty seconds before you act on it.
+
+The second half of the chapter does this for the language model specifically,
+because its failure mode is the strangest and the most fluent. It will hand
+you a citation that does not exist, formatted perfectly, and it will do so for
+a reason that follows directly from what it computes. Once you can say that
+reason out loud, "it hallucinates" stops being a shrug and becomes a
+prediction about when to check.
+
+## The idea
+
+### A formula learned from data
+
+The eGFR your lab reports almost certainly uses the CKD-EPI 2021 equation. Here
+is how it was made. Investigators pooled ten studies in which 8,254 people had
+their GFR measured directly with a filtration marker, and also had a
+standardized creatinine, an age, and a sex on record. They then fit an
+equation that predicts the measured GFR from those three inputs as closely as
+possible across all 8,254 people; "fit" means a computer tried coefficients
+until the predictions were as close to the measured values as they could get. They tested it on a
+separate set of 4,050 people from twelve other studies, whose measured GFR the
+equation had never seen [@pmid:34554658].
+
+That paragraph contains every term you need for the rest of the course, so
+here they are, named:
+
+- **Predictors** are the inputs: creatinine, age, sex. The literature also
+  calls them features or variables.
+- The **response** is the thing being predicted: measured GFR. Also called the
+  label, the outcome, or the truth.
+- The **training set** is the 8,254 people whose predictors and response were
+  used to fit the equation. The **test set** is the 4,050 the equation was
+  checked on afterwards.
+- The **model** is the equation itself, once fit: `eGFR = f(creatinine, age, sex)`.
+  The *f* is whatever shape the fitting procedure settled on; for CKD-EPI it
+  is a handful of exponents and coefficients, and for the systems later in
+  this chapter it is billions of numbers, but the role is the same.
+
+@fig-egfr-proxy shows what that model actually connects. The thing you want
+to know is on the right. The thing the lab can measure is on the left. The
+equation is the bridge, and the bridge was built from a specific set of
+people.
+
+```{mermaid}
+%%| label: fig-egfr-proxy
+%%| fig-alt: "Flowchart. Three inputs the lab has, serum creatinine, age, and sex, feed an equation learned from 8,254 people with measured GFR, which outputs the eGFR on the panel. A dotted arrow shows the eGFR standing in for measured GFR, which is never done in routine care. A grey box, muscle mass, diet, and drugs that block secretion, feeds creatinine without touching measured GFR."
+%%| fig-cap: "What the eGFR equation takes in and what it stands for. The equation was learned from 8,254 people with measured GFR; it is a bridge from what a lab can measure to what a clinician wants to know, and everything that moves creatinine without moving GFR (grey) crosses the bridge undetected. Redrawn from the description of the CKD-EPI 2021 development in Inker et al. (2021)."
+flowchart LR
+  subgraph IN["What the lab has"]
+    direction TB
+    cr[Serum creatinine]
+    age[Age]
+    sex[Sex]
+  end
+  eq["eGFR = f(creatinine, age, sex)<br/>learned from 8,254 people<br/>whose GFR was measured"]
+  out["eGFR<br/>(a number on your panel)"]
+  truth["Measured GFR<br/>(iohexol or iothalamate clearance;<br/>never done in routine care)"]
+  cr --> eq
+  age --> eq
+  sex --> eq
+  eq --> out
+  out -. "stands in for" .-> truth
+  muscle["Muscle mass · diet ·<br/>drugs that block secretion"]:::grey -.-> cr
+  classDef grey fill:#eee,stroke:#999,color:#555
+```
+
+Three things follow from "learned from data", and each one is a question you
+can ask of any model.
+
+**The truth column existed.** For every one of the 8,254 people, someone had
+gone to the trouble of measuring the real GFR. That is what makes this
+**supervised learning**: the training data contains the answer, and the model
+learns to reproduce it. **Unsupervised learning** is what you do when there is
+no answer column, only patterns to find, such as sorting 10,000 tumor
+expression profiles into clusters without being told which are which. The test
+is simple: does the training data contain the thing you want predicted?
+
+**The model emits a number.** eGFR is a quantity, so this is **regression**:
+the output is a value on a scale. If the same inputs were used to output "CKD:
+yes or no", that would be **classification**: the output is a category. Most
+clinical prediction tools are one or the other, and the distinction decides
+how you judge them. A regression is wrong by an amount; a classification is
+wrong by a *kind*, a miss or a false alarm, and those two kinds cost different
+people different things.
+
+**The model is exactly as good as the people it was fit to.** The 8,254 were
+mostly participants in kidney research studies, 31.5 percent of them Black,
+none of them children, none of them your patient. Every population outside
+that set is an extrapolation, and the history of the equation is a history of
+finding out where the extrapolation broke.
+
+### The history of one equation is the history of its training set
+
+| Equation | Year | Learned from | Tested on | What broke, and where |
+|---|---|---|---|---|
+| MDRD | 1999 | 1,628 patients with chronic kidney disease, of whom 1,070 were the training sample | The remaining 558 | Fit to people with reduced GFR; systematically underestimated GFR at higher values, so healthy people were labeled as diseased [@pmid:10075613; @pmid:19414839] |
+| CKD-EPI | 2009 | 8,254 participants in 10 studies | 3,896 in 16 studies | More accurate at higher GFR, but carried a coefficient for Black race that the 2021 validation showed overestimated measured GFR in Black adults by a median of 3.7 mL/min/1.73 m² [@pmid:19414839; @pmid:34554658] |
+| CKD-EPI 2021 | 2021 | 8,254 participants in 10 studies, refit without race | 4,050 in 12 studies | Now recommended for all US laboratories; the refit without race still underestimates in Black adults and overestimates in non-Black adults by a few mL/min, and a cystatin C version is more accurate [@pmid:34554658; @pmid:34563581] |
+
+: Three generations of the eGFR equation, rebuilt from the numbers in the papers. Each one is a formula learned from a population, and each one's known failure lives outside that population. {#tbl-egfr-history}
+
+Read the last column as a pattern rather than as nephrology. Every row says
+the same thing: *the model was fit to these people, and here is what happened
+to those people.* The bias and equity chapter takes up why the race coefficient
+was there in the first place and who paid for it. For this chapter the point
+is narrower and it generalizes: the training population is a property of the
+model, as much as the equation is, and you cannot judge the one without
+knowing the other.
+
+### The loop, in general
+
+Every model in this course, from the eGFR to the chatbot, was built by the
+same loop, drawn once in @fig-loop.
+
+```{mermaid}
+%%| label: fig-loop
+%%| fig-alt: "Flowchart. Raw material such as labs, images, notes, or text becomes predictors; the truth for each case, such as measured GFR, sepsis yes or no, or the next word, joins them in a learning step that finds a function f so that truth is approximately f of predictors; the result is a model, and a new case with unknown truth goes through the model to produce a prediction."
+%%| fig-cap: "The loop every learned model comes from. Turn the raw material into predictors, collect the truth for each case, learn a function that predicts truth from predictors, then apply it to a case whose truth you do not have. The eGFR, a sepsis alert, and a language model differ only in what fills the boxes."
+flowchart LR
+  raw[Raw material:<br/>labs, images, notes, text] --> pred[Predictors]
+  truth[Truth for each case:<br/>measured GFR, sepsis yes/no,<br/>the next word] --> learn
+  pred --> learn["Learn: find f so that<br/>truth ≈ f(predictors)"]
+  learn --> model["Model: response = f(predictors)"]
+  new[New case, truth unknown] --> model --> ans[Prediction]
+```
+
+You now have two questions that classify any model in about ten seconds, and
+they are the ones the Check asks you to apply:
+
+| Question | If yes | If no |
+|---|---|---|
+| Does the training data contain the answer? | Supervised | Unsupervised |
+| Does the model emit a category? | Classification | Regression (a number) |
+
+: Two questions that sort any model. {#tbl-two-questions}
+
+### Why performance on data it has seen tells you nothing
+
+Here is the trap the eGFR investigators avoided, and the one every vendor
+slide invites you into. If you fit a formula to 8,254 people and then report
+how well it predicts GFR *in those same 8,254 people*, you have measured how
+well the formula memorized them, not how well it will work on the next
+patient. A sufficiently flexible model can fit its training data perfectly and
+be useless. Its performance on data it has already seen is not evidence; it is
+a description of the fitting procedure.
+
+![Every one of these fits the same data. The one on the bottom right fits it best. xkcd 2048, *Curve-Fitting*, by Randall Munroe, [CC BY-NC 2.5](https://xkcd.com/license.html) (non-commercial use only).](../images/curve_fitting.png){#fig-xkcd-curve .comic fig-alt="xkcd comic: a grid of twelve scatterplots of the same data, each with a different fitted curve and a caption, from a straight line labeled linear, through quadratic and logarithmic, to a wildly wiggling curve labeled 'connecting lines' with the caption 'I clicked a button and this came out', and one labeled 'house of cards' that fits every point."}
+
+That is why the train/test separation is the non-negotiable minimum. You fit
+on one set of cases and you report performance on a *different* set the model
+never saw. The 4,050-person validation set in the eGFR paper is that second
+set. When a claim about a model gives you one number and does not say which
+set it came from, you do not yet have a number.
+
+Two ways to be wrong give the idea its vocabulary. A model that is **too
+simple** cannot capture the real relationship no matter how much data it sees;
+the straight line through a curve. Statisticians call that error *bias*, in
+a technical sense unrelated to the social one. A model that is **too
+flexible** captures the noise in its particular training set along with the
+signal, so it fits those cases beautifully and the next case badly; the wiggle
+through every point. That error is *variance*. You will see both in the
+exercise, in about eight minutes, on your own screen, and the third sentence
+you write there is the one that transfers to every performance claim you are
+ever shown.
+
+The clinical version of the same failure is **dataset shift**: the world the
+model meets in deployment differs from the world in its training set, so
+performance measured at development does not carry over [@pmid:34260843]. A
+sepsis model built by one EHR vendor and running in hundreds of US hospitals
+was externally validated at one academic center on 38,455 hospitalizations. It
+had an area under the curve of 0.63, on a scale where 0.5 is a coin flip and
+1.0 is perfect discrimination, missed 67 percent of patients with sepsis, and
+alerted on 18 percent of all admissions [@pmid:34152373]. Nobody
+had lied about the development performance. It simply had not been measured on
+patients like those.
+
+::: {.callout-important title="The one sentence"}
+A model's performance on the population it was built from is the optimistic
+number. Ask what it was trained on, and ask what it was tested on, and if
+those are the same set you have learned nothing yet.
+:::
+
+### From tables to words
+
+Everything so far had a table: one row per patient, one column per predictor,
+one column of truth. A language model is the same loop with a different table,
+and seeing that is the whole trick.
+
+Take any sentence from the internet: *the patient was started on empiric*.
+Chop it into **tokens**, which are words or pieces of words; "empiric" might
+be one token and "vancomycin" three. Now the predictors are the tokens so far,
+and the truth is the very next token. You do not need anyone to label
+anything, because the next word is already sitting there in the text. Every
+sentence ever written becomes a training case for free, which is why these
+models could be trained on a very large fraction of the written internet.
+
+To make tokens usable by the loop, each one is turned into a list of numbers,
+called an **embedding**, chosen so that tokens used in similar contexts get
+similar numbers. "Vancomycin" ends up near "linezolid" and far from
+"Tuesday". That is the "translate data into predictors" box of @fig-loop, done
+for words.
+
+The model is then trained to do one thing: given the tokens so far, produce a
+probability for every possible next token. Then a token is drawn from that
+distribution, appended, and the process runs again. A paragraph of fluent
+medical prose is a few hundred repetitions of *predict the next token, pick
+one, repeat*. Your phone's keyboard does this with a vocabulary of a few
+thousand words and a look-back of two or three; these models do it with a
+vocabulary of roughly a hundred thousand tokens, a look-back of many thousands,
+and a function *f* with hundreds of billions of numbers in it. The video you
+will watch shows what that function looks like from the inside. What matters
+here is what it does not contain.
+
+There is a second training stage, and it explains the tone. After the
+next-token training, people are paid to compare pairs of answers and say which
+one they prefer, and the model is tuned toward the preferred kind. The
+literature calls this reinforcement learning from human feedback. It is what
+turns a text-completer into an assistant that answers your question, in
+paragraphs, politely. It also means the model has been optimized for answers
+people *rate well*, which is not the same as answers that are true, and in
+practice it tends to reward confidence and completeness, because a hedged,
+incomplete answer loses those comparisons. A general review for clinicians of how these
+chatbots are built, and of the mixed results so far, is a good next read
+[@pmid:37460753].
+
+Now the sentence the chapter was built to deliver:
+
+::: {.callout-important title="Nothing in this mechanism checks whether a claim is true"}
+At no step does the model look anything up, consult a database, or compare a
+statement to the world. It produces the most plausible next token, given the
+tokens so far and given what people rated well. A real citation and a
+fabricated one are both plausible continuations of "the original paper was".
+The model is not lying, and it is not malfunctioning. It is doing exactly what
+it was built to do, and the thing it was built to do has no truth step in it.
+:::
+
+Here is what that looks like when it reaches you. The exchange below is
+illustrative, constructed for this chapter; the scoring system, the point
+values it gives, and the reference are the kind of thing a model produces, not
+a transcript.
+
+::: {.chat}
+<div class="user">What are the exact point values and cutoffs for the HEART score, and what is the original publication?</div>
+<div class="bot">The HEART score assigns 0–2 points each for History, ECG, Age, Risk factors, and Troponin, for a total of 0–10. Patients scoring 0–3 are low risk (about 1.7% risk of a major adverse cardiac event at 6 weeks) and can be discharged; 4–6 is intermediate (about 12–17%); 7–10 is high risk (about 50–65%) and warrants early invasive management.<br/><br/>Original publication: Backus BE, Six AJ, Kelder JC, et al. "A prospective validation of the HEART score for chest pain patients at the emergency department." <em>Int J Cardiol.</em> 2013;168(3):2153–2158.</div>
+<div class="fine">Illustrative exchange, constructed for this chapter. Do not use it as a source for the HEART score.</div>
+:::
+
+Read it as a clinician and it is fine. Read it as a student of the mechanism
+and every clause is a plausible continuation. The structure is right. The
+names are real people who have written about this score. The journal exists.
+Whether the *original* publication is the one named, whether the percentages
+are from that paper or a later one or nowhere, whether the cutoffs match what
+MDCalc shows, is not something the model checked, because checking is not a
+step. You will find out in the exercise; the original description of the score
+is in fact in a different journal and year [@pmid:18665203], and that is
+precisely the kind of detail that a fluent continuation gets *almost* right.
+
+::: {.callout-note title="What this does and does not mean"}
+It does not mean the answer is usually wrong. On common questions these models
+are right most of the time, because the most plausible continuation of a
+well-documented fact is the fact. It means the *error rate is not zero and the
+tone does not change when it is wrong.* A fabricated citation reads exactly
+like a real one. That is the justified part of the fear; the outdated part is
+the belief that the tools are unreliable for everything. The critical
+appraisal chapter measures the rates. This chapter explains why there is a
+rate at all.
+:::
+
+### The context window
+
+One more structural fact, because it changes how you will type. Everything the
+model can see at once, your question, anything you pasted, the conversation so
+far, and its own reply as it writes it, has to fit inside a fixed number of
+tokens called the **context window**. Two limits follow.
+
+**It is a shared budget.** The forty pages you paste, the ten previous turns of
+the conversation, and the answer you are waiting for all draw on the same
+allowance. Fill it with a whole guideline and there is less room for the
+reasoning about your question, and older turns are pushed out or compressed.
+Output tokens also cost the provider several times what input tokens cost,
+which is why the tools are quietly tuned to answer briefly and why the
+advertised window is rarely the usable one. The figures move with every
+release, so none are quoted here.
+
+**The middle is the weak spot.** When researchers placed the one relevant
+document at different positions inside a long context and asked models a
+question about it, accuracy was highest with the document at the beginning or
+the end and fell significantly when it was in the middle, in a U-shaped curve
+[@doi:10.1162/tacl_a_00638]. Later studies across newer models have found
+quality degrading as the input grows long, often well before the advertised
+limit. The shape is a robust finding; the thresholds are not, and change with
+each model.
+
+Two habits follow, and they are the ones the Check asks for. Put the question
+and the facts that matter at the start or the end of what you paste, not in
+the middle of a long document. And when a conversation has wandered, start a
+new one rather than pushing on inside an exhausted budget.
+
+::: {.callout-tip title="Two ghosts worth thirty seconds"}
+The current wave has a reference class. **MYCIN**, a rule-based system for
+choosing antimicrobials built at Stanford in the 1970s, was evaluated blind by
+eight infectious-disease experts on ten meningitis cases and received an
+acceptability rating of 65 percent, higher than any of the five faculty
+specialists it was compared with, and it never failed to cover a treatable
+pathogen [@pmid:480542]. It was never used on a patient. Performing well
+and being adopted are different problems.
+
+**IBM Watson** went from winning *Jeopardy!* in 2011 to a cancer-center
+collaboration that was set aside in 2017 after an audit, at a cost that the
+trade press reported as 62 million dollars, without the system ever entering
+clinical use [@pmid:30053147]. A demonstration is not a deployment. Neither
+story is an argument that the present tools will fail; both are an argument
+that a demonstration, however striking, tells you very little about what
+happens on the ward.
+:::
+
+## Watch
+
+**Video.** 3Blue1Brown, *But what is a GPT? Visual intro to transformers*
+(Deep Learning, Chapter 5), published 1 April 2024, 27 minutes.
+<https://www.youtube.com/watch?v=yMQPQuz5WpA>. The lesson page at
+<https://www.3blue1brown.com/lessons/gpt> carries the same content under the
+title *Transformers, the tech behind LLMs*, with a transcript. Captions are
+available on YouTube.
+
+It is the one visual explanation of this mechanism worth the time, and it
+assumes no math beyond what is drawn on screen. Watch for three things. The
+moment, early on, where the whole system is shown to produce a *probability
+distribution over the next token*, then sample one and repeat; that is the
+mechanism this chapter described in words. The passage on embeddings, where
+words become directions in space and "woman minus man" lands near "queen
+minus king"; that is the "translate data into predictors" box made visible.
+And the explanation of the context window as a fixed-size input, which is
+where the two limits above come from. If the section on attention loses you,
+let it; the exercise does not need it.
+
+## Do
+
+::: {.callout-warning title="No patient information, ever"}
+Both parts of this exercise use public or synthetic material. Part A uses a
+toy dataset that ships with the tool. Part B asks the model about a published
+scoring system, not about a patient. Your institutional account does not
+change this: it is not covered by a business associate agreement, the contract
+that would make the vendor legally responsible for protecting patient data,
+unless your institution has told you so explicitly. The question you will be
+tempted to ask about the patient from this morning stays in your head. And
+whatever drafts a note, you sign it; what to document when a tool helped is
+the ethics and regulation chapter's question.
+:::
+
+### Part A: overfitting you can see (8 minutes)
+
+Open <https://playground.tensorflow.org> in any browser. No account, no
+install, and the site's own tagline is "don't worry, you can't break it". It
+lets you build a small neural network, a flexible *f* from @fig-loop, and
+watch it learn to separate two colors of dot. The training loss and the test
+loss, the model's error on the data it is learning from and on data it is not,
+are both plotted in the top right, and that pair of curves is the point of the
+exercise. If the site is down, the deep learning deck under Go deeper has
+screenshots of the same spiral fit; read those and write the three sentences
+from them.
+
+1. In the DATA panel on the left, choose the **spiral** dataset (the bottom
+   right of the four). Leave the noise slider at 0. In the FEATURES column,
+   keep only `X₁` and `X₂` selected. Set the network to one hidden layer with
+   two neurons (use the plus and minus buttons). Press play and let the epoch
+   counter at the top, one epoch being one pass through the data, reach a few
+   hundred. Write down what the training loss does and what the picture looks
+   like.
+2. Now add capacity. Select all seven features, add layers until you have
+   four, and give each six to eight neurons. Run it until the training loss is
+   near zero. Look at the test loss on the same plot. Write down both numbers.
+3. Drag the noise slider to 40 or 50, regenerate the data, and run the large
+   network again. Watch the boundary between the colors contort around
+   individual dots. Note the gap between training and test loss now.
+
+Then write three sentences, and keep them; they are the artifact:
+
+```
+Which configuration was too simple, and how could you tell?
+______________________________________________________________
+
+Which was too complex, and how could you tell?
+______________________________________________________________
+
+If you had only ever been shown the training loss, what would you
+have concluded about the model, and would you have been right?
+______________________________________________________________
+```
+
+The third sentence is the one that transfers. It is the same question you
+will ask of every performance figure on every vendor slide for the rest of
+your career.
+
+### Part B: produce a hallucination on purpose (10 minutes)
+
+Pick one scoring system from @tbl-scores in a specialty you have rotated
+through, so that you already know roughly what the right answer is. Each row's
+original publication has been checked in PubMed for this chapter, so you have
+a verified target.
+
+| Specialty | Score | Original publication (verified) |
+|---|---|---|
+| Emergency medicine | HEART score | Six, Backus, Kelder. *Neth Heart J* 2008 [@pmid:18665203] |
+| Internal medicine, pulmonology | CURB-65 | Lim et al. *Thorax* 2003 [@pmid:12728155] |
+| Surgery | Alvarado score | Alvarado. *Ann Emerg Med* 1986 [@pmid:3963537] |
+| Psychiatry, primary care | PHQ-9 | Kroenke, Spitzer, Williams. *J Gen Intern Med* 2001 [@pmid:11556941] |
+| Gastroenterology | Glasgow-Blatchford score | Blatchford, Murray, Blatchford. *Lancet* 2000 [@pmid:11073021] |
+| Oncology | ECOG performance status | Oken et al. *Am J Clin Oncol* 1982 [@pmid:7165009] |
+| Pediatrics, obstetrics | Apgar score | Apgar. *Curr Res Anesth Analg* 1953;32:260–267, [PMID 13083014](https://pubmed.ncbi.nlm.nih.gov/13083014/) (a 1953 record with no DOI, so it is linked rather than cited) |
+| Any medicine service | Wells score for PE | Wells et al. *Thromb Haemost* 2000 [@pmid:10744147] |
+
+: Eight scoring systems with their original publications, each confirmed in PubMed on 2026-09-07. Pick the one you know best. {#tbl-scores}
+
+Open your chatbot in a fresh conversation and ask:
+
+> Give me the exact point values and cutoffs of the `<score>`, the outcome
+> each cutoff was validated against, and the full original publication that
+> first described it: first author, journal, year, volume, and pages.
+
+Now verify, in this order. Open the score on [MDCalc](https://www.mdcalc.com)
+and compare every point value and cutoff. Then open PubMed, search the first
+author and year the model gave you, and compare against @tbl-scores. Use
+PubMed and not Google Scholar; Scholar's fuzzy matching will show you a
+different real paper for a citation that does not exist, and you will score it
+as found.
+
+Record:
+
+```
+Tool and model version if shown: ____________________________
+Score chosen: ______________________________________________
+
+Point values and cutoffs: all correct / one wrong / more than one wrong
+  What was wrong, exactly: _________________________________
+
+Original publication as given by the model:
+  ____________________________________________________________
+  Matches the verified original?  Y / N / partly (which fields differ)
+
+Mechanical explanation, one sentence, using the words "token" or
+"plausible continuation" and not the word "hallucinate":
+  ____________________________________________________________
+```
+
+The last line is the deliverable. "It made a mistake" is not an explanation.
+"It predicted the most plausible next tokens after 'the original publication
+was', and a plausible citation looks exactly like a real one" is. If the model
+got everything right, and it may, write that down too, and then write the
+sentence anyway, because a model that is right nine times in ten with no change
+of tone on the tenth is the more dangerous object, and the reason unverified
+output is dangerous rather than merely useless. Then, if you have two minutes
+left, ask the same thing again in plainer words, the way you would say it out
+loud. The answer depends on the wording more than you would expect, and the
+critical appraisal chapter measures by how much.
+
+::: {.callout-tip title="If the model refuses or hedges"}
+Some assistants will now say they cannot guarantee citations, or will offer to
+search. That is a design choice layered on top of the same mechanism, and it
+is worth noting in your record: the tool has been tuned to hedge, which is
+different from the tool having checked. If it offers to search the web and
+does, you are now looking at a retrieval-grounded answer, which the critical
+appraisal chapter treats separately. Turn search off if you can, or note
+that it was on.
+:::
+
+### Part C: two rules for the window (2 minutes)
+
+Write down, in your own words, one rule you will follow because the context
+window is a shared budget, and one you will follow because the middle is
+attended to less reliably. Keep them next to the artifact from Part A. You
+will be asked for them in the Check.
+
+## Check
+
+Score yourself before moving on. Each row maps to one of the objectives at the
+top.
+
+| You can | Meets | Falls short |
+|---|---|---|
+| Name the eGFR model's predictors, response, and training population (objective 1) | Creatinine, age, sex; measured GFR; 8,254 research participants in 10 studies, and you can say why the last one matters for the patient in the clinic | "Creatinine and stuff" or a training population you cannot describe |
+| Sort four models with the two questions in @tbl-two-questions (objective 2): the eGFR; an EHR sepsis alert; a tool that groups tumor expression profiles with no diagnoses attached; a chatbot predicting the next token | Supervised regression; supervised classification; unsupervised; supervised (the next word is the label), and you can say why the last one needs no human labeler | Any row you had to guess |
+| Explain the three sentences from Part A (objective 3) | The third sentence says that training loss alone would have made the over-fit model look best, and that this is why a performance figure with no test set is not yet a number | The first two sentences only, or a third sentence that restates the training loss |
+| Give the mechanical explanation from Part B (objective 4) | One sentence about plausible next tokens, no "hallucinate", and it explains why the tone did not change when the answer was wrong | "It hallucinated" or "it made a mistake" |
+| State the two window rules from Part C (objective 5) | One rule follows from the shared budget, one from the middle being weak, and each says what you will actually do differently at the keyboard | Rules that do not name a limit, or that you could have written before reading the chapter |
+
+## The standing question
+
+*What does this change about how you'll practice?* Write it down before you
+close this chapter.
+
+Then go back to the clinic. The 62-year-old woman is still on the schedule.
+She weighs 45 kilograms and has lost muscle over a year of illness, and
+creatinine comes from muscle. Look at @fig-egfr-proxy: the grey box feeds the
+predictor without touching the truth. Her creatinine of 1.10 is a normal
+number for a normal amount of muscle. She does not have a normal amount of
+muscle, so the same creatinine probably means a *lower* true GFR than the 57
+the equation returned. Was she among the 8,254? What would you ask for
+instead, and what do you now say to the attending about the number on the
+panel? One word is not an answer. And notice that nobody told her a model was
+in the room either; whether that matters, and when, is the patient
+communication chapter's question, not this one's.
+
+And the second half: the next time a chatbot hands you a citation with a
+first author, a journal, and a year, what is the one sentence you will say to
+yourself before you paste it anywhere, and what will you do in the next two
+minutes because of it?
+
+## Summary
+
+- The eGFR is a model learned from data: creatinine, age, and sex in; a
+  measured-GFR stand-in out; 8,254 research participants as the population it
+  knows. Every learned model has those three parts, and you can ask for them.
+- Supervised learning has the answer in the training data; unsupervised does
+  not. Classification emits a category; regression emits a number.
+- Performance on the training data is a description of the fit, not evidence.
+  Ask for the test set; if there is none, there is no number yet.
+- Too simple is bias, too flexible is variance, and a different population is
+  dataset shift. All three are failures of the same object.
+- A language model turns text into a table where the predictors are the
+  tokens so far and the truth is the next one, then predicts, samples, and
+  repeats. Human raters then tune it toward answers people prefer.
+- Nothing in that mechanism checks whether a claim is true. A fabricated
+  citation is a plausible continuation, produced in the same tone as a real
+  one.
+- The context window is a shared budget, and its middle is the weak spot.
+  Put what matters at the edges; start over when the budget is spent.
+- The 57 on the panel came from somewhere. So does everything else.
+
+## Go deeper
+
+**Videos and talks**
+
+- Andrej Karpathy, *Intro to Large Language Models* (November 2023, about one
+  hour). <https://www.youtube.com/watch?v=zjkBMFhNj_g>. The next step up from
+  the 3Blue1Brown video: what the two training stages are, why the second one
+  produces an assistant, and a section on prompt injection that the ethics
+  and regulation chapter will make use of.
+- 3Blue1Brown, *But what is a neural network?* (Deep Learning, Chapter 1).
+  <https://www.youtube.com/watch?v=aircAruvnKk>. For the *f* in @fig-loop,
+  if you want to see what the boxes in the Playground exercise contain.
+  [VERIFY: length and date before assigning]{.verify}
+- Course decks, immutable at the archive:
+  [Deep learning intro](https://talks.seandavis.net/archive/2024-11-06-deep-learning-intro/),
+  which ends on the same Playground exercise with medical-imaging framing;
+  [Word embeddings as the basis for LLMs](https://talks.seandavis.net/archive/2024-11-12-word-embeddings-basis-for-llms/),
+  which has an Embedding Projector exercise for the "words become numbers"
+  step; and [AI history](https://talks.seandavis.net/archive/2025-09-30-ai-history/),
+  for MYCIN and Watson at length.
+
+**Papers**
+
+- The CKD-EPI 2021 development and validation paper, which is a model card
+  before the term existed: predictors, response, training set, test set, and
+  where it is wrong, all in one abstract [@pmid:34554658]. The NKF-ASN task
+  force report explains why the refit happened [@pmid:34563581].
+- Dataset shift for clinicians, in two pages [@pmid:34260843], and the
+  external validation of the vendor sepsis model that is its best-known
+  example [@pmid:34152373].
+- A primer on how the chatbots are built and what the early clinical results
+  look like [@pmid:37460753].
+- The "lost in the middle" study behind the second context-window limit
+  [@doi:10.1162/tacl_a_00638].
+- MYCIN's blinded evaluation, forty-seven years old and still a model of how
+  to test a decision-support tool [@pmid:480542].
+
+**If you want the model zoo**
+
+This chapter deliberately named no algorithms beyond regression and the neural
+network. Random forests, nearest neighbors, and penalized regression are all
+instances of the same loop with a different *f*, and are laid out with
+examples at
+<https://seandavi.github.io/RBiocBook/machine_learning/models.html>.

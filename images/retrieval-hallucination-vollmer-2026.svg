@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="340" viewBox="0 0 640 340" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14">
+  <title>What retrieval changes: hallucination and citation groundedness, with and without retrieval</title>
+  <!-- axes -->
+  <line x1="70" y1="40" x2="70" y2="260" stroke="#444" stroke-width="1"/>
+  <line x1="70" y1="260" x2="600" y2="260" stroke="#444" stroke-width="1"/>
+  <!-- y ticks: 0..100% over 220px -->
+  <g fill="#555" font-size="12" text-anchor="end">
+    <text x="62" y="264">0%</text><line x1="66" y1="260" x2="70" y2="260" stroke="#444"/>
+    <text x="62" y="209">25%</text><line x1="66" y1="205" x2="70" y2="205" stroke="#444"/>
+    <text x="62" y="154">50%</text><line x1="66" y1="150" x2="70" y2="150" stroke="#444"/>
+    <text x="62" y="99">75%</text><line x1="66" y1="95" x2="70" y2="95" stroke="#444"/>
+    <text x="62" y="44">100%</text><line x1="66" y1="40" x2="70" y2="40" stroke="#444"/>
+  </g>
+  <g stroke="#e6e6e6" stroke-width="1">
+    <line x1="70" y1="205" x2="600" y2="205"/><line x1="70" y1="150" x2="600" y2="150"/>
+    <line x1="70" y1="95" x2="600" y2="95"/><line x1="70" y1="40" x2="600" y2="40"/>
+  </g>
+  <!-- Group 1: content hallucination. 42% -> h=92.4 ; 4% -> h=8.8 -->
+  <rect x="120" y="167.6" width="70" height="92.4" fill="#8a7a5a"/>
+  <text x="155" y="160" text-anchor="middle" font-weight="600">42%</text>
+  <rect x="200" y="251.2" width="70" height="8.8" fill="#1565c0"/>
+  <text x="235" y="244" text-anchor="middle" font-weight="600">4%</text>
+  <text x="195" y="284" text-anchor="middle" font-size="13">Content-level hallucination</text>
+  <text x="195" y="301" text-anchor="middle" font-size="12" fill="#555">(lower is better)</text>
+  <!-- Group 2: citation groundedness. 0% ; 51–89% -> bar to 51 (h=112.2) with range whisker to 89 (y=64.2) -->
+  <rect x="390" y="259" width="70" height="1" fill="#8a7a5a"/>
+  <text x="425" y="250" text-anchor="middle" font-weight="600">0%</text>
+  <rect x="470" y="147.8" width="70" height="112.2" fill="#1565c0"/>
+  <line x1="505" y1="147.8" x2="505" y2="64.2" stroke="#1565c0" stroke-width="2"/>
+  <line x1="495" y1="64.2" x2="515" y2="64.2" stroke="#1565c0" stroke-width="2"/>
+  <text x="505" y="56" text-anchor="middle" font-weight="600">51–89%</text>
+  <text x="465" y="284" text-anchor="middle" font-size="13">Citations grounded in a retrieved passage</text>
+  <text x="465" y="301" text-anchor="middle" font-size="12" fill="#555">(higher is better; range across models)</text>
+  <!-- legend -->
+  <rect x="120" y="18" width="14" height="14" fill="#8a7a5a"/><text x="140" y="30">Without retrieval</text>
+  <rect x="280" y="18" width="14" height="14" fill="#1565c0"/><text x="300" y="30">With guideline retrieval</text>
+  <text x="335" y="330" text-anchor="middle" font-size="11" fill="#666">Six models, 50 clinical-guideline questions. Redrawn from Vollmer et al., Diagnostics 2026, CC BY 4.0.</text>
+</svg>

@@ -16,7 +16,17 @@ book:
   date: today
   chapters:
     - index.qmd
+    - chapters/core-foundations.qmd
+    - chapters/core-centaur-cyborg.qmd
     - chapters/core-appraisal.qmd
+    - chapters/core-bias-equity.qmd
+    - chapters/enrichment-agentic-coding.qmd
+    - chapters/core-patient-communication.qmd
+    - chapters/enrichment-workforce-economics.qmd
+    - chapters/enrichment-environment.qmd
+    - chapters/core-ethics-regulation.qmd
+    - chapters/enrichment-prompting-lab.qmd
+    - chapters/enrichment-rag-notebooklm.qmd
   appendices:
     - appendix/about.qmd
     - appendix/personas.qmd

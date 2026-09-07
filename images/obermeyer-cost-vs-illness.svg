@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <!-- Redrawn from published numbers in Obermeyer et al., Science 2019. Data are not copyrightable. -->
+  <rect width="900" height="340" fill="#fff"/>
+  <!-- Panel A: chronic conditions at the auto-enrolment threshold -->
+  <text x="225" y="28" text-anchor="middle" font-size="15" font-weight="bold">A. Same risk score, different illness</text>
+  <text x="225" y="48" text-anchor="middle" fill="#555">Active chronic conditions at the 97th risk percentile</text>
+  <line x1="90" y1="270" x2="380" y2="270" stroke="#333"/>
+  <line x1="90" y1="270" x2="90" y2="70" stroke="#333"/>
+  <g fill="#555" text-anchor="end">
+    <text x="82" y="274">0</text>
+    <text x="82" y="234">1</text><line x1="86" y1="230" x2="380" y2="230" stroke="#eee"/>
+    <text x="82" y="194">2</text><line x1="86" y1="190" x2="380" y2="190" stroke="#eee"/>
+    <text x="82" y="154">3</text><line x1="86" y1="150" x2="380" y2="150" stroke="#eee"/>
+    <text x="82" y="114">4</text><line x1="86" y1="110" x2="380" y2="110" stroke="#eee"/>
+    <text x="82" y="74">5</text><line x1="86" y1="70" x2="380" y2="70" stroke="#eee"/>
+  </g>
+  <!-- 40 px per condition; y = 270 - 40*v -->
+  <rect x="140" y="118" width="80" height="152" fill="#9ecae1"/><text x="180" y="110" text-anchor="middle" font-weight="bold">3.8</text>
+  <text x="180" y="292" text-anchor="middle">White patients</text>
+  <rect x="250" y="78" width="80" height="192" fill="#08519c"/><text x="290" y="70" text-anchor="middle" font-weight="bold">4.8</text>
+  <text x="290" y="292" text-anchor="middle">Black patients</text>
+  <text x="235" y="322" text-anchor="middle" fill="#555" font-size="12">Black patients at the threshold carried 26% more chronic illness.</text>
+
+  <!-- Panel B: share of auto-enrolled patients who are Black -->
+  <text x="665" y="28" text-anchor="middle" font-size="15" font-weight="bold">B. Who gets the program</text>
+  <text x="665" y="48" text-anchor="middle" fill="#555">Share of automatically enrolled patients who are Black</text>
+  <line x1="530" y1="270" x2="820" y2="270" stroke="#333"/>
+  <line x1="530" y1="270" x2="530" y2="70" stroke="#333"/>
+  <g fill="#555" text-anchor="end">
+    <text x="522" y="274">0%</text>
+    <text x="522" y="194">20%</text><line x1="526" y1="190" x2="820" y2="190" stroke="#eee"/>
+    <text x="522" y="114">40%</text><line x1="526" y1="110" x2="820" y2="110" stroke="#eee"/>
+  </g>
+  <!-- 4 px per percent; y = 270 - 4*v -->
+  <rect x="580" y="199.2" width="80" height="70.8" fill="#bbb"/><text x="620" y="192" text-anchor="middle" font-weight="bold">17.7%</text>
+  <text x="620" y="292" text-anchor="middle">Ranked on cost</text>
+  <text x="620" y="308" text-anchor="middle" fill="#555" font-size="12">(as deployed)</text>
+  <rect x="690" y="84" width="80" height="186" fill="#08519c"/><text x="730" y="77" text-anchor="middle" font-weight="bold">46.5%</text>
+  <text x="730" y="292" text-anchor="middle">Ranked on illness</text>
+  <text x="730" y="308" text-anchor="middle" fill="#555" font-size="12">(authors' correction)</text>
+</svg>

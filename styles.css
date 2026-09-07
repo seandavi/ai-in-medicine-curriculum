@@ -22,3 +22,55 @@
 
 /* Comics and photos: keep them modest on the page. */
 .figure img.comic { max-width: 420px; }
+
+/* core-foundations chapter: a lab-report line and a chatbot reply, drawn in CSS so both are obviously illustrative. */
+.lab-report { max-width: 560px; margin: 1.2em auto; padding: .8em 1.1em; background: #fff; border: 1px solid #cfd6df; border-radius: 4px; font-family: "Courier New", Courier, monospace; font-size: .9em; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.lab-report .hdr { font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: .75em; letter-spacing: .08em; text-transform: uppercase; color: #5a6675; border-bottom: 1px solid #cfd6df; padding-bottom: .3em; margin-bottom: .5em; }
+.lab-report table { width: 100%; border-collapse: collapse; margin: 0; }
+.lab-report td { padding: .15em .4em; border: none; }
+.lab-report .flag { color: #b00020; font-weight: 700; }
+.lab-report .fine { font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: .7em; color: #7a8592; margin-top: .5em; }
+.chat { max-width: 600px; margin: 1.2em auto; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: .92em; }
+.chat .user, .chat .bot { padding: .7em 1em; border-radius: 12px; margin: .4em 0; }
+.chat .user { background: #e8f0fe; margin-left: 3em; }
+.chat .bot { background: #f3f4f6; margin-right: 3em; }
+.chat .fine { font-size: .7em; color: #7a8592; text-align: center; }
+/* enrichment-agentic-coding: a resident-built calculator drawn as a mock browser window, so the artifact under appraisal is obviously illustrative. */
+.app-mock { max-width: 520px; margin: 1.2em auto; border: 1px solid #cfd4da; border-radius: 8px; background: #fff; box-shadow: 0 6px 18px rgba(0,0,0,.15); font-family: "Segoe UI", Helvetica, Arial, sans-serif; overflow: hidden; }
+.app-mock .bar { background: #e9ecef; padding: .4em .8em; font-size: .75em; color: #555; border-bottom: 1px solid #cfd4da; }
+.app-mock .body { padding: .9em 1.1em; }
+.app-mock h4 { margin: 0 0 .5em; font-weight: 600; }
+.app-mock .row { display: flex; justify-content: space-between; padding: .25em 0; border-bottom: 1px dotted #e2e6ea; font-size: .9em; }
+.app-mock .score { text-align: center; margin: .7em 0 .3em; }
+.app-mock .score b { display: block; font-size: 2.6em; line-height: 1; }
+.app-mock .score span { font-size: .85em; color: #555; }
+.app-mock .banner { background: #c62828; color: #fff; text-align: center; font-size: .78em; padding: .35em; }
+.app-mock .fine { font-size: .65em; color: #777; padding: .4em 1.1em .6em; }
+.app-mock .flag { background: #fff4cc; }
+/* core-ethics-regulation: an EHR progress note drawn in CSS, illustrative, synthetic patient. */
+.ehr-note { max-width: 620px; margin: 1.2em auto; padding: .9em 1.2em; background: #fbfbf9; border: 1px solid #cfd4d9; border-radius: 4px; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: .92em; box-shadow: 0 3px 10px rgba(0,0,0,.12); }
+.ehr-note .hdr { display: flex; justify-content: space-between; font-size: .75em; letter-spacing: .06em; text-transform: uppercase; color: #4a5560; border-bottom: 1px solid #cfd4d9; padding-bottom: .4em; margin-bottom: .6em; }
+.ehr-note .sec { font-weight: 700; color: #1f3a5f; margin-top: .6em; }
+.ehr-note p { margin: .3em 0; }
+.ehr-note mark { background: #ffe9a8; }
+.ehr-note .foot { font-size: .72em; color: #5a6470; border-top: 1px dashed #cfd4d9; margin-top: .8em; padding-top: .4em; }
+/* enrichment-prompting-lab: two chatbot answers side by side, drawn in CSS so they are obviously illustrative. */
+.chat-pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1em; margin: 1.2em 0; }
+.chat-pane { background: #f7f7f9; border: 1px solid #d9d9e0; border-radius: 8px; padding: .8em 1em; font-size: .9em; }
+.chat-pane .prompt { font-family: "Segoe UI", Helvetica, Arial, sans-serif; background: #e8eefb; border-radius: 6px; padding: .5em .7em; margin-bottom: .7em; color: #1a2a4a; }
+.chat-pane .prompt::before, .chat-pane .reply::before { display: block; font-size: .7em; letter-spacing: .08em; text-transform: uppercase; opacity: .6; }
+.chat-pane .prompt::before { content: "You"; }
+.chat-pane .reply::before { content: "Assistant"; }
+.chat-pane .reply table { font-size: .85em; margin: .4em 0; border-collapse: collapse; }
+.chat-pane .reply th, .chat-pane .reply td { border: 1px solid #d9d9e0; padding: .25em .5em; vertical-align: top; }
+.chat-pane .fine { font-size: .7em; opacity: .55; margin-top: .6em; }
+/* enrichment-rag-notebooklm: a grounded tool's answer with citation chips (the artifact under appraisal), and a table split across two retrieval chunks. */
+.grounded-answer { max-width: 640px; margin: 1.2em auto; padding: 1em 1.2em; background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 8px; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: .95em; }
+.grounded-answer .q { font-weight: 600; color: #24292f; margin-bottom: .5em; }
+.grounded-answer .q::before { content: "You: "; color: #57606a; font-weight: 400; }
+.grounded-answer .a { color: #24292f; line-height: 1.5; }
+.grounded-answer .cite { display: inline-block; font-size: .7em; background: #dbe9ff; color: #0b3d91; border-radius: 9px; padding: 0 .5em; margin: 0 .15em; vertical-align: super; text-decoration: none; }
+.grounded-answer .srcs { font-size: .75em; color: #57606a; border-top: 1px solid #d0d7de; margin-top: .7em; padding-top: .4em; }
+.chunks { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: .8em; margin: 1.2em 0; }
+.chunk { background: #fffdf5; border: 1px dashed #b8a66a; padding: .6em .8em; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .78em; white-space: pre-wrap; overflow-x: auto; }
+.chunk .lbl { display: block; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: .85em; letter-spacing: .08em; text-transform: uppercase; color: #8a7a5a; margin-bottom: .3em; }
