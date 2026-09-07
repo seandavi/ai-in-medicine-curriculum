@@ -18,6 +18,7 @@ book:
     - index.qmd
     - chapters/core-appraisal.qmd
     - chapters/core-foundations.qmd
+    - chapters/core-centaur-cyborg.qmd
   appendices:
     - appendix/about.qmd
     - appendix/personas.qmd
