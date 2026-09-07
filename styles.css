@@ -64,3 +64,13 @@
 .chat-pane .reply table { font-size: .85em; margin: .4em 0; border-collapse: collapse; }
 .chat-pane .reply th, .chat-pane .reply td { border: 1px solid #d9d9e0; padding: .25em .5em; vertical-align: top; }
 .chat-pane .fine { font-size: .7em; opacity: .55; margin-top: .6em; }
+/* enrichment-rag-notebooklm: a grounded tool's answer with citation chips (the artifact under appraisal), and a table split across two retrieval chunks. */
+.grounded-answer { max-width: 640px; margin: 1.2em auto; padding: 1em 1.2em; background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 8px; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: .95em; }
+.grounded-answer .q { font-weight: 600; color: #24292f; margin-bottom: .5em; }
+.grounded-answer .q::before { content: "You: "; color: #57606a; font-weight: 400; }
+.grounded-answer .a { color: #24292f; line-height: 1.5; }
+.grounded-answer .cite { display: inline-block; font-size: .7em; background: #dbe9ff; color: #0b3d91; border-radius: 9px; padding: 0 .5em; margin: 0 .15em; vertical-align: super; text-decoration: none; }
+.grounded-answer .srcs { font-size: .75em; color: #57606a; border-top: 1px solid #d0d7de; margin-top: .7em; padding-top: .4em; }
+.chunks { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: .8em; margin: 1.2em 0; }
+.chunk { background: #fffdf5; border: 1px dashed #b8a66a; padding: .6em .8em; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .78em; white-space: pre-wrap; overflow-x: auto; }
+.chunk .lbl { display: block; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: .85em; letter-spacing: .08em; text-transform: uppercase; color: #8a7a5a; margin-bottom: .3em; }
