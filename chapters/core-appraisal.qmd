@@ -24,10 +24,9 @@ By the end of this chapter you will be able to:
 :::
 
 **Time.** About 35 minutes of reading, 30 minutes of listening, 45 minutes of
-doing. You need one free general-purpose chatbot and a PubMed tab. ChatGPT's free
-tier answers the prompts below without an account; Claude.ai asks for a phone
-number at signup, so use whichever you are comfortable with. Nothing installs.
-[VERIFY: free-tier access and signup requirements at time of teaching]{.verify}
+doing. You need one general-purpose chatbot and a PubMed tab. Your institutional
+ChatGPT Edu or Microsoft Copilot account is enough, and neither asks you for
+anything at signup; a personal free-tier account works too. Nothing installs.
 
 ## Lunch with a vendor
 

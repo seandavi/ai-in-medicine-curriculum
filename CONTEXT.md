@@ -128,3 +128,11 @@ Anything requiring a login re-creates the problem the LMS already has.
   in force, and it requires *experiential* learning for the clinical-application
   domain. That is the accreditation argument for the hands-on modules.
 - The 57 verification flags across `research/` and `modules/` — see the README.
+
+## Student tool access
+
+Confirmed 2026-09-07: students have institutional ChatGPT Edu and Microsoft
+Copilot accounts. Chapters can assume one general-purpose chatbot without a
+signup step. Institutional accounts do not change the no-PHI rule; they are not
+covered by a business associate agreement for clinical use unless the
+institution says so.
