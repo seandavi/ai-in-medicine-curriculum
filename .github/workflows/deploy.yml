@@ -24,6 +24,8 @@ jobs:
 
       - name: Install uv
         uses: astral-sh/setup-uv@v9.0.0
+        with:
+          enable-cache: false   # nothing to cache; silences the lockfile warning
 
       - name: Install quartobot
         run: uv tool install git+https://github.com/seandavi/quartobot
