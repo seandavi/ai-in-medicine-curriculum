@@ -16,9 +16,9 @@ book:
   date: today
   chapters:
     - index.qmd
-    - chapters/core-appraisal.qmd
     - chapters/core-foundations.qmd
     - chapters/core-centaur-cyborg.qmd
+    - chapters/core-appraisal.qmd
     - chapters/core-bias-equity.qmd
     - chapters/enrichment-agentic-coding.qmd
     - chapters/core-patient-communication.qmd
