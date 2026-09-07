@@ -15,9 +15,12 @@ medical students. ~40 students, Zoom-only, ungraded. Successor to IDPT 8079.
    forces. Check any new module against this.
 4. **`curriculum/chapter-pattern.md`** — the skeleton every student-facing
    chapter follows: 1–2 h budget, one video or podcast, specialty-choice literature.
-5. **`curriculum/personas.md`** — six review personas (three MS4s, an
+5. **`curriculum/chapter-plan.md`** — order of the remaining chapters, the
+   per-chapter contract, and the review and cross-reference passes; each item
+   is a GitHub issue.
+6. **`curriculum/personas.md`** — six review personas (three MS4s, an
    instructional designer, a borrowing educator, a clinical ethicist). Read each chapter as each of them.
-6. **`CONTEXT.md`** — who directs and teaches the course, the guest-lecturer
+7. **`CONTEXT.md`** — who directs and teaches the course, the guest-lecturer
    roster, evaluation and CQI mechanics, registration quirks, and the open
    decision about the student-facing tool. The design files are deliberately
    name-free and date-free so they travel; `CONTEXT.md` is where the CU
