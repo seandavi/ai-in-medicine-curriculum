@@ -1,0 +1,15 @@
+{
+  // Cloudflare Workers Static Assets deployment, same pattern as ../talks.
+  // Assets-only (no Worker script): the Quarto output in _book/ is served
+  // from the edge. Deploy with `npm run deploy` after `quarto render`, or
+  // let .github/workflows/deploy.yml do both on push to main.
+  "$schema": "https://developers.cloudflare.com/workers/wrangler/configuration/schema.json",
+  "name": "ai-in-medicine",
+  "compatibility_date": "2026-09-06",
+  "assets": {
+    "directory": "./_book",
+    "not_found_handling": "404-page"
+  }
+  // To attach a custom domain (DNS for seandavis.net is already on Cloudflare):
+  // "routes": [{ "pattern": "aim.seandavis.net", "custom_domain": true }]
+}

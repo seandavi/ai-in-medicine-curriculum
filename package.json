@@ -1,0 +1,11 @@
+{
+  "name": "ai-in-medicine-curriculum",
+  "private": true,
+  "description": "wrangler only: deploys the rendered Quarto book in _book/ to Cloudflare Workers Static Assets.",
+  "scripts": {
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

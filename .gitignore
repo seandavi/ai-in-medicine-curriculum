@@ -12,3 +12,7 @@ references.json
 **/*.quarto_ipynb
 
 /.quarto/
+
+# wrangler
+node_modules/
+.wrangler/

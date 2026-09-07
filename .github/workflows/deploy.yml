@@ -1,0 +1,47 @@
+name: build-and-deploy
+
+# Render the Quarto book (quartobot resolves @pmid:/@doi: keys during
+# pre-render, which needs network) and ship _book/ to Cloudflare Workers
+# Static Assets. Same shape as seandavi/talks.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v9.0.0
+
+      - name: Install quartobot
+        run: uv tool install git+https://github.com/seandavi/quartobot
+
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+
+      - name: Install wrangler
+        run: npm ci
+
+      - name: Render the book
+        run: quarto render
+
+      - name: Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
