@@ -1,0 +1,116 @@
+---
+title: "How this book was made"
+---
+
+This page is a short account of what this book is, how it was designed, how each
+chapter is reviewed before it reaches you, and how AI was used in writing it. A
+course that asks you to disclose and verify your own AI use should do the same.
+
+## What this is
+
+A four-week, ungraded elective on AI in medicine for about forty fourth-year
+medical students at the University of Colorado School of Medicine, delivered over
+Zoom, successor to IDPT 8079. The book is the self-paced half: one chapter per
+module, one to two hours each, standing alone so a missed week costs one chapter.
+The live sessions run the same activities in breakouts. It is built with
+[Quarto](https://quarto.org/) and the source is public at
+[github.com/seandavi/ai-in-medicine-curriculum](https://github.com/seandavi/ai-in-medicine-curriculum).
+
+## How it was designed
+
+The design happened in the open, in the repository, in this order. Each step is
+a file you can read.
+
+**Constraints first (August 2026).** `curriculum/design-constraints.md` records
+the fixed facts, roughly forty MS4s, four weeks, Zoom only, ungraded, and what
+each one forces. Every later decision is checked against it: no installs, free
+tiers only, every session does something, critical appraisal over tool training.
+
+**Research, then competencies.** `research/competency-frameworks.md` reviews
+eleven published AI-in-medicine competency frameworks, anchored on Russell et al.
+(2023) and Hunt et al. (2026). From that synthesis, `curriculum/competencies.md`
+defines nine domains with stable IDs, `AIM-1` through `AIM-9` plus a
+cross-cutting `AIM-X`. The IDs exist because the AAMC's national competencies
+are expected after this course runs; every module tags itself so the eventual
+crosswalk is a mapping, not a rewrite. Two more research notes feed the design:
+`research/enrichment-activities.md` for the optional modules, and
+`research/comparable-courses.md` for what to borrow from, and deliberately not
+be, other courses.
+
+**Prior material inventoried.** `research/talks-inventory.md` and
+`research/talks-drive-decks.md` catalogue the lectures from the predecessor
+course, including content recovered from slide decks that existed only as Drive
+stubs. Where a descriptor did not match its deck, the note says so.
+
+**Modules, then chapters.** `modules/` holds one session plan per module, with
+activities and rubrics. `curriculum/chapter-pattern.md` (September 2026) is the
+skeleton every student-facing chapter follows: an opening clinical scenario before
+any jargon, why it matters, the idea, one video or podcast, an activity you can
+finish alone, a self-scored check, the standing question, and a reading list.
+The appraisal chapter was written first because it is the most solo-able module
+and its activity maps directly to a PubMed search recipe.
+
+## How chapters are reviewed
+
+Every chapter is read six times before it is considered done, once as each of
+six invented readers. Three are students; three are the people who would adopt,
+adapt, or clear the course. The full descriptions, with each reader's review
+questions, are in the [Review personas](personas.qmd) appendix.
+
+| Reader | Role | What they catch |
+|---|---|---|
+| Elena | MS4, avoids AI, free tiers only | Chapters that assume you already use these tools, or read as enthusiasm |
+| Marcus | MS4, uses AI daily, matching radiology | Chapters that are all warnings, or slower than the tool itself |
+| Priya | MS4, wants to use it safely on the wards | Practical guidance buried under mechanism |
+| Jordan | Instructional designer | Objectives with no matching activity; dishonest time estimates |
+| Dr. Okafor | Educator at another school, not an AI expert | Chapters that cannot be taught without the author in the room |
+| Dr. Lindqvist | Clinical ethicist | Activities that would not pass an IRB sniff test; harm without a named population; false certainty |
+
+The order matters: Elena reads first, because if the avoider cannot get in the
+door nothing after matters, and Dr. Lindqvist reads last. When readers disagree,
+students win on content, faculty win on form, and the ethicist wins on harm.
+
+Two further checks run on every chapter:
+
+- **Citations resolve or the build fails.** Every reference is written as a
+  PubMed ID or DOI. Before each render, a tool
+  ([quartobot](https://github.com/seandavi/quartobot)) looks each one up and
+  writes the bibliography. A key that does not resolve stops the render. This
+  does not prove a paper says what the chapter claims; it proves the paper
+  exists, which is the failure mode this course spends a chapter on.
+- **Unverified claims stay flagged.** Research notes carry `[VERIFY]`,
+  `[UNVERIFIED]`, and `[CONFLICTING]` tags. They travel into chapters unchanged
+  and are not removed until a person has checked the claim.
+
+Answer keys live in `_answers/`, are never rendered, and are held for the chat
+tutor.
+
+## On the use of AI
+
+This book was drafted with an AI coding assistant (Claude Code, running Claude
+models), working in the repository alongside the author. The division of labor
+has been consistent: the author decides, the model drafts, the author edits and
+commits. That covers most of the prose in this book, the research notes, the
+module plans, and the review personas above. It does not cover the decisions
+those files record, which are the author's: the competencies, the constraints,
+the four-week structure, the choice of reviewers, and the rule that every chapter
+opens with a clinical scenario.
+
+The model has been most useful for three things. **Editing**, which is bringing
+material written over several years into one voice. **Drafting**, which is
+producing first versions of explanations, activities, and answer keys from a
+module plan. And **holding the chapters to a standard**, which is reading each
+one as the six reviewers above and reporting where it fails.
+
+::: {.callout-important}
+## AI assists; humans are responsible
+A language model produces fluent text that can feel authoritative while being
+wrong, and the appraisal chapter exists because that is true of citations in
+particular. So every reference in this book was resolved against PubMed by tool,
+every chapter was read in full by the author before it was committed, and
+responsibility for what the book says rests with the author. Where the review
+was lighter than that, the ledger says so.
+:::
+
+The [AI ledger](ai-ledger.qmd) records, commit by commit, what the model did and
+what a person checked.

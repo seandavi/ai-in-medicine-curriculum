@@ -15,7 +15,9 @@ medical students. ~40 students, Zoom-only, ungraded. Successor to IDPT 8079.
    forces. Check any new module against this.
 4. **`curriculum/chapter-pattern.md`** — the skeleton every student-facing
    chapter follows: 1–2 h budget, one video or podcast, specialty-choice literature.
-5. **`CONTEXT.md`** — who directs and teaches the course, the guest-lecturer
+5. **`curriculum/personas.md`** — six review personas (three MS4s, an
+   instructional designer, a borrowing educator, a clinical ethicist). Read each chapter as each of them.
+6. **`CONTEXT.md`** — who directs and teaches the course, the guest-lecturer
    roster, evaluation and CQI mechanics, registration quirks, and the open
    decision about the student-facing tool. The design files are deliberately
    name-free and date-free so they travel; `CONTEXT.md` is where the CU
@@ -27,7 +29,8 @@ medical students. ~40 students, Zoom-only, ungraded. Successor to IDPT 8079.
 |---|---|
 | `curriculum/` | Competency framework, module catalog, design constraints, and `delivery-modes.md` — an untested idea about which sessions need live Zoom and what a chat-based async path would look like |
 | `modules/` | One self-contained file per module — session plan, activities, rubrics |
-| `chapters/`, `index.qmd`, `_quarto.yml` | The student-facing Quarto book; one chapter per module following `curriculum/chapter-pattern.md`. `_answers/` holds answer keys that are never rendered |
+| `chapters/`, `appendix/`, `index.qmd`, `_quarto.yml` | The student-facing Quarto book; one chapter per module following `curriculum/chapter-pattern.md`. `appendix/` renders how the book was made, the review personas, and the AI ledger. `_answers/` holds answer keys that are never rendered |
+| `AI-LEDGER.md` | Where AI was used to build the course and who checked it; one row per content commit. The appendices (`appendix/`) describe the *current* process; when the design, review, or AI-use practice changes, update them in the same commit. They track content, not length |
 | `research/` | The background research the design rests on, with citations; `comparable-courses.md` reviews external courses for what to borrow |
 
 Modules are independent by design. Each tags its competencies, assumes no prior

@@ -7,6 +7,7 @@ project:
   render:
     - index.qmd
     - chapters/
+    - appendix/
 
 book:
   title: "AI in Medicine"
@@ -16,6 +17,10 @@ book:
   chapters:
     - index.qmd
     - chapters/core-appraisal.qmd
+  appendices:
+    - appendix/about.qmd
+    - appendix/personas.qmd
+    - appendix/ai-ledger.qmd
   search: true
   page-navigation: true
   repo-url: https://github.com/seandavi/ai-in-medicine-curriculum

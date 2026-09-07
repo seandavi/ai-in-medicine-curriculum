@@ -23,18 +23,42 @@ By the end of this chapter you will be able to:
 doing. You need a free ChatGPT or Claude.ai account and a PubMed tab. Nothing
 installs.
 
+## Lunch with a vendor
+
+It is noon conference in your second month of intern year. The sandwiches are
+better than usual, because a company is paying for them. Their representative
+is showing a slide about an ambient scribe: a phone app that listens to the
+visit and writes the note. The slide says documentation time fell 40 percent
+and burnout fell by a third at a large health system. Your program director is
+nodding. The chief resident leans over and asks what you think, because you are
+the one who "does the AI stuff."
+
+Earlier that morning, a senior resident handed you a reference for the case
+presentation you give on Thursday. She had pulled it from ChatGPT. It has a
+plausible first author, a real journal, a well-formed DOI, and a finding that
+fits your case nicely. You have not opened it.
+
+These are the same problem at two scales. In both cases someone has handed you a
+claim that looks right, and you are the person whose name will be on whatever
+that claim supports. The slide and the reference need the same question, which
+this chapter will ask twice: *what would have to be true for this to be
+trustworthy, and did anyone check?*
+
+Clinicians have a word for that habit when it is applied to a paper. They call
+it critical appraisal. This chapter extends it to two things a paper never used
+to do: generate its own references, and get sold to your department over lunch.
+
 ## Why this matters
 
-In a few months you will be a resident. Someone on your team will hand you a
-tool that produces references, or you will open one yourself at 2 a.m. to answer
-a management question. The reference will look right. It will have a plausible
-first author, a real journal, a well-formed DOI. Whether it exists is a separate
-question, and you will be the person who signs whatever that reference supports.
+The reference problem will find you within the year. Someone on your team will
+hand you a tool that produces citations, or you will open one yourself at 2 a.m.
+to answer a management question. Whether the reference exists is a separate
+question from whether it looks right, and checking takes twenty minutes.
 
-The same problem repeats one level up. Your program is buying, or has bought, an
-ambient documentation tool. The vendor's slide says burnout fell by a third. A
-health system's press release says the same. A randomized trial says something
-smaller and more specific. Deciding which of those to believe is a skill that will
+The vendor problem will find your program, and increasingly it will find you.
+Residents sit on the committees that pilot these tools. The vendor's slide, the
+health system's press release, and the randomized trial will say three different
+things about the same product. Deciding which to believe is a skill that will
 still be needed in fifteen years, when every product named in this chapter is
 gone.
 
@@ -43,9 +67,9 @@ gone.
 ### Two skills that get collapsed into one
 
 Appraising an AI tool is two separate skills. The first is checking what a model
-just told *you*: does this citation exist, and does it say what the model claims.
-The second is checking what the literature says about the tool *class*: does the
-scribe your program is buying give you your evenings back.
+just told *you*: does the resident's citation exist, and does it say what the
+model claims. The second is checking what the literature says about a tool
+*class*: does the scribe on the lunch slide actually give you your evenings back.
 
 Most people arrive assuming the first skill is the hard one and the second is
 someone else's job. This chapter reverses that. Verifying five references takes
@@ -53,9 +77,9 @@ twenty minutes and a PubMed tab, and the answer is unambiguous and often
 surprising. Weighing a finding that most clinicians declined a tool against a
 health system's press release takes judgment.
 
-The two halves connect through one question, asked twice: *what would have to be
-true for this to be trustworthy, and did anyone check?* In the first half, you are
-the one who checks. In the second, you grade how well other people checked.
+The two halves connect through the question from the lunch room, asked twice. In
+the first half, you are the one who checks. In the second, you grade how well
+other people checked.
 
 ### Where a citation comes from
 
@@ -433,8 +457,11 @@ Score yourself against this before moving on.
 ## The standing question
 
 *What does this change about how you'll practice?* Write it down before you close
-this chapter. Specifically: what will you now check before you cite an AI-surfaced
-reference in a note, a presentation, or an application? One word is not an answer.
+this chapter. Two specifics. First, what will you now check before you cite an
+AI-surfaced reference in a note, a presentation, or an application? Second, go
+back to the lunch room: the chief resident is still waiting. What do you say
+about the 40 percent, and what one question do you ask the vendor? One word is
+not an answer to either.
 
 ## Summary
 

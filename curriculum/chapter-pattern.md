@@ -12,6 +12,7 @@ live demo block; they are not ported. This file is the skeleton every chapter fo
 
 | Block | Minutes | What |
 |---|---|---|
+| Opening scenario | 5 | A clinical situation an MS4 recognizes, before any term of art is used — see *Opening scenario* |
 | Why this matters | 5 | Two paragraphs: what this changes in residency in three months |
 | The idea | 20–30 | Prose with figures and tables; replaces the didactic block of the live session |
 | Watch or listen | 15–30 | One video or podcast episode — see *Multimedia* |
@@ -23,6 +24,23 @@ live demo block; they are not ported. This file is the skeleton every chapter fo
 The live session then runs the same Do with breakouts and the cross-group comparison;
 the chapter is the pre-work and the make-up path. Six chapters at the low end of the
 budget is ~8 h of self-study across four weeks, on top of the weekly resource log.
+
+## Opening scenario
+
+Every chapter starts with a clinical or medically grounded scenario, not with
+the chapter's topic. The scenario is the problem; the chapter's vocabulary is
+introduced only once the reader already has the problem in hand. A vendor at
+lunch selling an ambient scribe is the right kind of opening; "critical
+appraisal is the skill of..." is not. Test: a student who has never heard the
+chapter's key term should be able to read the first two paragraphs and know
+what is at stake.
+
+The scenario returns at the end of the chapter. The Standing question, or the
+last paragraph before it, should put the reader back in the same room with a
+better answer.
+
+Review every chapter against `personas.md`: the avoider first, then the other
+two students, then the faculty readers, the ethicist last.
 
 ## Multimedia
 

@@ -1,0 +1,9 @@
+---
+title: "Review personas"
+---
+
+The six readers every chapter is reviewed against, from
+`curriculum/personas.md` in the repository. See [How this book was
+made](about.qmd) for how they are used.
+
+{{< include ../curriculum/personas.md >}}

@@ -7,14 +7,15 @@ one chapter, not the course.
 
 Every chapter follows the same shape:
 
-1. **Why this matters** — what changes in residency in three months
-2. **The idea** — the concept, in prose, with figures and tables
-3. **Watch or listen** — one video or podcast episode
-4. **Do** — the activity, written so you can finish it alone; wherever it touches
+1. **A scenario** — a clinical situation you will recognize, before any jargon
+2. **Why this matters** — what changes in residency in three months
+3. **The idea** — the concept, in prose, with figures and tables
+4. **Watch or listen** — one video or podcast episode
+5. **Do** — the activity, written so you can finish it alone; wherever it touches
    the literature, you choose your specialty
-5. **Check** — a rubric you score yourself against
-6. **The standing question** — *what does this change about how you'll practice?*
-7. **Go deeper** — papers, talks, and videos, with unverified claims flagged
+6. **Check** — a rubric you score yourself against
+7. **The standing question** — *what does this change about how you'll practice?*
+8. **Go deeper** — papers, talks, and videos, with unverified claims flagged
 
 Three rules hold everywhere: **no patient information enters any tool, ever;
 verify before it counts; you sign the note.**
@@ -25,3 +26,10 @@ they appear and called by name after that.
 
 The design behind this book — competencies, constraints, schedule — lives in the
 `curriculum/` directory of the repository.
+
+**This book was built with AI.** The author directed and edited; an AI coding
+assistant drafted most of the prose and looked up the references. How the book
+was designed, how each chapter is reviewed, and what the AI did are in the
+appendix [How this book was made](appendix/about.qmd) and the
+[AI ledger](appendix/ai-ledger.qmd). The course asks you to disclose and verify;
+this is the course doing the same.
