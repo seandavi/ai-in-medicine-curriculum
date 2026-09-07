@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">
+  <title>Physician versus chatbot responses to 195 patient questions, Ayers et al. 2023</title>
+  <!-- Redrawn from the numbers in the abstract of Ayers JW et al., JAMA Intern Med 2023;183:589-596. Data are not copyrightable; drawing by the course. -->
+  <style>
+    .lab { fill:#333; }
+    .phys { fill:#8a7a5a; }
+    .bot { fill:#1565c0; }
+    .val { fill:#222; font-weight:600; }
+    .axis { stroke:#999; stroke-width:1; }
+    .title { fill:#222; font-size:14px; font-weight:600; }
+  </style>
+  <text x="20" y="24" class="title">Blinded evaluators, 195 questions from a public forum, 585 ratings</text>
+  <rect x="470" y="12" width="12" height="12" class="phys"/><text x="488" y="23" class="lab">Physician</text>
+  <rect x="580" y="12" width="12" height="12" class="bot"/><text x="598" y="23" class="lab">Chatbot</text>
+
+  <!-- panel 1: quality good or very good -->
+  <text x="20" y="62" class="lab">Rated good or very good quality</text>
+  <line x1="200" y1="48" x2="200" y2="120" class="axis"/>
+  <rect x="200" y="52" width="88" height="22" class="phys"/><text x="294" y="68" class="val">22.1%</text>
+  <rect x="200" y="82" width="314" height="22" class="bot"/><text x="520" y="98" class="val">78.5%</text>
+
+  <!-- panel 2: empathetic or very empathetic -->
+  <text x="20" y="152" class="lab">Rated empathetic or very empathetic</text>
+  <line x1="200" y1="138" x2="200" y2="210" class="axis"/>
+  <rect x="200" y="142" width="18" height="22" class="phys"/><text x="224" y="158" class="val">4.6%</text>
+  <rect x="200" y="172" width="180" height="22" class="bot"/><text x="386" y="188" class="val">45.1%</text>
+
+  <!-- panel 3: length -->
+  <text x="20" y="242" class="lab">Median length, words</text>
+  <line x1="200" y1="228" x2="200" y2="300" class="axis"/>
+  <rect x="200" y="232" width="99" height="22" class="phys"/><text x="305" y="248" class="val">52</text>
+  <rect x="200" y="262" width="401" height="22" class="bot"/><text x="607" y="278" class="val">211</text>
+</svg>

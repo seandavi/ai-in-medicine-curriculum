@@ -21,6 +21,7 @@ book:
     - chapters/core-centaur-cyborg.qmd
     - chapters/core-bias-equity.qmd
     - chapters/enrichment-agentic-coding.qmd
+    - chapters/core-patient-communication.qmd
   appendices:
     - appendix/about.qmd
     - appendix/personas.qmd
