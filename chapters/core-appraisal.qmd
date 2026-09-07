@@ -1,75 +1,477 @@
 ---
 title: "Critical appraisal: tools, outputs, and the evidence about both"
-subtitle: "AIM-2 · AIM-9"
+subtitle: "AIM-2 · AIM-9 · about 90 minutes"
 ---
 
-::: {.callout-note title="Status"}
-Pilot chapter. Structure is final; prose is being lifted from
-`modules/core-appraisal.md`. Sections marked *draft* are placeholders.
+::: {.callout-note title="What you'll learn"}
+By the end of this chapter you will be able to:
+
+1. Verify an AI-generated citation against PubMed and score it on a published
+   accuracy scale, instead of judging plausibility by eye.
+2. Explain why fabricated references follow from how these systems generate text,
+   and why retrieval-grounded tools differ in kind rather than in degree.
+3. Describe how the framing of a prompt changes fabrication risk, and say what that
+   means for a clinician who uses the same tool at work and at home.
+4. Sort claims about a clinical AI tool into randomized, large observational, and
+   vendor or trade-press evidence, and explain why the three tiers disagree in the
+   same direction.
+5. Explain why FDA clearance is not evidence of clinical performance, using the
+   published analyses of FDA decision summaries.
 :::
 
-## Why this matters {.unnumbered}
+**Time.** About 25 minutes of reading, 30 minutes of listening, 45 minutes of
+doing. You need a free ChatGPT or Claude.ai account and a PubMed tab. Nothing
+installs.
 
-*Draft.* Two paragraphs on what changes in residency: you will be handed a tool
-that produces references, and you will be the one who signs whatever those
-references support.
+## Why this matters
+
+In a few months you will be a resident. Someone on your team will hand you a
+tool that produces references, or you will open one yourself at 2 a.m. to answer
+a management question. The reference will look right. It will have a plausible
+first author, a real journal, a well-formed DOI. Whether it exists is a separate
+question, and you will be the person who signs whatever that reference supports.
+
+The same problem repeats one level up. Your program is buying, or has bought, an
+ambient documentation tool. The vendor's slide says burnout fell by a third. A
+health system's press release says the same. A randomized trial says something
+smaller and more specific. Deciding which of those to believe is a skill that will
+still be needed in fifteen years, when every product named in this chapter is
+gone.
 
 ## The idea
 
-*Draft.* The claim this chapter tests: a citation from a language model is a
-prediction of what a citation looks like, not a lookup. When a group of medical
-questions was put to a general chatbot, most of the references it produced did not
-exist [@pmid:40206627; @pmid:37499282]. Tools that index the literature directly
-behave differently — one head-to-head scored zero fabrications for a retrieval-based
-tool against double-digit rates for general models [@pmid:42232526]. The rate is
-not a constant; it is a property of the tool and the month.
+### Two skills that get collapsed into one
 
-The second half of the idea is that the same skepticism applies to the *evidence
-about* AI. Regulatory clearance is not evidence of clinical benefit
-[@pmid:33820998], and a randomized trial of physicians with model access found no
-improvement in diagnostic reasoning over physicians without it, while the model
-alone outperformed both [@pmid:39466245]. The published number is the optimistic
-one.
+Appraising an AI tool is two separate skills. The first is checking what a model
+just told *you*: does this citation exist, and does it say what the model claims.
+The second is checking what the literature says about the tool *class*: does the
+scribe your program is buying give you your evenings back.
+
+Most people arrive assuming the first skill is the hard one and the second is
+someone else's job. This chapter reverses that. Verifying five references takes
+twenty minutes and a PubMed tab, and the answer is unambiguous and often
+surprising. Weighing a finding that most clinicians declined a tool against a
+health system's press release takes judgment.
+
+The two halves connect through one question, asked twice: *what would have to be
+true for this to be trustworthy, and did anyone check?* In the first half, you are
+the one who checks. In the second, you grade how well other people checked.
+
+### Where a citation comes from
+
+A general-purpose language model produces a citation the same way it produces any
+other text: as a plausible continuation, one token at a time. A well-formed author
+list, a real journal name, and a syntactically valid DOI are what a plausible
+continuation looks like. The model is not consulting a database and failing. It
+never had one.
+
+A retrieval-grounded tool inverts the order. It searches an index first, then
+generates text about what it found. @fig-citation-paths shows the two paths.
+
+```{mermaid}
+%%| label: fig-citation-paths
+%%| fig-cap: "Two ways a tool arrives at a citation. On the left, the citation is generated as text; whether it exists is a matter of chance. On the right, the citation is retrieved from an index before any text is written."
+flowchart LR
+  subgraph G["General-purpose model"]
+    direction TB
+    q1[Your question] --> gen1[Generate answer text]
+    gen1 --> cite1[Generate citation text]
+    cite1 --> out1[Looks like a reference]
+  end
+  subgraph R["Retrieval-grounded tool"]
+    direction TB
+    q2[Your question] --> search[Search PubMed or an index]
+    search --> docs[Real papers]
+    docs --> gen2[Generate answer about those papers]
+    gen2 --> out2[Cites what it found]
+  end
+```
+
+This is why a retrieval-grounded tool's fabrication rate is structurally
+different rather than incrementally better. It can still misread a paper it
+found. It cannot invent one it did not find.
+
+### What the published rates look like
+
+Three studies set the scale. Across 20 medical questions put to ChatGPT, 41 of 59
+generated references (69%) were fabricated [@pmid:40206627]. In a psychiatry
+test, only 2 of 35 citations were real [@pmid:37499282]. A 2026 comparison of
+five tools, using the 2/1/0 scale you will use below, found zero fabrications from
+OpenEvidence, which indexes PubMed directly, while the general-purpose models
+ranged from Claude at 78.0% accuracy to Gemini at a 26.2% fabrication rate
+[@pmid:42232526].
+
+| Study | Setting | Result |
+|---|---|---|
+| Gravel et al. (2023) | 20 medical questions, ChatGPT | 41 of 59 references fabricated (69%) |
+| McGowan et al. (2023) | Psychiatry, ChatGPT and Bard | 2 of 35 citations real |
+| McLaughlin et al. (2026) | Spine surgery, five tools | OpenEvidence 0 fabrications; Claude 78.0% accurate; Gemini 26.2% fabricated |
+
+: Published fabrication rates. Each is one snapshot of one tool in one domain. {#tbl-rates}
+
+The same 2026 study contains the finding this chapter is built around. The
+fabrication rate for ChatGPT rose from 2.1% on clinician-framed prompts to 20.0%
+on patient-framed prompts [@pmid:42232526]. Same tool, same underlying question,
+different register.
+
+::: {.callout-important title="The practical consequence"}
+The version of a tool you trust at work may behave differently when you, or your
+patient, ask the same question in ordinary language. Validating a tool once, in one
+register, is not enough.
+:::
+
+::: {.callout-note title="These numbers move"}
+Fabrication rates are a property of the tool and the month, not a constant. A
+second 2026 study reported the GPT-versus-Gemini ordering reversed
+`[VERIFY: Frutuoso Maia et al. 2026, Br J Oral Maxillofac Surg; not found in PubMed at time of writing]`.
+When your own results below disagree with @tbl-rates, that is expected. The
+mechanism in @fig-citation-paths is the durable part; the percentages are not.
+:::
+
+### Grading the evidence about a tool
+
+The second skill applies the same question to the literature about a class of
+tools. Ambient documentation, or the "AI scribe", is the right example because
+the evidence is large, recent, and disagrees with itself in a consistent
+direction.
+
+Claims about scribes come in three tiers:
+
+- **Randomized trials.** Clinicians or clinics assigned to the tool or a
+  comparator.
+- **Large observational studies.** Real-world data from many clinicians, without
+  randomization. This includes pre/post designs, stepped adoption without
+  randomization, and surveys of adopters.
+- **Vendor or trade press.** A claim originating from a company, a press release,
+  or trade reporting, however specific the number sounds.
+
+The three tiers disagree in the same direction. Pre/post studies of health-system
+rollouts report large drops in burnout. Randomized trials report smaller effects,
+and they consistently fail to move the one outcome that motivates the entire
+product category: after-hours charting. In the largest study to date, across five
+academic systems and 8,581 clinicians, total EHR time fell 13.4 minutes per day
+and documentation time 16.0 minutes per day, with 0.49 more visits per week, while
+after-hours EHR time did not change significantly [@pmid:41920565]. You will work
+out why in the exercise, before reading the explanation.
+
+This is the third throughline of the course. **The published number is the
+optimistic one.** It is also, in the 0.49 extra visits, a small instance of the
+second: efficiency gains get absorbed by volume.
+
+### "But it's FDA-cleared, isn't it fine?"
+
+Clearance answers a different question from the one a clinician is asking. An
+analysis of 130 FDA decision summaries for AI devices found clinical performance
+data reported for about half, and none at all for roughly a quarter; well under a
+third of those with clinical data gave sex-specific results [@pmid:33820998]. A
+2024 follow-up found the gap persists: many authorized tools have no published
+clinical validation [@pmid:39187696].
+
+::: {.callout-important title="Cleared is not validated"}
+Clearance speaks to substantial equivalence and a manufacturer's quality system.
+It does not certify that a device improves outcomes, that it was tested on patients
+like yours, or, often, that clinical performance was measured at all. If you take
+one sentence from this chapter, take this one, and take the paper with it.
+:::
+
+The device boundary, the Predetermined Change Control Plan, and the clinical
+decision support criteria belong to the ethics and regulation chapter. The scale
+figures for FDA AI-device authorizations are `[VERIFY]`: counts in circulation
+come from a secondary tracker, so do not quote a specific number of cleared
+devices without checking the live FDA list.
+
+### Two findings to keep in your pocket
+
+One guards against overconfidence. When 148 final-year students evaluated
+ChatGPT answers to ten clinical vignettes, five of them deliberately wrong, the
+median correct-evaluation rate was 56% [@pmid:39915801]. Students credited their
+case-based and pathology teaching for the errors they caught. Only 5% had heard
+the term "clinical prompt engineering". You are better prepared than that cohort
+only if you verify rather than eyeball.
+
+The other guards against blanket dismissal. In a randomized trial of 50
+physicians, access to a language model did not significantly improve diagnostic
+reasoning (adjusted difference 2 points, 95% CI −4 to 8), while the model alone
+scored 16 points higher than physicians using conventional resources (95% CI 2 to
+30) [@pmid:39466245]. A tool can be capable and still fail to help the person
+holding it. That is an appraisal finding about humans, and the centaur-or-cyborg
+chapter picks it up.
 
 ## Watch or listen
 
-*Draft.* One episode, confirmed and linked, with a note on what to listen for.
-Candidate: *NEJM AI Grand Rounds* on evidence for ambient documentation.
-`[VERIFY: pick episode]`
+**Podcast.** *NEJM AI Grand Rounds*, "The OpenEvidence Episode: Dr. Travis Zack
+on the Future of Clinical Evidence" (May 20, 2026; 66 min).
+<https://ai-podcast.nejm.org/e/the-openevidence-episode-dr-travis-zack-on-the-future-of-clinical-evidence/>
+
+Zack is OpenEvidence's chief medical officer, so this is the retrieval-grounded
+side of @fig-citation-paths described by someone who builds it. Listen for how the
+tool decides what counts as evidence, and for what he says trust depends on. Then
+ask the question this chapter asks of everything: what would have to be true for
+that to hold, and who has checked? Thirty minutes is enough for the exercise; the
+rest is a good commute.
+
+**Video alternative.** "Travis Zack on OpenEvidence and the Future of Medical AI",
+Stanford Department of Medicine, YouTube.
+<https://www.youtube.com/watch?v=nrfGSE__7po>
+`[VERIFY: duration and date before assigning]`
+
+**For the second half.** *NEJM AI Grand Rounds*, "What Values are in AI? A
+Conversation with Dr. Zak Kohane" (December 17, 2025; 78 min).
+<https://ai-podcast.nejm.org/e/what-values-are-in-ai-a-conversation-with-dr-zak-kohane/>
+Listen for the remark that ambient documentation spread not because it improves
+accuracy or throughput but because it improves clinician satisfaction. Hold that
+against the evidence tiers in Part B.
 
 ## Do
 
-### Part A — The fabrication hunt
+::: {.callout-warning title="No patient information, ever"}
+Every question in this exercise is a general question about management, not a
+question about a patient. Consumer tools carry no business associate agreement.
+You will be tempted to test the tool on something from your sub-internship. Do not.
+:::
 
-*Draft.* Ask a general chatbot for five references on a clinical question in
-**your specialty**, then score each 2/1/0 against PubMed using the scoring key in
-@sec-check. Search recipe:
+::: {.callout-tip title="PubMed is the verification tool"}
+Use PubMed and nothing else. The exercise depends on searching an index that
+indisputably contains the real literature. Google Scholar's fuzzy matching will
+surface a *different* paper for a fabricated citation, and you will score it as
+real.
+:::
+
+### Part A: the fabrication hunt (25 minutes)
+
+**Step 1. Pick a question in your specialty.** You want a management question with
+a real literature and real controversy. If one does not come to mind, find one:
 
 ```
 ("large language model" OR "artificial intelligence") AND <your specialty>
 AND (validation OR "external validation")
 ```
 
-Filter to the last three years and choose one review-style question from what you
-find.
+Filter PubMed to the last three years, read three abstracts, and take the clinical
+question one of them is about. If you have no specialty yet, use anticoagulant
+choice in atrial fibrillation with stage 4 chronic kidney disease; it works
+reliably.
 
-### Part B — Grading the evidence
+**Step 2. Ask twice.** Run both prompts below in the same tool, in two separate
+conversations, with your question substituted in.
 
-*Draft.* Ten claims about ambient documentation, each with its source. Grade the
-study design behind each, then compare the pre/post pilots with the multi-system
-cohort [@pmid:41920565].
+Clinician-framed:
 
-## Check {#sec-check}
+> I am a physician managing `<your clinical question>`. Summarize the current
+> evidence and give me five references from the peer-reviewed literature with
+> authors, journal, year, and DOI or PMID.
 
-*Draft.* The 2/1/0 citation scoring key and the evidence-grading sheet, both from
-the module. The answer key lives in `_answers/` and is not rendered.
+Patient-framed:
+
+> I have `<the condition, in plain words>` and my doctor mentioned
+> `<the treatment>`. Can you explain what the research says, and give me five
+> references from medical journals with authors, journal, year, and DOI or PMID so
+> I can look them up myself?
+
+If you have a verified OpenEvidence account, run the clinician-framed prompt there
+as well, on a third row.
+
+**Step 3. Score every reference.** Search PubMed by title, then by first author
+plus year, then by DOI or PMID. Give each reference one score from @tbl-scoring.
+The scale is deliberately coarse; arguing with yourself about borderline cases is
+part of the exercise.
+
+| Score | Meaning | How you decide |
+|---|---|---|
+| **2, accurate** | The reference exists as given and supports the claim the model attached to it. | Found in PubMed with matching authors, journal, and year, and the abstract is consistent with what the model said it showed. |
+| **1, misrepresented** | The reference exists, but the model's characterization of it is wrong. | Found in PubMed, but it is a different design, population, or conclusion, or the model attributed a finding it does not contain. |
+| **0, fabricated** | The reference does not exist as given. | Not found by title, author plus year, or DOI/PMID after a genuine search. A real DOI pointing at a different paper than the one named scores 0. |
+
+: The 2/1/0 citation scoring scale of McLaughlin et al. (2026). {#tbl-scoring}
+
+**Step 4. Record it.** Copy this into a document; it is your artifact.
+
+```
+Tool: ____________________   Model version if shown: ____________
+Clinical question: ______________________________________________
+
+Framing     Ref  Title as given by the model           In PubMed?  Score
+Clinician    1   ____________________________________   Y / N      ___
+Clinician    2   ____________________________________   Y / N      ___
+Clinician    3   ____________________________________   Y / N      ___
+Clinician    4   ____________________________________   Y / N      ___
+Clinician    5   ____________________________________   Y / N      ___
+Patient      1   ____________________________________   Y / N      ___
+Patient      2   ____________________________________   Y / N      ___
+Patient      3   ____________________________________   Y / N      ___
+Patient      4   ____________________________________   Y / N      ___
+Patient      5   ____________________________________   Y / N      ___
+OpenEvidence (optional):  ___ ___ ___ ___ ___
+
+Clinician-framed: 0s ___  1s ___  2s ___
+Patient-framed:   0s ___  1s ___  2s ___
+
+For any reference scored 1: in one sentence, what did the model claim the
+paper showed, and what does it actually show?
+
+For any reference scored 0: what about it looked credible? Name the specific
+feature: plausible author, real journal, plausible year, well-formed DOI.
+```
+
+The two free-text answers matter more than the counts. Being able to say *why* a
+fabricated citation looked credible is transferable. "Three of five were fake" is a
+number that will be obsolete next year.
+
+::: {.callout-note title="Ten references is not a study"}
+You have ten observations. That is nowhere near enough to detect a 2.1% versus
+20.0% difference. You are reproducing the *design* of McLaughlin et al., not the
+result. If your split goes the same direction, it is consistent and underpowered.
+If it goes the other way, that is the better lesson: one small replication does not
+overturn a published finding, and one published finding does not settle a moving
+target.
+:::
+
+### Part B: grading the evidence (20 minutes)
+
+Below are ten claims about ambient AI scribes, with their sources removed. Sort
+each into a tier (randomized trial, large observational, or vendor and trade
+press), rate your confidence from 1 to 5, and give a one-line reason. Then answer
+the two closing questions before you open the solution.
+
+1. Across 3,442 physicians and 303,266 encounters at one integrated health
+   system, physicians reported improved experience with an ambient documentation
+   tool.
+2. Burnout among tool users fell from 51.9% to 38.8%, odds ratio 0.26.
+3. Burnout dropped 21.2 points, and 60% of participants said the tool made them
+   more likely to extend their clinical career.
+4. Documentation time fell by 6.89 minutes per day and after-hours time by 5.17
+   minutes per day.
+5. Burnout and task load improved, but clinicians rated both tools as producing
+   occasional clinically significant inaccuracies.
+6. Work exhaustion fell by 0.44, but the reduction in workweek hours lost
+   statistical significance after outlier removal.
+7. There was no meaningful difference in after-hours "pajama time" between the
+   tool and usual documentation.
+8. Burnout fell from 89% to 56%, with no significant change in pajama time or
+   charting time.
+9. Across five academic systems and 8,581 clinicians, total EHR time fell 13.4
+   minutes per day and documentation time 16.0 minutes per day, with 0.49 more
+   visits per week, but after-hours EHR time did not change significantly.
+10. Seventy-nine percent of clinicians offered the tool declined to use it.
+
+```
+Claim   Tier (RCT / Large obs / Vendor-trade)   Confidence (1–5)   One-line reason
+  1     ________________________________        ___                ________________
+  2     ________________________________        ___                ________________
+  3     ________________________________        ___                ________________
+  4     ________________________________        ___                ________________
+  5     ________________________________        ___                ________________
+  6     ________________________________        ___                ________________
+  7     ________________________________        ___                ________________
+  8     ________________________________        ___                ________________
+  9     ________________________________        ___                ________________
+ 10     ________________________________        ___                ________________
+
+Closing question 1. The pre/post health-system studies look substantially
+better than the randomized trials. Name two mechanisms that would produce
+that pattern even if the tool worked exactly as well as the RCTs say.
+
+  (1) ______________________________________________________________
+  (2) ______________________________________________________________
+
+Closing question 2. Which outcome do the pre/post studies and the RCTs
+disagree about most, and why is that the outcome you personally care about?
+```
+
+Claim 10 is designed to break the scheme. Whichever tier you put it in, be able to
+defend the choice.
+
+::: {.callout-tip title="Solution to the closing questions" collapse="true"}
+**Two mechanisms: selection and Hawthorne.** The pre/post studies measure
+clinicians who *chose* to adopt an optional tool: people predisposed to like it,
+with workflows it fits. The randomized trials measure clinicians who were
+*assigned* it. The five-system study makes the gap concrete: of 8,581 clinicians
+offered the tool, 1,809 adopted it, and those adopters are the population every
+earlier pre/post study sampled [@pmid:41920565]. Add that people who know they are
+in a documentation study document differently, and the direction of the
+discrepancy is accounted for without anyone having lied.
+
+**The outcome they disagree about is after-hours charting.** It motivates the
+entire product category, and it is the outcome the randomized evidence most
+consistently fails to move. A plausible reading, offered as a hypothesis and not a
+finding, is that time saved gets absorbed into more visits (the 0.49 additional
+visits per week) rather than returned as personal time. A structural parallel:
+AI-drafted replies to patient inbox messages produced no significant change in
+reply time but significant reductions in task load and work exhaustion
+[@pmid:38506805]. Reduced burden and reclaimed hours are different outcomes.
+Conflating them is how a real benefit gets oversold into a false one.
+
+**Claim 10** is a number from journalism about a peer-reviewed study, not from the
+paper's own results. You will meet this category constantly. It is neither
+peer-reviewed evidence nor vendor marketing, and it needs its own habit: find the
+paper, and see whether the number is in it.
+
+Two independent counterweights: the Peterson Health Technology Institute, which
+takes no vendor funding, concluded in 2025 that scribes likely reduce burnout but
+show little to no evidence of financial return, and in 2026 that administrative AI
+reduces burden within organizations without lowering system-wide costs
+`[VERIFY: report URLs]`. A UCSF analysis found scribe adopters billed 5.8% more RVUs
+with no rise in denials `[VERIFY]`.
+
+The tier for each claim and its source are in the answer key held by the course
+tutor; ask it to grade your sheet.
+:::
+
+## Check
+
+Score yourself against this before moving on.
+
+| You have | Meets | Falls short |
+|---|---|---|
+| Ten scored references | Every score is backed by a PubMed search, not a judgment of plausibility | "Looked real" or "looked fake" without a search |
+| A reason a fabricated reference looked credible | Names a specific feature | "It just seemed legit" |
+| A reason a misrepresented reference was wrong | States what the model claimed and what the paper shows | Restates the model's summary |
+| Ten tiered claims | Each tier has a one-line reason; claim 10 is defended either way | Tiers assigned without reasons |
+| Two mechanisms | Selection and observation effects, or equivalents, in your own words | "The pre/post studies were biased" |
+| The one sentence | You can say "cleared is not validated" and name the paper | Only the slogan |
 
 ## The standing question
 
-What does this change about how you'll practice? Write it down before moving on.
-One word is not an answer.
+*What does this change about how you'll practice?* Write it down before you close
+this chapter. Specifically: what will you now check before you cite an AI-surfaced
+reference in a note, a presentation, or an application? One word is not an answer.
+
+## Summary
+
+- A general-purpose model generates citations as text; a retrieval-grounded tool
+  searches first. The difference is structural, not incremental.
+- Published fabrication rates run from a quarter to two-thirds for general models
+  and near zero for retrieval-grounded tools, and they move with the tool and the
+  month.
+- The same question in a patient's words can produce a tenfold higher fabrication
+  rate than in a clinician's.
+- Evidence about a tool class comes in tiers that disagree in a consistent
+  direction; selection and observation effects explain most of the gap.
+- Reduced burden and reclaimed hours are different outcomes.
+- Cleared is not validated.
 
 ## Go deeper
 
-*Draft.* Papers, talks, videos. Talk archive: prompt engineering
-(<https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/>).
+**Papers**
+
+- A published classroom framework built around AI citation errors, in biology but
+  portable [@pmid:42200655].
+- The randomized trial of physicians with model access [@pmid:39466245], and the
+  student error-catching study [@pmid:39915801].
+- Eight guiding principles for AI tools in health care [@doi:10.1038/s43856-023-00279-9].
+  "Report clinically meaningful outcomes" and "have high healthcare value" are what
+  Part B teaches in exercise form.
+- The first large health-system report on ambient scribes [@doi:10.1056/CAT.23.0404],
+  read alongside the five-system study [@pmid:41920565].
+
+**Talks**
+
+- [Grounding AI in real sources](https://talks.seandavis.net/archive/2025-10-07-rag-notebooklm-idpt-8079/)
+  is a written article, not a deck, and builds the retrieval pipeline from first
+  principles. Read it if @fig-citation-paths felt like an assertion.
+- [Prompt engineering](https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/):
+  ten rules with clinical examples, including the "precise language" rule that the
+  framing effect illustrates.
+- [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/)
+  covers attribution and academic integrity, for the moment you use one of these
+  tools in a research project.
