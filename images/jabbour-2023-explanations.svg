@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="330" viewBox="0 0 640 330" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <title>Change in clinician diagnostic accuracy with AI input, Jabbour et al. 2023</title>
+  <!-- axis -->
+  <line x1="60" y1="30" x2="60" y2="250" stroke="#444" stroke-width="1"/>
+  <g fill="#444" text-anchor="end">
+    <text x="52" y="34">+8</text>
+    <text x="52" y="70.7">+4</text>
+    <text x="52" y="107.3">0</text>
+    <text x="52" y="144">−4</text>
+    <text x="52" y="180.6">−8</text>
+    <text x="52" y="217.3">−12</text>
+    <text x="52" y="254">−16</text>
+  </g>
+  <text x="18" y="140" transform="rotate(-90 18 140)" fill="#444" text-anchor="middle">Change in accuracy (percentage points)</text>
+  <!-- zero line: baseline accuracy 73.0% -->
+  <line x1="60" y1="103.3" x2="620" y2="103.3" stroke="#444" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="616" y="98" fill="#444" text-anchor="end" font-size="12">baseline 73.0% (no AI)</text>
+  <!-- bars -->
+  <rect x="90" y="76.7" width="90" height="26.6" fill="#2a7f62"/>
+  <rect x="220" y="63.0" width="90" height="40.3" fill="#2a7f62"/>
+  <rect x="350" y="103.3" width="90" height="103.6" fill="#b3412c"/>
+  <rect x="480" y="103.3" width="90" height="83.4" fill="#b3412c"/>
+  <!-- 95% CI whiskers -->
+  <g stroke="#111" stroke-width="1.5">
+    <line x1="135" y1="98.7" x2="135" y2="55.6"/><line x1="128" y1="98.7" x2="142" y2="98.7"/><line x1="128" y1="55.6" x2="142" y2="55.6"/>
+    <line x1="265" y1="85.0" x2="265" y2="40.0"/><line x1="258" y1="85.0" x2="272" y2="85.0"/><line x1="258" y1="40.0" x2="272" y2="40.0"/>
+    <line x1="395" y1="169.3" x2="395" y2="245.4"/><line x1="388" y1="169.3" x2="402" y2="169.3"/><line x1="388" y1="245.4" x2="402" y2="245.4"/>
+    <line x1="525" y1="148.2" x2="525" y2="224.3"/><line x1="518" y1="148.2" x2="532" y2="148.2"/><line x1="518" y1="224.3" x2="532" y2="224.3"/>
+  </g>
+  <!-- value labels -->
+  <g fill="#111" text-anchor="middle" font-weight="bold">
+    <text x="135" y="50">+2.9</text>
+    <text x="265" y="35">+4.4</text>
+    <text x="395" y="262">−11.3</text>
+    <text x="525" y="242">−9.1</text>
+  </g>
+  <!-- category labels -->
+  <g fill="#222" text-anchor="middle">
+    <text x="135" y="282">Standard model</text>
+    <text x="135" y="298">no explanation</text>
+    <text x="265" y="282">Standard model</text>
+    <text x="265" y="298">with explanation</text>
+    <text x="395" y="282">Biased model</text>
+    <text x="395" y="298">no explanation</text>
+    <text x="525" y="282">Biased model</text>
+    <text x="525" y="298">with explanation</text>
+  </g>
+  <text x="340" y="322" fill="#444" text-anchor="middle" font-size="12">457 clinicians, randomized vignette study. Whiskers are 95% confidence intervals.</text>
+</svg>

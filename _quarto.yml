@@ -24,6 +24,7 @@ book:
     - chapters/core-patient-communication.qmd
     - chapters/enrichment-workforce-economics.qmd
     - chapters/enrichment-environment.qmd
+    - chapters/core-ethics-regulation.qmd
   appendices:
     - appendix/about.qmd
     - appendix/personas.qmd
