@@ -49,7 +49,12 @@ Expected elements:
 - **The criterion a bare score fails**: the non-device CDS criterion that the
   clinician can independently review the basis for the recommendation. A
   page showing inputs, rule, and citation can be reviewed; a bare number
-  cannot. `[VERIFY: wording of the January 2026 revised FDA CDS guidance]`
+  cannot. FDA CDS guidance, issued 29 January 2026, Criterion 4: software
+  "intended for the purpose of enabling an HCP to independently review the
+  basis for the recommendations that such software presents so that it is not
+  the intent that the HCP rely primarily on any of such recommendations". The
+  guidance adds that a time-critical function does not meet Criterion 4, and
+  that inputs, rule, and validation should be shown in plain language.
 
 ## The one sentence
 

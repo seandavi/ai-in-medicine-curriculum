@@ -302,10 +302,12 @@ clusters of computers for training a model. At its first site, in South
 Memphis, the turbines ran for months before any air permit was issued, in a
 county the American Lung Association had already graded F for ozone. At its
 second site, just across the state line in Southaven, Mississippi, the NAACP
-sued in federal court in 2026 over 27 turbines running without a Clean Air
-Act permit, half a mile from homes and a mile from an elementary school
+sued in federal court in April 2026 over 27 turbines running without a Clean
+Air Act permit, half a mile from homes and a mile from an elementary school
 ([Earthjustice case page](https://earthjustice.org/case/xai-illegal-gas-power-plant-data-center-colossus)).
-[VERIFY: turbine count and permit status as of the date you read this; the case was active at the time of writing]{.verify}
+By August 2026 local reporting counted more than 50 turbines running there,
+still without a permit, and the court had not yet ruled
+[VERIFY: turbine count and case status; the injunction hearing was postponed on 21 August 2026 and there was no ruling as of 8 September 2026; the distances are from the complaint as reported, not read by tool]{.verify}
 The residents of those neighborhoods will present to an emergency
 department with asthma exacerbations, and the physician seeing them will
 have no way to link the visit to the turbines. That is environmental exposure

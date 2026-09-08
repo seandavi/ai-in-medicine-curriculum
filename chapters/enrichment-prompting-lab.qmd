@@ -438,11 +438,12 @@ the answer to put the new anticholinergic ahead of, or at least beside, the
 dipstick, and to say that the dipstick alone does not establish infection.
 
 **Case C: interactions hidden in the list.** Clarithromycin strongly blocks the
-liver enzyme that clears simvastatin. The American Heart Association's
-statement on statin interactions tells you to avoid the combination, and the
-amiodarone-plus-simvastatin combination carries a dose cap that 40 mg exceeds
-[@pmid:27754879]
-[VERIFY: contraindication and 20 mg cap against the current simvastatin label on DailyMed]{.verify}.
+liver enzyme that clears simvastatin. The simvastatin label lists
+clarithromycin as a contraindication, and it caps the dose at 20 mg a day with
+amiodarone, so 40 mg is over the limit
+([DailyMed label](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4182c956-eb33-1d4b-e054-00144ff88e88)).
+The American Heart Association's statement on statin interactions says the
+same [@pmid:27754879].
 Clarithromycin also raises apixaban exposure through the same pathway, and
 amiodarone with clarithromycin puts two QT-prolonging drugs together. The
 perioperative apixaban plan and metformin around surgery are the *expected*

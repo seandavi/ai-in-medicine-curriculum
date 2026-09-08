@@ -312,10 +312,11 @@ paper with it.
 :::
 
 The device boundary, the Predetermined Change Control Plan, and the clinical
-decision support criteria belong to [the ethics and regulation chapter](core-ethics-regulation.qmd). The scale
-figures for FDA AI-device authorizations are [VERIFY]{.verify}: the counts people quote
-come from a secondary tracker, so do not quote a specific number of cleared
-devices without checking the live FDA list.
+decision support criteria belong to [the ethics and regulation chapter](core-ethics-regulation.qmd). The
+FDA's list of AI-enabled devices held 1,614 authorizations when it was updated
+on 4 September 2026, with decisions through June 2026. The FDA says the list is
+not complete, and one product can appear more than once, so quote the count
+with its date.
 
 ### What a trustworthy tool looks like
 

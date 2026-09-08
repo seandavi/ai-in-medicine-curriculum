@@ -190,12 +190,14 @@ empathetic when told a physician wrote it, whether or not one had
 So the label costs something, and the label is true. Leave it in. The authors
 of the Duke survey said the same: telling patients may slightly reduce
 satisfaction, and should be done anyway. In some states you no longer have the
-choice. California has required a disclaimer on generative-AI patient
-communications that no clinician reviewed since January 2025. Texas has
-required disclosure of AI use in treatment by the date of service since January
-2026
-[VERIFY: current text and scope of California AB 3030 and Texas HB 149 / SB 1188; check your own state]{.verify}.
-[the ethics and regulation chapter](core-ethics-regulation.qmd) covers the law. Here the point is that what
+choice. Since January 2025, California has required a disclaimer on
+generative-AI messages about a patient's clinical care unless a licensed
+clinician read and reviewed them. Since September 2025, Texas has required a
+practitioner who uses AI for diagnosis to tell the patient and to review what
+the AI wrote. Since January 2026, a second Texas law has required anyone
+providing health care to say when a patient is interacting with an AI system,
+by the date of the first service. Check your own state.
+[The ethics and regulation chapter](core-ethics-regulation.qmd) covers the law. Here the point is that what
 the patient expects and what the statute requires are starting to say the same
 thing.
 

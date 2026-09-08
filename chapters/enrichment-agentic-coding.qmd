@@ -282,10 +282,10 @@ inputs, the rule it applied, and where the rule came from is one a clinician
 can check. A bare number is not. A personal study aid that a student uses to
 practise scores is not a device. The same page, bookmarked on the workroom
 computers and used to decide who gets listed, is a different question. The
-answer depends on what it shows and who relies on it. The FDA revised its
-decision-support guidance in January 2026. What the revision changed, and the
-rest of the regulation, belong to [the ethics and regulation chapter](core-ethics-regulation.qmd)
-[VERIFY: FDA CDS guidance, revised 6 January 2026, current text]{.verify}.
+answer depends on what it shows and who relies on it. The FDA reissued its
+decision-support guidance on 29 January 2026, replacing a version dated 6
+January. What the revision changed, and the rest of the regulation, belong to
+[the ethics and regulation chapter](core-ethics-regulation.qmd).
 
 For this chapter, the working rule is simpler than the regulation. **Toy, not
 device.** Your tool carries a banner saying so, in the prompt, before it

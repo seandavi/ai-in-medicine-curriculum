@@ -93,10 +93,10 @@ reason is arithmetic from Parts A–B rather than mood.
   9–17% by 2030. [CONFLICTING]; quote the range.
 - IEA: ~415 TWh (2024) → ~945 TWh (2030), just under 3% of global.
 - Memphis: two sites. Colossus 1 in South Memphis (Shelby County, TN):
-  roughly 35 turbines ran unpermitted from 2024; 15 were permitted by the
-  county in July 2025 after an SELC/NAACP notice of intent to sue [VERIFY:
-  Memphis counts and dates are from press memory, not re-checked this
-  session]. Colossus
+  about 35 turbines ran without permits from 2024; SELC and the NAACP sent a
+  notice of intent to sue on 17 June 2025; the county permitted 15 turbines on
+  2 July 2025 and the groups appealed on 16 July 2025 (SELC timeline, checked
+  2026-09-08). Colossus
   2's turbines sit across the line in Southaven, MS: NAACP v. xAI, N.D.
   Miss., filed 2026, 27 unpermitted turbines (Earthjustice case page, checked
   2026-09-08). Counts and permit status change; check the case page before

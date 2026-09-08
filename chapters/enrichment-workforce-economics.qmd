@@ -290,8 +290,10 @@ It did not significantly change the cancer detection rate [@pmid:17409321]. A
 later analysis of 625,625 digital mammograms found no improvement on any
 measure with CAD. Among radiologists who read both with and without it,
 sensitivity (the share of cancers found) was *lower* with CAD
-[@pmid:26414882]. The Medicare add-on payment was eventually withdrawn
-[VERIFY: year the CAD add-on was folded into the base mammography payment; secondary sources say 2018]{.verify}.
+[@pmid:26414882]. From January 2018 Medicare stopped paying separately for CAD. The new
+mammography codes include CAD "when performed", so the add-on disappeared into
+the base payment
+([CMS Transmittal 3844, 2017](https://www.cms.gov/Regulations-and-Guidance/Guidance/Transmittals/2017Downloads/R3844CP.pdf)).
 A technology was adopted at scale, generated extra procedures for patients,
 and then disappeared once the payment stopped.
 
