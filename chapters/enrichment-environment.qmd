@@ -6,12 +6,14 @@ subtitle: "AIM-3 · AIM-X · about one hour"
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will be able to:
 
-1. Trace a widely quoted figure about AI's environmental cost back to its
-   primary source, and say what changed at each step on the way to you.
-2. Name three choices that make credible per-query figures differ by more than
-   a hundredfold, and say which choices the figure you traced made.
+1. Trace a widely quoted figure about AI's environmental cost back to the
+   paper or report it came from, and say what changed at each step on the
+   way to you.
+2. Name three choices that make credible per-query figures (the cost of one
+   question to a chatbot) differ by more than a hundredfold, and say which
+   choices the figure you traced made.
 3. Put AI's per-query cost against your own specialty's measured footprint, and
-   say what that proportion settles and what it does not.
+   say what that comparison settles and what it does not.
 4. Explain how a per-query number can shrink thirtyfold in a year while the
    total keeps rising, and name who lives next to the total.
 5. Ask a vendor one question about their environmental figure that has a
@@ -19,7 +21,7 @@ By the end of this chapter you will be able to:
 :::
 
 **Time.** About 20 minutes of reading, 11 minutes of watching, 25 minutes of
-doing. You need a browser, a calculator, and one general-purpose chatbot; your
+doing. You need a browser, a calculator, and one general-purpose chatbot. Your
 institutional ChatGPT Edu or Microsoft Copilot account is enough. Nothing
 installs, and nothing in this chapter involves a patient's information.
 
@@ -31,8 +33,8 @@ ambient scribe, the phone app that listens to the visit and drafts the note.
 At huddle, a second-year resident says she is opting out. She has read that
 every note the thing writes costs a bottle of water, and she is not going to
 pour out a bottle of water per patient in a drought. The medical director,
-who signed the contract, says that is nonsense; he read last month that a
-prompt uses about five drops. They look at each other, then at you, because
+who signed the contract, says that is nonsense. He read last month that a
+prompt, one message to a chatbot, uses about five drops. They look at each other, then at you, because
 you are the student, and students get asked to look things up. Find out by
 Friday, he says. Which is it?
 
@@ -48,90 +50,94 @@ Friday, he says. Which is it?
 <div class="fine">Illustrative infographic for this chapter, assembled from real published figures; not a real organization's material.</div>
 :::
 
-Both of them are quoting something real. The bottle traces to a paper and a
-newspaper analysis. The five drops trace to a technical report from the
-company that runs the model. The two figures differ by a factor of about two
-thousand, and neither person has read past the headline. Neither, until
+Both of them are quoting something real. The bottle traces back to a paper
+and a newspaper analysis. The five drops trace back to a technical report
+from the company that runs the model. The two figures differ by a factor of
+about two thousand. Neither person has read past the headline. Neither, until
 Friday, have you.
 
 This is the same problem the appraisal chapter gave you at lunch with a
-vendor: a number that arrives without its method attached. The difference is
-that this one is about the planet rather than about burnout, which means it
-comes with more feeling and less checking. The chapter's question is the
-appraisal question again: *what did they count, and did anyone check?*
+vendor: a number that arrives without its method. The difference is that this
+one is about the planet rather than about burnout. That means it comes with
+more feeling and less checking. The question is the appraisal question again:
+*what did they count, and did anyone check?*
 
 ## Why this matters
 
 The figure on the infographic is not about your clinic. It is a claim about
-what happens somewhere else, to someone else, when you press enter. That is
-what makes it an equity question rather than a carbon-accounting one. Water
-and air pollution are local; a data center's cooling draws from one county's
-aquifer, and a gas turbine's exhaust lands in one neighborhood. The people
+what happens somewhere else, to someone else, when you press enter. That makes
+it a question of fairness, not only a question of adding up carbon. Water and
+air pollution are local. A data center's cooling draws from one county's
+groundwater. A gas turbine's exhaust lands in one neighborhood. The people
 who bear that cost do not use the tool and were not asked. In the emergency
 department of that neighborhood, an asthma exacerbation is an asthma
-exacerbation; no one can attribute it, and you would treat it the same. This
-chapter is about being able to say, honestly and with proportion, what the
+exacerbation. No one can say what caused it, and you would treat it the same.
+This chapter is about being able to say, honestly and in proportion, what the
 tool on your workstation has to do with that.
 
-The practical version will find you sooner. Within a year someone on your
+You will meet the practical version sooner. Within a year someone on your
 team will refuse a tool on environmental grounds, or dismiss the concern
-outright, and both will be quoting a headline. Within a few years you may sit
-on the committee that picks the vendor, and "what is its footprint" will be a
-line on the procurement form. The durable skill is not a number to quote; the
-numbers in this chapter will be wrong within eighteen months and the chapter
-says so. The skill is asking what was counted.
+outright. Both will be quoting a headline. Within a few years you may sit on
+the committee that picks the vendor, and "what is its footprint" will be a
+line on the purchasing form. The skill that lasts is not a number to quote.
+The numbers in this chapter will be wrong within eighteen months, and the
+chapter says so. The skill is asking what was counted.
 
-## The idea
+## How the numbers were made
 
 ### Where the bottle came from
 
 Start with the resident's bottle and walk it back to its source. Every step
-is public, and you will do this yourself in the Do block, so read this as the
+is public. You will do this yourself in the Do block, so read this as the
 worked example.
 
 **April 2023.** A group at the University of California, Riverside and the
 University of Texas at Arlington posted a preprint, a paper shared before
 peer review, titled "Making AI Less Thirsty." It was published two years
-later in *Communications of the ACM* [@doi:10.1145/3724499], but the first
+later in *Communications of the ACM* [@doi:10.1145/3724499]. But the first
 arXiv version contains the sentence the whole story grew from: ChatGPT needs
 to "drink" a 500 mL bottle of water for a simple conversation of roughly 20
-to 50 questions and answers, depending on when and where it is deployed. Read that carefully. It is a bottle per
-*conversation*, not per question: 10 to 25 mL per question. It is an estimate
-for GPT-3, the model behind the first ChatGPT, built on an assumed energy cost
-per request of 0.004 kWh, which the authors called conservative. And it
-counts two kinds of water: the water evaporated on site to cool the servers,
-and the water evaporated off site by the power plants that generate the
-electricity, which in the United States is the larger share. The paper's
-headline number, 700,000 litres to train GPT-3, is about training, not use.
-The current version of the paper gives the per-response figure as a bottle
-per 10 to 50 medium-length responses.
+to 50 questions and answers, depending on when and where it runs. Read that
+carefully. It is a bottle per *conversation*, not per question: 10 to 25 mL
+per question. It is an estimate for GPT-3, the model behind the first
+ChatGPT. It rests on an assumed energy cost of 0.004 kWh per request, which
+the authors called conservative. And it counts two kinds of water: the water
+evaporated on site to cool the servers, and the water evaporated off site by
+the power plants that make the electricity. In the United States the
+power-plant share is the larger one. The paper's headline number, 700,000
+litres to train GPT-3, is about training, not use. The current version of
+the paper gives the per-response figure as a bottle per 10 to 50
+medium-length responses.
 
 **September 2024.** *The Washington Post* worked with the same Riverside
-group to estimate what a 100-word email written by GPT-4 costs, and reported
-519 mL of water and 0.14 kWh of electricity, about a bottle and about fourteen
-LED bulbs for an hour. The headline was "A bottle of water per email."
+group to estimate what a 100-word email written by GPT-4 costs. They reported
+519 mL of water and 0.14 kWh of electricity: about a bottle, and about
+fourteen LED bulbs for an hour. The headline was "A bottle of water per
+email."
 [VERIFY: the Post's stated location assumptions and its lower-bound figure; the article was paywalled at the time of writing and its numbers here are taken from secondary reporting]{.verify}
 Notice what has changed since the preprint: a much larger model, a specific
-task rather than a "simple" question, and, whatever the exact assumptions
-were, a number roughly twenty to fifty times larger per interaction. The
+task rather than a "simple" question, and a number roughly twenty to fifty
+times larger per interaction, whatever the exact assumptions were. The
 resident's bottle is this headline, with "per email" worn down to "per note"
 by a year of repetition.
 
 **August 2025.** Google published a technical report on what a median Gemini
-text prompt costs on its own infrastructure: 0.24 Wh of energy, 0.03 grams of
-CO~2~e (carbon dioxide equivalent, the unit that folds every greenhouse gas
-into one number), and 0.26 mL of water, which its blog post rendered as
-"about five drops"
+text prompt costs on its own computers: 0.24 Wh of energy, 0.03 grams of
+CO~2~e, and 0.26 mL of water. A watt-hour (Wh) is what a one-watt LED uses
+in an hour; a kilowatt-hour (kWh) is a thousand of them. CO~2~e is carbon
+dioxide equivalent, the unit that folds every greenhouse gas into one number. Google's blog post described
+the water as "about five drops"
 ([arXiv 2508.15734](https://arxiv.org/abs/2508.15734); Google Cloud blog, 21 August 2025).
 The energy figure is unusually complete. It includes idle machines, the host
-CPU and memory, and the data center's cooling and power overhead, and the
-report says that over the preceding twelve months the energy per prompt fell
-33-fold and the carbon 44-fold. The water figure is not complete in the same
-way: it counts on-site cooling water only, not the water used by the power
-plants. The Riverside group said so within a day, and pointed out that Google
-had compared its on-site figure to their on-site-plus-off-site figure and
-called the difference "orders of magnitude." The medical director's five
-drops are this report, with the word "on-site" worn off.
+computer, and the building's cooling and power overhead. The report says that
+over the previous twelve months the energy per prompt fell 33-fold and the
+carbon 44-fold. The water figure is not complete in the same way. It counts
+on-site cooling water only, not the water used by the power plants. The
+Riverside group said so within a day. They pointed out that Google had
+compared its on-site figure to their on-site-plus-off-site figure and called
+the difference "orders of magnitude," meaning several tenfold steps. The
+medical director's five drops are this report, with the word "on-site" worn
+off.
 
 ::: {.press-clips}
 <div class="press-clip"><div class="src">The Washington Post · analysis</div><a class="hl" href="https://www.washingtonpost.com/technology/2024/09/18/energy-ai-use-electricity-water-data-centers/">A bottle of water per email: the hidden environmental costs of using AI chatbots</a><div class="date">18 September 2024</div></div>
@@ -139,10 +145,10 @@ drops are this report, with the word "on-site" worn off.
 <div class="press-clip"><div class="src">The Register · trade press</div><a class="hl" href="https://www.theregister.com/2025/08/22/googles_gemini_water/">Google games numbers to make AI look less thirsty</a><div class="date">22 August 2025</div></div>
 :::
 
-Three headlines, three tiers of source: a newspaper working with academics, a
+Three headlines, three kinds of source: a newspaper working with academics, a
 vendor reporting on itself, and trade press reporting the academics'
 objection to the vendor. Every one of them is about a real number. The
-resident read the first; the medical director read the second; the honest
+resident read the first. The medical director read the second. The honest
 answer needs the third.
 
 ### What each of them counted
@@ -157,109 +163,116 @@ dispute about facts.
 | Altman, personal blog | Jun 2025 | ChatGPT, "average" | one query, undefined | not stated | 0.34 Wh | 0.32 mL |
 | Google, technical report | Aug 2025 | Gemini Apps, median text prompt | one prompt | on-site only | 0.24 Wh | 0.26 mL |
 
-: Four published per-query figures and what each counted. All are real; none is comparable to the others without adjustment. Altman's figure is included because it circulates; its post gives no method. {#tbl-what-counted}
+: Four published per-query figures and what each counted. All are real; none can be compared with the others without adjustment. Altman's figure is included because it circulates; his post gives no method. {#tbl-what-counted}
 
 The appraisal chapter gave you three things that can be wrong with a cited
-claim: the reference, the attribution, and the claim itself. Run the bottle
-through them. The *reference* is fine: the preprint exists, the newspaper
-analysis exists. The *attribution* is where it broke: a bottle per 20 to 50
-questions became a bottle per email became a bottle per note, and none of
-those is what the source said. The *claim*, whether AI use is a meaningful
-water cost, is a different question from either, and it is the one no
+claim: the reference (does the source exist), the attribution (does it say
+what it is quoted as saying), and the claim itself (is it true). Run the
+bottle through them. The *reference* is fine: the preprint exists, the
+newspaper analysis exists. The *attribution* is where it broke. A bottle per
+20 to 50 questions became a bottle per email, which became a bottle per note,
+and none of those is what the source said. The *claim*, whether AI use is a
+meaningful water cost, is a different question from either. It is the one no
 per-query figure can answer alone.
 
 ### Three choices that move the number a hundredfold
 
-@fig-per-query puts every per-query figure in this chapter on one axis. The
-spread is not error. It is three decisions, each defensible, each changing the
-answer by an order of magnitude.
+@fig-per-query puts every per-query figure in this chapter on one chart. The
+spread is not error. It is three decisions. Each is reasonable, and each
+changes the answer tenfold or more.
 
 ![Published per-query water and energy figures, 2023 to 2025, on a log scale. Each point is what one source published, labeled with the source, date, and what it counted. Redrawn from the sources named in the text; a log scale means each gridline is ten times the one below it. Figure by the course, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).](../images/ai-per-query-figures.svg){#fig-per-query fig-alt="Two scatter panels on log axes against time from 2023 to 2025. Top panel, water per query in millilitres: Li et al. 2023 at 10 to 25 mL, the Washington Post 2024 at 519 mL, Altman 2025 at 0.32 mL, Google 2025 at 0.26 mL on-site only. Bottom panel, energy per query in watt-hours: Li et al. 2023 at 4 Wh, de Vries 2023 at about 3 Wh, the Washington Post 2024 at 140 Wh, Epoch AI 2025 at 0.3 Wh, MIT Technology Review 2025 at 0.03 to 1.9 Wh by model size, Jegham et al. 2025 at 0.42 to 29 Wh by prompt length, Altman 2025 at 0.34 Wh, Google 2025 at 0.24 Wh. Points span more than three orders of magnitude."}
 
 **What you count.** For water: on-site cooling only, or the power plant's
-water too. For energy: the chip while it is computing, or the chip plus the
-idle machines waiting for the next request, the host computer, and the
-building's cooling and power losses, a multiplier the industry calls PUE,
-power usage effectiveness. Whether the one-time cost of training the model is
-amortized, spread across every query it will ever answer, or left out because
-it already happened. Google's energy number is
-inclusive; its water number is not. Li et al. were inclusive on water and
-assumed on energy. Nobody in @tbl-what-counted is lying; they are answering
-different questions.
+water too. For energy: the chip while it is computing, or the chip plus
+everything around it. That means the idle machines waiting for the next
+request, the host computer, and the building's cooling and power losses, a
+multiplier the industry calls PUE, power usage effectiveness. Then there is
+training. The one-time cost of training the model can be spread across every
+query it will ever answer (the accounting word is amortized), or left out
+because it already happened. Google's energy number counts all of this. Its
+water number does not. Li et al. counted both kinds of water but assumed the
+energy. Nobody in @tbl-what-counted is lying. They are answering different
+questions.
 
-**Which query.** A median prompt, or a long one; a short answer, or a
+**Which query.** A median prompt, or a long one. A short answer, or a
 100-word email, which the *Post* analysis may have treated as more than one
-request; a plain reply, or a "reasoning" mode that thinks for a page before
-answering. An independent benchmark of thirty commercial models reported
-short queries around 0.42 Wh and the most energy-intensive models above 29 Wh
-for a long prompt, more than 65 times the most efficient model on the same
-task ([Jegham et al., arXiv 2505.09598](https://arxiv.org/abs/2505.09598),
+request. A plain reply, or a "reasoning" setting, where the model writes out
+a page of working before it answers. An independent test of thirty commercial
+models reported short queries around 0.42 Wh and the most energy-hungry
+models above 29 Wh for a long prompt, more than 65 times the most efficient
+model on the same task
+([Jegham et al., arXiv 2505.09598](https://arxiv.org/abs/2505.09598),
 May 2025).
 
 **Which model, and when.** GPT-3 in 2023 and Gemini in 2025 are not the same
-object. When *MIT Technology Review* had open models measured on the same
-hardware, the smallest Llama 3.1 model used about 114 joules per response
-with overhead, and the largest about 6,706, a microwave for a tenth of a
-second versus eight seconds, a sixtyfold spread from model size alone
+object. When *MIT Technology Review* had open models (ones anyone can
+download and run) measured on the same hardware, the smallest Llama 3.1
+model used about 114 joules per response
+with overhead, and the largest about 6,706. That is a microwave running for a
+tenth of a second versus eight seconds, a sixtyfold spread from model size
+alone
 ([O'Donnell and Crownhart, 20 May 2025](https://www.technologyreview.com/2025/05/20/1116327/ai-energy-usage-climate-footprint-big-tech/)).
-Google's 33-fold drop in twelve months is the same lever pulled by time. A
-figure without a model and a date is not a figure.
+Google's 33-fold drop in twelve months is the same kind of spread, produced
+by time instead of size. A figure without a model and a date is not a figure.
 
 ::: {.callout-note title="These numbers move, faster here than anywhere"}
-Every figure in this chapter carries a date because every one of them will
-be superseded. The "10 times a Google search" line that opens most articles
-on this topic traces to a 2023 commentary in *Joule* [@doi:10.1016/j.joule.2023.09.004]
-that compared an estimate for a language model against a Google figure for
-search energy published in 2009. Real journal, real author, repeated
-everywhere, and the comparison was fourteen years stale on the day it was
-made. Independent re-estimates in 2025 converged near 0.3 Wh for a typical
-text query, about a tenth of the number that commentary made famous
+Every figure in this chapter carries a date, because every one of them will
+be replaced by a newer one. The "10 times a Google search" line that opens
+most articles on this topic traces to a 2023 commentary in *Joule*
+[@doi:10.1016/j.joule.2023.09.004]. It compared an estimate for a language
+model against a Google figure for search energy published in 2009. Real
+journal, real author, repeated everywhere, and the comparison was fourteen
+years stale on the day it was made. Independent re-estimates in 2025 settled
+near 0.3 Wh for a typical text query, about a tenth of the number that
+commentary made famous
 ([Epoch AI, February 2025](https://epoch.ai/gradient-updates/how-much-energy-does-chatgpt-use)).
 When you meet a per-query number, the first question is not whether it is
-right but which year and which model it belongs to.
+right. It is which year and which model it belongs to.
 :::
 
 ### Small per query, large in total
 
-Take the most favorable documented figure and do the arithmetic the module
+Take the most favorable documented figure and do the arithmetic this chapter
 was built on. Forty students, fifteen queries a week, four weeks: 2,400
-queries. At Google's 0.24 Wh that is 0.58 kWh, a microwave for half an hour.
-At 0.26 mL it is 624 mL of on-site water, a bottle and a bit, for the whole
-class for the whole month. At 0.03 g CO~2~e a query it is 72 g. Against US
-health care's own measured footprint, 1,692 kg CO~2~e per person per year in
-2018, the highest of any industrialized nation, with 388,000
-disability-adjusted life-years lost that year to the sector's pollution
-[@pmid:33284703], the class's month of AI use is a few thousandths of one
-percent of one person's share.
+queries. At Google's 0.24 Wh that is 0.58 kWh, a microwave running for half
+an hour. At 0.26 mL it is 624 mL of on-site water, a bottle and a bit, for
+the whole class for the whole month. At 0.03 g CO~2~e a query it is 72 g.
+Compare that with US health care's own measured footprint: 1,692 kg CO~2~e
+per person per year in 2018, the highest of any industrialized nation, with
+388,000 disability-adjusted life-years lost that year to the sector's
+pollution [@pmid:33284703]. The class's month of AI use is a few thousandths
+of one percent of one person's share.
 
-State the limit of that calculation out loud, because you will be tempted to
+Say the limit of that calculation out loud, because you will be tempted to
 stop there. It uses the one per-query carbon figure a vendor has published,
 which is also the most favorable of the energy figures, and it counts on-site
 water only. At the *Post*'s 519 mL the class would have used about 1,250
-litres. The honest sentence is: at the best-documented rate, an individual's
-use is negligible, and the range of published rates spans three orders of
-magnitude.
+litres. The honest sentence is this: at the best-documented rate, an
+individual's use is negligible, and the published rates differ by about a
+thousandfold.
 
-Then notice that the individual question is not the question. Google's per
-prompt energy fell 33-fold in a year; Google's total emissions, on its own
-reports, were 48 percent above its 2019 baseline in 2023, 51 percent above
-in 2024, and 81 percent above in 2025, with data-center electricity use up
-37 percent in the last of those years
+Then notice that the individual question is not the question. Google's
+energy per prompt fell 33-fold in a year. Google's total emissions, on its
+own reports, were 48 percent above its 2019 level in 2023, 51 percent above
+in 2024, and 81 percent above in 2025, with data-center electricity use up 37
+percent in the last of those years
 ([ESG Dive, 2 July 2025](https://www.esgdive.com/news/googles-emissions-rise-despite-data-center-decarbonization-ppas-environmental-report-2025/752236/);
 [ESG Dive, 2 July 2026](https://www.esgdive.com/news/googles-emissions-continue-to-climb-due-to-ai-buildout/824373/)).
 Economists call this the Jevons effect, after the observation in 1865 that
-more efficient steam engines led Britain to burn more coal, not less: when a
+more efficient steam engines led Britain to burn more coal, not less. When a
 unit of something gets cheaper, people use enough more of it that the total
-rises. Per-query efficiency is real and is being outrun by volume. The US
-Department of Energy's national laboratory put data centers at 176 TWh in
-2023, 4.4 percent of US electricity, and projected 6.7 to 12 percent by 2028
-([Berkeley Lab, December 2024](https://newscenter.lbl.gov/2025/01/15/berkeley-lab-report-evaluates-increase-in-electricity-demand-from-data-centers/));
-the International Energy Agency projects global data-center demand doubling
+rises. Per-query efficiency is real, and growth in use is outrunning it. The
+US Department of Energy's national laboratory put data centers at 176
+terawatt-hours (TWh, a billion kilowatt-hours) in 2023, 4.4 percent of US
+electricity, and projected 6.7 to 12 percent by 2028
+([Berkeley Lab, December 2024](https://newscenter.lbl.gov/2025/01/15/berkeley-lab-report-evaluates-increase-in-electricity-demand-from-data-centers/)).
+The International Energy Agency projects global data-center demand doubling,
 from about 415 TWh in 2024 to about 945 TWh by 2030
 ([IEA, *Energy and AI*, April 2025](https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai)).
-Other bodies project higher; the ranges disagree on methodology and on how
-fast AI is adopted, and the right move is to quote the range with its date,
-not to average it.
+Other bodies project higher. The estimates disagree on method and on how
+fast AI is adopted. The right move is to quote the range with its date, not
+to average it.
 
 The consequence for the resident is uncomfortable in both directions. Her
 opting out of the scribe changes nothing measurable. And the medical
@@ -269,78 +282,85 @@ meet.
 
 ### Where the cost lands
 
-![A cooling tower on the roof of a data center in Mesa, Arizona, in the desert outside Phoenix. Evaporative cooling is what "on-site water" means: the water leaves as vapor and does not come back to the aquifer. Photo: Rsparks3, [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Data_center_cooling_tower.jpg).](../images/data-center-cooling-tower.jpg){#fig-cooling fig-alt="Aerial drone photograph of a large flat-roofed industrial building in the desert with a row of grey cooling-tower units on the roof and a paved lot around it."}
+![A cooling tower on the roof of a data center in Mesa, Arizona, in the desert outside Phoenix. Evaporative cooling is what "on-site water" means: the water leaves as vapor and does not come back to the groundwater. Photo: Rsparks3, [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Data_center_cooling_tower.jpg).](../images/data-center-cooling-tower.jpg){#fig-cooling fig-alt="Aerial drone photograph of a large flat-roofed industrial building in the desert with a row of grey cooling-tower units on the roof and a paved lot around it."}
 
-Carbon is diffuse; whoever emits it, it warms everyone. Water and air are
-not. A data center's cooling comes out of one county's supply, and a gas
-turbine's exhaust settles on one neighborhood, which is why this chapter
-carries the bias-and-equity competency and not only the sustainability one.
+Carbon spreads. Whoever emits it, it warms everyone. Water and air do not
+spread in the same way. A data center's cooling comes out of one county's
+supply, and a gas turbine's exhaust settles on one neighborhood. That is why
+this chapter counts as a fairness chapter as well as an environmental one.
 
 Two-thirds of the data centers built or planned in the United States since
-2022 sit in regions already under water stress, and one facility in Newton
-County, Georgia draws about 500,000 gallons a day, roughly a tenth of the
-county's use ([Ceres, *Drained by Data*](https://www.ceres.org/resources/reports/drained-by-data-the-cumulative-impact-of-data-centers-on-regional-water-stress)).
-In South Memphis, an AI company ran dozens of gas turbines to power a
-training cluster without Clean Air Act permits, in an area the American Lung
-Association already graded F for ozone, and was sued by the NAACP and the
-Southern Environmental Law Center
+2022 sit in regions already under water stress, meaning short of water. One
+facility in Newton County, Georgia draws about 500,000 gallons a day, roughly
+a tenth of the county's use
+([Ceres, *Drained by Data*](https://www.ceres.org/resources/reports/drained-by-data-the-cumulative-impact-of-data-centers-on-regional-water-stress)).
+In the Memphis area, an AI company ran dozens of gas turbines to power
+clusters of computers for training a model. At its first site, in South
+Memphis, the turbines ran for months before any air permit was issued, in a
+county the American Lung Association had already graded F for ozone. At its
+second site, just across the state line in Southaven, Mississippi, the NAACP
+sued in federal court in 2026 over 27 turbines running without a Clean Air
+Act permit, half a mile from homes and a mile from an elementary school
 ([Earthjustice case page](https://earthjustice.org/case/xai-illegal-gas-power-plant-data-center-colossus)).
 [VERIFY: turbine count and permit status as of the date you read this; the case was active at the time of writing]{.verify}
-The residents of that part of Memphis will present to an emergency
+The residents of those neighborhoods will present to an emergency
 department with asthma exacerbations, and the physician seeing them will
-have no way to attribute the visit. That is environmental exposure as a
-social determinant of health, in exactly the form you were trained to
+have no way to link the visit to the turbines. That is environmental exposure
+as a social determinant of health, in exactly the form you were trained to
 recognize and can rarely act on.
 
 One more piece of vocabulary, because it decides what a vendor's number
 means. A company can report the emissions of the electricity it actually
-drew from the local grid, called **location-based** accounting, or the
-emissions after subtracting renewable power it bought on contract somewhere
-else, called **market-based**. Meta's model card for its Llama 3.1 models
-reports training at 11,390 tonnes CO~2~e location-based and zero
-market-based, in the same table
+drew from the local electricity grid. That is called **location-based**
+accounting. Or it
+can report the emissions left after subtracting renewable power it bought on
+contract somewhere else. That is called **market-based**. Meta's model card,
+the published fact sheet, for its Llama 3.1 models reports training at
+11,390 tonnes CO~2~e location-based and zero market-based, in the same table
 ([Meta model card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md)).
-Both are legitimate conventions. Only one of them tells the people in
+Both are accepted ways of counting. Only one of them tells the people in
 Memphis anything.
 
 ### The denominator, and the claim not to repeat
 
-Health care is not a bystander here. Its footprint is measured, large, and
-yours. The 1,692 kg per capita above comes with a state-by-state analysis
-showing emissions were not correlated with quality, which is the authors'
-argument that the sector could cut them without harming care
-[@pmid:33284703]. A scoping review of the environmental footprint of digital
-health interventions found no validated method for assessing one across its
-life cycle; most studies simply estimated travel avoided by telehealth
-[@pmid:36314391]. The literature on AI's footprint in medicine is newer and
-so far mostly perspective: an *NEJM Catalyst* piece on sustainable and
-socially just deployment [@doi:10.1056/CAT.24.0501], a *Lancet Digital
-Health* overview of the sustainability of large models in care
-[@pmid:42209329], a *Nature Reviews Nephrology* comment on balancing benefit
-against environmental cost [@pmid:41540287], and a *Lancet Global Health*
-argument that AI ethics frameworks have treated the environment as a
-footnote [@pmid:40580996].
+A per-query number needs a denominator: something of your own to compare it
+against. Health care is not a bystander here. Its footprint is measured,
+large, and yours. The 1,692 kg per person figure above comes with a
+state-by-state analysis. Emissions were not correlated with quality of care,
+which is the authors' argument that the sector could cut them without harming
+care [@pmid:33284703]. A scoping review of the environmental footprint of
+digital health tools found no validated method for assessing one across its
+whole life cycle. Most studies simply estimated the travel that telehealth
+avoided [@pmid:36314391]. The literature on AI's footprint in medicine is
+newer, and so far mostly perspective pieces rather than measurements: an
+*NEJM Catalyst* piece on rolling out AI sustainably and fairly
+[@doi:10.1056/CAT.24.0501], a *Lancet Digital Health* overview of the
+sustainability of large models in care [@pmid:42209329], a *Nature Reviews
+Nephrology* comment on weighing benefit against environmental cost
+[@pmid:41540287], and a *Lancet Global Health* argument that AI ethics
+frameworks have treated the environment as a footnote [@pmid:40580996].
 
-One measured result is worth more than the perspectives for a procurement
-committee. When a radiology group ran five sizes of two open models over
-3,665 chest radiograph reports and metered the electricity, the 7-billion
-parameter fine-tuned model matched the accuracy of a general-purpose model
-ten times its size while the largest used more than seven times the energy
-of its smaller sibling [@pmid:39189909]. The lesson is the same one as
-@fig-per-query from the buyer's side: which model you deploy is a bigger
-lever than whether you deploy one.
+One measured result is worth more than the perspectives for a purchasing
+committee. A radiology group ran five sizes of two open models over 3,665
+chest radiograph reports and metered the electricity. The 7-billion-parameter
+model (parameters are a measure of model size) that had been further trained
+for the task matched the accuracy of a general-purpose model ten times its
+size. The largest model used more
+than seven times the energy of its smaller sibling [@pmid:39189909]. The
+lesson is the one @fig-per-query teaches, seen from the buyer's side: which
+model you run is a bigger lever, a bigger place to push on the total, than
+whether you run one at all.
 
 ::: {.callout-important title="The claim not to repeat"}
 You will meet the sentence "autonomous AI could cut health care's emissions
-by 80 percent." It comes from a real, careful study that compared the
-greenhouse-gas cost of one autonomous diabetic-retinopathy screening
-encounter with one in-person specialist visit, and found the AI encounter
-about 80 percent lower [@pmid:35551275]. That is a finding about one
-screening test replacing one kind of visit. It is not a finding about health
-care, and the paper does not claim it is. If you repeat it as a general
-claim you have made the attribution error from @tbl-what-counted in the
-optimistic direction. The bottle and the 80 percent are the same mistake
-with opposite politics.
+by 80 percent." It comes from a real, careful study. It compared the
+greenhouse-gas cost of one autonomous diabetic-retinopathy screening visit
+with one in-person specialist visit, and found the AI visit about 80 percent
+lower [@pmid:35551275]. That is a finding about one screening test replacing
+one kind of visit. It is not a finding about health care, and the paper does
+not claim it is. If you repeat it as a general claim you have made the
+attribution error from @tbl-what-counted, in the optimistic direction. The
+bottle and the 80 percent are the same mistake with opposite politics.
 :::
 
 ## Watch or listen
@@ -352,27 +372,26 @@ page).
 Also as a podcast episode, *TED Talks Daily*, 31 October 2023, 11 min.
 
 Luccioni led the team that measured the training footprint of BLOOM, one of
-the few large models whose energy and carbon were published in full, and she
-built the public leaderboard that rates models' energy use on standard
+the few large models whose energy and carbon were published in full. She
+also built the public leaderboard that rates models' energy use on standard
 tasks. Listen for what she says she *counted* when she measured a model, and
-for the date: the talk predates every 2025 figure in @fig-per-query. Then
-ask whether anything she says about carbon has since become less true, or
-only smaller per query. The eleven minutes cover copyright and bias as well;
-the environmental section is the first third.
+for the date: the talk comes before every 2025 figure in @fig-per-query.
+Then ask whether anything she says about carbon has since become less true,
+or only smaller per query. The eleven minutes cover copyright and bias as
+well; the environmental section is the first third.
 
 **Reading alternative.** *MIT Technology Review*, "We did the math on AI's
-energy footprint" (O'Donnell and Crownhart, 20 May 2025), the explainer the
-module recommends circulating *after* the estimation exercise, not before.
-Skip the Do block's step 1 if you read it first; the point of step 1 is to
-guess before you know.
+energy footprint" (O'Donnell and Crownhart, 20 May 2025). Read it *after*
+the guessing exercise in the Do block, not before. If you read it first,
+skip step 1 of Part A; the point of step 1 is to guess before you know.
 
 ## Do
 
 ::: {.callout-warning title="No patient information, ever"}
 Nothing in this exercise involves a patient. You will ask a chatbot about
 itself and read public documents. Your institutional account is not a
-clinical tool and carries no agreement that covers patient data; the ethics
-and regulation chapter takes that up. If a query about the scribe's water
+clinical tool. It carries no agreement that covers patient data; the ethics
+and regulation chapter takes that up. If a question about the scribe's water
 use ever tempts you to paste in a note to "see what it costs," stop.
 :::
 
@@ -387,9 +406,9 @@ your chatbot, in a fresh conversation:
 > link.
 
 Record exactly what it says. You are not trusting it; you are collecting
-the specimen. Note whether it gave a source at all and whether the source is
+the specimen. Note whether it gave a source at all, and whether the source is
 one of the four in @tbl-what-counted. The answer will change with the
-wording, the day, and the tool, which is itself a finding; if a classmate got
+wording, the day, and the tool. That is itself a finding. If a classmate got
 a different number, compare the two before you compare either to the sources.
 
 **Step 2. Open the sources.** Three tabs, all free:
@@ -447,7 +466,7 @@ Filter to the last five years. Skim titles for one paper that reports a
 number *per encounter, per procedure, or per test*: kilograms of CO~2~e per
 MRI, per laparoscopic cholecystectomy, per dialysis session, per
 telepsychiatry visit. Anesthesia, surgery, radiology, nephrology, and
-ophthalmology all have a literature; if your specialty does not yet, use
+ophthalmology all have papers on this. If your specialty does not yet, use
 Eckelman's 1,692 kg per person per year [@pmid:33284703] and divide by a
 plausible number of encounters. This paper also counts toward this week's
 resource log.
@@ -466,26 +485,27 @@ The sentence I would actually say: ___________________________________
 
 The two prompt counts will differ a hundredfold and both will be large.
 That is the result. What it settles is that your keyboard is not the lever.
-What it does not settle is the aggregate, which is a different question and
-was never yours to answer alone.
+What it does not settle is the total, which is a different question and was
+never yours to answer alone.
 
 ### Part C: one question and one rule (5 minutes)
 
-**The vendor question.** Write one question you would put to the scribe
-vendor at the next contract review that has a checkable answer. The three
-worth converging on: does the reported footprint use location-based or
-market-based accounting; where is inference physically hosted (inference is
-the running of a trained model to answer requests, as opposed to training
-it), and how carbon-heavy and water-stressed is the grid there; and does the per-note
-figure include amortized training, idle capacity, and cooling. A good fourth
-is whether they will publish a standardized energy score for the deployed
-model.
+**The vendor question.** Nobody has published a measured figure for an
+ambient scribe. The way to get one is to ask. Write one question you would
+put to the scribe vendor at the next contract review, one that has a
+checkable answer. The three that matter most. Does the reported footprint use location-based or
+market-based accounting? Where is inference physically hosted, and how
+carbon-heavy and water-short is the grid there? (Inference is the running of
+a trained model to answer requests, as opposed to training it.) Does the
+per-note figure include the training cost spread across queries, idle
+capacity, and cooling? A good fourth is whether they will publish a
+standardized energy score for the model they run.
 
 **One rule and one non-change.** Write one practice you will actually keep,
 and one thing you considered changing and decided was not worth it, with
 the reason. A student who writes "I will keep using a model for literature
 search because my footprint is negligible against the clinical benefit, and
-the lever is procurement, not my keyboard" has done the reasoning this
+the lever is purchasing, not my keyboard" has done the reasoning this
 chapter asks for. So has the one who writes the opposite, if the reason is
 as specific.
 
@@ -495,7 +515,7 @@ Score yourself before moving on.
 
 | You have | Meets | Falls short |
 |---|---|---|
-| A traced chain (Part A) | Each of the three sources has a date, a model, a unit, and a water scope, all read from the source, not the headline | "The Post said a bottle" |
+| A traced chain (Part A) | Each of the three sources has a date, a model, a unit, and a statement of which water was counted, all read from the source, not the headline | "The Post said a bottle" |
 | A ratio and its explanation (Part A) | The ratio is computed, and the single choice that explains most of it is named | "They just disagree" |
 | Two verdict sentences (Part A) | Each names a date, a model, and what was counted; each could be said aloud at huddle | "It depends" |
 | Three choices (objective 2) | On-site versus total water; which query; which model and year, or equivalents, in your own words | Fewer than three, or "methodology" |
@@ -504,41 +524,41 @@ Score yourself before moving on.
 | The vendor question (Part C) | Has a checkable answer; you can say what a bad answer would look like | "Is it sustainable?" |
 | The rule and the non-change (Part C) | Both are specific and the reason is the arithmetic, not the mood | A rule with no reason, or no non-change |
 
-## The standing question
+## What this changes for you
 
 *What does this change about how you'll practice?* Write it down before you
 close this chapter. Then go back to Friday's huddle. The resident is still
 opting out and the medical director is still certain. You have three sources
 open and a ratio of about two thousand. What do you say to each of them, in
-one sentence each, and what do you say about the county's water that is true
-at every point on @fig-per-query? Then the harder one: the scribe will be
-recording your patients either way, and whether they are told belongs to the
+one sentence each? And what do you say about the county's water that is true
+at every point on @fig-per-query? Then the harder one. The scribe will be
+recording your patients either way. Whether they are told belongs to the
 patient-communication chapter, not to a water figure. Does what you learned
-this week change whether you use it, and if not, what *would*?
+this week change whether you use it? If not, what *would*?
 
 ## Summary
 
-- The bottle and the five drops are both real, from 2023–2024 and 2025
-  respectively, for different models, per different units, counting
-  different water. The gap between them is about what was counted, not who
-  is lying.
+- The bottle and the five drops are both real. They come from 2023–2024 and
+  2025, for different models, per different units, counting different water.
+  The gap between them is about what was counted, not about who is lying.
 - Three choices move a per-query figure a hundredfold: what you count,
   which query, which model and when. A figure without a model and a date is
   not a figure.
 - The reference was fine; the attribution broke. A bottle per 20 to 50
-  questions became a bottle per email became a bottle per note.
+  questions became a bottle per email, which became a bottle per note.
 - At the best-documented rate, an individual's use is negligible against
-  health care's own 1,692 kg per person per year. The published range spans
-  three orders of magnitude, and the honest sentence says both.
+  health care's own 1,692 kg per person per year. The published rates differ
+  by about a thousandfold, and the honest sentence says both.
 - Per-query cost fell 33-fold in a year while the same company's total
-  emissions rose 81 percent over its baseline. That is Jevons, and the
-  people who live next to the total were not asked.
-- Location-based and market-based accounting are both legitimate and give
-  different answers; ask which one you are being shown.
-- The "80 percent" claim is one screening test, not health care. The bottle
-  and the 80 percent are the same error in opposite directions.
-- Which model a vendor deploys is a bigger lever than whether you send the
-  prompt. Take the question to procurement, and take the date with it.
+  emissions rose to 81 percent above its 2019 level. That is the Jevons
+  effect, and the people who live next to the total were not asked.
+- Location-based and market-based accounting are both accepted and give
+  different answers. Ask which one you are being shown.
+- The "80 percent" claim is about one screening test, not about health care.
+  The bottle and the 80 percent are the same error in opposite directions.
+- Which model a vendor runs is a bigger lever than whether you send the
+  prompt. Take the question to the people who buy the tool, and take the
+  date with it.
 
 ## Go deeper
 
@@ -546,17 +566,17 @@ this week change whether you use it, and if not, what *would*?
 
 - The water paper in its published form [@doi:10.1145/3724499], and the
   first arXiv version for the sentence the story grew from.
-- Google's per-prompt methodology, [arXiv 2508.15734](https://arxiv.org/abs/2508.15734),
+- Google's per-prompt method, [arXiv 2508.15734](https://arxiv.org/abs/2508.15734),
   and the *Register* piece above for the on-site objection.
 - The 2023 *Joule* commentary the "10× a search" line comes from
   [@doi:10.1016/j.joule.2023.09.004]; read it against the 2025 Epoch AI
   re-estimate to see how a number ages.
 - Luccioni, Jernite, and Strubell, "Power Hungry Processing"
   ([arXiv 2311.16863](https://arxiv.org/abs/2311.16863), 2023): the first
-  systematic comparison of inference cost by task, and the finding that
-  general-purpose models cost orders of magnitude more per task than small
-  fine-tuned ones. The radiology study [@pmid:39189909] is that finding
-  reproduced on chest radiograph reports.
+  systematic comparison of the cost of running models, task by task, and
+  the finding that general-purpose models cost orders of magnitude more per
+  task than small specialized ones. The radiology study [@pmid:39189909] is
+  that finding reproduced on chest radiograph reports.
 - US health care's footprint [@pmid:33284703]; the scoping review of
   digital-health footprints [@pmid:36314391]; and a 2026 systematic review
   of "green AI" in health applications, which argues AI can add to the
@@ -573,17 +593,19 @@ this week change whether you use it, and if not, what *would*?
 - *MIT Technology Review*, [We did the math on AI's energy footprint](https://www.technologyreview.com/2025/05/20/1116327/ai-energy-usage-climate-footprint-big-tech/)
   (20 May 2025), and Hannah Ritchie's
   [running estimate](https://hannahritchie.substack.com/p/ai-footprint-august-2025)
-  (updated August 2025), which is the closest thing to a maintained answer.
+  (updated August 2025), which is the closest thing to an answer that is
+  kept up to date.
 - [Hugging Face AI Energy Score leaderboard](https://huggingface.co/spaces/AIEnergyScore/Leaderboard):
   models rated on standard tasks on identical hardware, free to browse. If a
   vendor's model is not on it, ask why.
-- [Electricity Maps](https://app.electricitymaps.com): live grid carbon
-  intensity by region. Open it and find where your vendor hosts; *where* a
-  model runs matters as much as which one.
+- [Electricity Maps](https://app.electricitymaps.com): how carbon-heavy the
+  electricity is in each region, updated live. Open it and find where your
+  vendor hosts; *where* a model runs matters as much as which one.
 
 **Talks**
 
 - [Machine learning fairness](https://talks.seandavis.net/archive/2024-11-05-ml-fairness/):
-  the vocabulary for the siting section, procedural, distributive, and
-  representational fairness, and the two opening thought experiments that
-  this chapter's estimate-then-reveal design borrows from.
+  the fairness vocabulary behind "Where the cost lands" (procedural,
+  distributive, and representational fairness), and the two opening thought
+  experiments that this chapter's guess-first-then-check exercise borrows
+  from.

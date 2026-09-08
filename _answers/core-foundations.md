@@ -47,7 +47,7 @@ Six 2008 Neth Heart J; Wells: the 1998 Ann Intern Med paper or a 2001 paper
 instead of Thromb Haemost 2000), (b) wrong volume/pages with correct author and
 year, (c) outcome percentages from a different cohort attached to the original.
 All three are "partly matches" and are the intended specimen. A student whose
-model got everything right should still write the mechanism sentence; see the
+model got everything right should still write the one-sentence explanation; see the
 chapter.
 
 **Objective 5, Part C.** Budget rule examples: paste only the section that

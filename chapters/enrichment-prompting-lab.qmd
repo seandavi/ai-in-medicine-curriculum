@@ -21,23 +21,24 @@ By the end of this chapter you will be able to:
 :::
 
 **Time.** About 20 minutes of reading, 20 minutes of listening, 30 minutes of
-doing, and 5 of checking: 75 minutes if you stop the podcast where the chapter
-tells you to, closer to 100 if you finish it. You need one chatbot, your
-institutional ChatGPT Edu or Microsoft Copilot account, and a second browser tab
-for checking. Nothing installs, nothing asks for a phone number, and nothing you
-type will be about a real patient.
+doing, and 5 of checking. That is 75 minutes if you stop the podcast where the
+chapter tells you to, and closer to 100 if you finish it. You need one chatbot
+and a second browser tab for checking. At our school the chatbot is the
+institutional ChatGPT Edu or Microsoft Copilot account; if you are reading
+this elsewhere, use whatever your institution provides. Nothing installs, nothing asks for a phone number,
+and nothing you type will be about a real patient.
 
 ## Night float, 2:40 a.m.
 
 You are the intern on night float. Your co-intern Sam comes back from seeing a
-44-year-old woman in the emergency department: three weeks out from surgery to
-fix a broken ankle, two days of sharp chest pain that is worse when she
-breathes in, heart rate 108, oxygen saturation 95 percent, and a right calf
-that is bigger than the left. Sam has already asked the chatbot on their phone,
-twice. The first time they typed the question the way you would say it out
-loud. The second time, after a lecture on prompting, they wrote it out
-properly: who they are, the case in clinical language, exactly what they want,
-and the format they want it in.
+44-year-old woman in the emergency department. She is three weeks out from
+surgery to fix a broken ankle. She has had two days of sharp chest pain that is
+worse when she breathes in. Her heart rate is 108, her oxygen saturation is 95
+percent, and her right calf is bigger than the left. Sam has already asked the
+chatbot on their phone, twice. The first time they typed the question the way
+you would say it out loud. The second time, after a lecture on prompting, they
+wrote it out properly: who they are, the case in clinical language, exactly
+what they want, and the format they want it in.
 
 Sam hands you the phone. "Second one's much better. I'm going to put it in the
 note."
@@ -48,7 +49,7 @@ note."
 <div class="reply">
 <p>This presentation is concerning for a pulmonary embolism (PE), especially given the recent surgery, tachycardia, pleuritic pain, and unilateral calf swelling. Other possibilities include pneumonia, musculoskeletal pain, pericarditis, and pneumothorax. I would recommend getting an ECG and chest X-ray, checking a troponin, and ordering a D-dimer; if the D-dimer is negative, PE can be reasonably excluded. If it is elevated, proceed to CT pulmonary angiography. Consider a lower-extremity Doppler ultrasound for the calf swelling. Provide supplemental oxygen as needed and analgesia.</p>
 </div>
-<div class="fine">Illustrative answer composed for this chapter; not a transcript.</div>
+<div class="fine">Made-up answer, written for this chapter. Not a transcript of any real tool.</div>
 </div>
 <div class="chat-pane">
 <div class="prompt">You are assisting a physician on an overnight admitting service. A 44-year-old woman, three weeks after open reduction and internal fixation of an ankle fracture, presents with two days of pleuritic chest pain. HR 108, BP 122/78, SpO2 95% on room air, afebrile. Right calf circumference 3 cm greater than left. Give a ranked differential with the findings that most support and most oppose each entry, then the single best next diagnostic step. Table, one row per diagnosis.</div>
@@ -63,20 +64,20 @@ note."
 </table>
 <p><b>Overall:</b> PE is most likely. Obtain a D-dimer; a negative result effectively rules out PE in this setting.</p>
 </div>
-<div class="fine">Illustrative answer composed for this chapter; not a transcript.</div>
+<div class="fine">Made-up answer, written for this chapter. Not a transcript of any real tool.</div>
 </div>
 :::
 
 Read both before going on. The second answer is better organised in every way
-that a reader notices: ranked, tabulated, with evidence for and against, with a
-next step per row. It is also wrong in exactly the way the first answer is
-wrong, and its neatness makes the error harder to see. You will come back to
-this phone at the end of the chapter.
+a reader notices. It is ranked, it is in a table, it gives evidence for and
+against, and it names a next step in every row. It is also wrong in exactly
+the way the first answer is wrong, and its neatness makes the error harder to
+see. You will come back to this phone at the end of the chapter.
 
 The habit this chapter teaches has a name, and Sam has just heard it in a
 lecture: **prompting**, the craft of writing what you type to a language model
 so that what comes back is more useful. A **language model** is the program
-behind ChatGPT, Copilot, Claude, and Gemini; it produces text one word-piece at
+behind ChatGPT, Copilot, Claude, and Gemini. It produces text one word-piece at
 a time, and the words you give it are the only thing it has to work with. The
 lecture Sam went to is right that structure helps. The question this chapter
 asks is *what*, exactly, it helps with.
@@ -84,66 +85,69 @@ asks is *what*, exactly, it helps with.
 ## Why this matters
 
 Within three months you will be Sam. You will have a case, a phone, and a
-minute. What you type will change what comes back, and a tidy answer with a
-table in it will feel more trustworthy than a paragraph, because tidy answers
-from people usually are. That instinct was trained on humans, and it does not
-transfer.
+minute. What you type will change what comes back. A tidy answer with a table
+in it will feel more trustworthy than a paragraph, because tidy answers from
+people usually are. You learned that instinct from people. It does not carry
+over to machines.
 
-The stakes are not the chatbot's. When 148 final-year students were shown
-chatbot answers to ten clinical vignettes, five of them deliberately wrong, the
-median student caught the wrong ones 56 percent of the time [@pmid:39915801].
-Only 5 percent had heard the phrase "clinical prompt engineering". The tool did
-not sign those answers; the students who accepted them would have. So will you.
-Prompting well is a skill worth thirty minutes, and it is the smaller half of
-this chapter. The larger half is what prompting well cannot do.
+The stakes are not the chatbot's. In one study, 148 final-year students were
+shown chatbot answers to ten written cases. Five of the answers were
+deliberately wrong. The median student caught the wrong ones 56 percent of the
+time [@pmid:39915801]. Only 5 percent had heard the phrase "clinical prompt
+engineering". The tool did not sign those answers; the students who accepted
+them would have. So will you. Prompting well is a skill worth thirty minutes,
+and it is the smaller half of this chapter. The larger half is what prompting
+well cannot do.
 
-## The idea
+## What a prompt can and cannot do
 
 ### Two different things a prompt can change
 
 A prompt can change how an answer is **organised**: whether it is ranked,
 whether each entry carries the findings for and against, whether it names the
 next step, whether it says what it does not know. A prompt can also, sometimes,
-change whether an answer is **correct**. These are different properties and
-they do not move together.
+change whether an answer is **correct**. These are two different properties,
+and they do not move together.
 
 Organisation is almost entirely in your hands. If you ask for a table, you get
 a table. If you ask for the three findings that most oppose each diagnosis, you
-get three findings per row. This is the reliable part of prompting, and the
-prompt-engineering deck this chapter draws on spends most of its ten rules here:
-state the objective, give context, use precise clinical language ("epigastric
-pain radiating to the back", not "stomach pain"), specify the output format,
-iterate. Those rules work.
+get three findings per row. This is the reliable part of prompting. The slide
+deck this chapter draws on spends most of its ten rules here: state the
+objective, give context, use precise clinical language ("epigastric pain
+radiating to the back", not "stomach pain"), specify the output format, and
+refine the prompt over several tries. Those rules work.
 
-Correctness is bounded by two things a prompt does not touch: what the model
+Correctness is limited by two things a prompt does not touch: what the model
 knows, and what the case contains. A structured prompt cannot put knowledge
-into the model that is not there, and it cannot supply the piece of history you
-left out. What it *can* do is make the model show its reasoning, which means you
-can check it. That is the finding of a Stanford study that prompted GPT-4 to
-imitate several styles of clinical reasoning: diagnostic accuracy did not
-change, but the rationale became something a physician could inspect and
-evaluate [@pmid:38267608]. The value of a reasoning prompt is not that the
-answer gets better. It is that the answer becomes checkable.
+into the model that is not there. It cannot supply the piece of history you
+left out. What it *can* do is make the model show its reasoning, which means
+you can check it. That is the finding of a Stanford study that prompted GPT-4
+to imitate several styles of clinical reasoning. Diagnostic accuracy did not
+change, but the reasoning became something a physician could read and judge
+[@pmid:38267608]. The value of a reasoning prompt is not that the answer gets
+better. It is that the answer becomes checkable.
 
-The evidence that structure does not reliably buy correctness is more direct
-than that. When pharmacists at one hospital put 50 internal-medicine cases
-through ChatGPT and OpenEvidence with and without a prompt-engineering
-template, the template made no significant difference to accuracy and
-completeness; the probability of an acceptable answer went from 0.54 to 0.60
-for ChatGPT and from 0.64 to 0.52 for OpenEvidence [@pmid:42324177]. In an
-orthopaedics study that asked several models about guideline recommendations
-in several prompt styles, the best style depended on the model, and asking the
-same question five times gave answers whose agreement with each other ranged
-from none to near-perfect [@pmid:38378899]. In a low-back-pain study, targeted
-safety prompts improved the weaker model on every dimension and improved the
-stronger model on everything except safety [@pmid:42266874]. The pattern across
-all three is the same. Prompt effects are real, model-specific, and unstable,
-and "better organised" is the only one you can count on.
+There is more direct evidence that structure does not reliably buy correctness.
+Pharmacists at one hospital put 50 internal-medicine cases through ChatGPT and
+OpenEvidence, with and without a prompt template. The template made no
+significant difference to accuracy and completeness. The probability of an
+acceptable answer went from 0.54 to 0.60 for ChatGPT and from 0.64 to 0.52 for
+OpenEvidence [@pmid:42324177]. An orthopaedics study asked several models about
+guideline recommendations in several prompt styles. The best style depended on
+the model, and asking the same question five times gave answers whose
+agreement with each other ranged from none to near-perfect [@pmid:38378899].
+In a low-back-pain study, targeted safety prompts improved the weaker model on
+every measure. They improved the stronger model on everything except safety
+[@pmid:42266874]. The pattern across all three is the same. Prompt effects are
+real, they differ from model to model, and they are unstable. "Better
+organised" is the only effect you can count on.
 
 ```{mermaid}
 %%| label: fig-what-structure-changes
 %%| fig-cap: "What each element of a structured prompt changes. Four of the five act on organisation. The fifth, asking the model to name what is missing, is the only one that acts on the gap between the case and the answer."
 flowchart LR
+  accTitle: What each element of a structured prompt changes
+  accDescr: Role, Context, Task, and Format each point to one box, how the answer is organised. Uncertainty, meaning say what is missing, points to a separate box, whether the answer admits what it does not know. A dotted arrow runs from the organisation box to a box for whether the answer is correct, and its label says it does not touch correctness. A second dotted arrow runs from the admits-what-it-does-not-know box to that same correctness box, and its label says it helps you check.
   R[Role] --> O[How the answer is organised]
   C[Context] --> O
   T[Task] --> O
@@ -153,10 +157,10 @@ flowchart LR
   G -.->|helps you check| K
 ```
 
-### The scaffold
+### The five-part prompt
 
-Teach yourself this as a shape, not a script. Five elements; the fifth is the
-one people skip.
+Learn this as a shape, not a script. Five parts; the fifth is the one people
+skip.
 
 | Element | What you write | Example |
 |---|---|---|
@@ -164,61 +168,65 @@ one people skip.
 | **Context** | The case, in clinical language | "Epigastric pain radiating to the back," not "stomach pain." Vitals, key negatives, medications. |
 | **Task** | Exactly what you want | "Give a ranked differential with the three findings that most support and most oppose each entry." |
 | **Format** | The shape of the answer | "Table. One row per diagnosis." |
-| **Uncertainty** | What to do with gaps | "Where the vignette lacks information you would need, say what is missing instead of assuming it." |
+| **Uncertainty** | What to do with gaps | "Where the case lacks information you would need, say what is missing instead of assuming it." |
 
-: The five-element scaffold. The last row is the whole chapter in one line. {#tbl-scaffold}
+: The five-part prompt. The last row is the whole chapter in one line. {#tbl-scaffold}
 
-The ten rules in the source deck map onto this table. Objective is Task;
-context and precise language are Context; output format is Format; iterate,
-decompose, delimit, and few-shot (showing the model one or two worked examples
-of what you want) are ways of sharpening Task and Format. None of the ten is
-the fifth row. Models default to producing a complete-looking answer from
-incomplete information, because a complete-looking answer is what the text they
-learned from looks like. Asking them to name the gap instead is the single
-highest-yield thing a clinician can add to a prompt, and in the exercise you
-will see what happens with and without it.
+The ten rules in the source deck fit onto this table. Objective is Task.
+Context and precise language are Context. Output format is Format. The rest
+are ways of sharpening Task and Format: refine over several tries, break a big
+question into smaller ones, mark the case off from the instructions with clear
+separators, and show the model one or two worked examples of what you want
+(the deck calls this "few-shot"). None of the ten is the fifth row. Models
+default to producing a complete-looking answer from incomplete information,
+because a complete-looking answer is what the text they learned from looks
+like. Asking them to name the gap instead is the single most useful thing a
+clinician can add to a prompt. In the exercise you will see what happens with
+and without it.
 
 ::: {.callout-tip title="If English is not your first language"}
-The critical appraisal chapter reports a finding you should carry into this one:
-the same tool fabricated references ten times more often when a question was
+The critical appraisal chapter reports a finding you should carry into this
+one. The same tool made up references ten times more often when a question was
 phrased the way a patient talks than the way a clinician writes
-[@pmid:42232526]. **Register**, the linguist's word for the way a particular
-group of people talks, is a property of the words, not of the credentials of
-the person typing. The Context row of @tbl-scaffold is where you control it.
-Writing the case in the language of a case presentation is not showing off; it
-moves your prompt into the register that got the better answers.
+[@pmid:42232526]. Linguists call this **register**: the way a particular group
+of people talks. It is a property of the words, not of the credentials of the
+person typing. The Context row of @tbl-scaffold is where you control it.
+Writing the case the way you would present it on rounds is not showing off. It
+moves your prompt into the kind of language that got the better answers.
 :::
 
 ### Why the neat wrong answer is worse
 
-Go back to Sam's phone. A negative D-dimer excludes pulmonary embolism only
-when the pretest probability is low: that is the strategy the original
-emergency-department study validated, in patients whose clinical score put them
-in the low-probability group [@pmid:11453709]. Sam's patient has surgery in
-the last four weeks, a heart rate over 100, and a swollen calf. On the Wells
-score, the bedside tool MDCalc will show you, she is not low probability, and
-the right next step is imaging, not a D-dimer that a positive result would only
-delay. Both answers got this wrong. Only one of them put it in a column headed
-"Next step" beside a column of supporting findings.
+Go back to Sam's phone. A negative D-dimer rules out pulmonary embolism only
+when the **pretest probability** is low. Pretest probability is how likely the
+diagnosis is before you order any test. The original emergency-department
+study validated that strategy in patients whose clinical score put them in the
+low-probability group [@pmid:11453709]. Sam's patient has had surgery in the
+last four weeks, has a heart rate over 100, and has a swollen calf. On the
+Wells score, the bedside tool MDCalc will show you, she is not low
+probability. The right next step is imaging, not a D-dimer, because a positive
+D-dimer would only delay the scan. Both answers got this wrong. Only one of
+them put it in a column headed "Next step" beside a column of supporting
+findings.
 
-That is the mechanism. **Anchoring** is the habit of settling on the first
-plausible answer and reading everything afterwards as confirmation.
-**Automation bias** is the same habit with a machine as the source: the
-tendency to accept a system's output in place of your own check, more strongly
-the more authoritative the output looks. A table with "Supports" and "Opposes"
-columns recruits your own pattern-matching. You read the row, you agree with
-the findings, and you take the next step on the same nod. The paragraph
-version at least reads as one opinion.
+That is how the neat answer does its damage. **Anchoring** is the habit of
+settling on the first plausible answer and reading everything afterwards as
+confirmation. **Automation bias** is the same habit with a machine as the
+source: the tendency to accept a system's output in place of your own check,
+more strongly the more authoritative the output looks. A table with "Supports"
+and "Opposes" columns pulls in your own pattern-matching. You read the row, you
+agree with the findings, and you take the next step on the same nod. The
+paragraph version at least reads as one opinion.
 
 The published studies of fluent wrong answers say the same thing without the
 table. When 33 physicians across 17 specialties graded chatbot answers to 284
-of their own questions, the median score was almost completely correct, and 36
+of their own questions, the median score was almost completely correct. But 36
 answers were mostly or completely wrong, in the same confident prose as the
 rest [@pmid:37782499]. When oncologists checked chatbot cancer-treatment
 recommendations against guidelines, about a third of outputs mixed at least one
 non-guideline recommendation in among correct ones [@pmid:37615976]. The
-authors' phrase, *mixed incorrect recommendations among correct ones*, is the
-structured-prompt failure exactly. Structure makes the mixing tidier.
+authors' phrase, *mixed incorrect recommendations among correct ones*, is
+exactly the structured-prompt failure. Structure makes the mixing tidier.
 
 ::: {.callout-important title="The one sentence"}
 A structured prompt improves how an answer is organised. It does not reliably
@@ -229,12 +237,16 @@ one you are most likely to sign.
 ### What the trials show about physicians plus the tool
 
 Here is the finding to hold against every enthusiastic claim about prompting.
-In a randomized trial, 50 physicians worked through clinical vignettes with
-either conventional resources or conventional resources plus a language model.
-The model group scored a median 76 percent, the conventional group 74 percent:
-an adjusted difference of 2 points, with a confidence interval running from
-minus 4 to plus 8. The model *on its own* scored 16 points higher than the
-conventional group [@pmid:39466245]. @fig-goh redraws the two estimates.
+In a randomized trial, 50 physicians worked through written cases with either
+their usual resources or their usual resources plus a language model. The
+model group scored a median 76 percent, the usual-resources group 74 percent.
+After adjustment the difference was 2 points, with a 95 percent confidence
+interval from minus 4 to plus 8. (A confidence interval is the range of
+differences the data are consistent with. One that crosses zero means the
+trial could not tell the groups apart.) In a secondary comparison the
+authors call exploratory, the model *on its own* scored 16 points higher than
+the usual-resources group [@pmid:39466245]. @fig-goh redraws the two
+estimates.
 
 ![Two estimates from the same randomized trial. Physicians with the model did
 no better than physicians without it; the model alone did. Redrawn for this
@@ -242,24 +254,27 @@ chapter from the estimates reported in Goh et al., *JAMA Network Open* 2024
 [@pmid:39466245]; the data are the paper's, the drawing is this course's.](../images/goh-2024-redrawn.png){#fig-goh fig-alt="Dot-and-interval chart with two rows. Top row: physician plus LLM versus conventional resources, plus 2 percentage points, 95 percent confidence interval minus 4 to plus 8, crossing zero. Bottom row: LLM alone versus conventional resources, plus 16 points, interval 2 to 30, not crossing zero."}
 
 The tool was better than the physicians. The physicians using the tool were not
-better than the physicians without it. Something in how clinicians integrated
-the output threw the benefit away: anchoring on their own first impression,
-skimming, or asking the model to confirm rather than to challenge. The same
-group ran a second trial a year later on management rather than diagnosis, with
-92 physicians, and this time the model group did score higher, by 6.5 points
+better than the physicians without it. Something in how clinicians used the
+output seems to have thrown the benefit away. The trial could not say what.
+The likely candidates are settling on their own first impression, skimming,
+or asking the model to confirm rather than to challenge. The same
+group ran a second trial a year later on management rather than diagnosis,
+with 92 physicians. This time the model group did score higher, by 6.5 points
 (95 percent CI 2.7 to 10.2). But the model alone matched the physicians who had
 it, and the physicians with the model spent two minutes longer per case
-[@pmid:39910272]. Two trials, one direction: the bottleneck is human
-integration, not model capability. A trial in *NEJM AI* of physicians who had
-been trained in AI literacy reported that the training did not remove the
-automation bias
+[@pmid:39910272]. Two trials, one direction. The reading the authors favour,
+and the one this chapter takes, is that the weak point is how the physician
+uses the answer, not what the model can do. Both trials used written cases,
+not real patients, and the authors say so. A trial in *NEJM AI* of
+physicians who had been trained in AI literacy reported that the training did
+not remove the automation bias
 [VERIFY: NEJM AI 2025–2026 automation-bias RCT; not found in PubMed at time of writing]{.verify}.
 
 The honest summary for a fourth-year: the prompting skill is real and cheap.
-The evidence that it makes *you* a better diagnostician is not there yet, and
-what evidence exists says the gain, when there is one, comes from how you use
-the answer, not from how you asked for it. The centaur-or-cyborg chapter takes
-up what "how you use the answer" means in practice.
+The evidence that it makes *you* a better diagnostician is not there yet. What
+evidence exists says the gain, when there is one, comes from how you use the
+answer, not from how you asked for it. The centaur-or-cyborg chapter takes up
+what "how you use the answer" means in practice.
 
 ## Watch or listen
 
@@ -292,22 +307,23 @@ The four cases below are fiction, written for this course. Do not substitute a
 patient from your sub-internship, however well you have de-identified them in
 your head. What Sam did at 2:40 a.m., typing a real patient's presentation into
 a personal phone, is the thing this callout forbids, and the patient did not
-know it happened. Consumer chatbots and institutional accounts alike carry no business
-associate agreement, the contract that makes a vendor legally responsible for
-protecting patient data, unless your institution tells you in writing that one
-exists. A tool your hospital runs inside the EHR is a different question, and
-the ethics and regulation chapter takes it up.
+know it happened. Consumer chatbots and institutional accounts alike have no
+business associate agreement unless your institution tells you in writing that
+one exists. That agreement is the contract that makes a vendor legally
+responsible for protecting patient data. A tool your hospital runs inside the
+EHR is a different question, and the ethics and regulation chapter takes it up.
 :::
 
 You will run one case twice, score both answers, and then check two claims from
-the better one against a source. Open a blank document first; the record at
-Step 6 is your artifact. Use the same chatbot for both runs, in two separate
-conversations, so the second run cannot see the first.
+the better one against a source. Open a blank document first; the record you
+fill in at Step 6 is what you keep and what you bring to the live session. Use
+the same chatbot for both runs, in two separate conversations, so the second
+run cannot see the first.
 
 ### Step 1. Pick a case (2 minutes)
 
 Choose by the specialty you are headed for, or the one whose trap you least
-expect to catch. Each case has one deliberate trap; the traps are of different
+expect to catch. Each case has one deliberate trap. The traps are of different
 kinds, and you will not be told which kind yours is until Step 4.
 
 ::: {.callout-note title="Case A: emergency medicine or internal medicine"}
@@ -361,7 +377,9 @@ Paste the case into a new conversation with nothing but this in front of it:
 
 > What's the diagnosis and what should I do?
 
-Copy the whole answer, verbatim, into your document under *Bare*.
+Copy the whole answer, word for word, into your document under *Bare*. If the
+tool replies with questions instead of a plan, do not answer them. The
+questions are the answer; copy them and score them like any other reply.
 
 ### Step 3. The structured prompt (5 minutes)
 
@@ -376,64 +394,64 @@ the shape; fill in the case where marked.
 > management. Where the case lacks information you would need to decide, say
 > what is missing instead of assuming it.
 
-Copy the answer verbatim under *Structured*. Note the tool and, if it shows
-one, the model version. These outputs move from month to month; the point is
-the comparison, not the numbers.
+Copy the answer word for word under *Structured*. Note the tool and, if it
+shows one, the model version. These outputs change from month to month; the
+point is the comparison, not the numbers.
 
 ### Step 4. Score both (10 minutes)
 
-Now open the discriminating features for your case, below, and score each
-answer twice: once for organisation, once for correctness on the trap.
+Now open the trap for your case, below, and score each answer twice: once for
+organisation, once for correctness on the trap.
 
 ::: {.callout-tip title="The traps, one per case: open only after both runs" collapse="true"}
 **Case A: a critical omission.** The case never says whether she is pregnant,
 whether she takes hormonal contraception or other oestrogen, whether she has
-been immobile, or whether she or her family have had a clot before. Every
-one of those changes the pretest probability of pulmonary embolism, and no
-score can be computed without them. The trap is whether the model *asks* for
-them or *assumes* them. An answer that computes a Wells score, or declares her
-"low risk", from what is given has invented the missing history. Full marks
-require the answer to name at least two of the missing items as things it
-needs before choosing between D-dimer and imaging.
+been immobile, or whether she or her family have had a clot before. Every one
+of those changes the pretest probability of pulmonary embolism, and no score
+can be computed without them. The trap is whether the model *asks* for them or
+*assumes* them. An answer that computes a Wells score, or declares her "low
+risk", from what is given has invented the missing history. Full marks require
+the answer to name at least two of the missing items as things it needs before
+choosing between D-dimer and imaging.
 
 **Case B: the common answer is wrong.** The pattern-match is "urinary tract
 infection causing delirium; start antibiotics." But bacteria in the urine
-without urinary symptoms is common in older women, particularly in
-institutional settings, and the Infectious Diseases Society of America's 2019
-guideline specifically addresses older adults with delirium and no local
-urinary symptoms: look for other causes and observe rather than treat the
-urine [@pmid:31506700]. The discriminating feature is in the medication list.
-Oxybutynin is a strongly anticholinergic drug, listed in the American
-Geriatrics Society Beers Criteria as one to avoid in older adults, and it was
+without urinary symptoms is common in older women, especially in care
+facilities. The Infectious Diseases Society of America's 2019 guideline
+specifically addresses older adults with delirium and no local urinary
+symptoms: look for other causes and observe rather than treat the urine
+[@pmid:31506700]. The clue that separates the diagnoses is in the medication
+list. Oxybutynin is a strongly anticholinergic drug. The American Geriatrics
+Society Beers Criteria list it as one to avoid in older adults, and it was
 started twelve days before the confusion [@pmid:37139824]. Full marks require
 the answer to put the new anticholinergic ahead of, or at least beside, the
 dipstick, and to say that the dipstick alone does not establish infection.
 
-**Case C: interactions buried in the list.** Clarithromycin is a strong
-inhibitor of the liver enzyme that clears simvastatin; the combination is one
-the American Heart Association's statement on statin interactions tells you to
-avoid, and the amiodarone-plus-simvastatin combination carries a dose cap that
-40 mg exceeds [@pmid:27754879]
+**Case C: interactions buried in the list.** Clarithromycin strongly blocks the
+liver enzyme that clears simvastatin. The American Heart Association's
+statement on statin interactions tells you to avoid the combination, and the
+amiodarone-plus-simvastatin combination carries a dose cap that 40 mg exceeds
+[@pmid:27754879]
 [VERIFY: contraindication and 20 mg cap against the current simvastatin label on DailyMed]{.verify}.
 Clarithromycin also raises apixaban exposure through the same pathway, and
-amiodarone with clarithromycin adds two QT-prolonging drugs together. The
+amiodarone with clarithromycin puts two QT-prolonging drugs together. The
 perioperative apixaban plan and metformin around surgery are the *expected*
-content; the trap is whether the model surfaces the interactions without being
-asked. Full marks require the statin-macrolide interaction to be named and
-acted on.
+content. The trap is whether the model points out the interactions without
+being asked. Full marks require the statin-macrolide interaction to be named
+and acted on.
 
 **Case D: genuinely ambiguous.** The correct answer is that two diagnoses
-remain, corticosteroid-induced mania with psychotic features and a first
+remain: corticosteroid-induced mania with psychotic features, and a first
 episode of bipolar I disorder with psychotic features, with a cannabis
-contribution to exclude, and that what distinguishes them is time: symptoms
-that began after the steroid started and resolve after it stops point one way,
-symptoms that persist point the other, and the family history raises the
-baseline risk without settling it. Psychiatric effects of corticosteroids are
-common, dose-related, usually early in a course, and usually resolve with
-reduction or withdrawal [@pmid:17036562]. A model that declares "bipolar I
-disorder" as *the* diagnosis has over-committed. Full marks require both
-diagnoses to stay on the list with the distinguishing test named, and a safety
-plan that does not depend on which it is.
+contribution to exclude. What separates them is time. Symptoms that began
+after the steroid started and resolve after it stops point one way; symptoms
+that persist point the other. The family history raises the baseline risk
+without settling it. Psychiatric effects of corticosteroids are common,
+dose-related, usually early in a course, and usually resolve with reduction or
+withdrawal [@pmid:17036562]. A model that declares "bipolar I disorder" as
+*the* diagnosis has decided too early. Full marks require both diagnoses to
+stay on the list with the distinguishing test named, and a safety plan that
+does not depend on which it is.
 :::
 
 **Organisation, 0 to 5.** One point for each: ranked; findings for *and*
@@ -444,11 +462,11 @@ rounds; a statement of what information is missing.
 
 | Score | Meaning |
 |---|---|
-| **2** | The trap is surfaced and it changes the plan |
-| **1** | The trap is mentioned but buried, hedged, or does not change the plan |
+| **2** | The trap is caught and it changes the plan |
+| **1** | The trap is mentioned but buried, softened, or does not change the plan |
 | **0** | The trap is missed, or the answer invents around it |
 
-: Scoring correctness on the trap. The scale is deliberately coarse; arguing with yourself about a borderline case is part of the exercise. {#tbl-trap-score}
+: Scoring correctness on the trap. The scale has only three steps on purpose; arguing with yourself about a borderline case is part of the exercise. {#tbl-trap-score}
 
 If either answer gives references, score each on the critical appraisal
 chapter's 2/1/0 citation scale (accurate, misrepresented, fabricated) by
@@ -471,7 +489,7 @@ browser, in ten minutes total:
   label repository, for any interaction, contraindication, or dose.
 
 Record each as *supported*, *contradicted*, or *not addressed*, with the source.
-"Not addressed" is a real result; a claim the sources do not make is a claim
+"Not addressed" is a real result. A claim the sources do not make is a claim
 you should not be repeating either.
 
 ### Step 6. Record it (bonus 5 minutes if you have them)
@@ -499,19 +517,19 @@ What disappeared from the answer? ______________________________________
 ```
 
 The last line of the record is the finding. If your organisation score rose
-and your trap score did not, you have reproduced the thesis of this chapter on
-your own screen. If both rose, good, and write down which sentence of the
-prompt did it; it is nearly always the last one. If the bare answer caught the
-trap and the structured one did not, that is the best result of all: keep the
-transcripts, because you now have a specimen of structure making a wrong
-answer look right.
+and your trap score did not, you have reproduced the main claim of this
+chapter on your own screen. If both rose, good; write down which sentence of
+the prompt did it, because it is nearly always the last one. If the bare
+answer caught the trap and the structured one did not, that is the best result
+of all. Keep the transcripts, because you now have an example of structure
+making a wrong answer look right.
 
 ::: {.callout-note title="One case is not a study"}
 You have two observations. A published comparison would run every case through
 every model several times, because the same prompt does not give the same
-answer twice [@pmid:38378899]. You are reproducing the *design*, not the
-result. If yours comes out the other way from the studies above, that is a
-data point about a moving target, not a refutation.
+answer twice [@pmid:38378899]. You are reproducing the *design* of those
+studies, not their result. If yours comes out the other way from the studies
+above, that is a data point about a moving target, not a refutation.
 :::
 
 ## Check
@@ -523,11 +541,11 @@ Score yourself against this before moving on.
 | A structured prompt (objective 1) | All five rows of @tbl-scaffold are present, and you can say which sentence is the Uncertainty row | Four rows, or the fifth is "be accurate" |
 | Two scored answers (objective 2) | Organisation and trap are scored separately, and your one-sentence finding names what changed and what did not | One overall impression of which answer was "better" |
 | Two checked claims (objective 3) | Each has a named source and a verdict; at least one was checked against a calculator, guideline, or label rather than another chatbot | "It matched what I remembered" |
-| The one sentence (objective 4) | You can say why a tabulated wrong answer is more dangerous than a paragraph, and name the habit (anchoring or automation bias) it exploits | "You should always double-check" |
-| The two trials (objective 5) | You can state the direction of both Goh trials, the model-alone result, and what that implies about where the bottleneck is | "Studies show AI helps doctors" or "studies show it doesn't" |
+| The one sentence (objective 4) | You can say why a wrong answer in a table is more dangerous than one in a paragraph, and name the habit (anchoring or automation bias) it exploits | "You should always double-check" |
+| The two trials (objective 5) | You can state the direction of both Goh trials, the model-alone result, and what that implies about where the weak point is | "Studies show AI helps doctors" or "studies show it doesn't" |
 | The trap | You can say which kind of trap your case had (omission, common-answer, buried interaction, ambiguity) and what the model did with it | You scored the answers without opening the trap |
 
-## The standing question
+## The question you keep
 
 *What does this change about how you'll practice?* Write it down before you
 close the chapter. Two specifics.
@@ -547,16 +565,17 @@ check the one claim the plan turns on. Pick one and write it down.
 
 - A prompt reliably changes how an answer is organised. It does not reliably
   change whether the answer is correct; prompt effects on accuracy are real,
-  model-specific, and unstable.
+  differ from model to model, and are unstable.
 - Role, Context, Task, Format make the answer readable. "Say what is missing"
   is the only element that acts on the gap between the case and the answer,
   and it is the one people leave out.
-- Writing the case in clinical register is not decoration; the same tool
-  behaves differently in the words of a patient than the words of a clinician.
+- Writing the case the way a clinician would present it is not decoration. The
+  same tool behaves differently in a patient's words than in a clinician's.
 - A well-organised wrong answer is more dangerous than a badly organised one,
-  because the organisation recruits your own reasoning to confirm it.
+  because the organisation pulls your own reasoning in to confirm it.
 - In two randomized trials the model alone matched or beat the physicians who
-  had it. The bottleneck is integration, not capability.
+  had it. The weak point is how the physician uses the answer, not what the
+  model can do.
 - Check the claim the plan turns on against a calculator, a guideline, or a
   label. Then go back and tell Sam about the D-dimer.
 
@@ -572,12 +591,13 @@ check the one claim the plan turns on. Pick one and write it down.
   effects vary by model and the same question gives different answers on
   repeat [@pmid:38378899].
 - Diagnostic-reasoning prompts as a route to checkable answers
-  [@pmid:38267608], and the psychiatry group's modular prompt framework, where
-  structure *did* lift extraction accuracy for the weaker model
-  [@pmid:42350611]: the counter-case that keeps the thesis honest.
+  [@pmid:38267608], and the psychiatry group's prompt built from reusable
+  parts, where structure *did* improve the weaker model's accuracy at pulling
+  facts out of text [@pmid:42350611]: the counter-example that keeps this
+  chapter's claim honest.
 - The student error-catching study behind the 56 percent [@pmid:39915801],
-  and the published, reusable case-based LLM workshop from Harvard that this
-  chapter's Do is a compressed cousin of [@pmid:42483714].
+  and the published, reusable case-based LLM workshop from Harvard
+  [@pmid:42483714]; this chapter's Do is a shorter version of it.
 - A tutorial on prompt engineering written for health professionals, for the
   ten-rules material in article form [@pmid:37792434].
 

@@ -21,14 +21,15 @@ By the end of this chapter you will be able to:
 
 **Time.** About 20 minutes of reading, 15 minutes of watching, 35 minutes of
 building and checking, and 5 minutes for the Check. You need your institutional
-ChatGPT Edu account (its *canvas* pane previews the page you build) and one
-MDCalc tab. Nothing installs. Alternatives, and what each one asks of you at
-signup, are in the Do block.
+ChatGPT Edu account and one tab open on MDCalc, the free calculator website
+most residents use. (ChatGPT's *canvas* is a side panel
+that shows the page you build, running.) Nothing installs. Other tools, and
+what each one asks of you at signup, are listed in the Do block.
 
 ## The spreadsheet on the shared drive
 
 Fourth month of intern year, hepatology service. The second-year resident on
-your team built a web page over a weekend. You paste in five lab values and it
+your team built a web page over a weekend. You paste in five lab values. It
 gives you a MELD-Na score, the number that ranks patients for a liver
 transplant, and tells you whether the patient is above the listing threshold.
 It is bookmarked on every workroom computer. The attending mentioned it on
@@ -58,21 +59,21 @@ from.
 
 Look at the tool before reading on. It has no place to say the patient is on
 dialysis. That is not a bug in the arithmetic. The formula the resident asked
-for was implemented exactly as described. What the description left out was a
-rule the original paper attached to the formula: when a patient has had
-dialysis twice in the past week, creatinine is set to 4.0 before it enters the
+for was built exactly as described. What the description left out was a rule
+the original paper attached to the formula. When a patient has had dialysis
+twice in the past week, creatinine is set to 4.0 before it enters the
 equation, whatever the lab says. Apply that rule to this patient and the score
 moves from 24 to 32. The coordinator is right. (The tool also accepts a sodium
-of 118 without comment, though the paper bounds sodium at 125; that rule did
-not matter for this patient. It will for the next one.)
+of 118 without comment, though the paper limits sodium to 125 at the lowest.
+That rule did not matter for this patient. It will for the next one.)
 
-Nobody lied, nobody was careless in the ordinary sense, and the tool worked
+Nobody lied. Nobody was careless in the ordinary sense. The tool worked
 perfectly for the first thirty patients, none of whom were on dialysis. The
 resident asked a language model for a MELD-Na calculator and got one. What
-the resident did not do was ask what the paper says happens at the edges,
-and nobody on the team, including you, checked. The patient, who would have
-waited unlisted on the strength of a number from a weekend project, does not
-know the project exists.
+the resident did not do was ask what the paper says happens at the edges. And
+nobody on the team, including you, checked. The patient does not know the
+project exists. On the strength of a number from a weekend project, she would
+have waited unlisted.
 
 This chapter is about building a tool like that yourself, in about fifteen
 minutes, and then spending twenty finding what is wrong with it. The build is
@@ -80,20 +81,19 @@ the easy part now. The checking is the skill.
 
 ## Why this matters
 
-You will meet a tool like the resident's within the year, because they are
-cheap to make and every team has someone who makes them. Some are
-spreadsheets. Some are web pages. Increasingly they are built by describing
-what you want to a model and accepting what comes back. The person who built
-it is usually proud of it, the attending is usually pleased, and nobody has
-been asked to check it, because checking a colleague's tool is not a job
-anyone is assigned.
+You will meet a tool like the resident's within the year. They are cheap to
+make, and every team has someone who makes them. Some are spreadsheets. Some
+are web pages. More and more, they are built by describing what you want to a
+model and accepting what comes back. The person who built it is usually proud
+of it. The attending is usually pleased. Nobody has been asked to check it,
+because checking a colleague's tool is not a job anyone is assigned.
 
-Unchecked tools that a whole team relies on have a history that predates
+Unchecked tools that a whole team relies on have a history older than
 language models. In October 2020, Public Health England's official figures
-missed nearly 16,000 positive COVID-19 results over a week, and days later only
+missed nearly 16,000 positive COVID-19 results over a week. Days later, only
 half of those patients had been contacted for tracing [@pmid:33023893]. The
 reported cause, in the clippings below, was that results were being collected
-in an Excel file format with a row limit, and rows past the limit were silently
+in an Excel file format with a row limit. Rows past the limit were silently
 dropped. The spreadsheet did not crash. It did what it was told.
 
 ::: {.press-clips}
@@ -102,30 +102,31 @@ dropped. The spreadsheet did not crash. It did what it was told.
 <div class="press-clip"><div class="src">Slate · technology</div><a class="hl" href="https://slate.com/technology/2020/10/u-k-covid-19-spike-caused-by-microsoft-excel-error.html">An Outdated Version of Excel Led the U.K. to Undercount COVID-19 Cases</a><div class="date">7 October 2020</div></div>
 :::
 
-A quieter version runs through the research literature: roughly one in five
-genomics papers with supplementary gene lists in Excel contained gene names
-that the spreadsheet had silently converted to dates [@pmid:27552985]. The
-tool was fine. The tool was not checked against what it was being used for.
+A quieter version runs through the research literature. Roughly one in five
+genomics papers with gene lists in Excel contained gene names that the
+spreadsheet had silently turned into dates [@pmid:27552985]. The tool was
+fine. The tool was not checked against what it was being used for.
 
 In three months you will be the intern with the bookmark, or the intern who
-built it. Either way the skill you need is the same: take a tool that seems to
+built it. Either way the skill you need is the same. Take a tool that seems to
 work, decide what it would take to trust it, and go and look.
 
-## The idea
+## How it works
 
 ### A chatbot answers; an agent acts
 
-Everything you have used so far in this course is a chatbot: you type, it
+Everything you have used so far in this course is a chatbot. You type, it
 writes, you copy what you want out of the reply. A **coding agent** is the same
-kind of model wrapped in a loop. It plans a step, takes an action in the world
-(writes a file, runs a program, reads the output), observes what happened, and
-plans the next step. The actions are real: files change, code runs. Because
-the actions are real, agents run with **permissions**, a list of what they are
-allowed to touch. @fig-chatbot-agent shows the two shapes.
+kind of model wrapped in a loop. It plans a step. It takes an action in the
+world: writes a file, runs a program, reads the output. It looks at what
+happened, and plans the next step. The actions are real. Files change, code
+runs. Because the actions are real, agents run with **permissions**, a list of
+what they are allowed to touch. @fig-chatbot-agent shows the two shapes.
 
 ```{mermaid}
 %%| label: fig-chatbot-agent
 %%| fig-cap: "Two ways to use the same model. A chatbot writes text and stops. A coding agent loops: plan, act on real files or programs, observe the result, and continue, inside a boundary of permissions you set."
+%%| fig-alt: "Flowchart with two boxes. Left, Chatbot: your prompt leads to the model writing text, then to you copying what you want. Right, Coding agent: your goal leads to plan a step, then act by writing a file or running code, then observe the result, which loops back to plan a step or ends by showing you what it built."
 flowchart LR
   subgraph C["Chatbot"]
     direction TB
@@ -142,94 +143,95 @@ flowchart LR
   end
 ```
 
-The tools you will use today sit between the two. When your chatbot opens a
-side panel, writes a web page into it, and shows you the running page, that is
-the smallest possible version of the loop: the model wrote a file and the
-browser ran it. You are the observer. The full-strength agents, the ones that
-work inside a folder of files on your own computer, are mentioned at the end
-of the chapter and are deliberately not used here; they need an install and a
+The tools you will use today sit between the two. Your chatbot opens a side
+panel, writes a web page into it, and shows you the running page. That is the
+smallest possible version of the loop: the model wrote a file and the browser
+ran it. You are the one watching the result. The full-strength agents work
+inside a folder of files on your own computer. They are mentioned at the end
+of the chapter and are not used here on purpose. They need an install and a
 terminal, and neither is the point.
 
 The point is what changes when the output is something that *runs*. A wrong
 sentence in a chatbot reply sits there until you read it. A wrong rule in a
 calculator does its work silently, on every patient, until somebody compares
-its answer to another source. The mechanism that produces the error is the one
-from the critical appraisal chapter, a plausible continuation rather than a
-lookup, but the error now has a place to hide.
+its answer to another source. The error comes from the same place as in the
+critical appraisal chapter: the model produces a plausible next piece of text,
+not a looked-up fact. But now the error has a place to hide.
 
 ### Two names for the same thing
 
-In February 2025 Andrej Karpathy, one of the founders of OpenAI, coined "vibe
-coding" for the practice of describing what you want, accepting what the model
-produces, and never reading the code. Collins Dictionary named it word of the
-year for 2025. A year later Karpathy declared it passé and proposed "agentic
-engineering" instead: directing and reviewing an agent's work rather than
-accepting it [VERIFY: Karpathy posts of 2 Feb 2025 and Feb 2026; Collins WOTY 2025; secondary sources in research notes]{.verify}.
+In February 2025 Andrej Karpathy, one of the founders of OpenAI, invented the
+phrase "vibe coding". It means describing what you want, accepting what the
+model produces, and never reading the code. Collins Dictionary named it word
+of the year for 2025. A year later Karpathy said the phrase was out of date
+and proposed "agentic engineering" instead: directing and reviewing an agent's
+work rather than accepting it [VERIFY: Karpathy posts of 2 Feb 2025 and Feb 2026; Collins WOTY 2025; secondary sources in research notes]{.verify}.
 
 Both terms will be gone before you finish residency. The shift between them is
-the durable part. The first name treats judgment as something you set aside;
-the second treats it as the scarce input. You are about to do the first for
-fifteen minutes so that you can practise the second for twenty.
+the part that lasts. The first name treats your judgment as something you set
+aside. The second treats it as the scarce input. You are about to do the first
+for fifteen minutes so that you can practise the second for twenty.
 
-The right mental model for the model, borrowed from the author's talks on the
-subject, is a capable but junior colleague: fast, fluent, willing, and in need
-of clear instructions and review. You review its work the way a senior reviews
-a junior's: not by trusting the confident tone, but by checking the parts that
-would hurt someone if wrong.
+The most useful way to think of the model, borrowed from the author's talks on
+the subject, is as a capable but junior colleague: fast, fluent, willing, and
+in need of clear instructions and review. You review its work the way a senior
+reviews a junior's. You do not trust the confident tone. You check the parts
+that would hurt someone if wrong.
 
 ### Three ways the tool you just built is wrong
 
-A generated calculator can fail in three ways, and they fail independently.
+A generated calculator can fail in three ways, and each can happen on its own.
 Each has a matching check in the Do block.
 
 | Failure | What it looks like | How you catch it |
 |---|---|---|
-| **The rule** | A point value, cutoff, or coefficient is wrong, or a rule from the original paper is missing (the dialysis rule; the sodium bounds; whether a score is only applied above a threshold) | Compare every rule to the original publication, not to your memory of it |
-| **The edge** | The tool does something the builder never imagined for inputs the builder never tried: nothing checked, two mutually exclusive boxes checked, a value outside the range the score was derived on | Try the inputs the builder did not: empty, contradictory, extreme |
-| **The version** | The score has more than one published form, and the tool does not say which one it implements (Wells' criteria exist in a three-tier and a two-tier form; the transplant system replaced MELD-Na with MELD 3.0 in 2023) | Ask which version, and check that against what your team, and MDCalc, actually use |
+| **The rule** | A point value, cutoff, or coefficient is wrong, or a rule from the original paper is missing (the dialysis rule; the sodium limits; whether a score is only applied above a threshold) | Compare every rule to the original publication, not to your memory of it |
+| **The edge** | The tool does something the builder never imagined, for inputs the builder never tried: nothing checked, two boxes checked that cannot both be true, a value outside the range the score was built on | Try the inputs the builder did not: empty, contradictory, extreme |
+| **The version** | The score has more than one published form, and the tool does not say which one it uses (Wells' criteria exist in a three-tier and a two-tier form; the transplant system replaced MELD-Na with MELD 3.0 in 2023) | Ask which version, and check that against what your team, and MDCalc, actually use |
 
 : Three independent failures. A tool can pass two and fail the third. {#tbl-three-failures}
 
 The first row is where models are weakest and where the evidence is clearest.
 When ChatGPT was asked to perform 48 kinds of medical calculation directly, it
-got one trial in three wrong; giving the model a purpose-built calculation
-tool to call instead of doing the arithmetic itself cut the error rate
+got one trial in three wrong. Giving the model a purpose-built calculation
+tool to call, instead of doing the arithmetic itself, cut the error rate
 thirteenfold, from 64% to 4.8% [@pmid:40097720]. Read that finding carefully,
 because it cuts both ways. A model *doing* clinical arithmetic in its head is
-unreliable. A model *writing code* that does the arithmetic is much better,
-which is exactly why the tool you build today will mostly work. But the code
-only encodes the rules the model put in it, and the rules it leaves out leave
+unreliable. A model *writing code* that does the arithmetic is much better.
+That is exactly why the tool you build today will mostly work. But the code
+only contains the rules the model put in it, and the rules it leaves out leave
 no trace.
 
-The second row is where non-programmers are weakest. When medical students
-spent three hours building health apps by prompting, every group produced a
-working prototype, and no group implemented any protection for the data the
-app collected; the authors' summary was that lowering the barrier to building
-is not the same as lowering the barrier to building safely [@pmid:42394077].
-An editorial in the laboratory medicine literature gives the pattern a name
-you will recognise from the wards, the illusion of competence: syntactically
-correct code that looks professional is most convincing to the people least
-equipped to find its flaws, and there is a real difference between code that
-runs and code that is safe to run on patients [@pmid:42695169].
+The second row is where non-programmers are weakest. Medical students spent
+three hours building health apps by prompting. Every group produced a working
+prototype, and no group added any protection for the data the app collected.
+The authors' summary was that making it easier to build is not the same as
+making it easier to build safely [@pmid:42394077]. An editorial in the
+laboratory medicine literature gives the pattern a name you will recognise
+from the wards, the illusion of competence. Code that is correctly written and
+looks professional is most convincing to the people least able to find its
+flaws. There is a real difference between code that runs and code that is
+safe to run on patients [@pmid:42695169].
 
 The third row is the quiet one. A nursing research group used a coding agent
-to run a logistic regression and checked every output against a published
-reference: the coefficients and *p* values matched, and an error in one
-confidence interval was missed on first review and caught only on a second
-pass [@pmid:42611917]. The tool was mostly right, which is the condition
-under which people stop checking.
+to run a statistical analysis (a logistic regression) and checked every output
+against a published reference. The coefficients and *p* values matched. An
+error in one confidence interval was missed on first review and caught only
+on a second pass [@pmid:42611917]. The tool was mostly right, which is the
+condition under which people stop checking.
 
 ### What "checked" looks like
 
 The counterexample is worth knowing because it shows the bar is reachable. A
 cardiology group built a web calculator for three acute coronary syndrome risk
-scores with ChatGPT writing the code, then compared its output against 226
-registry patients whose scores had been computed independently. Agreement was
-exact (*r* = 1.000 for both scores with a registry comparator), and the paper
-says so in the methods, with the registry named [@pmid:40462782]. That is not
-a large study and it is not clinical validation, which the authors are careful
-to say. It is what a *technical* check looks like: an external source of truth,
-a fixed set of cases, and a written result.
+scores, with ChatGPT writing the code. They then compared its output against
+226 registry patients whose scores had been computed independently. Agreement
+was exact (*r* = 1.000 for both scores that had a registry comparison), and
+the paper says so in the methods, with the registry named [@pmid:40462782].
+That is not a large study. It is not clinical validation, which would mean
+showing the tool helps patients, and the authors are careful to say so. It is
+what a *technical* check looks like: an outside source of truth, a fixed set
+of cases, and a written result.
 
 The resident's tool in the workroom had none of those. Yours, in thirty
 minutes, will have a small version of all three.
@@ -237,26 +239,26 @@ minutes, will have a small version of all three.
 ### The named hazard
 
 A 2026 framework for governing clinician-built software, VIBE-HI, puts one
-hazard at the centre and gives it a name: **comprehension abdication**, the
-surrender of understanding to the system that generated the code. If you
-cannot say in plain language what your tool does for every input, you cannot
-anticipate how it fails, and you cannot safely change it [@pmid:42564266]. The
-framework sorts tools into four risk tiers by four questions, redrawn in
-@tbl-tiers from the paper's description.
+hazard at the centre and gives it a name: **comprehension abdication**. It
+means handing your understanding over to the system that generated the code.
+If you cannot say in plain language what your tool does for every input, you
+cannot predict how it fails, and you cannot safely change it [@pmid:42564266].
+The framework sorts tools into four risk levels, or tiers, using four
+questions. @tbl-tiers redraws them from the paper's description.
 
 | The question | Pushes the tier up when |
 |---|---|
-| Does it touch identifiable patient data? | Real names, medical record numbers, or anything that could be re-identified |
+| Does it touch identifiable patient data? | Real names, medical record numbers, or anything that could be traced back to a person |
 | How close is it to a clinical decision? | Its output changes what is done to a patient, rather than what a student studies |
 | Who uses it, and how much do they understand it? | People other than the builder, who did not see it made |
 | How many patients does it reach? | A team, a service, a hospital |
 
 : The four criteria VIBE-HI uses to place a tool on its green-to-red scale, in plain words. The tier is set by the worst answer, not the average. The tiers themselves map to regulatory obligations the ethics and regulation chapter covers. {#tbl-tiers}
 
-Run the resident's tool through the four questions. It handles pasted labs
-(the first question depends on what people paste, which nobody controls); its
-output is a listing decision; it is used by a whole team, most of whom never
-saw it built; it reaches every patient on the service. A study aid for one
+Run the resident's tool through the four questions. It handles pasted labs,
+so the first answer depends on what people paste, which nobody controls. Its
+output is a listing decision. It is used by a whole team, most of whom never
+saw it built. It reaches every patient on the service. A study aid for one
 person answers all four questions the other way. The tool did not change
 between those two descriptions. Its use did.
 
@@ -268,18 +270,20 @@ chapter.](../images/voting_software.png){#fig-xkcd-voting .comic fig-alt="xkcd c
 
 ### Where a toy becomes a device
 
-Whether software counts as a medical device in the United States turns, for
-tools like this one, on the FDA's criteria for *non-device clinical decision
-support*. The criterion that matters for a calculator is whether the clinician
-can independently review the basis for the recommendation: a tool that shows
-the score, the inputs, the rule it applied, and where the rule came from is
-one a clinician can check; a bare number is not. A personal study aid that a
-student uses to practise scores is not a device. The same page, bookmarked on
-the workroom computers and used to decide who gets listed, is a different
-question, and the answer depends on what it shows and who relies on it. The
-FDA revised its decision-support guidance in January 2026; what the revision
-changed, and the rest of the regulatory picture, belong to the ethics and
-regulation chapter [VERIFY: FDA CDS guidance, revised 6 January 2026, current text]{.verify}.
+In the United States, the FDA decides whether software like this counts as a
+medical device. For tools like this one, the decision turns on the FDA's
+criteria for *non-device clinical decision support*, the category of software
+that advises clinicians without being regulated as a device. The criterion
+that matters for a calculator is whether the clinician can independently
+review the basis for the recommendation. A tool that shows the score, the
+inputs, the rule it applied, and where the rule came from is one a clinician
+can check. A bare number is not. A personal study aid that a student uses to
+practise scores is not a device. The same page, bookmarked on the workroom
+computers and used to decide who gets listed, is a different question. The
+answer depends on what it shows and who relies on it. The FDA revised its
+decision-support guidance in January 2026. What the revision changed, and the
+rest of the regulatory picture, belong to the ethics and regulation chapter
+[VERIFY: FDA CDS guidance, revised 6 January 2026, current text]{.verify}.
 
 For this chapter, the working rule is simpler than the regulation. **Toy, not
 device.** Your tool carries a banner saying so, in the prompt, before it
@@ -290,11 +294,11 @@ labelling AI-assisted work, rehearsed on something harmless.
 When the team's number is wrong, the person accountable is the clinician who
 acted on it, not the resident who built the page. Regulation may eventually
 reach the builder; the chart reaches you first. The practical consequence for
-a note: record the score and the source you took it from, and make the source
-one that has been checked by someone other than a colleague, which today means
-the original publication or an established calculator such as MDCalc. If a
-team tool has been validated locally, your institution's policy will say so,
-and the ethics and regulation chapter takes up what to document when it has.
+a note: record the score and the source you took it from. Make the source one
+that has been checked by someone other than a colleague. Today that means the
+original publication or an established calculator such as MDCalc. If a team
+tool has been validated locally, your institution's policy will say so, and
+the ethics and regulation chapter takes up what to document when it has.
 :::
 
 ### Patient information, once more
@@ -302,25 +306,26 @@ and the ethics and regulation chapter takes up what to document when it has.
 Your institutional ChatGPT Edu account is not covered by a business associate
 agreement for clinical use unless your institution says it is. A business
 associate agreement is the contract that makes a vendor legally responsible
-for protecting patient data; without one, pasting a real patient's labs into
-the tool is a privacy violation regardless of intent. Consumer and free tiers
-never have one, and free tiers may use what you type to train the next model.
+for protecting patient data. Without one, pasting a real patient's labs into
+the tool is a privacy violation, whatever you intended. Consumer and free
+tiers never have one, and free tiers may use what you type to train the next
+model.
 
 The rule for today, and for every tool you build until someone with authority
 tells you otherwise: **every number you type is one you invented.** Not a
-de-identified real patient, not a classmate, not yourself. Invented. The
-pattern you are rehearsing, a chat window with a patient's labs in it, is
-exactly how patient data leaks when the same window is reused for real work.
+de-identified real patient, not a classmate, not yourself. Invented. The habit
+you are rehearsing, a chat window with a patient's labs in it, is exactly how
+patient data leaks when the same window is reused for real work.
 
 ::: {.callout-important title="Nothing worth stealing"}
 Around 40% of programs generated by an early coding assistant in
-security-relevant scenarios contained a vulnerability [@doi:10.1109/SP46214.2022.9833571],
-and in a controlled study, people with an AI assistant wrote less secure code
+security-relevant scenarios contained a vulnerability [@doi:10.1109/SP46214.2022.9833571].
+In a controlled study, people with an AI assistant wrote less secure code
 and were more confident that it was secure [@doi:10.1145/3576915.3623157].
 Both studies predate current models and the numbers will have moved. The
-direction is what matters: you are not going to security-review a page you
+direction is what matters. You are not going to security-review a page you
 built in fifteen minutes. So the rule is not "make it secure"; it is *put
-nothing in it worth stealing.* No credentials, no identifiers, no real data.
+nothing in it worth stealing.* No passwords, no identifiers, no real data.
 :::
 
 ## Watch or listen
@@ -328,22 +333,22 @@ nothing in it worth stealing.* No credentials, no identifiers, no real data.
 **Video.** Andrej Karpathy, *Software Is Changing (Again)*, keynote at Y
 Combinator's AI Startup School, San Francisco, 17 June 2025 (published 19 June
 2025; 39 min). <https://www.youtube.com/watch?v=LCEmiRjPEtQ>. Also on the Y
-Combinator podcast feed if you prefer audio; YouTube's captions are automatic
+Combinator podcast feed if you prefer audio. YouTube's captions are automatic
 and adequate.
 
 Fifteen minutes is enough. Skip the opening on "Software 3.0" if you are short
-of time and go to the middle third, where he describes *partial autonomy*
-apps and the *autonomy slider*: the idea that the useful question about an AI
-tool is not whether it is autonomous but how much autonomy you have handed it
-for this task, and how fast you can check what it did. Listen for the phrase
-about keeping the AI "on a leash." Then ask, for the tool you are about to
-build, where the slider is set and who is holding the leash. The person who
-coined "vibe coding" is also the person telling you to verify.
+of time and go to the middle third. There he describes *partial autonomy*
+apps and the *autonomy slider*. The idea is that the useful question about an
+AI tool is not whether it is autonomous, but how much freedom you have handed
+it for this task, and how fast you can check what it did. Listen for the
+phrase about keeping the AI "on a leash." Then ask, for the tool you are about
+to build, where the slider is set and who is holding the leash. The person
+who invented "vibe coding" is also the person telling you to verify.
 
 **Instead, or as well.** The author's own decks: [From Chatbots to Coding
-Agents](https://talks.seandavis.net/2026-06-18-cshl/) (June 2026) walks the
-plan-act-observe loop in @fig-chatbot-agent with live examples, and the
-recording of the [October 2025 live vibe-coding
+Agents](https://talks.seandavis.net/2026-06-18-cshl/) (June 2026) walks
+through the plan-act-observe loop in @fig-chatbot-agent with live examples.
+The recording of the [October 2025 live vibe-coding
 session](https://talks.seandavis.net/2025-10-17-idpt-vibe-coding/) from this
 course's predecessor shows a calculator being built in front of a class, with
 the mistakes left in.
@@ -361,22 +366,22 @@ patient with a sodium of 118.
 
 ::: {.callout-tip title="Which tool, and what it asks of you"}
 **ChatGPT Edu (your institutional account).** Ask for the page and it should
-open in the *canvas* pane with a preview button that runs it. This is the
-assumed path. If canvas does not appear, your workspace administrator may
+open in the *canvas* side panel, with a preview button that runs it. This is
+the assumed path. If canvas does not appear, your workspace administrator may
 have turned off canvas code execution; use the fallback below.
 [VERIFY: canvas preview enabled in the institutional ChatGPT Edu workspace]{.verify}
 
-**Fallback that works with any chatbot, including Copilot.** Ask for "a single
-HTML file". Copy the whole code block into a plain text editor (Notepad,
-TextEdit in plain-text mode), save it as `calc.html`, and double-click it. Your
-browser opens it. Nothing is installed; you have made a file, which is what
+**Fallback that works with any chatbot, including Microsoft Copilot.** Ask for "a single
+HTML file". Copy the whole code block into a plain text editor (Notepad, or
+TextEdit in plain-text mode). Save it as `calc.html` and double-click it. Your
+browser opens it. Nothing is installed. You have made a file, which is what
 the agent would have done for you.
 
-**Claude.ai** free tier builds and hosts the page as an *artifact* with a
-shareable link, which is convenient for the live session. Signup requires a
-phone number. If you would rather not give one, you lose nothing by using the
-paths above. **Google AI Studio** needs a Google account and no phone; it is
-the second alternative.
+**Claude.ai** free tier builds and hosts the page as what it calls an
+*artifact*, a page with a shareable link, which is convenient for the live
+session. Signup requires a phone number. If you would rather not give one, you
+lose nothing by using the paths above. **Google AI Studio** needs a Google
+account and no phone; it is the second alternative.
 
 Free tiers may use your prompts for training. That is fine for invented
 numbers and a prompt about a public scoring system. It would not be fine for
@@ -388,13 +393,13 @@ anything else.
 **Step 1. Pick a score.** Choose the one closest to your specialty from
 @tbl-menu. Each has a single original publication you will check against, and
 each has at least one edge the model tends to miss. If none fits, use
-CHA₂DS₂-VASc; it is the one the specimen below is written for.
+CHA₂DS₂-VASc; it is the one the worked example below is written for.
 
 | Specialty | Score | Original publication | Where the edges are |
 |---|---|---|---|
-| Medicine, cardiology, neurology | CHA₂DS₂-VASc (stroke risk in atrial fibrillation) | Lip et al., *Chest* 2010 [@pmid:19762550] | Two age bands that must be mutually exclusive; the "female sex" point, which some current guidelines no longer score; the annual stroke-risk percentages come from a *different* paper [@pmid:22246443] |
+| Medicine, cardiology, neurology | CHA₂DS₂-VASc (stroke risk in atrial fibrillation) | Lip et al., *Chest* 2010 [@pmid:19762550] | Two age bands that cannot both be true at once; the "female sex" point, which some current guidelines no longer score; the annual stroke-risk percentages come from a *different* paper [@pmid:22246443] |
 | Emergency medicine | Wells' criteria for pulmonary embolism | Wells et al., *Thromb Haemost* 2000 [@pmid:10744147] | Half-point items and rounding; a three-tier and a two-tier version with different cutoffs; "PE is the most likely diagnosis" is a judgment, not a finding |
-| Surgery, gastroenterology, transplant | MELD-Na | Kim et al., *NEJM* 2008 [@pmid:18768945]; MELD itself, Kamath et al., *Hepatology* 2001 [@pmid:11172350] | Values below 1.0 are set to 1.0; creatinine capped at 4.0 and set to 4.0 with dialysis; sodium bounded 125–137; the sodium term applies only above a MELD threshold; MELD 3.0 replaced it for listing in 2023 |
+| Surgery, gastroenterology, transplant | MELD-Na | Kim et al., *NEJM* 2008 [@pmid:18768945]; MELD itself, Kamath et al., *Hepatology* 2001 [@pmid:11172350] | Values below 1.0 are set to 1.0; creatinine capped at 4.0 and set to 4.0 with dialysis; sodium limited to 125–137; the sodium term applies only above a MELD threshold; MELD 3.0 replaced it for listing in 2023 |
 | Critical care, emergency medicine | qSOFA | Seymour et al., *JAMA* 2016 [@pmid:26903335] | The Glasgow Coma Scale cutoff (any score below 15, not a lower threshold); the systolic pressure boundary is ≤100, not <100; what the score is *for* (screening outside the ICU, not diagnosis) |
 | Psychiatry, primary care, pediatrics | PHQ-9 | Kroenke et al., *J Gen Intern Med* 2001 [@pmid:11556941] | Nine items scored 0–3 and the severity bands between them; item 9, on self-harm, needs a response the calculator should not leave to a colour |
 | Radiology | Fleischner 2017 incidental pulmonary nodule follow-up | MacMahon et al., *Radiology* 2017 [@pmid:28240562] | A decision table, not a sum: solid versus subsolid, single versus multiple, size bands, and a risk category; the guideline explicitly excludes several populations, and the tool will not know that unless told |
@@ -402,25 +407,24 @@ CHA₂DS₂-VASc; it is the one the specimen below is written for.
 : The menu. Every publication was checked in PubMed for this chapter; the edges column is where to look first in Part B. {#tbl-menu}
 
 **Step 2. Paste the starter prompt**, with your score substituted, into a
-fresh conversation. Use it verbatim the first time; the guardrails are inside
-it on purpose, and so is the wording. What comes back depends on how the
-request is phrased, and the same prompt produces different code on different
-days. Using the fixed text means your result reflects the model, not your
-fluency in its dialect; if English is not your first language, that is the
-point.
+fresh conversation. Use it word for word the first time. The safety wording is
+inside it on purpose. What comes back depends on how the request is phrased,
+and the same prompt produces different code on different days. Using the
+fixed text means your result reflects the model, not how fluently you write
+prompts. If English is not your first language, that is the point.
 
 > Build a single-page web app, as one self-contained HTML file, that
 > calculates the `<score>`. Show each input as a checkbox or numeric field
 > with its point value or coefficient visible. Display the running total and
 > the interpretation the original publication attaches to it. Add a prominent
-> red banner: "Educational prototype only — not validated for clinical
+> red banner: "Educational prototype only. Not validated for clinical
 > decision-making." In a footnote, cite the original publication for the
 > score and say exactly which version of the score you implemented, so I can
 > independently verify every rule against MDCalc and the paper before I trust
 > the output.
 
-**Step 3. Iterate twice.** Whatever comes back, ask for two changes, one at a
-time, and watch what the model does to the rest of the page each time:
+**Step 3. Ask for two changes.** Whatever comes back, ask for two changes, one
+at a time. Watch what the model does to the rest of the page each time:
 
 - "Colour the interpretation by risk tier."
 - "Add a 'clear all' button, and tell me what the score shows when nothing is
@@ -428,7 +432,7 @@ time, and watch what the model does to the rest of the page each time:
 
 The second request is a check disguised as a feature. Read the answer.
 
-You now have a working tool, it took about ten minutes, and it probably looks
+You now have a working tool. It took about ten minutes, and it probably looks
 better than the resident's. Do not share it yet.
 
 ### Part B: break it (15 minutes)
@@ -437,10 +441,10 @@ Open MDCalc and the original paper from @tbl-menu side by side with your tool.
 Run three invented cases through all three sources and record the results in
 the template below.
 
-**Case 1, ordinary.** A patient squarely inside the score's intended
-population, with nothing unusual. All three should agree. If they do not, you
+**Case 1, ordinary.** A patient squarely inside the population the score was
+made for, with nothing unusual. All three should agree. If they do not, you
 have found a rule error and can stop here, because you have already met the
-objective; note it and continue anyway.
+objective. Note it and continue anyway.
 
 **Case 2, the edge.** Take the edges column for your score and build a patient
 who lives on one of them: a dialysis patient for MELD-Na, a sodium of 118, a
@@ -451,44 +455,46 @@ three sources.
 **Case 3, the nonsense.** Give the tool something no patient has. Both age
 bands ticked. A negative creatinine. Every box checked and then every box
 unchecked. A blank form. The question is not whether the tool refuses (it
-usually will not) but whether you can say, before pressing anything, what it
-will do, and whether what it does is safe or silent.
+usually will not). The question is whether you can say, before pressing
+anything, what it will do, and whether what it does is safe or silent.
 
-::: {.callout-tip title="Specimen: what to expect, and what to look for" collapse="true"}
-**Expected behaviour, not a recorded run.** The two specimens below are
-constructed from the failure patterns in @tbl-menu and the published
-evidence above; a live run of the starter prompt was attempted for this
-chapter and did not complete in time to be recorded, so nothing here is
-presented as what a particular model produced on a particular day. Run the
-prompt yourself and compare.
+::: {.callout-tip title="Worked example: what to expect, and what to look for" collapse="true"}
+**Expected behaviour, not a recorded run.** The two examples below are built
+from the failure patterns in @tbl-menu and the published evidence above. A
+live run of the starter prompt was attempted for this chapter and did not
+complete in time to be recorded. So nothing here is presented as what a
+particular model produced on a particular day. Run the prompt yourself and
+compare.
 
 **CHA₂DS₂-VASc, expected.** The page will almost certainly get the eight
-point values right and sum them correctly; that is the easy part, and the
+point values right and add them up correctly. That is the easy part. The
 one-in-three arithmetic failure above is about the model doing sums in prose,
-not code. Look instead at three places. First, the two age boxes: if both
+not code. Look instead at three places. First, the two age boxes. If both
 "65–74" and "≥75" can be ticked at once, the page can produce a score of 3
 for age, which no patient has. Second, the stroke-risk percentages beside
-each score: the page will print a column of numbers with a footnote naming
-Lip et al. 2010, but the numbers most tools print come from a different
-cohort [@pmid:22246443], and the two tables disagree; if the footnote does
-not say which, that is the version failure. Third, the "female sex" box:
-scored 1 in the 2010 paper, treated differently by newer guidelines; a page
-that scores it without saying which guideline it follows has chosen for you.
+each score. The page will print a column of numbers with a footnote naming
+Lip et al. 2010. But the numbers most tools print come from a different
+group of patients [@pmid:22246443], and the two tables disagree. If the
+footnote does not say which, that is the version failure. Third, the "female
+sex" box. It scored 1 in the 2010 paper and is treated differently by newer
+guidelines. A page that scores it without saying which guideline it follows
+has chosen for you.
 
 **MELD-Na, expected.** The formula will be right. What tends to be missing
-is exactly what the opening scenario turned on: no dialysis field, so
-creatinine is never set to 4.0; no floor at 1.0 for values below it; no
-bounds on sodium, so a sodium of 118 enters the equation raw; and no check
-that the sodium term applies only above the MELD threshold. Ask the page for
-a patient on dialysis and one with a sodium of 118, then compare to MDCalc.
+is exactly what the opening scenario turned on. No dialysis field, so
+creatinine is never set to 4.0. No floor at 1.0 for values below it. No
+limits on sodium, so a sodium of 118 enters the equation as typed. And no
+check that the sodium term applies only above the MELD threshold. Ask the
+page for a patient on dialysis and one with a sodium of 118, then compare to
+MDCalc.
 
 Your run will differ from these expectations in both directions. Models
-change monthly and the same prompt produces different code on different
-days. The pattern is what to look for: the arithmetic is usually right; the
+change monthly, and the same prompt produces different code on different
+days. The pattern is what to look for. The arithmetic is usually right; the
 rules at the edges are where to read.
 :::
 
-**Record it.** Copy this into a document; it is your artifact for the live
+**Record it.** Copy this into a document. It is what you bring to the live
 session.
 
 ```
@@ -509,7 +515,7 @@ ________________________________________________________________________
 ```
 
 "None found" is an acceptable answer only with a sentence saying which edges
-you tried. A tool that survived three cases is not validated; it is three
+you tried. A tool that survived three cases is not validated. It is three
 cases old.
 
 ### Part C: explain it, then place it (8 minutes)
@@ -517,7 +523,7 @@ cases old.
 **The comprehension test.** In four sentences, without opening the code, write
 what your tool does for: an ordinary patient, the edge case, the nonsense
 case, and a blank form. If you cannot write the fourth sentence, ask the model
-"what does the page show when nothing is entered, and why?", read the answer
+"what does the page show when nothing is entered, and why?". Read the answer
 against the page, and then write it. This is the test the resident never took.
 
 **The device paragraph.** One paragraph answering three questions. Is your
@@ -537,7 +543,7 @@ Score yourself against this before moving on.
 
 | You have | Meets | Falls short |
 |---|---|---|
-| The chatbot-versus-agent distinction (objective 1) | You can say what the loop adds (acts on real files, observes, repeats, inside permissions) and why a running artifact hides errors a reply does not | "An agent is a smarter chatbot" |
+| The chatbot-versus-agent distinction (objective 1) | You can say what the loop adds (acts on real files, observes, repeats, inside permissions) and why a running tool hides errors a reply does not | "An agent is a smarter chatbot" |
 | A working tool (objective 2) | Runs in a browser, shows inputs and total, carries the banner, cites the paper and names the version | Runs, but the banner or citation is missing, or the version is unstated |
 | Three recorded cases (objective 3) | Each compared against MDCalc *and* the original paper; at least one discrepancy or edge failure named, and sorted as rule, edge, or version | "It matched MDCalc" with no edge case tried |
 | The comprehension test (objective 3) | Four sentences, including the blank form, written before opening the code | The fourth sentence is missing or copied from the model |
@@ -545,35 +551,35 @@ Score yourself against this before moving on.
 | The PHI rule (objective 5) | You can say what a business associate agreement is, that your institutional account does not have one for clinical use unless told, and why invented numbers are the rule | "Don't put patient data in ChatGPT" without the reason |
 | The one sentence | Contains a verb meaning *compare against an outside source* | "Be careful with it" |
 
-## The standing question
+## Before you close this chapter
 
 *What does this change about how you'll practice?* Write it down before you
 close this chapter. Two specifics. First, go back to the workroom. The
 coordinator is on the phone, the team's number is 24, hers is 32, and the
-bookmark is on every computer. What do you say to her, what do you say to the
-resident who built it, and what happens to the bookmark? Second, the next tool
-you build yourself, or are handed by a colleague: name the three cases you
-will run through it before it touches a decision, and the outside source each
-one is compared against. One word is not an answer to either.
+bookmark is on every computer. What do you say to her? What do you say to the
+resident who built it? What happens to the bookmark? Second, think of the next
+tool you build yourself, or are handed by a colleague. Name the three cases
+you will run through it before it touches a decision, and the outside source
+each one is compared against. One word is not an answer to either.
 
 ## Summary
 
 - A chatbot writes; an agent acts, observes, and repeats inside permissions you
-  set. The tools you used today are the smallest version of that loop, and
-  the full ones need an install this chapter deliberately avoids.
+  set. The tools you used today are the smallest version of that loop. The
+  full ones need an install this chapter avoids on purpose.
 - A running tool hides errors a reply does not. The arithmetic is usually
-  right; the rules at the edges, and the version of the score, are where a
+  right. The rules at the edges, and the version of the score, are where a
   generated calculator fails.
 - A model doing clinical arithmetic in its head is wrong about a third of the
-  time; a model writing code that does it is far better, and still only
-  encodes the rules it was told about.
+  time. A model writing code that does it is far better, and still only
+  contains the rules it was told about.
 - Comprehension abdication is the named hazard: if you cannot say what your
   tool does for every input, you cannot say how it fails.
 - Four questions move a tool from study aid toward device: patient data,
   closeness to a decision, who uses it, how many patients. The tool need not
   change for the answers to.
-- Every number you type is one you invented; nothing worth stealing goes into
-  a page you will not security-review; the banner goes in the prompt.
+- Every number you type is one you invented. Nothing worth stealing goes into
+  a page you will not security-review. The banner goes in the prompt.
 - The coordinator was right, and the team's spreadsheet was three cases old.
 
 ## Go deeper
@@ -588,8 +594,9 @@ one is compared against. One word is not an answer to either.
   ChatGPT-built calculator against a registry [@pmid:40462782], which is the
   model for what your Part B could become.
 - Two views of the same practice from inside medicine: an editorial arguing
-  it democratises biomedical software [@pmid:40598546], and a medical-education
-  piece that built two teaching simulations this way [@pmid:40202513].
+  it opens biomedical software to everyone [@pmid:40598546], and a
+  medical-education piece that built two teaching simulations this way
+  [@pmid:40202513].
 - The one evaluated medical-education app built by prompting, an ECG tutor
   compared against control sites, with mixed and inconsistent effects on exam
   performance [@doi:10.3390/ai7060223]. Building fast is not the same as
@@ -601,7 +608,7 @@ one is compared against. One word is not an answer to either.
 
 - [From Chatbots to Coding Agents](https://talks.seandavis.net/2026-06-18-cshl/)
   and [AI Agents for Biomedical Knowledge Work](https://talks.seandavis.net/2026-07-28-umihc/),
-  the author's decks this chapter's framing comes from; the second has the
+  the author's decks this chapter's approach comes from; the second has the
   privacy-and-trust section in full.
 
 **If you want to go further**
@@ -612,8 +619,8 @@ one is compared against. One word is not an answer to either.
   [VERIFY: current status of the GitHub Copilot student plan]{.verify}. Try
   one after the course, on a project with nothing in it worth stealing.
 - Google Colab runs Python notebooks in a browser with a Google account and no
-  install, and its built-in agent can run a whole data-analysis workflow from
-  a prompt. This course's predecessor used it for a public insurance-cost
-  dataset. The completed notebook is a good appraisal object: ask what the
+  install. Its built-in agent can run a whole data analysis, start to finish,
+  from a prompt. This course's predecessor used it for a public insurance-cost
+  dataset. The completed notebook is a good thing to appraise: ask what the
   agent decided without being asked, and what you would want to know before
   believing its R².
