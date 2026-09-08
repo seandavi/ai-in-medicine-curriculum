@@ -26,11 +26,11 @@ validation.
 
 NotebookLM itself was not run: the author's assistant could not sign in to a
 Google account. **Before the cohort:** build a notebook from the four
-pre-vetted PMC sources, ask the three Step 2 questions, and record model
+ready-made PMC sources, ask the three Step 2 questions, and record model
 (NotebookLM does not surface a model version; record the date) and outputs.
 Replace the specimen if the live run produces a cleaner score-1.
 
-## Expected results on the pre-vetted set
+## Expected results on the ready-made set
 
 **Q1, what did each paper measure.** Expect score 2s. Vollmer: six models, 50
 questions from the German S3 oral-cavity-carcinoma guideline, with and without
@@ -77,7 +77,7 @@ provenance question (real page, but is it evidence?).
 - Pipeline: the six words in order. Chunking's effect on a table: any of
   headings separated from rows, footnote separated from value, "however" cut
   off.
-- Structural argument: a citation is a pointer to a passage that is in the
+- Why the citations are real: a citation is a pointer to a passage that is in the
   context window, so pointing at a passage that is not there is awkward for
   the architecture. "Trained to be careful" fails.
 - Search limit: the notebook cannot cite what it does not contain; a grounded
@@ -93,9 +93,16 @@ the cited passages; gives Duran and Seki a line each with the task named.
 
 ## Instructor prep
 
+The split-table block in "What chunking does to a table" is labeled an
+illustration. Its Difference column (+0.94, +0.86, +0.72, +0.36, +0.30 with
+CIs) matches the paper's Results text (checked 2026-09-08 against the PMC
+full text). The Without/With column values and the table number ("Table 6")
+could not be checked from the PMC text extract, which drops tables; confirm
+them against the PDF before the cohort, or leave the block as illustrative.
+
 Confirm institutional NotebookLM status the week before (admins can disable it
 per organizational unit). Confirm the free-tier limits on Google's own help
 page; the chapter's 50 sources / 50 queries per day came from third-party
-guides and carries a VERIFY flag. Run Q2 on the pre-vetted set the morning of
+guides and carries a VERIFY flag. Run Q2 on the ready-made set the morning of
 the session; if it comes back score 2, keep the chapter's specimen and say the
 live run was cleaner, which is the "these numbers move" point in the room.
