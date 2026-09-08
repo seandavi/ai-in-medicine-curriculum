@@ -25,8 +25,8 @@ By the end of this chapter you will be able to:
 **Time.** About 30 minutes of reading, 25 minutes of listening, 30 minutes of
 doing, and five minutes at the end that you should not skip. You need one
 general-purpose chatbot for the second half of the Do; your institutional
-ChatGPT Edu or Microsoft Copilot account is enough. The first half of the Do
-needs only a pen. There is nothing to install.
+ChatGPT Edu or Microsoft Copilot account is enough, and so is any free
+general-purpose chatbot. The first half of the Do needs only a pen. There is nothing to install.
 
 ## The first list
 
@@ -155,8 +155,8 @@ team, same kind of tool, opposite headline. The thing that changed was not the
 model. It was the task, and how the physicians worked with it.
 
 There are names for those ways of working. They come from a 2023 field
-experiment in which several hundred management consultants were given GPT-4.
-The researchers watched how the successful ones worked
+experiment in which several hundred management consultants were given GPT-4,
+the model behind ChatGPT at the time. The researchers watched how the successful ones worked
 [@doi:10.2139/ssrn.4573321]. Two patterns appeared, and the names have stuck:
 
 - A **centaur** divides the work. Like the creature, there is a clean line
@@ -214,7 +214,7 @@ because the defenses differ [@pmid:40834302]:
 
 None of these is hypothetical. Two of them have been measured.
 
-**Deskilling has a number.** At four endoscopy centres in Poland, computer-aided
+**Deskilling has a number.** At four endoscopy centers in Poland, computer-aided
 polyp detection was switched on at the end of 2021. In the three months
 *before*, endoscopists doing ordinary colonoscopy without the tool found
 adenomas in 28.4% of patients. In the three months *after*, doing the same
@@ -226,7 +226,7 @@ But the direction is the one every clinician who has stopped reading their own
 ECGs would predict.
 
 **Never-skilling has a trial.** Nearly a thousand high-school students in
-Turkey were randomized during maths practice sessions to one of three groups:
+Turkey were randomized during math practice sessions to one of three groups:
 no AI, a plain GPT-4 chat, or a GPT-4 "tutor" prompted to give hints rather
 than answers. While they had the tool, both AI groups did far better on
 practice problems: 48% higher scores with the plain chat, 127% with the tutor.
@@ -282,10 +282,10 @@ is that nothing about the sentence looks wrong. It looks like every other note.
 
 The Turkish trial measured grades. A separate randomized study measured what
 learners *do*. It compared students working with a chatbot, with a human
-expert, and with a checklist tool. It recorded their behaviour as well as
+expert, and with a checklist tool. It recorded their behavior as well as
 their scores. The chatbot group did better on the immediate task. They did not
 gain more knowledge, more motivation, or more ability to carry what they
-learned to a new problem. The authors' name for the behaviour behind that gap
+learned to a new problem. The authors' name for the behavior behind that gap
 is *metacognitive laziness*: handing the job of monitoring and checking your
 own thinking to the tool [@doi:10.1111/bjet.13544]. Metacognition is the
 ordinary word for noticing what you know and do not know. Laziness here is not
@@ -369,8 +369,9 @@ use. Ask what that policy says in your first week. The chatbot in the other tab
 has no such agreement. Your institutional login does not change that unless
 your institution says it does.
 
-**No patient information in a consumer tool, ever.** Not a name. Not a
-paraphrase of a case with the name removed. Not a screenshot. The temptation
+**No patient information in a consumer tool, ever.** A consumer tool is a
+chatbot you reach through a personal account: ChatGPT, Claude, or Gemini on
+your own login. Not a name. Not a paraphrase of a case with the name removed. Not a screenshot. The temptation
 you will feel is time pressure at 6:10 a.m. The rule holds. A made-up case
 that makes the same teaching point is always available, and this chapter gives
 you one.
@@ -629,7 +630,7 @@ answer, and it is the one this chapter most wants you to revisit.
   [@pmid:39910272]. Read the discussion sections for what the physicians
   actually did with the tool.
 - Never-skilling in a randomized field experiment [@pmid:40560616], and
-  deskilling in a multicentre observational study [@pmid:40816301].
+  deskilling in a multicenter observational study [@pmid:40816301].
 - The learner study that named metacognitive laziness
   [@doi:10.1111/bjet.13544]; the implications section is written for teachers
   and is the source of the six techniques.
