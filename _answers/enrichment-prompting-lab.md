@@ -47,6 +47,10 @@ result you get.
   happened here after the first run.
 - References, if any, on the appraisal chapter's 2/1/0 scale (McLaughlin et
   al. 2026, pmid:42232526). Do not accept "looked real".
+- A reply that asks for the missing information instead of committing to a
+  plan (increasingly the default on the bare prompt) scores as the trap caught
+  for Case A, and as organisation point 5 for any case. It is not a
+  non-answer; it is the behaviour the uncertainty line is trying to produce.
 - Step 5 verdicts: accept *not addressed* as a legitimate verdict. A common
   student error is to check a claim against a second chatbot; that scores as
   unchecked.
@@ -58,8 +62,8 @@ result you get.
 | 1 Structured prompt | Do Step 3; Check row 1 |
 | 2 Organisation vs correctness | Do Step 4 and the one-sentence finding; Check row 2 |
 | 3 Confident error against a source | Do Step 5; Check row 3 |
-| 4 Why the neat wrong answer is worse | Check row 4; standing question part 1 |
-| 5 The randomized evidence | Check row 5; standing question part 2 |
+| 4 Why the neat wrong answer is worse | Check row 4; "The question you keep" part 1 |
+| 5 The randomized evidence | Check row 5; "The question you keep" part 2 |
 
 ## Instructor prep
 
