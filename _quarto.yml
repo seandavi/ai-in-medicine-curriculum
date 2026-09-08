@@ -7,6 +7,7 @@ project:
   render:
     - index.qmd
     - chapters/
+    - course/
     - appendix/
 
 book:
@@ -16,21 +17,36 @@ book:
   date: today
   chapters:
     - index.qmd
-    - chapters/core-foundations.qmd
-    - chapters/core-centaur-cyborg.qmd
-    - chapters/core-appraisal.qmd
-    - chapters/core-bias-equity.qmd
-    - chapters/enrichment-agentic-coding.qmd
-    - chapters/core-patient-communication.qmd
-    - chapters/enrichment-workforce-economics.qmd
-    - chapters/enrichment-environment.qmd
-    - chapters/core-ethics-regulation.qmd
-    - chapters/enrichment-prompting-lab.qmd
-    - chapters/enrichment-rag-notebooklm.qmd
+    - part: "Running the course"
+      chapters:
+        - course/syllabus.qmd
+        - course/resource-log.qmd
+    - part: "Week 1 · Orientation and stance"
+      chapters:
+        - chapters/core-foundations.qmd
+        - chapters/core-centaur-cyborg.qmd
+    - part: "Week 2 · Judgment"
+      chapters:
+        - chapters/core-appraisal.qmd
+        - chapters/core-bias-equity.qmd
+    - part: "Week 3 · Practice"
+      chapters:
+        - chapters/enrichment-agentic-coding.qmd
+        - chapters/core-patient-communication.qmd
+    - part: "Week 4 · Consequences and closing"
+      chapters:
+        - chapters/enrichment-workforce-economics.qmd
+        - chapters/enrichment-environment.qmd
+        - chapters/core-ethics-regulation.qmd
+    - part: "Spare enrichment chapters"
+      chapters:
+        - chapters/enrichment-prompting-lab.qmd
+        - chapters/enrichment-rag-notebooklm.qmd
   appendices:
     - appendix/about.qmd
     - appendix/personas.qmd
     - appendix/ai-ledger.qmd
+    - appendix/instructors.qmd
   search: true
   page-navigation: true
   repo-url: https://github.com/seandavi/ai-in-medicine-curriculum

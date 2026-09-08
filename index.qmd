@@ -44,8 +44,13 @@ A chapter that carries one of these says so.
 ## The chapters, in the default order
 
 Eleven chapters for eight sessions. The default four-week assembly runs them
-in this order; the three spare chapters are marked and can be swapped in by
-cohort interest. Each one stands alone, so any order works.
+in this order, and the book's contents are grouped by week the same way; the
+three spare chapters can be swapped in by cohort interest. Each one stands
+alone, so any order works. The [syllabus](course/syllabus.qmd) says what a
+week looks like and when things are due. One assignment runs across all four
+weeks, the [weekly resource log](course/resource-log.qmd), where your own
+reading goes; several chapter activities feed it. Whoever runs the course
+reads the [For instructors](appendix/instructors.qmd) appendix.
 
 **Week 1, orientation and stance**
 

@@ -516,7 +516,8 @@ the most:
 
 Fill in the same seven-question worksheet for your case. Then write your row
 in the four columns of @tbl-proxies. That row is what you hand in, and the
-paper you found counts toward this week's resource log.
+paper you found counts toward this week's
+[resource log](../course/resource-log.qmd).
 
 **Optional step, if you use a chatbot (5 minutes).** Ask your institutional
 ChatGPT Edu or Copilot: *"What does `<the tool from your case>` predict, and
