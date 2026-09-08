@@ -6,34 +6,35 @@ subtitle: "AIM-3 · about 90 minutes"
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will be able to:
 
-1. State the proxy problem in one sentence, and identify the substituted
-   quantity in an algorithm you have not seen before.
-2. Walk the Obermeyer analysis from the choice of prediction target to the
-   measured harm to the correction, including the size of the correction.
-3. For a case you choose, name the proxy or data gap, the population harmed
-   and the decision that went differently for them, the correction that
-   followed, and that correction's adoption status today, including where the
-   honest answer is "still draft" or "still contested".
-4. Tell a harm of allocation from a harm of representation, and social bias
-   from statistical bias.
-5. Say what a clinician can and cannot catch at the bedside without seeing a
-   model's internals, and cite the evidence that clinicians do not reliably
-   catch a biased model even when it explains itself.
+1. State the proxy problem in one sentence. Then, for an algorithm you have
+   never seen before, name the thing it measures in place of the thing that
+   matters.
+2. Walk through the Obermeyer study step by step: what the model was built to
+   predict, the harm that caused, and the fix, including how big the fix was.
+3. For a case you choose, name the stand-in or the data gap, the group harmed
+   and the decision that went differently for them, the fix that followed,
+   and whether that fix is in use today. "Still draft" or "still contested"
+   can be the honest answer.
+4. Tell apart two kinds of harm (allocation and representation) and two kinds
+   of bias (statistical and social).
+5. Say what a clinician can and cannot catch at the bedside without seeing
+   inside a model. Cite the evidence that clinicians do not reliably catch a
+   biased model, even when the model explains itself.
 :::
 
 **Time.** About 25 minutes of reading, 25 minutes of listening, 35 minutes of
-doing, and 5 minutes to write your answer to the standing question. You need
-a PubMed tab. A chatbot is optional and used for one step you can skip; your
-institutional ChatGPT Edu or Copilot account is enough if you use it. Nothing
-installs, and nothing here touches a patient's data.
+doing, and 5 minutes to write your answer to the closing question. You need
+a PubMed tab. A chatbot is optional and used for one step you can skip. If you
+do use one, your institutional ChatGPT Edu or Copilot account is enough.
+Nothing installs, and nothing here touches a patient's data.
 
 ## The number on the monitor
 
 It is 3 a.m. on your sub-internship and you are cross-covering a medicine
 floor. A nurse calls about a 61-year-old man admitted with pneumonia. He is
-breathing faster than he was at midnight, he is using his neck muscles, and he
-has stopped finishing his sentences. You go and look. He is a Black man with
-dark skin, sweating, leaning forward on the bed. The monitor says his oxygen
+breathing faster than he was at midnight. He is using his neck muscles. He has
+stopped finishing his sentences. You go and look. He is a Black man with dark
+skin, sweating, leaning forward on the bed. The monitor says his oxygen
 saturation is 94 percent on two liters.
 
 ::: {.vendor-slide}
@@ -50,19 +51,19 @@ saturation is 94 percent on two liters.
 
 Ninety-four is a number that lets you go back to bed. The patient in front
 of you is not. You have a choice: believe the number, or believe the man.
-You draw an arterial blood gas. The arterial saturation, measured directly
-from his blood, comes back at 86 percent.
+You draw an arterial blood gas. The saturation measured directly from his
+blood comes back at 86 percent.
 
-The pulse oximeter was not broken. It was doing what it was designed to do:
-shine red and infrared light through a fingertip, measure how much of each
-comes out the other side, and convert that into a saturation using a
-calibration curve built from volunteers. Most of the volunteers had light
-skin. Skin pigment absorbs some of the light too, and the device cannot tell
-pigment from hemoglobin. For this man, at this saturation, the number on the
-monitor was eight points too kind.
+The pulse oximeter was not broken. It was doing what it was designed to do.
+It shines red and infrared light through a fingertip and measures how much of
+each comes out the other side. It then converts that into a saturation using
+a conversion curve built by testing volunteers. Most of the volunteers had
+light skin. Skin pigment absorbs some of the light too, and the device cannot
+tell pigment from hemoglobin. For this man, at this saturation, the number on
+the monitor was eight points too high.
 
 Nobody in the room, including the patient, knew that the device had been
-calibrated on people who did not look like him. Hold that thought; the
+calibrated on people who did not look like him. Hold that thought. The
 chapter comes back to it.
 
 ## Why this matters
@@ -76,83 +77,84 @@ The reading, 97 percent, is exactly the kind of number this chapter is
 about.](../images/pulse-oximeter-benin.jpg){#fig-oximeter fig-alt="A fingertip pulse oximeter clipped to the index finger of a dark-skinned hand, displaying an oxygen saturation of 97 and a pulse of 92, resting on a clinic desk with paperwork behind it."}
 
 In your first month of residency you will act on the output of at least a
-dozen algorithms that nobody will describe to you as algorithms: the pulse
-oximeter, the estimated kidney function on the lab report, the sepsis alert,
-the risk score that decides who gets a care coordinator, the reference range
-on a spirometry printout. Most of them work. Several of them are known to work
-worse for some of your patients than for others, and the ones that fail do so
-in the same way, for the same reason. Learning that one reason is faster than
-learning the list, and it transfers to the tools that do not have a paper
-written about them yet.
+dozen algorithms. Nobody will call them algorithms. The pulse oximeter, the
+estimated kidney function on the lab report, the sepsis alert, the risk score
+that decides who gets a care coordinator, the reference range on a spirometry
+printout. Most of them work. Several are known to work worse for some of your
+patients than for others. The ones that fail do so in the same way, for the
+same reason. Learning that one reason is faster than learning the list, and
+it also applies to tools that do not have a paper written about them yet.
 
-The second reason is about you specifically. The evidence in this chapter
-says a clinician at the bedside can catch some of these failures and cannot
-catch others, and that the line between them is not where most people put it.
-Knowing which side of the line a tool is on tells you whether your own
-vigilance is a defense or a comfort.
+The second reason is about you. The evidence in this chapter says a clinician
+at the bedside can catch some of these failures and cannot catch others. The
+line between the two is not where most people put it. Knowing which side of
+the line a tool is on tells you whether your own alertness protects the
+patient or only makes you feel better.
 
-## The idea
+## How the failures happen
 
 ### One problem, many cases
 
 Every well-documented case of an algorithm harming patients along racial
 lines in the last decade has the same shape. A quantity that mattered could
-not be measured directly. Something that *could* be measured was substituted
-for it. The substitution was reasonable when it was made, and it was wrong in
-a way that tracked existing inequity, because the measurable thing was
-measurable precisely because the health system had already been collecting
-it, and the health system had already been treating people differently.
+not be measured directly. Something that *could* be measured was used in its
+place. The swap made sense at the time. It was still wrong, and wrong in a way
+that followed existing inequity. Why? The measurable thing was measurable
+because the health system had already been collecting it. And the health
+system had already been treating some people differently. The stand-in
+carried that difference into the algorithm.
 
-The substituted quantity is called a **proxy**: a stand-in that is measured
-because the real thing cannot be. The **proxy problem** is the whole chapter
-in one sentence: *an algorithm is only as fair as the relationship between
-what it measures and what you hoped it measured, and that relationship can
-differ by group.*
+The stand-in quantity is called a **proxy**: something you measure because
+the real thing cannot be measured. The **proxy problem** is the whole chapter
+in one sentence: *an algorithm is only as fair as the link between what it
+measures and what you hoped it measured, and that link can differ by group.*
 
-You met an instance of this in the critical appraisal chapter without the
-name. There, a benchmark score in an FDA decision summary stood in for
-clinical performance, and an analysis of 130 such summaries found that about
-half reported any clinical performance data at all [@pmid:33820998]. The
-proxy in that case was a test-set number standing in for "works on patients
-like mine". This chapter is the same failure with a different quantity in the
-gap.
+You met an example of this in the critical appraisal chapter, without the
+name. There, a test-set score in an FDA clearance summary stood in for how
+well a tool works on patients. A study of 130 such summaries found that about
+half reported any clinical performance data at all [@pmid:33820998]. The proxy in that case was a test score standing in for
+"works on patients like mine". This chapter is the same failure with a
+different quantity in the gap.
 
 ### Case one: light standing in for oxygen
 
-Start with the device from the opening scenario, because it is the case
-where the proxy is physical and the bedside signal is real.
+Start with the device from the opening. In this case the stand-in is a
+physical measurement, and there is a real sign at the bedside that something
+is off.
 
 A pulse oximeter does not measure oxygen. It measures the ratio of red to
-infrared light absorbed by a fingertip and converts that ratio into a
-saturation using a curve fitted on healthy volunteers who were desaturated
-under controlled conditions. The proxy is light absorbance; the quantity that
-matters is arterial oxygen saturation. The two agree closely in the people the
-curve was fitted on.
+infrared light absorbed by a fingertip. It then converts that ratio into a
+saturation using a conversion curve. That curve was built by lowering the
+oxygen of healthy volunteers under controlled conditions and recording what
+the device saw. The proxy is light absorbance. The quantity that matters is
+arterial oxygen saturation. The two agree closely in the people the curve was
+built on.
 
-In December 2020, Sjoding and colleagues compared paired readings, a pulse
-oximeter value and an arterial blood gas drawn within ten minutes of each
-other, in two cohorts [@pmid:33326721]. They looked for **occult hypoxemia**:
-an arterial saturation below 88 percent, which is treatment-changing, while
-the oximeter read 92 to 96 percent, which is reassuring. In the University of
-Michigan cohort it occurred in 11.7 percent of Black patients' readings and
-3.6 percent of White patients'. In a multicenter cohort of 178 hospitals the
-figures were 17.0 and 6.2 percent. Black patients had nearly three times the
-rate of a dangerously low saturation that the device called normal.
+In December 2020, Sjoding and colleagues compared paired readings in two
+groups of patients: a pulse oximeter value and an arterial blood gas drawn
+within ten minutes of each other [@pmid:33326721]. They looked for **occult
+hypoxemia**: an arterial saturation below 88 percent, which is low enough to
+change treatment, while the oximeter read 92 to 96 percent, which is
+reassuring. In the University of Michigan cohort it occurred in 11.7 percent
+of Black patients' readings and 3.6 percent of White patients'. In a
+multicenter cohort of 178 hospitals the figures were 17.0 and 6.2 percent.
+Black patients had nearly three times the rate of a dangerously low
+saturation that the device called normal.
 
-Two larger studies confirmed the pattern and traced it forward to a decision.
-Across 30,039 paired readings in Veterans Health Administration general
-wards, occult hypoxemia was more likely in Black than White patients
+Two larger studies confirmed the pattern and followed it forward to a
+decision. Across 30,039 paired readings in Veterans Health Administration
+general wards, occult hypoxemia was more likely in Black than White patients
 [@pmid:35793817]. Among 1,216 patients with COVID-19 at Johns Hopkins, Fawzy
 and colleagues found occult hypoxemia in 28.5 percent of Black, 29.8 percent
 of Hispanic, and 30.2 percent of Asian patients, against 17.2 percent of
-White patients, and then followed what happened next: Black patients had a 29
-percent lower hazard, roughly a 29 percent lower rate at any given moment, of
-being recognized as eligible for oxygen-threshold COVID-19 therapies, a
-median delay of one hour among those eventually
-recognized, and 451 patients never had their eligibility recognized at all,
-most of them Black [@pmid:35639368]. That is the pathway from proxy to harm
-made concrete: a number that looked fine, a treatment threshold not reached
-on paper, a therapy given late or not given.
+White patients [@pmid:35639368]. Then they followed what happened next. Black
+patients had a 29 percent lower hazard of being recognized as eligible for
+COVID-19 treatments that depend on an oxygen threshold. (A hazard is roughly
+the rate at any given moment.) Among those eventually recognized, the median
+delay was one hour. And 451 patients never had their eligibility recognized
+at all, most of them Black. That is the path from proxy to harm, step by
+step: a number that looked fine, a treatment threshold never reached on
+paper, a therapy given late or not at all.
 
 ![Occult hypoxemia by race across four cohorts. Redrawn from the published
 numbers in Sjoding et al. 2020 [@pmid:33326721], Valbuena et al. 2022
@@ -160,75 +162,73 @@ numbers in Sjoding et al. 2020 [@pmid:33326721], Valbuena et al. 2022
 "normal" oximeter reading differ between studies, so compare the bars within
 a cohort rather than across cohorts.](../images/occult-hypoxemia-by-race.svg){#fig-occult fig-alt="Grouped bar chart of occult hypoxemia rates in four cohorts. Michigan 2020: White 3.6 percent, Black 11.7 percent. 178 hospitals 2014 to 2015: White 6.2, Black 17.0. VA general care 2013 to 2019: White 15.6, Black 19.6, Hispanic 16.2. Johns Hopkins COVID-19: White 17.2, Black 28.5, Hispanic 29.8, Asian 30.2. In every cohort the Black bar is taller than the White bar."}
 
-**The correction, and where it stands.** The FDA's 2013 guidance for pulse
-oximeter clearance asked manufacturers to include "at least 2 darkly
-pigmented subjects or 15% of your subject pool, whichever is larger" in a
-study of roughly ten volunteers. In January 2025 the agency issued a draft
-guidance proposing larger studies with a specified spread of skin
-pigmentation, measured objectively rather than by self-report, and a label
-statement on whether the device performed comparably across pigmentation
+**The fix, and where it stands.** The FDA's 2013 guidance for pulse oximeter
+clearance asked manufacturers to include "at least 2 darkly pigmented
+subjects or 15% of your subject pool, whichever is larger" in a study of
+roughly ten volunteers. In January 2025 the agency issued a draft guidance.
+It proposes larger studies with a set spread of skin pigmentation, measured
+with an instrument rather than by asking the volunteer, and a statement on
+the label saying whether the device worked equally well across skin tones
 [@pmid:40042945]. The FDA's page for that guidance still carries the line
 "Draft. Not for implementation. Contains non-binding recommendations."
 [VERIFY: draft status checked 2026-09-07 on fda.gov; confirm before assigning]{.verify}
-A 2025 preprint that tested 34 oximeters against the anticipated criteria
-found that only one of the 34 passed the draft FDA standard, and that eleven
-devices showed more positive bias in darkly than lightly pigmented
-participants while others did not [@pmid:40832401]. The pulse oximeter on
-your ward tonight is, in all likelihood, a device cleared under the 2013
-rule.
+A 2025 preprint tested 34 oximeters against the expected criteria. Only one
+of the 34 passed the draft FDA standard. Eleven devices overestimated
+saturation more in darkly pigmented participants than in lightly pigmented
+ones, while others did not [@pmid:40832401]. The pulse oximeter on your ward
+tonight is, in all likelihood, a device cleared under the 2013 rule.
 
-This is the case with the encouraging bedside answer. A saturation that does
-not match a patient's work of breathing, mentation, or color is a
-discrepancy any clinician can register without knowing what
-photoplethysmography, the light-measurement technique inside the device, is.
-The blood gas is the check. The catch is that you have to look at the patient
-rather than the number, and the number was designed to be looked at.
+This is the case where the bedside answer is encouraging. A saturation that
+does not match how hard a patient is breathing, how alert he is, or his
+color is a mismatch any clinician can notice. You do not need to know what
+photoplethysmography (the light-measurement technique inside the device) is.
+The blood gas is the check. The catch: you have to look at the patient rather
+than the number, and the number was designed to be looked at.
 
 The sentence for a co-intern: *when the number and the patient disagree,
-believe the patient and get the direct measurement.* It is also, for this
-one case, the whole correction available to you tonight.
+believe the patient and get the direct measurement.* For this one case, it is
+also the only fix available to you tonight.
 
 ### Case two: cost standing in for need
 
-The anchor case for this chapter is not a device. It is a risk score, and it
-is the case where the bedside answer is bleak.
+The main case in this chapter is not a device. It is a risk score, and it is
+the case where there is almost nothing to see at the bedside.
 
-In 2019 Obermeyer and colleagues dissected a commercial algorithm used by
-health systems across the United States to decide which patients should be
-enrolled in high-risk care management programs: extra nursing contact, care
-coordination, the scarce resource [@pmid:31649194]. Walk it in order, because
-every step was defensible on its own.
+In 2019 Obermeyer and colleagues took apart a commercial algorithm used by
+health systems across the United States [@pmid:31649194]. The algorithm
+decided which patients should be enrolled in care management programs for
+high-risk patients: extra nurse contact, help coordinating care. These slots
+are scarce. Follow it step by step, because each step made sense on its own.
 
 **The job.** There are far more patients than program slots. Something has to
 rank them by who would benefit most from extra care.
 
 **The measurement problem.** "Who would benefit most from extra care" is not
-a column in any database. Nobody records it; it is not even well defined
-without a counterfactual, a record of what would have happened to the same
-patient without the program. So the model's **prediction target**, the thing
-it is trained to predict, became something that *is* in the database and
-that plausibly tracks need: future health care costs. Sicker
-patients cost more. Before reading on, argue for this choice. Cost is
-objective, universally recorded, continuous, and available for every patient
-without collecting anything new. It is exactly the choice a competent team
-makes.
+a column in any database. Nobody records it. You cannot even define it
+without knowing what would have happened to the same patient without the
+program, and that never gets recorded either. So the model's **prediction
+target**, the thing it is trained to predict, became something that *is* in
+the database and that plausibly tracks need: future health care costs.
+Sicker patients cost more. Before reading on, argue for this choice. Cost is
+objective, recorded for everyone, continuous, and available for every
+patient without collecting anything new. It is exactly the choice a competent
+team makes.
 
 **The failure.** Cost measures health care *consumed*, not illness. The
 health system spent less on Black patients than on White patients at the same
-level of illness, because of reduced access, lower treatment intensity, and
-every other documented disparity in what gets spent on whom. The algorithm
-was accurate at what it predicted and systematically wrong at what it was
-used for. At the 97th risk percentile, the threshold for automatic
-enrollment, Black patients carried 26 percent more active chronic conditions
-than White patients with the same score, 4.8 against 3.8.
+level of illness. The reasons are the documented ones: less access to care,
+less intensive treatment, and every other known disparity in what gets spent
+on whom. The algorithm was accurate at what it predicted and consistently
+wrong at what it was used for. At the 97th risk percentile, the threshold for
+automatic enrollment, Black patients carried 26 percent more active chronic
+conditions than White patients with the same score, 4.8 against 3.8.
 
-**The correction.** The authors did not stop at the finding. They
-reformulated the prediction target so that it tracked illness rather than
-cost, and reran the ranking. In the paper's own words, remedying the
-disparity "would increase the percentage of Black patients receiving
-additional help from 17.7 to 46.5%." One choice of prediction target, made
-for defensible reasons, was suppressing eligibility for this population by
-a factor of about two and a half.
+**The fix.** The authors did not stop at the finding. They changed what the
+model predicted, so that it tracked illness rather than cost, and reran the
+ranking. In the paper's own words, remedying the disparity "would increase
+the percentage of Black patients receiving additional help from 17.7 to
+46.5%." One choice of prediction target, made for defensible reasons, had cut
+this group's share of the program by a factor of about two and a half.
 
 ![What the Obermeyer algorithm measured and what it was used for. Panel A: at
 the score that triggers automatic enrollment, Black patients were
@@ -241,131 +241,132 @@ Now ask the bedside question. You are the primary care physician for one of
 these patients. What would you have seen? Nothing. Your patient was not
 enrolled in a program, and neither were most of your patients. The harm is
 defined by a comparison across thousands of patients that no individual
-clinician ever sees. What would have caught it was not a sharper instinct but
-a denominator: someone auditing who was enrolled, by group, on purpose, with
-the authority to act on what they found. That is the difference between this
-case and the oximeter, and it is the reason both halves of the answer at the
-end of this chapter are load-bearing.
+clinician ever sees. What would have caught it was not sharper instinct. It
+was a count: someone checking, on purpose, who was enrolled and who was not,
+by group, with the power to act on what they found. That is the difference
+between this case and the oximeter. It is also why the answer at the end of
+this chapter has two halves, and why both are needed.
 
-### Two distinctions you will use all chapter
+### Two pairs of terms you will use all chapter
 
-**Statistical bias versus social bias.** Statistical bias is a model's error
-relative to the thing it was trained to predict. The Obermeyer algorithm had
-very little of it; it predicted cost well. Social bias is a mismatch between
-what was predicted and what should have been. A model can be statistically
-excellent and socially disastrous at the same time, and the two objectives
-are frequently in tension rather than merely different. When a vendor tells
-you a model is accurate, you now know which of the two they are talking
+**Statistical bias versus social bias.** Statistical bias is how far a
+model's output is from the thing it was trained to predict. The Obermeyer
+algorithm had very little of it; it predicted cost well. Social bias is a
+mismatch between what was predicted and what should have been predicted. A
+model can be statistically excellent and socially disastrous at the same
+time, and often the two goals pull in opposite directions. When a vendor
+tells you a model is accurate, you now know which of the two they are talking
 about.
 
-**Harms of allocation versus harms of representation.** The distinction is
-Kate Crawford's, from a 2017 keynote at the NeurIPS conference. An
-allocation harm is a resource distributed unfairly: a program slot, a
-transplant listing, a dose of oxygen. A representation harm is a system
-encoding a demeaning or erasing view of a group, whether or not any resource
-changes hands: a model that reproduces a debunked claim about Black patients'
-pain tolerance has harmed someone before a decision is made. Most of the
-cases below are allocation harms. At least one is not, and the exercise asks
-you to decide which.
+**Harms of allocation versus harms of representation.** The terms come from
+Kate Crawford, in a 2017 talk at the NeurIPS conference (a large
+machine-learning meeting). An allocation harm is a resource handed out
+unfairly: a program slot, a transplant listing, a dose of oxygen. A
+representation harm is a system that carries a demeaning or dismissive
+picture of a group, whether or not any resource changes hands. A model that
+repeats a debunked claim about Black patients' pain tolerance has harmed
+someone before any decision is made. Most of the cases below are allocation
+harms. At least one is not, and the exercise asks you to decide which.
 
-### The catalog
+### The cases in one table
 
-::: {.callout-note title="A note on register"}
+::: {.callout-note title="A note on tone"}
 These cases are about harm to real patients along racial lines, and some
 readers will have been on the receiving end of the systems described. The
-chapter treats each one as an engineering post-mortem: a specific decision,
-its consequence, and its correction. Whether the harm occurred is not in
+chapter treats each one as an engineering review of a failure: a specific
+decision, its consequence, and its fix. Whether the harm occurred is not in
 question in any case here; it is documented. The work is in the mechanism.
 :::
 
 @tbl-proxies lists the cases this chapter draws on, in the four columns the
 Do block will ask you to fill in for a case of your own. The fourth column is
 the one to read slowly. "Identified" and "fixed" are different claims, and
-the second needs its own verification.
+the second needs its own checking.
 
-| Case | What mattered, and what stood in for it | Who was harmed, through what decision | Correction, and status as of September 2026 |
+| Case | What mattered, and what stood in for it | Who was harmed, through what decision | Fix, and status as of September 2026 |
 |---|---|---|---|
 | Pulse oximetry | Arterial oxygen saturation; light absorbance calibrated on light skin | Black, Hispanic, and Asian patients; oxygen and COVID-19 therapies delayed or never triggered [@pmid:33326721; @pmid:35639368] | FDA draft guidance, January 2025. **Still draft.** [@pmid:40042945] |
-| Care management risk score | Health need; predicted health care cost | Black patients; excluded from care coordination at 2.6 times the corrected rate [@pmid:31649194] | Prediction target reformulated by the authors and, per the paper, by the vendor. Status of the industry's other scores: not known. |
-| Kidney function (eGFR) | Measured filtration; creatinine with a race coefficient | Black patients; later CKD staging, later transplant referral [@pmid:32853499] | NKF-ASN Task Force recommended the race-free 2021 equation for all US laboratories [@pmid:34563581]. The widely quoted adoption figure [VERIFY: "roughly two-thirds of US labs" traces to a secondary source citing an unspecified survey]{.verify} could not be confirmed; a 2022 survey of 28 laboratories describes implementation but not national coverage [@pmid:38507611]. |
-| Spirometry | Lung function relative to expected; expected value adjusted by race | Black patients; impairment normed away, with consequences for disability and transplant priority [@pmid:36383197] | ATS recommended race-neutral equations in April 2023 [@pmid:36973004]. **Actively contested.** Modeling across 249 million Americans estimates 12.5 million reclassified, with nonobstructive impairment rising 141% among Black and falling 69% among White persons, and disability payments shifting by over a billion dollars a year [@pmid:38767252]. Single-system transitions are being published as case studies [@pmid:40712949]. |
-| Dermatology image AI | Disease across all skin tones; training images mostly of light skin | Patients with dark skin; missed or misclassified lesions [@pmid:35960806; @pmid:30073260] | Diverse benchmark datasets published; fine-tuning on them closed the gap in one study [@pmid:35960806]. No regulatory requirement for skin-tone reporting. |
-| Chest radiograph AI | Radiographic disease; labels extracted from prior radiology reports | Female, Black, Hispanic, low-income, and uninsured patients, compounding at intersections; findings called normal [@pmid:34893776] | Documented; no correction adopted at scale. Who wrote the ground truth is the question. |
-| Large language models | Physiology; text that reproduces race-based medicine | Black patients in particular; debunked claims about kidney function, lung capacity, and pain reproduced in clinical answers [@pmid:37864012; @pmid:38123252] | Vendor model updates, unversioned. Re-test with each release. |
+| Care management risk score | Health need; predicted health care cost | Black patients; left out of care coordination. The fixed version enrolled 2.6 times as many [@pmid:31649194] | What the model predicts was changed by the authors and, the paper says, by the vendor. Status of the industry's other scores: not known. |
+| Kidney function (eGFR) | True kidney filtration; a creatinine formula with a race multiplier | Black patients; later CKD staging, later transplant referral [@pmid:32853499] | NKF-ASN Task Force recommended the race-free 2021 equation for all US laboratories [@pmid:34563581]. The widely quoted adoption figure [VERIFY: "roughly two-thirds of US labs" traces to a secondary source citing an unspecified survey]{.verify} could not be confirmed; a 2022 survey of 28 laboratories describes implementation but not national coverage [@pmid:38507611]. |
+| Spirometry | Lung function compared with what is expected; an expected value that was adjusted by race | Black patients; reduced lung function counted as normal, with consequences for disability benefits and transplant priority [@pmid:36383197] | ATS recommended race-neutral equations in April 2023 [@pmid:36973004]. **Actively contested.** Modeling across 249 million Americans estimates 12.5 million reclassified, with nonobstructive impairment rising 141% among Black and falling 69% among White persons, and disability payments shifting by over a billion dollars a year [@pmid:38767252]. Reports from single health systems that made the switch are being published [@pmid:40712949]. |
+| Dermatology image AI | Disease across all skin tones; training images mostly of light skin | Patients with dark skin; missed or misclassified lesions [@pmid:35960806; @pmid:30073260] | Image sets covering all skin tones published; retraining on them closed the gap in one study [@pmid:35960806]. No regulatory requirement for skin-tone reporting. |
+| Chest radiograph AI | Disease on the image; labels pulled from the text of old radiology reports | Female, Black, Hispanic, low-income, and uninsured patients, worst for patients in more than one of these groups; findings called normal [@pmid:34893776] | Documented; no fix adopted at scale. The question is who wrote the labels the model learned from. |
+| Large language models | Real physiology; text that repeats race-based medicine | Black patients in particular; debunked claims about kidney function, lung capacity, and pain repeated in clinical answers [@pmid:37864012; @pmid:38123252] | Vendors update models without clear version notes. Re-test with each release. |
 
 : The proxy table. The Do block asks you to add a row. {#tbl-proxies}
 
 Three things to notice across the rows rather than in any one of them.
 
-**The proxies were all reasonable.** Cost is objective. Optical calibration
-on available volunteers is how devices get built. Report text is the only
+**The proxies were all reasonable.** Cost is objective. Calibrating a device
+on the volunteers you have is how devices get built. Report text is the only
 label available at radiograph scale. Race entered clinical equations through
 observed population differences that someone was trying to account for. No
-one in these cases set out to encode inequity, which is why "just don't be
-biased" is not an available strategy and interrogating the prediction target
-is.
+one in these cases set out to build in inequity. That is why "just don't be
+biased" is not a strategy you can use, and asking what the model actually
+predicts is.
 
-**Correction is slower and messier than identification.** Obermeyer is
-seven years old. The oximeter guidance is still draft. Race-neutral spirometry
-is recommended and contested at once, and the contest is not a simple story:
-the same equation change that lifts Black patients' disability eligibility
-lowers White patients', and the 2024 modeling found the two equations
-predicted respiratory outcomes about equally well, which means the choice
-between them is not settled by accuracy [@pmid:38767252]. A student who
-writes "we could not determine the adoption status" in the exercise has
-answered correctly, and this chapter will say so again in the rubric.
+**Fixing is slower and messier than finding.** Obermeyer is seven years old.
+The oximeter guidance is still draft. Race-neutral spirometry is recommended
+and contested at once, and the contest is not a simple story. The same
+equation change that raises Black patients' disability eligibility lowers
+White patients'. The 2024 modeling found the two equations predicted
+respiratory outcomes about equally well, so the choice between them is not
+settled by accuracy [@pmid:38767252]. A student who writes "we could not
+determine the adoption status" in the exercise has answered correctly, and
+this chapter will say so again in the rubric.
 
 **The bedside answers differ sharply by case, and that is the finding.**
-Oximetry has a real bedside signal. Race-based equations were auditable by
-anyone who read the equation, which was printed on the lab report the whole
-time. The chest radiograph model and the care management score are close to
-undetectable from a single encounter.
+Oximetry has a real bedside sign. Anyone who read the equation could have
+checked the race-based formulas, and the equation was printed on the lab
+report the whole time. The chest radiograph model and the care management
+score are close to undetectable from a single encounter.
 
-### The finding that complicates the bedside frame
+### The study that complicates the bedside answer
 
 It would be comfortable to leave this chapter believing that a careful
 clinician catches these. The best evidence says otherwise.
 
 In a randomized study, Jabbour and colleagues showed 457 hospitalist
 physicians, nurse practitioners, and physician assistants a series of
-vignettes of patients with acute respiratory failure, with chest radiographs,
-and asked them to diagnose pneumonia, heart failure, or COPD
+written cases of patients with acute respiratory failure, with chest
+radiographs, and asked them to diagnose pneumonia, heart failure, or COPD
 [@pmid:38112814]. Baseline accuracy was 73.0 percent. A standard AI model
-raised it by 2.9 points, and by 4.4 points when the model also displayed an
-explanation, a heat map showing where on the radiograph it was looking. A
-*systematically biased* model, one built to be wrong in a consistent
-direction, lowered accuracy by 11.3 points. Adding explanations to the biased
-model recovered only 2.3 points, a difference that was not statistically
+raised it by 2.9 points, and by 4.4 points when the model also showed an
+explanation: a heat map showing where on the radiograph it was looking. A
+*deliberately biased* model, one built to be wrong in a consistent direction,
+lowered accuracy by 11.3 points. Adding explanations to the biased model
+recovered only 2.3 points, a difference that was not statistically
 significant. Clinicians who could see the model's reasoning were not rescued
 by it.
 
-::: {.callout-important title="Necessary and insufficient"}
-Individual vigilance catches the discrepancies that show up in the one
-patient in front of you. The oximeter case is exactly that, and it is not a
-small category. It does not catch harms that exist only in aggregate, and the
-evidence says it does not reliably catch a confidently wrong model even with
-the reasoning on screen. Institutional auditing by group and personal
-skepticism are both load-bearing. Neither substitutes for the other.
+::: {.callout-important title="Needed, and not enough"}
+Individual alertness catches the mismatches that show up in the one patient
+in front of you. The oximeter case is exactly that, and it is not a small
+category. It does not catch harms that only show up when you count across
+many patients. And the evidence says it does not reliably catch a confidently
+wrong model, even with the reasoning on screen. Institutional auditing by
+group and personal skepticism are both needed. Neither replaces the other.
 :::
 
 ### Why this chapter does not teach you to fix the model
 
-There is a literature of technical fixes: reweighting training data,
-adversarial debiasing, post-processing thresholds by group. They are real,
-and the fairness deck under Go deeper covers them. None of them would have
-fixed the Obermeyer algorithm. The label was wrong, and no amount of
-downstream adjustment fixes a wrong prediction target. That is a stronger
-point than a survey of methods would have been, and it is why the question
-this chapter hands you is about the target and not the math.
+There are technical fixes in the literature: giving some training examples
+more weight, training the model so it cannot tell groups apart, setting
+different cut-offs for different groups. They are real, and the fairness deck
+under Go deeper covers them. None of them would have fixed the Obermeyer
+algorithm. The target was wrong, and no amount of adjustment after the fact
+fixes a wrong prediction target. That is a stronger point than a survey of
+methods would have been. It is why the question this chapter hands you is
+about the target and not the math.
 
 ::: {.callout-note title="\"But it's FDA-cleared\""}
 The oximeter was. So were the chest radiograph tools. Clearance answers a
-different question from the one you are asking; the critical appraisal
-chapter makes that case in full with the same 130 decision summaries cited
-above [@pmid:33820998], and the FUTURE-AI table there gives fairness one row
-and one question for the vendor. This chapter is that row, in depth. If the
-two chapters are assigned in the same week, read the objection once and carry
-it.
+different question from the one you are asking. The critical appraisal
+chapter makes that case in full with the same 130 clearance summaries cited
+above [@pmid:33820998], and the FUTURE-AI checklist there gives fairness one
+row and one question for the vendor. This chapter is that row, in depth. If
+the two chapters are assigned in the same week, read the objection once and
+keep it in mind.
 :::
 
 ## Watch or listen
@@ -375,22 +376,22 @@ Ziad Obermeyer" (27 July 2023; 74 min).
 <https://ai-podcast.nejm.org/e/the-double-edged-sword-of-ai-with-dr-ziad-obermeyer/>
 
 The first author of the cost-for-need paper, interviewed by two physicians
-who build models. Listen for the phrase *task formulation*: his argument is
-that the choice of what to predict, made before any data are touched,
-determines more about bias than anything done afterward. That is the proxy
-problem in the words of the person who documented it. Listen also for the
-second half of his title: he describes work where an algorithm, pointed at
-the right target, *reduced* a disparity that clinicians had been producing.
-Twenty-five minutes covers the first argument; the rest is a good commute.
-The episode is on Apple Podcasts, Spotify, and YouTube if the NEJM player
-does not load.
+who build models. Listen for the phrase *task formulation*, his term for
+choosing what the model should predict. His argument is that this choice,
+made before any data are touched, determines more about bias than anything
+done afterward. That is the proxy problem in the words of the person who
+documented it. Listen also for the second half of his title. He describes
+work where an algorithm, pointed at the right target, *reduced* a disparity
+that clinicians had been producing. Twenty-five minutes covers the first
+argument; the rest is a good commute. The episode is on Apple Podcasts,
+Spotify, and YouTube if the NEJM player does not load.
 
 **If you would rather read.** The fairness deck at
 <https://talks.seandavis.net/archive/2024-11-05-ml-fairness/> is the seminar
 this chapter was adapted from. It opens with two thought experiments, an
 image search and a loan officer, that make the social-versus-statistical
-distinction land without any medicine at all, and it carries the taxonomy of
-bias sources you may want for Part B.
+distinction clear without any medicine at all. It also carries a list of the
+kinds of bias, sorted by where they come from, which you may want for Part B.
 
 ## Do
 
@@ -403,10 +404,10 @@ asking it about a published paper, not about a person.
 
 ### Part A: the worksheet, on the case you already know (15 minutes)
 
-This chapter walked the care management algorithm for you. Now do it on
-paper, without looking back. Below is the artifact a clinician would actually
-have seen: a tile in a population-health dashboard, drawn here to show what
-was and was not visible.
+This chapter walked through the care management algorithm for you. Now do it
+on paper, without looking back. Below is what a clinician would actually have
+seen: a tile in a population-health dashboard, drawn here to show what was
+and was not visible.
 
 ::: {.vendor-slide}
 <div class="brand">Population health · care management</div>
@@ -421,7 +422,7 @@ was and was not visible.
 :::
 
 Copy the worksheet into a document and fill in every line. The word
-"utilization" on the tile is the only clue the clinician was given; decide
+"utilization" on the tile is the only clue the clinician was given. Decide
 whether it was enough.
 
 ```
@@ -429,7 +430,7 @@ Case: Care management risk score (Obermeyer et al. 2019)
 
 1. THE PROXY OR DATA GAP
    What quantity actually mattered, and what measurable thing was
-   substituted for it?
+   used in its place?
    ____________________________________________________________________
 
 2. WHO WAS HARMED
@@ -437,7 +438,7 @@ Case: Care management risk score (Obermeyer et al. 2019)
    that went differently, not just the group.
    ____________________________________________________________________
 
-3. WHAT CORRECTION FOLLOWED
+3. WHAT FIX FOLLOWED
    ____________________________________________________________________
 
 4. ADOPTION STATUS RIGHT NOW
@@ -446,8 +447,8 @@ Case: Care management risk score (Obermeyer et al. 2019)
    ____________________________________________________________________
 
 5. THE BEDSIDE QUESTION  (spend the most time here)
-   What could a clinician have caught WITHOUT knowing the algorithm's
-   internals? What would you have seen, heard, or measured that did not
+   What could a clinician have caught WITHOUT knowing how the algorithm
+   works inside? What would you have seen, heard, or measured that did not
    fit? If your honest answer is "nothing," say so and say why.
    ____________________________________________________________________
 
@@ -458,8 +459,8 @@ Case: Care management risk score (Obermeyer et al. 2019)
    ____________________________________________________________________
 ```
 
-Questions 1 through 4 are lookups. Question 5 is the exercise; if you wrote
-a sentence there in under two minutes, go back.
+Questions 1 through 4 are lookups. Question 5 is the exercise. If you wrote a
+sentence there in under two minutes, go back.
 
 ### Part B: a case of your own (20 minutes)
 
@@ -478,7 +479,7 @@ entering. Two ways to find one.
 Filter to the last five years. Read three abstracts. Pick the one where you
 can name, from the abstract alone, both what the tool was supposed to measure
 and what it actually measured. If none of the three gives you both, that is
-itself a finding; note it and pick the closest.
+itself a finding. Note it and pick the closest.
 
 **Or a pre-vetted case.** Each of these is verified and carries at least one
 open question about adoption, which is the part of the worksheet that teaches
@@ -488,25 +489,25 @@ the most:
   Dermatology Images benchmark [@pmid:35960806], with the 2018 viewpoint that
   predicted it [@pmid:30073260]. Note that the viewpoint is commentary, not
   data, and cite it as such.
-- *Nephrology, internal medicine, transplant:* the race coefficient in eGFR,
+- *Nephrology, internal medicine, transplant:* the race multiplier in eGFR,
   from the catalog of race-adjusted algorithms [@pmid:32853499] to the
   Task Force recommendation [@pmid:34563581].
 - *Pulmonology, occupational medicine, surgery:* race-neutral spirometry,
   from the equation [@pmid:36383197] to the ATS statement [@pmid:36973004]
   to the modeling of what changes [@pmid:38767252]. This is the case whose
-  correct question-4 answer is "contested"; do not flatten it.
+  correct question-4 answer is "contested". Do not simplify it to "fixed".
 - *Radiology, emergency medicine, critical care:* chest radiograph
   underdiagnosis [@pmid:34893776]. Ask specifically who wrote the ground
-  truth.
-- *Any specialty using a chatbot:* language models reproducing race-based
-  medicine [@pmid:37864012] and encoding demographic stereotypes into
+  truth, meaning the labels the model was trained to match.
+- *Any specialty using a chatbot:* language models repeating race-based
+  medicine [@pmid:37864012] and building demographic stereotypes into
   differentials and plans [@pmid:38123252]. This is the case closest to what
   you will touch next year, and the one most likely to be a representation
   harm.
 
 Fill in the same seven-question worksheet for your case. Then write your row
-in the four columns of @tbl-proxies; that row is your artifact, and the paper
-you found counts toward this week's resource log.
+in the four columns of @tbl-proxies. That row is what you hand in, and the
+paper you found counts toward this week's resource log.
 
 **Optional step, if you use a chatbot (5 minutes).** Ask your institutional
 ChatGPT Edu or Copilot: *"What does `<the tool from your case>` predict, and
@@ -514,9 +515,9 @@ what is it used to decide?"* Then compare its answer to your worksheet line 1.
 Does it name the proxy, or does it describe the tool as measuring the thing
 it was hoped to measure? Models are good at the second and bad at the first,
 because the papers they learned from mostly wrote it that way. If it named
-the gap, note that it did; if it did not, you have just watched a proxy get
-laundered into a fact, in real time, by a fluent source. Either result is
-worth one sentence in your notes. If you do not use chatbots, skip this; the
+the gap, note that it did. If it did not, you have just watched a stand-in
+turn into a "fact", in real time, from a fluent source. Either result is
+worth one sentence in your notes. If you do not use chatbots, skip this. The
 exercise is complete without it.
 
 ## Check
@@ -528,13 +529,13 @@ Score yourself against this before moving on.
 | Worksheet line 1, both cases | Names the quantity that mattered *and* the thing measured, as two different things | Names the tool, or names one quantity |
 | Worksheet line 2, both cases | Names the group and the decision that went differently for them | Names the group only |
 | Line 4 | States a status and says where it came from; "could not determine" with a reason counts as meeting | A status with no source, or "fixed" without checking |
-| Line 5, the care management case | Says "nothing at a single encounter" and names what would have been needed instead | Claims a bedside signal that does not exist |
-| Line 5, your own case | Names a specific signal, or argues specifically why there is none | "Be careful" |
-| Lines 6 and 7 | Each classification has a one-sentence defense, and you can say which cases are representation harms | Labels without defense |
+| Line 5, the care management case | Says "nothing at a single encounter" and names what would have been needed instead | Claims a bedside sign that does not exist |
+| Line 5, your own case | Names a specific sign, or argues specifically why there is none | "Be careful" |
+| Lines 6 and 7 | Each label has a one-sentence defense, and you can say which cases are representation harms | Labels without defense |
 | The one sentence | You can state the proxy problem without using the word "bias" | "Algorithms can be biased" |
-| The counterweight | You can say what Jabbour et al. found about explanations, and what it means for line 5 | "Clinicians should double-check" |
+| The other half | You can say what Jabbour et al. found about explanations, and what it means for line 5 | "Clinicians should double-check" |
 
-## The standing question
+## What this changes for you
 
 *What does this change about how you'll practice?* Write it down before you
 close this chapter. Two specifics.
@@ -553,22 +554,22 @@ collects these in chat, and they are worth more than the table.
 ## Summary
 
 - A proxy is a measurable stand-in for something that cannot be measured.
-  Every canonical case of algorithmic harm in medicine is a proxy that
-  tracked inequity: light for oxygen, cost for need, race for unmeasured
+  Every well-known case of algorithmic harm in medicine is a proxy that
+  followed inequity: light for oxygen, cost for need, race for unmeasured
   exposure.
 - The proxies were reasonable when chosen. That is why "don't be biased" is
   not a strategy and "what does this actually measure" is.
 - Obermeyer: predict cost, get accuracy; use it for need, get a factor of
-  2.6 in who was enrolled. Correction meant changing the target, not the
+  2.6 in who was enrolled. The fix meant changing the target, not the
   model.
 - Statistical bias is error against the target; social bias is the wrong
   target. Allocation harms move resources; representation harms need no
   decision at all.
-- Identification is fast and correction is slow. The oximeter guidance is
-  draft; race-neutral spirometry is recommended and contested.
+- Finding is fast and fixing is slow. The oximeter guidance is draft;
+  race-neutral spirometry is recommended and contested.
 - The bedside catches the oximeter and misses the risk score, and a biased
   model with explanations still lowered clinicians' accuracy by nine points.
-  Vigilance and auditing are both load-bearing.
+  Alertness and auditing are both needed.
 - The patient in bed 14 did not know the device was calibrated on people who
   did not look like him. Decide what you would tell him.
 
@@ -576,16 +577,16 @@ collects these in chat, and they are worth more than the table.
 
 **Papers**
 
-- The anchor case in full, with the supplementary analysis of alternative
-  labels [@pmid:31649194]. Twelve pages, and the clearest example in the
-  literature of a correction that is a reformulation rather than a patch.
+- The main case in full, with the extra analysis of other prediction targets
+  [@pmid:31649194]. Twelve pages, and the clearest example in the literature
+  of a fix that changes the question rather than patching the model.
 - The full catalog of race-adjusted algorithms, across cardiology,
   nephrology, obstetrics, urology, and pulmonology [@pmid:32853499]. Read it
   to see how many equations on your lab reports have a race term you never
   noticed.
 - The spirometry contest as it stands: the ATS statement [@pmid:36973004]
   and the modeling of who is reclassified [@pmid:38767252]. Together they are
-  the best available example of a correction whose costs and benefits land on
+  the best available example of a fix whose costs and benefits land on
   different people.
 - The oximeter regulatory story: the JAMA viewpoint on the draft guidance
   [@pmid:40042945] and the 34-device test against it [@pmid:40832401].
@@ -593,15 +594,15 @@ collects these in chat, and they are worth more than the table.
   supplementary material shows the heat maps the participants saw.
 - Where the dermatology gap comes from and how it closes with data
   [@pmid:35960806].
-- The language-model cases [@pmid:37864012; @pmid:38123252], and re-run
-  their prompts on this year's model; the answers move.
+- The language-model cases [@pmid:37864012; @pmid:38123252]. Re-run their
+  prompts on this year's model; the answers move.
 
 **Talks**
 
 - [Fairness in machine learning for healthcare](https://talks.seandavis.net/archive/2024-11-05-ml-fairness/),
-  the deck this chapter was adapted from, including the mitigation methods
-  this chapter deliberately left out and the reason they would not have fixed
-  the anchor case.
+  the deck this chapter was adapted from, including the technical fixes this
+  chapter deliberately left out and the reason they would not have fixed the
+  main case.
 - [AI and ML in an oncology service line](https://talks.seandavis.net/archive/2024-10-28-ai-ml-oncology-service-line/)
   for the institutional half of the answer: who audits, who monitors, and
   what "incorporate biography" means when race is standing in for exposure.

@@ -49,7 +49,7 @@ cannot be measured, and X tracks Y differently for different patients."
 "An algorithm is only as fair as the relationship between what it measures
 and what you hoped it measured."
 
-## Standing question, bed 14
+## Closing question, bed 14
 
 Expected: light absorbance measured, oxygen saturation hoped for; calibration
 population had lighter skin. Telling the patient: yes, in plain terms ("the
