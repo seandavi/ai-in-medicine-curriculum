@@ -92,8 +92,15 @@ reason is arithmetic from Parts A–B rather than mood.
 - LBNL: 176 TWh, 4.4% of US electricity, 2023; 6.7–12% by 2028. EPRI:
   9–17% by 2030. [CONFLICTING]; quote the range.
 - IEA: ~415 TWh (2024) → ~945 TWh (2030), just under 3% of global.
-- Memphis: turbine count and permit status change; check Earthjustice case
-  page before the session.
+- Memphis: two sites. Colossus 1 in South Memphis (Shelby County, TN):
+  roughly 35 turbines ran unpermitted from 2024; 15 were permitted by the
+  county in July 2025 after an SELC/NAACP notice of intent to sue [VERIFY:
+  Memphis counts and dates are from press memory, not re-checked this
+  session]. Colossus
+  2's turbines sit across the line in Southaven, MS: NAACP v. xAI, N.D.
+  Miss., filed 2026, 27 unpermitted turbines (Earthjustice case page, checked
+  2026-09-08). Counts and permit status change; check the case page before
+  the session.
 
 ## Instructor prep
 
