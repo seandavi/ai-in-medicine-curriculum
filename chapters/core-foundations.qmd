@@ -27,7 +27,7 @@ By the end of this chapter you will be able to:
 doing, and 6 minutes for the check and the closing question. No math and no
 coding are assumed. The only equation in the chapter is one you already use.
 You need a browser and your institutional ChatGPT Edu or Microsoft Copilot
-account. Nothing installs, and nothing asks you for a phone number.
+account, or whatever assistant your school provides. Nothing installs, and nothing asks you for a phone number.
 
 ## The number nobody measured
 
@@ -225,7 +225,7 @@ patient. A flexible enough model can fit its training data perfectly and be
 useless. Its performance on data it has already seen is not evidence. It is a
 description of the fitting.
 
-![Every one of these fits the same data. The one on the bottom right fits it best. xkcd 2048, *Curve-Fitting*, by Randall Munroe, [CC BY-NC 2.5](https://xkcd.com/license.html) (non-commercial use only).](../images/curve_fitting.png){#fig-xkcd-curve .comic fig-alt="xkcd comic: a grid of twelve scatterplots of the same data, each with a different fitted curve and a caption, from a straight line labeled linear, through quadratic and logarithmic, to a wildly wiggling curve labeled 'connecting lines' with the caption 'I clicked a button and this came out', and one labeled 'house of cards' that fits every point."}
+![Every one of these fits the same data. The one on the bottom right passes through every point, and it is the worst model of the twelve. xkcd 2048, *Curve-Fitting*, by Randall Munroe, [CC BY-NC 2.5](https://xkcd.com/license.html) (non-commercial use only).](../images/curve_fitting.png){#fig-xkcd-curve .comic fig-alt="xkcd comic: a grid of twelve scatterplots of the same data, each with a different fitted curve and a caption, from a straight line labeled linear, through quadratic and logarithmic, to a wildly wiggling curve labeled 'connecting lines' with the caption 'I clicked a button and this came out', and one labeled 'house of cards' that fits every point."}
 
 That is why separate training and test sets are the least you should accept.
 You fit on one set of cases. You report performance on a *different* set the
@@ -359,9 +359,9 @@ conversation so far, and its own reply as it writes it. Two limits follow.
 of the conversation, and the answer you are waiting for all draw on the same
 allowance. Fill it with a whole guideline and there is less room for the
 reasoning about your question. Older turns are pushed out or shortened. Output
-tokens also cost the provider several times what input tokens cost. That is
-why the tools are quietly tuned to answer briefly, and why the advertised
-window is rarely the usable one. The figures move with every release, so none
+tokens also cost the provider more than input tokens. That is one reason the
+tools tend to answer briefly, and one reason the usable window is often
+smaller than the advertised one. The figures move with every release, so none
 are quoted here.
 
 **The middle is the weak spot.** Researchers placed the one relevant document
@@ -419,8 +419,8 @@ not need it.
 ## Do
 
 ::: {.callout-warning title="No patient information, ever"}
-Both parts of this exercise use public or made-up material. Part A uses a toy
-dataset that ships with the tool. Part B asks the model about a published
+Both parts of this exercise use public or made-up material. Part A uses a
+small practice dataset built into the site. Part B asks the model about a published
 scoring system, not about a patient. Your institutional account does not
 change this. It is not covered by a business associate agreement, the contract
 that would make the vendor legally responsible for protecting patient data,
@@ -445,7 +445,9 @@ write the three sentences from them.
 1. In the DATA panel on the left, choose the **spiral** dataset (the bottom
    right of the four). Leave the noise slider at 0. In the FEATURES column,
    keep only `X₁` and `X₂` selected. Set the network to one hidden layer with
-   two neurons (use the plus and minus buttons). Press play. Let the epoch
+   two neurons (use the plus and minus buttons). "Hidden layer" and "neuron"
+   are the site's words for the middle stage of the network and the units
+   inside it. Press play. Let the epoch
    counter at the top reach a few hundred; one epoch is one pass through the
    data. Write down what the training loss does and what the picture looks
    like.
