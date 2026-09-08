@@ -38,7 +38,7 @@ The topic is whether AI tools that answer from a set of documents are ready
 for the clinic, and she knows you have opinions. It is Monday. You have five
 PDFs, two call shifts, and a personal statement to finish.
 
-A co-intern says: drop them all into NotebookLM and ask it your questions. You
+A co-intern says: put them all into NotebookLM and ask it your questions. You
 do. Ten seconds later you have this.
 
 ::: {.grounded-answer}
@@ -53,14 +53,14 @@ is not what the paper says.
 
 This chapter is about why the numbers are real, why the sentence is not, and
 how to tell in under a minute. [the appraisal chapter](core-appraisal.qmd) showed you that a general
-chatbot invents references and a retrieval tool does not. This chapter goes
-one level down, into how the tool works. How it works is what tells you which
+chatbot invents references and a retrieval tool does not. This chapter looks
+more closely at how the tool works. How it works is what tells you which
 mistakes are still possible after the references are fixed.
 
 Two words first, because vendors use both. A **grounded** tool is one that
 answers from documents it was given and points back to them. **Retrieval** is
 how it finds the right passages in those documents before it writes. The rest
-of the chapter takes both apart.
+of the chapter explains both in detail.
 
 ## Why this matters
 
@@ -72,11 +72,11 @@ list. The vendors will tell you, correctly, that these tools "cite their
 sources." What they will not say is what "cite" means, step by step. So they
 will not say which errors citing protects you from, and which it does not.
 
-When a notebook misreads a paper, the cost is a wrong slide. When the grounded
-tool inside the EHR misreads a protocol, the cost lands on a patient. The
-clinician who repeated the sentence owns it.
+When a notebook misreads a paper, the result is a wrong slide. When the grounded
+tool inside the EHR misreads a protocol, the result can harm a patient. The
+clinician who repeated the sentence is responsible for it.
 
-The second reason is smaller and closer. The same machinery that makes a
+The second reason is smaller and closer. The same mechanism that makes a
 grounded tool trustworthy about *where* a sentence came from also explains
 three other things. Why a chatbot has no memory. Why nothing you type teaches
 it anything. And why pasting a patient's note into a consumer tool is a
@@ -106,7 +106,7 @@ next piece of text given all of it. That block of text is the **context
 window**: everything the model can see at the moment it answers. It is
 measured in **tokens**, which are words or pieces of words, and it has a fixed
 size. ([The foundations chapter](core-foundations.qmd) introduced the context
-window as a shared budget; this is the same object, seen from the inside.) Today that size ranges from one long book to a small shelf of them,
+window as a shared budget; this is the same object, now explained in full.) Today that size ranges from one long book to a small shelf of them,
 depending on the model. When you close the tab, the context is gone. The model is exactly what
 it was before you opened it.
 
@@ -134,9 +134,9 @@ tool's whole job is to decide which few passages go into the window.
 
 ### What "grounded" means, step by step
 
-[The appraisal chapter's](core-appraisal.qmd) figure showed two roads to a citation. A general model
+[The appraisal chapter's](core-appraisal.qmd) figure showed two ways a citation can be produced. A general model
 writes a reference as text. A retrieval tool searches first and writes second
-(see @fig-citation-paths there). The search-first road has
+(see @fig-citation-paths there). The search-first way has
 six steps. Together they are the **retrieval pipeline**, and each step is a
 place where something can go wrong. Google does not publish exactly how
 NotebookLM does each step. The six steps are the general design that every
@@ -170,29 +170,29 @@ passage is a few hundred to a thousand tokens. One published clinical pipeline
 used 1,024-token chunks and reported 97.5% citation accuracy on landmark
 spine-surgery papers [@pmid:40662770]. A dental-trauma tool built from five
 guideline sources was a knowledge base of exactly 250 chunks
-[@pmid:42546813]. Chunking is dumb by design. It cuts on length, not meaning.
+[@pmid:42546813]. Chunking is simple by design. It cuts on length, not meaning.
 
 **Embedding** turns each passage into a list of numbers, called an
 **embedding**. Passages about similar things get similar numbers. "Apixaban
 reduced major bleeding" and "less hemorrhage with the factor Xa inhibitor"
-land near each other. "The patient's dog is named Apixaban" does not. This is
-the machinery from the word-embeddings talk in Go deeper. You do not need to
-take it further than "similar meaning, nearby numbers."
+get numbers that are close together. "The patient's dog is named Apixaban" does not. This is
+the method from the word-embeddings talk in Go deeper. You do not need to
+know more than "similar meaning, nearby numbers."
 
 **Indexing** stores those numbers so that, given a new list of numbers, the
 nearest ones can be found in milliseconds. An **index** is a phonebook sorted
 by meaning instead of by surname.
 
-**Retrieval** turns your question into numbers the same way and pulls the
+**Retrieval** turns your question into numbers the same way and returns the
 nearest few passages, usually between three and twenty. **Augmentation**
 pastes them into the context window, in front of your question, as plain
 text. Then **generation** is the ordinary thing a language model does: write
 the most likely next words. The difference is that now the most likely
 continuation of "according to the passages above" is something the passages
-actually say. A citation is a pointer back to a passage that is sitting right
-there in the window.
+actually say. A citation is a pointer back to a passage that is already
+in the window.
 
-That is the entire trick. The model did not become honest. It was handed the
+That is the entire method. The model did not become honest. It was given the
 answer and asked to paraphrase it.
 
 ### What chunking does to a table
@@ -221,7 +221,7 @@ The gain was large for the weaker models and small and not statistically signifi
 Chunk 8 has the rows that matter for the question in the opening scenario.
 Chunk 8 has no column headings. When it is retrieved alone, the model sees
 five numbers per line and has to guess what they mean. When only chunk 7 is
-retrieved, the model sees the headings and the two best-behaved rows. It never
+retrieved, the model sees the headings and the two rows where retrieval helped most. It never
 sees the sentence that qualifies them. Both chunks are real. Both citations
 will resolve. Neither is the table.
 
@@ -236,7 +236,7 @@ of *reading*, made on a source that is real.
 
 ### Why grounded tools fabricate less: the numbers
 
-[the appraisal chapter](core-appraisal.qmd) gave you the headline. On the 2/1/0 citation scale in
+[the appraisal chapter](core-appraisal.qmd) gave you the main result. On the 2/1/0 citation scale in
 @tbl-scoring (2, accurate: the source supports the sentence; 1,
 misrepresented: the source is real but misdescribed; 0, fabricated: the
 source does not exist as given), a tool that indexes PubMed produced
@@ -328,13 +328,13 @@ the top of this chapter. A second run on a different paper in the same session
 authors' own caution that the tool had not been tested at other sites. The
 misreading is not inevitable. It is common.
 
-**The check.** Click the citation on the first sentence. It lands on Table 6.
+**The check.** Click the citation on the first sentence. It takes you to Table 6.
 Two of the five confidence intervals cross zero, which means the gain for
 those two models may be nothing. That is the whole check, and
 it took less time than reading this paragraph. The general rule: for any
 sentence you are going to repeat, click its citation and read *one line above
 and one line below* the highlighted passage. The line below is where the
-"however" lives.
+"however" usually is.
 
 **Before the cohort.** Re-run the same question in NotebookLM with the PMC
 page as the source. Record the model and date. Replace this specimen if the
@@ -362,8 +362,8 @@ documents*. It is the wrong tool for *what does the literature say*, because
 there the papers you failed to include are the ones that matter.
 
 **Disagreement.** When two sources disagree, retrieval pulls passages from
-both, and generation writes one paragraph. A frequent result is a
-smoothed-over consensus that no source holds. Nobody has measured how often;
+both, and generation writes one paragraph. A frequent result is one
+blended answer that no source holds, with the disagreement smoothed away. Nobody has measured how often;
 you will test whether your tool does it in the Do block, with a pair of
 papers chosen because they disagree about the same tool.
 
@@ -390,8 +390,8 @@ is what happens when the model relies on what it learned in training, which
 was out of date. Her fix, going to look it up, is retrieval. Then notice what
 the video does not say. It presents retrieval as the answer to being wrong and
 out of date. It never mentions that the model can retrieve the right passage
-and misread it. That gap is what this chapter fills. It is also the gap in
-every vendor's pitch you will hear.
+and misread it. That omission is what this chapter covers. Every vendor's sales
+presentation leaves it out too.
 
 **Reading alternative.** The written article this chapter is built on,
 [Grounding AI in real sources](https://talks.seandavis.net/archive/2025-10-07-rag-notebooklm-idpt-8079/),
@@ -407,7 +407,7 @@ note. Not your classmate's data. A consumer Google account carries no
 business associate agreement, the contract that makes a vendor legally
 responsible for protecting patient data. An institutional account does not
 change the rule unless your institution has said in writing that it does. The
-line is bright on purpose. The edge cases are where people get it wrong.
+rule is strict on purpose. The unusual cases are where people get it wrong.
 :::
 
 ::: {.callout-tip title="Getting in"}
@@ -424,8 +424,8 @@ and school accounts have access and that administrators control it
 If you have no Google account and will not make one: your institutional
 ChatGPT Edu or Copilot lets you attach files and say "answer only from the
 attached documents." That gives you the same *exercise* with a weaker
-*guarantee*. A general chatbot told to stay inside its sources will still draw
-on its training when it wants to. Note in your write-up which tool you used.
+*guarantee*. A general chatbot told to stay inside its sources will still use
+its training data at times. Note in your write-up which tool you used.
 :::
 
 ### Step 1: choose your sources (10 minutes)
@@ -494,7 +494,7 @@ Ask the notebook something its sources cannot support: a statistic that is
 not in them, a named trial that is not there, a population none of the papers
 studied. For the ready-made set: *What is the fabrication rate of NotebookLM
 on citations in cardiology?* No source contains that. A grounded tool should
-say so, give a cautious partial answer, or answer thinly.
+say so, give a cautious partial answer, or give a short, hedged answer.
 
 Now ask the identical question in your general chatbot tab. Do not prompt it
 carefully. Ask it the way you asked the notebook. Compare on one thing only:
@@ -556,7 +556,7 @@ Score yourself against this before moving on.
 
 *What does this change about how you'll practice?* Answer in writing before
 you close this chapter. Two specifics. First: the next time a summary with
-citations lands in front of you, from a notebook, an EHR tool, or a co-intern,
+citations is put in front of you, from a notebook, an EHR tool, or a co-intern,
 what is the one-minute check you will do before repeating a sentence from it?
 Which of the failures in this chapter does that check catch? Second: go back
 to Monday. The five PDFs are in the notebook, the first sentence of its answer
@@ -572,7 +572,7 @@ do with the two papers that disagree? One word is not an answer to either.
   Where your text is *stored* is a separate question, and the reason for the
   no-patient-information rule.
 - Grounding is six steps: chunk, embed, index, retrieve, augment, generate.
-  The model is handed passages and asked to paraphrase them.
+  The model is given passages and asked to paraphrase them.
 - Chunking cuts on length, not meaning. A table split across two chunks is
   two real citations and no table.
 - Grounded tools fabricate far less because a citation is a pointer to a
@@ -595,7 +595,7 @@ do with the two papers that disagree? One word is not an answer to either.
   applied to reading rather than references.
 - The guideline-retrieval benchmark behind @fig-vollmer, whose pipeline was
   released openly [@pmid:42587692], and the systematic review of ways to reduce
-  hallucination that puts retrieval in context [@pmid:42251377].
+  hallucination that compares retrieval with the other methods [@pmid:42251377].
 - Two studies of NotebookLM itself: one where it helped [@pmid:42534267] and
   one where it was the wrong tool for an image task [@pmid:42645138]. Read
   them as a pair.
@@ -614,9 +614,9 @@ do with the two papers that disagree? One word is not an answer to either.
   the written article this chapter is built on, with the conversation shown as
   raw text and the original shared-notebook exercise.
 - [Word embeddings as the basis for LLMs](https://talks.seandavis.net/archive/2024-11-12-word-embeddings-basis-for-llms/):
-  what "similar meaning, nearby numbers" actually means, with a hands-on
-  embedding projector, for anyone who wants to see inside step 2 of the
-  pipeline. Also in [the foundations chapter](core-foundations.qmd).
+  what "similar meaning, nearby numbers" actually means, with an interactive
+  embedding projector, for anyone who wants to understand step 2 of the
+  pipeline in more detail. Also in [the foundations chapter](core-foundations.qmd).
 - [Prompt engineering](https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/):
   ten rules with clinical examples, for students whose Step 2 questions came
   back vague. [the prompting lab](enrichment-prompting-lab.qmd) is built on it.
