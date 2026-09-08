@@ -6,26 +6,30 @@ subtitle: "AIM-3 · AIM-7 · about 90 minutes"
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will be able to:
 
-1. State what was predicted for radiology in 2016, what the primary data show
-   happened through 2026, and why "he was just early" is an inadequate reading.
-2. Apply a four-factor framework, task decomposition, real-world generalization,
-   liability, and demand, to the specialty you are entering, and grade a
-   chatbot's forecast about that specialty with the same four factors.
-3. Use the mammography computer-aided detection precedent to explain why
-   adoption of a tool and improvement in outcomes are separate questions.
-4. Explain why a tool can reduce work inside one organization while raising
-   cost across the system, and describe the "bot wars" dynamic.
+1. Say what was predicted for radiology in 2016, what the original data (match
+   tables and workforce studies) show happened through 2026, and why "he was
+   just early" is not a good enough explanation.
+2. Ask four questions of the specialty you are entering (does the job break
+   into tasks, does the tool work outside the hospital that built it, who is
+   liable, and does demand grow), and grade a chatbot's forecast about that
+   specialty with the same four questions.
+3. Use the story of computer-aided detection in mammography to explain why
+   a tool being adopted and a tool improving outcomes are separate questions.
+4. Explain why a tool can cut work inside one hospital while raising cost
+   across the whole system, and describe the "bot wars" pattern.
 5. Read the Bureau of Labor Statistics projections for three health-information
-   occupations and explain why adjacent jobs move in opposite directions.
-6. Name the most automatable *task* in your intended specialty, estimate what
-   fraction of the job it is, and say what would change your estimate.
+   jobs and explain why jobs that sit next to each other move in opposite
+   directions.
+6. Name the task in your intended specialty that a machine could most plausibly
+   take over, estimate what fraction of the job it is, and say what would change
+   your estimate.
 :::
 
 **Time.** About 25 minutes of reading, 20 minutes of watching, 35 minutes of
 doing, and 10 minutes for the check and the standing question. You need one
-general-purpose chatbot (your institutional ChatGPT Edu or Microsoft Copilot
-account is enough) and a browser. Nothing installs, nothing asks for a phone
-number, and nothing in this chapter touches a patient.
+chatbot (your institutional ChatGPT Edu or Microsoft Copilot account is enough)
+and a browser. Nothing installs, nothing asks for a phone number, and nothing
+in this chapter touches a patient.
 
 ## The year everyone says radiology is over
 
@@ -33,10 +37,10 @@ It is September of your fourth year. You have your radiology letters, your
 program list, and a spreadsheet of interview dates. At a family dinner, an
 uncle who reads about technology asks why you would go into the one specialty
 the "godfather of AI" said should stop training people. He has the quote on
-his phone: in 2016 Geoffrey Hinton, who would later share a Nobel Prize for the
-neural networks that make modern AI work, told a Toronto audience that people
-should *stop training radiologists now*, because within five years deep
-learning would obviously do the job better.
+his phone. In 2016 Geoffrey Hinton told a Toronto audience that people should
+*stop training radiologists now*. Within five years, he said, deep learning
+would obviously do the job better. Hinton would later share a Nobel Prize for
+the neural networks that make modern AI work.
 
 ::: {.vendor-slide}
 <div class="brand">Machine Learning and the Market for Intelligence · Toronto · 2016</div>
@@ -49,28 +53,28 @@ learning would obviously do the job better.
 <div class="fine">Illustrative rendering of a public remark for this chapter; not the speaker's slide. The quote is real and is linked in the Watch section.</div>
 :::
 
-Your uncle is not wrong that Hinton said it, and he is not wrong that Hinton
-knows more about deep learning than anyone at the table. The question is what
-happened next, and whether the way the prediction failed tells you anything
-about the job you are about to spend a decade training for. You are not in
-radiology? The same uncle has a version of the question for every specialty,
-and so does every chatbot. This chapter is about how to answer it with
-something other than a feeling.
+Your uncle is not wrong that Hinton said it. He is not wrong that Hinton knows
+more about deep learning than anyone at the table. The question is what
+happened next. Does the way the prediction failed tell you anything about the
+job you are about to spend a decade training for? Not going into radiology?
+The same uncle has a version of the question for every specialty, and so does
+every chatbot. This chapter is about how to answer it with something better
+than a feeling.
 
 ## Why this matters
 
 You are making a thirty-year bet with a spreadsheet and a gut feeling. Nobody
 can tell you how your specialty will look in 2056. But the most confident,
 most credentialed prediction that a medical job would disappear has now run
-its course, and it failed in a specific, instructive way. A forecast that
-fails is more useful than one that has not been tested yet, because you can
+its course. It failed in a specific way that you can learn from. A forecast
+that has failed is more useful than one that has not been tested yet. You can
 take it apart and see which assumptions broke.
 
-There is a second reason, and it is the one your co-residents will not think
-about. The people whose jobs are already changing are not physicians. Medical
-transcription is shrinking; medical coding is growing; both sit ten feet from
-where you will work. A resident who understands why is more useful to the team
-than one who is merely relieved about their own position.
+There is a second reason, and your co-residents will not think of it. The
+people whose jobs are already changing are not physicians. Medical
+transcription is shrinking. Medical coding is growing. Both jobs sit ten feet
+from where you will work. A resident who understands why is more useful to the
+team than one who is only relieved about their own position.
 
 ## The idea
 
@@ -79,8 +83,8 @@ than one who is merely relieved about their own position.
 The prediction was five years. Ten years on, the National Resident Matching
 Program's own tables tell the story in @fig-match. Diagnostic radiology offered
 more advanced (PGY-2) positions in 2026 than in any of the previous four
-years, and filled 98.4 percent of them; 1,741 applicants ranked the specialty
-for 1,083 positions.[^nrmp]
+years, and filled 98.4 percent of them. There were 1,741 applicants who ranked
+the specialty for 1,083 positions.[^nrmp]
 
 [^nrmp]: NRMP, *Results and Data: 2026 Main Residency Match* (May 2026),
     Tables 1A, 3 and 7A, read from the
@@ -101,34 +105,34 @@ xychart-beta
 ```
 
 The rest of the picture points the same way. The Neiman Health Policy
-Institute counted 37,482 radiologists serving Medicare patients in 2023 and
+Institute counted 37,482 radiologists serving Medicare patients in 2023. It
 projected a workforce 25.7 percent larger by 2055 even if residency positions
 stop growing, and 40.3 percent larger if they keep growing [@pmid:39952776].
 Attrition, the rate at which working radiologists leave clinical practice,
-more than doubled between 2014 and 2022, from 1.1 to 2.5 percent a year, and
-the authors frame that as a contributor to a *shortage*, not a surplus
-[@pmid:41031940]. Doximity's 2026 compensation survey put average diagnostic
-radiology compensation at $609,684 for 2025, up 6.6 percent in a year when
-physician pay overall rose about 2 percent.[^dox]
+more than doubled between 2014 and 2022, from 1.1 to 2.5 percent a year. The
+authors treat that as one cause of a *shortage*, not a surplus
+[@pmid:41031940]. Doximity's 2026 pay survey put average diagnostic radiology
+pay at $609,684 for 2025, up 6.6 percent in a year when physician pay overall
+rose about 2 percent.[^dox]
 
 [^dox]: Doximity, *2026 Physician Compensation Report*, covering 2025;
     <https://www.doximity.com/reports/physician-compensation-report/2026>.
     The module this chapter is built from quotes the prior year's figure,
     $571,749, up 7.5 percent. The two are different survey years, not
-    competing estimates; quote one with its year.
+    competing estimates. Quote one, with its year.
 
 ::: {.callout-note title="The subspecialty exception"}
-One number keeps this from being blanket reassurance. Counting radiologists
-who bill at least half their work for children, the pediatric radiology
+One number keeps this from being blanket reassurance. Count the radiologists
+who bill at least half their work for children. That pediatric radiology
 workforce shrank from 2,190 in 2016 to 2,032 in 2023, from 6.4 to 4.6 percent
-of all radiologists, while imaging demand rose [@pmid:40923948]. That is not
-automation; it is the labor market of a subspecialty moving independently of
-its parent. A student choosing a fellowship is making a finer-grained bet than
-the headline numbers describe.
+of all radiologists, while demand for imaging rose [@pmid:40923948]. That is
+not automation. It is the job market of one subspecialty moving on its own,
+apart from its parent specialty. A student choosing a fellowship is making a
+finer bet than the headline numbers describe.
 :::
 
 In May 2025 Hinton told the *New York Times* that he had spoken too broadly in
-2016, that he had meant image analysis rather than the job, and that he now
+2016. He said he had meant image analysis rather than the whole job. He now
 expects most image interpretation to be done by "a combination of A.I. and a
 radiologist."[^hinton] Here is the prediction as it was covered when it was
 fresh, and as it reads now.
@@ -149,24 +153,27 @@ fresh, and as it reads now.
 
 Read the fourth clipping twice. "More positions than ever" and "applicant
 pool declines" are in the same headline. Students are hearing the prediction
-and acting on it even as the labor market moves the other way; that is a
-harm the prediction did, and it fell on the people who believed it.
+and acting on it, even as the job market moves the other way. That is a harm
+the prediction did, and it fell on the people who believed it.
 
 ### Why "he was just early" is not enough
 
-The lazy reading is that the timeline slipped. Hinton's own 2025 correction is
-more interesting: he says he meant a task, image analysis, and said a job. That
-is not a timing error. The prediction failed for four structural reasons, and
-each one is a question you can ask about any specialty.
+The easy reading is that the timeline slipped. Hinton's own 2025 correction is
+more interesting. He says he meant a task, image analysis, and said a job.
+That is not a timing error. The prediction failed for four reasons built into
+how medical work is organized. Each one is a question you can ask about any
+specialty. The worksheets later in the chapter call them the four factors.
 
-**1. Task decomposition.** A job is automatable to the extent that it breaks
-into tasks a machine can be measured on. In 2012, observers followed fourteen
-staff radiologists through their workdays at three hospitals with a stopwatch
-and found that 36.4 percent of their time went to interpreting images
-[@pmid:23763878]. The rest was protocolling requests, supervising studies,
-procedures, consulting with other physicians, and direct patient care
-(@fig-workday). A tool that read every image perfectly would leave nearly
-two-thirds of the day untouched, and it would not sign the report.
+**1. Task decomposition: does the job break into tasks a machine can be tested
+on?** A job can be automated only as far as it breaks into tasks a machine can
+be measured on. In 2012, observers followed fourteen staff radiologists through
+their workdays at three hospitals with a stopwatch. They found that 36.4
+percent of the radiologists' time went to interpreting images [@pmid:23763878].
+The rest went to protocolling requests (deciding how each scan should be
+done), supervising studies, procedures, talking with other physicians, and
+direct patient care (@fig-workday). A tool that read every image perfectly
+would leave nearly two-thirds of the day untouched. It would not sign the
+report either.
 
 ```{mermaid}
 %%| label: fig-workday
@@ -179,45 +186,48 @@ pie showData
     "Nonclinical" : 12.3
 ```
 
-**2. Real-world generalization.** A model that beats radiologists on a
-benchmark has beaten them on one dataset. When deep-learning models for
-pneumonia on chest radiographs were trained at one hospital system and tested
-at another, performance dropped, and the models could tell which hospital an
-image came from with better than 99.9 percent accuracy, which means they had
-learned the scanner as much as the disease [@pmid:30399157]. Radiology also
-carries most of the regulatory weight: of 903 AI-enabled devices the FDA had
-authorized by August 2024, 692 (76.6 percent) were radiology devices, and
-clinical performance studies were reported for only 55.9 percent of all
-devices, with 2.4 percent randomized [@pmid:40305017]. Hundreds of cleared
-tools, and no measured displacement of labor. The most-read explanation of why
-is Deena Mousa's essay "AI isn't replacing radiologists" (October 2025), which
-also reports that 38 percent of 2024-cleared models that disclosed their test
-sites used data from a single hospital
+**2. Generalization: does it work at a hospital that did not build it?** A
+model that beats radiologists on a benchmark (a fixed test set) has beaten
+them on one dataset. Deep-learning models for pneumonia on chest x-rays were
+trained at one hospital system and tested at another. Performance dropped.
+The models could also tell which hospital an image came from with better than
+99.9 percent accuracy. They had learned the scanner as much as the disease
+[@pmid:30399157]. Radiology also carries most of the regulatory weight. Of 903
+AI-enabled devices the FDA had authorized by August 2024, 692 (76.6 percent)
+were radiology devices. Clinical performance studies were reported for only
+55.9 percent of all devices, and 2.4 percent were randomized [@pmid:40305017].
+Hundreds of cleared tools, and no measured loss of jobs. The most widely read
+explanation of why is Deena Mousa's essay "AI isn't replacing radiologists"
+(October 2025). She also reports that 38 percent of models cleared in 2024
+that disclosed their test sites used data from a single hospital
 [VERIFY: 38% single-site figure is Mousa's reading of the JAMA Netw Open analysis; not in that paper's abstract]{.verify}.[^mousa]
 
 [^mousa]: Deena Mousa, "AI isn't replacing radiologists," *Understanding AI*,
     1 October 2025, <https://www.understandingai.org/p/ai-isnt-replacing-radiologists>.
     The best single reading if you want the whole argument in one sitting.
 
-**3. Liability and regulatory structure.** Someone signs the read. Malpractice
-law measures the physician, not the model, and the joint statement of the
-American, Canadian, European, Australasian, and North American radiology
-societies describes current tools as augmenting rather than replacing the
-radiologist's interpretation, with autonomous function treated as a separate
-question needing its own evidence [@pmid:38276923]. The device boundary and
-who is liable when a tool is wrong belong to the ethics and regulation
-chapter; the point here is only that the structure is designed to keep a human
-in the loop, and a design is slower to change than a benchmark.
+**3. Liability: who signs, and who is blamed when it is wrong?** Someone signs
+the read. Malpractice law judges the physician, not the model. The joint
+statement of the American, Canadian, European, Australasian, and North
+American radiology societies describes current tools as helping the
+radiologist's interpretation, not replacing it. Tools that act on their own
+are treated as a separate question needing their own evidence
+[@pmid:38276923]. Where a device stops and who is liable when a tool is wrong
+belong to the ethics and regulation chapter. The point here is only that the
+rules are built to keep a human in the loop, and rules change more slowly than
+benchmarks.
 
-**4. Demand.** Making a task cheaper does not obviously reduce the number of
-people doing it. Economists call the pattern the Jevons paradox, after the
-nineteenth-century observation that more efficient steam engines increased
-coal consumption: cheaper imaging gets ordered more. The workforce projection
-above assumes demand keeps growing at least as fast as supply
+**4. Demand: if the task gets cheaper, is more of it ordered?** Making a task
+cheaper does not obviously reduce the number of people doing it. Economists
+call this the Jevons paradox. In the nineteenth century, more efficient steam
+engines led to more coal being burned, not less, because cheaper power got
+used more. Imaging works the same way: cheaper scans get ordered more often.
+The workforce projection above assumes demand keeps growing at least as fast
+as supply
 [VERIFY: Neiman demand projection of 17–27% growth in imaging, cited in the module, not retrieved this session]{.verify}.
 The same paradox runs through the environmental-impact chapter, if you take
-it: efficiency per unit and total consumption move in opposite directions
-more often than intuition expects.
+it. Efficiency per unit and total use move in opposite directions more often
+than you would expect.
 
 ```{mermaid}
 %%| label: fig-four-factors
@@ -234,87 +244,92 @@ flowchart TD
     Q4 -- Yes --> R[Fewer people do this task]
 ```
 
-Groups working through this usually converge on the first question without
-being told to. That convergence is worth noticing: most physician jobs
-decompose badly, and the specialties that look most automatable from outside
-are the ones whose perceptual core is most visible, not the ones where it is
-the largest share of the work.
+Groups working through this usually settle on the first question without
+being told to. That is worth noticing. Most physician jobs do not break neatly
+into tasks. The specialties that look most automatable from outside are the
+ones whose pattern-recognition work is easiest to see, not the ones where it
+is the largest share of the work.
 
 ::: {.callout-important title="A concrete case where the habit gets the wrong answer"}
 Ask your chatbot, "Will AI replace radiologists?" You will get a fluent,
-balanced answer that mentions image analysis, workflow, and the human touch.
-Now ask it for the fraction of a radiologist's day spent interpreting images,
+balanced answer that mentions image analysis, daily work, and the human touch.
+Now ask it what fraction of a radiologist's day is spent interpreting images,
 with a source. Most models give a number without a source, or a source that
-does not contain the number. The 2012 time-and-motion study above is one
-paper with fourteen radiologists; a model that has not read it is guessing,
-and a guess in a confident register is the whole failure mode this chapter is
-about. You will do this properly in the Do block.
+does not contain the number. The 2012 stopwatch study above is one paper with
+fourteen radiologists. A model that has not read it is guessing, and a
+confident-sounding guess is the whole failure this chapter is about. You will
+do this properly in the Do block.
 :::
 
 ### The precedent: mammography CAD
 
-The closest historical rehearsal went further than most students expect.
-Computer-aided detection (CAD) for screening mammography, software that marks
-suspicious regions for the radiologist, was approved by the FDA in 1998 and
-given a Medicare add-on payment in 2002. By the late 2000s it was used on
-most screening mammograms in the United States at a cost of over $400 million
-a year [@pmid:26414882]. It was, by adoption, a success.
+The closest earlier rehearsal went further than most students expect.
+Computer-aided detection (CAD) for screening mammography is software that
+marks suspicious spots on the image for the radiologist. The FDA approved it
+in 1998. Medicare began paying extra for it in 2002. By the late 2000s it was
+used on most screening mammograms in the United States, at a cost of over
+$400 million a year [@pmid:26414882]. Measured by adoption, it was a success.
 
 Then the outcome data arrived. Across 429,345 mammograms at 43 facilities,
-introducing CAD lowered specificity from 90.2 to 87.2 percent, raised the
-biopsy rate by 19.7 percent, and did not significantly change the cancer
-detection rate [@pmid:17409321]. A later analysis of 625,625 digital
-mammograms found no improvement on any metric with CAD, and among radiologists
-who read both with and without it, sensitivity was *lower* with CAD
+adding CAD lowered specificity (the share of healthy women correctly called
+normal) from 90.2 to 87.2 percent. It raised the biopsy rate by 19.7 percent.
+It did not significantly change the cancer detection rate [@pmid:17409321]. A
+later analysis of 625,625 digital mammograms found no improvement on any
+measure with CAD. Among radiologists who read both with and without it,
+sensitivity (the share of cancers found) was *lower* with CAD
 [@pmid:26414882]. The Medicare add-on payment was eventually withdrawn
 [VERIFY: year the CAD add-on was folded into the base mammography payment; secondary sources say 2018]{.verify}.
-A technology was adopted at scale, generated extra procedures for patients, and
-was paid out of existence.
+A technology was adopted at scale, generated extra procedures for patients,
+and was then paid out of existence.
 
-The finding to sit with is smaller and worse. When readers were shown
-mammograms with a deliberately high proportion of cases where the CAD marks
-were wrong, their sensitivity fell compared with readers who had no computer
-output at all, and it fell most on exactly the cancers the computer had missed
-[@pmid:15354301]. The name for this is automation bias, the tendency to
-over-rely on a machine's suggestion, and it has been documented across
-aviation, decision support, and imaging [@pmid:21685142]. CAD did not replace
-the radiologists. It made some of them worse. That is a different and more
-troubling failure than the one everyone was worried about, and it is the
-shape of the sepsis alert you will silence in your first month: a tool that is
-wrong in a systematic way degrades the human rather than being caught by them.
+The finding to sit with is smaller and worse. Readers were shown mammograms in
+which an unusually high share of the CAD marks were wrong. Their sensitivity
+fell compared with readers who had no computer output at all. It fell most on
+exactly the cancers the computer had missed [@pmid:15354301]. The name for
+this is automation bias: the habit of trusting a machine's suggestion more
+than it deserves. It has been documented in aviation, in decision-support
+software, and in imaging [@pmid:21685142]. CAD did not replace the
+radiologists. It made some of them worse. That is a different and more
+troubling failure than the one everyone was worried about. It is also the
+shape of the sepsis alert you will silence in your first month. A tool that is
+wrong in a systematic way drags the human down rather than being caught by
+them.
 
 Adoption and outcomes are separate questions. Objective 3 is that sentence.
 
-### The economics the debate does not surface
+### The economics the debate leaves out
 
-Everything so far produces optimism about physician employment. This section
-complicates it, because "your job survives" and "the system gets better or
+Everything so far points toward optimism about physician jobs. This section
+complicates that, because "your job survives" and "the system gets better or
 cheaper" are different claims.
 
 **Within the organization.** The critical appraisal chapter follows ambient
-scribes through their evidence tiers. The five-system study of 8,581 clinicians
-found scribe adopters spent 13.4 fewer minutes a day in the EHR and 16.0 fewer
-on documentation, and delivered 0.49 more visits per week, while after-hours
-EHR time did not change significantly [@pmid:41920565]. At UCSF, across 1,565
-physicians and about 1.2 million ambulatory encounters, adopters billed 1.81
-more relative value units (RVUs, the unit Medicare uses to price physician
-work) per week, a 5.8 percent increase, saw 0.80 more encounters, and had no
-rise in claim denials [@pmid:41511775]. Time saved became visits and RVUs.
-That is real, it is what a hospital's finance office wants, and it is not cost
-reduction.
+scribes (software that listens to a visit and drafts the note) through their
+levels of evidence. The five-system study of 8,581 clinicians found that
+scribe users spent 13.4 fewer minutes a day in the EHR and 16.0 fewer on
+documentation. They delivered 0.49 more visits per week. After-hours EHR time
+did not change significantly [@pmid:41920565]. At UCSF, across 1,565
+physicians and about 1.2 million outpatient visits, scribe users billed 1.81
+more relative value units per week, a 5.8 percent increase. (RVUs are the
+units Medicare uses to price physician work.) They saw 0.80 more patients per
+week and had no rise in claim denials [@pmid:41511775]. Time saved became
+visits and RVUs. That is real, and it is what a hospital's finance office
+wants. It is not cost reduction.
 
-**Across the system.** The Peterson Health Technology Institute, which takes no
-vendor money, concluded in March 2025 that scribes probably reduce burnout but
-show little evidence of financial return, and in April 2026 that
-administrative AI reduces burden *inside* organizations while failing to lower
-system-wide costs and possibly raising them.[^phti] The mechanism it names is
-"bot wars": providers use AI to submit more prior-authorization requests and
-code visits more intensively; payers use AI to process more denials and
-"downcode" claims automatically; the volume of back-and-forth rises without
-any clinical question being resolved faster. PHTI's April 2026 report also
-records a system where Level 5 visit coding rose 5 percent after scribe
-deployment, worth over $1,000 per provider per month, which is the UCSF
-finding seen from the payer's side.
+**Across the system.** The Peterson Health Technology Institute takes no
+vendor money. In March 2025 it concluded that scribes probably reduce burnout
+but show little evidence of financial return. In April 2026 it concluded that
+administrative AI reduces work *inside* organizations while failing to lower
+system-wide costs, and possibly raising them.[^phti] The pattern it names is
+"bot wars." Providers use AI to submit more prior-authorization requests (the
+insurer's approval needed before a treatment) and to code visits at higher
+levels. Payers use AI to process more denials and to "downcode" claims
+automatically, paying at a lower level than billed. The volume of
+back-and-forth rises, and no clinical question is settled any faster. PHTI's
+April 2026 report also records a health system where Level 5 visit coding
+(the highest billing level for an office visit) rose 5 percent after scribes
+arrived, worth over $1,000 per provider per month. That is the UCSF finding
+seen from the payer's side.
 
 [^phti]: Peterson Health Technology Institute, *Adoption of AI in Healthcare
     Delivery Systems: Early Applications and Impacts* (March 2025) and
@@ -329,21 +344,23 @@ finding seen from the payer's side.
 
 **One number to refuse to simplify.** You will hear that "25 percent of health
 care spending is administrative." That sentence blends three studies with
-three denominators. Shrank and colleagues estimated total *waste* at $760 to
-$935 billion, about 25 percent of spending, of which administrative complexity
-is one of six categories [@pmid:31589283]. Himmelstein and colleagues found
-administration to be 25.3 percent of *hospital* expenditures, the highest of
-eight nations [@pmid:25201663]. Woolhandler and colleagues put administration
-at $294.3 billion in 1999, 31.0 percent of expenditures *after exclusions*,
-using the broadest definition in the literature [@pmid:12930930]. Three
-numbers, three denominators. The habit of asking "percent of what?" outlasts
-all three figures.
+three different denominators, that is, three different answers to "percent of
+what?" Shrank and colleagues estimated total *waste* at $760 to $935 billion,
+about 25 percent of spending. Administrative complexity is one of six
+categories of that waste [@pmid:31589283]. Himmelstein and colleagues found
+administration to be 25.3 percent of *hospital* spending, the highest of eight
+countries [@pmid:25201663]. Woolhandler and colleagues put administration at
+$294.3 billion in 1999, 31.0 percent of spending *after exclusions*, using
+the broadest definition in the literature [@pmid:12930930]. Three numbers,
+three denominators. The habit of asking "percent of what?" will outlast all
+three figures.
 
 ### The most useful single fact: the BLS contradiction
 
-The Bureau of Labor Statistics (BLS) publishes ten-year employment projections
-for every occupation in its *Occupational Outlook Handbook*. Three of them sit
-side by side in the medical records department (@fig-bls).
+The Bureau of Labor Statistics (BLS) is the United States government agency
+that publishes ten-year employment projections for every occupation, in its
+*Occupational Outlook Handbook*. Three of those occupations sit side by side
+in the medical records department (@fig-bls).
 
 ```{mermaid}
 %%| label: fig-bls
@@ -361,39 +378,39 @@ xychart-beta
 | Medical records specialists | 200,700 | +8% | Aging population, chronic disease, more coding for reimbursement; AI coding tools "may affect" demand |
 | Health information technologists and medical registrars | 42,000 | +16% | Growing volume of electronic health information needing analysis and registry maintenance |
 
-: The three projections, with the reason BLS gives for each. Read from the *Occupational Outlook Handbook* on 2026-09-07: [transcriptionists](https://www.bls.gov/ooh/healthcare/medical-transcriptionists.htm), [records specialists](https://www.bls.gov/ooh/healthcare/medical-records-and-health-information-technicians.htm), [health information technologists](https://www.bls.gov/ooh/healthcare/health-information-technologists-and-medical-registrars.htm). BLS revises these every two years; the module this chapter is built from carried the 2024–34 figures (−5, +7, +15 percent) as unverified, and the 2025–35 revision replaced them while this chapter was being written. {#tbl-bls}
+: The three projections, with the reason BLS gives for each. Read from the *Occupational Outlook Handbook* on 2026-09-07: [transcriptionists](https://www.bls.gov/ooh/healthcare/medical-transcriptionists.htm), [records specialists](https://www.bls.gov/ooh/healthcare/medical-records-and-health-information-technicians.htm), [health information technologists](https://www.bls.gov/ooh/healthcare/health-information-technologists-and-medical-registrars.htm). BLS revises these every two years. The module this chapter is built from carried the 2024–34 figures (−5, +7, +15 percent) as unverified, and the 2025–35 revision replaced them while this chapter was being written. {#tbl-bls}
 
-What distinguishes them is the four-factor framework applied to non-physician
-work. Transcription decomposes into a single benchmarkable task, generalizes
-well because speech is speech, has no signature attached, and its demand is
-capped by the number of encounters. Coding and health-information work fail the
-first test: the job is judgment about what a record means and what a payer
-will accept, and the bot-wars dynamic above is *increasing* that work, not
-removing it. The people whose jobs change first are your colleagues, and the
-harm is not evenly distributed: transcription is lower-paid than the two
-occupations that are growing, so the displaced workers are the ones with the
-least cushion. The bias and equity chapter has the vocabulary for that,
-harms of allocation, and it applies to labor as much as to diagnosis.
+What separates them is the same four questions, applied to non-physician
+work. Transcription is a single task a machine can be tested on. It works
+anywhere, because speech is speech. Nobody signs a transcript. And its demand
+is capped by the number of visits. Coding and health-information work fail the
+first test. The job is judgment about what a record means and what a payer
+will accept, and the bot wars above are *increasing* that work, not removing
+it. The people whose jobs change first are your colleagues, and the harm is
+not spread evenly. Transcription pays less than the two occupations that are
+growing, so the displaced workers are the ones with the least cushion. The
+bias and equity chapter has a name for that, harms of allocation, and it
+applies to jobs as much as to diagnosis.
 
 ## Watch or listen
 
 **First, the source (1 min 24 s).** "Geoff Hinton: On Radiology," Creative
 Destruction Lab, YouTube, uploaded 24 November 2016.
 <https://www.youtube.com/watch?v=2HMPRXstSvQ>. Watch it cold. Notice how
-specific the claim is, how confident the tone is, and that the argument is
-entirely about image analysis. He is describing a task and forecasting a job.
-That gap is the chapter.
+specific the claim is, how confident the tone is, and that the whole argument
+is about image analysis. He is describing a task and forecasting a job. That
+gap is the chapter.
 
 **Then, the other side (watch the first 20 minutes).** "AIMI Grand Rounds:
 Developing Clinically Useful AI for Radiology," Curtis Langlotz, Stanford AIMI,
 YouTube, 30 January 2025, 59 min 37 s.
 <https://www.youtube.com/watch?v=WS9p0wFw7uY>. Langlotz is the radiologist
-who wrote, in 2019, that AI will not replace radiologists but radiologists who
-use AI will replace those who do not [@pmid:33937794]. Listen for what he
-says makes a tool *clinically useful* as opposed to accurate, and for every
-place where the obstacle he describes is one of the four factors rather than
-model performance. Twenty minutes is enough for the exercise; the rest is a
-good commute.
+who wrote, in 2019, that AI will not replace radiologists, but radiologists
+who use AI will replace those who do not [@pmid:33937794]. Listen for what he
+says makes a tool *clinically useful*, as opposed to merely accurate. Listen
+also for every place where the obstacle he describes is one of the four
+questions rather than model performance. Twenty minutes is enough for the
+exercise. The rest is a good commute.
 
 If you would rather read than watch, Mousa's essay in the footnote above
 covers the same ground in about the same time.
@@ -403,9 +420,10 @@ covers the same ground in about the same time.
 ::: {.callout-warning title="No patient information, and no classmate's data"}
 Every prompt in this exercise is about a specialty, an occupation, or a
 published number. None is about a patient, a rotation, or a person you know.
-Your institutional chatbot account does not change the no-PHI rule, and free
-tiers may use what you type to train the next model. The one thing you will
-paste is a public government web page.
+Your institutional chatbot account does not change the no-PHI rule (no
+protected health information, ever). Free tiers may use what you type to
+train the next model. The one thing you will paste is a public government web
+page.
 :::
 
 ### Part A: grade the model (10 minutes)
@@ -416,7 +434,7 @@ paste is a public government web page.
 > I am a fourth-year medical student choosing a specialty. Will AI replace
 > `<specialty>` by 2036? Give me your best forecast and your reasoning.
 
-**Step 2.** Grade the answer against the four factors. The question for each
+**Step 2.** Grade the answer against the four questions. The question for each
 row is not "did it mention this" but "did it give me something I could check."
 
 ```
@@ -440,27 +458,27 @@ What fraction of the job did it say is automatable? ______  Source? Y / N
 
 Search PubMed for whatever it gives you. If the study exists and contains the
 number, note it. If it does not, you have just watched a confident forecast
-rest on nothing, which is the lesson of the 2016 clip in miniature. Elena's
-version of this exercise, for the student who has not opened a chatbot in a
-year: this is ten minutes, it needs no skill with prompts, and the model
-failing is the expected result, not your failure.
+rest on nothing. That is the lesson of the 2016 clip in miniature. If you have
+not opened a chatbot in a year, this exercise is for you. It takes ten
+minutes, it needs no skill with prompts, and the model failing is the expected
+result, not your failure.
 
 ### Part B: your own forecast (15 minutes)
 
 **Step 1. Find out how the time is actually spent.** The 36 percent figure for
 radiology came from someone with a stopwatch. Most specialties have such a
-study. Search PubMed with:
+study; the term to search for is "time and motion study." Search PubMed with:
 
 ```
 "time and motion studies"[MeSH] AND <your specialty>
 ```
 
 adding `physician` or `resident` if the results are mostly about nurses.
-Read the abstracts of the two most recent that observed physicians rather
-than surveying them, and write down how the day divides. If your specialty
-has no such study, say so on the sheet; that absence is itself a finding
-about how well the job is understood, and you fall back on your own
-sub-internship, honestly labeled as one observer's estimate.
+Read the abstracts of the two most recent studies that observed physicians
+rather than surveying them. Write down how the day divides. If your specialty
+has no such study, say so on the sheet. That absence is itself a finding about
+how well the job is understood. Fall back on your own sub-internship, labeled
+honestly as one observer's estimate.
 
 **Step 2. Write three lines.**
 
@@ -479,9 +497,9 @@ Specialty: ____________________
    __________________________________________________________________
 ```
 
-Radiology's 36 percent is the benchmark on the screen, and most students
+Radiology's 36 percent is the benchmark on the screen. Most students
 overestimate the fraction for their own field when they first write it down.
-That is fine; the point of writing it down is to have something to be wrong
+That is fine. The point of writing it down is to have something to be wrong
 against later.
 
 **Step 3. Attack it.** Reread your line 2 as the uncle at dinner. What would he
@@ -491,7 +509,7 @@ clipping. Change the number if either of them convinced you, and say which.
 ### Part C: close a flag yourself (10 minutes)
 
 The module this chapter was built from carried the BLS projections marked
-"unverified," because the government site blocked the automated fetch. You
+"unverified," because the government site blocked the automated download. You
 are going to do what the software could not.
 
 **Step 1.** Open the three BLS pages linked under @tbl-bls in your browser.
@@ -509,9 +527,9 @@ this chapter was written. Note the new decade, and trust the page over the
 chapter.
 
 **Step 2.** In two sentences, explain why the first occupation moves one way
-and the other two move the other, using at least two of the four factors by
-name. Then one more sentence: who bears the cost of the −4 percent, and what
-does that population look like compared with the +16 percent one?
+and the other two move the other way. Use at least two of the four questions
+by name. Then one more sentence: who bears the cost of the −4 percent, and
+what does that group look like compared with the +16 percent one?
 
 ## Check
 
@@ -533,14 +551,14 @@ list at the top of the chapter.
 *What does this change about how you'll practice, and what would you have to
 see in the next five years to conclude you got this wrong?*
 
-Write both halves down. For the first, go back to the dinner table: your uncle
+Write both halves down. For the first, go back to the dinner table. Your uncle
 is still holding his phone. What do you say about the 2016 quote, using one
-number from this chapter and one of the four factors? If you are not going into
-radiology, answer for your own specialty, with your Part B line 2 as the
-number. For the second half, name the observation, a match statistic, a
-workforce projection, a BLS revision, a change in who signs the report, that
-would make you revise your forecast. A forecast with no possible refutation is
-not a forecast; it is a mood.
+number from this chapter and one of the four questions? If you are not going
+into radiology, answer for your own specialty, with your Part B line 2 as the
+number. For the second half, name the observation that would make you change
+your forecast: a match statistic, a workforce projection, a BLS revision, a
+change in who signs the report. A forecast that nothing could prove wrong is
+not a forecast. It is a mood.
 
 Then keep the sheet from Part B. Reread it at the end of residency. Every
 student who does this exercise has just made a confident forecast about a
@@ -553,19 +571,19 @@ able to check.
 - The most confident job-elimination prediction in modern medicine has run its
   five-year course twice over. Radiology offered more positions in 2026 than
   ever, filled 98.4 percent of them, and projects a larger workforce in 2055.
-- It failed on mechanism, not timing: a task was mistaken for a job. Four
-  questions, task decomposition, generalization, liability, and demand,
-  separate the two.
+- It failed because a task was mistaken for a job, not because the timeline
+  slipped. Four questions, task decomposition, generalization, liability, and
+  demand, tell the two apart.
 - Radiologists spend about a third of their time interpreting images. Most
-  physician jobs decompose badly.
+  physician jobs do not break neatly into tasks.
 - Mammography CAD was adopted at scale, raised biopsies without raising cancer
   detection, made some readers worse, and was paid out of existence. Adoption
   and outcomes are separate questions.
-- Scribes turn saved time into visits and RVUs. That is real and it is not
-  cost reduction; across the system, administrative AI may be raising costs
+- Scribes turn saved time into visits and RVUs. That is real, and it is not
+  cost reduction. Across the system, administrative AI may be raising costs
   through bot wars.
 - Transcription −4 percent, coding +8, health information +16, in the same
-  department. The four factors explain the split, and the harm falls on the
+  department. The four questions explain the split, and the harm falls on the
   lowest-paid of the three.
 - "Percent of what?" is a habit worth more than any of the three numbers.
 - Your uncle, and your chatbot, are forecasting a job from a task. Now you can
@@ -594,21 +612,21 @@ able to check.
 **Readings and talks**
 
 - Deena Mousa, ["AI isn't replacing radiologists"](https://www.understandingai.org/p/ai-isnt-replacing-radiologists)
-  (October 2025). The four-factor framework in this chapter is a compression
-  of her argument.
+  (October 2025). The four questions in this chapter are a short version of
+  her argument.
 - Peterson Health Technology Institute, [*Administrative AI: Current Use and
   Potential Impact*](https://phti.org/administrative-ai-current-use-and-potential-impact/)
   (April 2026), and KFF's interview with its director,
   ["The AI Arms Race in Administrative Health Care"](https://www.kff.org/other-health/the-ai-arms-race-in-administrative-health-care/)
   (July 2026).
 - [A history of AI in medicine](https://talks.seandavis.net/archive/2025-09-30-ai-history/)
-  carries the IBM Watson thread, Jeopardy! to MD Anderson setting it aside in
-  2017, and MYCIN and the AI winters before it. Read it if you want a second
-  instance of the same shape before deciding the Hinton story is about one
-  man's bad call.
+  tells the IBM Watson story, from Jeopardy! to MD Anderson setting it aside
+  in 2017, and covers MYCIN and the AI winters before it. Read it if you want
+  a second example of the same shape before deciding the Hinton story is about
+  one man's bad call.
 - [AI and machine learning for an oncology service line](https://talks.seandavis.net/archive/2024-10-28-ai-ml-oncology-service-line/)
-  has the stakeholder framing, patients, providers, researchers,
-  administrators, that the economics section needs, and the eight guiding
-  principles [@doi:10.1038/s43856-023-00279-9], two of which, "have high
-  healthcare value" and "reduce overdiagnosis and overtreatment," are the CAD
-  story stated as rules.
+  keeps apart the four groups the economics section needs to keep apart:
+  patients, providers, researchers, and administrators. It also lists eight
+  guiding principles [@doi:10.1038/s43856-023-00279-9]. Two of them, "have
+  high healthcare value" and "reduce overdiagnosis and overtreatment," are
+  the CAD story stated as rules.
