@@ -147,7 +147,7 @@ organised" is the only effect you can count on.
 %%| fig-cap: "What each element of a structured prompt changes. Four of the five act on organisation. The fifth, asking the model to name what is missing, is the only one that acts on the gap between the case and the answer."
 flowchart LR
   accTitle: What each element of a structured prompt changes
-  accDescr: Role, Context, Task, and Format all point to one box, how the answer is organised. Uncertainty, say what is missing, points to a separate box, whether the answer admits what it does not know. A dotted arrow labelled does not touch runs from the organisation box to a box labelled whether the answer is correct. A dotted arrow labelled helps you check runs from the admits-what-it-does-not-know box to the same correctness box.
+  accDescr: Role, Context, Task, and Format each point to one box, how the answer is organised. Uncertainty, meaning say what is missing, points to a separate box, whether the answer admits what it does not know. A dotted arrow runs from the organisation box to a box for whether the answer is correct, and its label says it does not touch correctness. A second dotted arrow runs from the admits-what-it-does-not-know box to that same correctness box, and its label says it helps you check.
   R[Role] --> O[How the answer is organised]
   C[Context] --> O
   T[Task] --> O
