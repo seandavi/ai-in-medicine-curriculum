@@ -119,8 +119,9 @@ mechanisms, in order of preference:
    tooling before listing; a fabricated citation in an appraisal chapter is
    disqualifying.
 
-Papers a student finds this way count toward that week's resource log — the two
-assignments share the work rather than duplicating it.
+Papers a student finds this way count toward that week's resource log, and the
+Do says so with a link to `course/resource-log.qmd`; the two assignments share
+the work rather than duplicating it.
 
 ## Rules carried over
 

@@ -471,7 +471,7 @@ telepsychiatry visit. Anesthesia, surgery, radiology, nephrology, and
 ophthalmology all have papers on this. If your specialty does not yet, use
 Eckelman's 1,692 kg per person per year [@pmid:33284703] and divide by a
 plausible number of encounters. This paper also counts toward this week's
-resource log.
+[resource log](../course/resource-log.qmd).
 
 ```
 Paper: __________________________________   PMID: ____________

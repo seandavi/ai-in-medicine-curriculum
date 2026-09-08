@@ -1,0 +1,284 @@
+---
+title: "For instructors"
+---
+
+This page is for whoever runs the course next: the author, a colleague, or
+someone at another school. It holds the parts of the design that students do
+not need to read: the module catalog and its variants, the session structure,
+how to run the [weekly resource log](../course/resource-log.qmd), how to ask a
+guest to speak, and how to adapt the course for another cohort. The design
+files themselves are in `curriculum/` in the
+[repository](https://github.com/seandavi/ai-in-medicine-curriculum).
+
+## The modules
+
+Modules are independent. Each is one Zoom session, tags the competencies it
+serves (`AIM-1` through `AIM-9` and `AIM-X`, defined in
+`curriculum/competencies.md`), and assumes no prior module. That is what makes
+the course survivable when a third of the class misses week two.
+
+| ID | Chapter | Minutes | Competencies |
+|---|---|---|---|
+| `core-foundations` | [How these systems work](../chapters/core-foundations.qmd) | 75 | AIM-1, AIM-2 |
+| `core-centaur-cyborg` | [Centaur or cyborg](../chapters/core-centaur-cyborg.qmd) | 90 | AIM-5, AIM-X, AIM-4 |
+| `core-appraisal` | [Critical appraisal](../chapters/core-appraisal.qmd) | 90 | AIM-2, AIM-9 |
+| `core-bias-equity` | [Bias and equity](../chapters/core-bias-equity.qmd) | 90 | AIM-3 |
+| `core-patient-communication` | [Talking to patients about AI](../chapters/core-patient-communication.qmd) | 90 | AIM-6, AIM-4 |
+| `core-ethics-regulation` | [Ethics, liability, and the device line](../chapters/core-ethics-regulation.qmd) | 75 | AIM-4, AIM-7, AIM-X |
+
+: Core modules. Minutes are the live session, not the chapter. {#tbl-core}
+
+| ID | Chapter | Minutes | Competencies |
+|---|---|---|---|
+| `enrichment-agentic-coding` | [Agentic coding](../chapters/enrichment-agentic-coding.qmd) | 75 | AIM-5, AIM-2, AIM-4 |
+| `enrichment-prompting-lab` | [Prompting lab](../chapters/enrichment-prompting-lab.qmd) | 75 | AIM-5, AIM-2 |
+| `enrichment-workforce-economics` | [Will AI take your job?](../chapters/enrichment-workforce-economics.qmd) | 90 | AIM-3, AIM-7 |
+| `enrichment-environment` | [What AI costs the planet](../chapters/enrichment-environment.qmd) | 60 | AIM-3, AIM-X |
+| `enrichment-rag-notebooklm` | [Grounding AI in real sources](../chapters/enrichment-rag-notebooklm.qmd) | 60 | AIM-1, AIM-9 |
+
+: Enrichment modules. {#tbl-enrichment}
+
+Eleven modules, eight slots. The surplus is deliberate. Swap by cohort interest.
+
+### The default assembly (eight sessions, two a week)
+
+The order students see on the [syllabus](../course/syllabus.qmd). Week 1 is
+orientation and stance: foundations, then centaur or cyborg. Week 2 is
+judgment: appraisal, then bias and equity. Week 3 is practice: agentic coding,
+then talking to patients, which is the signature session. Week 4 is
+consequences and closing: workforce or environment by the cohort's choice, then
+ethics and regulation, which closes on AIM-X, *what will you not delegate?*
+
+Coverage check: AIM-1 through AIM-6 all appear; AIM-4 recurs three times, AIM-5
+twice, AIM-2 three times. That meets the coverage rules in
+`curriculum/competencies.md`.
+
+### Variants
+
+**One session a week (four slots).** Run centaur or cyborg, appraisal, talking
+to patients, and ethics and regulation. This keeps the stance, the judgment,
+the signature session, and the close. Make foundations pre-work reading and
+fold bias into appraisal.
+
+**A hands-on cohort.** Swap foundations and ethics for the prompting lab and
+the retrieval lab. Carry the ethics content as a standing five-minute opening
+to every lab.
+
+**A cohort interested in policy.** Run both workforce and environment in week 4
+and make foundations pre-work.
+
+### Three ideas that recur
+
+Modules are independent, but three ideas recur across all of them. Name them in
+week one and call them by name whenever they reappear. They are what turns
+eight sessions into a course, and they are what students will still have when
+every tool taught here has been replaced.
+
+1. **Proxies fail.** Almost every AI failure in medicine is a stand-in that
+   looked reasonable. Cost stood in for need in the Obermeyer algorithm. Light
+   skin stood in for normal reflectance in pulse oximetry. Race stood in for
+   unmeasured biology in eGFR. A benchmark score stood in for clinical
+   performance in FDA clearance data. The question to train is always: *what is
+   this actually measuring, and what was it substituted for?*
+2. **Efficiency gains get eaten by volume.** Per-unit improvement gets
+   swallowed by growth in use, and this shows up in three separate literatures.
+   Google cut per-prompt energy while total emissions rose. AI made
+   radiologists more productive and imaging demand grew faster. AI scribes cut
+   documentation time per note, and the time went into seeing more patients.
+   Efficiency is not the same as less.
+3. **The published number is the optimistic one.** Before-and-after pilots on
+   self-selected early adopters beat randomized trials. Vendor benchmarks on
+   curated hard cases beat real-world deployment. The gap between the flagship
+   statistic and the trial result is the most reliable teaching material in
+   this field.
+
+## Running a session
+
+Zoom attention decays faster than in a room, so every session runs in blocks
+with a change of activity at each boundary.
+
+| Minutes | Block |
+|---|---|
+| 0 to 10 | Frame the session and restate the three standing rules: no PHI, verify before it counts, you sign the note. |
+| 10 to 20 | Demo or short didactic. Never longer. |
+| 20 to 60 | Breakouts of four or five. Not larger; participation collapses above that. |
+| 60 to 80 | Report-back and comparison across groups. |
+| 80 to 90 | Close on the standing question: *what does this change about how you'll practice?* |
+
+: The standing session structure. {#tbl-session}
+
+Running notes, from the design constraints:
+
+- **Pre-work is account creation, not reading.** Any session that needs an
+  account says so a week ahead. Creating accounts live costs ten minutes and
+  strands the students with problems.
+- **Everything uses synthetic data.** No real patient information enters any
+  tool in this course, ever. Consumer tiers carry no business associate
+  agreement.
+- **Ungraded means participation is earned.** No exams, no graded work. Every
+  session has to justify itself on the day, which is why each one produces
+  something: a worked case, a judgment, a scored rubric.
+- **Cost is an equity problem.** Free tiers only. If a session would work
+  better on a paid tier, it gets redesigned, not assigned.
+
+## Running the resource log
+
+The [student page](../course/resource-log.qmd) has the instructions and the
+entry template. This section is what the instructor does.
+
+### What changed from earlier years
+
+Kept as-is: the weekly cadence, three to five resources a week, three to five
+sentences per resource, complete freedom of topic.
+
+Changed:
+
+- **Each entry answers three fixed prompts** (what it says, what it changed for
+  you, what it left open). Same length as before. The prompts push the
+  sentences from summary toward reflection.
+- **An optional breadth nudge.** Students are encouraged, not required, to
+  touch two or three of the listed theme areas across the block.
+- **Week 4 is synthesis, not reading.** Students pick one theme from their
+  weeks 1 to 3 entries and write a short piece about it, then present it in
+  the last small group.
+- **A short AI-use note each week.** One or two sentences on whether and how
+  they used a chatbot and what it got wrong. This is deliberately low-effort.
+  Its purpose is to make the tools discussable, not to police them.
+
+Grading load is unchanged or slightly lower, since week 4 replaces three to
+five entries with one short piece.
+
+### Learning objectives
+
+By the end of the block, students will be able to:
+
+1. **Find and select** resources on AI in medicine from a range of source
+   types: tutorials and courses, primary literature, reviews, policy and
+   regulatory documents, and essays on ethics, equity, environment, or
+   economics.
+2. **State** the main point of a resource accurately and concisely,
+   distinguishing what it shows from what it argues.
+3. **Say** how a resource changed, sharpened, or challenged their own prior
+   understanding.
+4. **Identify** an open question or unverified claim that a resource leaves
+   behind.
+5. **Synthesize** their own reading across a block into a short piece on one
+   theme, drawing connections and disagreements among sources.
+6. **Use AI chat tools reflectively** as a reading aid, noticing where they
+   help and where they mislead.
+
+### Timeline
+
+| Week | Deliverable | Small-group tie-in |
+|---|---|---|
+| 1 | 3 to 5 resources, three prompts each, AI-use note | Each student names one resource and one surprise |
+| 2 | 3 to 5 resources, three prompts each, AI-use note | What connected to last week; what contradicted it |
+| 3 | 3 to 5 resources, three prompts each, AI-use note | Which theme are you choosing for week 4, and why |
+| 4 | One-page synthesis on a theme and a five-minute presentation | Presentations |
+
+: Resource log timeline. If you keep only two small-group sessions, use weeks 1 and 4. {#tbl-log-timeline}
+
+### What to prepare
+
+- A short menu of theme areas (the list on the student page) with two or three
+  starter resources in each, clearly marked optional. Students who already know
+  what they want will ignore it; students who stall will use it.
+- The entry template posted as a file.
+- One exemplar week written by you: three entries showing the three prompts
+  done well, including one on something non-technical (an ethics essay, a piece
+  on energy use) so students see that breadth is welcome.
+
+### Grading
+
+Complete or incomplete, with brief feedback in weeks 1 and 2 while habits form.
+
+| Criterion | Meets | Falls short |
+|---|---|---|
+| Resources chosen | Specific, locatable, varied across the block | Only general news, or only one type |
+| Prompt 1 (what it says) | Accurate main point in one or two sentences | Restated title or abstract |
+| Prompt 2 (what it changed) | Names a specific belief, question, or assumption that shifted or sharpened | "It was interesting" |
+| Prompt 3 (what it left open) | A real question, or something to verify | "More research is needed" |
+| Week 4 synthesis | Draws on at least three of their own earlier entries | Disconnected from weeks 1 to 3 |
+
+: Resource log rubric. {#tbl-log-rubric}
+
+### Running the small groups
+
+Keep them small. Ask each student one question: "What is the most interesting
+disagreement you have found so far?" By week 3 most students will have one.
+Those who do not need a nudge toward a second theme area.
+
+### The reading companion, at three levels of effort
+
+The student page carries four weekly chatbot prompts, one per week, with less
+scaffolding each week. Three ways to deliver them:
+
+**Level 1, posted prompts.** Post each week's prompt as text; students paste it
+into any chatbot. No infrastructure. You cannot see transcripts. This is what
+the student page assumes.
+
+**Level 2, a shared assistant.** A Claude Project, custom GPT, or similar with
+the weekly system prompt and the entry template attached. Share the link; swap
+the prompt weekly. The simplest option that gives every student the same
+experience.
+
+**Level 3, a course chatbot.** A small app you control with per-week prompts,
+transcript logging with consent, and a "flag this as wrong" button. Only worth
+it if you expect to run the course for several years or want the transcripts.
+The planned chat tutor described in the [preface](../index.qmd) is this level.
+
+Whichever level: in weeks 2 and 3 the interesting AI-use notes are the ones
+where the bot's summary of something and the student's own reading diverged.
+Ask about those in small group.
+
+## Asking a guest to speak
+
+The design caps guests deliberately: one per session, two across the whole
+course. Every session pairs an idea with an activity, and a guest-heavy course
+turns back into lectures without anyone deciding to.
+
+The most useful guest is someone who can speak to a tool actually deployed in
+the local health system in the last quarter. That is what a fourth-year
+audience wants and what a survey lecture cannot give. Good matches by module:
+ambient documentation as deployed (centaur or cyborg); disclosure
+conversations and a patient-facing tipsheet (talking to patients); how a tool
+gets approved and bought locally (appraisal); the device boundary and local
+policy (ethics); a proxy failure in a model that was really deployed (bias and
+equity); what AI is doing to one specialty's job market (workforce).
+
+The invitation should say: the date and time; a twenty-minute slot inside a
+ninety-minute session, never a fifty-minute lecture; the competency the
+session serves; Zoom only; about forty fourth-year students; ungraded; and the
+actual ask, *bring one thing you deployed and one thing that went wrong.*
+Sending the invitations as one batch with a dean's co-signature converts
+maybes to yeses. Sending them one at a time does not.
+
+## Adapting the course for another cohort
+
+Everything specific to the original offering (people, dates, local accounts)
+is kept out of the chapters on purpose, so the book can be reassembled
+elsewhere. To run it for your own cohort:
+
+1. **Check the design constraints** in `curriculum/design-constraints.md`
+   against yours. The chapters assume about forty fourth-year students, four
+   weeks, Zoom, ungraded, and free tiers. If you have fewer weeks, use the
+   one-session-a-week variant above.
+2. **Choose an assembly.** The default or one of the variants. Update the
+   [syllabus](../course/syllabus.qmd) tables and the due-date placeholders.
+3. **Confirm tool access.** The chapters assume one general-purpose chatbot
+   without a signup step. Several `[VERIFY]` flags in the chapters are access
+   details to confirm the week before: an institutional NotebookLM login, a
+   student plan's status, an episode still being online. The open flags are
+   listed in one GitHub issue on the repository.
+4. **Set your own institution's policy text** where a chapter says to check
+   it, for example the attestation language for ambient documentation in
+   centaur or cyborg, and your state's disclosure statutes in talking to
+   patients.
+5. **Choose your guests**, if any, using the section above.
+6. **Write the exemplar week** of the resource log yourself. Students copy
+   what they see.
+
+Chapters are reviewed against six invented readers before they change; the
+[Review personas](personas.qmd) appendix has them, and the
+[How this book was made](about.qmd) appendix says how the review runs. If you
+change a chapter, run it past the six.
