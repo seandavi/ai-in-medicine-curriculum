@@ -59,7 +59,7 @@ message without reading it. Nobody said whether that was fine.
 Look at the list again with one question. For each line, if you hand it to the
 machine, what do you get back, and what do you lose? The notes are the easy
 case. Even there the answer splits in two. A note that is *drafted* for you and
-a note that is *written* by you are different things wearing the same template.
+a note that is *written* by you are different things that share one template.
 The discharge summary is the hard case. It is the only document on the list
 that forces you to read eleven days of chart and decide what happened to this
 person. That reading is most of what you will know about them when their
@@ -82,12 +82,12 @@ less supervision, and with more freedom, in roughly that order. Two of this
 course's faculty, quoted from its prior session, describe the two ends of this.
 One put it bluntly at a national medical-education meeting: you *can* choose to
 avoid AI, but is that really an option? (Chad Stickrath, MD). The other, a
-pediatric hospitalist, said the thing that keeps this chapter honest: we should
+pediatric hospitalist, said what this chapter must not forget: we should
 be scared, because what we do is scary (Christina Olson, MD). Both are right.
 
-There is a second reason, and it is specific to where you are standing. You are
+There is a second reason, and it is specific to your stage of training. You are
 about to learn clinical reasoning for the first time, on real patients. A tool
-will be at hand that produces a plausible answer to every question you were
+will be available that produces a plausible answer to every question you were
 supposed to struggle with. Someone who has practiced for fifteen years and
 starts using these tools risks losing a skill. You risk never gaining it, or
 gaining it wrong. Those are three different problems. The most useful point in
@@ -141,7 +141,7 @@ paper reports the difference, not a median. Redrawn from the published numbers
 [@pmid:39466245]; data are not copyrightable.
 :::
 
-The tool was capable. The people holding it did not get the benefit. The
+The tool was capable. The physicians using it did not get the benefit. The
 authors read the gap as a training problem. They call for "technology and
 workforce development to realize the potential of physician–artificial
 intelligence collaboration." Workforce development means you.
@@ -152,18 +152,18 @@ treatment and testing decisions as each case unfolded. This time the
 physicians with the model scored 6.5 points higher than those without (95% CI
 2.7 to 10.2). They spent about two minutes longer per case. Their scores could
 not be told apart from the model alone [@pmid:39910272]. Two trials, same
-team, same kind of tool, opposite headline. The thing that changed was not the
+team, same kind of tool, opposite result. The thing that changed was not the
 model. It was the task, and how the physicians worked with it.
 
 There are names for those ways of working. They come from a 2023 field
 experiment in which several hundred management consultants were given GPT-4,
 the model behind ChatGPT at the time. The researchers watched how the successful ones worked
-[@doi:10.2139/ssrn.4573321]. Two patterns appeared, and the names have stuck:
+[@doi:10.2139/ssrn.4573321]. Two patterns appeared, and the names are still used:
 
 - A **centaur** divides the work. Like the creature, there is a clean line
   between the human half and the horse half. You give the machine one clearly
   marked piece of the task. You keep the rest. You check what comes back
-  before it touches anything.
+  before you use it anywhere.
 - A **cyborg** blends the work. You move back and forth with the machine
   inside a single piece of work: drafting a sentence, asking for three
   alternatives, taking one, rewriting it, asking what is missing.
@@ -174,7 +174,7 @@ centaur, after Kasparov's human-plus-computer exhibition matches in the late
 process beat grandmasters with a worse one [VERIFY: Kasparov's own account of the 2005
 freestyle tournament; not a peer-reviewed source]{.verify}. The skill is
 knowing which way of working a task calls for, and switching. The 2025 *NEJM*
-review this chapter is built on gives the rule of thumb [@pmid:40834302]. Work
+review this chapter is based on gives a simple rule [@pmid:40834302]. Work
 as a centaur for high-stakes tasks, and for tools that have not been validated
 for the use you are putting them to. Work as a cyborg where the task is
 low-risk or creative, or where the tool is well validated for exactly this.
@@ -236,7 +236,7 @@ than answers. While they had the tool, both AI groups did far better on
 practice problems: 48% higher scores with the plain chat, 127% with the tutor.
 Then the tool was taken away for the exam. The plain-chat students scored 17%
 *worse* than the students who had never had access. The tutor group's losses
-were largely wiped out [@pmid:40560616]. The authors' word for what the plain
+were much smaller [@pmid:40560616]. The authors' word for what the plain
 chat became is *crutch*. The finding is not that the tool failed. The thing it
 improved and the thing the students needed were two different things.
 
@@ -269,9 +269,9 @@ The plan removes fluid from the patient and gives fluid to the patient in the
 same note. A rising creatinine on day 3 of diuresis is the expected cost of
 getting fluid off a congested kidney. The decision an intern is supposed to
 make here, and to be quizzed on at rounds, is whether to hold the diuretic,
-slow it, or push through. The draft made that decision by template. If you
+slow it, or continue it. The draft made that decision by template. If you
 accept it, you have a note with a wrong plan. If you accept it on ten patients,
-you have a pattern: creatinine up, add fluids. That is mis-skilling. The tell
+you have a pattern: creatinine up, add fluids. That is mis-skilling. The danger
 is that nothing about the sentence looks wrong. It looks like every other note.
 
 | Peril | What it is | The intern task most exposed | The defense |
@@ -288,12 +288,12 @@ The Turkish trial measured grades. A separate randomized study measured what
 learners *do*. It compared students working with a chatbot, with a human
 expert, and with a checklist tool. It recorded their behavior as well as
 their scores. The chatbot group did better on the immediate task. They did not
-gain more knowledge, more motivation, or more ability to carry what they
+gain more knowledge, more motivation, or more ability to apply what they
 learned to a new problem. The authors' name for the behavior behind that gap
 is *metacognitive laziness*: handing the job of monitoring and checking your
 own thinking to the tool [@doi:10.1111/bjet.13544]. Metacognition is the
 ordinary word for noticing what you know and do not know. Laziness here is not
-a moral judgment. It is what any of us does when a faster path exists.
+a moral judgment. It is what any of us does when there is a faster way.
 
 The same authors' answer to "should learners use these tools?" is *probably,
 yes*. The course's prior session turned their recommendations into five
@@ -310,7 +310,7 @@ techniques and added a sixth. They are the defense against never-skilling in
 3. **Teach back.** State your reasoning in your own words and ask whether it
    is right. Do not ask for the reasoning to be supplied.
 4. **Focus on the why.** Why this drug and not that one, why this cutoff, why
-   first-line. The reason is what lets you carry the knowledge to the next
+   first-line. The reason is what lets you apply the knowledge to the next
    patient.
 5. **Use the four patterns on purpose.** Explanation of something you already
    read. Debugging your own reasoning after it failed. Clearing up a concept.
@@ -413,7 +413,7 @@ own supervisors in three months. The authors note that supervisors often have
 less experience with these tools than their learners. They recommend that
 supervisor and learner look into the question together, rather than the
 supervisor acting as the authority [@pmid:40834302]. The structure they propose
-for that conversation is a debrief. You will be on the receiving end of it, so
+for that conversation is a debrief. You will be the one being debriefed, so
 learn it now.
 
 ::: {.callout-note title="DEFT-AI: the debrief"}
@@ -425,7 +425,7 @@ learn it now.
 - **AI** recommendation: what are the next steps for safe use?
 
 Five questions. The second is the one that matters. If the honest answer to
-"how did you verify?" is "I did not," the rest of the debrief writes itself.
+"how did you verify?" is "I did not," the rest of the debrief follows from that.
 :::
 
 The review names one more thing the perils above depend on, and calls it the
@@ -444,8 +444,8 @@ Dr. Jonathan Chen on Medical AI" (October 15, 2025; 48 min).
 Chen is the senior author of both randomized trials above. Budget 25 minutes.
 Listen for three things. First, his own account of why the model beat the
 physicians in the first trial and why the second trial came out differently.
-Second, what he says about automation anxiety, which is the feeling underneath
-the perils section. Third, the claim in the episode's own summary that empathy,
+Second, what he says about automation anxiety, which is the feeling the
+perils section is about. Third, the claim in the episode's own summary that empathy,
 rather than memorization, may become the most valuable clinical skill. Then ask
 the question this chapter asks: which of the tasks on the 6:10 a.m. list does
 that claim actually change, and which does it leave exactly where it was?
@@ -454,7 +454,7 @@ that claim actually change, and which does it leave exactly where it was?
 Thought with Dr. Adam Rodman" (June 19, 2024).
 <https://ai-podcast.nejm.org/e/ai-and-the-evolution-of-medical-thought-with-dr-adam-rodman>
 Rodman is a co-author on both trials and a historian of clinical reasoning. The
-episode is the longer view: what clinicians have handed to instruments before,
+episode takes the historical view: what clinicians have handed to instruments before,
 and what happened to the skill each time.
 [VERIFY: episode length before assigning]{.verify}
 
@@ -477,7 +477,7 @@ of the course.
 
 **Step 1. Sort the eight tasks.** These are the tasks from the course's prior
 session. They are the 6:10 a.m. list with the phone call and the pre-rounding
-folded in. For each one, write a verdict, a risk, whether you know of a
+added. For each one, write a verdict, a risk, whether you know of a
 validated tool for it, the peril it exposes you to most, and one sentence of
 justification. Copy the grid into a document.
 
@@ -503,7 +503,7 @@ Its row: ______  ______  ______  ______  ______________________
 
 The first two rows are deliberately a pair. If you gave them the same verdict,
 stop. Ask what the difference is between a task where a human is already
-holding the pen and one where nobody is. Most of the learning in this exercise
+writing and one where nobody is. Most of the learning in this exercise
 is in that pair.
 
 For row 3, you may want a real search to sort rather than an imagined one. Use
@@ -570,7 +570,7 @@ a setting.
 ::: {.callout-tip title="If you have ten minutes and no appetite for the chatbot"}
 Do Step 1 of Part A and nothing else. The sort is a judgment task, not a tool
 task. A completed grid with honest "don't know" entries in the validation
-column is the whole point. The tool can wait until you have decided what you
+column is enough. The tool can wait until you have decided what you
 would let it do.
 :::
 
@@ -583,11 +583,11 @@ Score yourself against this before moving on.
 | Eight sorted tasks | Each verdict names the risk and the validation status, and the draft/write pair has different verdicts or a stated reason they do not | Verdicts without risk or validation; the pair sorted together without comment |
 | A peril per row | Deskilling, never-skilling, and mis-skilling each appear at least once, on a task where that peril fits | One word used for every row |
 | Documentation and disclosure columns | Row 8 answers for the patient, and "nothing" is justified where it appears | Columns blank or "N/A" |
-| A written disagreement | The opposing case is one a co-intern could actually make, and your verdict states its grounds | A strawman, or "I still think I'm right" |
+| A written disagreement | The opposing case is one a co-intern could actually make, and your verdict states its grounds | A weak version no co-intern would make, or "I still think I'm right" |
 | Two prompts | The rewrite says who, where, and what, and asks for a hint or a question rather than the product | The rewrite is the fast prompt with "please" added |
 | The two findings | You can say what the two physician trials found, what the two learner studies found, and why they are not in conflict | "AI is better than doctors" or "AI hurts learning" alone |
 | Two techniques | Two of the six, in your own words, with the peril each defends against | "Be careful" |
-| The one sentence | *If you could not have written it, do not sign it*, and you can say which task on the list it bites hardest | Only the slogan |
+| The one sentence | *If you could not have written it, do not sign it*, and you can say which task on the list it applies to most | Only the slogan |
 
 ## What this changes for you
 
@@ -618,7 +618,7 @@ answer, and it is the one this chapter most wants you to revisit.
   defenses. A fourth-year is most exposed to the middle one.
 - Randomized studies of learners find the tool improves the task and not the
   learning. Asking for hints, teaching back, and being quizzed are the
-  techniques that close that gap.
+  techniques that reduce that gap.
 - You sign the note. Institutional tools are covered by an agreement and a
   policy; the chatbot in the other tab is covered by neither.
 - If you could not have written it, do not sign it.
@@ -628,7 +628,7 @@ answer, and it is the one this chapter most wants you to revisit.
 
 **Papers**
 
-- The review this chapter is built on, with the three perils, adaptive
+- The review this chapter is based on, with the three perils, adaptive
   expertise, and DEFT-AI in full [@pmid:40834302].
 - The two physician trials: diagnosis [@pmid:39466245] and management
   [@pmid:39910272]. Read the discussion sections for what the physicians
@@ -649,7 +649,7 @@ answer, and it is the one this chapter most wants you to revisit.
 
 - [Prompt engineering](https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/):
   ten rules with clinical examples throughout. Who / Where / What is a
-  shortened form of the first three. [the prompting lab](enrichment-prompting-lab.qmd) is built on this deck.
+  shortened form of the first three. [the prompting lab](enrichment-prompting-lab.qmd) is based on this deck.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/):
   attribution and academic integrity, for the moment one of these tools drafts
   something with your name on it outside the hospital.
