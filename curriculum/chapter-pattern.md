@@ -123,6 +123,25 @@ Papers a student finds this way count toward that week's resource log, and the
 Do says so with a link to `course/resource-log.qmd`; the two assignments share
 the work rather than duplicating it.
 
+## Language
+
+Written for a fourth-year student who has never heard the term and may be reading
+in a second language (Elena in `personas.md`). Sentences about 20 words, one idea
+each. No em-dashes. Design-document vocabulary (anchor, register, throughline,
+artifact, proxy, framing, grounded, surface, mode) is replaced with plain words or
+defined in plain words on first use.
+
+**Say what you mean.** Mannered prose substitutes metaphor and flourish for direct
+statement: "a dial worth turning" for "a parameter worth varying", "earns its keep"
+for "still matters", "load-bearing", "the spine", "lever", "get in the door",
+"counterweight", "hand off", "landing cold". The phrases exist to display the writer,
+not to convey the idea, and they are imprecise, because a metaphor carries
+connotations the writer did not choose. When a literal phrase exists, use it. A
+metaphor stays only when it is the chapter's own teaching device and is explained
+(the keyboard-suggestion analogy in foundations; the centaur and cyborg names) or
+when it is clinical idiom a student uses at work ("rule out", "red flag" for a
+warning sign). The three recurring ideas keep their fixed names.
+
 ## Rules carried over
 
 - No PHI, ever; everything uses synthetic data.
