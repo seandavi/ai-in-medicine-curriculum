@@ -139,8 +139,9 @@ chapter pattern, wrote the first chapter, and then had ten AI agents draft
 the remaining chapters in parallel from the module plans, each with citations
 checked against PubMed, an answer key, and a review as six invented readers.
 The author read the result, and the chapters then went through a
-plain-language pass, a second six-persona review, and this cross-reference
-pass, each also run by AI agents under the author's direction. The author
+plain-language pass, a second six-persona review, a cross-reference pass,
+and a pass replacing metaphor with direct statement, each also run by AI
+agents under the author's direction. The author
 edited and committed all of it. The full account, including what the AI did
 and what a person checked, is in the appendix
 [How this book was made](appendix/about.qmd) and the
