@@ -21,7 +21,8 @@ By the end of this chapter you will be able to:
 
 **Time.** About 20 minutes of reading, 15 minutes of watching, 35 minutes of
 building and checking, and 5 minutes for the Check. You need your institutional
-ChatGPT Edu account and one MDCalc tab. (ChatGPT's *canvas* is a side panel
+ChatGPT Edu account and one tab open on MDCalc, the free calculator website
+most residents use. (ChatGPT's *canvas* is a side panel
 that shows the page you build, running.) Nothing installs. Other tools, and
 what each one asks of you at signup, are listed in the Do block.
 
@@ -125,6 +126,7 @@ what they are allowed to touch. @fig-chatbot-agent shows the two shapes.
 ```{mermaid}
 %%| label: fig-chatbot-agent
 %%| fig-cap: "Two ways to use the same model. A chatbot writes text and stops. A coding agent loops: plan, act on real files or programs, observe the result, and continue, inside a boundary of permissions you set."
+%%| fig-alt: "Flowchart with two boxes. Left, Chatbot: your prompt leads to the model writing text, then to you copying what you want. Right, Coding agent: your goal leads to plan a step, then act by writing a file or running code, then observe the result, which loops back to plan a step or ends by showing you what it built."
 flowchart LR
   subgraph C["Chatbot"]
     direction TB
@@ -369,7 +371,7 @@ the assumed path. If canvas does not appear, your workspace administrator may
 have turned off canvas code execution; use the fallback below.
 [VERIFY: canvas preview enabled in the institutional ChatGPT Edu workspace]{.verify}
 
-**Fallback that works with any chatbot, including Copilot.** Ask for "a single
+**Fallback that works with any chatbot, including Microsoft Copilot.** Ask for "a single
 HTML file". Copy the whole code block into a plain text editor (Notepad, or
 TextEdit in plain-text mode). Save it as `calc.html` and double-click it. Your
 browser opens it. Nothing is installed. You have made a file, which is what
