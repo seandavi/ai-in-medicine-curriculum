@@ -25,8 +25,8 @@ By the end of this chapter you will be able to:
 You need a Google account for NotebookLM. A personal account is fine; see the
 access note in the Do block. You also need one general chatbot in a second tab,
 such as your institutional ChatGPT Edu or Microsoft Copilot. Nothing installs.
-NotebookLM's free tier allows 50 sources per notebook and 50 questions a day
-[VERIFY: limits taken from third-party guides, 2026-09; check Google's own help page before the cohort]{.verify}.
+NotebookLM's free tier allows 50 sources per notebook and 50 chat questions a
+day, according to Google's own help page (checked September 2026).
 That is more than this chapter needs, but do not spend the day's questions in
 the first ten minutes.
 
@@ -419,7 +419,7 @@ missing or refuses to load, your school's administrator has turned it off for
 your part of the organization. They can do that. Do not spend time on it;
 switch to a personal account. Google's own help page confirms that most work
 and school accounts have access and that administrators control it
-[VERIFY: institutional NotebookLM status at your school, the week before the cohort]{.verify}.
+[VERIFY: sign in with a school Google account the week before the cohort and confirm NotebookLM loads; this cannot be checked remotely]{.verify}.
 
 If you have no Google account and will not make one: your institutional
 ChatGPT Edu or Copilot lets you attach files and say "answer only from the

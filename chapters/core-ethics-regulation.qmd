@@ -119,12 +119,15 @@ standard of care at 6:40 p.m. with fourteen notes to sign? That is exactly
 the question no court has yet answered.
 
 ::: {.callout-note title="Your insurer, briefly"}
-Malpractice insurers have not written AI out of their policies. The Doctors
-Company has said publicly that it has no AI exclusion, and that it would
-defend a physician and pay the claim when AI played a role. Across the wider
+Malpractice insurers have not written AI out of their policies. The chief
+operating officer of The Doctors Company told Medical Economics in 2025 that
+the carrier has no AI exclusion, and that it would defend a physician and pay a
+covered claim when AI played a role
+([interview](https://www.medicaleconomics.com/view/ai-on-trial-how-malpractice-insurers-can-help-physicians-navigate-new-risks)).
+The carrier reprinted the interview in its own newsletter. Across the wider
 market, insurers decide case by case, and they advise physicians to tell
 their insurer before adopting a clinical AI tool
-[VERIFY: statement reported in Medical Economics, 2025; confirm against the carrier's own policy language](https://www.medicaleconomics.com/view/ai-on-trial-how-malpractice-insurers-can-help-physicians-navigate-new-risks){.verify}.
+[VERIFY: quote against the Medical Economics interview; the carrier's site links it but does not repeat the wording; checked 2026-09-08]{.verify}.
 For a resident, the coverage that matters first is your institution's.
 Someone in the GME office can tell you what it says. Ask in orientation, not
 after.
@@ -311,8 +314,12 @@ yours.
 One small irony, if you want it. FDA's own internal document-review model,
 Elsa, was released to agency staff in 2025
 ([FDA press release, December 2025](https://www.fda.gov/news-events/press-announcements/fda-expands-artificial-intelligence-capabilities-agentic-ai-deployment)).
-Trade press reported accuracy and hallucination problems in its early
-versions [VERIFY: reports of Elsa hallucinations and the Commissioner's acknowledgment; trade press, mid-2025]{.verify}.
+In July 2025, CNN reported that FDA reviewers had seen Elsa cite studies that
+did not exist. The Commissioner said he had not heard those specific concerns,
+and an HHS spokesperson said that large language models "inherently
+hallucinate"
+([CNN, 23 July 2025](https://www.cnn.com/2025/07/23/politics/fda-ai-elsa-drug-regulation-makary))
+[VERIFY: quotes as reported by Engadget and NOTUS; the CNN page could not be opened by tool on 2026-09-08]{.verify}.
 The agency writing the rules is working through the same problems as
 everyone else.
 
@@ -629,9 +636,9 @@ have changed their answer, and the useful skill is noticing why.
 
 - [FDA, Clinical Decision Support Software](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software)
 - [FDA, AI-enabled medical devices list](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices).
-  Counts that are often quoted (more than 1,400 authorized; a record year in 2025;
-  most in radiology) come from secondary trackers of this list
-  [VERIFY: totals against the live list before quoting a number]{.verify}.
+  1,614 authorizations at the 4 September 2026 update; 335 decisions in 2025, a
+  record year; about three quarters in radiology. The FDA says the list is not
+  complete, so re-count from its CSV and give the date when you quote it.
 - [ASTP/ONC, HTI-1 and HTI-5](https://www.healthit.gov/topic/laws-regulation-and-policy/hti-5-proposed-rule-fact-sheet)
 - [HHS, business associate contracts](https://www.hhs.gov/hipaa/for-professionals/covered-entities/sample-business-associate-agreement-provisions/index.html)
 

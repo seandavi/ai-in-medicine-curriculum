@@ -162,12 +162,13 @@ not a looked-up fact. But now the error has a place to hide.
 
 ### Two names for the same thing
 
-In February 2025 Andrej Karpathy, one of the founders of OpenAI, invented the
+In February 2025 Andrej Karpathy, a founding member of OpenAI, invented the
 phrase "vibe coding". It means describing what you want, accepting what the
 model produces, and never reading the code. Collins Dictionary named it word
-of the year for 2025. A year later Karpathy said the phrase was out of date
-and proposed "agentic engineering" instead: directing and reviewing an agent's
-work rather than accepting it [VERIFY: Karpathy posts of 2 Feb 2025 and Feb 2026; Collins WOTY 2025; secondary sources in research notes]{.verify}.
+of the year for 2025. A year later Karpathy wrote that the phrase was out of
+date and, as widely reported, proposed "agentic engineering" instead:
+directing and reviewing an agent's work rather than accepting it
+[VERIFY: wording of Karpathy's 4 Feb 2026 post; the post exists but its full text could not be read on 2026-09-08, and the "agentic engineering" phrasing is from trade coverage]{.verify}.
 
 Both terms will be gone before you finish residency. The shift between them is
 the part that lasts. The first name treats your judgment as something you set
@@ -282,10 +283,10 @@ inputs, the rule it applied, and where the rule came from is one a clinician
 can check. A bare number is not. A personal study aid that a student uses to
 practise scores is not a device. The same page, bookmarked on the workroom
 computers and used to decide who gets listed, is a different question. The
-answer depends on what it shows and who relies on it. The FDA revised its
-decision-support guidance in January 2026. What the revision changed, and the
-rest of the regulation, belong to [the ethics and regulation chapter](core-ethics-regulation.qmd)
-[VERIFY: FDA CDS guidance, revised 6 January 2026, current text]{.verify}.
+answer depends on what it shows and who relies on it. The FDA reissued its
+decision-support guidance on 29 January 2026, replacing a version dated 6
+January. What the revision changed, and the rest of the regulation, belong to
+[the ethics and regulation chapter](core-ethics-regulation.qmd).
 
 For this chapter, the working rule is simpler than the regulation. **Toy, not
 device.** Your tool carries a banner saying so, in the prompt, before it
@@ -372,7 +373,7 @@ patient with a sodium of 118.
 open in the *canvas* side panel, with a preview button that runs it. This is
 the expected route. If canvas does not appear, your workspace administrator may
 have turned off canvas code execution; use the fallback below.
-[VERIFY: canvas preview enabled in the institutional ChatGPT Edu workspace]{.verify}
+[VERIFY: log in to the institutional ChatGPT Edu workspace and run the starter prompt the week before the cohort; OpenAI's admin documentation confirms canvas code execution is a workspace setting, checked 2026-09-08]{.verify}
 
 **Fallback that works with any chatbot, including Microsoft Copilot.** Ask for "a single
 HTML file". Copy the whole code block into a plain text editor (Notepad, or
@@ -618,8 +619,9 @@ each one is compared against. One word is not an answer to either.
 
 - The full agents, Claude Code, Codex, Gemini CLI, and GitHub Copilot
   in an editor, need a local install, a terminal, and in most cases a paid
-  plan; the student Copilot plan paused new signups in April 2026
-  [VERIFY: current status of the GitHub Copilot student plan]{.verify}. Try
+  plan; new signups for the student Copilot plan have been paused since April
+  2026 with no announced end date, though Copilot Free still accepts signups
+  [VERIFY: pause still in force? checked 2026-09-08 on the GitHub changelog and community FAQ]{.verify}. Try
   one after the course, on a project with nothing in it worth stealing.
 - Google Colab runs Python notebooks in a browser with a Google account and no
   install. Its built-in agent can run a whole data analysis, start to finish,

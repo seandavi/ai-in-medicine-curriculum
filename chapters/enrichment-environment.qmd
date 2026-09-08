@@ -112,10 +112,11 @@ medium-length responses.
 
 **September 2024.** *The Washington Post* worked with the same Riverside
 group to estimate what a 100-word email written by GPT-4 costs. They reported
-519 mL of water and 0.14 kWh of electricity: about a bottle, and about
-fourteen LED bulbs for an hour. The headline was "A bottle of water per
-email."
-[VERIFY: the Post's stated location assumptions and its lower-bound figure; the article was paywalled at the time of writing and its numbers here are taken from secondary reporting]{.verify}
+519 mL of water and 0.14 kWh of electricity for a typical US data center, with
+a range by location from about 235 mL in Texas to about 1,400 mL in Washington
+state: about a bottle, and about fourteen LED bulbs for an hour. The headline
+was "A bottle of water per email."
+[VERIFY: figures and location assumptions taken from Tom's Hardware and TechRepublic coverage of the Post article; the article itself is paywalled and was not read, 2026-09-08]{.verify}
 Notice what has changed since the preprint: a much larger model, a specific
 task rather than a "simple" question, and a number roughly twenty to fifty
 times larger per interaction, whatever the exact assumptions were. The
@@ -302,10 +303,12 @@ clusters of computers for training a model. At its first site, in South
 Memphis, the turbines ran for months before any air permit was issued, in a
 county the American Lung Association had already graded F for ozone. At its
 second site, just across the state line in Southaven, Mississippi, the NAACP
-sued in federal court in 2026 over 27 turbines running without a Clean Air
-Act permit, half a mile from homes and a mile from an elementary school
+sued in federal court in April 2026 over 27 turbines running without a Clean
+Air Act permit, half a mile from homes and a mile from an elementary school
 ([Earthjustice case page](https://earthjustice.org/case/xai-illegal-gas-power-plant-data-center-colossus)).
-[VERIFY: turbine count and permit status as of the date you read this; the case was active at the time of writing]{.verify}
+By August 2026 local reporting counted more than 50 turbines running there,
+still without a permit, and the court had not yet ruled
+[VERIFY: turbine count and case status; the injunction hearing was postponed on 21 August 2026 and there was no ruling as of 8 September 2026; the distances are from the complaint as reported, not read by tool]{.verify}
 The residents of those neighborhoods will present to an emergency
 department with asthma exacerbations, and the physician seeing them will
 have no way to link the visit to the turbines. That is environmental exposure

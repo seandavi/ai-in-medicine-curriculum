@@ -190,12 +190,14 @@ empathetic when told a physician wrote it, whether or not one had
 So the label costs something, and the label is true. Leave it in. The authors
 of the Duke survey said the same: telling patients may slightly reduce
 satisfaction, and should be done anyway. In some states you no longer have the
-choice. California has required a disclaimer on generative-AI patient
-communications that no clinician reviewed since January 2025. Texas has
-required disclosure of AI use in treatment by the date of service since January
-2026
-[VERIFY: current text and scope of California AB 3030 and Texas HB 149 / SB 1188; check your own state]{.verify}.
-[the ethics and regulation chapter](core-ethics-regulation.qmd) covers the law. Here the point is that what
+choice. Since January 2025, California has required a disclaimer on
+generative-AI messages about a patient's clinical care unless a licensed
+clinician read and reviewed them. Since September 2025, Texas has required a
+practitioner who uses AI for diagnosis to tell the patient and to review what
+the AI wrote. Since January 2026, a second Texas law has required anyone
+providing health care to say when a patient is interacting with an AI system,
+by the date of the first service. Check your own state.
+[The ethics and regulation chapter](core-ethics-regulation.qmd) covers the law. Here the point is that what
 the patient expects and what the statute requires are starting to say the same
 thing.
 
@@ -400,7 +402,7 @@ The first twenty minutes tell the story; the rest is worth hearing if you have t
 **Alternative.** *Today, Explained* (Vox), "Paging Dr. ChatBot" (October 26,
 2025; 30 min), on patients and physicians both turning to chatbots, if you want
 the version written for a general audience. *Tradeoffs*, "Should I Trust AI to
-Diagnose Me?" (October 30, 2025), with physician and writer Dhruv Khullar,
+Diagnose Me?" (October 30, 2025; 25 min), with physician and writer Dhruv Khullar,
 covers the same topics. It adds the argument that relying on the tool weakens
 your own skill, often called deskilling
 [VERIFY: episode length]{.verify}.
@@ -583,9 +585,10 @@ sentence about the printout is a correction, start again.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/)
   contains the student-attitudes material and a four-level classification of AI
   policies; useful background, written for faculty. Also in [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd).
-- The *ai-safety* deck, "Constructive Use of AI in the Life of a Medical
-  Resident" (IDPT 8079, October 2025), for the *keep transparency intact*
-  habit: cite AI use; use it to prepare work, not as a substitute for it.
+- [Constructive and Safe AI in the Clinic](https://talks.seandavis.net/2025-10-21-idpt-ai-clinical-safe/)
+  (IDPT 8079, October 21, 2025), the *ai-safety* deck, for the *keep
+  transparency intact* habit: cite AI use; use it to prepare work, not as a
+  substitute for it.
   [VERIFY: public URL for the deck]{.verify}
 
 **Elsewhere in this course**
