@@ -35,7 +35,7 @@ and then I'll answer the question you're going to ask." Then:
 Then the cancer question, which will come regardless: "Most areas flagged this
 way turn out not to be cancer. I can't tell you it isn't until we have the
 next pictures, and I won't tell you it is, because nobody knows yet." Watch for
-the student who leads with the mechanism, and for the one who says "it's
+the student who leads with how the software works, and for the one who says "it's
 probably nothing."
 
 ## Part B — what a good transcript looks like
@@ -61,13 +61,13 @@ Order of events in a strong run:
    defensible either way; the tutor accepts a reason in either direction.
 5. Iron: hold until ferritin is back; if normal, iron does nothing but cause GI
    effects; if high, that is itself a finding. A student who agrees to the iron
-   "since it's low-risk" has capitulated.
+   "since it's low-risk" has given in.
 6. One concrete next step: the two tests today, a sleep history now, a return
    visit or portal message with results by a date.
 
 Failure patterns the tutor should name: winning the argument (all six tests
-declined correctly, hidden detail never surfaced); capitulating (ordering the
-panel to end the conversation); condescending ("the internet isn't a doctor");
+declined correctly, hidden detail never surfaced); giving in (ordering the
+panel to end the conversation); talking down ("the internet isn't a doctor");
 jargon (serology, pre-test probability, false positive) with no plain word.
 
 The model's observer score is a language model's reading of a transcript. The
@@ -108,7 +108,7 @@ patients'.
 | UK GPs Aug 2025: 14% using; 63% seek consent; ≤10% decline; errors 38/35/31% | Blease et al., BMJ Health Care Inform 2026. pmid:42386325 |
 | Clinician 2.1% → patient 20.0% fabrication | McLaughlin et al., Neurosurg Pract 2026. pmid:42232526 |
 | 36 of 284 answers scored 1–2 | Goodman et al., JAMA Netw Open 2023. pmid:37782499 |
-| 21% of programs teach patient communication | Tolentino et al., JMIR Med Educ 2024. pmid:39023999 (figure from research/competency-frameworks.md; confirm against the paper's table) |
+| 21% cover patient communication | Tolentino et al., JMIR Med Educ 2024. pmid:39023999. Confirmed 2026-09-08 against the PMC full text: 4 of 19 program papers (21%) mention "communication of AI results to patients"; the denominator is papers, not the 30 programs. |
 | 66% very important to be told; 91.5% worried about misdiagnosis | Khullar et al., JAMA Netw Open 2022. pmid:35507346 (numbers from PMC full text) |
 | Tessa, NEDA, June 2023 | CNN Business 2023-06-01; NPR 2023-06-08 |
 | Winters v. OpenAI, complaint filed July 2026 | Norton Rose Fulbright blog 2026-08-11; Forbes 2026-07-26. Allegations only. |
