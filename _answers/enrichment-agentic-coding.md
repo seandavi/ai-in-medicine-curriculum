@@ -71,9 +71,9 @@ before anyone else uses it". "Be careful" fails.
 - Documentation: the score in the note comes from MDCalc or the paper, with
   the source named.
 
-## Specimen provenance
+## Worked-example provenance
 
-**The chapter's specimens are expected behaviour, not a recorded run.** Two
+**The chapter's worked examples are expected behaviour, not a recorded run.** Two
 live runs of the starter prompt (CHA₂DS₂-VASc and MELD-Na, Claude, no tools,
 2026-09-07) were started for this chapter and did not return in time to be
 read, so the callout was written from the known edge failures in the table
