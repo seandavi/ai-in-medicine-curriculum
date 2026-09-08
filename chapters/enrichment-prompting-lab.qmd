@@ -23,8 +23,9 @@ By the end of this chapter you will be able to:
 **Time.** About 20 minutes of reading, 20 minutes of listening, 30 minutes of
 doing, and 5 of checking. That is 75 minutes if you stop the podcast where the
 chapter tells you to, and closer to 100 if you finish it. You need one chatbot
-(your institutional ChatGPT Edu or Microsoft Copilot account) and a second
-browser tab for checking. Nothing installs, nothing asks for a phone number,
+and a second browser tab for checking. At our school the chatbot is the
+institutional ChatGPT Edu or Microsoft Copilot account; if you are reading
+this elsewhere, use whatever your institution provides. Nothing installs, nothing asks for a phone number,
 and nothing you type will be about a real patient.
 
 ## Night float, 2:40 a.m.
@@ -145,6 +146,8 @@ organised" is the only effect you can count on.
 %%| label: fig-what-structure-changes
 %%| fig-cap: "What each element of a structured prompt changes. Four of the five act on organisation. The fifth, asking the model to name what is missing, is the only one that acts on the gap between the case and the answer."
 flowchart LR
+  accTitle: What each element of a structured prompt changes
+  accDescr: Role, Context, Task, and Format all point to one box, how the answer is organised. Uncertainty, say what is missing, points to a separate box, whether the answer admits what it does not know. A dotted arrow labelled does not touch runs from the organisation box to a box labelled whether the answer is correct. A dotted arrow labelled helps you check runs from the admits-what-it-does-not-know box to the same correctness box.
   R[Role] --> O[How the answer is organised]
   C[Context] --> O
   T[Task] --> O
@@ -240,9 +243,10 @@ model group scored a median 76 percent, the usual-resources group 74 percent.
 After adjustment the difference was 2 points, with a 95 percent confidence
 interval from minus 4 to plus 8. (A confidence interval is the range of
 differences the data are consistent with. One that crosses zero means the
-trial could not tell the groups apart.) The model *on its own* scored 16
-points higher than the usual-resources group [@pmid:39466245]. @fig-goh
-redraws the two estimates.
+trial could not tell the groups apart.) In a secondary comparison the
+authors call exploratory, the model *on its own* scored 16 points higher than
+the usual-resources group [@pmid:39466245]. @fig-goh redraws the two
+estimates.
 
 ![Two estimates from the same randomized trial. Physicians with the model did
 no better than physicians without it; the model alone did. Redrawn for this
@@ -251,14 +255,17 @@ chapter from the estimates reported in Goh et al., *JAMA Network Open* 2024
 
 The tool was better than the physicians. The physicians using the tool were not
 better than the physicians without it. Something in how clinicians used the
-output threw the benefit away: settling on their own first impression,
-skimming, or asking the model to confirm rather than to challenge. The same
+output seems to have thrown the benefit away. The trial could not say what.
+The likely candidates are settling on their own first impression, skimming,
+or asking the model to confirm rather than to challenge. The same
 group ran a second trial a year later on management rather than diagnosis,
 with 92 physicians. This time the model group did score higher, by 6.5 points
 (95 percent CI 2.7 to 10.2). But the model alone matched the physicians who had
 it, and the physicians with the model spent two minutes longer per case
-[@pmid:39910272]. Two trials, one direction: the weak point is how the
-physician uses the answer, not what the model can do. A trial in *NEJM AI* of
+[@pmid:39910272]. Two trials, one direction. The reading the authors favour,
+and the one this chapter takes, is that the weak point is how the physician
+uses the answer, not what the model can do. Both trials used written cases,
+not real patients, and the authors say so. A trial in *NEJM AI* of
 physicians who had been trained in AI literacy reported that the training did
 not remove the automation bias
 [VERIFY: NEJM AI 2025–2026 automation-bias RCT; not found in PubMed at time of writing]{.verify}.
@@ -370,7 +377,9 @@ Paste the case into a new conversation with nothing but this in front of it:
 
 > What's the diagnosis and what should I do?
 
-Copy the whole answer, word for word, into your document under *Bare*.
+Copy the whole answer, word for word, into your document under *Bare*. If the
+tool replies with questions instead of a plan, do not answer them. The
+questions are the answer; copy them and score them like any other reply.
 
 ### Step 3. The structured prompt (5 minutes)
 
