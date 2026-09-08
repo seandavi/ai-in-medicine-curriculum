@@ -15,7 +15,7 @@ the course survivable when a third of the class misses week two.
 | `core-appraisal` | Critical appraisal: tools, outputs, and the evidence about both | 90 | AIM-2, AIM-9 |
 | `core-bias-equity` | Bias, equity, and the proxy problem | 90 | AIM-3 |
 | `core-patient-communication` | Talking to patients about AI | 90 | AIM-6, AIM-4 |
-| `core-ethics-regulation` | Ethics, liability, and the device boundary | 75 | AIM-4, AIM-7 |
+| `core-ethics-regulation` | Ethics, liability, and the device boundary | 75 | AIM-4, AIM-7, AIM-X |
 
 ### Enrichment modules
 

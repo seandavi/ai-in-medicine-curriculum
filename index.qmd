@@ -1,35 +1,147 @@
 # Preface {.unnumbered}
 
 This is the student-facing book for a four-week, ungraded elective on AI in
-medicine for fourth-year medical students. Each chapter is one module: one to two
-hours of reading, watching, and doing that stands alone, so a missed week costs
-one chapter, not the course.
+medicine for fourth-year medical students. Each chapter is one module: one to
+two hours of reading, watching, and doing that stands alone, so a missed week
+costs one chapter, not the course. Nothing in it needs an install, a paid
+account, or a real patient.
 
-Every chapter follows the same shape:
+## How to read a chapter
 
-1. **A scenario** — a clinical situation you will recognize, before any jargon
-2. **Why this matters** — what changes in residency in three months
-3. **The idea** — the concept, in prose, with figures and tables
-4. **Watch or listen** — one video or podcast episode
-5. **Do** — the activity, written so you can finish it alone; wherever it touches
-   the literature, you choose your specialty
-6. **Check** — a rubric you score yourself against
-7. **The standing question** — *what does this change about how you'll practice?*
-8. **Go deeper** — papers, talks, and videos, with unverified claims flagged
+Every chapter follows the same shape, and the headings are the same in every
+one:
 
-Three rules hold everywhere: **no patient information enters any tool, ever;
-verify before it counts; you sign the note.**
+1. **An opening scenario.** A clinical situation you will recognize, before
+   any jargon. About five minutes.
+2. **Why this matters.** What changes in residency in three months. Five
+   minutes.
+3. **How it works.** The idea, in prose, with figures and tables. Twenty to
+   thirty minutes.
+4. **Watch or listen.** One video or podcast episode, with a note on what to
+   listen for and where you can stop. Fifteen to thirty minutes.
+5. **Do.** The activity, written so you can finish it alone. Wherever it
+   touches the literature, you choose your specialty. Thirty to forty-five
+   minutes.
+6. **Check.** A rubric you score yourself against. Five to ten minutes.
+7. **What this changes for you.** The standing question, *what does this
+   change about how you'll practice?* Written down, not optional, and the
+   scenario from the opening comes back with a better answer.
+8. **Go deeper.** Papers, talks, and videos. Claims nobody has yet checked are
+   flagged `[VERIFY]` and left flagged until someone has.
 
-Three ideas recur in every chapter. Proxies fail. Efficiency gains get eaten by
-volume. The published number is the optimistic one. They are named the first time
-they appear and called by name after that.
+A chapter's subtitle gives its time budget and the competencies it serves
+(`AIM-1` through `AIM-9` and `AIM-X`; the coverage table below says what each
+one is). Three rules hold everywhere: **no patient information enters any
+tool, ever; verify before it counts; you sign the note.**
 
-The design behind this book — competencies, constraints, schedule — lives in the
-`curriculum/` directory of the repository.
+Three ideas recur across the chapters, and each is named the same way wherever
+it appears. **Proxies fail**: almost every AI failure in medicine is a
+stand-in that looked reasonable. **Efficiency gains get eaten by volume**:
+per-unit savings get swallowed by growth in use. **The published number is
+the optimistic one**: the flagship statistic is nearly always the best case.
+A chapter that carries one of these says so.
 
-**This book was built with AI.** The author directed and edited; an AI coding
-assistant drafted most of the prose and looked up the references. How the book
-was designed, how each chapter is reviewed, and what the AI did are in the
-appendix [How this book was made](appendix/about.qmd) and the
-[AI ledger](appendix/ai-ledger.qmd). The course asks you to disclose and verify;
-this is the course doing the same.
+## The chapters, in the default order
+
+Eleven chapters for eight sessions. The default four-week assembly runs them
+in this order; the three spare chapters are marked and can be swapped in by
+cohort interest. Each one stands alone, so any order works.
+
+**Week 1, orientation and stance**
+
+1. [How these systems work](chapters/core-foundations.qmd): the eGFR is a
+   model you already trust, and the chatbot is the same loop with words.
+2. [Centaur or cyborg](chapters/core-centaur-cyborg.qmd): what you hand to
+   the machine, and what you keep.
+
+**Week 2, judgment**
+
+3. [Critical appraisal](chapters/core-appraisal.qmd): checking AI tools,
+   their answers, and the evidence about both.
+4. [Bias and equity](chapters/core-bias-equity.qmd): the proxy problem, from
+   pulse oximetry to cost-as-need.
+
+**Week 3, practice**
+
+5. [Agentic coding](chapters/enrichment-agentic-coding.qmd): build a clinical
+   tool in an hour, then find what is wrong with it.
+6. [Talking to patients about AI](chapters/core-patient-communication.qmd):
+   the signature session.
+
+**Week 4, consequences and closing**
+
+7. [Will AI take your job?](chapters/enrichment-workforce-economics.qmd)
+   *or* [What AI costs the planet](chapters/enrichment-environment.qmd), the
+   cohort's choice.
+8. [Ethics, liability, and the device line](chapters/core-ethics-regulation.qmd):
+   who answers for the note, and the closing question.
+
+**Spare, or for a hands-on cohort**
+
+- [Prompting lab](chapters/enrichment-prompting-lab.qmd): the same wrong
+  answer, better organised.
+- [Grounding AI in real sources](chapters/enrichment-rag-notebooklm.qmd):
+  what a retrieval tool fixes, and what it cannot.
+
+## Competency coverage
+
+The course tags every chapter to a stable competency ID so it can be mapped
+to national standards when they arrive. The IDs and the coverage rules are in
+`curriculum/competencies.md` in the repository. In short: AIM-1 foundations;
+AIM-2 critical appraisal; AIM-3 bias and equity; AIM-4 ethics, law, and
+regulation; AIM-5 clinical use; AIM-6 talking to patients; AIM-7 workflow and
+systems; AIM-8 health data science; AIM-9 research and scholarship; AIM-X
+professional identity, the closing question.
+
+| Chapter | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | X |
+|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| [How these systems work](chapters/core-foundations.qmd) | ● | ● | | | | | | | | |
+| [Centaur or cyborg](chapters/core-centaur-cyborg.qmd) | | | | ● | ● | | | | | ● |
+| [Critical appraisal](chapters/core-appraisal.qmd) | | ● | | | | | | | ● | |
+| [Bias and equity](chapters/core-bias-equity.qmd) | | | ● | | | | | | | |
+| [Agentic coding](chapters/enrichment-agentic-coding.qmd) | | ● | | ● | ● | | | | | |
+| [Talking to patients about AI](chapters/core-patient-communication.qmd) | | | | ● | | ● | | | | |
+| [Will AI take your job?](chapters/enrichment-workforce-economics.qmd) | | | ● | | | | ● | | | |
+| [What AI costs the planet](chapters/enrichment-environment.qmd) | | | ● | | | | | | | ● |
+| [Ethics, liability, and the device line](chapters/core-ethics-regulation.qmd) | | | | ● | | | ● | | | ● |
+| [Prompting lab](chapters/enrichment-prompting-lab.qmd) | | ● | | | ● | | | | | |
+| [Grounding AI in real sources](chapters/enrichment-rag-notebooklm.qmd) | ● | | | | | | | | ● | |
+
+: Which chapter serves which competency, from each chapter's own subtitle and objectives. {#tbl-coverage}
+
+The rules say AIM-1 through AIM-6 must each appear at least once in any
+four-week assembly, with AIM-4 and AIM-5 recurring. The default order above
+meets them: every core competency appears, AIM-4 four times, AIM-2 three
+times, AIM-5 twice. AIM-8, health data science, is not the main subject of
+any chapter; the foundations chapter covers training and test sets, area
+under the curve, and dataset shift on the way to its own point, and that is
+the depth this course goes to.
+
+## The tutor and the answer keys
+
+A chat tutor over these chapters is planned. When it ships, it will answer
+questions from the rendered text and the sources it cites, and it will hold
+the answer keys for each chapter's Check. The answer keys are written by the
+same process as the chapters and are never published; the tutor uses them to
+grade your reasoning, not to hand you the answer. Until it ships, the Check
+rubrics in each chapter are the whole of what is available, and they are
+written to be scored alone.
+
+## How this book was made
+
+**This book was built with AI.** The author designed the course and the
+chapter pattern, wrote the first chapter, and then had ten AI agents draft
+the remaining chapters in parallel from the module plans, each with citations
+checked against PubMed, an answer key, and a review as six invented readers.
+The author read the result, and the chapters then went through a
+plain-language pass, a second six-persona review, and this cross-reference
+pass, each also run by AI agents under the author's direction. The author
+edited and committed all of it. The full account, including what the AI did
+and what a person checked, is in the appendix
+[How this book was made](appendix/about.qmd) and the
+[AI ledger](appendix/ai-ledger.qmd). The course asks you to disclose and
+verify; this is the course doing the same.
+
+The design behind the book, competencies, constraints, and schedule, lives in
+the `curriculum/` directory of the
+[repository](https://github.com/seandavi/ai-in-medicine-curriculum).

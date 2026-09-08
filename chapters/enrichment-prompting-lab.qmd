@@ -90,7 +90,8 @@ in it will feel more trustworthy than a paragraph, because tidy answers from
 people usually are. You learned that instinct from people. It does not carry
 over to machines.
 
-The stakes are not the chatbot's. In one study, 148 final-year students were
+The stakes are not the chatbot's. In one study, which [the appraisal
+chapter](core-appraisal.qmd) also reports, 148 final-year students were
 shown chatbot answers to ten written cases. Five of the answers were
 deliberately wrong. The median student caught the wrong ones 56 percent of the
 time [@pmid:39915801]. Only 5 percent had heard the phrase "clinical prompt
@@ -99,7 +100,7 @@ them would have. So will you. Prompting well is a skill worth thirty minutes,
 and it is the smaller half of this chapter. The larger half is what prompting
 well cannot do.
 
-## What a prompt can and cannot do
+## How it works
 
 ### Two different things a prompt can change
 
@@ -185,7 +186,7 @@ clinician can add to a prompt. In the exercise you will see what happens with
 and without it.
 
 ::: {.callout-tip title="If English is not your first language"}
-The critical appraisal chapter reports a finding you should carry into this
+[the critical appraisal chapter](core-appraisal.qmd) reports a finding you should carry into this
 one. The same tool made up references ten times more often when a question was
 phrased the way a patient talks than the way a clinician writes
 [@pmid:42232526]. Linguists call this **register**: the way a particular group
@@ -212,14 +213,15 @@ findings.
 That is how the neat answer does its damage. **Anchoring** is the habit of
 settling on the first plausible answer and reading everything afterwards as
 confirmation. **Automation bias** is the same habit with a machine as the
-source: the tendency to accept a system's output in place of your own check,
-more strongly the more authoritative the output looks. A table with "Supports"
+source: trusting a machine's suggestion more than it deserves, and more the
+more authoritative the output looks. A table with "Supports"
 and "Opposes" columns pulls in your own pattern-matching. You read the row, you
 agree with the findings, and you take the next step on the same nod. The
 paragraph version at least reads as one opinion.
 
 The published studies of fluent wrong answers say the same thing without the
-table. When 33 physicians across 17 specialties graded chatbot answers to 284
+table ([the appraisal chapter](core-appraisal.qmd) uses the same two studies
+for the claim that fails in fluent prose). When 33 physicians across 17 specialties graded chatbot answers to 284
 of their own questions, the median score was almost completely correct. But 36
 answers were mostly or completely wrong, in the same confident prose as the
 rest [@pmid:37782499]. When oncologists checked chatbot cancer-treatment
@@ -237,7 +239,9 @@ one you are most likely to sign.
 ### What the trials show about physicians plus the tool
 
 Here is the finding to hold against every enthusiastic claim about prompting.
-In a randomized trial, 50 physicians worked through written cases with either
+[The centaur-or-cyborg chapter](core-centaur-cyborg.qmd) is built on these two
+trials and on what to do about them; this is the short version. In a
+randomized trial, 50 physicians worked through written cases with either
 their usual resources or their usual resources plus a language model. The
 model group scored a median 76 percent, the usual-resources group 74 percent.
 After adjustment the difference was 2 points, with a 95 percent confidence
@@ -245,13 +249,13 @@ interval from minus 4 to plus 8. (A confidence interval is the range of
 differences the data are consistent with. One that crosses zero means the
 trial could not tell the groups apart.) In a secondary comparison the
 authors call exploratory, the model *on its own* scored 16 points higher than
-the usual-resources group [@pmid:39466245]. @fig-goh redraws the two
+the usual-resources group [@pmid:39466245]. @fig-goh-estimates redraws the two
 estimates.
 
 ![Two estimates from the same randomized trial. Physicians with the model did
 no better than physicians without it; the model alone did. Redrawn for this
 chapter from the estimates reported in Goh et al., *JAMA Network Open* 2024
-[@pmid:39466245]; the data are the paper's, the drawing is this course's.](../images/goh-2024-redrawn.png){#fig-goh fig-alt="Dot-and-interval chart with two rows. Top row: physician plus LLM versus conventional resources, plus 2 percentage points, 95 percent confidence interval minus 4 to plus 8, crossing zero. Bottom row: LLM alone versus conventional resources, plus 16 points, interval 2 to 30, not crossing zero."}
+[@pmid:39466245]; the data are the paper's, the drawing is this course's.](../images/goh-2024-redrawn.png){#fig-goh-estimates fig-alt="Dot-and-interval chart with two rows. Top row: physician plus LLM versus conventional resources, plus 2 percentage points, 95 percent confidence interval minus 4 to plus 8, crossing zero. Bottom row: LLM alone versus conventional resources, plus 16 points, interval 2 to 30, not crossing zero."}
 
 The tool was better than the physicians. The physicians using the tool were not
 better than the physicians without it. Something in how clinicians used the
@@ -273,7 +277,7 @@ not remove the automation bias
 The honest summary for a fourth-year: the prompting skill is real and cheap.
 The evidence that it makes *you* a better diagnostician is not there yet. What
 evidence exists says the gain, when there is one, comes from how you use the
-answer, not from how you asked for it. The centaur-or-cyborg chapter takes up
+answer, not from how you asked for it. [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd) takes up
 what "how you use the answer" means in practice.
 
 ## Watch or listen
@@ -281,6 +285,11 @@ what "how you use the answer" means in practice.
 **Podcast.** *NEJM AI Grand Rounds*, "Medicine, Machines, and Magic: Dr.
 Jonathan Chen on Medical AI" (15 October 2025; 48 min).
 <https://ai-podcast.nejm.org/e/medicine-machines-and-magic-dr-jonathan-chen-on-medical-ai/>
+
+This episode is also assigned in [the centaur-or-cyborg
+chapter](core-centaur-cyborg.qmd), which owns it. If you have already listened,
+the source deck below is enough for this chapter; if not, listen here and
+count it for both.
 
 Chen is the senior author of both randomized trials above. Listen for the
 distance between his 2017 essay on "inflated expectations" and the trial
@@ -297,7 +306,8 @@ row.
 
 **Alternative episode.** *NEJM AI Grand Rounds*, "AI and the Evolution of
 Medical Thought with Dr. Adam Rodman" (19 June 2024), the other senior author,
-on clinical reasoning and why he thinks the models reason at all.
+on clinical reasoning and why he thinks the models reason at all. Also the
+alternative in the centaur-or-cyborg chapter.
 [VERIFY: duration before assigning]{.verify}
 
 ## Do
@@ -311,7 +321,7 @@ know it happened. Consumer chatbots and institutional accounts alike have no
 business associate agreement unless your institution tells you in writing that
 one exists. That agreement is the contract that makes a vendor legally
 responsible for protecting patient data. A tool your hospital runs inside the
-EHR is a different question, and the ethics and regulation chapter takes it up.
+EHR is a different question, and [the ethics and regulation chapter](core-ethics-regulation.qmd) takes it up.
 :::
 
 You will run one case twice, score both answers, and then check two claims from
@@ -468,8 +478,8 @@ rounds; a statement of what information is missing.
 
 : Scoring correctness on the trap. The scale has only three steps on purpose; arguing with yourself about a borderline case is part of the exercise. {#tbl-trap-score}
 
-If either answer gives references, score each on the critical appraisal
-chapter's 2/1/0 citation scale (accurate, misrepresented, fabricated) by
+If either answer gives references, score each on [the critical appraisal
+chapter's](core-appraisal.qmd) 2/1/0 citation scale (@tbl-scoring: accurate, misrepresented, fabricated) by
 searching PubMed, and put the scores on the record. Do not invent a separate
 scale for them.
 
@@ -545,7 +555,7 @@ Score yourself against this before moving on.
 | The two trials (objective 5) | You can state the direction of both Goh trials, the model-alone result, and what that implies about where the weak point is | "Studies show AI helps doctors" or "studies show it doesn't" |
 | The trap | You can say which kind of trap your case had (omission, common-answer, buried interaction, ambiguity) and what the model did with it | You scored the answers without opening the trap |
 
-## The question you keep
+## What this changes for you
 
 *What does this change about how you'll practice?* Write it down before you
 close the chapter. Two specifics.
@@ -585,7 +595,8 @@ check the one claim the plan turns on. Pick one and write it down.
 
 - The randomized trials of physicians with a model: diagnosis [@pmid:39466245]
   and management [@pmid:39910272]. Read the discussion sections for the
-  authors' own account of where the benefit went.
+  authors' own account of where the benefit went. Both are [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd)'s main
+  papers.
 - The pharmacy study in which a prompt template changed nothing that mattered
   [@pmid:42324177], and the guideline-consistency study that found prompt
   effects vary by model and the same question gives different answers on
@@ -595,7 +606,8 @@ check the one claim the plan turns on. Pick one and write it down.
   parts, where structure *did* improve the weaker model's accuracy at pulling
   facts out of text [@pmid:42350611]: the counter-example that keeps this
   chapter's claim honest.
-- The student error-catching study behind the 56 percent [@pmid:39915801],
+- The student error-catching study behind the 56 percent [@pmid:39915801]
+  (also in [the appraisal chapter](core-appraisal.qmd)),
   and the published, reusable case-based LLM workshop from Harvard
   [@pmid:42483714]; this chapter's Do is a shorter version of it.
 - A tutorial on prompt engineering written for health professionals, for the
@@ -607,4 +619,4 @@ check the one claim the plan turns on. Pick one and write it down.
   the source deck: ten rules, clinical examples throughout.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/),
   for the attribution question that arises the first time a chatbot's table
-  ends up in something you hand in.
+  ends up in something you hand in. Also in [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd).

@@ -93,11 +93,12 @@ starts using these tools risks losing a skill. You risk never gaining it, or
 gaining it wrong. Those are three different problems. The most useful point in
 this chapter is that they need three different defenses.
 
-## The main ideas
+## How it works
 
 ### Two ways to work with a machine
 
-The appraisal chapter left you with a randomized trial and a puzzle. Fifty
+[the appraisal chapter](core-appraisal.qmd) ends with a randomized trial and a puzzle, and this
+chapter starts there. Fifty
 physicians were each given six diagnostic cases. Half also had a language
 model: the kind of AI behind ChatGPT and Copilot, a program that produces text
 in reply to text. The physicians with the model did no better than the
@@ -181,8 +182,11 @@ low-risk or creative, or where the tool is well validated for exactly this.
 
 ```{mermaid}
 %%| label: fig-modes
+%%| fig-alt: "Decision flowchart. The task in front of you leads to the question, if the output is wrong, who is harmed and how badly. If a patient, seriously, ask whether any tool is validated for this exact use at your institution. No leads to centaur or not at all, hand over one clear piece and check every line. Yes leads to centaur, hand over the one piece and check before signing. If mostly me or nobody, ask whether the tool is validated for this use. No leads to cyborg is reasonable, stay involved and check what matters. Yes leads to cyborg, go back and forth freely."
 %%| fig-cap: "Which way of working a task calls for. Two questions to ask before you open the tool. Adapted from the framework in Abdulnour et al. (2025)."
 flowchart TD
+  accTitle: Which way of working a task calls for
+  accDescr: Decision flowchart. The task in front of you leads to the question, if the output is wrong, who is harmed and how badly. If a patient, seriously, ask whether any tool is validated for this exact use at your institution. No leads to centaur or not at all, hand over one clear piece and check every line. Yes leads to centaur, hand over the one piece and check before signing. If mostly me or nobody, ask whether the tool is validated for this use. No leads to cyborg is reasonable, stay involved and check what matters. Yes leads to cyborg, go back and forth freely.
   T["The task in front of you"] --> R{"If the output is wrong,<br/>who is harmed, and how badly?"}
   R -- "A patient, seriously" --> V1{"Is any tool validated<br/>for this exact use,<br/>at your institution?"}
   R -- "Mostly me, or nobody" --> V2{"Is the tool validated<br/>for this use?"}
@@ -192,7 +196,7 @@ flowchart TD
   V2 -- Yes --> C4["Cyborg.<br/>Go back and forth freely."]
 ```
 
-The appraisal chapter spent two hours on the phrase "validated for this use."
+[the appraisal chapter](core-appraisal.qmd) spends two hours on the phrase "validated for this use."
 Here it means one thing. Someone has measured how the tool performs on *this*
 task, on patients like yours, and you know the number. Take an ambient scribe,
 the tool that listens to a visit and drafts the note. With three randomized
@@ -389,7 +393,7 @@ institution has a place for it.
 **Telling the patient is a separate question from documenting.** The attending
 who sent the unread draft made two decisions: not to read it, and not to tell
 the patient. The second is the one the patient would care about. It is the
-subject of the patient-communication chapter. Here, one number. When a large
+subject of [the patient-communication chapter](core-patient-communication.qmd). Here, one number. When a large
 academic system turned on AI-drafted replies for 162 clinicians, the drafts
 were used for about 20% of replies. Reply time did not change. Clinicians'
 task load and exhaustion fell significantly [@pmid:38506805]. The tool reduced
@@ -585,7 +589,7 @@ Score yourself against this before moving on.
 | Two techniques | Two of the six, in your own words, with the peril each defends against | "Be careful" |
 | The one sentence | *If you could not have written it, do not sign it*, and you can say which task on the list it bites hardest | Only the slogan |
 
-## The question to carry forward
+## What this changes for you
 
 *What does this change about how you'll practice?* Go back to 6:10 a.m. The
 senior resident has said "have it draft the notes," and she is waiting. Your
@@ -645,7 +649,7 @@ answer, and it is the one this chapter most wants you to revisit.
 
 - [Prompt engineering](https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/):
   ten rules with clinical examples throughout. Who / Where / What is a
-  shortened form of the first three.
+  shortened form of the first three. [the prompting lab](enrichment-prompting-lab.qmd) is built on this deck.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/):
   attribution and academic integrity, for the moment one of these tools drafts
   something with your name on it outside the hospital.

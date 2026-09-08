@@ -86,7 +86,7 @@ actually learn, one hard experimental finding about what a bad model does to
 the clinicians who trust it, and a written position of your own. That last
 item is the reason this chapter closes the course.
 
-## What you need to know
+## How it works
 
 ### No court has answered yet, and what a plaintiff must prove anyway
 
@@ -180,7 +180,9 @@ patient had contradicted, and you followed it. Box B, by a side door.
 
 The reflex answer from institutions is "we will require explainable AI." That
 answer has been tested once, in a randomized study, and in that test it did
-not work.
+not work. ([The bias and equity chapter](core-bias-equity.qmd) uses the same
+study for what a clinician can catch at the bedside; here it is the legal
+reading.)
 
 Jabbour and colleagues gave 457 hospitalists, nurse practitioners, and
 physician assistants written cases of acute respiratory failure. They asked
@@ -202,8 +204,8 @@ its reasoning, so the physician should have caught it." That defense has to
 face evidence that showing the reasoning did not help the clinicians who saw
 it. A plaintiff in box B has the same paper: the physician was handed a
 biased model, and the safeguard everyone relies on was shown not to work.
-**Automation bias** is the tendency to rely too much on a suggestion from an
-automated system. It is not fixed by adding a paragraph of reasoning. It is a
+**Automation bias** is the habit of trusting a machine's suggestion more than
+it deserves. It is not fixed by adding a paragraph of reasoning. It is a
 property of tired humans under time pressure, which is what you will be.
 
 ### Where a tool becomes a medical device
@@ -239,6 +241,8 @@ basis. FDA names automation bias as the reason
 %%| fig-alt: "Flowchart of the four criteria as yes-or-no questions. Analyzes an image or signal: yes leads to device. Displays or analyzes medical information: no leads to device. Supports or provides recommendations to a clinician: no leads to device. Clinician can independently review the basis with time to do so: no leads to device, yes leads to non-device CDS with no FDA review."
 %%| fig-cap: "The four criteria as a path. Any 'no' makes the software a device. Criterion 4 is where most real tools are decided. It is a question about what the clinician can see, not about how accurate the model is."
 flowchart TD
+  accTitle: The four criteria as a path
+  accDescr: Flowchart of the four criteria as yes-or-no questions. Analyzes an image or signal, yes leads to device. Displays or analyzes medical information, no leads to device. Supports or provides recommendations to a clinician, no leads to device. Clinician can independently review the basis with time to do so, no leads to device, yes leads to non-device CDS with no FDA review.
   q1{"Does it analyze an image,<br/>an IVD signal, or a signal<br/>from a monitor?"} -- yes --> dev[Device: FDA oversight]
   q1 -- no --> q2{"Does it display or analyze<br/>medical information?"}
   q2 -- no --> dev
@@ -295,12 +299,11 @@ most important regulatory idea for a physician who will use these tools
 It also raises the question worth putting to any vendor: if the model on my
 unit today is not the model that was cleared, what did clearance tell me?
 
-The critical-appraisal chapter has already made the companion point, and it
-belongs here too. Clearance is a regulatory status, not proof of validation.
-Of 130 FDA decision summaries for AI devices, about half reported clinical
-performance data and roughly a quarter reported none. Among those with data,
-well under a third gave results by sex [@pmid:33820998]. A 2024 follow-up
-found the gap persists [@pmid:39187696]. "Cleared" tells you the manufacturer
+[The critical appraisal chapter](core-appraisal.qmd) makes the companion point in
+full, and the short version belongs here too. Clearance is a regulatory
+status, not proof of validation: of 130 FDA decision summaries for AI devices,
+about half reported any clinical performance data [@pmid:33820998], and a 2024
+follow-up found the gap persists [@pmid:39187696]. "Cleared" tells you the manufacturer
 convinced FDA that the device is about as safe and effective as something
 already on the market. It does not tell you it was tested on patients like
 yours.
@@ -315,7 +318,7 @@ everyone else.
 
 ### The note, the patient, and the contract
 
-This is the section the critical-appraisal chapter promised you. Three things
+This is the section [the critical appraisal chapter](core-appraisal.qmd) promised you. Three things
 follow when an AI tool touches a note, and they are separate.
 
 **Documentation.** You sign it, you own it. That is not new law. It is the
@@ -357,7 +360,7 @@ statute, and the federal Wiretap Act. In the Sutter case, the plaintiffs
 argue that following HIPAA is not, on its own, a defense to recording without
 informed consent. About a dozen states require every party's consent to
 record a conversation. Whether a waiting-room sign meets that bar is what the
-courts are being asked. The patient-communication chapter covers how to have
+courts are being asked. [the patient-communication chapter](core-patient-communication.qmd) covers how to have
 the conversation. This chapter's point is that the conversation is the
 safeguard, not the sign.
 
@@ -368,14 +371,14 @@ contract that makes the vendor legally responsible for protecting the data.
 An institution-licensed scribe or a model built into the EHR runs under one.
 The consumer chatbot on your phone does not. Your institutional ChatGPT Edu
 or Copilot account does not either, unless your institution says so in
-writing. The month-one boundary case from the appraisal chapter, a tool your hospital
+writing. The month-one boundary case from [the appraisal chapter](core-appraisal.qmd), a tool your hospital
 licenses inside the EHR, comes down to one question: *is there a BAA for this tool, and does the policy say what I
 may put into it?* If nobody can answer in a sentence, the answer is no.
 
 ::: {.callout-note title="Your right to see inside the EHR's tools: status as of September 2026"}
-The appraisal chapter said you have something close to a legal right to see
+[the appraisal chapter](core-appraisal.qmd) said you have something close to a legal right to see
 how a decision-support tool inside your EHR was built and tested, and
-flagged that for verification. Here is the answer. The federal HTI-1 rule
+pointed here for its status. Here is the answer. The federal HTI-1 rule
 (2024) requires certified EHRs to show "source attributes" for predictive
 decision-support tools: what they were trained on, how they were validated,
 whether fairness was tested. **It is in force.** Developers began collecting
@@ -416,8 +419,8 @@ found precancerous polyps less often than before. Their adenoma detection
 rate fell from 28.4% before exposure to 22.4% after, a drop of six points
 [@pmid:40816301]. The tool did not malfunction. The clinicians changed. Every
 framework in this course says the physician must stay "in the loop." This is
-the study that shows the loop can quietly rewire the physician. The
-centaur-or-cyborg chapter asked you to write a policy for which tasks you
+the study that shows the loop can quietly rewire the physician. [The
+centaur-or-cyborg chapter](core-centaur-cyborg.qmd) asked you to write a policy for which tasks you
 hand over. This chapter asks the harder version. Which skills will you keep
 practicing without the tool, so that on the day the tool is wrong, you are
 still the person the standard of care assumes?
@@ -551,7 +554,7 @@ Score yourself against this before moving on.
 | The PCCP sentence | You can say what clearance covers when the model has been updated | "It was cleared" |
 | Your position | Three sentences below, with a condition that could prove you wrong | A slogan |
 
-## The question you keep
+## What this changes for you
 
 This is the closing question of the course, and it is the reason this chapter
 is last. Write three sentences. Do not write a slogan.
@@ -562,8 +565,8 @@ is last. Write three sentences. Do not write a slogan.
 The second half does the work. Without it, you will write something that
 sounds like a value. With it, you have to state a condition under which you
 would be wrong. That turns a reflex into a position you can defend and, more
-importantly, revise. Go back to the policy you wrote in the centaur-or-cyborg
-chapter and put this sentence at the bottom of it. Then put Mr. Alvarez at
+importantly, revise. Go back to the policy you wrote in [the centaur-or-cyborg
+chapter](core-centaur-cyborg.qmd) and put this sentence at the bottom of it. Then put Mr. Alvarez at
 the bottom of that. It is 6:40 p.m., the draft reads well, and you now know
 what a sentence you did not write can cost. What, specifically, do you do
 differently with the fourteenth note?
@@ -609,7 +612,8 @@ have moved, and the useful skill is noticing why.
   White speakers. So the patient most likely to be misdocumented is not
   random [@pmid:42110031].
 - Consent as it actually happens in clinic [@pmid:40694347].
-- Skill loss after using a tool, called deskilling [@pmid:40816301], and a
+- Skill loss after using a tool, called deskilling [@pmid:40816301] (the
+  study [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd) is built on), and a
   2026 systematic review of automation bias and deskilling with generative
   tools [@pmid:42445869].
 - Cleared is not validated [@pmid:33820998; @pmid:39187696].
@@ -619,7 +623,7 @@ have moved, and the useful skill is noticing why.
   question 7.
 - Eight guiding principles for AI tools in health care
   [@doi:10.1038/s43856-023-00279-9], a useful checklist to test your Part B
-  answer against.
+  answer against. Also in [the appraisal chapter](core-appraisal.qmd).
 
 **Primary sources to bookmark** (check the date on each before quoting it)
 
@@ -639,4 +643,4 @@ have moved, and the useful skill is noticing why.
   to build.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/):
   four levels of classroom AI policy, a warm-up for drawing any line and
-  defending where you drew it.
+  defending where you drew it. Also in [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd).

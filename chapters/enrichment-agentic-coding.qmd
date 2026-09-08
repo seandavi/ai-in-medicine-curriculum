@@ -128,6 +128,8 @@ what they are allowed to touch. @fig-chatbot-agent shows the two shapes.
 %%| fig-cap: "Two ways to use the same model. A chatbot writes text and stops. A coding agent loops: plan, act on real files or programs, observe the result, and continue, inside a boundary of permissions you set."
 %%| fig-alt: "Flowchart with two boxes. Left, Chatbot: your prompt leads to the model writing text, then to you copying what you want. Right, Coding agent: your goal leads to plan a step, then act by writing a file or running code, then observe the result, which loops back to plan a step or ends by showing you what it built."
 flowchart LR
+  accTitle: Two ways to use the same model
+  accDescr: Flowchart with two boxes. Left, Chatbot, your prompt leads to the model writing text, then to you copying what you want. Right, Coding agent, your goal leads to plan a step, then act by writing a file or running code, then observe the result, which loops back to plan a step or ends by showing you what it built.
   subgraph C["Chatbot"]
     direction TB
     p1[Your prompt] --> t1[Model writes text]
@@ -154,8 +156,8 @@ terminal, and neither is the point.
 The point is what changes when the output is something that *runs*. A wrong
 sentence in a chatbot reply sits there until you read it. A wrong rule in a
 calculator does its work silently, on every patient, until somebody compares
-its answer to another source. The error comes from the same place as in the
-critical appraisal chapter: the model produces a plausible next piece of text,
+its answer to another source. The error comes from the same place as in
+[the critical appraisal chapter](core-appraisal.qmd): the model produces a plausible next piece of text,
 not a looked-up fact. But now the error has a place to hide.
 
 ### Two names for the same thing
@@ -189,7 +191,7 @@ Each has a matching check in the Do block.
 | **The edge** | The tool does something the builder never imagined, for inputs the builder never tried: nothing checked, two boxes checked that cannot both be true, a value outside the range the score was built on | Try the inputs the builder did not: empty, contradictory, extreme |
 | **The version** | The score has more than one published form, and the tool does not say which one it uses (Wells' criteria exist in a three-tier and a two-tier form; the transplant system replaced MELD-Na with MELD 3.0 in 2023) | Ask which version, and check that against what your team, and MDCalc, actually use |
 
-: Three independent failures. A tool can pass two and fail the third. {#tbl-three-failures}
+: Three independent failures. A tool can pass two and fail the third. {#tbl-tool-failures}
 
 The first row is where models are weakest and where the evidence is clearest.
 When ChatGPT was asked to perform 48 kinds of medical calculation directly, it
@@ -253,7 +255,7 @@ questions. @tbl-tiers redraws them from the paper's description.
 | Who uses it, and how much do they understand it? | People other than the builder, who did not see it made |
 | How many patients does it reach? | A team, a service, a hospital |
 
-: The four criteria VIBE-HI uses to place a tool on its green-to-red scale, in plain words. The tier is set by the worst answer, not the average. The tiers themselves map to regulatory obligations the ethics and regulation chapter covers. {#tbl-tiers}
+: The four criteria VIBE-HI uses to place a tool on its green-to-red scale, in plain words. The tier is set by the worst answer, not the average. The tiers themselves map to regulatory obligations [the ethics and regulation chapter](core-ethics-regulation.qmd) covers. {#tbl-tiers}
 
 Run the resident's tool through the four questions. It handles pasted labs,
 so the first answer depends on what people paste, which nobody controls. Its
@@ -282,7 +284,7 @@ practise scores is not a device. The same page, bookmarked on the workroom
 computers and used to decide who gets listed, is a different question. The
 answer depends on what it shows and who relies on it. The FDA revised its
 decision-support guidance in January 2026. What the revision changed, and the
-rest of the regulatory picture, belong to the ethics and regulation chapter
+rest of the regulatory picture, belong to [the ethics and regulation chapter](core-ethics-regulation.qmd)
 [VERIFY: FDA CDS guidance, revised 6 January 2026, current text]{.verify}.
 
 For this chapter, the working rule is simpler than the regulation. **Toy, not
@@ -291,14 +293,15 @@ exists. That is not classroom theatre. It is the professional habit of
 labelling AI-assisted work, rehearsed on something harmless.
 
 ::: {.callout-note title="Who signs"}
-When the team's number is wrong, the person accountable is the clinician who
+The course's standing rule, *you sign the note*, covers a number you copied
+from a calculator. When the team's number is wrong, the person accountable is the clinician who
 acted on it, not the resident who built the page. Regulation may eventually
 reach the builder; the chart reaches you first. The practical consequence for
 a note: record the score and the source you took it from. Make the source one
 that has been checked by someone other than a colleague. Today that means the
 original publication or an established calculator such as MDCalc. If a team
 tool has been validated locally, your institution's policy will say so, and
-the ethics and regulation chapter takes up what to document when it has.
+[the ethics and regulation chapter](core-ethics-regulation.qmd) takes up what to document when it has.
 :::
 
 ### Patient information, once more
@@ -551,7 +554,7 @@ Score yourself against this before moving on.
 | The PHI rule (objective 5) | You can say what a business associate agreement is, that your institutional account does not have one for clinical use unless told, and why invented numbers are the rule | "Don't put patient data in ChatGPT" without the reason |
 | The one sentence | Contains a verb meaning *compare against an outside source* | "Be careful with it" |
 
-## Before you close this chapter
+## What this changes for you
 
 *What does this change about how you'll practice?* Write it down before you
 close this chapter. Two specifics. First, go back to the workroom. The

@@ -90,7 +90,7 @@ will bring you a printout. Each of those is a conversation you will have
 whether or not you have prepared for it. The patient will remember how it
 went longer than they remember the plan.
 
-## The idea
+## How it works
 
 ### The failure is not coldness
 
@@ -116,7 +116,9 @@ did them. The physicians on the forum were answering strangers for free at the
 end of a day.
 
 Now the trap. The finding is not that chatbots should answer your patients. It
-is a finding about text, judged by readers. There was no relationship and no
+is a finding about text, judged by readers. The course's third recurring
+lesson, **the published number is the optimistic one**, applies to a
+preference rating as much as to a vendor slide. There was no relationship and no
 follow-up. It compared a tool with unlimited time against physicians with none.
 It says nothing about whether the patient got better, whether they came back,
 or whether they believed a word of it. Hold it as a warning about what a rushed
@@ -193,7 +195,7 @@ communications that no clinician reviewed since January 2025. Texas has
 required disclosure of AI use in treatment by the date of service since January
 2026
 [VERIFY: current text and scope of California AB 3030 and Texas HB 149 / SB 1188; check your own state]{.verify}.
-The ethics and regulation chapter covers the law. Here the point is that what
+[the ethics and regulation chapter](core-ethics-regulation.qmd) covers the law. Here the point is that what
 the patient expects and what the statute requires are starting to say the same
 thing.
 
@@ -220,7 +222,7 @@ things. The profession has not finished arguing about which of them the
 patient must be told about. What is settled is narrower: if the tool is
 recording them, ask; if they ask, answer.
 
-The appraisal chapter listed questions a vendor's sales slide never answers.
+[the appraisal chapter](core-appraisal.qmd) listed questions a vendor's sales slide never answers.
 The question the patient in the scenario asked, "is that recording us," is the
 seventh. The answer has three parts, and the third is the one students skip.
 
@@ -255,9 +257,11 @@ note is where the next clinician learns that this patient asked.
 
 ### The printout: her words, not yours
 
-Now the two pages. Something from the appraisal chapter applies directly to
+Now the two pages. Something from [the appraisal chapter](core-appraisal.qmd) applies directly to
 them. A 2026 study compared five tools. It asked the same questions in a
-clinician's voice and in a patient's voice, and got different answers. The
+clinician's voice and in a patient's voice (linguists call that difference
+**register**, the way a particular group of people talks), and got different
+answers. The
 patient version was worse. The share of ChatGPT's references that were made up
 rose from 2.1 percent to 20.0 percent, and the tools were more likely to cite
 websites rather than papers [@pmid:42232526]. When physicians graded chatbot
@@ -267,7 +271,7 @@ mostly or completely wrong, in the same fluent tone [@pmid:37782499].
 The reason is how the tool works. A general-purpose chatbot does not look the
 answer up. It writes the most plausible next words given the question. So a
 question phrased the way a patient talks gets an answer shaped like the
-internet's answers to patients, references and all. The appraisal chapter
+internet's answers to patients, references and all. [the appraisal chapter](core-appraisal.qmd)
 takes that apart. Here it is enough to know that the printout's confidence
 comes from the writing, not from the evidence.
 
@@ -275,8 +279,8 @@ Your patient asked in her own words. What she was handed is, on average, less
 reliable than what you would have been handed for the same question, and it
 reads exactly as confidently. She has no way to know that, and telling her so
 is not the right first step. If English is not your first language, or you
-write the way you talk, the same is true of your own prompts. The appraisal
-chapter's exercise will show you by how much. What matters here is the order of
+write the way you talk, the same is true of your own prompts. [The appraisal
+chapter's](core-appraisal.qmd) exercise will show you by how much. What matters here is the order of
 what you say.
 
 **Say what is right first.** "Ferritin and thyroid function are the next two
@@ -523,7 +527,7 @@ from the live session, applied to your own Part A and B.
 | The Part C sentences (objective 6) | Admits what you do not know and commits to a time | Reassures |
 | Jargon | The chatbot flagged none, or you can list what it flagged and the plain word for each | "Serology," "false positive," "ambient" unexplained |
 
-## The standing question
+## What this changes for you
 
 *What does this change about how you'll practice?* Write it down before you
 close this chapter, in two parts. First, the sentence you will say to the first
@@ -578,7 +582,7 @@ sentence about the printout is a correction, start again.
 
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/)
   carries the student-attitudes material and a four-level classification of AI
-  policies; useful background, pitched at faculty.
+  policies; useful background, pitched at faculty. Also in [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd).
 - The *ai-safety* deck, "Constructive Use of AI in the Life of a Medical
   Resident" (IDPT 8079, October 2025), for the *keep transparency intact*
   habit: cite AI use; use it to prepare work, not as a substitute for it.
@@ -586,9 +590,9 @@ sentence about the printout is a correction, start again.
 
 **Elsewhere in this course**
 
-- The appraisal chapter, for the seventh question and for what a made-up
+- [the appraisal chapter](core-appraisal.qmd), for the seventh question and for what a made-up
   reference looks like when your patient brings one.
-- The ethics and regulation chapter, for the statutes, the business associate
+- [the ethics and regulation chapter](core-ethics-regulation.qmd), for the statutes, the business associate
   agreement, and liability when the tool is wrong.
-- The bias and equity chapter, for "does this thing work for people like me,"
+- [the bias and equity chapter](core-bias-equity.qmd), for "does this thing work for people like me,"
   which this chapter deliberately does not absorb.

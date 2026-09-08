@@ -56,7 +56,7 @@ from the company that runs the model. The two figures differ by a factor of
 about two thousand. Neither person has read past the headline. Neither, until
 Friday, have you.
 
-This is the same problem the appraisal chapter gave you at lunch with a
+This is the same problem [the appraisal chapter](core-appraisal.qmd) gave you at lunch with a
 vendor: a number that arrives without its method. The difference is that this
 one is about the planet rather than about burnout. That means it comes with
 more feeling and less checking. The question is the appraisal question again:
@@ -83,7 +83,7 @@ line on the purchasing form. The skill that lasts is not a number to quote.
 The numbers in this chapter will be wrong within eighteen months, and the
 chapter says so. The skill is asking what was counted.
 
-## How the numbers were made
+## How it works
 
 ### Where the bottle came from
 
@@ -165,8 +165,8 @@ dispute about facts.
 
 : Four published per-query figures and what each counted. All are real; none can be compared with the others without adjustment. Altman's figure is included because it circulates; his post gives no method. {#tbl-what-counted}
 
-The appraisal chapter gave you three things that can be wrong with a cited
-claim: the reference (does the source exist), the attribution (does it say
+[the appraisal chapter](core-appraisal.qmd) gave you three things that can be wrong with a cited
+claim (@tbl-three-failures): the reference (does the source exist), the attribution (does it say
 what it is quoted as saying), and the claim itself (is it true). Run the
 bottle through them. The *reference* is fine: the preprint exists, the
 newspaper analysis exists. The *attribution* is where it broke. A bottle per
@@ -259,8 +259,10 @@ in 2024, and 81 percent above in 2025, with data-center electricity use up 37
 percent in the last of those years
 ([ESG Dive, 2 July 2025](https://www.esgdive.com/news/googles-emissions-rise-despite-data-center-decarbonization-ppas-environmental-report-2025/752236/);
 [ESG Dive, 2 July 2026](https://www.esgdive.com/news/googles-emissions-continue-to-climb-due-to-ai-buildout/824373/)).
-Economists call this the Jevons effect, after the observation in 1865 that
-more efficient steam engines led Britain to burn more coal, not less. When a
+This is the second of the course's three recurring lessons, **efficiency
+gains get eaten by volume**. Economists call it the Jevons effect, after the
+observation in 1865 that more efficient steam engines led Britain to burn more
+coal, not less. When a
 unit of something gets cheaper, people use enough more of it that the total
 rises. Per-query efficiency is real, and growth in use is outrunning it. The
 US Department of Energy's national laboratory put data centers at 176
@@ -390,8 +392,8 @@ skip step 1 of Part A; the point of step 1 is to guess before you know.
 ::: {.callout-warning title="No patient information, ever"}
 Nothing in this exercise involves a patient. You will ask a chatbot about
 itself and read public documents. Your institutional account is not a
-clinical tool. It carries no agreement that covers patient data; the ethics
-and regulation chapter takes that up. If a question about the scribe's water
+clinical tool. It carries no agreement that covers patient data; [the ethics
+and regulation chapter](core-ethics-regulation.qmd) takes that up. If a question about the scribe's water
 use ever tempts you to paste in a note to "see what it costs," stop.
 :::
 
@@ -532,8 +534,8 @@ opting out and the medical director is still certain. You have three sources
 open and a ratio of about two thousand. What do you say to each of them, in
 one sentence each? And what do you say about the county's water that is true
 at every point on @fig-per-query? Then the harder one. The scribe will be
-recording your patients either way. Whether they are told belongs to the
-patient-communication chapter, not to a water figure. Does what you learned
+recording your patients either way. Whether they are told belongs to [the
+patient-communication chapter](core-patient-communication.qmd), not to a water figure. Does what you learned
 this week change whether you use it? If not, what *would*?
 
 ## Summary
@@ -608,4 +610,4 @@ this week change whether you use it? If not, what *would*?
   the fairness vocabulary behind "Where the cost lands" (procedural,
   distributive, and representational fairness), and the two opening thought
   experiments that this chapter's guess-first-then-check exercise borrows
-  from.
+  from. It is [the bias and equity chapter](core-bias-equity.qmd)'s reading alternative.

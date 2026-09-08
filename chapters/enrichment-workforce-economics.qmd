@@ -77,7 +77,7 @@ transcription is shrinking. Medical coding is growing. Both jobs sit ten feet
 from where you will work. A resident who understands why is more useful to the
 team than one who is only relieved about their own position.
 
-## The idea
+## How it works
 
 ### What actually happened
 
@@ -99,6 +99,8 @@ the specialty for 1,083 positions.[^nrmp]
 %%| fig-alt: "Bar chart. Diagnostic radiology PGY-2 positions offered and filled in each Match from 2022 to 2026. Offered rose from 997 to 1,083; filled rose from 996 to 1,066. The two bars are nearly equal every year."
 %%| fig-cap: "Diagnostic radiology advanced (PGY-2) positions offered and filled in the Main Residency Match, 2022 to 2026. Redrawn from NRMP Results and Data 2026, Tables 3 and 7A. Positions rose every year; the gap between the bars is the number unfilled."
 xychart-beta
+    accTitle: Diagnostic radiology advanced (PGY-2) positions offered and filled in the Main Residency Match, 2022 to 2026
+    accDescr: Bar chart. Diagnostic radiology PGY-2 positions offered and filled in each Match from 2022 to 2026. Offered rose from 997 to 1,083. Filled rose from 996 to 1,066. The two bars are nearly equal every year.
     title "Diagnostic radiology PGY-2 positions, NRMP Main Match"
     x-axis [2022, 2023, 2024, 2025, 2026]
     y-axis "Positions" 900 --> 1120
@@ -183,6 +185,8 @@ report either.
 %%| fig-alt: "Pie chart of a radiologist's day. Image interpretation 36.4 percent, clinical work other than reading images 43.8 percent, other clinical 7.5 percent, nonclinical 12.3 percent."
 %%| fig-cap: "How fourteen hospital radiologists spent their time in 2012, from a time-and-motion study at three Vancouver hospitals. Redrawn from the abstract of Dhanoa et al. (2013): 36.4 percent image interpretation, 43.8 percent noninterpretive clinical tasks; the remaining categories are derived from the reported 87.7 percent total clinical productivity."
 pie showData
+    accTitle: How fourteen hospital radiologists spent their time in 2012, from a time-and-motion study at three Vancouver hospitals
+    accDescr: Pie chart of a radiologist's day. Image interpretation 36.4 percent, clinical work other than reading images 43.8 percent, other clinical 7.5 percent, nonclinical 12.3 percent.
     title "A radiologist's day (percent of time)"
     "Image interpretation" : 36.4
     "Clinical work other than reading images" : 43.8
@@ -218,19 +222,20 @@ American radiology societies describes current tools as helping the
 radiologist's interpretation, not replacing it. Tools that act on their own
 are treated as a separate question needing their own evidence
 [@pmid:38276923]. Where a device stops and who is liable when a tool is wrong
-belong to the ethics and regulation chapter. The point here is only that the
+belong to [the ethics and regulation chapter](core-ethics-regulation.qmd). The point here is only that the
 rules are built to keep a human in the loop, and rules change more slowly than
 benchmarks.
 
 **4. Demand: if the task gets cheaper, is more of it ordered?** Making a task
-cheaper does not obviously reduce the number of people doing it. Economists
-call this the Jevons paradox. In the nineteenth century, more efficient steam
+cheaper does not obviously reduce the number of people doing it. This is the
+second of the course's three recurring lessons, **efficiency gains get eaten
+by volume**; economists call it the Jevons paradox. In the nineteenth century, more efficient steam
 engines led to more coal being burned, not less, because cheaper power got
 used more. Imaging works the same way: cheaper scans get ordered more often.
 The workforce projection above assumes demand keeps growing at least as fast
 as supply
 [VERIFY: Neiman demand projection of 17–27% growth in imaging, cited in the module, not retrieved this session]{.verify}.
-The same paradox runs through the environmental-impact chapter, if you take
+The same paradox runs through [the environmental-impact chapter](enrichment-environment.qmd), if you take
 it. Efficiency per unit and total use move in opposite directions more often
 than you would expect.
 
@@ -239,6 +244,8 @@ than you would expect.
 %%| fig-alt: "Flowchart. Pick one task in the job. Can a machine be measured on it? No: stays with the human. Yes: does it work at a hospital that did not build it? Not shown: stays with the human. Yes: who signs and who is liable when it is wrong? The physician: assists the human. The tool: is demand capped? No, more gets ordered: more of the task, same people. Yes: fewer people do this task."
 %%| fig-cap: "The four questions, in the order they usually settle an argument. A task that fails any one of them stays with the human; a job is the sum of its tasks."
 flowchart TD
+    accTitle: The four questions, in the order they usually settle an argument
+    accDescr: Flowchart. Pick one task in the job. Can a machine be measured on it? No, stays with the human. Yes, does it work at a hospital that did not build it? Not shown, stays with the human. Yes, who signs and who is liable when it is wrong? The physician, assists the human. The tool, is demand capped? No, more gets ordered, more of the task, same people. Yes, fewer people do this task.
     T[Pick one task in the job] --> Q1{Can a machine be<br/>measured on it?}
     Q1 -- No --> H[Stays with the human]
     Q1 -- Yes --> Q2{Does it work at a hospital<br/>that did not build it?}
@@ -310,7 +317,7 @@ Everything so far points toward optimism about physician jobs. This section
 complicates that, because "your job survives" and "the system gets better or
 cheaper" are different claims.
 
-**Within the organization.** The critical appraisal chapter follows ambient
+**Within the organization.** [the critical appraisal chapter](core-appraisal.qmd) follows ambient
 scribes (software that listens to a visit and drafts the note) through their
 levels of evidence. The five-system study of 8,581 clinicians found that
 scribe users spent 13.4 fewer minutes a day in the EHR and 16.0 fewer on
@@ -321,7 +328,8 @@ more relative value units per week, a 5.8 percent increase. (RVUs are the
 units Medicare uses to price physician work.) They saw 0.80 more patients per
 week and had no rise in claim denials [@pmid:41511775]. Time saved became
 visits and RVUs. That is real, and it is what a hospital's finance office
-wants. It is not cost reduction.
+wants. It is not cost reduction. It is the same recurring lesson, efficiency
+gains eaten by volume, seen on a billing statement.
 
 **Across the system.** The Peterson Health Technology Institute takes no
 vendor money. In March 2025 it concluded that scribes probably reduce burnout
@@ -374,6 +382,8 @@ in the medical records department (@fig-bls).
 %%| fig-alt: "Bar chart of projected employment change 2025 to 2035. Medical transcriptionists minus 4 percent, medical records specialists plus 8 percent, health information technologists plus 16 percent."
 %%| fig-cap: "Projected employment change, 2025 to 2035, for three health-information occupations. Redrawn from the BLS Occupational Outlook Handbook pages for each occupation, read 2026-09-07. Same industry, same technology, opposite directions."
 xychart-beta
+    accTitle: Projected employment change, 2025 to 2035, for three health-information occupations
+    accDescr: Bar chart of projected employment change 2025 to 2035. Medical transcriptionists minus 4 percent, medical records specialists plus 8 percent, health information technologists plus 16 percent.
     title "BLS projected employment change, 2025–2035 (percent)"
     x-axis ["Medical transcriptionists", "Medical records specialists", "Health information technologists"]
     y-axis "Percent change" -10 --> 20
@@ -396,8 +406,8 @@ first test. The job is judgment about what a record means and what a payer
 will accept, and the bot wars above are *increasing* that work, not removing
 it. The people whose jobs change first are your colleagues, and the harm is
 not spread evenly. Transcription pays less than the two occupations that are
-growing, so the displaced workers are the ones with the least cushion. The
-bias and equity chapter has a name for that, harms of allocation, and it
+growing, so the displaced workers are the ones with the least cushion. [The
+bias and equity chapter](core-bias-equity.qmd) has a name for that, harms of allocation, and it
 applies to jobs as much as to diagnosis.
 
 ## Watch or listen
@@ -554,7 +564,7 @@ list at the top of the chapter.
 | Three BLS rows (obj. 5) | Numbers and reasons read from the live pages, and a two-sentence explanation that names two factors | Numbers copied from this chapter |
 | The "percent of what" habit | You can name the three denominators behind "25 percent administrative" | One number, one study |
 
-## The standing question
+## What this changes for you
 
 *What does this change about how you'll practice, and what would you have to
 see in the next five years to conclude you got this wrong?*
@@ -613,7 +623,8 @@ able to check.
   [@pmid:38276923], which is what a department actually does with a cleared
   tool.
 - The scribe economics: the five-system study [@pmid:41920565] and the UCSF
-  productivity analysis [@pmid:41511775].
+  productivity analysis [@pmid:41511775]. The five-system study is also in
+  [the appraisal chapter](core-appraisal.qmd).
 - The three administrative-cost papers [@pmid:31589283; @pmid:25201663;
   @pmid:12930930], for the denominators.
 
@@ -631,10 +642,11 @@ able to check.
   tells the IBM Watson story, from Jeopardy! to MD Anderson setting it aside
   in 2017, and covers MYCIN and the AI winters before it. Read it if you want
   a second example of the same shape before deciding the Hinton story is about
-  one man's bad call.
+  one man's bad call. Also in [the foundations chapter](core-foundations.qmd).
 - [AI and machine learning for an oncology service line](https://talks.seandavis.net/archive/2024-10-28-ai-ml-oncology-service-line/)
   keeps apart the four groups the economics section needs to keep apart:
   patients, providers, researchers, and administrators. It also lists eight
   guiding principles [@doi:10.1038/s43856-023-00279-9]. Two of them, "have
   high healthcare value" and "reduce overdiagnosis and overtreatment," are
-  the CAD story stated as rules.
+  the CAD story stated as rules. The deck is also in [the ethics and regulation chapter](core-ethics-regulation.qmd); the
+  principles are also in [the appraisal chapter](core-appraisal.qmd).

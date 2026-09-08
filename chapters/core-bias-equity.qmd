@@ -91,7 +91,7 @@ line between the two is not where most people put it. Knowing which side of
 the line a tool is on tells you whether your own alertness protects the
 patient or only makes you feel better.
 
-## How the failures happen
+## How it works
 
 ### One problem, many cases
 
@@ -108,8 +108,12 @@ The stand-in quantity is called a **proxy**: something you measure because
 the real thing cannot be measured. The **proxy problem** is the whole chapter
 in one sentence: *an algorithm is only as fair as the link between what it
 measures and what you hoped it measured, and that link can differ by group.*
+It is the first of the course's three recurring lessons, **proxies fail**,
+and this chapter is where that lesson gets its full treatment. [The
+foundations chapter](core-foundations.qmd) met it in the eGFR, a stand-in for
+a filtration rate nobody measured.
 
-You met an example of this in the critical appraisal chapter, without the
+You met an example of this in [the critical appraisal chapter](core-appraisal.qmd), without the
 name. There, a test-set score in an FDA clearance summary stood in for how
 well a tool works on patients. A study of 130 such summaries found that about
 half reported any clinical performance data at all [@pmid:33820998]. The proxy in that case was a test score standing in for
@@ -326,7 +330,9 @@ score are close to undetectable from a single encounter.
 ### The study that complicates the bedside answer
 
 It would be comfortable to leave this chapter believing that a careful
-clinician catches these. The best evidence says otherwise.
+clinician catches these. The best evidence says otherwise. ([The ethics and
+regulation chapter](core-ethics-regulation.qmd) draws the same numbers as a
+figure and asks what they mean in court.)
 
 In a randomized study, Jabbour and colleagues showed 457 hospitalist
 physicians, nurse practitioners, and physician assistants a series of
@@ -363,8 +369,8 @@ about the target and not the math.
 
 ::: {.callout-note title="\"But it's FDA-cleared\""}
 The oximeter was. So were the chest radiograph tools. Clearance answers a
-different question from the one you are asking. The critical appraisal
-chapter makes that case in full with the same 130 clearance summaries cited
+different question from the one you are asking. [The critical appraisal
+chapter](core-appraisal.qmd) makes that case in full with the same 130 clearance summaries cited
 above [@pmid:33820998], and the FUTURE-AI checklist there gives fairness one
 row and one question for the vendor. This chapter is that row, in depth. If
 the two chapters are assigned in the same week, read the objection once and
@@ -594,7 +600,8 @@ collects these in chat, and they are worth more than the table.
 - The oximeter regulatory story: the JAMA viewpoint on the draft guidance
   [@pmid:40042945] and the 34-device test against it [@pmid:40832401].
 - Clinicians and biased models, with explanations [@pmid:38112814]. The
-  supplementary material shows the heat maps the participants saw.
+  supplementary material shows the heat maps the participants saw. [the ethics and regulation chapter](core-ethics-regulation.qmd)
+  redraws the result as a figure.
 - Where the dermatology gap comes from and how it closes with data
   [@pmid:35960806].
 - The language-model cases [@pmid:37864012; @pmid:38123252]. Re-run their
@@ -609,6 +616,7 @@ collects these in chat, and they are worth more than the table.
 - [AI and ML in an oncology service line](https://talks.seandavis.net/archive/2024-10-28-ai-ml-oncology-service-line/)
   for the institutional half of the answer: who audits, who monitors, and
   what "incorporate biography" means when race is standing in for exposure.
+  Also in [the ethics and regulation chapter](core-ethics-regulation.qmd).
 - Kate Crawford, "The Trouble with Bias", NeurIPS 2017 keynote, the source of
   the allocation-versus-representation distinction. On YouTube; about an
   hour. [VERIFY: stable URL and length before assigning]{.verify}

@@ -2,9 +2,10 @@
 title: "How this book was made"
 ---
 
-This page is a short account of what this book is, how it was designed, how each
-chapter is reviewed before it reaches you, and how AI was used in writing it. A
-course that asks you to disclose and verify your own AI use should do the same.
+This page is a short account of what this book is, how it was designed, how
+each chapter was written and reviewed before it reached you, and how AI was
+used in writing it. A course that asks you to disclose and verify your own AI
+use should do the same.
 
 ## What this is
 
@@ -42,20 +43,60 @@ be, other courses.
 course, including content recovered from slide decks that existed only as Drive
 stubs. Where a descriptor did not match its deck, the note says so.
 
-**Modules, then chapters.** `modules/` holds one session plan per module, with
-activities and rubrics. `curriculum/chapter-pattern.md` (September 2026) is the
-skeleton every student-facing chapter follows: an opening clinical scenario before
-any jargon, why it matters, the idea, one video or podcast, an activity you can
-finish alone, a self-scored check, the standing question, and a reading list.
-The appraisal chapter was written first because it is the most solo-able module
-and its activity maps directly to a PubMed search recipe.
+**Modules, then the chapter pattern.** `modules/` holds one session plan per
+module, with activities and rubrics. `curriculum/chapter-pattern.md` (September
+2026) is the skeleton every student-facing chapter follows: an opening clinical
+scenario before any jargon, why it matters, how it works, one video or podcast,
+an activity you can finish alone, a self-scored check, the standing question,
+and a reading list. `curriculum/personas.md` names the six readers every chapter
+is reviewed as.
+
+**One chapter, by hand.** The appraisal chapter was written first, as the
+exemplar, because it is the most solo-able module and its activity maps directly
+to a PubMed search recipe. It was drafted with the AI assistant, read in full by
+the author, reviewed as the six personas, and revised before anything else was
+built.
+
+**A plan, then ten chapters in parallel.** `curriculum/chapter-plan.md` set the
+order, the per-chapter contract, and the passes that would follow. Each of the
+ten remaining chapters became a GitHub issue carrying that contract. Then ten AI
+agents were started at once, one per chapter, each in its own isolated branch of
+the repository, each given the module plan, the pattern, the personas, and the
+exemplar chapter. Each agent drafted its chapter, looked up every citation in
+PubMed and read the abstract before inserting the key, drew or found its
+figures, wrote an answer key, reviewed its own chapter as the six personas, and
+recorded what it had and had not been able to verify in a review file and a
+ledger row. The ten branches were merged into one integration branch and
+deployed, and the author read the deployed book.
+
+**Two passes over all eleven.** Reading the deployed book, the author found the
+content good and the language jargonish. A plain-language pass followed: one
+agent per chapter, again in parallel, replacing or defining on first use the
+design-document vocabulary the author had flagged, splitting long sentences, and
+removing em-dashes, with a script checking that no number, citation, flag,
+figure, or section moved. Then a second six-persona review pass, one agent per
+chapter, which filed one review issue per chapter, fixed what the findings
+called for, and left the rest as open items for the author.
+
+**This cross-reference pass.** Chapters written independently overlap and
+contradict. The last pass made them one book: every mention of another chapter
+became a link, block headings were made the same in every chapter, shared terms
+were checked for agreement and the recurring ideas named the same way
+everywhere, duplicated material was cut back to a short version plus a link to
+the chapter that owns it, repeated podcast episodes and readings were noted,
+the competency coverage table in the preface was built from the chapters as
+written, and every remaining `[VERIFY]` flag was inventoried into one issue for
+the author to work through.
 
 ## How chapters are reviewed
 
-Every chapter is read six times before it is considered done, once as each of
-six invented readers. Three are students; three are the people who would adopt,
-adapt, or clear the course. The full descriptions, with each reader's review
-questions, are in the [Review personas](personas.qmd) appendix.
+Every chapter is read as each of six invented readers, twice: once by the agent
+that drafted it, before its pull request, and once in the review pass, after all
+eleven were merged. Three of the readers are students; three are the people who
+would adopt, adapt, or clear the course. The full descriptions, with each
+reader's review questions, are in the [Review personas](personas.qmd) appendix.
+The review files, one per chapter per pass, are in `reviews/` in the repository,
+and the open items from the second pass are GitHub issues labelled `pass`.
 
 | Reader | Role | What they catch |
 |---|---|---|
@@ -77,13 +118,19 @@ Two further checks run on every chapter:
   ([quartobot](https://github.com/seandavi/quartobot)) looks each one up and
   writes the bibliography. A key that does not resolve stops the render. This
   does not prove a paper says what the chapter claims; it proves the paper
-  exists, which is the failure mode this course spends a chapter on.
+  exists, which is the failure mode this course spends a chapter on. The agents
+  that drafted the chapters also read each paper's PubMed abstract before
+  using its key, and their ledger rows say which numbers were checked against
+  an abstract rather than a full paper.
 - **Unverified claims stay flagged.** Research notes carry `[VERIFY]`,
   `[UNVERIFIED]`, and `[CONFLICTING]` tags. They travel into chapters unchanged
-  and are not removed until a person has checked the claim.
+  and are not removed until a person has checked the claim. The flags still
+  open across the book are listed in one GitHub issue, grouped by how much a
+  mistake would matter.
 
 Answer keys live in `_answers/`, are never rendered, and are held for the chat
-tutor.
+tutor. They were drafted by the same agents as the chapters, and the ledger says
+where an expected result is a prediction rather than a recorded run.
 
 ## On the use of AI
 
@@ -91,25 +138,38 @@ This book was drafted with an AI coding assistant (Claude Code, running Claude
 models), working in the repository alongside the author. The division of labor
 has been consistent: the author decides, the model drafts, the author edits and
 commits. That covers most of the prose in this book, the research notes, the
-module plans, and the review personas above. It does not cover the decisions
-those files record, which are the author's: the competencies, the constraints,
-the four-week structure, the choice of reviewers, and the rule that every chapter
-opens with a clinical scenario.
+module plans, the answer keys, the review files, and the review personas above.
+It does not cover the decisions those files record, which are the author's: the
+competencies, the constraints, the four-week structure, the choice of reviewers,
+the rule that every chapter opens with a clinical scenario, and the order and
+contract in the chapter plan.
 
-The model has been most useful for three things. **Editing**, which is bringing
+What changed as the book grew was scale, not the division of labor. One chapter
+was drafted in conversation. The other ten were drafted by ten agents working at
+once, in parallel, each on its own branch, from the same brief. The passes that
+followed ran the same way, one agent per chapter. The author's part moved from
+editing each paragraph to writing the brief, reading the result, naming what was
+wrong, and deciding what to merge.
+
+The model has been most useful for four things. **Editing**, which is bringing
 material written over several years into one voice. **Drafting**, which is
 producing first versions of explanations, activities, and answer keys from a
-module plan. And **holding the chapters to a standard**, which is reading each
-one as the six reviewers above and reporting where it fails.
+module plan. **Looking things up**, which is retrieving the PubMed record for
+every citation, reading the abstract, and fetching the primary page behind a
+regulatory claim or a podcast episode. And **holding the chapters to a
+standard**, which is reading each one as the six reviewers above and reporting
+where it fails.
 
 ::: {.callout-important}
 ## AI assists; humans are responsible
 A language model produces fluent text that can feel authoritative while being
 wrong, and the appraisal chapter exists because that is true of citations in
 particular. So every reference in this book was resolved against PubMed by tool,
-every chapter was read in full by the author before it was committed, and
-responsibility for what the book says rests with the author. Where the review
-was lighter than that, the ledger says so.
+every chapter was read by the author in the deployed book before the passes
+that finished it, and responsibility for what the book says rests with the
+author. Where the review was lighter than that, the ledger says so. Where a
+claim has not been checked by a person, the chapter says so with a `[VERIFY]`
+flag.
 :::
 
 The [AI ledger](ai-ledger.qmd) records, commit by commit, what the model did and

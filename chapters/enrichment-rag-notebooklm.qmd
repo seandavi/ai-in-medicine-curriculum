@@ -52,7 +52,7 @@ that exists. The first sentence is going on your slide. And the first sentence
 is not what the paper says.
 
 This chapter is about why the numbers are real, why the sentence is not, and
-how to tell in under a minute. The appraisal chapter showed you that a general
+how to tell in under a minute. [the appraisal chapter](core-appraisal.qmd) showed you that a general
 chatbot invents references and a retrieval tool does not. This chapter goes
 one level down, into how the tool works. How it works is what tells you which
 mistakes are still possible after the references are fixed.
@@ -105,7 +105,8 @@ The entire conversation is sent again, every turn. The model then writes the
 next piece of text given all of it. That block of text is the **context
 window**: everything the model can see at the moment it answers. It is
 measured in **tokens**, which are words or pieces of words, and it has a fixed
-size. Today that size ranges from one long book to a small shelf of them,
+size. ([The foundations chapter](core-foundations.qmd) introduced the context
+window as a shared budget; this is the same object, seen from the inside.) Today that size ranges from one long book to a small shelf of them,
 depending on the model. When you close the tab, the context is gone. The model is exactly what
 it was before you opened it.
 
@@ -122,8 +123,9 @@ handled, not the model remembering you. It is the reason for the
 no-patient-information rule in every chapter of this course.
 
 Second, the context window is a budget, and the model does not use all of it
-equally. Researchers placed the one relevant document at different positions
-among many others. Accuracy was highest when it sat at the beginning or end of
+equally. In the study the foundations chapter calls "lost in the middle",
+researchers placed the one relevant document at different positions among
+many others. Accuracy was highest when it sat at the beginning or end of
 the context. It fell when the document was in the middle, in some settings
 below the model's accuracy with no documents at all
 [@doi:10.1162/tacl_a_00638]. A long context window does not mean the model
@@ -132,9 +134,9 @@ tool's whole job is to decide which few passages go into the window.
 
 ### What "grounded" means, step by step
 
-The appraisal chapter's figure showed two roads to a citation. A general model
+[The appraisal chapter's](core-appraisal.qmd) figure showed two roads to a citation. A general model
 writes a reference as text. A retrieval tool searches first and writes second
-(see @fig-citation-paths in the appraisal chapter). The search-first road has
+(see @fig-citation-paths there). The search-first road has
 six steps. Together they are the **retrieval pipeline**, and each step is a
 place where something can go wrong. Google does not publish exactly how
 NotebookLM does each step. The six steps are the general design that every
@@ -145,6 +147,8 @@ tool of this kind follows.
 %%| fig-alt: "Flowchart in two columns. Left column, when you add a source: your PDF is chunked into passages, each passage is embedded as a list of numbers, and the numbers are indexed. Right column, when you ask a question: the question is embedded and the nearest passages are retrieved from the index, those passages are pasted into the context window, and the model generates an answer pointing at them."
 %%| fig-cap: "The retrieval pipeline. The left column happens once, when you add a source. The right column happens every time you ask a question. Nothing in either column reads the paper the way you would."
 flowchart LR
+  accTitle: The retrieval pipeline
+  accDescr: Flowchart in two columns. Left column, when you add a source, your PDF is chunked into passages, each passage is embedded as a list of numbers, and the numbers are indexed. Right column, when you ask a question, the question is embedded and the nearest passages are retrieved from the index, those passages are pasted into the context window, and the model generates an answer pointing at them.
   subgraph I["When you add a source"]
     direction TB
     doc[Your PDF] --> chunk[1. Chunk: cut into passages of a few hundred words]
@@ -232,17 +236,18 @@ of *reading*, made on a source that is real.
 
 ### Why grounded tools fabricate less: the numbers
 
-The appraisal chapter gave you the headline. On a 2/1/0 scale (2, the source
-supports the sentence; 1, the source is real but misdescribed; 0, the source
-does not support it or does not exist), a tool that indexes PubMed produced
+[the appraisal chapter](core-appraisal.qmd) gave you the headline. On the 2/1/0 citation scale in
+@tbl-scoring (2, accurate: the source supports the sentence; 1,
+misrepresented: the source is real but misdescribed; 0, fabricated: the
+source does not exist as given), a tool that indexes PubMed produced
 no fabricated citations, while general chatbots
 fabricated between 2% and 26% [@pmid:42232526]. The steps above are the
 reason, and the same pattern repeats wherever it has been measured.
 
 In one study, six models answered 50 questions from a head-and-neck oncology
 guideline, with and without retrieval of that guideline. **Hallucination**,
-meaning claims that contradicted the guideline or invented specifics, fell from 42% to
-4%. The share of citations that pointed at a real retrieved passage rose from
+the field's word for made-up content stated as fact (here, claims that
+contradicted the guideline or invented specifics), fell from 42% to 4%. The share of citations that pointed at a real retrieved passage rose from
 0% to between 51% and 89%, depending on the model [@pmid:42587692]. In implant
 dentistry, two retrieval systems answered with 0% fabricated references. A
 general model fabricated 82% of its references and 86% of its statistics
@@ -345,8 +350,8 @@ citation link will show you any of them.
 **The source set.** A confident summary of five weak papers is a confident
 summary of five weak papers, with perfect citations. Grounding moves the
 appraisal problem from the answer to the sources. If you want to trust the
-notebook, you have to trust what you put in it. That is the appraisal
-chapter's job.
+notebook, you have to trust what you put in it. That is [the appraisal
+chapter's](core-appraisal.qmd) job.
 
 **What is missing.** A notebook cannot cite a paper it does not contain. It
 will not tell you that the trial that would change your mind was published
@@ -468,10 +473,10 @@ answer rather than accept it. For the ready-made set, use these:
 
 For every citation in every answer, not a sample, click it. Read the
 highlighted passage plus one line above and one line below. Score each
-sentence-and-citation pair on the appraisal chapter's scale. **2** if the
+sentence-and-citation pair on [the appraisal chapter's](core-appraisal.qmd) scale (@tbl-scoring). **2** if the
 passage supports the sentence as written. **1** if the passage is real but the
-sentence is broader, narrower, or different. **0** if you cannot find support
-in the passage at all. You are looking for a 1. There is usually at least one.
+sentence is broader, narrower, or different. **0** if the cited passage does not exist, or the citation points at
+something other than what the sentence names. You are looking for a 1. There is usually at least one.
 
 ### Step 3: ask what the sources disagree about (5 minutes)
 
@@ -498,7 +503,7 @@ better written and more useful. That is not the thing you are comparing.
 
 If your chatbot searched the web and cited pages, notice that this is a
 different question about where the answer came from. The page is real.
-Whether it is evidence is the appraisal chapter's job.
+Whether it is evidence is [the appraisal chapter's](core-appraisal.qmd) job.
 
 ### Record it
 
@@ -547,7 +552,7 @@ Score yourself against this before moving on.
 | The fabrication contrast | Both answers recorded; you can say which one you could trace and why the other reads better anyway | Only the notebook's answer |
 | The search limit | You can say in one sentence when a grounded notebook is not a literature search | "It's good for research" |
 
-## Write it down
+## What this changes for you
 
 *What does this change about how you'll practice?* Answer in writing before
 you close this chapter. Two specifics. First: the next time a summary with
@@ -598,7 +603,7 @@ do with the two papers that disagree? One word is not an answer to either.
   still generated incorrect interpretations," is this chapter in nine words
   [@pmid:41266194].
 - "Lost in the middle," the experiment on where in the context a document
-  sits [@doi:10.1162/tacl_a_00638].
+  sits [@doi:10.1162/tacl_a_00638]. Also in [the foundations chapter](core-foundations.qmd).
 - A two-day workshop for clinicians that limits citation generation to
   NotebookLM and then makes participants check every one. It is honest that
   whether this reduces fabrication was not tested [@pmid:42684317].
@@ -611,7 +616,7 @@ do with the two papers that disagree? One word is not an answer to either.
 - [Word embeddings as the basis for LLMs](https://talks.seandavis.net/archive/2024-11-12-word-embeddings-basis-for-llms/):
   what "similar meaning, nearby numbers" actually means, with a hands-on
   embedding projector, for anyone who wants to see inside step 2 of the
-  pipeline.
+  pipeline. Also in [the foundations chapter](core-foundations.qmd).
 - [Prompt engineering](https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/):
   ten rules with clinical examples, for students whose Step 2 questions came
-  back vague.
+  back vague. [the prompting lab](enrichment-prompting-lab.qmd) is built on it.

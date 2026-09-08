@@ -126,7 +126,7 @@ A retrieval-grounded tool does this the other way round. "Retrieval-grounded"
 is the term you will meet in the literature. It means the tool searches a
 database of real documents first, then writes text about what it found. This
 chapter also calls it a search-first tool. Several products now work this way,
-and the retrieval chapter later in the course shows how to tell whether a given
+and [the retrieval chapter](enrichment-rag-notebooklm.qmd) shows how to tell whether a given
 tool really does. @fig-citation-paths shows the two paths.
 
 ```{mermaid}
@@ -134,6 +134,8 @@ tool really does. @fig-citation-paths shows the two paths.
 %%| fig-cap: "Two ways a tool arrives at a citation. On the left, the citation is generated as text; whether it exists is a matter of chance. On the right, the citation is retrieved from an index before any text is written."
 %%| fig-alt: "Two flowcharts side by side. General-purpose model: your question leads to generate answer text, then generate citation text, then something that looks like a reference. Retrieval-grounded tool: your question leads to search PubMed or an index, then real papers, then generate an answer about those papers, then cites what it found."
 flowchart LR
+  accTitle: Two ways a tool arrives at a citation
+  accDescr: Two flowcharts side by side. General-purpose model, your question leads to generate answer text, then generate citation text, then something that looks like a reference. Retrieval-grounded tool, your question leads to search PubMed or an index, then real papers, then generate an answer about those papers, then cites what it found.
   subgraph G["General-purpose model"]
     direction TB
     q1[Your question] --> gen1[Generate answer text]
@@ -280,9 +282,11 @@ and documentation time 16.0 minutes per day, with 0.49 more visits per week. But
 after-hours EHR time did not change significantly [@pmid:41920565]. You will work
 out why in the exercise, before reading the explanation.
 
-This is the third of the course's recurring lessons. **The published number is
-the optimistic one.** The 0.49 extra visits may also be a small example of the
-second lesson: time saved tends to get filled with more work.
+This is the third of the course's three recurring lessons: **the published
+number is the optimistic one.** The 0.49 extra visits may also be a small
+example of the second, **efficiency gains get eaten by volume**: time saved
+tends to get filled with more work. [The workforce chapter](enrichment-workforce-economics.qmd)
+follows that time onto the billing statement.
 
 ### "But it's FDA-cleared, isn't it fine?"
 
@@ -293,6 +297,10 @@ devices found clinical performance data reported for about half, and none at all
 for roughly a quarter. Well under a third of those with clinical data gave
 sex-specific results [@pmid:33820998]. A 2024 follow-up found the gap persists:
 many authorized tools have no published clinical validation [@pmid:39187696].
+A benchmark score standing in for performance on patients is the first of the
+course's three recurring lessons, **proxies fail**, in regulatory form.
+[The bias and equity chapter](core-bias-equity.qmd) gives that lesson its
+full treatment.
 
 ::: {.callout-important title="Cleared is not validated"}
 Clearance says the device is similar enough to one already on the market (the
@@ -304,7 +312,7 @@ paper with it.
 :::
 
 The device boundary, the Predetermined Change Control Plan, and the clinical
-decision support criteria belong to the ethics and regulation chapter. The scale
+decision support criteria belong to [the ethics and regulation chapter](core-ethics-regulation.qmd). The scale
 figures for FDA AI-device authorizations are [VERIFY]{.verify}: counts in circulation
 come from a secondary tracker, so do not quote a specific number of cleared
 devices without checking the live FDA list.
@@ -346,7 +354,7 @@ trained on, how it was validated, and whether fairness was tested. That is the
 closest thing to a legal right to traceability. It applies to the tool built
 into your EHR, not to the consumer chatbot on your phone. The rule is in force
 as of September 2026. A proposed rule, HTI-5, would remove the source-attribute
-requirement; the ethics and regulation chapter tracks its status.
+requirement; [the ethics and regulation chapter](core-ethics-regulation.qmd) tracks its status.
 :::
 
 There is a seventh question the six do not ask. It belongs to the patient in
@@ -368,8 +376,8 @@ physicians, access to a language model did not significantly improve diagnostic
 reasoning (adjusted difference 2 points, 95% CI −4 to 8). The model alone scored
 16 points higher than physicians using conventional resources (95% CI 2 to 30)
 [@pmid:39466245]. A tool can be capable and still fail to help the person
-holding it. That is an appraisal finding about humans, and the centaur-or-cyborg
-chapter picks it up.
+holding it. That is an appraisal finding about humans, and [the centaur-or-cyborg
+chapter](core-centaur-cyborg.qmd) picks it up.
 
 ## Watch or listen
 
@@ -409,7 +417,7 @@ not.
 The boundary case you will meet in month one: a tool your hospital licenses and
 runs inside the EHR is a different question. Ask whether a business associate
 agreement exists, and what your institution's policy says about documenting that
-you used it. The ethics and regulation chapter takes that up.
+you used it. [the ethics and regulation chapter](core-ethics-regulation.qmd) takes that up.
 :::
 
 ::: {.callout-tip title="PubMed is the verification tool"}
@@ -696,14 +704,15 @@ an answer to either.
 - A published classroom framework built around AI citation errors, in biology but
   portable [@pmid:42200655].
 - The randomized trial of physicians with model access [@pmid:39466245], and the
-  student error-catching study [@pmid:39915801].
+  student error-catching study [@pmid:39915801]. The trial is [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd)'s
+  main paper.
 - FUTURE-AI in full, with the 30 practices behind the six principles
   [@pmid:39909534]; and TRIPOD-LLM, the reporting guideline a *study* of a
   language model should meet [@pmid:39779929], which is the standard most of
   the Part B claims fail.
 - The National Academy of Medicine's AI Code of Conduct, in its discussion
   draft [@pmid:39830818]; the 2025 final is a NAM publication and the principles
-  are the same.
+  are the same. Also in [the ethics and regulation chapter](core-ethics-regulation.qmd).
 - Eight guiding principles for AI tools in health care [@doi:10.1038/s43856-023-00279-9].
   "Report clinically meaningful outcomes" and "have high healthcare value" are what
   Part B teaches in exercise form.
@@ -714,10 +723,12 @@ an answer to either.
 
 - [Grounding AI in real sources](https://talks.seandavis.net/archive/2025-10-07-rag-notebooklm-idpt-8079/)
   is a written article, not a deck, and builds the search-first pipeline from
-  first principles. Read it if @fig-citation-paths felt like an assertion.
+  first principles. Read it if @fig-citation-paths felt like an assertion. It
+  is [the retrieval chapter](enrichment-rag-notebooklm.qmd)'s reading alternative.
 - [Prompt engineering](https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/):
   ten rules with clinical examples, including the "precise language" rule that the
-  clinician-versus-patient wording effect illustrates.
+  clinician-versus-patient wording effect illustrates. [the prompting lab](enrichment-prompting-lab.qmd) is built on
+  this deck.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/)
   covers attribution and academic integrity, for the moment you use one of these
-  tools in a research project.
+  tools in a research project. Also in [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd).
