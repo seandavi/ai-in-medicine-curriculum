@@ -165,6 +165,12 @@ Accepting or rejecting nonstandard advice was judged about the same
 tool is safest to follow when it agrees with what you would have done anyway.
 The moment it disagrees, you are on your own in either direction.
 
+A related question comes up in every class: can you be sued for *not* using
+a tool that was available? Today, no. The standard of care is what competent
+physicians do now, and most do not use these tools. Price, Gerke, and Cohen
+expect that to change. Once using AI is routine, not using it could itself
+fall below the standard of care [@pmid:31584609].
+
 Where does Mr. Alvarez's note sit? Nowhere on the grid, at first glance. The
 scribe made no recommendation. But the note *is* a recommendation once
 signed. "Continue apixaban" was the plan. It was written on a premise the
@@ -230,6 +236,7 @@ basis. FDA names automation bias as the reason
 
 ```{mermaid}
 %%| label: fig-cds-path
+%%| fig-alt: "Flowchart of the four criteria as yes-or-no questions. Analyzes an image or signal: yes leads to device. Displays or analyzes medical information: no leads to device. Supports or provides recommendations to a clinician: no leads to device. Clinician can independently review the basis with time to do so: no leads to device, yes leads to non-device CDS with no FDA review."
 %%| fig-cap: "The four criteria as a path. Any 'no' makes the software a device. Criterion 4 is where most real tools are decided. It is a question about what the clinician can see, not about how accurate the model is."
 flowchart TD
   q1{"Does it analyze an image,<br/>an IVD signal, or a signal<br/>from a monitor?"} -- yes --> dev[Device: FDA oversight]
@@ -244,17 +251,19 @@ flowchart TD
 
 A sepsis alert that fires from vital-sign trends and tells the nurse to page
 you is a device. It fails criterion 1 (it processes monitor signals) and
-probably criterion 4 (it is time-critical). A tool that matches a patient's
+probably criterion 4 (it is time-critical). Any tool that reads an image is
+a device on criterion 1 alone, which is why most of the AI devices on FDA's
+list are radiology tools. A tool that matches a patient's
 diagnosis to a guideline and shows you the guideline is non-device CDS. A
 large language model that answers a clinical question in fluent prose, with
 no visible source, is a harder case than either. FDA has not yet said where
 it falls. In August 2026 the agency published a discussion paper on
-generative-AI-enabled devices. It names hallucination as the property that
-sets these tools apart, and asks for comment by 19 October 2026. But a
+generative-AI-enabled devices. It names hallucination, meaning made-up content stated as fact, as the
+property that sets these tools apart, and asks for comment by 19 October 2026. But a
 discussion paper is not guidance
 ([FDA, *Considerations for the Regulation of Generative AI-Enabled Medical Devices*, August 18, 2026](https://www.fda.gov/medical-devices/digital-health-center-excellence/considerations-regulation-generative-ai-enabled-medical-devices-discussion-paper-and-request)).
-Your scribe, notably, is not a device at all under any of this. It makes no
-recommendation. It writes what it heard, or what it thinks it heard, and the
+Your scribe, notably, is probably not a device under any of this, as FDA
+reads the criteria today. It makes no recommendation. It writes what it heard, or what it thinks it heard, and the
 regulator that reviews it is you.
 
 ::: {.callout-important title="This line moved twice while the course was being written"}
@@ -314,7 +323,9 @@ same rule that applied to a human scribe or a resident's draft. What is new
 is the kind of error: a fluent sentence that was never said. Two habits will
 hold up in a chart review, and both are cheap at 6:40 p.m. First, read the
 *plan* against the *conversation*, not against the draft's own subjective
-section. The draft agrees with itself even when it is wrong. Second, where
+section. The draft agrees with itself even when it is wrong. If you find the error
+after you have signed, add an addendum. Do not quietly edit the signed note.
+Second, where
 your institution's policy calls for it, record that the note was drafted with
 ambient documentation and reviewed by you. Many systems add that line
 automatically. If yours does, know what it says. It is an **attestation**, a
@@ -357,8 +368,8 @@ contract that makes the vendor legally responsible for protecting the data.
 An institution-licensed scribe or a model built into the EHR runs under one.
 The consumer chatbot on your phone does not. Your institutional ChatGPT Edu
 or Copilot account does not either, unless your institution says so in
-writing. The month-one boundary case from the appraisal chapter comes down to
-one question: *is there a BAA for this tool, and does the policy say what I
+writing. The month-one boundary case from the appraisal chapter, a tool your hospital
+licenses inside the EHR, comes down to one question: *is there a BAA for this tool, and does the policy say what I
 may put into it?* If nobody can answer in a sentence, the answer is no.
 
 ::: {.callout-note title="Your right to see inside the EHR's tools: status as of September 2026"}
@@ -380,7 +391,7 @@ asks someone to check.
 
 ### Rules elsewhere, and which way things are moving
 
-The European Union wrote the only comprehensive AI statute in force. Under
+The European Union wrote the most comprehensive AI statute in force. Under
 the AI Act, software that is already a regulated medical device
 automatically counts as **high-risk**. High-risk systems carry extra duties,
 for risk management, data governance, human oversight, and record-keeping,
@@ -447,8 +458,8 @@ come from the primary source, with its URL and the date you checked it.
 This chapter has just told you several things that were true on 7 September
 2026. The exercise is to find out whether they still are. Pick **two**
 questions below, one from each list. For each, find the current answer from
-the primary source: the agency, the statute, the court docket, or the
-organization's own page. Record the URL and the date you checked.
+the primary source: the agency, the statute, the court docket (the court's
+own record of the case), or the organization's own page. Record the URL and the date you checked.
 
 **List 1: answered in this chapter. Has it moved?**
 
