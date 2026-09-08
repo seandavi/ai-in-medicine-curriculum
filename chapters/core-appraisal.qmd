@@ -125,12 +125,14 @@ xkcd 1838, *Machine Learning*, by Randall Munroe,
 A retrieval-grounded tool does this the other way round. "Retrieval-grounded"
 is the term you will meet in the literature. It means the tool searches a
 database of real documents first, then writes text about what it found. This
-chapter also calls it a search-first tool. @fig-citation-paths shows the two
-paths.
+chapter also calls it a search-first tool. Several products now work this way,
+and the retrieval chapter later in the course shows how to tell whether a given
+tool really does. @fig-citation-paths shows the two paths.
 
 ```{mermaid}
 %%| label: fig-citation-paths
 %%| fig-cap: "Two ways a tool arrives at a citation. On the left, the citation is generated as text; whether it exists is a matter of chance. On the right, the citation is retrieved from an index before any text is written."
+%%| fig-alt: "Two flowcharts side by side. General-purpose model: your question leads to generate answer text, then generate citation text, then something that looks like a reference. Retrieval-grounded tool: your question leads to search PubMed or an index, then real papers, then generate an answer about those papers, then cites what it found."
 flowchart LR
   subgraph G["General-purpose model"]
     direction TB
@@ -175,7 +177,8 @@ prose. In one study, 33 physicians across 17 specialties wrote 284 questions and
 graded the answers. The median score was 5.5 out of 6. But 36 answers scored 1
 or 2, meaning mostly or completely wrong, with no change in tone [@pmid:37782499].
 In another, oncologists checked chatbot treatment recommendations for breast,
-prostate, and lung cancer against NCCN guidelines. Every output contained at
+prostate, and lung cancer against the NCCN guidelines, the standard US cancer
+treatment guidelines. Every output contained at
 least one option that matched a guideline. About a third also contained at least
 one that did not. One in eight recommended a treatment that was not in any
 guideline [@pmid:37615976]. The authors' phrase for the pattern is worth keeping:
@@ -252,7 +255,7 @@ Claims about scribes come in three tiers:
   that adopt the tool one after another without randomization, and surveys of
   people who chose to use it.
 - **Vendor or trade press.** A claim that comes from a company, a press release,
-  or trade reporting, however specific the number sounds.
+  or industry news (the "trade press"), however specific the number sounds.
 
 Here is what one study looks like as it passes through the tiers on its way to
 you. All three headlines are about the same paper, the five-system study cited
@@ -278,8 +281,8 @@ after-hours EHR time did not change significantly [@pmid:41920565]. You will wor
 out why in the exercise, before reading the explanation.
 
 This is the third of the course's recurring lessons. **The published number is
-the optimistic one.** The 0.49 extra visits are also a small example of the
-second lesson: time saved gets filled with more work.
+the optimistic one.** The 0.49 extra visits may also be a small example of the
+second lesson: time saved tends to get filled with more work.
 
 ### "But it's FDA-cleared, isn't it fine?"
 
@@ -331,7 +334,8 @@ question each one becomes when a vendor is standing in front of you, are in
 Two things to notice. Traceability asks where things came from, and that is what
 this chapter's first half is about. A tool that shows you its sources next to
 its answer has answered it. A tool that writes a reference list has not. And
-none of the six asks whether the tool is accurate on a benchmark. Accuracy is
+none of the six asks whether the tool is accurate on a benchmark, a fixed test
+set used to compare tools. Accuracy is
 necessary, and it appears under robustness. It is not the checklist, because a
 tool can be accurate on the population it was built on and fail every other row.
 
@@ -340,8 +344,9 @@ In the United States, the ONC HTI-1 rule requires decision-support tools inside
 certified EHRs to show the clinician their "source attributes": what the tool was
 trained on, how it was validated, and whether fairness was tested. That is the
 closest thing to a legal right to traceability. It applies to the tool built
-into your EHR, not to the consumer chatbot on your phone.
-[VERIFY: HTI-1 status after 2025–2026 regulatory changes]{.verify}
+into your EHR, not to the consumer chatbot on your phone. The rule is in force
+as of September 2026. A proposed rule, HTI-5, would remove the source-attribute
+requirement; the ethics and regulation chapter tracks its status.
 :::
 
 There is a seventh question the six do not ask. It belongs to the patient in
@@ -431,7 +436,9 @@ reliably.
 
 **Step 2. Ask twice.** Run both prompts below in the same tool, in two separate
 conversations, with your question substituted in. The first is worded as a
-clinician would ask it. The second is worded as a patient would.
+clinician would ask it. The second is worded as a patient would. Both ask for a
+DOI or PMID: the DOI is the publisher's permanent link for a paper, and the
+PMID is its PubMed ID number.
 
 Asked as a clinician:
 
