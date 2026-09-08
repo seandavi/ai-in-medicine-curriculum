@@ -45,7 +45,7 @@ Eleven modules, eight slots. The surplus is deliberate. Swap by cohort interest.
 The order students see on the [syllabus](../course/syllabus.qmd). Week 1 is
 orientation and stance: foundations, then centaur or cyborg. Week 2 is
 judgment: appraisal, then bias and equity. Week 3 is practice: agentic coding,
-then talking to patients, which is the signature session. Week 4 is
+then talking to patients, which is the most important session. Week 4 is
 consequences and closing: workforce or environment by the cohort's choice, then
 ethics and regulation, which closes on AIM-X, *what will you not delegate?*
 
@@ -57,11 +57,11 @@ twice, AIM-2 three times. That meets the coverage rules in
 
 **One session a week (four slots).** Run centaur or cyborg, appraisal, talking
 to patients, and ethics and regulation. This keeps the stance, the judgment,
-the signature session, and the close. Make foundations pre-work reading and
-fold bias into appraisal.
+the main session, and the close. Make foundations pre-work reading and
+cover bias inside appraisal.
 
 **A hands-on cohort.** Swap foundations and ethics for the prompting lab and
-the retrieval lab. Carry the ethics content as a standing five-minute opening
+the retrieval lab. Keep the ethics content as a five-minute opening
 to every lab.
 
 **A cohort interested in policy.** Run both workforce and environment in week 4
@@ -80,17 +80,17 @@ every tool taught here has been replaced.
    unmeasured biology in eGFR. A benchmark score stood in for clinical
    performance in FDA clearance data. The question to train is always: *what is
    this actually measuring, and what was it substituted for?*
-2. **Efficiency gains get eaten by volume.** Per-unit improvement gets
-   swallowed by growth in use, and this shows up in three separate literatures.
+2. **Efficiency gains get eaten by volume.** Per-unit improvement is
+   cancelled out by growth in use, and this appears in three separate literatures.
    Google cut per-prompt energy while total emissions rose. AI made
    radiologists more productive and imaging demand grew faster. AI scribes cut
    documentation time per note, and the time went into seeing more patients.
    Efficiency is not the same as less.
 3. **The published number is the optimistic one.** Before-and-after pilots on
    self-selected early adopters beat randomized trials. Vendor benchmarks on
-   curated hard cases beat real-world deployment. The gap between the flagship
-   statistic and the trial result is the most reliable teaching material in
-   this field.
+   curated hard cases beat real-world deployment. The gap between the most
+   prominently reported statistic and the trial result is the most reliable
+   teaching material in this field.
 
 ## Running a session
 
@@ -99,9 +99,9 @@ with a change of activity at each boundary.
 
 | Minutes | Block |
 |---|---|
-| 0 to 10 | Frame the session and restate the three standing rules: no PHI, verify before it counts, you sign the note. |
+| 0 to 10 | Introduce the session and restate the three standing rules: no PHI, verify before it counts, you sign the note. |
 | 10 to 20 | Demo or short didactic. Never longer. |
-| 20 to 60 | Breakouts of four or five. Not larger; participation collapses above that. |
+| 20 to 60 | Breakouts of four or five. Not larger; participation drops sharply above that. |
 | 60 to 80 | Report-back and comparison across groups. |
 | 80 to 90 | Close on the standing question: *what does this change about how you'll practice?* |
 
@@ -111,13 +111,14 @@ Running notes, from the design constraints:
 
 - **Pre-work is account creation, not reading.** Any session that needs an
   account says so a week ahead. Creating accounts live costs ten minutes and
-  strands the students with problems.
+  leaves students with unsolved account problems.
 - **Everything uses synthetic data.** No real patient information enters any
-  tool in this course, ever. Consumer tiers carry no business associate
+  tool in this course, ever. Consumer tiers come with no business associate
   agreement.
-- **Ungraded means participation is earned.** No exams, no graded work. Every
-  session has to justify itself on the day, which is why each one produces
-  something: a worked case, a judgment, a scored rubric.
+- **Ungraded means students attend only if a session is worth their time.** No
+  exams, no graded work. Every session has to justify itself on the day, which
+  is why each one produces something: a worked case, a judgment, a scored
+  rubric.
 - **Cost is an equity problem.** Free tiers only. If a session would work
   better on a paid tier, it gets redesigned, not assigned.
 
@@ -128,22 +129,22 @@ entry template. This section is what the instructor does.
 
 ### What changed from earlier years
 
-Kept as-is: the weekly cadence, three to five resources a week, three to five
+Kept as-is: the weekly schedule, three to five resources a week, three to five
 sentences per resource, complete freedom of topic.
 
 Changed:
 
 - **Each entry answers three fixed prompts** (what it says, what it changed for
-  you, what it left open). Same length as before. The prompts push the
-  sentences from summary toward reflection.
-- **An optional breadth nudge.** Students are encouraged, not required, to
-  touch two or three of the listed theme areas across the block.
+  you, what it left open). Same length as before. The prompts ask for
+  reflection rather than summary.
+- **Optional encouragement to read across areas.** Students are encouraged, not
+  required, to cover two or three of the listed theme areas across the block.
 - **Week 4 is synthesis, not reading.** Students pick one theme from their
   weeks 1 to 3 entries and write a short piece about it, then present it in
   the last small group.
 - **A short AI-use note each week.** One or two sentences on whether and how
   they used a chatbot and what it got wrong. This is deliberately low-effort.
-  Its purpose is to make the tools discussable, not to police them.
+  Its purpose is to make the tools discussable, not to control their use.
 
 Grading load is unchanged or slightly lower, since week 4 replaces three to
 five entries with one short piece.
@@ -182,7 +183,7 @@ By the end of the block, students will be able to:
 
 - A short menu of theme areas (the list on the student page) with two or three
   starter resources in each, clearly marked optional. Students who already know
-  what they want will ignore it; students who stall will use it.
+  what they want will ignore it; students who cannot decide will use it.
 - The entry template posted as a file.
 - One exemplar week written by you: three entries showing the three prompts
   done well, including one on something non-technical (an ethics essay, a piece
@@ -206,12 +207,12 @@ Complete or incomplete, with brief feedback in weeks 1 and 2 while habits form.
 
 Keep them small. Ask each student one question: "What is the most interesting
 disagreement you have found so far?" By week 3 most students will have one.
-Those who do not need a nudge toward a second theme area.
+Those who do not should be pointed toward a second theme area.
 
 ### The reading companion, at three levels of effort
 
 The student page carries four weekly chatbot prompts, one per week, with less
-scaffolding each week. Three ways to deliver them:
+help each week. Three ways to deliver them:
 
 **Level 1, posted prompts.** Post each week's prompt as text; students paste it
 into any chatbot. No infrastructure. You cannot see transcripts. This is what
@@ -237,7 +238,7 @@ The design caps guests deliberately: one per session, two across the whole
 course. Every session pairs an idea with an activity, and a guest-heavy course
 turns back into lectures without anyone deciding to.
 
-The most useful guest is someone who can speak to a tool actually deployed in
+The most useful guest is someone who can talk about a tool actually deployed in
 the local health system in the last quarter. That is what a fourth-year
 audience wants and what a survey lecture cannot give. Good matches by module:
 ambient documentation as deployed (centaur or cyborg); disclosure
@@ -250,8 +251,8 @@ The invitation should say: the date and time; a twenty-minute slot inside a
 ninety-minute session, never a fifty-minute lecture; the competency the
 session serves; Zoom only; about forty fourth-year students; ungraded; and the
 actual ask, *bring one thing you deployed and one thing that went wrong.*
-Sending the invitations as one batch with a dean's co-signature converts
-maybes to yeses. Sending them one at a time does not.
+Sending the invitations as one batch with a dean's co-signature gets
+more acceptances. Sending them one at a time does not.
 
 ## Adapting the course for another cohort
 
@@ -281,4 +282,4 @@ elsewhere. To run it for your own cohort:
 Chapters are reviewed against six invented readers before they change; the
 [Review personas](personas.qmd) appendix has them, and the
 [How this book was made](about.qmd) appendix says how the review runs. If you
-change a chapter, run it past the six.
+change a chapter, review it as the six.

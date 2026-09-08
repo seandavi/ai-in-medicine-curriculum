@@ -13,7 +13,7 @@ in the course needs an install, a paid account, or a real patient.
 | When | What | Time |
 |---|---|---|
 | Before each session | Read the chapter, watch or listen to its episode, do the activity, and score yourself on the Check. | 1 to 2 hours per chapter |
-| Two sessions a week | Ninety minutes on Zoom. Ten minutes of framing, a short demo, forty minutes in breakouts of four or five doing the chapter's activity together, then report-back and the standing question: *what does this change about how you'll practice?* | 3 hours |
+| Two sessions a week | Ninety minutes on Zoom. Ten minutes of introduction, a short demo, forty minutes in breakouts of four or five doing the chapter's activity together, then report-back and the standing question: *what does this change about how you'll practice?* | 3 hours |
 | Across the week | Three to five entries in the [resource log](resource-log.qmd), and a two-sentence note on whether you used a chatbot and what it got wrong. | 1 to 2 hours |
 | Small group | Once a week. Each student names one resource and one surprise. | 30 to 45 minutes |
 
