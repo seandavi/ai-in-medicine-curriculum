@@ -11,7 +11,7 @@ Not rendered. Fed to the tutor; used by the instructor in the live session.
    threshold) or not referred for review, at the same illness burden as
    enrolled White patients. At the threshold, 4.8 vs 3.8 active chronic
    conditions (26.3% more).
-3. **Correction.** Reformulate the prediction target to track illness (the
+3. **Fix.** Reformulate the prediction target to track illness (the
    authors tested combinations of cost and active chronic conditions); share
    of Black patients among the auto-enrolled rises from 17.7% to 46.5%. The
    paper reports the vendor engaged to change the product.
@@ -34,7 +34,7 @@ Not rendered. Fed to the tutor; used by the instructor in the live session.
 
 ## Part B — pre-vetted cases
 
-| Case | 1 Proxy / gap | 2 Harmed, decision | 3 Correction | 4 Status (Sept 2026) | 5 Bedside | 6 Harm type |
+| Case | 1 Proxy / gap | 2 Harmed, decision | 3 Fix | 4 Status (Sept 2026) | 5 Bedside | 6 Harm type |
 |---|---|---|---|---|---|---|
 | Dermatology (pmid:35960806; pmid:30073260 is a viewpoint) | Data gap: training images mostly Fitzpatrick I–III; light skin became the implicit "normal" | Dark-skinned patients; lesion missed or misclassified by model *and* by dermatologists labeling the data | Diverse, biopsy-confirmed benchmark (DDI); fine-tuning closed the gap in-study | Datasets exist; no regulatory requirement for skin-tone reporting; adoption by commercial tools not determinable | Partly: a clinician who examines the lesion is not bound by the model, but the same clinician performed worse on dark skin in the study | Allocation (missed diagnosis); arguably representation (dark skin absent from the definition of normal) |
 | eGFR (pmid:32853499; pmid:34563581) | Race coefficient (~1.16–1.21) standing in for unmeasured muscle mass / creatinine generation | Black patients; higher reported eGFR, so later CKD staging, later nephrology referral and transplant listing | NKF-ASN Task Force 2021: CKD-EPI 2021 refit without race, immediate implementation in all US labs; cystatin C confirmation | Recommended; adoption widespread but the "two-thirds of labs" figure is **unconfirmed** (secondary source). pmid:38507611 is a 28-lab survey about communication, not coverage. Correct answer: adopted, extent not determinable from the packet | Yes in principle: the equation was printed on the lab report. Anyone could read it. Almost nobody did | Allocation |
@@ -49,7 +49,7 @@ cannot be measured, and X tracks Y differently for different patients."
 "An algorithm is only as fair as the relationship between what it measures
 and what you hoped it measured."
 
-## Closing question, bed 14
+## Closing question ("What this changes for you"), bed 14
 
 Expected: light absorbance measured, oxygen saturation hoped for; calibration
 population had lighter skin. Telling the patient: yes, in plain terms ("the

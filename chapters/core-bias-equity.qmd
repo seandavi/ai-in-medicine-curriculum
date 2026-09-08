@@ -131,8 +131,8 @@ arterial oxygen saturation. The two agree closely in the people the curve was
 built on.
 
 In December 2020, Sjoding and colleagues compared paired readings in two
-groups of patients: a pulse oximeter value and an arterial blood gas drawn
-within ten minutes of each other [@pmid:33326721]. They looked for **occult
+cohorts, meaning two groups of patients: a pulse oximeter value and an
+arterial blood gas drawn within ten minutes of each other [@pmid:33326721]. They looked for **occult
 hypoxemia**: an arterial saturation below 88 percent, which is low enough to
 change treatment, while the oximeter read 92 to 96 percent, which is
 reassuring. In the University of Michigan cohort it occurred in 11.7 percent
@@ -187,7 +187,9 @@ than the number, and the number was designed to be looked at.
 
 The sentence for a co-intern: *when the number and the patient disagree,
 believe the patient and get the direct measurement.* For this one case, it is
-also the only fix available to you tonight.
+also the only fix available to you tonight. Then write the mismatch in the
+note, with both numbers. The next person covering this patient needs to know
+that the oximeter reads high on him.
 
 ### Case two: cost standing in for need
 
@@ -406,8 +408,9 @@ asking it about a published paper, not about a person.
 
 This chapter walked through the care management algorithm for you. Now do it
 on paper, without looking back. Below is what a clinician would actually have
-seen: a tile in a population-health dashboard, drawn here to show what was
-and was not visible.
+seen: a tile in a population-health dashboard, the screen a health system
+uses to track its patients as a group. It is drawn here to show what was and
+was not visible.
 
 ::: {.vendor-slide}
 <div class="brand">Population health · care management</div>
