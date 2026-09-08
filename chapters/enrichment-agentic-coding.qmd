@@ -293,7 +293,8 @@ exists. That is not classroom theatre. It is the professional habit of
 labelling AI-assisted work, rehearsed on something harmless.
 
 ::: {.callout-note title="Who signs"}
-When the team's number is wrong, the person accountable is the clinician who
+The course's standing rule, *you sign the note*, covers a number you copied
+from a calculator. When the team's number is wrong, the person accountable is the clinician who
 acted on it, not the resident who built the page. Regulation may eventually
 reach the builder; the chart reaches you first. The practical consequence for
 a note: record the score and the source you took it from. Make the source one

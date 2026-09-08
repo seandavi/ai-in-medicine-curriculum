@@ -105,7 +105,8 @@ The entire conversation is sent again, every turn. The model then writes the
 next piece of text given all of it. That block of text is the **context
 window**: everything the model can see at the moment it answers. It is
 measured in **tokens**, which are words or pieces of words, and it has a fixed
-size. Today that size ranges from one long book to a small shelf of them,
+size. ([The foundations chapter](core-foundations.qmd) introduced the context
+window as a shared budget; this is the same object, seen from the inside.) Today that size ranges from one long book to a small shelf of them,
 depending on the model. When you close the tab, the context is gone. The model is exactly what
 it was before you opened it.
 
@@ -122,8 +123,9 @@ handled, not the model remembering you. It is the reason for the
 no-patient-information rule in every chapter of this course.
 
 Second, the context window is a budget, and the model does not use all of it
-equally. Researchers placed the one relevant document at different positions
-among many others. Accuracy was highest when it sat at the beginning or end of
+equally. In the study the foundations chapter calls "lost in the middle",
+researchers placed the one relevant document at different positions among
+many others. Accuracy was highest when it sat at the beginning or end of
 the context. It fell when the document was in the middle, in some settings
 below the model's accuracy with no documents at all
 [@doi:10.1162/tacl_a_00638]. A long context window does not mean the model
@@ -234,17 +236,18 @@ of *reading*, made on a source that is real.
 
 ### Why grounded tools fabricate less: the numbers
 
-[the appraisal chapter](core-appraisal.qmd) gave you the headline. On a 2/1/0 scale (2, the source
-supports the sentence; 1, the source is real but misdescribed; 0, the source
-does not support it or does not exist), a tool that indexes PubMed produced
+[the appraisal chapter](core-appraisal.qmd) gave you the headline. On the 2/1/0 citation scale in
+@tbl-scoring (2, accurate: the source supports the sentence; 1,
+misrepresented: the source is real but misdescribed; 0, fabricated: the
+source does not exist as given), a tool that indexes PubMed produced
 no fabricated citations, while general chatbots
 fabricated between 2% and 26% [@pmid:42232526]. The steps above are the
 reason, and the same pattern repeats wherever it has been measured.
 
 In one study, six models answered 50 questions from a head-and-neck oncology
 guideline, with and without retrieval of that guideline. **Hallucination**,
-meaning claims that contradicted the guideline or invented specifics, fell from 42% to
-4%. The share of citations that pointed at a real retrieved passage rose from
+the field's word for made-up content stated as fact (here, claims that
+contradicted the guideline or invented specifics), fell from 42% to 4%. The share of citations that pointed at a real retrieved passage rose from
 0% to between 51% and 89%, depending on the model [@pmid:42587692]. In implant
 dentistry, two retrieval systems answered with 0% fabricated references. A
 general model fabricated 82% of its references and 86% of its statistics
@@ -472,8 +475,8 @@ For every citation in every answer, not a sample, click it. Read the
 highlighted passage plus one line above and one line below. Score each
 sentence-and-citation pair on [the appraisal chapter's](core-appraisal.qmd) scale (@tbl-scoring). **2** if the
 passage supports the sentence as written. **1** if the passage is real but the
-sentence is broader, narrower, or different. **0** if you cannot find support
-in the passage at all. You are looking for a 1. There is usually at least one.
+sentence is broader, narrower, or different. **0** if the cited passage does not exist, or the citation points at
+something other than what the sentence names. You are looking for a 1. There is usually at least one.
 
 ### Step 3: ask what the sources disagree about (5 minutes)
 

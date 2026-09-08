@@ -180,7 +180,9 @@ patient had contradicted, and you followed it. Box B, by a side door.
 
 The reflex answer from institutions is "we will require explainable AI." That
 answer has been tested once, in a randomized study, and in that test it did
-not work.
+not work. ([The bias and equity chapter](core-bias-equity.qmd) uses the same
+study for what a clinician can catch at the bedside; here it is the legal
+reading.)
 
 Jabbour and colleagues gave 457 hospitalists, nurse practitioners, and
 physician assistants written cases of acute respiratory failure. They asked
@@ -202,8 +204,8 @@ its reasoning, so the physician should have caught it." That defense has to
 face evidence that showing the reasoning did not help the clinicians who saw
 it. A plaintiff in box B has the same paper: the physician was handed a
 biased model, and the safeguard everyone relies on was shown not to work.
-**Automation bias** is the tendency to rely too much on a suggestion from an
-automated system. It is not fixed by adding a paragraph of reasoning. It is a
+**Automation bias** is the habit of trusting a machine's suggestion more than
+it deserves. It is not fixed by adding a paragraph of reasoning. It is a
 property of tired humans under time pressure, which is what you will be.
 
 ### Where a tool becomes a medical device
@@ -298,11 +300,10 @@ It also raises the question worth putting to any vendor: if the model on my
 unit today is not the model that was cleared, what did clearance tell me?
 
 [The critical appraisal chapter](core-appraisal.qmd) makes the companion point in
-full, and the short version belongs here too. Clearance is a regulatory status, not proof of validation.
-Of 130 FDA decision summaries for AI devices, about half reported clinical
-performance data and roughly a quarter reported none. Among those with data,
-well under a third gave results by sex [@pmid:33820998]. A 2024 follow-up
-found the gap persists [@pmid:39187696]. "Cleared" tells you the manufacturer
+full, and the short version belongs here too. Clearance is a regulatory
+status, not proof of validation: of 130 FDA decision summaries for AI devices,
+about half reported any clinical performance data [@pmid:33820998], and a 2024
+follow-up found the gap persists [@pmid:39187696]. "Cleared" tells you the manufacturer
 convinced FDA that the device is about as safe and effective as something
 already on the market. It does not tell you it was tested on patients like
 yours.

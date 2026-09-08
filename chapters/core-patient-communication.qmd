@@ -116,7 +116,9 @@ did them. The physicians on the forum were answering strangers for free at the
 end of a day.
 
 Now the trap. The finding is not that chatbots should answer your patients. It
-is a finding about text, judged by readers. There was no relationship and no
+is a finding about text, judged by readers. The course's third recurring
+lesson, **the published number is the optimistic one**, applies to a
+preference rating as much as to a vendor slide. There was no relationship and no
 follow-up. It compared a tool with unlimited time against physicians with none.
 It says nothing about whether the patient got better, whether they came back,
 or whether they believed a word of it. Hold it as a warning about what a rushed
@@ -257,7 +259,9 @@ note is where the next clinician learns that this patient asked.
 
 Now the two pages. Something from [the appraisal chapter](core-appraisal.qmd) applies directly to
 them. A 2026 study compared five tools. It asked the same questions in a
-clinician's voice and in a patient's voice, and got different answers. The
+clinician's voice and in a patient's voice (linguists call that difference
+**register**, the way a particular group of people talks), and got different
+answers. The
 patient version was worse. The share of ChatGPT's references that were made up
 rose from 2.1 percent to 20.0 percent, and the tools were more likely to cite
 websites rather than papers [@pmid:42232526]. When physicians graded chatbot

@@ -121,6 +121,13 @@ they are, named:
 on the right. The thing the lab can measure is on the left. The equation is
 the bridge, and the bridge was built from a specific set of people.
 
+A stand-in like this, something you measure because the real thing cannot
+be measured, is called a **proxy**. The first of the course's three recurring
+lessons is **proxies fail**: the stand-in and the real thing can come apart,
+and they come apart for some patients more than for others. [The bias and
+equity chapter](core-bias-equity.qmd) is built on that lesson. This chapter's
+job is narrower: to show you the bridge at all.
+
 ```{mermaid}
 %%| label: fig-egfr-proxy
 %%| fig-alt: "Flowchart. Three inputs the lab has, serum creatinine, age, and sex, feed an equation learned from 8,254 people with measured GFR, which outputs the eGFR on the panel. A dotted arrow shows the eGFR standing in for measured GFR, which is never done in routine care. A grey box, muscle mass, diet, and drugs that block secretion, feeds creatinine without touching measured GFR."
@@ -262,7 +269,9 @@ performance. It simply had not been measured on patients like those.
 
 ::: {.callout-important title="The one sentence"}
 A model's performance on the population it was built from is the optimistic
-number. Ask what it was trained on, and ask what it was tested on. If those
+number. That is the third of the course's three recurring lessons, **the
+published number is the optimistic one**, in its first form. Ask what it was
+trained on, and ask what it was tested on. If those
 are the same set, you have learned nothing yet.
 :::
 

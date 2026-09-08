@@ -108,6 +108,10 @@ The stand-in quantity is called a **proxy**: something you measure because
 the real thing cannot be measured. The **proxy problem** is the whole chapter
 in one sentence: *an algorithm is only as fair as the link between what it
 measures and what you hoped it measured, and that link can differ by group.*
+It is the first of the course's three recurring lessons, **proxies fail**,
+and this chapter is where that lesson gets its full treatment. [The
+foundations chapter](core-foundations.qmd) met it in the eGFR, a stand-in for
+a filtration rate nobody measured.
 
 You met an example of this in [the critical appraisal chapter](core-appraisal.qmd), without the
 name. There, a test-set score in an FDA clearance summary stood in for how
@@ -326,7 +330,9 @@ score are close to undetectable from a single encounter.
 ### The study that complicates the bedside answer
 
 It would be comfortable to leave this chapter believing that a careful
-clinician catches these. The best evidence says otherwise.
+clinician catches these. The best evidence says otherwise. ([The ethics and
+regulation chapter](core-ethics-regulation.qmd) draws the same numbers as a
+figure and asks what they mean in court.)
 
 In a randomized study, Jabbour and colleagues showed 457 hospitalist
 physicians, nurse practitioners, and physician assistants a series of

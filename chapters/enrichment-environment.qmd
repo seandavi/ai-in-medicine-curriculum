@@ -259,8 +259,10 @@ in 2024, and 81 percent above in 2025, with data-center electricity use up 37
 percent in the last of those years
 ([ESG Dive, 2 July 2025](https://www.esgdive.com/news/googles-emissions-rise-despite-data-center-decarbonization-ppas-environmental-report-2025/752236/);
 [ESG Dive, 2 July 2026](https://www.esgdive.com/news/googles-emissions-continue-to-climb-due-to-ai-buildout/824373/)).
-Economists call this the Jevons effect, after the observation in 1865 that
-more efficient steam engines led Britain to burn more coal, not less. When a
+This is the second of the course's three recurring lessons, **efficiency
+gains get eaten by volume**. Economists call it the Jevons effect, after the
+observation in 1865 that more efficient steam engines led Britain to burn more
+coal, not less. When a
 unit of something gets cheaper, people use enough more of it that the total
 rises. Per-query efficiency is real, and growth in use is outrunning it. The
 US Department of Energy's national laboratory put data centers at 176

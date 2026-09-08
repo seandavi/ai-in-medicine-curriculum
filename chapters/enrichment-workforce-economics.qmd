@@ -227,8 +227,9 @@ rules are built to keep a human in the loop, and rules change more slowly than
 benchmarks.
 
 **4. Demand: if the task gets cheaper, is more of it ordered?** Making a task
-cheaper does not obviously reduce the number of people doing it. Economists
-call this the Jevons paradox. In the nineteenth century, more efficient steam
+cheaper does not obviously reduce the number of people doing it. This is the
+second of the course's three recurring lessons, **efficiency gains get eaten
+by volume**; economists call it the Jevons paradox. In the nineteenth century, more efficient steam
 engines led to more coal being burned, not less, because cheaper power got
 used more. Imaging works the same way: cheaper scans get ordered more often.
 The workforce projection above assumes demand keeps growing at least as fast
@@ -327,7 +328,8 @@ more relative value units per week, a 5.8 percent increase. (RVUs are the
 units Medicare uses to price physician work.) They saw 0.80 more patients per
 week and had no rise in claim denials [@pmid:41511775]. Time saved became
 visits and RVUs. That is real, and it is what a hospital's finance office
-wants. It is not cost reduction.
+wants. It is not cost reduction. It is the same recurring lesson, efficiency
+gains eaten by volume, seen on a billing statement.
 
 **Across the system.** The Peterson Health Technology Institute takes no
 vendor money. In March 2025 it concluded that scribes probably reduce burnout
