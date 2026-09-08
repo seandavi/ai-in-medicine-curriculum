@@ -21,7 +21,7 @@ assignments share the work.
 
 ## Theme areas (optional guide)
 
-You do not have to follow this list. It exists so that no one is stuck for a
+You do not have to follow this list. It exists so that no one lacks a
 starting point, and so you can see the range of what counts.
 
 - How the technology works (machine learning basics, large language models,
@@ -34,7 +34,7 @@ starting point, and so you can see the range of what counts.
 - Patient perspectives and communication
 - History and hype cycles
 
-Over the block, try to touch at least two or three areas. Starter resources for
+Over the block, try to cover at least two or three areas. Starter resources for
 each are posted separately.
 
 ## Weeks 1 to 3
@@ -67,7 +67,7 @@ Type:                (tutorial / primary study / review / policy /
 ```
 
 Three to five sentences per entry is about right. Longer is fine if you have
-something to say; padding is not.
+something to say; longer for its own sake is not.
 
 ## AI-use note (one per week, two or three sentences)
 
@@ -80,10 +80,10 @@ verified before you list it. Treat an unverified reference as made up.
 
 ## Week 4: synthesis
 
-No new resources. Choose one theme that ran through your weeks 1 to 3 entries.
+No new resources. Choose one theme that appears across your weeks 1 to 3 entries.
 Write a short piece (roughly 300 to 500 words) that:
 
-- names the theme and why it caught your attention,
+- names the theme and why it interested you,
 - draws on at least three of your own earlier entries, noting where they
   agreed, disagreed, or built on each other,
 - ends with what you now think, and what you would still want to know.
@@ -181,4 +181,4 @@ verified.
 
 This week the prompt is deliberately empty. Your AI-use note should say how you
 chose to use the tool, or not, and why. One sentence in the synthesis on what
-role AI tools played is enough. That mirrors the disclosure journals now expect.
+role AI tools played is enough. That is the same disclosure journals now expect.
