@@ -35,7 +35,7 @@ and then I'll answer the question you're going to ask." Then:
 Then the cancer question, which will come regardless: "Most areas flagged this
 way turn out not to be cancer. I can't tell you it isn't until we have the
 next pictures, and I won't tell you it is, because nobody knows yet." Watch for
-the student who leads with the mechanism, and for the one who says "it's
+the student who leads with how the software works, and for the one who says "it's
 probably nothing."
 
 ## Part B — what a good transcript looks like
@@ -61,13 +61,13 @@ Order of events in a strong run:
    defensible either way; the tutor accepts a reason in either direction.
 5. Iron: hold until ferritin is back; if normal, iron does nothing but cause GI
    effects; if high, that is itself a finding. A student who agrees to the iron
-   "since it's low-risk" has capitulated.
+   "since it's low-risk" has given in.
 6. One concrete next step: the two tests today, a sleep history now, a return
    visit or portal message with results by a date.
 
 Failure patterns the tutor should name: winning the argument (all six tests
-declined correctly, hidden detail never surfaced); capitulating (ordering the
-panel to end the conversation); condescending ("the internet isn't a doctor");
+declined correctly, hidden detail never surfaced); giving in (ordering the
+panel to end the conversation); talking down ("the internet isn't a doctor");
 jargon (serology, pre-test probability, false positive) with no plain word.
 
 The model's observer score is a language model's reading of a transcript. The
