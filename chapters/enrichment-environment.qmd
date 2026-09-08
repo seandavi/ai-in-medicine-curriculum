@@ -15,7 +15,8 @@ By the end of this chapter you will be able to:
 3. Put AI's per-query cost against your own specialty's measured footprint, and
    say what that comparison settles and what it does not.
 4. Explain how a per-query number can shrink thirtyfold in a year while the
-   total keeps rising, and name who lives next to the total.
+   total keeps rising, and name who lives next to the data centers that make
+   up the total.
 5. Ask a vendor one question about their environmental figure that has a
    checkable answer.
 :::
@@ -87,7 +88,7 @@ chapter says so. The skill is asking what was counted.
 
 ### Where the bottle came from
 
-Start with the resident's bottle and walk it back to its source. Every step
+Start with the resident's bottle and trace it back to its source. Every step
 is public. You will do this yourself in the Do block, so read this as the
 worked example.
 
@@ -95,7 +96,7 @@ worked example.
 University of Texas at Arlington posted a preprint, a paper shared before
 peer review, titled "Making AI Less Thirsty." It was published two years
 later in *Communications of the ACM* [@doi:10.1145/3724499]. But the first
-arXiv version contains the sentence the whole story grew from: ChatGPT needs
+arXiv version contains the sentence the whole story came from: ChatGPT needs
 to "drink" a 500 mL bottle of water for a simple conversation of roughly 20
 to 50 questions and answers, depending on when and where it runs. Read that
 carefully. It is a bottle per *conversation*, not per question: 10 to 25 mL
@@ -104,7 +105,7 @@ ChatGPT. It rests on an assumed energy cost of 0.004 kWh per request, which
 the authors called conservative. And it counts two kinds of water: the water
 evaporated on site to cool the servers, and the water evaporated off site by
 the power plants that make the electricity. In the United States the
-power-plant share is the larger one. The paper's headline number, 700,000
+power-plant share is the larger one. The paper's most quoted number, 700,000
 litres to train GPT-3, is about training, not use. The current version of
 the paper gives the per-response figure as a bottle per 10 to 50
 medium-length responses.
@@ -118,14 +119,14 @@ email."
 Notice what has changed since the preprint: a much larger model, a specific
 task rather than a "simple" question, and a number roughly twenty to fifty
 times larger per interaction, whatever the exact assumptions were. The
-resident's bottle is this headline, with "per email" worn down to "per note"
+resident's bottle is this headline, with "per email" changed to "per note"
 by a year of repetition.
 
 **August 2025.** Google published a technical report on what a median Gemini
 text prompt costs on its own computers: 0.24 Wh of energy, 0.03 grams of
 CO~2~e, and 0.26 mL of water. A watt-hour (Wh) is what a one-watt LED uses
 in an hour; a kilowatt-hour (kWh) is a thousand of them. CO~2~e is carbon
-dioxide equivalent, the unit that folds every greenhouse gas into one number. Google's blog post described
+dioxide equivalent, the unit that expresses every greenhouse gas as one number. Google's blog post described
 the water as "about five drops"
 ([arXiv 2508.15734](https://arxiv.org/abs/2508.15734); Google Cloud blog, 21 August 2025).
 The energy figure is unusually complete. It includes idle machines, the host
@@ -136,8 +137,8 @@ on-site cooling water only, not the water used by the power plants. The
 Riverside group said so within a day. They pointed out that Google had
 compared its on-site figure to their on-site-plus-off-site figure and called
 the difference "orders of magnitude," meaning several tenfold steps. The
-medical director's five drops are this report, with the word "on-site" worn
-off.
+medical director's five drops are this report, with the word "on-site" left
+out.
 
 ::: {.press-clips}
 <div class="press-clip"><div class="src">The Washington Post · analysis</div><a class="hl" href="https://www.washingtonpost.com/technology/2024/09/18/energy-ai-use-electricity-water-data-centers/">A bottle of water per email: the hidden environmental costs of using AI chatbots</a><div class="date">18 September 2024</div></div>
@@ -167,9 +168,9 @@ dispute about facts.
 
 [the appraisal chapter](core-appraisal.qmd) gave you three things that can be wrong with a cited
 claim (@tbl-three-failures): the reference (does the source exist), the attribution (does it say
-what it is quoted as saying), and the claim itself (is it true). Run the
-bottle through them. The *reference* is fine: the preprint exists, the
-newspaper analysis exists. The *attribution* is where it broke. A bottle per
+what it is quoted as saying), and the claim itself (is it true). Apply the
+three to the bottle. The *reference* is fine: the preprint exists, the
+newspaper analysis exists. The *attribution* is where it failed. A bottle per
 20 to 50 questions became a bottle per email, which became a bottle per note,
 and none of those is what the source said. The *claim*, whether AI use is a
 meaningful water cost, is a different question from either. It is the one no
@@ -199,7 +200,7 @@ questions.
 100-word email, which the *Post* analysis may have treated as more than one
 request. A plain reply, or a "reasoning" setting, where the model writes out
 a page of working before it answers. An independent test of thirty commercial
-models reported short queries around 0.42 Wh and the most energy-hungry
+models reported short queries around 0.42 Wh and the highest-energy
 models above 29 Wh for a long prompt, more than 65 times the most efficient
 model on the same task
 ([Jegham et al., arXiv 2505.09598](https://arxiv.org/abs/2505.09598),
@@ -223,7 +224,7 @@ most articles on this topic traces to a 2023 commentary in *Joule*
 [@doi:10.1016/j.joule.2023.09.004]. It compared an estimate for a language
 model against a Google figure for search energy published in 2009. Real
 journal, real author, repeated everywhere, and the comparison was fourteen
-years stale on the day it was made. Independent re-estimates in 2025 settled
+years out of date on the day it was made. Independent re-estimates in 2025 settled
 near 0.3 Wh for a typical text query, about a tenth of the number that
 commentary made famous
 ([Epoch AI, February 2025](https://epoch.ai/gradient-updates/how-much-energy-does-chatgpt-use)).
@@ -234,7 +235,7 @@ right. It is which year and which model it belongs to.
 ### Small per query, large in total
 
 Take the most favorable documented figure and do the arithmetic this chapter
-was built on. Forty students, fifteen queries a week, four weeks: 2,400
+depends on. Forty students, fifteen queries a week, four weeks: 2,400
 queries. At Google's 0.24 Wh that is 0.58 kWh, a microwave running for half
 an hour. At 0.26 mL it is 624 mL of on-site water, a bottle and a bit, for
 the whole class for the whole month. At 0.03 g CO~2~e a query it is 72 g.
@@ -244,7 +245,7 @@ per person per year in 2018, the highest of any industrialized nation, with
 pollution [@pmid:33284703]. The class's month of AI use is a few thousandths
 of one percent of one person's share.
 
-Say the limit of that calculation out loud, because you will be tempted to
+State the limit of that calculation, because you will be tempted to
 stop there. It uses the one per-query carbon figure a vendor has published,
 which is also the most favorable of the energy figures, and it counts on-site
 water only. At the *Post*'s 519 mL the class would have used about 1,250
@@ -264,7 +265,7 @@ gains get eaten by volume**. Economists call it the Jevons effect, after the
 observation in 1865 that more efficient steam engines led Britain to burn more
 coal, not less. When a
 unit of something gets cheaper, people use enough more of it that the total
-rises. Per-query efficiency is real, and growth in use is outrunning it. The
+rises. Per-query efficiency is real, and growth in use is faster than the saving. The
 US Department of Energy's national laboratory put data centers at 176
 terawatt-hours (TWh, a billion kilowatt-hours) in 2023, 4.4 percent of US
 electricity, and projected 6.7 to 12 percent by 2028
@@ -273,8 +274,8 @@ The International Energy Agency projects global data-center demand doubling,
 from about 415 TWh in 2024 to about 945 TWh by 2030
 ([IEA, *Energy and AI*, April 2025](https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai)).
 Other bodies project higher. The estimates disagree on method and on how
-fast AI is adopted. The right move is to quote the range with its date, not
-to average it.
+fast AI is adopted. The right thing to do is quote the range with its date,
+not to average it.
 
 The consequence for the resident is uncomfortable in both directions. Her
 opting out of the scribe changes nothing measurable. And the medical
@@ -326,8 +327,8 @@ Memphis anything.
 ### The denominator, and the claim not to repeat
 
 A per-query number needs a denominator: something of your own to compare it
-against. Health care is not a bystander here. Its footprint is measured,
-large, and yours. The 1,692 kg per person figure above comes with a
+against. Health care is not exempt from the same question. Its footprint is
+measured, large, and yours. The 1,692 kg per person figure above comes with a
 state-by-state analysis. Emissions were not correlated with quality of care,
 which is the authors' argument that the sector could cut them without harming
 care [@pmid:33284703]. A scoping review of the environmental footprint of
@@ -340,7 +341,7 @@ newer, and so far mostly perspective pieces rather than measurements: an
 sustainability of large models in care [@pmid:42209329], a *Nature Reviews
 Nephrology* comment on weighing benefit against environmental cost
 [@pmid:41540287], and a *Lancet Global Health* argument that AI ethics
-frameworks have treated the environment as a footnote [@pmid:40580996].
+frameworks have given the environment little attention [@pmid:40580996].
 
 One measured result is worth more than the perspectives for a purchasing
 committee. A radiology group ran five sizes of two open models over 3,665
@@ -348,10 +349,9 @@ chest radiograph reports and metered the electricity. The 7-billion-parameter
 model (parameters are a measure of model size) that had been further trained
 for the task matched the accuracy of a general-purpose model ten times its
 size. The largest model used more
-than seven times the energy of its smaller sibling [@pmid:39189909]. The
+than seven times the energy of the smaller version [@pmid:39189909]. The
 lesson is the one @fig-per-query teaches, seen from the buyer's side: which
-model you run is a bigger lever, a bigger place to push on the total, than
-whether you run one at all.
+model you run changes the total more than whether you run one at all.
 
 ::: {.callout-important title="The claim not to repeat"}
 You will meet the sentence "autonomous AI could cut health care's emissions
@@ -407,8 +407,8 @@ your chatbot, in a fresh conversation:
 > is per, the model and year it applies to, and the primary source with a
 > link.
 
-Record exactly what it says. You are not trusting it; you are collecting
-the specimen. Note whether it gave a source at all, and whether the source is
+Record exactly what it says. You are not trusting it; you are recording
+what it said so you can check it. Note whether it gave a source at all, and whether the source is
 one of the four in @tbl-what-counted. The answer will change with the
 wording, the day, and the tool. That is itself a finding. If a classmate got
 a different number, compare the two before you compare either to the sources.
@@ -486,7 +486,8 @@ The sentence I would actually say: ___________________________________
 ```
 
 The two prompt counts will differ a hundredfold and both will be large.
-That is the result. What it settles is that your keyboard is not the lever.
+That is the result. What it settles is that your own use does not decide the
+total.
 What it does not settle is the total, which is a different question and was
 never yours to answer alone.
 
@@ -507,7 +508,8 @@ standardized energy score for the model they run.
 and one thing you considered changing and decided was not worth it, with
 the reason. A student who writes "I will keep using a model for literature
 search because my footprint is negligible against the clinical benefit, and
-the lever is purchasing, not my keyboard" has done the reasoning this
+the decision that matters is purchasing, not my own use" has done the
+reasoning this
 chapter asks for. So has the one who writes the opposite, if the reason is
 as specific.
 
@@ -522,7 +524,7 @@ Score yourself before moving on.
 | Two verdict sentences (Part A) | Each names a date, a model, and what was counted; each could be said aloud at huddle | "It depends" |
 | Three choices (objective 2) | On-site versus total water; which query; which model and year, or equivalents, in your own words | Fewer than three, or "methodology" |
 | A denominator (Part B) | A real paper, a real unit, an arithmetic comparison, and a sentence that says what it settles and what it does not | A comparison with no source, or one that concludes "so it doesn't matter" |
-| The Jevons sentence (objective 4) | You can say how per-query cost fell and total rose in the same year, with a source and date, and name who lives near the total | "Efficiency is improving" |
+| The Jevons sentence (objective 4) | You can say how per-query cost fell and total rose in the same year, with a source and date, and name who lives near the data centers that make up the total | "Efficiency is improving" |
 | The vendor question (Part C) | Has a checkable answer; you can say what a bad answer would look like | "Is it sustainable?" |
 | The rule and the non-change (Part C) | Both are specific and the reason is the arithmetic, not the mood | A rule with no reason, or no non-change |
 
@@ -546,33 +548,34 @@ this week change whether you use it? If not, what *would*?
 - Three choices move a per-query figure a hundredfold: what you count,
   which query, which model and when. A figure without a model and a date is
   not a figure.
-- The reference was fine; the attribution broke. A bottle per 20 to 50
+- The reference was fine; the attribution failed. A bottle per 20 to 50
   questions became a bottle per email, which became a bottle per note.
 - At the best-documented rate, an individual's use is negligible against
   health care's own 1,692 kg per person per year. The published rates differ
   by about a thousandfold, and the honest sentence says both.
 - Per-query cost fell 33-fold in a year while the same company's total
   emissions rose to 81 percent above its 2019 level. That is the Jevons
-  effect, and the people who live next to the total were not asked.
+  effect, and the people who live next to the data centers and turbines were
+  not asked.
 - Location-based and market-based accounting are both accepted and give
   different answers. Ask which one you are being shown.
 - The "80 percent" claim is about one screening test, not about health care.
   The bottle and the 80 percent are the same error in opposite directions.
-- Which model a vendor runs is a bigger lever than whether you send the
-  prompt. Take the question to the people who buy the tool, and take the
-  date with it.
+- Which model a vendor runs changes the total more than whether you send
+  the prompt. Take the question to the people who buy the tool, and include
+  the date with it.
 
 ## Go deeper
 
 **Papers**
 
 - The water paper in its published form [@doi:10.1145/3724499], and the
-  first arXiv version for the sentence the story grew from.
+  first arXiv version for the sentence the story came from.
 - Google's per-prompt method, [arXiv 2508.15734](https://arxiv.org/abs/2508.15734),
   and the *Register* piece above for the on-site objection.
 - The 2023 *Joule* commentary the "10× a search" line comes from
   [@doi:10.1016/j.joule.2023.09.004]; read it against the 2025 Epoch AI
-  re-estimate to see how a number ages.
+  re-estimate to see how a number goes out of date.
 - Luccioni, Jernite, and Strubell, "Power Hungry Processing"
   ([arXiv 2311.16863](https://arxiv.org/abs/2311.16863), 2023): the first
   systematic comparison of the cost of running models, task by task, and
