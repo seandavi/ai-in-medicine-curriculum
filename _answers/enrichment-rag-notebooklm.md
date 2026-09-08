@@ -93,6 +93,13 @@ the cited passages; gives Duran and Seki a line each with the task named.
 
 ## Instructor prep
 
+The split-table block in "What chunking does to a table" is labeled an
+illustration. Its Difference column (+0.94, +0.86, +0.72, +0.36, +0.30 with
+CIs) matches the paper's Results text (checked 2026-09-08 against the PMC
+full text). The Without/With column values and the table number ("Table 6")
+could not be checked from the PMC text extract, which drops tables; confirm
+them against the PDF before the cohort, or leave the block as illustrative.
+
 Confirm institutional NotebookLM status the week before (admins can disable it
 per organizational unit). Confirm the free-tier limits on Google's own help
 page; the chapter's 50 sources / 50 queries per day came from third-party

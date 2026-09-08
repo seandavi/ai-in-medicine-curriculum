@@ -89,7 +89,7 @@ hour fixes them.
 ### The model has no memory
 
 Start with something you can see. Open a chatbot and ask it who won the 2020
-World Series. It answers: the Dodgers. Ask "where was it played?" It answers
+World Series, the baseball championship. It answers: the Dodgers. Ask "where was it played?" It answers
 correctly: Arlington, Texas, because of the pandemic. It seems to remember
 the first question.
 
@@ -105,7 +105,8 @@ The entire conversation is sent again, every turn. The model then writes the
 next piece of text given all of it. That block of text is the **context
 window**: everything the model can see at the moment it answers. It is
 measured in **tokens**, which are words or pieces of words, and it has a fixed
-size. When you close the tab, the context is gone. The model is exactly what
+size. Today that size ranges from one long book to a small shelf of them,
+depending on the model. When you close the tab, the context is gone. The model is exactly what
 it was before you opened it.
 
 Two things follow, and the rest of the chapter depends on both.
@@ -135,10 +136,13 @@ The appraisal chapter's figure showed two roads to a citation. A general model
 writes a reference as text. A retrieval tool searches first and writes second
 (see @fig-citation-paths in the appraisal chapter). The search-first road has
 six steps. Together they are the **retrieval pipeline**, and each step is a
-place where something can go wrong.
+place where something can go wrong. Google does not publish exactly how
+NotebookLM does each step. The six steps are the general design that every
+tool of this kind follows.
 
 ```{mermaid}
 %%| label: fig-rag-pipeline
+%%| fig-alt: "Flowchart in two columns. Left column, when you add a source: your PDF is chunked into passages, each passage is embedded as a list of numbers, and the numbers are indexed. Right column, when you ask a question: the question is embedded and the nearest passages are retrieved from the index, those passages are pasted into the context window, and the model generates an answer pointing at them."
 %%| fig-cap: "The retrieval pipeline. The left column happens once, when you add a source. The right column happens every time you ask a question. Nothing in either column reads the paper the way you would."
 flowchart LR
   subgraph I["When you add a source"]
@@ -191,7 +195,9 @@ answer and asked to paraphrase it.
 
 Here is the step most explanations skip, and the one that produces the
 strangest errors. Take a results table in a paper you uploaded. It is a few
-lines of text. If the chunk boundary falls inside it, the tool stores this:
+lines of text. If the chunk boundary falls inside it, the tool stores
+something like this. The block below is an illustration built from the
+differences the guideline study reports; it is not a screenshot of any tool.
 
 ::: {.chunks}
 <pre class="chunk"><span class="lbl">chunk 7 of 23</span>... rated by three blinded specialists.
@@ -215,23 +221,27 @@ retrieved, the model sees the headings and the two best-behaved rows. It never
 sees the sentence that qualifies them. Both chunks are real. Both citations
 will resolve. Neither is the table.
 
-Nothing in the pipeline knows that a table is a table. Nothing knows that a
-figure legend belongs to a figure, or that "not statistically significant"
-three lines later applies to the number above it. Rows of a table cut apart.
+Nothing in the basic pipeline knows that a table is a table. Nothing knows
+that a figure legend belongs to a figure, or that "not statistically
+significant" three lines later applies to the number above it. Better tools
+add a page-layout step that tries to keep tables whole, but from the outside
+you cannot tell whether yours does, or how well. Rows of a table cut apart.
 A footnote separated from the value it qualifies. A "however" at the top of
 the next page. These are the retrieval tool's typical errors. They are errors
 of *reading*, made on a source that is real.
 
 ### Why grounded tools fabricate less: the numbers
 
-The appraisal chapter gave you the headline. On a 2/1/0 scale, a tool that
-indexes PubMed produced no fabricated citations, while general chatbots
+The appraisal chapter gave you the headline. On a 2/1/0 scale (2, the source
+supports the sentence; 1, the source is real but misdescribed; 0, the source
+does not support it or does not exist), a tool that indexes PubMed produced
+no fabricated citations, while general chatbots
 fabricated between 2% and 26% [@pmid:42232526]. The steps above are the
 reason, and the same pattern repeats wherever it has been measured.
 
 In one study, six models answered 50 questions from a head-and-neck oncology
 guideline, with and without retrieval of that guideline. **Hallucination**,
-meaning statements the model made that the guideline did not support, fell from 42% to
+meaning claims that contradicted the guideline or invented specifics, fell from 42% to
 4%. The share of citations that pointed at a real retrieved passage rose from
 0% to between 51% and 89%, depending on the model [@pmid:42587692]. In implant
 dentistry, two retrieval systems answered with 0% fabricated references. A
@@ -250,8 +260,10 @@ The drop comes from how the tool is built, not from the tool being careful.
 The same paper found the *accuracy* gain from retrieval was large for weak
 models. For strong models it was small and not statistically significant. The
 drop in hallucination, and the gain in how checkable the answers were, held
-across all of them [@pmid:42587692]. Grounding does not make a model smarter.
-It makes it *checkable*.
+across all of them [@pmid:42587692]. The authors add that the strong models
+may simply have been near the top of the scale already, so read the accuracy
+result with care. The safer summary is this: grounding does not reliably make
+a model smarter. It makes it *checkable*.
 
 There is one more thing a grounded tool does that a general one cannot, and
 you will produce it yourself in the Do block. Asked a question its sources do
@@ -280,8 +292,8 @@ significant for the already-strong bases." The answer's second sentence
 half-corrects this. But the second sentence is not the one that goes on the
 slide.
 
-On the appraisal chapter's scale this is a **score 1**: a real reference, but
-a wrong description of what it says. It is also the most common kind of error
+On the 2/1/0 scale this is a **score 1**: a real reference, but a wrong
+description of what it says. It is also the most common kind of error
 a grounded tool makes. And it is the kind that grounding, because of how it is
 built, cannot catch. The pipeline guarantees that the text came from the
 passages. It does not guarantee that the model read the passages the way the
@@ -312,7 +324,8 @@ authors' own caution that the tool had not been tested at other sites. The
 misreading is not inevitable. It is common.
 
 **The check.** Click the citation on the first sentence. It lands on Table 6.
-Two of the five confidence intervals cross zero. That is the whole check, and
+Two of the five confidence intervals cross zero, which means the gain for
+those two models may be nothing. That is the whole check, and
 it took less time than reading this paragraph. The general rule: for any
 sentence you are going to repeat, click its citation and read *one line above
 and one line below* the highlighted passage. The line below is where the
@@ -344,10 +357,10 @@ documents*. It is the wrong tool for *what does the literature say*, because
 there the papers you failed to include are the ones that matter.
 
 **Disagreement.** When two sources disagree, retrieval pulls passages from
-both, and generation writes one paragraph. The common result is a
-smoothed-over consensus that no source holds. You will test this directly in
-the Do block, with a pair of papers chosen because they disagree about the
-same tool.
+both, and generation writes one paragraph. A frequent result is a
+smoothed-over consensus that no source holds. Nobody has measured how often;
+you will test whether your tool does it in the Do block, with a pair of
+papers chosen because they disagree about the same tool.
 
 ::: {.callout-important title="The practical rule"}
 A grounded tool fixes the reference. It helps you see where each sentence
@@ -395,7 +408,8 @@ line is bright on purpose. The edge cases are where people get it wrong.
 ::: {.callout-tip title="Getting in"}
 NotebookLM is free with any Google account and runs in the browser. A
 personal Gmail account works and asks for nothing beyond what you already gave
-Google. If you sign in with your school Google account and NotebookLM is
+Google. Making a *new* Google account may ask for a phone number; if you will
+not give one, use the no-Google path below. If you sign in with your school Google account and NotebookLM is
 missing or refuses to load, your school's administrator has turned it off for
 your part of the organization. They can do that. Do not spend time on it;
 switch to a personal account. Google's own help page confirms that most work
