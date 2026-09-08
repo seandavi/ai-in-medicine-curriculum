@@ -108,7 +108,7 @@ patients'.
 | UK GPs Aug 2025: 14% using; 63% seek consent; ≤10% decline; errors 38/35/31% | Blease et al., BMJ Health Care Inform 2026. pmid:42386325 |
 | Clinician 2.1% → patient 20.0% fabrication | McLaughlin et al., Neurosurg Pract 2026. pmid:42232526 |
 | 36 of 284 answers scored 1–2 | Goodman et al., JAMA Netw Open 2023. pmid:37782499 |
-| 21% of programs teach patient communication | Tolentino et al., JMIR Med Educ 2024. pmid:39023999 (figure from research/competency-frameworks.md; confirm against the paper's table) |
+| 21% cover patient communication | Tolentino et al., JMIR Med Educ 2024. pmid:39023999. Confirmed 2026-09-08 against the PMC full text: 4 of 19 program papers (21%) mention "communication of AI results to patients"; the denominator is papers, not the 30 programs. |
 | 66% very important to be told; 91.5% worried about misdiagnosis | Khullar et al., JAMA Netw Open 2022. pmid:35507346 (numbers from PMC full text) |
 | Tessa, NEDA, June 2023 | CNN Business 2023-06-01; NPR 2023-06-08 |
 | Winters v. OpenAI, complaint filed July 2026 | Norton Rose Fulbright blog 2026-08-11; Forbes 2026-07-26. Allegations only. |

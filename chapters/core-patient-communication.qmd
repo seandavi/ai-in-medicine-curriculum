@@ -77,8 +77,8 @@ framework") names this skill. The two main US lists are an expert-interview
 study that produced six competency domains [@pmid:36731054] and a 2026 review
 that mapped 54 competency proposals from 22 countries [@pmid:42120544]. Both
 put communication with patients inside the visit itself. A review of the
-programs that actually exist found it taught in about one in five
-[@pmid:39023999]. Nothing else in this course has a gap that wide between what
+programs that actually exist found it covered in about one in five of the
+papers describing them [@pmid:39023999]. Nothing else in this course has a gap that wide between what
 the field says matters and what it teaches. The reason is not that it is
 unimportant. It is that it cannot be taught by lecture. The skill is not
 knowing what to say. It is saying it to a person who is frightened, or
@@ -98,7 +98,8 @@ Ask a room of students what goes wrong when a machine talks to a patient, and
 the answer is coldness. The evidence says the opposite. In 2023 a team drew 195
 patient questions from a public forum where verified physicians answer. They had
 a chatbot answer the same questions, then put both answers in front of
-clinician raters who were not told which was which [@pmid:37115527]. @fig-ayers
+clinician raters who were not told which was which, so-called blinded raters
+[@pmid:37115527]. @fig-ayers
 shows the result.
 
 ![Blinded raters preferred the chatbot's answer 78.6 percent of the time.
@@ -219,9 +220,9 @@ things. The profession has not finished arguing about which of them the
 patient must be told about. What is settled is narrower: if the tool is
 recording them, ask; if they ask, answer.
 
+The appraisal chapter listed questions a vendor's sales slide never answers.
 The question the patient in the scenario asked, "is that recording us," is the
-seventh question the appraisal chapter said no vendor slide answers. The answer
-has three parts, and the third is the one students skip.
+seventh. The answer has three parts, and the third is the one students skip.
 
 | The tool | Can the patient refuse it? | What you can honestly say |
 |---|---|---|
@@ -234,8 +235,8 @@ has three parts, and the third is the one students skip.
 : What can be refused, and what you can say. Institutional policy varies; the middle column is the common case, not a rule. {#tbl-decline}
 
 The honest version of this conversation includes the things you do not control.
-A student who tells the patient in Card 5 of the live session, "none of it, if
-you say so," has told a comforting lie. The strong version names what she can
+A student who tells the patient in one of the live session's scenario cards,
+"none of it, if you say so," has told a comforting lie. The strong version names what she can
 refuse, names what she cannot, and then names who signs the note and who is
 responsible for the decision. That last sentence is what the patient came for.
 
@@ -318,6 +319,10 @@ responsible sound defensive. Students who never reach it leave the patient
 believing a machine decided. And the first two sentences have to be separate.
 Patients merge "the computer flagged it" and "the radiologist agreed" into
 one fact, and they are two.
+
+Say the second sentence only when you know it is true. The signed report tells
+you who read the study; if it does not, say what you do know and find out the
+rest.
 
 The same shape handles the phone on the desk: it listens and drafts; I read,
 change, and sign; the note is mine. And the printout: the tool made a list; I
@@ -530,7 +535,7 @@ sentence about the printout is a correction, start again.
 
 ## Summary
 
-- Every framework names this skill; about one in five programs teaches it.
+- Every framework names this skill; about one in five program papers covers it.
   The reason is that it cannot be taught by lecture.
 - Blinded raters preferred chatbot answers to physicians' and called them more
   empathetic ten times as often. That is a finding about text, not patients.
