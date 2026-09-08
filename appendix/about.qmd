@@ -79,8 +79,8 @@ figure, or section moved. Then a second six-persona review pass, one agent per
 chapter, which filed one review issue per chapter, fixed what the findings
 called for, and left the rest as open items for the author.
 
-**This cross-reference pass.** Chapters written independently overlap and
-contradict. The last pass made them one book: every mention of another chapter
+**A cross-reference pass.** Chapters written independently overlap and
+contradict. This pass made them one book: every mention of another chapter
 became a link, block headings were made the same in every chapter, shared terms
 were checked for agreement and the recurring ideas named the same way
 everywhere, duplicated material was cut back to a short version plus a link to
@@ -88,6 +88,21 @@ the chapter that owns it, repeated podcast episodes and readings were noted,
 the competency coverage table in the preface was built from the chapters as
 written, and every remaining `[VERIFY]` flag was inventoried into one issue for
 the author to work through.
+
+**The course around the chapters.** The book was then regrouped into parts by
+week, following the default four-week order, and the material that had lived
+only in the repository was rendered: a syllabus, the
+[weekly resource log](../course/resource-log.qmd) with its four chatbot
+prompts, and a [For instructors](instructors.qmd) appendix holding the module
+catalog, the session structure, and the guest-invitation shape.
+
+**A writing pass for plain statement.** Reading the passes' output, the author
+found that the language was now plain but still mannered: metaphor and set
+phrase where a literal sentence would do. One agent per chapter replaced each
+figure of speech with the direct statement, keeping only the metaphors that are
+a chapter's own explained teaching device, with the same script checking that
+nothing but the wording moved. The rule was added to the writing standard so
+later drafts and the pull-request reviewer hold to it.
 
 ## How chapters are reviewed
 
