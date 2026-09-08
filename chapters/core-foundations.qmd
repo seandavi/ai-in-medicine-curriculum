@@ -126,6 +126,8 @@ the bridge, and the bridge was built from a specific set of people.
 %%| fig-alt: "Flowchart. Three inputs the lab has, serum creatinine, age, and sex, feed an equation learned from 8,254 people with measured GFR, which outputs the eGFR on the panel. A dotted arrow shows the eGFR standing in for measured GFR, which is never done in routine care. A grey box, muscle mass, diet, and drugs that block secretion, feeds creatinine without touching measured GFR."
 %%| fig-cap: "What the eGFR equation takes in and what it stands for. The equation was learned from 8,254 people with measured GFR. It is a bridge from what a lab can measure to what a clinician wants to know. Anything that changes creatinine without changing GFR (grey) crosses the bridge unnoticed. Redrawn from the description of the CKD-EPI 2021 development in Inker et al. (2021)."
 flowchart LR
+  accTitle: What the eGFR equation takes in and what it stands for
+  accDescr: Flowchart. Three inputs the lab has, serum creatinine, age, and sex, feed an equation learned from 8,254 people with measured GFR, which outputs the eGFR on the panel. A dotted arrow shows the eGFR standing in for measured GFR, which is never done in routine care. A grey box, muscle mass, diet, and drugs that block secretion, feeds creatinine without touching measured GFR.
   subgraph IN["What the lab has"]
     direction TB
     cr[Serum creatinine]
@@ -182,7 +184,7 @@ out where the guess broke.
 
 Read the last column as a pattern, not as nephrology. Every row says the same
 thing: *the model was fit to these people, and here is what happened to those
-people.* The bias and equity chapter takes up why the race term was there in
+people.* [the bias and equity chapter](core-bias-equity.qmd) takes up why the race term was there in
 the first place and who paid for it. For this chapter the point is narrower,
 and it applies to every model. The training population is a property of the
 model, as much as the equation is. You cannot judge the one without knowing
@@ -198,6 +200,8 @@ same loop. @fig-loop draws it once.
 %%| fig-alt: "Flowchart. Raw material such as labs, images, notes, or text becomes predictors; the truth for each case, such as measured GFR, sepsis yes or no, or the next word, joins them in a learning step that finds a function f so that truth is approximately f of predictors; the result is a model, and a new case with unknown truth goes through the model to produce a prediction."
 %%| fig-cap: "The loop every learned model comes from. Turn the raw material into predictors, collect the truth for each case, learn a function that predicts truth from predictors, then apply it to a case whose truth you do not have. The eGFR, a sepsis alert, and a language model differ only in what fills the boxes."
 flowchart LR
+  accTitle: The loop every learned model comes from
+  accDescr: Flowchart. Raw material such as labs, images, notes, or text becomes predictors. The truth for each case, such as measured GFR, sepsis yes or no, or the next word, joins them in a learning step that finds a function f so that truth is approximately f of predictors. The result is a model, and a new case with unknown truth goes through the model to produce a prediction.
   raw[Raw material:<br/>labs, images, notes, text] --> pred[Predictors]
   truth[Truth for each case:<br/>measured GFR, sepsis yes/no,<br/>the next word] --> learn
   pred --> learn["Learn: find f so that<br/>truth ≈ f(predictors)"]
@@ -344,8 +348,8 @@ are right most of the time, because the most plausible continuation of a
 well-documented fact is the fact. It means the *error rate is not zero and the
 tone does not change when it is wrong.* A made-up citation reads exactly like
 a real one. That is the justified part of the fear. The outdated part is the
-belief that the tools are unreliable for everything. The critical appraisal
-chapter measures the rates. This chapter explains why there is a rate at all.
+belief that the tools are unreliable for everything. [The critical appraisal
+chapter](core-appraisal.qmd) measures the rates. This chapter explains why there is a rate at all.
 :::
 
 ### The context window
@@ -396,7 +400,7 @@ demonstration, however striking, tells you very little about what happens on
 the ward.
 :::
 
-## Watch
+## Watch or listen
 
 **Video.** 3Blue1Brown, *But what is a GPT? Visual intro to transformers*
 (Deep Learning, Chapter 5), published 1 April 2024, 27 minutes.
@@ -427,7 +431,7 @@ that would make the vendor legally responsible for protecting patient data,
 unless your institution has told you so explicitly. The question you will be
 tempted to ask about the patient from this morning stays in your head. And
 whatever drafts a note, you sign it. What to document when a tool helped is
-the ethics and regulation chapter's question.
+[the ethics and regulation chapter's](core-ethics-regulation.qmd) question.
 :::
 
 ### Part A: overfitting you can see (8 minutes)
@@ -537,15 +541,15 @@ change of tone on the tenth, is the more dangerous object. That is why
 unverified output is dangerous rather than merely useless. Then, if you have
 two minutes left, ask the same thing again in plainer words, the way you would
 say it out loud. The answer depends on the wording more than you would expect.
-The critical appraisal chapter measures by how much.
+[the critical appraisal chapter](core-appraisal.qmd) measures by how much.
 
 ::: {.callout-tip title="If the model refuses or hedges"}
 Some assistants will now say they cannot guarantee citations, or will offer to
 search. That is a design choice added on top of the same process, and it is
 worth noting in your record. The tool has been tuned to hedge, which is
 different from the tool having checked. If it offers to search the web and
-does, you are now looking at an answer built from search results, which the
-critical appraisal chapter treats separately. Turn search off if you can, or
+does, you are now looking at an answer built from search results, which [the
+critical appraisal chapter](core-appraisal.qmd) treats separately. Turn search off if you can, or
 note that it was on.
 :::
 
@@ -583,8 +587,8 @@ muscle. So the same creatinine probably means a *lower* true GFR than the 57
 the equation returned. Was she among the 8,254? What would you ask for
 instead? What do you now say to the attending about the number on the panel?
 One word is not an answer. And notice that nobody told her a model was in the
-room either. Whether that matters, and when, is the patient communication
-chapter's question, not this one's.
+room either. Whether that matters, and when, is [the patient-communication
+chapter's](core-patient-communication.qmd) question, not this one's.
 
 And the second half. The next time a chatbot hands you a citation with a first
 author, a journal, and a year, what is the one sentence you will say to
@@ -620,8 +624,7 @@ minutes because of it?
   hour). <https://www.youtube.com/watch?v=zjkBMFhNj_g>. The next step up from
   the 3Blue1Brown video: what the two training stages are, why the second one
   produces an assistant, and a section on prompt injection (tricking a model
-  with instructions hidden in the text it reads) that the ethics and
-  regulation chapter will make use of.
+  with instructions hidden in the text it reads).
 - 3Blue1Brown, *But what is a neural network?* (Deep Learning, Chapter 1).
   <https://www.youtube.com/watch?v=aircAruvnKk>. For the *f* in @fig-loop,
   if you want to see what the boxes in the Playground exercise contain.
@@ -636,9 +639,9 @@ minutes because of it?
 
 **Papers**
 
-- The CKD-EPI 2021 development and validation paper. It is a model card (the
-  one-page description of a model that the critical appraisal chapter
-  teaches) before the term existed: predictors, response, training set, test
+- The CKD-EPI 2021 development and validation paper. It is a model card (a
+  one-page description of a model: what it was trained on, what it was
+  tested on, and where it fails) before the term existed: predictors, response, training set, test
   set, and where it is wrong, all in one abstract [@pmid:34554658]. The
   NKF-ASN task force report explains why the refit happened [@pmid:34563581].
 - Dataset shift for clinicians, in two pages [@pmid:34260843], and the

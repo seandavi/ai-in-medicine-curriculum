@@ -126,7 +126,7 @@ A retrieval-grounded tool does this the other way round. "Retrieval-grounded"
 is the term you will meet in the literature. It means the tool searches a
 database of real documents first, then writes text about what it found. This
 chapter also calls it a search-first tool. Several products now work this way,
-and the retrieval chapter later in the course shows how to tell whether a given
+and [the retrieval chapter](enrichment-rag-notebooklm.qmd) shows how to tell whether a given
 tool really does. @fig-citation-paths shows the two paths.
 
 ```{mermaid}
@@ -134,6 +134,8 @@ tool really does. @fig-citation-paths shows the two paths.
 %%| fig-cap: "Two ways a tool arrives at a citation. On the left, the citation is generated as text; whether it exists is a matter of chance. On the right, the citation is retrieved from an index before any text is written."
 %%| fig-alt: "Two flowcharts side by side. General-purpose model: your question leads to generate answer text, then generate citation text, then something that looks like a reference. Retrieval-grounded tool: your question leads to search PubMed or an index, then real papers, then generate an answer about those papers, then cites what it found."
 flowchart LR
+  accTitle: Two ways a tool arrives at a citation
+  accDescr: Two flowcharts side by side. General-purpose model, your question leads to generate answer text, then generate citation text, then something that looks like a reference. Retrieval-grounded tool, your question leads to search PubMed or an index, then real papers, then generate an answer about those papers, then cites what it found.
   subgraph G["General-purpose model"]
     direction TB
     q1[Your question] --> gen1[Generate answer text]
@@ -304,7 +306,7 @@ paper with it.
 :::
 
 The device boundary, the Predetermined Change Control Plan, and the clinical
-decision support criteria belong to the ethics and regulation chapter. The scale
+decision support criteria belong to [the ethics and regulation chapter](core-ethics-regulation.qmd). The scale
 figures for FDA AI-device authorizations are [VERIFY]{.verify}: counts in circulation
 come from a secondary tracker, so do not quote a specific number of cleared
 devices without checking the live FDA list.
@@ -346,7 +348,7 @@ trained on, how it was validated, and whether fairness was tested. That is the
 closest thing to a legal right to traceability. It applies to the tool built
 into your EHR, not to the consumer chatbot on your phone. The rule is in force
 as of September 2026. A proposed rule, HTI-5, would remove the source-attribute
-requirement; the ethics and regulation chapter tracks its status.
+requirement; [the ethics and regulation chapter](core-ethics-regulation.qmd) tracks its status.
 :::
 
 There is a seventh question the six do not ask. It belongs to the patient in
@@ -368,8 +370,8 @@ physicians, access to a language model did not significantly improve diagnostic
 reasoning (adjusted difference 2 points, 95% CI −4 to 8). The model alone scored
 16 points higher than physicians using conventional resources (95% CI 2 to 30)
 [@pmid:39466245]. A tool can be capable and still fail to help the person
-holding it. That is an appraisal finding about humans, and the centaur-or-cyborg
-chapter picks it up.
+holding it. That is an appraisal finding about humans, and [the centaur-or-cyborg
+chapter](core-centaur-cyborg.qmd) picks it up.
 
 ## Watch or listen
 
@@ -409,7 +411,7 @@ not.
 The boundary case you will meet in month one: a tool your hospital licenses and
 runs inside the EHR is a different question. Ask whether a business associate
 agreement exists, and what your institution's policy says about documenting that
-you used it. The ethics and regulation chapter takes that up.
+you used it. [the ethics and regulation chapter](core-ethics-regulation.qmd) takes that up.
 :::
 
 ::: {.callout-tip title="PubMed is the verification tool"}

@@ -99,7 +99,7 @@ them would have. So will you. Prompting well is a skill worth thirty minutes,
 and it is the smaller half of this chapter. The larger half is what prompting
 well cannot do.
 
-## What a prompt can and cannot do
+## How it works
 
 ### Two different things a prompt can change
 
@@ -185,7 +185,7 @@ clinician can add to a prompt. In the exercise you will see what happens with
 and without it.
 
 ::: {.callout-tip title="If English is not your first language"}
-The critical appraisal chapter reports a finding you should carry into this
+[the critical appraisal chapter](core-appraisal.qmd) reports a finding you should carry into this
 one. The same tool made up references ten times more often when a question was
 phrased the way a patient talks than the way a clinician writes
 [@pmid:42232526]. Linguists call this **register**: the way a particular group
@@ -245,13 +245,13 @@ interval from minus 4 to plus 8. (A confidence interval is the range of
 differences the data are consistent with. One that crosses zero means the
 trial could not tell the groups apart.) In a secondary comparison the
 authors call exploratory, the model *on its own* scored 16 points higher than
-the usual-resources group [@pmid:39466245]. @fig-goh redraws the two
+the usual-resources group [@pmid:39466245]. @fig-goh-estimates redraws the two
 estimates.
 
 ![Two estimates from the same randomized trial. Physicians with the model did
 no better than physicians without it; the model alone did. Redrawn for this
 chapter from the estimates reported in Goh et al., *JAMA Network Open* 2024
-[@pmid:39466245]; the data are the paper's, the drawing is this course's.](../images/goh-2024-redrawn.png){#fig-goh fig-alt="Dot-and-interval chart with two rows. Top row: physician plus LLM versus conventional resources, plus 2 percentage points, 95 percent confidence interval minus 4 to plus 8, crossing zero. Bottom row: LLM alone versus conventional resources, plus 16 points, interval 2 to 30, not crossing zero."}
+[@pmid:39466245]; the data are the paper's, the drawing is this course's.](../images/goh-2024-redrawn.png){#fig-goh-estimates fig-alt="Dot-and-interval chart with two rows. Top row: physician plus LLM versus conventional resources, plus 2 percentage points, 95 percent confidence interval minus 4 to plus 8, crossing zero. Bottom row: LLM alone versus conventional resources, plus 16 points, interval 2 to 30, not crossing zero."}
 
 The tool was better than the physicians. The physicians using the tool were not
 better than the physicians without it. Something in how clinicians used the
@@ -273,7 +273,7 @@ not remove the automation bias
 The honest summary for a fourth-year: the prompting skill is real and cheap.
 The evidence that it makes *you* a better diagnostician is not there yet. What
 evidence exists says the gain, when there is one, comes from how you use the
-answer, not from how you asked for it. The centaur-or-cyborg chapter takes up
+answer, not from how you asked for it. [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd) takes up
 what "how you use the answer" means in practice.
 
 ## Watch or listen
@@ -311,7 +311,7 @@ know it happened. Consumer chatbots and institutional accounts alike have no
 business associate agreement unless your institution tells you in writing that
 one exists. That agreement is the contract that makes a vendor legally
 responsible for protecting patient data. A tool your hospital runs inside the
-EHR is a different question, and the ethics and regulation chapter takes it up.
+EHR is a different question, and [the ethics and regulation chapter](core-ethics-regulation.qmd) takes it up.
 :::
 
 You will run one case twice, score both answers, and then check two claims from
@@ -468,8 +468,8 @@ rounds; a statement of what information is missing.
 
 : Scoring correctness on the trap. The scale has only three steps on purpose; arguing with yourself about a borderline case is part of the exercise. {#tbl-trap-score}
 
-If either answer gives references, score each on the critical appraisal
-chapter's 2/1/0 citation scale (accurate, misrepresented, fabricated) by
+If either answer gives references, score each on [the critical appraisal
+chapter's](core-appraisal.qmd) 2/1/0 citation scale (@tbl-scoring: accurate, misrepresented, fabricated) by
 searching PubMed, and put the scores on the record. Do not invent a separate
 scale for them.
 
@@ -545,7 +545,7 @@ Score yourself against this before moving on.
 | The two trials (objective 5) | You can state the direction of both Goh trials, the model-alone result, and what that implies about where the weak point is | "Studies show AI helps doctors" or "studies show it doesn't" |
 | The trap | You can say which kind of trap your case had (omission, common-answer, buried interaction, ambiguity) and what the model did with it | You scored the answers without opening the trap |
 
-## The question you keep
+## What this changes for you
 
 *What does this change about how you'll practice?* Write it down before you
 close the chapter. Two specifics.

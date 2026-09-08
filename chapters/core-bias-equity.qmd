@@ -91,7 +91,7 @@ line between the two is not where most people put it. Knowing which side of
 the line a tool is on tells you whether your own alertness protects the
 patient or only makes you feel better.
 
-## How the failures happen
+## How it works
 
 ### One problem, many cases
 
@@ -109,7 +109,7 @@ the real thing cannot be measured. The **proxy problem** is the whole chapter
 in one sentence: *an algorithm is only as fair as the link between what it
 measures and what you hoped it measured, and that link can differ by group.*
 
-You met an example of this in the critical appraisal chapter, without the
+You met an example of this in [the critical appraisal chapter](core-appraisal.qmd), without the
 name. There, a test-set score in an FDA clearance summary stood in for how
 well a tool works on patients. A study of 130 such summaries found that about
 half reported any clinical performance data at all [@pmid:33820998]. The proxy in that case was a test score standing in for
@@ -363,8 +363,8 @@ about the target and not the math.
 
 ::: {.callout-note title="\"But it's FDA-cleared\""}
 The oximeter was. So were the chest radiograph tools. Clearance answers a
-different question from the one you are asking. The critical appraisal
-chapter makes that case in full with the same 130 clearance summaries cited
+different question from the one you are asking. [The critical appraisal
+chapter](core-appraisal.qmd) makes that case in full with the same 130 clearance summaries cited
 above [@pmid:33820998], and the FUTURE-AI checklist there gives fairness one
 row and one question for the vendor. This chapter is that row, in depth. If
 the two chapters are assigned in the same week, read the objection once and
