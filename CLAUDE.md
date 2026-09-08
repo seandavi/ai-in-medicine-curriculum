@@ -15,6 +15,11 @@ specialty choice) and `curriculum/personas.md` (the six reviewers). In short:
   register, throughline, artifact, proxy, framing, grounded, surface, mode) is
   replaced with plain words or defined in plain words on first use. Sentences
   about 20 words, one idea each. No em-dashes anywhere.
+- **Say what you mean.** No metaphor or set phrase where a literal phrase exists:
+  "a parameter worth varying", not "a dial worth turning"; "still matters", not
+  "earns its keep". A metaphor stays only when it is the chapter's own explained
+  teaching device (the keyboard-suggestion analogy, centaur and cyborg) or
+  clinical idiom a student uses at work.
 - **Scenario first.** A clinical situation before any term of art; it returns at
   the standing question.
 - **Blocks and budget.** Objectives callout; why it matters; the idea; watch or
@@ -39,7 +44,7 @@ specialty choice) and `curriculum/personas.md` (the six reviewers). In short:
 
 Read the diff as the six personas in `curriculum/personas.md`, Elena (the avoider,
 ESL, free tier) first and Lindqvist (the ethicist) last. Comment inline on:
-jargon and long sentences; em-dashes; any citation key the PR adds (say whether
+jargon, metaphor and set phrases, and long sentences; em-dashes; any citation key the PR adds (say whether
 the PMID's metadata supports the sentence, if you can check; flag it if you
 cannot); numbers with no source; a Do that needs an install, a payment, or
 patient data; an image without `fig-alt` or a licence; a missing ledger row when

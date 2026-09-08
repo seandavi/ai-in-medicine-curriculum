@@ -60,7 +60,7 @@ creatinine, her age, and her sex. Something turned those three numbers into a
 kidney function. You trusted it enough to clear her for contrast.
 
 Where did that formula come from? Not from physiology. Nobody worked it out
-from first principles about nephrons. It was **learned from data**. A few
+from the physiology of nephrons. It was **learned from data**. A few
 thousand people did have their GFR measured. Their creatinine, age, and sex
 were fed to a computer with one instruction: find the formula that best
 predicts the measured number. The eGFR is a model. It is the model you already
@@ -71,7 +71,7 @@ muscle over a year of on-and-off illness. We will come back to her.
 
 ## Why this matters
 
-In three months you will be handed a dozen of these. A sepsis alert that fires
+In three months you will meet a dozen of these. A sepsis alert that fires
 in the EHR. A risk score that decides who gets a phone call after discharge. A
 scribe that drafts your note. A chatbot that answers a dosing question at 2
 a.m. Every one of them is the same kind of object as the eGFR: a formula
@@ -82,9 +82,9 @@ thirty seconds before you act on it.
 
 The second half of the chapter does this for the language model in
 particular, because its failures are the strangest and the smoothest. It will
-hand you a citation that does not exist, formatted perfectly. It will do so
+give you a citation that does not exist, formatted perfectly. It will do so
 for a reason that follows directly from what it computes. Once you can say
-that reason out loud, "it hallucinates" stops being a shrug. It becomes a
+that reason out loud, "it hallucinates" stops being an empty phrase. It becomes a
 prediction about when to check.
 
 ## How it works
@@ -125,7 +125,7 @@ A stand-in like this, something you measure because the real thing cannot
 be measured, is called a **proxy**. The first of the course's three recurring
 lessons is **proxies fail**: the stand-in and the real thing can come apart,
 and they come apart for some patients more than for others. [The bias and
-equity chapter](core-bias-equity.qmd) is built on that lesson. This chapter's
+equity chapter](core-bias-equity.qmd) depends on that lesson. This chapter's
 job is narrower: to show you the bridge at all.
 
 ```{mermaid}
@@ -157,7 +157,7 @@ Three things follow from "learned from data". Each one is a question you can
 ask of any model.
 
 **The truth column existed.** For every one of the 8,254 people, someone had
-gone to the trouble of measuring the real GFR. That is what makes this
+actually measured the real GFR. That is what makes this
 **supervised learning**: the training data contains the answer, and the model
 learns to reproduce it. **Unsupervised learning** is what you do when there is
 no answer column, only patterns to find. Sorting 10,000 tumor expression
@@ -177,7 +177,7 @@ mostly participants in kidney research studies. 31.5 percent of them were
 Black. None were children. None were your patient. For anyone outside that
 set, the equation is guessing beyond what it saw. Statisticians call that
 guess an *extrapolation*. The history of the equation is a history of finding
-out where the guess broke.
+out where the guess failed.
 
 ### The history of one equation is the history of its training set
 
@@ -187,12 +187,12 @@ out where the guess broke.
 | CKD-EPI | 2009 | 8,254 participants in 10 studies | 3,896 in 16 studies | More accurate at higher GFR, but included a term that adjusted the result for Black race; the 2021 study showed that term overestimated measured GFR in Black adults by a median of 3.7 mL/min/1.73 m² [@pmid:19414839; @pmid:34554658] |
 | CKD-EPI 2021 | 2021 | 8,254 participants in 10 studies, refit without race | 4,050 in 12 studies | Now recommended for all US laboratories; the refit without race still gives values a few mL/min too low in Black adults and a few mL/min too high in non-Black adults, and a cystatin C version is more accurate [@pmid:34554658; @pmid:34563581] |
 
-: Three generations of the eGFR equation, rebuilt from the numbers in the papers. Each one is a formula learned from a population, and each one's known failure lives outside that population. {#tbl-egfr-history}
+: Three generations of the eGFR equation, rebuilt from the numbers in the papers. Each one is a formula learned from a population, and each one's known failure is in people outside that population. {#tbl-egfr-history}
 
 Read the last column as a pattern, not as nephrology. Every row says the same
 thing: *the model was fit to these people, and here is what happened to those
 people.* [the bias and equity chapter](core-bias-equity.qmd) takes up why the race term was there in
-the first place and who paid for it. For this chapter the point is narrower,
+the first place and who was harmed by it. For this chapter the point is narrower,
 and it applies to every model. The training population is a property of the
 model, as much as the equation is. You cannot judge the one without knowing
 the other.
@@ -228,8 +228,8 @@ the ones the Check asks you to apply:
 
 ### Why performance on data it has seen tells you nothing
 
-Here is the trap the eGFR researchers avoided, and the one every vendor slide
-invites you into. Suppose you fit a formula to 8,254 people. Then you report
+Here is the mistake the eGFR researchers avoided, and the one every vendor
+slide invites you to make. Suppose you fit a formula to 8,254 people. Then you report
 how well it predicts GFR *in those same 8,254 people*. You have measured how
 well the formula memorized them, not how well it will work on the next
 patient. A flexible enough model can fit its training data perfectly and be
@@ -249,20 +249,20 @@ There are two ways to get this wrong, and each has a name. A model that is
 sees: the straight line through a curve. Statisticians call that error *bias*,
 in a technical sense that has nothing to do with the social meaning. A model
 that is **too flexible** learns the random scatter in its particular training
-set along with the real pattern. It fits those cases beautifully and the next
+set along with the real pattern. It fits those cases very closely and the next
 case badly: the wiggle through every point. That error is *variance*. You will
 see both in the exercise, in about eight minutes, on your own screen. The
-third sentence you write there is the one that carries over to every
+third sentence you write there is the one you will apply to every
 performance claim you are ever shown.
 
 The clinical version of the same failure is **dataset shift**: the patients
 the model meets in real use differ from the patients in its training set, so
-performance measured during development does not carry over [@pmid:34260843].
+performance measured during development does not hold [@pmid:34260843].
 Here is an example. One EHR vendor built a sepsis model that runs in hundreds
 of US hospitals. One academic center tested it on its own 38,455
 hospitalizations, a test the literature calls *external validation*, because
 the testers had no part in building the model. The model had an area under the
-curve of 0.63, on a scale where 0.5 is a coin flip and 1.0 is perfect. It
+curve of 0.63, on a scale where 0.5 is no better than chance and 1.0 is perfect. It
 missed 67 percent of patients with sepsis, and it alerted on 18 percent of all
 admissions [@pmid:34152373]. Nobody had lied about the development
 performance. It simply had not been measured on patients like those.
@@ -282,11 +282,11 @@ one column of truth. A language model is the same loop with a different table.
 Seeing that is the key point.
 
 Take any sentence from the internet: *the patient was started on empiric*.
-Chop it into **tokens**, which are words or pieces of words. "Empiric" might
+Split it into **tokens**, which are words or pieces of words. "Empiric" might
 be one token and "vancomycin" three. Now the predictors are the tokens so far,
 and the truth is the very next token. You do not need anyone to label
-anything, because the next word is already sitting there in the text. Every
-sentence ever written becomes a training case for free. That is why these
+anything, because the next word is already in the text. Every
+sentence ever written becomes a training case, with no labeling work. That is why these
 models could be trained on a very large fraction of the written internet.
 
 To make tokens usable by the loop, each one is turned into a list of numbers,
@@ -318,7 +318,7 @@ incomplete answer loses those comparisons. A general review for clinicians of
 how these chatbots are built, and of the mixed results so far, is a good next
 read [@pmid:37460753].
 
-Now the sentence the chapter was built to deliver:
+Now the main sentence of the chapter:
 
 ::: {.callout-important title="Nothing in this process checks whether a claim is true"}
 At no step does the model look anything up, consult a database, or compare a
@@ -374,10 +374,10 @@ allowance. Fill it with a whole guideline and there is less room for the
 reasoning about your question. Older turns are pushed out or shortened. Output
 tokens also cost the provider more than input tokens. That is one reason the
 tools tend to answer briefly, and one reason the usable window is often
-smaller than the advertised one. The figures move with every release, so none
+smaller than the advertised one. The figures change with every release, so none
 are quoted here.
 
-**The middle is the weak spot.** Researchers placed the one relevant document
+**The middle gets less attention.** Researchers placed the one relevant document
 at different positions inside a long context and asked models a question about
 it. Accuracy was highest with the document at the beginning or the end, and
 fell significantly when it was in the middle, in a U-shaped curve
@@ -388,11 +388,11 @@ with each model.
 
 Two habits follow, and they are the ones the Check asks for. Put the question
 and the facts that matter at the start or the end of what you paste, not in
-the middle of a long document. And when a conversation has wandered, start a
-new one rather than pushing on inside a used-up budget.
+the middle of a long document. And when a conversation is long and has changed subject, start a
+new one rather than continuing inside a used-up budget.
 
 ::: {.callout-tip title="Two earlier systems worth thirty seconds"}
-The current wave has a history. **MYCIN**, a rule-based system for choosing
+The current systems have a history. **MYCIN**, a rule-based system for choosing
 antimicrobials built at Stanford in the 1970s, was evaluated blind by eight
 infectious-disease experts on ten meningitis cases. It received an
 acceptability rating of 65 percent, higher than any of the five faculty
@@ -423,10 +423,10 @@ assumes no math beyond what is drawn on screen. Watch for three things. The
 moment, early on, where the whole system is shown to produce *a probability
 for every possible next token*, then pick one and repeat. That is the process
 this chapter described in words. The passage on embeddings, where words become
-directions in space and "woman minus man" lands near "queen minus king". That
+directions in space and "woman minus man" ends up near "queen minus king". That
 is the "raw material to predictors" box made visible. And the explanation of
 the context window as a fixed-size input, which is where the two limits above
-come from. If the section on attention loses you, let it. The exercise does
+come from. If you cannot follow the section on attention, skip it. The exercise does
 not need it.
 
 ## Do
@@ -438,7 +438,7 @@ scoring system, not about a patient. Your institutional account does not
 change this. It is not covered by a business associate agreement, the contract
 that would make the vendor legally responsible for protecting patient data,
 unless your institution has told you so explicitly. The question you will be
-tempted to ask about the patient from this morning stays in your head. And
+tempted to ask about the patient from this morning is one you do not ask. And
 whatever drafts a note, you sign it. What to document when a tool helped is
 [the ethics and regulation chapter's](core-ethics-regulation.qmd) question.
 :::
@@ -486,7 +486,7 @@ have concluded about the model, and would you have been right?
 ______________________________________________________________
 ```
 
-The third sentence is the one that carries over. It is the same question you
+The third sentence is the one you will use again. It is the same question you
 will ask of every performance figure on every vendor slide for the rest of
 your career.
 
@@ -580,7 +580,7 @@ top.
 | Sort four models with the two questions in @tbl-two-questions (objective 2): the eGFR; an EHR sepsis alert; a tool that groups tumor expression profiles with no diagnoses attached; a chatbot predicting the next token | Supervised regression; supervised classification; unsupervised; supervised (the next word is the label), and you can say why the last one needs no human labeler | Any row you had to guess |
 | Explain the three sentences from Part A (objective 3) | The third sentence says that training loss alone would have made the over-fit model look best, and that this is why a performance figure with no test set is not yet a number | The first two sentences only, or a third sentence that restates the training loss |
 | Give the one-sentence explanation from Part B (objective 4) | One sentence about plausible next tokens, no "hallucinate", and it explains why the tone did not change when the answer was wrong | "It hallucinated" or "it made a mistake" |
-| State the two window rules from Part C (objective 5) | One rule follows from the shared budget, one from the middle being weak, and each says what you will actually do differently at the keyboard | Rules that do not name a limit, or that you could have written before reading the chapter |
+| State the two window rules from Part C (objective 5) | One rule follows from the shared budget, one from the middle getting less attention, and each says what you will actually do differently at the keyboard | Rules that do not name a limit, or that you could have written before reading the chapter |
 
 ## What this changes for you
 
@@ -595,11 +595,11 @@ number for a normal amount of muscle. She does not have a normal amount of
 muscle. So the same creatinine probably means a *lower* true GFR than the 57
 the equation returned. Was she among the 8,254? What would you ask for
 instead? What do you now say to the attending about the number on the panel?
-One word is not an answer. And notice that nobody told her a model was in the
-room either. Whether that matters, and when, is [the patient-communication
+One word is not an answer. And notice that nobody told her a model had a part in
+her care either. Whether that matters, and when, is [the patient-communication
 chapter's](core-patient-communication.qmd) question, not this one's.
 
-And the second half. The next time a chatbot hands you a citation with a first
+And the second half. The next time a chatbot gives you a citation with a first
 author, a journal, and a year, what is the one sentence you will say to
 yourself before you paste it anywhere? What will you do in the next two
 minutes because of it?
@@ -608,7 +608,7 @@ minutes because of it?
 
 - The eGFR is a model learned from data: creatinine, age, and sex in; a
   stand-in for measured GFR out; 8,254 research participants as the
-  population it knows. Every learned model has those three parts, and you can
+  population it was fit to. Every learned model has those three parts, and you can
   ask for them.
 - Supervised learning has the answer in the training data; unsupervised does
   not. Classification gives a category; regression gives a number.
@@ -621,8 +621,8 @@ minutes because of it?
   repeats. Human raters then tune it toward answers people prefer.
 - Nothing in that process checks whether a claim is true. A made-up citation
   is a plausible continuation, produced in the same tone as a real one.
-- The context window is a shared budget, and its middle is the weak spot.
-  Put what matters at the edges; start over when the budget is spent.
+- The context window is a shared budget, and its middle gets less attention.
+  Put what matters at the start or the end; start over when the budget is spent.
 - The 57 on the panel came from somewhere. So does everything else.
 
 ## Go deeper
@@ -630,7 +630,7 @@ minutes because of it?
 **Videos and talks**
 
 - Andrej Karpathy, *Intro to Large Language Models* (November 2023, about one
-  hour). <https://www.youtube.com/watch?v=zjkBMFhNj_g>. The next step up from
+  hour). <https://www.youtube.com/watch?v=zjkBMFhNj_g>. More advanced than
   the 3Blue1Brown video: what the two training stages are, why the second one
   produces an assistant, and a section on prompt injection (tricking a model
   with instructions hidden in the text it reads).
@@ -660,8 +660,8 @@ minutes because of it?
   look like [@pmid:37460753].
 - The "lost in the middle" study behind the second context-window limit
   [@doi:10.1162/tacl_a_00638].
-- MYCIN's blinded evaluation, forty-seven years old and still a model of how
-  to test a decision-support tool [@pmid:480542].
+- MYCIN's blinded evaluation, forty-seven years old and still an example of how
+  to test a decision-support tool well [@pmid:480542].
 
 **If you want the other algorithms**
 

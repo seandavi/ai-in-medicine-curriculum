@@ -19,7 +19,7 @@ The live sessions run the same activities in breakouts. It is built with
 
 ## How it was designed
 
-The design happened in the open, in the repository, in this order. Each step is
+The design was done publicly, in the repository, in this order. Each step is
 a file you can read.
 
 **Constraints first (August 2026).** `curriculum/design-constraints.md` records
@@ -28,12 +28,13 @@ each one forces. Every later decision is checked against it: no installs, free
 tiers only, every session does something, critical appraisal over tool training.
 
 **Research, then competencies.** `research/competency-frameworks.md` reviews
-eleven published AI-in-medicine competency frameworks, anchored on Russell et al.
-(2023) and Hunt et al. (2026). From that synthesis, `curriculum/competencies.md`
-defines nine domains with stable IDs, `AIM-1` through `AIM-9` plus a
-cross-cutting `AIM-X`. The IDs exist because the AAMC's national competencies
-are expected after this course runs; every module tags itself so the eventual
-crosswalk is a mapping, not a rewrite. Two more research notes feed the design:
+eleven published AI-in-medicine competency frameworks, based mainly on Russell
+et al. (2023) and Hunt et al. (2026). From that synthesis,
+`curriculum/competencies.md` defines nine domains with stable IDs, `AIM-1`
+through `AIM-9` plus `AIM-X`, which applies across all of them. The IDs exist
+because the AAMC's national competencies are expected after this course runs;
+every module tags itself so that matching it to the national list later is a
+lookup, not a rewrite. Two more research notes inform the design:
 `research/enrichment-activities.md` for the optional modules, and
 `research/comparable-courses.md` for what to borrow from, and deliberately not
 be, other courses.
@@ -45,7 +46,7 @@ stubs. Where a descriptor did not match its deck, the note says so.
 
 **Modules, then the chapter pattern.** `modules/` holds one session plan per
 module, with activities and rubrics. `curriculum/chapter-pattern.md` (September
-2026) is the skeleton every student-facing chapter follows: an opening clinical
+2026) is the structure every student-facing chapter follows: an opening clinical
 scenario before any jargon, why it matters, how it works, one video or podcast,
 an activity you can finish alone, a self-scored check, the standing question,
 and a reading list. `curriculum/personas.md` names the six readers every chapter
@@ -59,11 +60,11 @@ built.
 
 **A plan, then ten chapters in parallel.** `curriculum/chapter-plan.md` set the
 order, the per-chapter contract, and the passes that would follow. Each of the
-ten remaining chapters became a GitHub issue carrying that contract. Then ten AI
-agents were started at once, one per chapter, each in its own isolated branch of
-the repository, each given the module plan, the pattern, the personas, and the
-exemplar chapter. Each agent drafted its chapter, looked up every citation in
-PubMed and read the abstract before inserting the key, drew or found its
+ten remaining chapters became a GitHub issue that stated that contract. Then ten
+AI agents were started at once, one per chapter, each in its own isolated branch
+of the repository, each given the module plan, the pattern, the personas, and
+the exemplar chapter. Each agent drafted its chapter, looked up every citation
+in PubMed and read the abstract before inserting the key, drew or found its
 figures, wrote an answer key, reviewed its own chapter as the six personas, and
 recorded what it had and had not been able to verify in a review file and a
 ledger row. The ten branches were merged into one integration branch and
@@ -103,12 +104,12 @@ and the open items from the second pass are GitHub issues labelled `pass`.
 | Elena | MS4, avoids AI, free tiers only | Chapters that assume you already use these tools, or read as enthusiasm |
 | Marcus | MS4, uses AI daily, matching radiology | Chapters that are all warnings, or slower than the tool itself |
 | Priya | MS4, wants to use it safely on the wards | Practical guidance buried under mechanism |
-| Jordan | Instructional designer | Objectives with no matching activity; dishonest time estimates; images without alt text or without a job |
+| Jordan | Instructional designer | Objectives with no matching activity; dishonest time estimates; images without alt text or with no purpose |
 | Dr. Okafor | Educator at another school, not an AI expert | Chapters that cannot be taught without the author in the room |
-| Dr. Lindqvist | Clinical ethicist | Activities that would not pass an IRB sniff test; harm without a named population; false certainty; unlicensed or misattributable images |
+| Dr. Lindqvist | Clinical ethicist | Activities an IRB would question; harm without a named population; false certainty; unlicensed or misattributable images |
 
-The order matters: Elena reads first, because if the avoider cannot get in the
-door nothing after matters, and Dr. Lindqvist reads last. When readers disagree,
+The order matters: Elena reads first, because if the avoider stops reading,
+nothing after matters, and Dr. Lindqvist reads last. When readers disagree,
 students win on content, faculty win on form, and the ethicist wins on harm.
 
 Two further checks run on every chapter:
@@ -123,12 +124,12 @@ Two further checks run on every chapter:
   using its key, and their ledger rows say which numbers were checked against
   an abstract rather than a full paper.
 - **Unverified claims stay flagged.** Research notes carry `[VERIFY]`,
-  `[UNVERIFIED]`, and `[CONFLICTING]` tags. They travel into chapters unchanged
-  and are not removed until a person has checked the claim. The flags still
-  open across the book are listed in one GitHub issue, grouped by how much a
-  mistake would matter.
+  `[UNVERIFIED]`, and `[CONFLICTING]` tags. They are copied into chapters
+  unchanged and are not removed until a person has checked the claim. The flags
+  still open across the book are listed in one GitHub issue, grouped by how much
+  a mistake would matter.
 
-Answer keys live in `_answers/`, are never rendered, and are held for the chat
+Answer keys are kept in `_answers/`, are never rendered, and are held for the chat
 tutor. They were drafted by the same agents as the chapters, and the ledger says
 where an expected result is a prediction rather than a recorded run.
 
@@ -152,10 +153,10 @@ editing each paragraph to writing the brief, reading the result, naming what was
 wrong, and deciding what to merge.
 
 The model has been most useful for four things. **Editing**, which is bringing
-material written over several years into one voice. **Drafting**, which is
-producing first versions of explanations, activities, and answer keys from a
-module plan. **Looking things up**, which is retrieving the PubMed record for
-every citation, reading the abstract, and fetching the primary page behind a
+material written over several years into one consistent style. **Drafting**,
+which is producing first versions of explanations, activities, and answer keys
+from a module plan. **Looking things up**, which is retrieving the PubMed record
+for every citation, reading the abstract, and fetching the primary page behind a
 regulatory claim or a podcast episode. And **holding the chapters to a
 standard**, which is reading each one as the six reviewers above and reporting
 where it fails.
@@ -166,8 +167,8 @@ A language model produces fluent text that can feel authoritative while being
 wrong, and the appraisal chapter exists because that is true of citations in
 particular. So every reference in this book was resolved against PubMed by tool,
 every chapter was read by the author in the deployed book before the passes
-that finished it, and responsibility for what the book says rests with the
-author. Where the review was lighter than that, the ledger says so. Where a
+that finished it, and the author is responsible for what the book says.
+Where the review was less thorough than that, the ledger says so. Where a
 claim has not been checked by a person, the chapter says so with a `[VERIFY]`
 flag.
 :::

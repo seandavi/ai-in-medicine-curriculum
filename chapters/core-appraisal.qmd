@@ -79,12 +79,12 @@ consultation, Ciudad Obregón, Mexico. Photo: Intel Free Press,
 [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0), via
 [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Telemedicine_Consult.jpg).](../images/telemedicine-consult.jpg){#fig-screens fig-alt="A physician in a white coat seen from behind, facing four monitors showing an ECG, an echocardiogram, and a video call with two people."}
 
-The reference problem will find you within the year. Someone on your team will
+You will meet the reference problem within the year. Someone on your team will
 hand you a tool that produces citations, or you will open one yourself at 2 a.m.
 to answer a management question. Whether the reference exists is a separate
 question from whether it looks right. Checking takes twenty minutes.
 
-The vendor problem will find your program, and increasingly it will find you.
+Your program will meet the vendor problem, and increasingly so will you.
 Residents sit on the committees that pilot these tools. The vendor's slide, the
 health system's press release, and the randomized trial will say three different
 things about the same product. Deciding which to believe is a skill you will
@@ -183,7 +183,7 @@ prostate, and lung cancer against the NCCN guidelines, the standard US cancer
 treatment guidelines. Every output contained at
 least one option that matched a guideline. About a third also contained at least
 one that did not. One in eight recommended a treatment that was not in any
-guideline [@pmid:37615976]. The authors' phrase for the pattern is worth keeping:
+guideline [@pmid:37615976]. The authors' phrase for the pattern is worth remembering:
 the tool was most likely to *mix incorrect recommendations among correct ones*,
 an error difficult even for experts to detect.
 
@@ -193,7 +193,7 @@ time for answers rather than references.
 
 ### What the published rates look like
 
-Three studies set the scale. Across 20 medical questions put to ChatGPT, 41 of 59
+Three studies give the range. Across 20 medical questions put to ChatGPT, 41 of 59
 generated references (69%) were fabricated [@pmid:40206627]. In a psychiatry
 test, only 2 of 35 citations were real [@pmid:37499282]. A 2026 comparison of
 five tools used the 2/1/0 scale you will use below. It found zero fabrications
@@ -209,7 +209,7 @@ ranged from Claude at 78.0% accuracy to Gemini at a 26.2% fabrication rate
 
 : Published fabrication rates. Each is one snapshot of one tool in one domain. {#tbl-rates}
 
-The same 2026 study contains the finding this chapter is built around. The
+The same 2026 study contains the finding this chapter depends on most. The
 fabrication rate for ChatGPT rose from 2.1% when the question was asked in a
 clinician's words to 20.0% when it was asked in a patient's words
 [@pmid:42232526]. Same tool, same underlying question, different register.
@@ -223,7 +223,7 @@ patient, ask the same question in everyday words. Testing a tool once, with one
 kind of wording, is not enough.
 
 If English is not your first language, or you write the way you talk rather
-than the way a journal reads, your prompts may sound like a patient's even when
+than the way a journal article is written, your prompts may sound like a patient's even when
 you are the clinician. The finding is about the words, not the credentials.
 :::
 
@@ -232,7 +232,7 @@ people least able to check an answer, patients asking in their own words, get
 the answers most likely to cite something that does not exist.
 
 ::: {.callout-note title="These numbers move"}
-Fabrication rates belong to the tool and the month, not to the technology. A
+Fabrication rates depend on the tool and the month, not on the technology. A
 second 2026 study reported the GPT-versus-Gemini ordering reversed
 [VERIFY: Frutuoso Maia et al. 2026, Br J Oral Maxillofac Surg; not found in PubMed at time of writing]{.verify}.
 When your own results below disagree with @tbl-rates, that is expected. How the
@@ -259,7 +259,7 @@ Claims about scribes come in three tiers:
 - **Vendor or trade press.** A claim that comes from a company, a press release,
   or industry news (the "trade press"), however specific the number sounds.
 
-Here is what one study looks like as it passes through the tiers on its way to
+Here is what one study looks like when each of the three tiers reports it to
 you. All three headlines are about the same paper, the five-system study cited
 below.
 
@@ -269,13 +269,13 @@ below.
 <div class="press-clip"><div class="src">AMA · practice management</div><a class="hl" href="https://www.ama-assn.org/practice-management/physician-health/how-much-can-ambient-ai-scribes-help-cut-doctor-burnout">How much can ambient AI scribes help cut doctor burnout?</a><div class="date">2026</div></div>
 :::
 
-Same paper, three tellings: the institution's press office, a journalist, and a
+Same paper, three versions: the institution's press office, a journalist, and a
 professional society. None of them is wrong. Which one would the vendor at lunch
 have put on the slide?
 
 The three tiers disagree in the same direction. Pre/post studies of health-system
 rollouts report large drops in burnout. Randomized trials report smaller effects.
-They also consistently fail to move the one outcome that justifies the whole
+They also consistently fail to change the one outcome that justifies the whole
 product category: after-hours charting. In the largest study to date, across five
 academic systems and 8,581 clinicians, total EHR time fell 13.4 minutes per day
 and documentation time 16.0 minutes per day, with 0.49 more visits per week. But
@@ -286,34 +286,34 @@ This is the third of the course's three recurring lessons: **the published
 number is the optimistic one.** The 0.49 extra visits may also be a small
 example of the second, **efficiency gains get eaten by volume**: time saved
 tends to get filled with more work. [The workforce chapter](enrichment-workforce-economics.qmd)
-follows that time onto the billing statement.
+explains how that saved time turns into billing.
 
 ### "But it's FDA-cleared, isn't it fine?"
 
 Clearance answers a different question from the one a clinician is asking. Most
-cleared AI devices are radiology tools, so if you are headed there this section
-is about your daily work. An analysis of 130 FDA decision summaries for AI
+cleared AI devices are radiology tools, so if you plan to go into radiology this
+section is about your daily work. An analysis of 130 FDA decision summaries for AI
 devices found clinical performance data reported for about half, and none at all
 for roughly a quarter. Well under a third of those with clinical data gave
 sex-specific results [@pmid:33820998]. A 2024 follow-up found the gap persists:
 many authorized tools have no published clinical validation [@pmid:39187696].
 A benchmark score standing in for performance on patients is the first of the
 course's three recurring lessons, **proxies fail**, in regulatory form.
-[The bias and equity chapter](core-bias-equity.qmd) gives that lesson its
-full treatment.
+[The bias and equity chapter](core-bias-equity.qmd) explains that lesson in
+full.
 
 ::: {.callout-important title="Cleared is not validated"}
 Clearance says the device is similar enough to one already on the market (the
 FDA's term is "substantial equivalence") and that the manufacturer has a quality
 system. It does not certify that a device improves outcomes, that it was tested
 on patients like yours, or, often, that clinical performance was measured at
-all. If you take one sentence from this chapter, take this one, and take the
+all. If you remember one sentence from this chapter, remember this one, and the
 paper with it.
 :::
 
 The device boundary, the Predetermined Change Control Plan, and the clinical
 decision support criteria belong to [the ethics and regulation chapter](core-ethics-regulation.qmd). The scale
-figures for FDA AI-device authorizations are [VERIFY]{.verify}: counts in circulation
+figures for FDA AI-device authorizations are [VERIFY]{.verify}: the counts people quote
 come from a secondary tracker, so do not quote a specific number of cleared
 devices without checking the live FDA list.
 
@@ -334,7 +334,7 @@ question each one becomes when a vendor is standing in front of you, are in
 | **Universality** | It works outside the place that built it | Has it been validated at a site that is not yours, on a different EHR? |
 | **Traceability** | You can see where it came from and where an output came from | What was it trained on, and can I trace this note, or this recommendation, back to its source? |
 | **Usability** | The people who use it were involved, and kept using it | Who designed how it fits into the clinic day, and what fraction of clinicians offered it were still using it at six months? |
-| **Robustness** | It fails gently, not all at once | What happens with a bad microphone, an interpreter in the room, a rare presentation, an unusual chart? |
+| **Robustness** | Its performance drops a little at a time, not all at once | What happens with a bad microphone, an interpreter in the room, a rare presentation, an unusual chart? |
 | **Explainability** | It can say why, in a form you could defend | If this is wrong in a chart review, what will I be able to show about why I trusted it? |
 
 : FUTURE-AI's six principles as six questions. {#tbl-future-ai}
@@ -364,20 +364,20 @@ vendor slide will. Ask it anyway.
 
 ### Two findings to keep in your pocket
 
-One guards against overconfidence. When 148 final-year students evaluated
+One is a warning against overconfidence. When 148 final-year students evaluated
 ChatGPT answers to ten clinical vignettes, five of them deliberately wrong, the
 median rate of correct evaluation was 56% [@pmid:39915801]. Students credited
 their case-based and pathology teaching for the errors they caught. Only 5% had
 heard the term "clinical prompt engineering". You are better prepared than that
-group only if you check rather than eyeball.
+group only if you search rather than judge by appearance.
 
-The other guards against blanket dismissal. In a randomized trial of 50
+The other is a warning against dismissing these tools altogether. In a randomized trial of 50
 physicians, access to a language model did not significantly improve diagnostic
 reasoning (adjusted difference 2 points, 95% CI −4 to 8). The model alone scored
 16 points higher than physicians using conventional resources (95% CI 2 to 30)
 [@pmid:39466245]. A tool can be capable and still fail to help the person
 holding it. That is an appraisal finding about humans, and [the centaur-or-cyborg
-chapter](core-centaur-cyborg.qmd) picks it up.
+chapter](core-centaur-cyborg.qmd) returns to that finding.
 
 ## Watch or listen
 
@@ -390,7 +390,7 @@ of @fig-citation-paths described by someone who builds it. Listen for how the
 tool decides what counts as evidence, and for what he says trust depends on. Then
 ask the question this chapter asks of everything: what would have to be true for
 that to hold, and who has checked? Thirty minutes is enough for the exercise; the
-rest is a good commute.
+rest is worth hearing when you have time.
 
 **Video alternative.** "Travis Zack on OpenEvidence and the Future of Medical AI",
 Stanford Department of Medicine, YouTube.
@@ -401,23 +401,23 @@ Stanford Department of Medicine, YouTube.
 Conversation with Dr. Zak Kohane" (December 17, 2025; 78 min).
 <https://ai-podcast.nejm.org/e/what-values-are-in-ai-a-conversation-with-dr-zak-kohane/>
 Listen for the remark that ambient documentation spread not because it improves
-accuracy or throughput but because it improves clinician satisfaction. Hold that
-against the evidence tiers in Part B.
+accuracy or throughput but because it improves clinician satisfaction. Compare that
+with the evidence tiers in Part B.
 
 ## Do
 
 ::: {.callout-warning title="No patient information, ever"}
 Every question in this exercise is a general question about management, not a
-question about a patient. Consumer tools carry no business associate agreement.
+question about a patient. Consumer tools have no business associate agreement.
 That is the contract that makes a vendor legally responsible for protecting
 patient data. Free tiers may also use what you type to train the next model.
 You will be tempted to test the tool on something from your sub-internship. Do
 not.
 
-The boundary case you will meet in month one: a tool your hospital licenses and
+The harder case you will meet in month one: a tool your hospital licenses and
 runs inside the EHR is a different question. Ask whether a business associate
 agreement exists, and what your institution's policy says about documenting that
-you used it. [the ethics and regulation chapter](core-ethics-regulation.qmd) takes that up.
+you used it. [the ethics and regulation chapter](core-ethics-regulation.qmd) covers that.
 :::
 
 ::: {.callout-tip title="PubMed is the verification tool"}
@@ -430,7 +430,7 @@ as real.
 ### Part A: the fabrication hunt (25 minutes)
 
 **Step 1. Pick a question in your specialty.** You want a management question with
-a real literature and real controversy. If one does not come to mind, find one:
+a real literature and real controversy. If you cannot think of one, find one:
 
 ```
 ("large language model" OR "artificial intelligence") AND <your specialty>
@@ -510,7 +510,7 @@ anticoagulants in stage 4–5 CKD: a randomized comparison. J Am Coll Cardiol
 plausible: a real journal, a common surname, a year in range, a DOI with the
 journal's correct prefix. Search PubMed by title: nothing. By author and year:
 the real Hernandez AV publishes on other topics. By DOI: it resolves to a
-different paper or to nothing. Score 0. The giveaway is not any single feature.
+different paper or to nothing. Score 0. What reveals it is not any single feature.
 It is that no feature can be *found*.
 :::
 
@@ -545,7 +545,7 @@ feature: plausible author, real journal, plausible year, well-formed DOI.
 ```
 
 The two free-text answers matter more than the counts. Being able to say *why* a
-made-up citation looked credible is a skill you can carry to the next tool.
+made-up citation looked credible is a skill you can use on the next tool.
 "Three of five were fake" is a number that will be out of date next year.
 
 ::: {.callout-note title="Ten references is not a study"}
@@ -554,7 +554,7 @@ You have ten observations. That is nowhere near enough to detect a 2.1% versus
 result. If your split goes the same direction, it is consistent and underpowered.
 If it goes the other way, that is the better lesson. One small replication does
 not overturn a published finding, and one published finding does not settle a
-moving target.
+question whose answer keeps changing.
 :::
 
 ### Part B: grading the evidence (20 minutes)
@@ -609,14 +609,14 @@ Closing question 2. Which outcome do the pre/post studies and the RCTs
 disagree about most, and why is that the outcome you personally care about?
 ```
 
-Claim 10 is designed to break the scheme. Whichever tier you put it in, be able to
+Claim 10 is designed not to fit the scheme. Whichever tier you put it in, be able to
 defend the choice.
 
 ::: {.callout-tip title="Solution to the closing questions" collapse="true"}
 **Two mechanisms: selection and Hawthorne.** The pre/post studies measure
 clinicians who *chose* to adopt an optional tool: people already inclined to
 like it, whose way of working it fits. The randomized trials measure clinicians
-who were *assigned* it. The five-system study makes the gap concrete. Of 8,581
+who were *assigned* it. The five-system study shows the gap in numbers. Of 8,581
 clinicians offered the tool, 1,809 adopted it, and those adopters are the
 population every earlier pre/post study sampled [@pmid:41920565]. Add that
 people who know they are in a documentation study document differently, the
@@ -647,7 +647,7 @@ lowering system-wide costs
 units, the billing measure of clinical work, with no rise in denials
 [VERIFY]{.verify}.
 
-The tiers, so you can close the loop: claims 1, 2, 3, 4, 8, and 9 are large
+The tiers, so you can check your answers: claims 1, 2, 3, 4, 8, and 9 are large
 observational; 5, 6, and 7 are randomized trials; 10 is trade press about a
 peer-reviewed paper. The sources are in the answer key held by the course tutor,
 which will also grade your reasons.
@@ -695,14 +695,14 @@ an answer to either.
 - Less burden and more free hours are different outcomes.
 - Cleared is not validated.
 - A tool with no literature yet still has six questions to answer, and a
-  seventh that belongs to the patient. Take them to lunch.
+  seventh that belongs to the patient. Ask them at the next vendor lunch.
 
 ## Go deeper
 
 **Papers**
 
 - A published classroom framework built around AI citation errors, in biology but
-  portable [@pmid:42200655].
+  usable in medicine [@pmid:42200655].
 - The randomized trial of physicians with model access [@pmid:39466245], and the
   student error-catching study [@pmid:39915801]. The trial is [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd)'s
   main paper.
@@ -727,7 +727,7 @@ an answer to either.
   is [the retrieval chapter](enrichment-rag-notebooklm.qmd)'s reading alternative.
 - [Prompt engineering](https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/):
   ten rules with clinical examples, including the "precise language" rule that the
-  clinician-versus-patient wording effect illustrates. [the prompting lab](enrichment-prompting-lab.qmd) is built on
+  clinician-versus-patient wording effect illustrates. [the prompting lab](enrichment-prompting-lab.qmd) is based on
   this deck.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/)
   covers attribution and academic integrity, for the moment you use one of these

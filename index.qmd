@@ -8,7 +8,7 @@ account, or a real patient.
 
 ## How to read a chapter
 
-Every chapter follows the same shape, and the headings are the same in every
+Every chapter follows the same structure, and the headings are the same in every
 one:
 
 1. **An opening scenario.** A clinical situation you will recognize, before
@@ -35,11 +35,11 @@ one is). Three rules hold everywhere: **no patient information enters any
 tool, ever; verify before it counts; you sign the note.**
 
 Three ideas recur across the chapters, and each is named the same way wherever
-it appears. **Proxies fail**: almost every AI failure in medicine is a
-stand-in that looked reasonable. **Efficiency gains get eaten by volume**:
-per-unit savings get swallowed by growth in use. **The published number is
-the optimistic one**: the flagship statistic is nearly always the best case.
-A chapter that carries one of these says so.
+it appears. **Proxies fail**: almost every AI failure in medicine is a stand-in
+that looked reasonable. **Efficiency gains get eaten by volume**: per-unit
+savings are cancelled out by growth in use. **The published number is the
+optimistic one**: the most prominently reported statistic is nearly always the
+best case. A chapter that uses one of these says so.
 
 ## The chapters, in the default order
 
@@ -56,7 +56,7 @@ reads the [For instructors](appendix/instructors.qmd) appendix.
 
 1. [How these systems work](chapters/core-foundations.qmd): the eGFR is a
    model you already trust, and the chatbot is the same loop with words.
-2. [Centaur or cyborg](chapters/core-centaur-cyborg.qmd): what you hand to
+2. [Centaur or cyborg](chapters/core-centaur-cyborg.qmd): what you delegate to
    the machine, and what you keep.
 
 **Week 2, judgment**
@@ -71,7 +71,7 @@ reads the [For instructors](appendix/instructors.qmd) appendix.
 5. [Agentic coding](chapters/enrichment-agentic-coding.qmd): build a clinical
    tool in an hour, then find what is wrong with it.
 6. [Talking to patients about AI](chapters/core-patient-communication.qmd):
-   the signature session.
+   the most important session in the course.
 
 **Week 4, consequences and closing**
 
@@ -119,7 +119,7 @@ four-week assembly, with AIM-4 and AIM-5 recurring. The default order above
 meets them: every core competency appears, AIM-4 four times, AIM-2 three
 times, AIM-5 twice. AIM-8, health data science, is not the main subject of
 any chapter; the foundations chapter covers training and test sets, area
-under the curve, and dataset shift on the way to its own point, and that is
+under the curve, and dataset shift while making its own point, and that is
 the depth this course goes to.
 
 ## The tutor and the answer keys
@@ -128,7 +128,7 @@ A chat tutor over these chapters is planned. When it ships, it will answer
 questions from the rendered text and the sources it cites, and it will hold
 the answer keys for each chapter's Check. The answer keys are written by the
 same process as the chapters and are never published; the tutor uses them to
-grade your reasoning, not to hand you the answer. Until it ships, the Check
+grade your reasoning, not to give you the answer. Until it ships, the Check
 rubrics in each chapter are the whole of what is available, and they are
 written to be scored alone.
 
@@ -147,6 +147,6 @@ and what a person checked, is in the appendix
 [AI ledger](appendix/ai-ledger.qmd). The course asks you to disclose and
 verify; this is the course doing the same.
 
-The design behind the book, competencies, constraints, and schedule, lives in
+The design behind the book, competencies, constraints, and schedule, is in
 the `curriculum/` directory of the
 [repository](https://github.com/seandavi/ai-in-medicine-curriculum).

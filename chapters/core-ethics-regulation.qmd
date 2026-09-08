@@ -82,7 +82,7 @@ The honest version of the law is short. **No US malpractice claim involving a
 clinical AI tool has reached a verdict as of the date on this chapter.**
 Students who arrive expecting a rule to memorize leave with something that
 lasts longer: a way to reason about legal risk, one regulatory line you can
-actually learn, one hard experimental finding about what a bad model does to
+actually learn, one clear experimental finding about what a bad model does to
 the clinicians who trust it, and a written position of your own. That last
 item is the reason this chapter closes the course.
 
@@ -102,14 +102,14 @@ against anything [@pmid:31584609; @pmid:38231630].
 
 Two things follow. First, "the AI was wrong" is not, by itself, a legal
 argument. The question a court will ask is whether *you* should have known
-better than to rely on the output, given what you had in front of you
-[@pmid:38231630]. Second, suing the vendor instead is harder than it sounds.
+better than to rely on the output, given what you knew at the time
+[@pmid:38231630]. Second, suing the vendor instead is harder than you might expect.
 Courts have usually treated clinical software as a service rather than a
 product. And under the **learned intermediary doctrine**, a manufacturer's
 duty to warn runs to the physician, who stands between the product and the
-patient. That rule puts the treating clinician's judgment in the middle of
-the chain. Price, Gerke, and Cohen note that this may shift as tools become
-too opaque for a physician to check. But it is where the law stands today
+patient. That rule places the treating clinician's judgment between the
+manufacturer and the patient. Price, Gerke, and Cohen note that this may shift as tools become
+too opaque for a physician to check. But that is the law today
 ([Price, Gerke, and Cohen, 2024](https://www.ncbi.nlm.nih.gov/books/NBK613216/)).
 
 So Mr. Alvarez's note would not be argued in court as "the scribe made an
@@ -149,7 +149,7 @@ The uncomfortable box is B. Under current law, the physician who *follows*
 the AI into nonstandard care carries the most risk. That discourages using AI
 in exactly the cases where it would most change what you do
 [@pmid:31584609]. The other high-exposure box is C, and it raises a different
-worry. Once a tool is in the room, does a clinician have to justify
+worry. Once a tool is in use, does a clinician have to justify
 *disagreeing* with it?
 
 Two experiments have asked potential jurors. In a nationally representative
@@ -161,9 +161,9 @@ Those are the people who would sit as lay jurors in one system and as
 court-appointed experts in the other. It found the same pattern. Accepting
 standard-care AI advice was rated more reasonable than rejecting it.
 Accepting or rejecting nonstandard advice was judged about the same
-[@pmid:42242875]. Read against @tbl-price, the practical lesson is this. The
+[@pmid:42242875]. Applied to @tbl-price, the practical lesson is this. The
 tool is safest to follow when it agrees with what you would have done anyway.
-The moment it disagrees, you are on your own in either direction.
+When it disagrees, you carry the risk yourself, whichever way you decide.
 
 A related question comes up in every class: can you be sued for *not* using
 a tool that was available? Today, no. The standard of care is what competent
@@ -171,17 +171,17 @@ physicians do now, and most do not use these tools. Price, Gerke, and Cohen
 expect that to change. Once using AI is routine, not using it could itself
 fall below the standard of care [@pmid:31584609].
 
-Where does Mr. Alvarez's note sit? Nowhere on the grid, at first glance. The
+Where does Mr. Alvarez's note sit? Nowhere on the grid, it seems at first. The
 scribe made no recommendation. But the note *is* a recommendation once
 signed. "Continue apixaban" was the plan. It was written on a premise the
-patient had contradicted, and you followed it. Box B, by a side door.
+patient had contradicted, and you followed it. Box B, reached indirectly.
 
 ### Explanations did not help
 
-The reflex answer from institutions is "we will require explainable AI." That
+The usual answer from institutions is "we will require explainable AI." That
 answer has been tested once, in a randomized study, and in that test it did
 not work. ([The bias and equity chapter](core-bias-equity.qmd) uses the same
-study for what a clinician can catch at the bedside; here it is the legal
+study for what a clinician can catch in practice; here it is the legal
 reading.)
 
 Jabbour and colleagues gave 457 hospitalists, nurse practitioners, and
@@ -199,10 +199,10 @@ helped a little when the model was right and did not significantly help when
 the model was wrong. Data from Jabbour et al., *JAMA* 2023;330:2275–2284;
 figure drawn for this chapter.](../images/jabbour-2023-explanations.svg){#fig-jabbour fig-alt="Bar chart of change in clinician diagnostic accuracy in percentage points from a 73.0% baseline. Standard AI model without explanation plus 2.9; with explanation plus 4.4; biased model without explanation minus 11.3; biased model with explanation minus 9.1. Whiskers show 95% confidence intervals; the two biased-model intervals overlap."}
 
-Hold that against @tbl-price. Imagine a defense that says "the tool showed
-its reasoning, so the physician should have caught it." That defense has to
-face evidence that showing the reasoning did not help the clinicians who saw
-it. A plaintiff in box B has the same paper: the physician was handed a
+Compare that with @tbl-price. Imagine a defense that says "the tool showed
+its reasoning, so the physician should have caught it." That defense must
+answer evidence that showing the reasoning did not help the clinicians who saw
+it. A plaintiff in box B has the same paper: the physician was given a
 biased model, and the safeguard everyone relies on was shown not to work.
 **Automation bias** is the habit of trusting a machine's suggestion more than
 it deserves. It is not fixed by adding a paragraph of reasoning. It is a
@@ -214,7 +214,7 @@ Software that gives clinicians recommendations is either a medical device,
 regulated by FDA, or it is not. The law draws the line with four tests, which
 it calls **criteria** (section 520(o)(1)(E) of the Food, Drug, and Cosmetic
 Act). FDA's guidance on how it reads them is the one regulatory document
-worth knowing by heart. Software counts as **non-device clinical decision
+worth memorizing. Software counts as **non-device clinical decision
 support** (non-device CDS), and so avoids FDA review, only if it meets all
 four:
 
@@ -228,7 +228,7 @@ four:
    basis** for the recommendation, so that they do not rely mainly on it to
    make the decision for a patient.
 
-Criterion 4 decides most real cases. A bare risk score with no visible
+Criterion 4 decides most real cases. A risk score with no visible
 reasoning fails it. The same score may pass if it shows its inputs, its
 logic, and the validation behind it, in plain language. In the current
 guidance, FDA says outright that software meant for a time-critical decision
@@ -260,8 +260,8 @@ a device on criterion 1 alone, which is why most of the AI devices on FDA's
 list are radiology tools. A tool that matches a patient's
 diagnosis to a guideline and shows you the guideline is non-device CDS. A
 large language model that answers a clinical question in fluent prose, with
-no visible source, is a harder case than either. FDA has not yet said where
-it falls. In August 2026 the agency published a discussion paper on
+no visible source, is a harder case than either. FDA has not yet said which
+it is. In August 2026 the agency published a discussion paper on
 generative-AI-enabled devices. It names hallucination, meaning made-up content stated as fact, as the
 property that sets these tools apart, and asks for comment by 19 October 2026. But a
 discussion paper is not guidance
@@ -293,13 +293,13 @@ Control Plan**, or PCCP. In the original submission, the manufacturer
 describes the changes it expects to make, the steps it will follow to make
 and test them, and what effect it expects them to have. Updates that fall
 inside the plan do not trigger a new review. This is what lets a learning
-model ship improvements without going back to FDA each time. It is the single
+model release improvements without going back to FDA each time. It is the single
 most important regulatory idea for a physician who will use these tools
 ([FDA, PCCP guidance, final, December 4, 2024](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial-intelligence)).
-It also raises the question worth putting to any vendor: if the model on my
+It also raises the question to ask any vendor: if the model on my
 unit today is not the model that was cleared, what did clearance tell me?
 
-[The critical appraisal chapter](core-appraisal.qmd) makes the companion point in
+[The critical appraisal chapter](core-appraisal.qmd) makes the related point in
 full, and the short version belongs here too. Clearance is a regulatory
 status, not proof of validation: of 130 FDA decision summaries for AI devices,
 about half reported any clinical performance data [@pmid:33820998], and a 2024
@@ -309,7 +309,7 @@ already on the market. It does not tell you it was tested on patients like
 yours.
 
 One small irony, if you want it. FDA's own internal document-review model,
-Elsa, was rolled out to agency staff in 2025
+Elsa, was released to agency staff in 2025
 ([FDA press release, December 2025](https://www.fda.gov/news-events/press-announcements/fda-expands-artificial-intelligence-capabilities-agentic-ai-deployment)).
 Trade press reported accuracy and hallucination problems in its early
 versions [VERIFY: reports of Elsa hallucinations and the Commissioner's acknowledgment; trade press, mid-2025]{.verify}.
@@ -321,10 +321,10 @@ everyone else.
 This is the section [the critical appraisal chapter](core-appraisal.qmd) promised you. Three things
 follow when an AI tool touches a note, and they are separate.
 
-**Documentation.** You sign it, you own it. That is not new law. It is the
+**Documentation.** You sign it, you answer for it. That is not new law. It is the
 same rule that applied to a human scribe or a resident's draft. What is new
 is the kind of error: a fluent sentence that was never said. Two habits will
-hold up in a chart review, and both are cheap at 6:40 p.m. First, read the
+protect you in a chart review, and both take little time at 6:40 p.m. First, read the
 *plan* against the *conversation*, not against the draft's own subjective
 section. The draft agrees with itself even when it is wrong. If you find the error
 after you have signed, add an addendum. Do not quietly edit the signed note.
@@ -354,12 +354,12 @@ Those patients have already decided who wrote the sentence.
 :::
 
 These are complaints, not findings. Nothing in them has been decided by a
-court, and you should treat them as allegations. The claims rest on
+court, and you should treat them as allegations. The claims are based on
 California's all-party-consent recording law, its medical-confidentiality
 statute, and the federal Wiretap Act. In the Sutter case, the plaintiffs
 argue that following HIPAA is not, on its own, a defense to recording without
 informed consent. About a dozen states require every party's consent to
-record a conversation. Whether a waiting-room sign meets that bar is what the
+record a conversation. Whether a waiting-room sign meets that requirement is what the
 courts are being asked. [the patient-communication chapter](core-patient-communication.qmd) covers how to have
 the conversation. This chapter's point is that the conversation is the
 safeguard, not the sign.
@@ -372,7 +372,7 @@ An institution-licensed scribe or a model built into the EHR runs under one.
 The consumer chatbot on your phone does not. Your institutional ChatGPT Edu
 or Copilot account does not either, unless your institution says so in
 writing. The month-one boundary case from [the appraisal chapter](core-appraisal.qmd), a tool your hospital
-licenses inside the EHR, comes down to one question: *is there a BAA for this tool, and does the policy say what I
+licenses inside the EHR, depends on one question: *is there a BAA for this tool, and does the policy say what I
 may put into it?* If nobody can answer in a sentence, the answer is no.
 
 ::: {.callout-note title="Your right to see inside the EHR's tools: status as of September 2026"}
@@ -399,13 +399,13 @@ the AI Act, software that is already a regulated medical device
 automatically counts as **high-risk**. High-risk systems carry extra duties,
 for risk management, data governance, human oversight, and record-keeping,
 on top of device certification. Those duties were due to apply in August
-2026. In July 2026, under a "Digital Omnibus" amendment, they were pushed
-back: to December 2027 for standalone high-risk systems, and to August 2028
+2026. In July 2026, under a "Digital Omnibus" amendment, they were
+delayed: to December 2027 for standalone high-risk systems, and to August 2028
 for AI built into regulated products, which is where medical devices sit
 ([Regulation (EU) 2026/1744; see the Orrick summary, July 2026](https://www.orrick.com/en/Insights/2026/07/EU-AI-Act-Update-Digital-Omnibus-Finalizes-8-Compliance-Changes)).
 Over the same period, the United States withdrew its 2023 executive order on
 AI safety, loosened rules at both FDA and ONC, and tried, so far without a
-statute, to override state AI laws. Keep the contrast. The EU *delayed*
+statute, to override state AI laws. Note the contrast. The EU *delayed*
 binding oversight under pressure. The US *removed* federal oversight and is
 now arguing with its own states about whether they may add any. Both facts
 will be out of date within a year. That is not a reason to skip them. It is
@@ -419,7 +419,7 @@ found precancerous polyps less often than before. Their adenoma detection
 rate fell from 28.4% before exposure to 22.4% after, a drop of six points
 [@pmid:40816301]. The tool did not malfunction. The clinicians changed. Every
 framework in this course says the physician must stay "in the loop." This is
-the study that shows the loop can quietly rewire the physician. [The
+the study that shows the loop can quietly change the physician. [The
 centaur-or-cyborg chapter](core-centaur-cyborg.qmd) asked you to write a policy for which tasks you
 hand over. This chapter asks the harder version. Which skills will you keep
 practicing without the tool, so that on the day the tool is wrong, you are
@@ -511,7 +511,7 @@ The answer, in one sentence: _______________________________________________
 Confidence that this is the *current* answer (1-5): ___   Why: ____________
 ```
 
-Students usually bring back the same finding. Several of these have no clean
+Students usually bring back the same finding. Several of these have no clear
 answer even at the primary source, and two credible outlets say different
 things. That is not a failure of the exercise. It is the honest state of the
 field. Being able to say "the primary source is dated X and says Y, and I
@@ -526,12 +526,12 @@ Go back to Mr. Alvarez. Answer in writing:
    think it is not on the grid, say what the "recommendation" was.)
 2. **What would a plaintiff have to prove**, element by element, and which
    element is hardest for them?
-3. **The single fact that, if changed, would flip your answer.** This is the
+3. **The single fact that, if changed, would reverse your answer.** This is the
    real product of the exercise. Was it the time of day? The number of notes?
    Whether the attestation line was inserted automatically? Whether the
    clinic's policy required reading the plan against the conversation?
    Whether Mr. Alvarez knew the scribe was running? Name one, and say which
-   way it flips.
+   way it changes your answer.
 4. **Which of the four CDS criteria** would the sepsis alert on your next
    inpatient rotation fail, and does it matter to *you* that it is a device?
 
@@ -548,7 +548,7 @@ Score yourself against this before moving on.
 | The "has it moved" judgment | You can say whether the source is newer than 2026-09-07 and what changed | "Seems the same" |
 | A box for the note | A box of @tbl-price, with the recommendation named | "It depends" |
 | The four elements | Duty, breach, causation, damages, and which is hardest here | "The AI was wrong" |
-| The flipping fact | One specific fact and the direction it flips the ruling | A list of everything that matters |
+| The deciding fact | One specific fact and the direction it changes the ruling | A list of everything that matters |
 | The device question | Which criterion the alert fails, in your own words | "It's FDA-cleared so it's fine" |
 | The Jabbour sentence | You can say what explanations did and did not do, with the direction of the numbers | "Explainable AI helps" |
 | The PCCP sentence | You can say what clearance covers when the model has been updated | "It was cleared" |
@@ -562,9 +562,9 @@ is last. Write three sentences. Do not write a slogan.
 > **What part of clinical judgment will you not hand over to an AI system, and
 > what would have to be true for you to change your mind?**
 
-The second half does the work. Without it, you will write something that
+The second half is the important part. Without it, you will write something that
 sounds like a value. With it, you have to state a condition under which you
-would be wrong. That turns a reflex into a position you can defend and, more
+would be wrong. That turns a first reaction into a position you can defend and, more
 importantly, revise. Go back to the policy you wrote in [the centaur-or-cyborg
 chapter](core-centaur-cyborg.qmd) and put this sentence at the bottom of it. Then put Mr. Alvarez at
 the bottom of that. It is 6:40 p.m., the draft reads well, and you now know
@@ -572,7 +572,7 @@ what a sentence you did not write can cost. What, specifically, do you do
 differently with the fourteenth note?
 
 Date the file. Reread it at the end of intern year. Half of your class will
-have moved, and the useful skill is noticing why.
+have changed their answer, and the useful skill is noticing why.
 
 ## Summary
 
@@ -589,7 +589,7 @@ have moved, and the useful skill is noticing why.
   independently review the basis with time to do so, decides most cases. The
   guidance moved twice in January 2026.
 - A PCCP is how a changing model stays cleared. Cleared is not validated.
-- You sign it, you own it. The patient has to know. And there is a contract,
+- You sign it, you answer for it. The patient has to know. And there is a contract,
   or there is not.
 - The tool can change you. Decide what you keep.
 - Mr. Alvarez's sentence was written by nobody. Your name is on it.
@@ -604,7 +604,7 @@ have moved, and the useful skill is noticing why.
 - Jabbour in full, including the written cases and the explanation format
   that did not help [@pmid:38112814].
 - What scribes get wrong, measured: the academic-system pilot [@pmid:41996389]
-  and a head-to-head of five platforms on simulated visits, where 19.5% of
+  and a comparison of five platforms on simulated visits, where 19.5% of
   transcript errors reached the note and an average of three errors per case
   had potential for moderate-to-severe harm [@pmid:41234546]. A review in
   emergency medicine adds the equity finding. The speech-recognition layer
@@ -629,7 +629,7 @@ have moved, and the useful skill is noticing why.
 
 - [FDA, Clinical Decision Support Software](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software)
 - [FDA, AI-enabled medical devices list](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices).
-  Counts in circulation (more than 1,400 authorized; a record year in 2025;
+  Counts that are often quoted (more than 1,400 authorized; a record year in 2025;
   most in radiology) come from secondary trackers of this list
   [VERIFY: totals against the live list before quoting a number]{.verify}.
 - [ASTP/ONC, HTI-1 and HTI-5](https://www.healthit.gov/topic/laws-regulation-and-policy/hti-5-proposed-rule-fact-sheet)
@@ -642,5 +642,5 @@ have moved, and the useful skill is noticing why.
   principles. That is what the committee you will one day sit on is trying
   to build.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/):
-  four levels of classroom AI policy, a warm-up for drawing any line and
+  four levels of classroom AI policy, practice for drawing any line and
   defending where you drew it. Also in [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd).

@@ -15,9 +15,9 @@ By the end of this chapter you will be able to:
 4. Respond to a patient who arrives with chatbot output that is confident,
    well written, and partly right, without giving in and without talking down
    to them.
-5. Explain why text that raters call more empathetic still moves patients
-   less than a person does, and why that makes carrying the message part of
-   your job.
+5. Explain why text that raters call more empathetic still persuades patients
+   less than a person does, and why that makes delivering the message yourself
+   part of your job.
 6. Say "I don't know how that system works, and here is how I'll find out" in a
    way that keeps the patient's trust.
 :::
@@ -63,7 +63,7 @@ She is not embarrassed and she is not hostile. She did homework and some of it
 is good. She wants the tests, and the phone on the desk is still listening.
 
 You have perhaps ninety seconds to answer both questions, in the right order,
-without losing her. That is the whole chapter.
+without losing her trust. That is the whole chapter.
 
 ## Why this matters
 
@@ -115,19 +115,19 @@ behaviors. The machine had been trained on a great deal of text in which people
 did them. The physicians on the forum were answering strangers for free at the
 end of a day.
 
-Now the trap. The finding is not that chatbots should answer your patients. It
+Now the mistake to avoid. The finding is not that chatbots should answer your patients. It
 is a finding about text, judged by readers. The course's third recurring
 lesson, **the published number is the optimistic one**, applies to a
 preference rating as much as to a vendor slide. There was no relationship and no
 follow-up. It compared a tool with unlimited time against physicians with none.
 It says nothing about whether the patient got better, whether they came back,
-or whether they believed a word of it. Hold it as a warning about what a rushed
-clinician produces, and as a reason not to assume the human wins on warmth by
+or whether they believed a word of it. Treat it as a warning about what a rushed
+clinician produces, and as a reason not to assume the person is warmer by
 default.
 
 ### More empathetic on the page, less persuasive in the room
 
-The second finding points the other way. The two together are the core of
+The second finding favors the person. The two together are the core of
 this chapter. In a Zurich course, 52 medical students watched four short
 pieces on the same treatment over four weeks: a patient describing their
 experience, a clinician, an expert, and a text written by ChatGPT. The chatbot
@@ -139,27 +139,27 @@ and the expert's less, and the chatbot's least.
 
 The same students, separately, had rated the chatbot text as moderately clear,
 safe, and correctly written, and better still when the prompt was improved. So
-the text was fine. It just did not move anyone much.
+the text was fine. It just did not change what anyone expected.
 
 Two honest limits. The comparison mixes up who wrote the words with how they
 were delivered, since the humans appeared on video and the machine did not. And
 the students were rating their own expectations, not a patient's. That is a
-reason to treat the finding with care, not to drop it. Its shape matches what
+reason to treat the finding with care, not to drop it. Its pattern matches what
 every clinician already knows about a handout: accurate, easy to read, and
 ignored, because nobody said *this one matters, and here is why*.
 
 Put the two findings together. A tool can produce text that raters prefer and
 still fail to change what a person does. This chapter calls that the empathy
-paradox. Empathy on the page is not influence in the room, and the gap between
-them is where your job lives. The machine can draft the handout. You are the
+paradox. Empathy on the page is not influence in the room, and closing the gap
+between them is your job. The machine can draft the handout. You are the
 reason the patient follows it.
 
 ### The portal reply: telling the patient costs a little and is still owed
 
-You will meet this first in the inbox. A portal message is the secure message a
+You will first see this in the inbox. A portal message is the secure message a
 patient sends the clinic through the online system they also use to see
 results. Health systems now generate a draft reply before the clinician opens
-the message. At Stanford, in the first weeks of one such rollout, clinicians
+the message. At Stanford, in the first weeks after one such tool was introduced, clinicians
 used the draft about a fifth of the time. They reported less workload and
 exhaustion, with no change in how long a reply took [@pmid:38506805]. At UC San
 Diego, clinics were switched on at random. There, drafts made replies 18 percent
@@ -183,7 +183,7 @@ five-point scale. More than three quarters were satisfied either way
 were comfortable with drafted replies on one condition: a clinician reviewed
 them and stayed responsible for them. They broadly supported telling patients,
 and disagreed only about when and how [@pmid:42412426]. The repeat of the
-empathy study found the same shape. Participants rated a response as more
+empathy study found the same pattern. Participants rated a response as more
 empathetic when told a physician wrote it, whether or not one had
 [@pmid:41359230].
 
@@ -211,9 +211,9 @@ In a survey of UK general practitioners in August 2025, one in seven was already
 using one. Of those, 63 percent routinely asked the patient's consent, and no
 more than one patient in ten said no. Errors were most frequent when more than
 one person was talking, when the history was complex, and when the visit was
-not in English [@pmid:42386325]. Keep that last finding. The patients most
+not in English [@pmid:42386325]. Remember that last finding. The patients most
 likely to be poorly served by the note are the ones least likely to be asked
-about it in a language they can push back in.
+about it in a language they can say no in.
 
 Which kinds of AI use require telling the patient is not settled, and this
 chapter will not pretend otherwise. Recording a visit, drafting a reply,
@@ -272,7 +272,7 @@ The reason is how the tool works. A general-purpose chatbot does not look the
 answer up. It writes the most plausible next words given the question. So a
 question phrased the way a patient talks gets an answer shaped like the
 internet's answers to patients, references and all. [the appraisal chapter](core-appraisal.qmd)
-takes that apart. Here it is enough to know that the printout's confidence
+explains that in detail. Here it is enough to know that the printout's confidence
 comes from the writing, not from the evidence.
 
 Your patient asked in her own words. What she was handed is, on average, less
@@ -295,7 +295,7 @@ they trust a chatbot more than a doctor. They arrive because of what happened at
 the last visit. In this case the last physician gave her eight minutes and said
 it was probably stress. She will not volunteer that. You have to ask: "What made
 you go looking?" A clinician who wins the argument about the ANA and never asks
-that question has lost the patient.
+that question has lost the patient's trust.
 
 **Then the parts that are wrong, with a reason each.** "The cortisol, the Lyme
 test, and the heavy metals are tests for things your story doesn't point to,
@@ -318,7 +318,7 @@ shape, not the wording.
 **Who is responsible.** "The decision to bring you back is hers and mine, not the software's."
 :::
 
-The order matters more than the words. Students who lead with who is
+The order matters more than the words. Students who start with who is
 responsible sound defensive. Students who never reach it leave the patient
 believing a machine decided. And the first two sentences have to be separate.
 Patients merge "the computer flagged it" and "the radiologist agreed" into
@@ -336,7 +336,7 @@ am reading it with you; the plan is ours.
 
 The last skill is the one students most need permission to use. You will be
 asked about tools you have never used, in your first month, because tools
-show up in your day without warning. "I don't know how that system works,
+arrive in your day without warning. "I don't know how that system works,
 and here is how I'll find out" is a correct, professional answer. On the
 observer's checklist, honesty about what you personally do not know is the item
 that best predicts whether the patient still trusts you after the visit.
@@ -376,7 +376,7 @@ personalized, reassuring, and unsupervised. The third clipping is the safety
 organization ECRI naming that kind of failure its top health-technology hazard
 for 2026.
 
-Who bears the cost in each case is not the clinician. It is a person with an
+Who is harmed in each case is not the clinician. It is a person with an
 eating disorder, a man with a clot, a patient who asked in her own words. That
 is the population this chapter exists for.
 
@@ -395,13 +395,13 @@ printout scenario from the other side of the desk, with a good ending. Listen
 for what the earlier clinicians did that sent her to a chatbot, and for what
 Gilmer did when the printout arrived. Both are the checklist's first two items.
 Then ask what this story does not show, which is every printout that was wrong.
-The first twenty minutes carry the story; the rest is a good commute.
+The first twenty minutes tell the story; the rest is worth hearing if you have time.
 
 **Alternative.** *Today, Explained* (Vox), "Paging Dr. ChatBot" (October 26,
 2025; 30 min), on patients and physicians both turning to chatbots, if you want
 the version written for a general audience. *Tradeoffs*, "Should I Trust AI to
 Diagnose Me?" (October 30, 2025), with physician and writer Dhruv Khullar,
-covers the same ground. It adds the argument that leaning on the tool erodes
+covers the same topics. It adds the argument that relying on the tool weakens
 your own skill, often called deskilling
 [VERIFY: episode length]{.verify}.
 
@@ -436,7 +436,7 @@ situations. Time yourself; each should take under a minute aloud.
    because in this case something has to.
 
 Keep both. You will read the first one aloud in the live session and find out
-how much of it survives contact with a person.
+how much of it still works when said to a person.
 
 ### Part B: the printout, with a chatbot playing the patient (20 minutes)
 
@@ -506,7 +506,7 @@ either sentence reassures, rewrite it.
 
 The chapter can teach you the order. It cannot put you across from a person
 who is frightened, or make you play that person. That is where students
-discover that the sentence they wrote lands nothing like the way they meant it.
+discover that the sentence they wrote is heard nothing like the way they meant it.
 The live session runs three rounds in groups of three over Zoom: clinician,
 patient, observer, with six scenario cards and the checklist below. Breakouts
 are not recorded, and every patient is fiction. Bring your Part A sentences;
@@ -523,7 +523,7 @@ from the live session, applied to your own Part A and B.
 | Who is responsible (objective 2) | A sentence with a name in it: mine, Dr. Chen's, ours | "The team," "the system," or no sentence |
 | The sentence before the mammogram spine (objective 3) | Responds to the fear before explaining the software | Starts with "the software" |
 | The Part B transcript (objective 4) | Something right was named before anything wrong; you asked what sent her; each declined test has a reason | Won the argument; never asked; "we don't need those" |
-| The empathy paradox (objective 5) | You can say in your own words why text raters prefer can still move a patient less, and name the two studies' limits | "AI is more empathetic" or "AI is cold" |
+| The empathy paradox (objective 5) | You can say in your own words why text raters prefer can still persuade a patient less, and name the two studies' limits | "AI is more empathetic" or "AI is cold" |
 | The Part C sentences (objective 6) | Admits what you do not know and commits to a time | Reassures |
 | Jargon | The chatbot flagged none, or you can list what it flagged and the plain word for each | "Serology," "false positive," "ambient" unexplained |
 
@@ -545,7 +545,7 @@ sentence about the printout is a correction, start again.
   empathetic ten times as often. That is a finding about text, not patients.
 - The same kind of text, accurate and clear, produced the smallest change in
   what people expected of a treatment. Empathy on the page is not influence in
-  the room; the gap is your job.
+  the room; closing the gap is your job.
 - Patients slightly prefer AI-drafted replies and are slightly less satisfied
   when told. Tell them anyway; increasingly the law agrees.
 - The scribe can be refused; the alert in the chart cannot. Say which is which,
@@ -581,8 +581,8 @@ sentence about the printout is a correction, start again.
 **Talks**
 
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/)
-  carries the student-attitudes material and a four-level classification of AI
-  policies; useful background, pitched at faculty. Also in [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd).
+  contains the student-attitudes material and a four-level classification of AI
+  policies; useful background, written for faculty. Also in [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd).
 - The *ai-safety* deck, "Constructive Use of AI in the Life of a Medical
   Resident" (IDPT 8079, October 2025), for the *keep transparency intact*
   habit: cite AI use; use it to prepare work, not as a substitute for it.
@@ -595,4 +595,4 @@ sentence about the printout is a correction, start again.
 - [the ethics and regulation chapter](core-ethics-regulation.qmd), for the statutes, the business associate
   agreement, and liability when the tool is wrong.
 - [the bias and equity chapter](core-bias-equity.qmd), for "does this thing work for people like me,"
-  which this chapter deliberately does not absorb.
+  which this chapter deliberately does not cover.
