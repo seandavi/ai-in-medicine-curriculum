@@ -603,7 +603,7 @@ do with the two papers that disagree? One word is not an answer to either.
   still generated incorrect interpretations," is this chapter in nine words
   [@pmid:41266194].
 - "Lost in the middle," the experiment on where in the context a document
-  sits [@doi:10.1162/tacl_a_00638].
+  sits [@doi:10.1162/tacl_a_00638]. Also in [the foundations chapter](core-foundations.qmd).
 - A two-day workshop for clinicians that limits citation generation to
   NotebookLM and then makes participants check every one. It is honest that
   whether this reduces fabrication was not tested [@pmid:42684317].
@@ -616,7 +616,7 @@ do with the two papers that disagree? One word is not an answer to either.
 - [Word embeddings as the basis for LLMs](https://talks.seandavis.net/archive/2024-11-12-word-embeddings-basis-for-llms/):
   what "similar meaning, nearby numbers" actually means, with a hands-on
   embedding projector, for anyone who wants to see inside step 2 of the
-  pipeline.
+  pipeline. Also in [the foundations chapter](core-foundations.qmd).
 - [Prompt engineering](https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/):
   ten rules with clinical examples, for students whose Step 2 questions came
-  back vague.
+  back vague. [the prompting lab](enrichment-prompting-lab.qmd) is built on it.

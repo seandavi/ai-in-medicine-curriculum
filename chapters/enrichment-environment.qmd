@@ -610,4 +610,4 @@ this week change whether you use it? If not, what *would*?
   the fairness vocabulary behind "Where the cost lands" (procedural,
   distributive, and representational fairness), and the two opening thought
   experiments that this chapter's guess-first-then-check exercise borrows
-  from.
+  from. It is [the bias and equity chapter](core-bias-equity.qmd)'s reading alternative.

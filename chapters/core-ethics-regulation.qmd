@@ -612,7 +612,8 @@ have moved, and the useful skill is noticing why.
   White speakers. So the patient most likely to be misdocumented is not
   random [@pmid:42110031].
 - Consent as it actually happens in clinic [@pmid:40694347].
-- Skill loss after using a tool, called deskilling [@pmid:40816301], and a
+- Skill loss after using a tool, called deskilling [@pmid:40816301] (the
+  study [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd) is built on), and a
   2026 systematic review of automation bias and deskilling with generative
   tools [@pmid:42445869].
 - Cleared is not validated [@pmid:33820998; @pmid:39187696].
@@ -622,7 +623,7 @@ have moved, and the useful skill is noticing why.
   question 7.
 - Eight guiding principles for AI tools in health care
   [@doi:10.1038/s43856-023-00279-9], a useful checklist to test your Part B
-  answer against.
+  answer against. Also in [the appraisal chapter](core-appraisal.qmd).
 
 **Primary sources to bookmark** (check the date on each before quoting it)
 
@@ -642,4 +643,4 @@ have moved, and the useful skill is noticing why.
   to build.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/):
   four levels of classroom AI policy, a warm-up for drawing any line and
-  defending where you drew it.
+  defending where you drew it. Also in [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd).

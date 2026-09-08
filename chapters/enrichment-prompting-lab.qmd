@@ -595,7 +595,8 @@ check the one claim the plan turns on. Pick one and write it down.
 
 - The randomized trials of physicians with a model: diagnosis [@pmid:39466245]
   and management [@pmid:39910272]. Read the discussion sections for the
-  authors' own account of where the benefit went.
+  authors' own account of where the benefit went. Both are [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd)'s main
+  papers.
 - The pharmacy study in which a prompt template changed nothing that mattered
   [@pmid:42324177], and the guideline-consistency study that found prompt
   effects vary by model and the same question gives different answers on
@@ -605,7 +606,8 @@ check the one claim the plan turns on. Pick one and write it down.
   parts, where structure *did* improve the weaker model's accuracy at pulling
   facts out of text [@pmid:42350611]: the counter-example that keeps this
   chapter's claim honest.
-- The student error-catching study behind the 56 percent [@pmid:39915801],
+- The student error-catching study behind the 56 percent [@pmid:39915801]
+  (also in [the appraisal chapter](core-appraisal.qmd)),
   and the published, reusable case-based LLM workshop from Harvard
   [@pmid:42483714]; this chapter's Do is a shorter version of it.
 - A tutorial on prompt engineering written for health professionals, for the
@@ -617,4 +619,4 @@ check the one claim the plan turns on. Pick one and write it down.
   the source deck: ten rules, clinical examples throughout.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/),
   for the attribution question that arises the first time a chatbot's table
-  ends up in something you hand in.
+  ends up in something you hand in. Also in [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd).

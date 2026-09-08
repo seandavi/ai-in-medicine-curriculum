@@ -704,14 +704,15 @@ an answer to either.
 - A published classroom framework built around AI citation errors, in biology but
   portable [@pmid:42200655].
 - The randomized trial of physicians with model access [@pmid:39466245], and the
-  student error-catching study [@pmid:39915801].
+  student error-catching study [@pmid:39915801]. The trial is [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd)'s
+  main paper.
 - FUTURE-AI in full, with the 30 practices behind the six principles
   [@pmid:39909534]; and TRIPOD-LLM, the reporting guideline a *study* of a
   language model should meet [@pmid:39779929], which is the standard most of
   the Part B claims fail.
 - The National Academy of Medicine's AI Code of Conduct, in its discussion
   draft [@pmid:39830818]; the 2025 final is a NAM publication and the principles
-  are the same.
+  are the same. Also in [the ethics and regulation chapter](core-ethics-regulation.qmd).
 - Eight guiding principles for AI tools in health care [@doi:10.1038/s43856-023-00279-9].
   "Report clinically meaningful outcomes" and "have high healthcare value" are what
   Part B teaches in exercise form.
@@ -722,10 +723,12 @@ an answer to either.
 
 - [Grounding AI in real sources](https://talks.seandavis.net/archive/2025-10-07-rag-notebooklm-idpt-8079/)
   is a written article, not a deck, and builds the search-first pipeline from
-  first principles. Read it if @fig-citation-paths felt like an assertion.
+  first principles. Read it if @fig-citation-paths felt like an assertion. It
+  is [the retrieval chapter](enrichment-rag-notebooklm.qmd)'s reading alternative.
 - [Prompt engineering](https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/):
   ten rules with clinical examples, including the "precise language" rule that the
-  clinician-versus-patient wording effect illustrates.
+  clinician-versus-patient wording effect illustrates. [the prompting lab](enrichment-prompting-lab.qmd) is built on
+  this deck.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/)
   covers attribution and academic integrity, for the moment you use one of these
-  tools in a research project.
+  tools in a research project. Also in [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd).

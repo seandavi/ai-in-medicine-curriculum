@@ -623,7 +623,8 @@ able to check.
   [@pmid:38276923], which is what a department actually does with a cleared
   tool.
 - The scribe economics: the five-system study [@pmid:41920565] and the UCSF
-  productivity analysis [@pmid:41511775].
+  productivity analysis [@pmid:41511775]. The five-system study is also in
+  [the appraisal chapter](core-appraisal.qmd).
 - The three administrative-cost papers [@pmid:31589283; @pmid:25201663;
   @pmid:12930930], for the denominators.
 
@@ -641,10 +642,11 @@ able to check.
   tells the IBM Watson story, from Jeopardy! to MD Anderson setting it aside
   in 2017, and covers MYCIN and the AI winters before it. Read it if you want
   a second example of the same shape before deciding the Hinton story is about
-  one man's bad call.
+  one man's bad call. Also in [the foundations chapter](core-foundations.qmd).
 - [AI and machine learning for an oncology service line](https://talks.seandavis.net/archive/2024-10-28-ai-ml-oncology-service-line/)
   keeps apart the four groups the economics section needs to keep apart:
   patients, providers, researchers, and administrators. It also lists eight
   guiding principles [@doi:10.1038/s43856-023-00279-9]. Two of them, "have
   high healthcare value" and "reduce overdiagnosis and overtreatment," are
-  the CAD story stated as rules.
+  the CAD story stated as rules. The deck is also in [the ethics and regulation chapter](core-ethics-regulation.qmd); the
+  principles are also in [the appraisal chapter](core-appraisal.qmd).

@@ -649,7 +649,7 @@ answer, and it is the one this chapter most wants you to revisit.
 
 - [Prompt engineering](https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/):
   ten rules with clinical examples throughout. Who / Where / What is a
-  shortened form of the first three.
+  shortened form of the first three. [the prompting lab](enrichment-prompting-lab.qmd) is built on this deck.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/):
   attribution and academic integrity, for the moment one of these tools drafts
   something with your name on it outside the hospital.

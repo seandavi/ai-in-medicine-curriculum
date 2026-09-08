@@ -582,7 +582,7 @@ sentence about the printout is a correction, start again.
 
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/)
   carries the student-attitudes material and a four-level classification of AI
-  policies; useful background, pitched at faculty.
+  policies; useful background, pitched at faculty. Also in [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd).
 - The *ai-safety* deck, "Constructive Use of AI in the Life of a Medical
   Resident" (IDPT 8079, October 2025), for the *keep transparency intact*
   habit: cite AI use; use it to prepare work, not as a substitute for it.
