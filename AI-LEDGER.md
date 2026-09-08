@@ -14,9 +14,13 @@ not that review happened.
 |---|---|---|
 | Drafting and editing of design files, modules, and chapters in this repo | Claude Code (Claude Fable 5.1 and predecessors), pair-programming style: the author directs, the model drafts, the author edits and commits | Every file is read and edited by the author before commit. Citations are verified separately, below. |
 | Resolving `@pmid:` / `@doi:` citation keys into `references.resolved.bib` at render time | quartobot (`_quarto.yml` pre-render) | Resolution is a lookup against PubMed and Crossref, not generation. A key that does not resolve fails the render. |
+| Drafting or revising many chapters at once: one agent per chapter, each in its own git worktree and branch, from one written brief; a coordinating agent merges the branches, runs one render, and writes the ledger row | Claude Code subagents (Claude Fable 5.1), used for the ten-chapter draft (2026-09-07), the plain-language, review, and mannered-prose passes (2026-09-08) | The author writes or approves the brief and reads the merged result in the deployed book. Each agent reports what it changed and what it could not check; the coordinator spot-checks the reports and the per-pass row says what was checked by script (numbers, citation keys, flags, figure ids, headings) rather than by a person |
 | Chat tutor over the rendered chapters (planned; see `curriculum/chapter-pattern.md`) | Not yet built | Answer keys in `_answers/` are held for the tutor and never rendered. Disclosure to students goes in the preface when it ships. |
 
-**Per-commit log.** Newest first.
+**Per-commit log.** Newest first. Rows dated 2026-09-07 for the ten parallel-drafted
+chapters say the author had not yet read them; the author read the deployed book
+on 2026-09-08, before the plain-language pass, and the rows are left as written
+because they record what was true at that commit.
 
 | Date | Artifact | What AI did | Human review |
 |---|---|---|---|
