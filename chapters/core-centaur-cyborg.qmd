@@ -170,15 +170,20 @@ the model behind ChatGPT at the time. The researchers watched how the successful
 
 Neither way is the correct one. Chess players were the first to use the word
 centaur, after Kasparov's human-plus-computer exhibition matches in the late
-1990s. Within a few years they found the same thing: amateurs with a good
-process beat grandmasters with a worse one [VERIFY: Kasparov's own account of the 2005
-freestyle tournament; not a peer-reviewed source]{.verify}. The skill is
-knowing which way of working a task calls for, and switching. The 2025 *NEJM*
+1990s. Within a few years they found the same thing: in a 2005 online tournament,
+two amateurs with three computers and a good process beat grandmasters with a
+worse one.[^kasparov] The skill is knowing which way of working a task calls
+for, and switching. The 2025 *NEJM*
 review this chapter is based on gives a simple rule [@pmid:40834302]. Work
 as a centaur for high-stakes tasks, and for tools that have not been validated
 for the use you are putting them to. Work as a cyborg where the task is
 low-risk or creative, or where the tool is well validated for exactly this.
 @fig-modes turns that rule into two questions.
+
+[^kasparov]: Garry Kasparov, "The Chess Master and the Computer," *New York
+    Review of Books*, 11 February 2010,
+    <https://www.nybooks.com/articles/2010/02/11/the-chess-master-and-the-computer/>.
+    Kasparov's own account; an essay, not a study.
 
 ```{mermaid}
 %%| label: fig-modes
@@ -455,8 +460,7 @@ Thought with Dr. Adam Rodman" (June 19, 2024).
 <https://ai-podcast.nejm.org/e/ai-and-the-evolution-of-medical-thought-with-dr-adam-rodman>
 Rodman is a co-author on both trials and a historian of clinical reasoning. The
 episode takes the historical view: what clinicians have handed to instruments before,
-and what happened to the skill each time.
-[VERIFY: episode length before assigning]{.verify}
+and what happened to the skill each time. The episode is 53 minutes.
 
 ## Do
 

@@ -293,7 +293,7 @@ the second needs its own checking.
 |---|---|---|---|
 | Pulse oximetry | Arterial oxygen saturation; light absorbance calibrated on light skin | Black, Hispanic, and Asian patients; oxygen and COVID-19 therapies delayed or never triggered [@pmid:33326721; @pmid:35639368] | FDA draft guidance, January 2025. **Still draft.** [@pmid:40042945] |
 | Care management risk score | Health need; predicted health care cost | Black patients; left out of care coordination. The fixed version enrolled 2.6 times as many [@pmid:31649194] | What the model predicts was changed by the authors and, the paper says, by the vendor. Status of the industry's other scores: not known. |
-| Kidney function (eGFR) | True kidney filtration; a creatinine formula with a race multiplier | Black patients; later CKD staging, later transplant referral [@pmid:32853499] | NKF-ASN Task Force recommended the race-free 2021 equation for all US laboratories [@pmid:34563581]. The widely quoted adoption figure [VERIFY: "roughly two-thirds of US labs" traces to a secondary source citing an unspecified survey]{.verify} could not be confirmed; a 2022 survey of 28 laboratories describes implementation but not national coverage [@pmid:38507611]. |
+| Kidney function (eGFR) | True kidney filtration; a creatinine formula with a race multiplier | Black patients; later CKD staging, later transplant referral [@pmid:32853499] | NKF-ASN Task Force recommended the race-free 2021 equation for all US laboratories [@pmid:34563581]. In a College of American Pathologists survey of 3,542 US laboratories, 65.8% had adopted the race-free creatinine equation by March 2023, up from 30.3% a year earlier [@pmid:37559439; @pmid:36413243]. No later national count was found. |
 | Spirometry | Lung function compared with what is expected; an expected value that was adjusted by race | Black patients; reduced lung function counted as normal, with consequences for disability benefits and transplant priority [@pmid:36383197] | ATS recommended race-neutral equations in April 2023 [@pmid:36973004]. **Actively contested.** Modeling across 249 million Americans estimates 12.5 million reclassified, with nonobstructive impairment rising 141% among Black and falling 69% among White persons, and disability payments shifting by over a billion dollars a year [@pmid:38767252]. Reports from single health systems that made the switch are being published [@pmid:40712949]. |
 | Dermatology image AI | Disease across all skin tones; training images mostly of light skin | Patients with dark skin; missed or misclassified lesions [@pmid:35960806; @pmid:30073260] | Image sets covering all skin tones published; retraining on them closed the gap in one study [@pmid:35960806]. No regulatory requirement for skin-tone reporting. |
 | Chest radiograph AI | Disease on the image; labels pulled from the text of old radiology reports | Female, Black, Hispanic, low-income, and uninsured patients, worst for patients in more than one of these groups; findings called normal [@pmid:34893776] | Documented; no fix adopted at scale. The question is who wrote the labels the model learned from. |
@@ -620,5 +620,8 @@ collects these in chat, and they are worth more than the table.
   what "incorporate biography" means when race is standing in for exposure.
   Also in [the ethics and regulation chapter](core-ethics-regulation.qmd).
 - Kate Crawford, "The Trouble with Bias", NeurIPS 2017 keynote, the source of
-  the allocation-versus-representation distinction. On YouTube; about an
-  hour. [VERIFY: stable URL and length before assigning]{.verify}
+  the allocation-versus-representation distinction. On YouTube, about 50
+  minutes: <https://www.youtube.com/watch?v=fMym_BKWQzk> (a third-party
+  upload; the NeurIPS talk page at
+  <https://neurips.cc/virtual/2017/invited-talk/8742> links the official
+  recording on Facebook).

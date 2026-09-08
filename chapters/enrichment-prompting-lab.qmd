@@ -269,10 +269,12 @@ it, and the physicians with the model spent two minutes longer per case
 [@pmid:39910272]. Two trials, one direction. The reading the authors favour,
 and the one this chapter takes, is that the weak point is how the physician
 uses the answer, not what the model can do. Both trials used written cases,
-not real patients, and the authors say so. A trial in *NEJM AI* of
-physicians who had been trained in AI literacy reported that the training did
-not remove the automation bias
-[VERIFY: NEJM AI 2025–2026 automation-bias RCT; not found in PubMed at time of writing]{.verify}.
+not real patients, and the authors say so. A trial in *NEJM AI*
+randomized 44 physicians who had just finished a 20-hour AI-literacy course.
+When the model's suggestion was wrong, their diagnostic scores fell by about
+14 points, so the training did not remove the automation bias
+[@doi:10.1056/AIoa2501001]
+[VERIFY: the numbers come from the preprint listing and a search summary; the NEJM AI page blocked the tool on 2026-09-08]{.verify}.
 
 The honest summary for a fourth-year: the prompting skill is real and cheap.
 The evidence that it makes *you* a better diagnostician is not there yet. What
@@ -305,10 +307,9 @@ it as a set of techniques, and notice that none of the ten slides is the Uncerta
 row.
 
 **Alternative episode.** *NEJM AI Grand Rounds*, "AI and the Evolution of
-Medical Thought with Dr. Adam Rodman" (19 June 2024), the other senior author,
-on clinical reasoning and why he thinks the models reason at all. Also the
-alternative in the centaur-or-cyborg chapter.
-[VERIFY: duration before assigning]{.verify}
+Medical Thought with Dr. Adam Rodman" (19 June 2024; 53 min), the other
+senior author, on clinical reasoning and why he thinks the models reason at
+all. Also the alternative in the centaur-or-cyborg chapter.
 
 ## Do
 

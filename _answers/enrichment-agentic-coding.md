@@ -29,7 +29,7 @@ in the chapter's table.
 | Score | Edge the model tends to miss | What the paper / MDCalc does |
 |---|---|---|
 | CHA₂DS₂-VASc | Both age bands checkable at once | Mutually exclusive; 65–74 = 1, ≥75 = 2, never 3 |
-| CHA₂DS₂-VASc | "Female sex" point | Lip 2010 scores it 1. 2023 ACC/AHA/ACCP/HRS guideline treats sex as a modifier rather than a risk factor; ESC 2024 dropped it (CHA₂DS₂-VA). A tool must say which it implements. `[VERIFY: guideline wording]` |
+| CHA₂DS₂-VASc | "Female sex" point | Lip 2010 scores female sex as 1. The 2023 ACC/AHA/ACCP/HRS guideline (pmid:38033089) keeps the point but sets the treatment threshold one higher for women: anticoagulation recommended at ≥2 in men and ≥3 in women (Class 1), reasonable at 1 in men and 2 in women (Class 2a); it calls female sex a risk modifier. ESC 2024 (pmid:39210723) dropped the point (CHA₂DS₂-VA): anticoagulation recommended at ≥2 (Class I), should be considered at 1 (Class IIa). A tool must say which it implements. `[VERIFY: ESC 2024 rows read from secondary summaries, not the guideline text, 2026-09-08]` |
 | CHA₂DS₂-VASc | Annual stroke risk % | The percentages most tools print are from Friberg 2012 (Swedish cohort), not Lip 2010 (Euro Heart Survey); the two tables differ. Source must be named. |
 | Wells PE | Rounding of 1.5-point items; version | Three-tier (<2 / 2–6 / >6) and two-tier ("PE likely" >4) both published; the tool must name one |
 | MELD-Na | Floors and caps | Bili, INR, creatinine <1 → 1; creatinine >4 → 4; dialysis ≥2/week → 4; Na bounded 125–137; MELD-Na only when MELD > 11; final score capped at 40 |

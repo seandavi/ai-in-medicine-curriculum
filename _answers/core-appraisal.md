@@ -13,7 +13,7 @@ Not rendered. Fed to the tutor; used by the instructor in the live session.
 | 5 | RCT (three-arm, n=238) | Lukac et al., medRxiv 2025 (preprint at time of writing; check for the published version). pmid:40672471. UCLA. |
 | 6 | RCT (stepped-wedge, n=66) | Afshar et al., NEJM AI 2025. pmid:41625485. Wisconsin. |
 | 7 | RCT (crossover, n=136) | Chowdhury et al., JAMIA 2026. pmid:41729180. Duke. |
-| 8 | Large observational (n=23, pre/post) | Emory/CHOA pediatrics. [VERIFY: source not located in PubMed] |
+| 8 | Small randomized QI trial (n=23; 12 intervention, 11 control) | Shin et al., Appl Clin Inform 2025. pmid:40675605. Emory/CHOA pediatric subspecialists. Burnout 89% to 56% among the 9 intervention providers who completed both surveys. The chapter's tier sentence counts claim 8 as randomized. |
 | 9 | Large observational (five systems, 8,581 clinicians, 1,809 adopters) | Rotenstein et al., JAMA 2026. pmid:41920565 |
 | 10 | Trade press attached to a peer-reviewed paper | STAT, 1 April 2026, "Large AI scribe study finds modest time savings, inconsistent use": https://www.statnews.com/2026/04/01/ai-ambient-scribes-modest-time-savings-clinical-documentation/ (the 79% is derived from 1,809 adopters of 8,581 offered in Rotenstein et al.) |
 
@@ -24,10 +24,10 @@ collapsed solution in the chapter for the full reasoning.
 
 ## Counterweights
 
-- Peterson Health Technology Institute, March 2025 and April 2026 reports. [VERIFY: URLs]
-- UCSF: adopters billed 5.8% more RVUs, no rise in denials. [VERIFY]
-- Frutuoso Maia et al. 2026, Br J Oral Maxillofac Surg (GPT-4 36%, Gemini 14%,
-  DeepSeek 8.8%). [VERIFY: not found in PubMed 2026-09-06]
+- Peterson Health Technology Institute, March 2025 report <https://phti.org/ai-adoption-early-applications-impacts/> and April 2026 report <https://phti.org/administrative-ai-current-use-and-potential-impact/>.
+- UCSF: adopters billed 1.81 more RVUs a week (95% CI 0.86 to 2.75), no rise in denials; the 5.8% figure is from the UCSF press release, not the paper. pmid:41511775.
+- Frutuoso Maia et al., Br J Oral Maxillofac Surg 2026;64(3):216-222 (GPT-4
+  36%, Gemini 14%, DeepSeek 8.8%). pmid:41633924.
 
 ## Example panel provenance
 

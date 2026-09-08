@@ -208,8 +208,10 @@ Hundreds of FDA-cleared tools, and so far no measured loss of radiologist
 jobs. The most widely read
 explanation of why is Deena Mousa's essay "AI isn't replacing radiologists"
 (October 2025). She also reports that 38 percent of models cleared in 2024
-that disclosed their test sites used data from a single hospital
-[VERIFY: 38% single-site figure is Mousa's reading of the JAMA Netw Open analysis; not in that paper's abstract]{.verify}.[^mousa]
+that disclosed their test sites used data from a single hospital. That figure
+is her reading of the same JAMA Network Open analysis; it is not in the
+paper's main text
+[VERIFY: not in the main text of pmid:40305017, checked 2026-09-08; the site counts would be in Supplement 1, which a person should open]{.verify}.[^mousa]
 
 [^mousa]: Deena Mousa, "AI isn't replacing radiologists," *Understanding AI*,
     1 October 2025, <https://www.understandingai.org/p/ai-isnt-replacing-radiologists>.
@@ -232,9 +234,12 @@ second of the course's three recurring lessons, **efficiency gains get eaten
 by volume**; economists call it the Jevons paradox. In the nineteenth century, more efficient steam
 engines led to more coal being burned, not less, because cheaper power got
 used more. Imaging works the same way: cheaper scans get ordered more often.
-The workforce projection above assumes demand keeps growing at least as fast
-as supply
-[VERIFY: Neiman demand projection of 17–27% growth in imaging, cited in the module, not retrieved this session]{.verify}.
+The Neiman Health Policy Institute projects 17% to 27% more imaging in 2055
+than in 2023, driven mostly by population growth and ageing, if per-person use
+stays flat [@pmid:39952774]. Its companion paper projects the radiologist
+workforce growing 26% to 40% over the same years [@pmid:39952776]. The
+workforce projection above assumes demand keeps growing at least as fast as
+supply.
 The same paradox appears again in [the environmental-impact chapter](enrichment-environment.qmd), if you take
 it. Efficiency per unit and total use move in opposite directions more often
 than you would expect.
@@ -352,12 +357,10 @@ seen from the payer's side.
     Delivery Systems: Early Applications and Impacts* (March 2025) and
     *Administrative AI: Current Use and Potential Impact* (April 2026),
     <https://phti.org/administrative-ai-current-use-and-potential-impact/>.
-    The "bot wars" phrase and the Level 5 coding example are as reported in
-    trade coverage of the April 2026 report
-    ([HIT Consultant](https://hitconsultant.net/2026/04/13/phti-report-ai-upcoding-trap-ambient-scribes-payer-downcoding/),
-    13 April 2026); the report page itself was fetched but the phrase was not
-    located in the summary text
-    [VERIFY: "bot wars" wording against the full PHTI PDF]{.verify}.
+    The "bot wars" phrase (Exhibit 4, on prior authorization) and the Level 5
+    coding example (a 5% rise in Level 5 and 7% in Level 4 established-patient
+    encounters after scribe deployment) are in the report PDF,
+    <https://www.phti.org/wp-content/uploads/2026/04/PHTI-Administrative-AI-Current-Use-and-Potential-Impact.pdf>.
 
 **One number to refuse to simplify.** You will hear that "25 percent of health
 care spending is administrative." That sentence blends three studies with

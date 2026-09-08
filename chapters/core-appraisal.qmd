@@ -233,8 +233,9 @@ the answers most likely to cite something that does not exist.
 
 ::: {.callout-note title="These numbers move"}
 Fabrication rates depend on the tool and the month, not on the technology. A
-second 2026 study reported the GPT-versus-Gemini ordering reversed
-[VERIFY: Frutuoso Maia et al. 2026, Br J Oral Maxillofac Surg; not found in PubMed at time of writing]{.verify}.
+second 2026 study, on questions about facial cosmetic surgery, reported the
+GPT-versus-Gemini ordering reversed: 36% of GPT-4's citations could not be
+verified, against 14% for Gemini and 8.8% for DeepSeek [@pmid:41633924].
 When your own results below disagree with @tbl-rates, that is expected. How the
 tool works, shown in @fig-citation-paths, is the durable part. The percentages
 are not.
@@ -394,9 +395,8 @@ that to hold, and who has checked? Thirty minutes is enough for the exercise; th
 rest is worth hearing when you have time.
 
 **Video alternative.** "Travis Zack on OpenEvidence and the Future of Medical AI",
-Stanford Department of Medicine, YouTube.
+Stanford Department of Medicine, YouTube (July 2026; 44 min).
 <https://www.youtube.com/watch?v=nrfGSE__7po>
-[VERIFY: duration and date before assigning]{.verify}
 
 **For the second half.** *NEJM AI Grand Rounds*, "What Values are in AI? A
 Conversation with Dr. Zak Kohane" (December 17, 2025; 78 min).
@@ -463,9 +463,11 @@ Asked as a patient:
 > I can look them up myself?
 
 If you have a verified OpenEvidence account, run the clinician prompt there as
-well, on a third row. Verification requires professional credentials, so most
-students will not have one; the row is optional for that reason.
-[VERIFY: OpenEvidence eligibility for medical students]{.verify}
+well, on a third row. Verification asks for a clinician credential or, for US
+medical students, proof of enrollment such as a student ID. Students outside
+the United States, or who prefer not to upload a document, can skip this row;
+it is optional for that reason.
+[VERIFY: student verification wording on the OpenEvidence signup form; checked 2026-09-08 against OpenEvidence's 2024 announcement and two library guides, not the live form]{.verify}
 
 **Step 3. Score every reference.** Search PubMed by title, then by first author
 plus year, then by DOI or PMID. Give each reference one score from @tbl-scoring.
@@ -641,15 +643,19 @@ paper, and see whether the number is in it.
 
 Two independent checks on the vendor story. The Peterson Health Technology
 Institute, which takes no vendor funding, concluded in 2025 that scribes likely
-reduce burnout but show little to no evidence of financial return. In 2026 it
+reduce burnout but that their financial impact is unclear. In 2026 it
 concluded that administrative AI reduces burden within organizations without
 lowering system-wide costs
-[VERIFY: report URLs]{.verify}. A UCSF analysis found scribe adopters billed 5.8% more relative value
-units, the billing measure of clinical work, with no rise in denials
-[VERIFY]{.verify}.
+([2025 report](https://phti.org/ai-adoption-early-applications-impacts/),
+[2026 report](https://phti.org/administrative-ai-current-use-and-potential-impact/)).
+A UCSF analysis found scribe adopters billed about 1.8 more relative value
+units a week, the billing measure of clinical work, with no rise in claim
+denials [@pmid:41511775]. The university's press release called that a 5.8%
+increase. The study was one health system and adopters chose to adopt, so the
+authors call for a randomized test.
 
-The tiers, so you can check your answers: claims 1, 2, 3, 4, 8, and 9 are large
-observational; 5, 6, and 7 are randomized trials; 10 is trade press about a
+The tiers, so you can check your answers: claims 1, 2, 3, 4, and 9 are large
+observational; 5, 6, 7, and 8 are randomized trials; 10 is trade press about a
 peer-reviewed paper. The sources are in the answer key held by the course tutor,
 which will also grade your reasons.
 :::

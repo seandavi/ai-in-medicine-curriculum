@@ -7,7 +7,7 @@ Not rendered. Fed to the tutor; used by the instructor in the live session.
 | Row | Date | Model | Unit | Water counted | Number |
 |---|---|---|---|---|---|
 | Preprint (Li, Yang, Islam, Ren; arXiv 2304.03271 v1) | 6 Apr 2023 | GPT-3 (175B) | one Q&A in a "simple conversation" of 20–50 | on-site (scope 1) + off-site power-plant water (scope 2) | 500 mL per 20–50 → 10–25 mL per question; the current version says 10–50 medium-length responses → 10–50 mL |
-| *Washington Post* with UC Riverside (Verma and Tan, 18 Sep 2024) | Sep 2024 | GPT-4 | one 100-word email | on-site + off-site | 519 mL; 0.14 kWh. [VERIFY: the Post's location assumptions and lower bound; secondary reporting gives a range down to about 235 mL by data-center location] |
+| *Washington Post* with UC Riverside (Verma and Tan, 18 Sep 2024) | Sep 2024 | GPT-4 | one 100-word email | on-site + off-site | 519 mL; 0.14 kWh. Location range as reported by Tom's Hardware from the Post's model: Texas about 235 mL, Washington state about 1,408 mL. [VERIFY: Post article paywalled; figures from secondary coverage, 2026-09-08] |
 | Google (Elsworth et al., arXiv 2508.15734; Cloud blog 21 Aug 2025) | Aug 2025 | Gemini Apps, median text prompt | one prompt | on-site cooling only | 0.26 mL; 0.24 Wh; 0.03 gCO2e |
 | Altman, "The Gentle Singularity" (blog, Jun 2025) | Jun 2025 | ChatGPT, "average" | one query, undefined | not stated | 0.000085 gal ≈ 0.32 mL; 0.34 Wh; no method |
 
@@ -61,9 +61,15 @@ is stuck (all verified in PubMed this session unless flagged):
   include (travel avoided) and omit (device and server energy).
 - Specialty anchors students commonly find: anesthesia (desflurane per
   case), surgery (per laparoscopic case), radiology (per MRI/CT), nephrology
-  (per dialysis session), ophthalmology (per cataract case). [VERIFY: pick
-  and PubMed-check one per specialty before the live session if the
-  pre-vetted-set route is needed.]
+  (per dialysis session), ophthalmology (per cataract case). Pre-vetted set,
+  one per specialty (PubMed-checked 2026-09-08): anesthesia, Lechani et al.
+  BJA 2026, pmid:42613204 (10.8 kg CO2e per hysteroscopy under sevoflurane,
+  6.6 kg TIVA, 5.5 kg spinal); surgery, Comes et al. BJS 2024, pmid:39291674
+  (56.5 kg per laparoscopic cholecystectomy); radiology, McAlister et al.
+  Lancet Reg Health West Pac 2022, pmid:35538935 (17.5 kg per MRI, 9.2 kg per
+  CT); nephrology, Adv Ther 2024, pmid:39541083 (3.5 to 43.9 kg per dialysis
+  session by modality); ophthalmology, Ophthalmologica 2026, pmid:42671945
+  (14.1 kg per cataract procedure).
 
 **Arithmetic check.** At Google's 0.03 g per prompt, 1 kg CO2e ≈ 33,000
 prompts. At 29 Wh × 0.125 g/Wh ≈ 3.6 g per prompt, 1 kg ≈ 280 prompts. Both

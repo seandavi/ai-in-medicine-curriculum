@@ -402,7 +402,7 @@ The first twenty minutes tell the story; the rest is worth hearing if you have t
 **Alternative.** *Today, Explained* (Vox), "Paging Dr. ChatBot" (October 26,
 2025; 30 min), on patients and physicians both turning to chatbots, if you want
 the version written for a general audience. *Tradeoffs*, "Should I Trust AI to
-Diagnose Me?" (October 30, 2025), with physician and writer Dhruv Khullar,
+Diagnose Me?" (October 30, 2025; 25 min), with physician and writer Dhruv Khullar,
 covers the same topics. It adds the argument that relying on the tool weakens
 your own skill, often called deskilling
 [VERIFY: episode length]{.verify}.
@@ -585,9 +585,10 @@ sentence about the printout is a correction, start again.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/)
   contains the student-attitudes material and a four-level classification of AI
   policies; useful background, written for faculty. Also in [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd).
-- The *ai-safety* deck, "Constructive Use of AI in the Life of a Medical
-  Resident" (IDPT 8079, October 2025), for the *keep transparency intact*
-  habit: cite AI use; use it to prepare work, not as a substitute for it.
+- [Constructive and Safe AI in the Clinic](https://talks.seandavis.net/2025-10-21-idpt-ai-clinical-safe/)
+  (IDPT 8079, October 21, 2025), the *ai-safety* deck, for the *keep
+  transparency intact* habit: cite AI use; use it to prepare work, not as a
+  substitute for it.
   [VERIFY: public URL for the deck]{.verify}
 
 **Elsewhere in this course**
