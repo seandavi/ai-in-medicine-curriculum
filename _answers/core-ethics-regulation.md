@@ -33,7 +33,7 @@ that these answers move; re-check before each cohort and update this file.
    created; the plaintiff must show the erroneous note changed what happened
    next (e.g., no one addressed the nosebleeds or the stopped drug at the
    visit or after).
-3. **Flipping facts** (any one, with direction): an auto-inserted attestation
+3. **Deciding facts** (any one, with direction): an auto-inserted attestation
    the intern did not read (toward breach, and toward the vendor/institution);
    a written institutional policy requiring plan-versus-conversation review
    (toward breach if ignored, toward defense if followed); Mr. Alvarez's
