@@ -173,9 +173,9 @@ roughly ten volunteers. In January 2025 the agency issued a draft guidance.
 It proposes larger studies with a set spread of skin pigmentation, measured
 with an instrument rather than by asking the volunteer, and a statement on
 the label saying whether the device worked equally well across skin tones
-[@pmid:40042945]. The FDA's page for that guidance still carries the line
-"Draft. Not for implementation. Contains non-binding recommendations."
-It still did when checked on 8 September 2026.
+[@pmid:40042945]. The FDA's page for that guidance still carried the line
+"Draft. Not for implementation. Contains non-binding recommendations." when
+checked on 8 September 2026.
 A 2025 preprint tested 34 oximeters against the expected criteria. Only one
 of the 34 passed the draft FDA standard. Eleven devices overestimated
 saturation more in darkly pigmented participants than in lightly pigmented
