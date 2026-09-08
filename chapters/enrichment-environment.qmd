@@ -9,8 +9,9 @@ By the end of this chapter you will be able to:
 1. Trace a widely quoted figure about AI's environmental cost back to the
    paper or report it came from, and say what changed at each step on the
    way to you.
-2. Name three choices that make credible per-query figures differ by more than
-   a hundredfold, and say which choices the figure you traced made.
+2. Name three choices that make credible per-query figures (the cost of one
+   question to a chatbot) differ by more than a hundredfold, and say which
+   choices the figure you traced made.
 3. Put AI's per-query cost against your own specialty's measured footprint, and
    say what that comparison settles and what it does not.
 4. Explain how a per-query number can shrink thirtyfold in a year while the
@@ -33,7 +34,7 @@ At huddle, a second-year resident says she is opting out. She has read that
 every note the thing writes costs a bottle of water, and she is not going to
 pour out a bottle of water per patient in a drought. The medical director,
 who signed the contract, says that is nonsense. He read last month that a
-prompt uses about five drops. They look at each other, then at you, because
+prompt, one message to a chatbot, uses about five drops. They look at each other, then at you, because
 you are the student, and students get asked to look things up. Find out by
 Friday, he says. Which is it?
 
@@ -122,8 +123,9 @@ by a year of repetition.
 
 **August 2025.** Google published a technical report on what a median Gemini
 text prompt costs on its own computers: 0.24 Wh of energy, 0.03 grams of
-CO~2~e, and 0.26 mL of water. CO~2~e is carbon dioxide equivalent, the unit
-that folds every greenhouse gas into one number. Google's blog post described
+CO~2~e, and 0.26 mL of water. A watt-hour (Wh) is what a one-watt LED uses
+in an hour; a kilowatt-hour (kWh) is a thousand of them. CO~2~e is carbon
+dioxide equivalent, the unit that folds every greenhouse gas into one number. Google's blog post described
 the water as "about five drops"
 ([arXiv 2508.15734](https://arxiv.org/abs/2508.15734); Google Cloud blog, 21 August 2025).
 The energy figure is unusually complete. It includes idle machines, the host
@@ -204,8 +206,9 @@ model on the same task
 May 2025).
 
 **Which model, and when.** GPT-3 in 2023 and Gemini in 2025 are not the same
-object. When *MIT Technology Review* had open models measured on the same
-hardware, the smallest Llama 3.1 model used about 114 joules per response
+object. When *MIT Technology Review* had open models (ones anyone can
+download and run) measured on the same hardware, the smallest Llama 3.1
+model used about 114 joules per response
 with overhead, and the largest about 6,706. That is a microwave running for a
 tenth of a second versus eight seconds, a sixtyfold spread from model size
 alone
@@ -260,8 +263,9 @@ Economists call this the Jevons effect, after the observation in 1865 that
 more efficient steam engines led Britain to burn more coal, not less. When a
 unit of something gets cheaper, people use enough more of it that the total
 rises. Per-query efficiency is real, and growth in use is outrunning it. The
-US Department of Energy's national laboratory put data centers at 176 TWh in
-2023, 4.4 percent of US electricity, and projected 6.7 to 12 percent by 2028
+US Department of Energy's national laboratory put data centers at 176
+terawatt-hours (TWh, a billion kilowatt-hours) in 2023, 4.4 percent of US
+electricity, and projected 6.7 to 12 percent by 2028
 ([Berkeley Lab, December 2024](https://newscenter.lbl.gov/2025/01/15/berkeley-lab-report-evaluates-increase-in-electricity-demand-from-data-centers/)).
 The International Energy Agency projects global data-center demand doubling,
 from about 415 TWh in 2024 to about 945 TWh by 2030
@@ -290,13 +294,16 @@ Two-thirds of the data centers built or planned in the United States since
 facility in Newton County, Georgia draws about 500,000 gallons a day, roughly
 a tenth of the county's use
 ([Ceres, *Drained by Data*](https://www.ceres.org/resources/reports/drained-by-data-the-cumulative-impact-of-data-centers-on-regional-water-stress)).
-In South Memphis, an AI company ran dozens of gas turbines to power a cluster
-of computers for training a model, without Clean Air Act permits. The area
-already had an F grade for ozone from the American Lung Association. The
-company was sued by the NAACP and the Southern Environmental Law Center
+In the Memphis area, an AI company ran dozens of gas turbines to power
+clusters of computers for training a model. At its first site, in South
+Memphis, the turbines ran for months before any air permit was issued, in a
+county the American Lung Association had already graded F for ozone. At its
+second site, just across the state line in Southaven, Mississippi, the NAACP
+sued in federal court in 2026 over 27 turbines running without a Clean Air
+Act permit, half a mile from homes and a mile from an elementary school
 ([Earthjustice case page](https://earthjustice.org/case/xai-illegal-gas-power-plant-data-center-colossus)).
 [VERIFY: turbine count and permit status as of the date you read this; the case was active at the time of writing]{.verify}
-The residents of that part of Memphis will present to an emergency
+The residents of those neighborhoods will present to an emergency
 department with asthma exacerbations, and the physician seeing them will
 have no way to link the visit to the turbines. That is environmental exposure
 as a social determinant of health, in exactly the form you were trained to
@@ -304,7 +311,8 @@ recognize and can rarely act on.
 
 One more piece of vocabulary, because it decides what a vendor's number
 means. A company can report the emissions of the electricity it actually
-drew from the local grid. That is called **location-based** accounting. Or it
+drew from the local electricity grid. That is called **location-based**
+accounting. Or it
 can report the emissions left after subtracting renewable power it bought on
 contract somewhere else. That is called **market-based**. Meta's model card,
 the published fact sheet, for its Llama 3.1 models reports training at
@@ -335,8 +343,9 @@ frameworks have treated the environment as a footnote [@pmid:40580996].
 One measured result is worth more than the perspectives for a purchasing
 committee. A radiology group ran five sizes of two open models over 3,665
 chest radiograph reports and metered the electricity. The 7-billion-parameter
-model that had been further trained on radiology reports matched the accuracy
-of a general-purpose model ten times its size. The largest model used more
+model (parameters are a measure of model size) that had been further trained
+for the task matched the accuracy of a general-purpose model ten times its
+size. The largest model used more
 than seven times the energy of its smaller sibling [@pmid:39189909]. The
 lesson is the one @fig-per-query teaches, seen from the buyer's side: which
 model you run is a bigger lever, a bigger place to push on the total, than
@@ -481,9 +490,10 @@ never yours to answer alone.
 
 ### Part C: one question and one rule (5 minutes)
 
-**The vendor question.** Write one question you would put to the scribe
-vendor at the next contract review, one that has a checkable answer. The
-three that matter most. Does the reported footprint use location-based or
+**The vendor question.** Nobody has published a measured figure for an
+ambient scribe. The way to get one is to ask. Write one question you would
+put to the scribe vendor at the next contract review, one that has a
+checkable answer. The three that matter most. Does the reported footprint use location-based or
 market-based accounting? Where is inference physically hosted, and how
 carbon-heavy and water-short is the grid there? (Inference is the running of
 a trained model to answer requests, as opposed to training it.) Does the
