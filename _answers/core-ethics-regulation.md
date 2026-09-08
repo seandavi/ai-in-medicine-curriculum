@@ -21,7 +21,7 @@ that these answers move; re-check before each cohort and update this file.
 
 ## Part B — model answers for Mr. Alvarez
 
-1. **Cell.** B (AI departed from standard; physician followed), by way of the
+1. **Box.** B (AI departed from standard; physician followed), by way of the
    signed plan: "continue apixaban" on a false premise. A defensible
    alternative: "not on the grid; the scribe made no recommendation, and the
    liability is ordinary documentation negligence." Either earns credit if the
@@ -49,8 +49,8 @@ that these answers move; re-check before each cohort and update this file.
 
 ## Standing question — what to look for
 
-Not graded. A passing answer names one part of judgment and one falsifiable
-condition. A slogan ("I will always be the final decision-maker") gets sent
+Not graded. A passing answer names one part of judgment and one condition
+that could prove them wrong. A slogan ("I will always be the final decision-maker") gets sent
 back with: "what would have to be true for you to stop being?" Read six
 aloud in the live session and do not adjudicate.
 
