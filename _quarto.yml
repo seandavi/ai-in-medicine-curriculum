@@ -9,6 +9,10 @@ project:
     - chapters/
     - course/
     - appendix/
+  # Copy every image into _book/images/, including ones only the slide decks
+  # in slides/ use. The decks render into _book/slides/ and link ../images/.
+  resources:
+    - images/
 
 book:
   title: "AI in Medicine"

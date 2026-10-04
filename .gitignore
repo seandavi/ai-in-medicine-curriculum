@@ -3,6 +3,7 @@
 
 # quartobot
 _book/
+slides/_output/
 _freeze/
 .quarto/
 references.resolved.bib

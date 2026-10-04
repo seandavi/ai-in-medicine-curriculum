@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 540" width="1100" height="540" role="img" font-family="Helvetica, Arial, sans-serif">
+<title>Words used in similar sentences get similar numbers</title>
+<desc>Illustrative scatter of words placed by hand. Four antibiotics, vancomycin, linezolid, daptomycin and cefazolin, sit together at upper left. Three loop diuretics sit together at upper right. Three days of the week sit together at the bottom, far from both drug groups.</desc>
+<defs><marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2933"/></marker><marker id="head-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5f6b7a"/></marker></defs>
+<rect x="0" y="0" width="1100" height="540" rx="14" fill="#ffffff"/>
+<rect x="40" y="40" width="1020" height="420" rx="10" fill="#f7f9fb" stroke="#d9dee5" stroke-width="2"/>
+<text x="1040" y="78" font-size="20" fill="#5f6b7a" text-anchor="end" font-weight="normal">Illustrative: placed by hand, not computed</text>
+<circle cx="250" cy="170" r="11" fill="#1f5fa8"/>
+<text x="268" y="178" font-size="24" fill="#1f5fa8" text-anchor="start" font-weight="bold">vancomycin</text>
+<circle cx="330" cy="230" r="11" fill="#1f5fa8"/>
+<text x="348" y="238" font-size="24" fill="#1f5fa8" text-anchor="start" font-weight="bold">linezolid</text>
+<circle cx="205" cy="260" r="11" fill="#1f5fa8"/>
+<text x="223" y="268" font-size="24" fill="#1f5fa8" text-anchor="start" font-weight="bold">daptomycin</text>
+<circle cx="320" cy="125" r="11" fill="#1f5fa8"/>
+<text x="338" y="133" font-size="24" fill="#1f5fa8" text-anchor="start" font-weight="bold">cefazolin</text>
+<circle cx="740" cy="150" r="11" fill="#c45a00"/>
+<text x="758" y="158" font-size="24" fill="#c45a00" text-anchor="start" font-weight="bold">furosemide</text>
+<circle cx="820" cy="210" r="11" fill="#c45a00"/>
+<text x="838" y="218" font-size="24" fill="#c45a00" text-anchor="start" font-weight="bold">bumetanide</text>
+<circle cx="715" cy="250" r="11" fill="#c45a00"/>
+<text x="733" y="258" font-size="24" fill="#c45a00" text-anchor="start" font-weight="bold">torsemide</text>
+<circle cx="560" cy="370" r="11" fill="#2e7d4f"/>
+<text x="578" y="378" font-size="24" fill="#2e7d4f" text-anchor="start" font-weight="bold">Tuesday</text>
+<circle cx="460" cy="405" r="11" fill="#2e7d4f"/>
+<text x="478" y="413" font-size="24" fill="#2e7d4f" text-anchor="start" font-weight="bold">Monday</text>
+<circle cx="640" cy="420" r="11" fill="#2e7d4f"/>
+<text x="658" y="428" font-size="24" fill="#2e7d4f" text-anchor="start" font-weight="bold">Friday</text>
+<circle cx="70" cy="502" r="10" fill="#1f5fa8"/>
+<text x="88" y="510" font-size="21" fill="#1f2933" text-anchor="start" font-weight="normal">Antibiotics</text>
+<circle cx="292" cy="502" r="10" fill="#c45a00"/>
+<text x="310" y="510" font-size="21" fill="#1f2933" text-anchor="start" font-weight="normal">Loop diuretics</text>
+<circle cx="550" cy="502" r="10" fill="#2e7d4f"/>
+<text x="568" y="510" font-size="21" fill="#1f2933" text-anchor="start" font-weight="normal">Days of the week</text>
+</svg>

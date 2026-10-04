@@ -41,6 +41,11 @@ jobs:
       - name: Render the book
         run: quarto render
 
+      # After the book: a full book render clears _book/, and the decks need
+      # the references.resolved.bib the book's pre-render writes.
+      - name: Render the slide decks into _book/slides/
+        run: quarto render slides
+
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v4
         with:

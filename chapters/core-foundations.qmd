@@ -28,6 +28,8 @@ doing, and 6 minutes for the check and the closing question. No math and no
 coding are assumed. The only equation in the chapter is one you already use.
 You need a browser and your institutional ChatGPT Edu or Microsoft Copilot
 account, or whatever assistant your school provides. Nothing installs, and nothing asks you for a phone number.
+The live session uses a [slide deck](../slides/core-foundations.html) with the
+same material, and some of the figures there are interactive.
 
 ## The number nobody measured
 
