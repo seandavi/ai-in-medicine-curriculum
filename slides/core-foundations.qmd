@@ -179,14 +179,14 @@ The next fifteen minutes give you five words and two questions. They will sort e
 
 ![Redrawn from the description of the CKD-EPI 2021 development [@pmid:34554658].](../images/egfr-bridge.svg){.card fig-alt="Diagram. Age, sex, and creatinine, the three things the lab has, feed an equation learned from 8,254 people whose GFR was measured. The equation outputs the eGFR on your panel, which stands in for measured GFR, rarely done in routine care. A grey box, muscle mass, diet, and drugs that block secretion, changes creatinine without changing GFR." height="400"}
 
-[A **proxy** is a number you measure because the real one cannot be measured. Here the eGFR is a proxy for measured GFR.]{.defn}
+[A **proxy** is a number you use in place of the one you want, because the one you want is hard to get. Here the eGFR, calculated from three lab values, stands in for measured GFR.]{.defn}
 
 ::: notes
 Here is what the equation connects. On the left is what the lab can measure: creatinine, age, and sex. On the right is what you actually want to know: the measured GFR, which is rarely done in routine care. The equation joins the two, and it was built from eight thousand two hundred fifty-four specific people.
 
 Look at the grey box at the bottom. Muscle mass, diet, and some drugs change creatinine without changing GFR. Anything in that box changes the result, and the equation cannot tell.
 
-A number you measure because the real thing cannot be measured is called a proxy. One of this course's recurring lessons is that proxies fail: the stand-in and the real thing can come apart, and they come apart for some patients more than for others.
+A number you use in place of the one you want, because the one you want is hard to get, is called a proxy. Here the eGFR, calculated from three lab values, stands in for the measured GFR. One of this course's recurring lessons is that proxies fail: the stand-in and the real thing can come apart, and they come apart for some patients more than for others.
 :::
 
 ## Five words for the rest of the course {.smaller}
@@ -215,7 +215,7 @@ The letter f stands for function, which just means a rule that turns inputs into
 
 | Equation | Learned from | Where it failed, and for whom |
 |---|---|---|
-| MDRD, 1999 | 1,628 patients who already had kidney disease | Values too low at higher GFR, so healthy people were labelled as diseased [@pmid:10075613; @pmid:19414839] |
+| MDRD, 1999 | 1,070 patients who already had kidney disease (558 more held back to test it) | Values too low at higher GFR, so healthy people were labelled as diseased [@pmid:10075613; @pmid:19414839] |
 | CKD-EPI, 2009 | 8,254 people in 10 studies | Included a race term. Even with it, the equation overestimated measured GFR in Black adults (median 3.7 mL/min/1.73 m²). An overestimate makes kidney disease look milder than it is [@pmid:34554658] |
 | CKD-EPI, 2021 | the same 8,254, refit without race | Now a few mL/min too low in Black adults and too high in others. A version that adds cystatin C, a second blood marker that does not depend on muscle, is more accurate [@pmid:34554658; @pmid:34563581] |
 
@@ -228,7 +228,7 @@ The training population is part of the model,<br>as much as the equation is.
 ::: notes
 Here is the history of one equation, rebuilt from the numbers in the papers. Read the last column as a pattern, not as nephrology.
 
-MDRD was fit to people who already had kidney disease. In healthy people it gave values that were too low, and healthy people were labelled as diseased. The 2009 equation was more accurate at higher GFR, and it included a term that adjusted the result for Black race. Even with that term, the 2021 study found it overestimated measured GFR in Black adults. An overestimate makes kidney disease look milder than it is. The 2021 refit removed race, and it is still a few points off in both directions. A version that adds cystatin C, a second blood marker that does not depend on muscle, is more accurate.
+MDRD was fit to one thousand and seventy people who already had kidney disease, and tested on five hundred fifty-eight more. In healthy people it gave values that were too low, and healthy people were labelled as diseased. The 2009 equation was more accurate at higher GFR, and it included a term that adjusted the result for Black race. Even with that term, the 2021 study found it overestimated measured GFR in Black adults. An overestimate makes kidney disease look milder than it is. The 2021 refit removed race, and it is still a few points off in both directions. A version that adds cystatin C, a second blood marker that does not depend on muscle, is more accurate.
 
 Every row says the same thing. The model was fit to these people, and here is what happened to people unlike them. The training population is part of the model, as much as the equation is. Why the race term was there, and who was harmed by it, is the subject of the bias and equity session later in the course.
 
@@ -252,7 +252,7 @@ The eGFR, a sepsis alert in the EHR, and a chatbot differ only in what goes in t
 | Question | If yes | If no |
 |---|---|---|
 | Does the training data contain the answer? | **Supervised** | **Unsupervised** |
-| Does the model give a category? | **Classification** | **Regression** (a number) |
+| If supervised: does the model give a category? | **Classification** | **Regression** (a number) |
 
 ::: fragment
 A regression is wrong **by an amount**. A classification is wrong **by a kind**: a miss or a false alarm. A miss costs the patient who was missed. A false alarm costs the staff who answer it, and the patient worked up for nothing.
@@ -263,7 +263,7 @@ Two questions sort any model in about ten seconds.
 
 First: does the training data contain the answer? For the eGFR, yes. Someone measured every one of those GFRs. That is supervised learning. If there is no answer column, only patterns to find, it is unsupervised learning.
 
-Second: does the model give a category or a number? The eGFR gives a number, so it is a regression. A model that says chronic kidney disease yes or no would be a classification.
+Second, and only for a supervised model: does it give a category or a number? The eGFR gives a number, so it is a regression. A model that says chronic kidney disease yes or no would be a classification. An unsupervised tool that sorts cases into groups is not a classification, because nobody told it what the groups were.
 
 The difference matters for how you judge it. A regression is wrong by an amount. A classification is wrong by a kind, a miss or a false alarm. A miss costs the patient who was missed. A false alarm costs the staff who answer it, and the patient who is worked up for nothing.
 :::
@@ -500,10 +500,10 @@ A vendor sepsis model, in use at hundreds of US hospitals in 2021, was tested at
 :::
 ::::
 
-[A test by people who did not build the model is called **external validation**. **No alert does not mean no sepsis.**]{.defn}
+[A test on patients from a different setting than the ones the model was built on is called **external validation**. **No alert does not mean no sepsis.**]{.defn}
 
 ::: notes
-The clinical version of the same problem. One EHR vendor's sepsis model, the Epic Sepsis Model, was in use at hundreds of US hospitals in 2021. One academic center tested it on thirty-eight thousand four hundred fifty-five of its own hospitalizations, from 2018 and 2019. The testers had no part in building the model, and that kind of test is called external validation.
+The clinical version of the same problem. One EHR vendor's sepsis model, the Epic Sepsis Model, was in use at hundreds of US hospitals in 2021. One academic center tested it on thirty-eight thousand four hundred fifty-five of its own hospitalizations, from 2018 and 2019. A test on patients from a different setting than the ones the model was built on is called external validation. Here the testers were also independent of the vendor.
 
 About seven in a hundred admissions had sepsis. The area under the curve was zero point six three, on a scale where zero point five is no better than chance. Of every hundred patients who had sepsis, the model missed sixty-seven. And it alerted on eighteen of every hundred admissions. Since only seven in a hundred had sepsis, most alerts were for patients who did not.
 
@@ -515,7 +515,7 @@ For the wards: no alert does not mean no sepsis. And if you silence an alert, yo
 ## The published number is the optimistic one
 
 ::: {.statement}
-A model's performance on the population it was built from is the **optimistic number**.
+A model's performance on the cases it was built from is **usually the optimistic number**.
 :::
 
 ::: {.fragment .statement}
@@ -525,7 +525,7 @@ Ask what it was *trained on*.<br>Ask what it was *tested on*, and by whom.<br>If
 ::: notes
 That gives you another of the course's recurring lessons: the published number is the optimistic one.
 
-A model's performance on the population it was built from is the best it will ever look. So ask three things of any model. What was it trained on? What was it tested on, and by whom? If the answer to the first two is the same set of people, you have not learned anything yet.
+A model's performance on the cases it was built from is usually the best it will look. On new patients, especially from another hospital, it is usually lower. So ask three things of any model. What was it trained on? What was it tested on, and by whom? If the cases it was tested on are the cases it was trained on, you have not learned anything yet.
 :::
 
 # From tables to words {background-color="#1d2733"}
@@ -895,7 +895,7 @@ The sizes here are made up. Real windows are larger, and the figures change with
 
 ![Redrawn from the appendix table for 20 documents in @doi:10.1162/tacl_a_00638.](../images/lost-in-the-middle-liu-2024.svg){.card fig-alt="Line chart. GPT-3.5-Turbo answered questions from 20 documents, one of which held the answer. Accuracy was 75.8% with the answer first, 57.2% at position 5, 53.8% at position 10, 55.4% at position 15, and 63.2% last. A dashed line at 56.1% shows the same model with no documents at all." height="390"}
 
-With the answer in the middle, the model did about as well as it did **with no documents at all**. Long inputs bring a related problem: a 2025 test of 13 newer models found 11 of them scoring less than half as well at 32,000 tokens as on short inputs [@arxiv:2502.05167].
+With the answer in the middle, the model did about as well as it did **with no documents at all**. Long inputs bring a related problem. A 2025 test covered 13 newer models. At 32,000 tokens, 11 of them scored less than half as well as on short inputs [@doi:10.48550/arXiv.2502.05167].
 
 [**Attention** here means how much weight the model gives each part of what it reads.]{.defn}
 
