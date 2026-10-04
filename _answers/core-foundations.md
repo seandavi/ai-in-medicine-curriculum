@@ -29,12 +29,14 @@ the attending that 57 is probably an overestimate.
 with 20% of the dots used for training and a fixed seed. Measured in a
 headless browser on 2026-10-03, at about 500 epochs: step 1 (one layer of two,
 X₁ and X₂) training loss about 0.45, test about 0.49, a near-straight boundary
-through the spiral; step 2 (two layers of six) about 0.09 and 0.27; step 3
+through the spiral; step 2 (two layers of six, with sin(X₁) and sin(X₂) added)
+about 0.09 and 0.27; step 3
 (six layers of eight, all features) about 0.10 and 0.55, with the boundary
-wrapping individual dots. Third sentence: training loss alone makes step 3 look
-as good as step 2, but its test loss is the worst of the three; a student shown
-only training loss would have picked it, or rated it as good as the best, and
-been wrong. If a group lets step 3 run past about 1,500 epochs its test loss
+wrapping individual dots. Third sentence: on training loss alone, steps 2 and 3
+look about the same (0.09 against 0.10, close enough that either can come out
+ahead depending on when the student pauses); test loss shows step 3 is the
+worst of the three. So training loss alone could not have told the student
+which network to trust. If a group lets step 3 run past about 1,500 epochs its test loss
 falls again; that is a good discussion point (the number depends on when you
 stop), not a wrong result. The transfer: a vendor number with no test set is
 that training loss.

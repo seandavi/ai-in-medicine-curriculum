@@ -1,6 +1,6 @@
 ---
 title: "How these systems work: from the eGFR on a chemistry panel to the next word"
-subtitle: "AIM-1 · AIM-2 · about 75 minutes"
+subtitle: "AIM-1 · AIM-2 · about 80 minutes"
 ---
 
 ::: {.callout-note title="What you'll learn"}
@@ -121,8 +121,8 @@ they are, named:
 on the right. The thing the lab can measure is on the left. The equation is
 the bridge, and the bridge was built from a specific set of people.
 
-A stand-in like this, a number you use in place of the one you want because
-the one you want is hard to get, is called a **proxy**. The first of the course's three recurring
+A number used in place of the one you want, because that one is hard to get,
+is called a **proxy**. The first of the course's three recurring
 lessons is **proxies fail**: the stand-in and the real thing can come apart,
 and they come apart for some patients more than for others. [The bias and
 equity chapter](core-bias-equity.qmd) depends on that lesson. This chapter's
@@ -260,7 +260,7 @@ the model meets in real use differ from the patients in its training set, so
 performance measured during development does not hold [@pmid:34260843].
 Here is an example. One EHR vendor built a sepsis model that runs in hundreds
 of US hospitals. One academic center tested it on its own 38,455
-hospitalizations, patients from a setting the model was not built on. A test
+hospitalizations, in a setting the model was not built on. A test
 like that is called *external validation*; here the testers also had no part
 in building the model. The model had an area under the
 curve of 0.63, on a scale where 0.5 is no better than chance and 1.0 is perfect. It
@@ -456,7 +456,8 @@ pair of numbers is the point of the exercise. If the site is down, the deep
 learning deck under Go deeper has screenshots of a spiral fit. Read those and
 write the three sentences from them.
 
-All three steps use the same data: a noisy spiral, with only one dot in five
+All three steps use the same data: a noisy spiral (the dots have random
+scatter added), with only one dot in five
 used for training. Each link opens the site already set up. "Hidden layer" and
 "neuron" are the site's words for the middle stage of the network and the
 units inside it; "features" are its predictors. Do not press the regenerate
@@ -469,8 +470,8 @@ button, because that changes the data.
    through the data. Write down both losses and what the picture looks like.
 2. **In between.** Open
    [step 2](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=6,6&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=true&cosY=false&sinY=true&collectStats=false&problem=classification&initZero=false&hideText=false):
-   two layers of six neurons. Run it to about 500 epochs and write down both
-   losses.
+   two layers of six neurons, with `sin(X₁)` and `sin(X₂)` added to `X₁` and
+   `X₂`. Run it to about 500 epochs and write down both losses.
 3. **Too flexible.** Open
    [step 3](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=8,8,8,8,8,8&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=true&xSquared=true&ySquared=true&cosX=false&sinX=true&cosY=false&sinY=true&collectStats=false&problem=classification&initZero=false&hideText=false):
    six layers of eight neurons and all the features. Run it to about 500
@@ -486,8 +487,8 @@ ______________________________________________________________
 Which was too flexible, and how could you tell?
 ______________________________________________________________
 
-If you had only ever been shown the training loss, which network
-would you have picked, and would you have been right?
+If you had only ever been shown the training loss, how would steps 2
+and 3 have compared, and what did the test loss show?
 ______________________________________________________________
 ```
 
@@ -536,8 +537,8 @@ yours did, ask a second question in the same conversation:
 
 Open each PMID in PubMed and read the title. A wrong PMID usually opens a real
 paper about something else, so a link that works proves nothing. When the
-course tested four models with this question on 3 October 2026, every one of
-them gave at least one wrong PMID.
+course tested four models with this question on 3 October 2026, with web
+search off, every one of them gave at least one wrong PMID.
 
 Record:
 
@@ -551,6 +552,10 @@ Point values and cutoffs: all correct / one wrong / more than one wrong
 Original publication as given by the model:
   ____________________________________________________________
   Matches the verified original?  Y / N / partly (which fields differ)
+
+Second question, if you asked it:
+  PMIDs whose title matched the paper described: ___ of 5
+  What the wrong ones opened: ________________________________
 
 How the model produced this, in one sentence, using the words "token"
 or "plausible continuation" and not the word "hallucinate":
@@ -594,7 +599,7 @@ top.
 |---|---|---|
 | Name the eGFR model's predictors, response, and training population (objective 1) | Creatinine, age, sex; measured GFR; 8,254 research participants in 10 studies, and you can say why the last one matters for the patient in the clinic | "Creatinine and stuff" or a training population you cannot describe |
 | Sort four models with the two questions in @tbl-two-questions (objective 2): the eGFR; an EHR sepsis alert; a tool that groups tumor expression profiles with no diagnoses attached; a chatbot predicting the next token | Supervised regression; supervised classification; unsupervised; supervised (the next word is the label), and you can say why the last one needs no human labeler | Any row you had to guess |
-| Explain the three sentences from Part A (objective 3) | The third sentence says that at about 500 epochs, training loss alone would have made the over-fit network look as good as the best one, while its test loss was the worst, and that this is why a performance figure with no test set is not yet a number | The first two sentences only, or a third sentence that restates the training loss |
+| Explain the three sentences from Part A (objective 3) | The third sentence says that at about 500 epochs, training loss made steps 2 and 3 look about the same, while test loss showed step 3 was the worst, and that this is why a performance figure with no test set is not yet a number | The first two sentences only, or a third sentence that restates the training loss |
 | Give the one-sentence explanation from Part B (objective 4) | One sentence about plausible next tokens, no "hallucinate", and it explains why the tone did not change when the answer was wrong | "It hallucinated" or "it made a mistake" |
 | State the two window rules from Part C (objective 5) | One rule follows from the shared budget, one from the middle getting less attention, and each says what you will actually do differently at the keyboard | Rules that do not name a limit, or that you could have written before reading the chapter |
 
