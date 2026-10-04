@@ -465,21 +465,21 @@ ____________________________________________________________
 Which was too flexible, and how could you tell?
 ____________________________________________________________
 
-If you had only ever been shown the training loss, which network
-would you have picked, and would you have been right?
+If you had only ever been shown the training loss, how would steps 2
+and 3 have compared, and what did the test loss show?
 ____________________________________________________________
 ```
 
 ::: fragment
-**You have it if** your third sentence says this: at about 500 epochs, training loss makes step 3 look as good as step 2, but on new dots it is the worst of the three. You will ask the same question of **every performance figure on every vendor slide**.
+**You have it if** your third sentence says this: at about 500 epochs, training loss makes steps 2 and 3 look about the same, but on new dots step 3 is the worst of the three. You will ask the same question of **every performance figure on every vendor slide**.
 :::
 
 ::: notes
-When you have run all three steps, write three sentences. Which network was too simple, and how could you tell? Which was too flexible, and how could you tell? And if you had only ever been shown the training loss, which network would you have picked, and would you have been right?
+When you have run all three steps, write three sentences. Which network was too simple, and how could you tell? Which was too flexible, and how could you tell? And if you had only ever been shown the training loss, how would steps two and three have compared, and what did the test loss show?
 
 PAUSE: 3 min. Pause here and write them.
 
-You have it if your third sentence says this. At about five hundred epochs, training loss makes step three look about as good as step two. But on new dots it is the worst of the three. Keep these sentences. It is the same question you will ask of every performance figure on every vendor slide for the rest of your career.
+You have it if your third sentence says this. At about five hundred epochs, training loss makes steps two and three look about the same. But on new dots, step three is the worst of the three. So training loss alone could not tell you which network to trust. Keep these sentences. It is the same question you will ask of every performance figure on every vendor slide for the rest of your career.
 
 LIVE: Each group puts its three sentences on the class's shared slide, or in the Zoom chat if there is none.
 :::
@@ -1047,7 +1047,7 @@ LIVE: Each group posts one checked error and its one-sentence explanation to the
 |---|---|
 | Name the eGFR's predictors, response, and training population | Creatinine, age, sex; measured GFR; 8,254 research participants in 10 studies, and you can say why that matters for her |
 | Sort the four models with the two questions | Supervised regression; supervised classification; unsupervised; supervised (the next word is the label) |
-| Explain your third Playground sentence | At about 500 epochs, training loss made the over-fit network look good; test loss showed it was the worst |
+| Explain your third Playground sentence | At about 500 epochs, training loss made steps 2 and 3 look about the same; test loss showed step 3 was the worst |
 | Explain the error you found | One sentence about plausible next tokens, without "hallucinate", that says why the tone did not change |
 | State your two rules for the keyboard | One follows from the fixed size, one from the middle getting less attention, and each says what you will do differently |
 
@@ -1056,7 +1056,7 @@ LIVE: Each group posts one checked error and its one-sentence explanation to the
 ::: notes
 Score yourself before moving on. Each row matches one of the five things you set out to be able to do.
 
-Can you name the eGFR's predictors, response, and training population, and say why the last one matters for her? Can you sort the four models? Does your third Playground sentence say that training loss alone made the over-fit network look good? Does your one-sentence explanation talk about plausible next tokens, without the word hallucinate? And do your two keyboard rules each follow from one limit of the context window?
+Can you name the eGFR's predictors, response, and training population, and say why the last one matters for her? Can you sort the four models? Does your third Playground sentence say that training loss made steps two and three look about the same, while test loss showed step three was the worst? Does your one-sentence explanation talk about plausible next tokens, without the word hallucinate? And do your two keyboard rules each follow from one limit of the context window?
 
 PAUSE: 3 min. Pause here and check yourself against the table. The chapter has the same table with what falling short looks like.
 
