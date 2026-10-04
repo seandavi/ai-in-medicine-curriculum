@@ -1,7 +1,7 @@
 ---
 title: "How these systems work"
 subtitle: "From the eGFR on a chemistry panel to the next word"
-author: "AI in Medicine · Week 1 · AIM-1 and AIM-2 · 75 minutes live, about 90 minutes on your own"
+author: "AI in Medicine · Week 1 · AIM-1 and AIM-2 · 75 minutes live, about 95 minutes on your own"
 footer: "[The chapter for this session](../chapters/core-foundations.html) · AI in Medicine"
 ---
 
@@ -14,13 +14,13 @@ footer: "[The chapter for this session](../chapters/core-foundations.html) · AI
 Rule 2 follows from how these systems are built, and today you will see why. Rule 1 follows from who receives what you type.
 
 ::: notes
-Welcome. This session takes about seventy-five minutes live, or about ninety on your own with the pauses. You will do two short exercises in a browser, and nothing needs installing.
+Welcome. This session takes about seventy-five minutes live, or about ninety-five on your own with the pauses. You will do two short exercises in a browser, and nothing needs installing.
 
 Three rules apply in every session of this course. No patient information goes into any chatbot, including the one your school gives you, unless your hospital's privacy office has approved that tool in writing. A claim you have not checked is not a fact yet. And you sign the note, whatever helped you write it.
 
 The second rule follows from how these systems are built, and by the end of today you should be able to say why in one sentence. The first rule follows from something simpler: whoever runs the tool receives what you type.
 
-LIVE: Run sheet, with minutes per block. A week before: tell students to set up a chatbot account (slide 3). Before class: create the slide 6 question as an anonymous Zoom poll, and make the class's shared page (a slide or document anyone with the link can edit) with two headings per group: "our three sentences" and "our checked error, with its one-sentence explanation". If you have none, groups paste into the Zoom chat. 0 to 8 (8 min): slides 1 to 8, with the poll. 8 to 22 (14 min): slides 9 to 19; keep slide 17 to two minutes. 22 to 42 (20 min): breakout 1. Before opening rooms, paste into the chat the three links on slide 18, the three questions and the "You have it if" line on slide 20, and the shared-page link. When rooms close, show slide 20 for one minute. 42 to 54 (12 min): slides 21 to 37; skip 26, 28 and 34; give slide 29 one sentence; demonstrate the tokenizer, the sampler and the window sliders yourself rather than waiting for everyone, about 45 seconds each. 54 to 68 (14 min): breakout 2; paste prompt A, the template on slide 42, and the shared-page link into the chat first. 68 to 75 (7 min): slides 44 to 47; two groups report, ninety seconds each; read slide 46 in one minute. Slides 43 and 48 to 50 are for students afterwards.
+LIVE: Run sheet, with minutes per block. A week before: tell students to set up a chatbot account (slide 3). Before class: create the slide 6 question as an anonymous Zoom poll, and make the class's shared page (a slide or document anyone with the link can edit) with two headings per group: "our three sentences" and "our checked error, with its one-sentence explanation". If you have none, groups paste into the Zoom chat. 0 to 8 (8 min): slides 1 to 8, with the poll. 8 to 22 (14 min): slides 9 to 19; keep slide 17 to two minutes. 22 to 42 (20 min): breakout 1. Before opening rooms, paste into the chat the three links on slide 18, the three questions and the "You have it if" line on slide 20, and the shared-page link. When rooms close, show slide 20 for one minute. 42 to 54 (12 min): slides 21 to 37; skip 26, 28 and 34; give slide 29 one sentence; demonstrate the tokenizer, the sampler and the window sliders yourself rather than waiting for everyone, about 45 seconds each. 54 to 68 (14 min): breakout 2; paste prompts A and B, the template on slide 42, and the shared-page link into the chat first. 68 to 75 (7 min): slides 44 to 47; two groups report, ninety seconds each; read slide 46 in one minute. Slides 43 and 48 to 50 are for students afterwards.
 
 LIVE: Turn on Zoom live captions and paste the deck link into the chat at the start. Paragraphs in these notes that start with PAUSE are for the recorded version; skip them live. ChatGPT Edu and Microsoft Copilot are this course's institutional tools; swap in your school's. Click outside a slider or text box before using the arrow keys.
 :::
@@ -984,22 +984,22 @@ If you pick HEART, you already know the answer to the citation part, so pick som
 
 **Check:** every value on **[MDCalc](https://www.mdcalc.com)**; the publication in **[PubMed](https://pubmed.ncbi.nlm.nih.gov)**, not Google Scholar.
 
-**If you have time:** (B) ask for five references, with PubMed IDs, that support `<a claim from the score's original paper>`, and check each in PubMed; or run A again with web search switched on (often a *Search* or *Web* button near the message box) and compare.
+**If A came back all correct:** (B) ask for five references, with PubMed IDs, that support `<a claim from the score's original paper>`. Open each PMID in PubMed and **read the title**: a wrong PMID usually opens a real, unrelated paper. Large current models usually get A right on these famous scores; B is where they slip. **If you have time:** run A again with web search switched on (often a *Search* or *Web* button near the message box) and compare.
 
-[Live: 14 min in groups. On your own: about 10 min for A, up to 20 with the extras. For a guideline such as Fleischner, ask for the size thresholds and follow-up intervals instead of "the outcome each cutoff was validated against". Wording changes answers: if yours differs from a classmate's, that is expected.]{.src}
+[Live: 14 min in groups. On your own: about 10 min for A, about 10 more for B. For a guideline such as Fleischner, ask for the size thresholds and follow-up intervals instead of "the outcome each cutoff was validated against". Wording changes answers: if yours differs from a classmate's, that is expected.]{.src}
 
 ::: notes
 Open your chatbot in a fresh conversation, with the New chat button, and copy prompt A exactly, with your score in place of the brackets. Prompt A is the required part. For a guideline such as Fleischner, ask for the size thresholds and follow-up intervals instead.
 
 Then check. Compare every point value and cutoff with MDCalc. Look up the publication in PubMed, not Google Scholar. Scholar's loose matching will show you a different, real paper for a citation that does not exist, and you will mark it as found.
 
-If you have time, there are two extras. Prompt B asks for five references, with PubMed IDs, and you check each one in PubMed. Or run prompt A again with web search switched on, and compare. That is how you find out what the search step adds.
+If prompt A comes back all correct, go on to prompt B. It asks for five references, with PubMed IDs. Open each PMID in PubMed and read the title. A wrong PMID usually opens a real paper about something else, so a link that works proves nothing. Large current models usually get prompt A right on scores this famous. Prompt B is where they slip. If you still have time, run prompt A again with web search switched on, and compare. That is how you find out what the search step adds.
 
 Wording changes answers, so if yours differs from a classmate's, that is expected.
 
-PAUSE: 10 min. Pause the recording here and do the exercise.
+PAUSE: 15 min. Pause the recording here and do the exercise: prompt A, then prompt B if A was all correct.
 
-LIVE: Same breakout groups, fourteen minutes. Paste both prompts and the record template from the next slide into the chat before opening the rooms. Run the prompt yourself on two scores the morning of the session, so you know what students will see. The most common error is a later validation paper named as the original.
+LIVE: Same breakout groups, fourteen minutes. Paste prompts A and B and the record template from the next slide into the chat before opening the rooms. Run both prompts yourself the morning of the session, so you know what students will see. In a test on 3 October 2026 with search off, one run each, GPT-5.4 and Claude named the right original paper for all six scores tried. Gemini 2.5 Flash and GPT-4o-mini made up citations, often with the volume and pages of an unrelated real paper, or named a later or earlier paper as the original. On prompt B, GPT-5.4 gave 9 of 10 correct PMIDs, Claude Sonnet 5 gave 5 of 10, and Gemini 2.5 Flash gave 0 of 10: the wrong ones were real PMIDs for unrelated papers. Details are in research/foundations-chatbot-test-2026-10-03.md.
 :::
 
 ## Record it {.smaller}

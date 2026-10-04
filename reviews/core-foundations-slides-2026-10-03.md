@@ -71,8 +71,16 @@ epochs. Round 3 found no blocker or major.
   the deck or its figures. Choosing one is the author's decision.
 - *Open.* Live timing is about 3 to 4 minutes over 75 by Jordan's estimate,
   with the module's 20- and 14-minute breakouts. Not timed with a presenter.
-- *Open.* Nobody has run the chatbot prompts on a current paid model, so
-  whether prompt A fails on the listed scores is untested.
+- *Tested after round 3.* The chatbot prompts were run once each on four
+  models with search off (`research/foundations-chatbot-test-2026-10-03.md`).
+  Large current models got prompt A right on the famous scores; prompt B
+  produced wrong PMIDs from all four models, from 1 in 10 (GPT-5.4) to all of
+  them (Gemini 2.5 Flash). The deck now sends students who get A right on to
+  B, and tells them to read the title of each PMID.
+- *Open.* The chapter's Part B uses prompt A only. By this test, a student
+  using a large current model will often get it right and have no error to
+  explain. The chapter already covers that case; adding prompt B would make an
+  error more likely. The chapter was not changed here.
 - *Open.* The chapter's own Playground exercise (Part A) uses noise 0 and the
   default 50% training split. The reviewers found that setup shows little
   overfitting; the deck's presets do. The chapter was not changed here.
