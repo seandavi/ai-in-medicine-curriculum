@@ -57,7 +57,7 @@ year, (c) outcome percentages from a different cohort attached to the original.
 All three are "partly matches" and are the intended specimen.
 
 A 2026-10-03 run with search off, one run per prompt (research note
-`foundations-chatbot-test-2026-10-03.md`, in the slides pull request): GPT-5.4
+`research/foundations-chatbot-test-2026-10-03.md`): GPT-5.4
 and Claude named the correct original for all six scores tried, so a student
 on a large current model will often get the first question right. The second
 question (five references with PMIDs) then usually produces an error: correct
