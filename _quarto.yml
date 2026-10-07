@@ -45,6 +45,7 @@ book:
         - chapters/enrichment-rag-notebooklm.qmd
   appendices:
     - appendix/open-labs.qmd
+    - appendix/resources.qmd
     - appendix/about.qmd
     - appendix/personas.qmd
     - appendix/ai-ledger.qmd

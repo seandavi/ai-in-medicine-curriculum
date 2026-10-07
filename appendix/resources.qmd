@@ -1,0 +1,234 @@
+---
+title: "Starter resources"
+---
+
+Students in the 2024 and 2025 offerings of this course added more than 600
+resources to the [weekly resource log](../course/resource-log.qmd). This page
+lists about thirty of them, picked because they are clear, recent, or from a
+primary source. Use them to get started, then find your own.
+
+Some journal articles need your library sign-in. Where a free full text exists
+on PubMed Central, the entry says so.
+
+## How these systems work
+
+- **But what is a neural network?** (3Blue1Brown, 2017; video; 19 min). A
+  visual, step-by-step explanation of how a neural network turns numbers into
+  a prediction, with no math beyond high school.
+  <https://youtu.be/aircAruvnKk>
+- **The Basics of Machine Learning** (NEJM Evidence, 2022; editorial). A short
+  explanation of machine learning built around one clinical example: dating a
+  pregnancy with a low-cost ultrasound device. [@pmid:38319201]
+- **Benefits, Limits, and Risks of GPT-4 as an AI Chatbot for Medicine**
+  (NEJM, 2023; special report). Worked examples of a chatbot answering clinical
+  questions, including the mistakes it made, written as these tools first
+  reached clinicians. [@pmid:36988602]
+- **Large language models encode clinical knowledge** (Nature, 2023; research
+  article). The Med-PaLM study shows how chatbots are tested on exam-style
+  questions, and why doctors' ratings found gaps the exam scores hid. Free full
+  text on PubMed Central. [@pmid:37438534]
+- **Can AI catch what doctors miss?** (TED, 2023; talk; 14 min). A
+  cardiologist's tour of what AI can find in medical images and records,
+  useful as an optimistic view to test against the appraisal readings below.
+  <https://www.ted.com/talks/eric_topol_can_ai_catch_what_doctors_miss>
+
+## Working alongside AI
+
+- **Compared with What? Measuring AI against the Health Care We Have** (NEJM,
+  2024; perspective). Argues that AI should be judged against the care
+  patients actually get today, not against an ideal doctor. [@pmid:39465890]
+- **Large Language Models and the Degradation of the Medical Record** (NEJM,
+  2024; perspective). Explains how notes drafted by AI could make the chart
+  longer and less trustworthy, and what that means for the next reader.
+  [@pmid:39465898]
+- **Artificial intelligence and illusions of understanding in scientific
+  research** (Nature, 2024; perspective). Describes how relying on AI tools
+  can make people believe they understand more than they do. The setting is
+  research, but the warning applies at the bedside. [@pmid:38448693]
+- **AI in Medicine: Pitfalls and Potential** (Stanford Medicine, 2024; talk;
+  12 min). A short conference talk on where clinical AI helps and where it
+  goes wrong. <https://youtu.be/gF5QPYP6KIM>
+
+## Appraisal and evidence
+
+- **The testing of AI in medicine is a mess. Here's how it should be done**
+  (Nature, 2024; news feature). A readable account of why most medical AI
+  tools reach patients without strong clinical trials. [@pmid:39169244]
+- **Why we should not mistake accuracy of medical AI for efficiency** (npj
+  Digital Medicine, 2024; comment). Shows that an accurate tool can still add
+  work for staff, so "accurate" and "saves time" are separate claims to check.
+  Free full text on PubMed Central. [@pmid:38438477]
+- **Generative AI in Medicine: Evaluating Progress and Challenges** (NEJM,
+  2025; special report). Sets out what good evidence for a generative AI tool
+  would look like, from a group that includes health system, industry, and
+  academic authors. [@pmid:40208922]
+- **Randomized Trial of a Generative AI Chatbot for Mental Health Treatment**
+  (NEJM AI, 2025; randomized trial). One of the first randomized trials of a
+  chatbot used as treatment. Read it to practise appraising the design, not
+  only the result. [@doi:10.1056/AIoa2400802]
+- **AI, Health, and Health Care Today and Tomorrow: The JAMA Summit Report on
+  Artificial Intelligence** (JAMA, 2025; report). A long but clear summary of
+  how health AI is built, tested, and monitored, and where the gaps are.
+  Read the summary first. [@pmid:41082366]
+- **JAMA+ AI Conversations** (JAMA Network, 2024 onward; podcast series;
+  episode lengths vary). Interviews with researchers and editors about new
+  studies, useful for keeping up after the course ends.
+  <https://jamanetwork.com/channels/ai/pages/podcast>
+
+## Bias and equity
+
+- **Considerations for addressing bias in artificial intelligence for health
+  equity** (npj Digital Medicine, 2023; review). Walks through where bias can
+  enter an AI tool, from design to use, written with FDA staff. Free full text
+  on PubMed Central. [@pmid:37700029]
+- **Health Equity and Ethical Considerations in Using Artificial Intelligence
+  in Public Health and Medicine** (Preventing Chronic Disease, CDC, 2024;
+  review). A plain overview of how AI can widen or narrow gaps in care, with
+  practical steps. Free to read. [@pmid:39173183]
+
+## Talking to patients
+
+- **Comparing Physician and Artificial Intelligence Chatbot Responses to
+  Patient Questions Posted to a Public Social Media Forum** (JAMA Internal
+  Medicine, 2023; cross-sectional study). The much-discussed study in which
+  raters preferred chatbot answers for quality and empathy. Read the methods
+  closely before you repeat the headline. Free full text on PubMed Central.
+  [@pmid:37115527]
+- **Artificial Intelligence-Generated Draft Replies to Patient Inbox
+  Messages** (JAMA Network Open, 2024; quality improvement study). A real
+  deployment at one health system, where clinicians reported less burden but
+  saved no time. Free full text on PubMed Central. [@pmid:38506805]
+- **Patients' Trust in Health Systems to Use Artificial Intelligence** (JAMA
+  Network Open, 2025; research letter). A national survey on whether patients
+  trust health systems to use AI responsibly. Free full text on PubMed
+  Central. [@pmid:39951270]
+- **Google's Efforts to Build Patient-Facing AI** (NEJM AI Grand Rounds,
+  2025; podcast; length not stated on the episode page). The researchers
+  behind AMIE, a chatbot built to take a medical history, describe how they
+  built and tested it.
+  <https://ai-podcast.nejm.org/e/google-s-efforts-to-build-patient-facing-ai-a-conversation-with-drs-alan-karthikesalingam-and-anil-palepu>
+
+## Ethics, law, and regulation
+
+- **Ethics and governance of artificial intelligence for health: Guidance on
+  large multi-modal models** (World Health Organization; guidance; free PDF).
+  The WHO's recommendations for governments, developers, and health systems
+  on chatbots and similar tools.
+  <https://www.who.int/publications/i/item/9789240084759>
+- **FDA Perspective on the Regulation of Artificial Intelligence in Health
+  Care and Biomedicine** (JAMA, 2025; special communication). FDA leaders
+  explain how the agency reviews AI tools today and where its current rules
+  do not fit. [@pmid:39405330]
+- **List of Artificial Intelligence-Enabled Medical Devices** (US FDA; updated
+  list). Search it for your specialty to see which AI devices are cleared for
+  marketing in the United States. The FDA notes that the list is not complete.
+  <https://www.fda.gov/medical-devices/artificial-intelligence-enabled-medical-devices/list-artificial-intelligence-enabled-medical-devices>
+- **Medical Ethics of Large Language Models in Medicine** (NEJM AI, 2024;
+  review). Applies the familiar principles of medical ethics to chatbots in
+  clinical use. [@doi:10.1056/AIra2400038]
+
+## Workforce and environment
+
+- **Ambient Artificial Intelligence Scribes to Alleviate the Burden of
+  Clinical Documentation** (NEJM Catalyst, 2024; case study). How one large
+  health system rolled out AI scribes, and what clinicians and patients said
+  about them. [@doi:10.1056/CAT.23.0404]
+- **Explained: Generative AI's environmental impact** (MIT News, 2025;
+  article). A clear account of the electricity and water that AI data centres
+  use, and why use after training matters as much as training.
+  <https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117>
+
+## Specialty-specific
+
+- **Ophthalmology. Pivotal trial of an autonomous AI-based diagnostic system
+  for detection of diabetic retinopathy in primary care offices** (npj Digital
+  Medicine, 2018; trial). The study behind the first FDA-authorized autonomous
+  AI diagnostic system, and a model of how to test one. Free full text on
+  PubMed Central. [@pmid:31304320]
+- **Ophthalmology. No Doctor Needed? Dr. Michael Abramoff on the Potential of
+  Autonomous AI** (NEJM AI Grand Rounds, 2023; podcast video; 65 min). The
+  lead author of that trial explains how the system was built and regulated.
+  <https://youtu.be/9sLxXyaQ7EY>
+- **Cardiology. Artificial intelligence-enhanced electrocardiography in
+  cardiovascular disease management** (Nature Reviews Cardiology, 2021;
+  review). Explains how AI reads findings from an ECG that a person cannot
+  see, and the limits of that work. Free full text on PubMed Central.
+  [@pmid:33526938]
+- **Dermatology. AI vs. Skin Cancer** (Nature Video, 2025; video; 10 min). A
+  short film on AI tools that assess skin lesions. <https://youtu.be/rkiYSQ_RED8>
+- **Radiology. AI regulation in radiology with Hugh Harvey** (Radiology
+  Channel, 2024; video interview; 46 min). A radiologist and regulatory
+  specialist on how imaging AI is approved and monitored.
+  <https://youtu.be/0VMuaKY5NbI>
+- **Pediatrics. GPT: Great Pediatric Tools! Harnessing the Power of AI in
+  Pediatric Medicine** (The Cribsiders, episode 135, 2025; podcast; length not
+  stated on the episode page). A pediatric hospitalist on current uses of AI
+  on the wards and the ethical questions they raise.
+  <https://thecurbsiders.com/cribsiders-podcast/135>
+- **Anesthesiology. How AI Will Impact Anesthesiology** (OpenAnesthesia, 2024;
+  podcast; length not stated on the episode page). A short expert interview on
+  where AI is likely to change anesthesia practice.
+  <https://www.openanesthesia.org/podcasts/how-ai-will-impact-anesthesiology>
+
+## Tools to try
+
+Use made-up cases only. Never enter patient information into these tools.
+
+- **OpenEvidence** (OpenEvidence; web tool). A medical search chatbot that
+  answers with citations to journal articles. Check each cited article
+  yourself before you trust the answer. Sign-up rules may change.
+  <https://www.openevidence.com>
+- **Learn 80% of NotebookLM in Under 13 Minutes** (Jeff Su, 2024; video;
+  13 min). A quick tour of NotebookLM, Google's free tool that answers
+  questions from documents you upload. It pairs with the
+  [NotebookLM chapter](../chapters/enrichment-rag-notebooklm.qmd).
+  <https://youtu.be/EOmgC3-hznM>
+
+<!--
+How this page was built (2026-10-07, drafted by Claude Code; needs a human
+check and an AI-LEDGER.md row before merge).
+
+Source: Google Sheet "Contributed AI Learning Resources" (717 rows). Only
+title, URL, description, rating, and timestamp year were read. Email and name
+columns were not read or copied. URLs were grouped after stripping query
+strings and normalizing YouTube links: 653 unique URLs by this normalization
+(the brief said 626; the difference is likely normalization of proxy and
+trailing-slash variants), 42 submitted more than once.
+
+Checked:
+- PMIDs, titles, journals, and years confirmed in PubMed metadata: 38319201,
+  36988602, 37438534, 39465890, 39465898, 38448693, 39169244, 38438477,
+  40208922, 41082366, 37700029, 39173183, 37115527, 38506805, 39951270,
+  39405330, 31304320, 33526938. PMC availability from the PubMed ID converter.
+- DOIs not in PubMed, confirmed through Crossref metadata (title, journal,
+  date, first author): 10.1056/AIoa2400802 (Heinz, NEJM AI, 2025),
+  10.1056/AIra2400038 (Ong, NEJM AI, 2024), 10.1056/CAT.23.0404 (Tierney,
+  NEJM Catalyst, 2024).
+- YouTube titles, channels, lengths, and publish dates read from the video
+  pages: aircAruvnKk, gF5QPYP6KIM, 9sLxXyaQ7EY, rkiYSQ_RED8, 0VMuaKY5NbI,
+  EOmgC3-hznM.
+- Pages fetched and live: TED (Topol, TEDAI 2023, 846 s), WHO publication
+  page, FDA AI device list (the submitted URL redirects to the one used here),
+  MIT News, NEJM AI Grand Rounds episode page (June 2025), JAMA+ AI
+  Conversations page, Cribsiders 135 (March 2025), OpenAnesthesia episode
+  (page "last updated 01/05/2024"), OpenEvidence home page, CDC PCD article.
+
+Not verified:
+- The WHO page shows "25 March 2025"; the guidance was first issued earlier
+  (believed January 2024). No year is given in the entry for that reason.
+- Podcast lengths for the NEJM AI Grand Rounds episode, Cribsiders 135, and
+  OpenAnesthesia were not shown on their pages.
+- NEJM, NEJM AI, NEJM Catalyst, and JAMA article pages returned 403 or a bot
+  check to automated fetches, so free versus paywalled access was not
+  confirmed for those items. Metadata came from PubMed or Crossref instead.
+- OpenEvidence access rules for students (it advertises itself to verified
+  clinicians) were not confirmed.
+- Content of the Stanford "Pitfalls and Potential" talk was judged from its
+  title and channel only.
+
+Excluded on purpose: the most-submitted item (a 2023 BMC Medical Education
+narrative review) as a generic review; chatgpt.com, perplexity.ai, and scribe
+vendor pages as tool home pages; NYT and New Yorker pieces as paywalled;
+library-proxy links (replaced with the publisher or PubMed record); Amazon
+book links.
+-->

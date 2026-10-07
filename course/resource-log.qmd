@@ -35,7 +35,7 @@ starting point, and so you can see the range of what counts.
 - History and hype cycles
 
 Over the block, try to cover at least two or three areas. Starter resources for
-each are posted separately.
+each are in the [starter resources appendix](../appendix/resources.qmd).
 
 ## Weeks 1 to 3
 
