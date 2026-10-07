@@ -307,11 +307,15 @@ tool has been validated locally, your institution's policy will say so, and
 
 ### Patient information, once more
 
-Your institutional ChatGPT Edu account is not covered by a business associate
-agreement for clinical use unless your institution says it is. A business
-associate agreement is the contract that makes a vendor legally responsible
-for protecting patient data. Without one, pasting a real patient's labs into
-the tool is a privacy violation, whatever you intended. Consumer and free
+At CU Anschutz, ChatGPT Edu is covered by a business associate agreement when
+you sign in with university credentials. A business associate agreement is
+the contract that makes a vendor legally responsible for protecting patient
+data. It covers patient care, not a tool you built this afternoon. Without
+one, as with a personal account, pasting a real patient's
+information into the tool can be an unauthorized disclosure, whatever you
+intended. Lab values alone may not identify anyone, but you are not the person
+who decides that; see [what counts as patient
+information](../course/patient-information.qmd). Consumer and free
 tiers never have one, and free tiers may use what you type to train the next
 model.
 
@@ -363,8 +367,8 @@ the mistakes left in.
 Every value you type into the tool today is one you made up. No patient from a
 rotation, however de-identified you think it is; no classmate; no family
 member. Consumer tools carry no business associate agreement, and your
-institutional account is not cleared for patient data unless your institution
-has told you so in writing. If a test case needs a sodium of 118, invent a
+university account's agreement covers patient care, not testing a tool you
+built in an hour. If a test case needs a sodium of 118, invent a
 patient with a sodium of 118.
 :::
 
@@ -552,7 +556,7 @@ Score yourself against this before moving on.
 | Three recorded cases (objective 3) | Each compared against MDCalc *and* the original paper; at least one discrepancy or edge failure named, and sorted as rule, edge, or version | "It matched MDCalc" with no edge case tried |
 | The comprehension test (objective 3) | Four sentences, including the blank form, written before opening the code | The fourth sentence is missing or copied from the model |
 | The device paragraph (objective 4) | Says why it is a study aid now, names two of the four questions that would change that, and names the criterion a bare score fails | "It's not a device because it's just a prototype" |
-| The PHI rule (objective 5) | You can say what a business associate agreement is, that your institutional account does not have one for clinical use unless told, and why invented numbers are the rule | "Don't put patient data in ChatGPT" without the reason |
+| The PHI rule (objective 5) | You can say what a business associate agreement is, that your university-login ChatGPT Edu account has one and a personal account does not, and why invented numbers are the rule | "Don't put patient data in ChatGPT" without the reason |
 | The one sentence | Contains a verb meaning *compare against an outside source* | "Be careful with it" |
 
 ## What this changes for you

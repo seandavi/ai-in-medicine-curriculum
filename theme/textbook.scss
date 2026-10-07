@@ -191,3 +191,62 @@ main.content .mermaid svg, main.content .cell-output-display svg { overflow: vis
 @media (max-width: 767.98px) {
   main.content table { display: block; max-width: 100%; overflow-x: auto; }
 }
+
+// Self-check blocks (theme/self-check.html). Without JavaScript they read as a
+// question, a list and an explanation; with it the options become buttons.
+.self-check {
+  margin: 1.4rem 0;
+  padding: 1rem 1.2rem;
+  background: $paper-sunk;
+  border: 1px solid $rule;
+  border-radius: 8px;
+  &::before {
+    content: "Check yourself";
+    display: block;
+    margin-bottom: .4rem;
+    font-family: $font-family-sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: $accent;
+  }
+  > ul { list-style: none; padding-left: 0; margin: .6rem 0; }
+  > ul > li { margin: .35rem 0; }
+  .explain { font-size: .95rem; border-top: 1px solid $rule; padding-top: .6rem; }
+  &.js-ready .explain { display: none; }
+  &.js-ready.answered .explain { display: block; }
+  .self-check-reset { display: none; }
+  &.answered .self-check-reset { display: inline-block; }
+}
+.self-check-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: .55rem .8rem;
+  font: inherit;
+  color: $ink;
+  background: $paper;
+  border: 1px solid $rule;
+  border-radius: 6px;
+  cursor: pointer;
+  &:hover { border-color: $accent; }
+  &:focus-visible { outline: 2px solid $accent; outline-offset: 2px; }
+  .correct { font-weight: inherit; }
+  &.is-correct { border: 2px solid $accent; background: $accent-soft; }
+  &.is-correct::after { content: "  ✓"; color: $accent; font-weight: 700; }
+  &.is-wrong { border: 2px solid $alert; background: $alert-soft; }
+  &.is-wrong::after { content: "  ✗"; color: $alert; font-weight: 700; }
+}
+.self-check-feedback { font-family: $font-family-sans-serif; font-weight: 700; margin: .4rem 0; min-height: 1em; }
+.self-check-reset {
+  margin-top: .5rem;
+  padding: .25rem .7rem;
+  font-family: $font-family-sans-serif;
+  font-size: .85rem;
+  color: $accent;
+  background: transparent;
+  border: 1px solid $accent;
+  border-radius: 4px;
+  cursor: pointer;
+}

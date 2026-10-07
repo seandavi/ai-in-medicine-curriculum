@@ -21,6 +21,7 @@ book:
       chapters:
         - course/syllabus.qmd
         - course/resource-log.qmd
+        - course/patient-information.qmd
     - part: "Week 1 · Orientation and stance"
       chapters:
         - chapters/core-foundations.qmd
@@ -66,6 +67,8 @@ format:
       light: [theme/textbook.scss]
       dark: [theme/textbook.scss, theme/textbook-dark.scss]
     css: styles.css
+    # Self-check questions: ::: {.self-check} blocks become clickable. See the file for authoring.
+    include-after-body: theme/self-check.html
     # Mermaid's auto-derived theme gave dark node fills with dark text; neutral is
     # light boxes, black text, readable regardless of the page theme.
     mermaid:

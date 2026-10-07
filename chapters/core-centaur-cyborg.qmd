@@ -374,9 +374,10 @@ your institution licenses and runs inside the EHR (the electronic health
 record) is covered by a business associate agreement. That is the contract
 that makes a vendor legally responsible for protecting patient data. The tool
 is also governed by an institutional policy, which may say how to document its
-use. Ask what that policy says in your first week. The chatbot in the other tab
-has no such agreement. Your institutional login does not change that unless
-your institution says it does.
+use. Ask what that policy says in your first week. A consumer chatbot in the
+other tab has no such agreement. At CU Anschutz, ChatGPT Edu and Microsoft
+Copilot are covered when you sign in with your university credentials. The
+same tools through a personal account are not.
 
 **No patient information in a consumer tool, ever.** A consumer tool is a
 chatbot you reach through a personal account: ChatGPT, Claude, or Gemini on
@@ -468,9 +469,12 @@ and what happened to the skill each time. The episode is 53 minutes.
 Part A needs no tool. Part B uses the made-up patient from this chapter, or a
 made-up case you write yourself. Do not use a patient from your
 sub-internship, a classmate's case, or a de-identified real chart. Consumer
-and institutional chatbots alike sit outside the business associate agreement
-that covers the EHR. Free tiers may also use what you type to train the next
-model.
+chatbots have no business associate agreement. Your university ChatGPT Edu and
+Copilot accounts have one, but it covers patient care, and this is coursework.
+Free tiers may also use what you type to train the next model.
+
+What counts as patient information, and why taking out the name is not
+enough: [the patient information page](../course/patient-information.qmd).
 :::
 
 ### Part A: your policy (20 minutes)

@@ -408,6 +408,9 @@ Every step below works from published papers and from an algorithm described
 in this chapter. Do not test any of it on a patient from your sub-internship,
 a classmate, or yourself. If you use a chatbot in the optional step, you are
 asking it about a published paper, not about a person.
+
+What counts as patient information, and why taking out the name is not
+enough: [the patient information page](../course/patient-information.qmd).
 :::
 
 ### Part A: the worksheet, on the case you already know (15 minutes)

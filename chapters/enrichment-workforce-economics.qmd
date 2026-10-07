@@ -450,6 +450,9 @@ Your institutional chatbot account does not change the no-PHI rule (no
 protected health information, ever). Free tiers may use what you type to
 train the next model. The one thing you will paste is a public government web
 page.
+
+What counts as patient information, and why taking out the name is not
+enough: [the patient information page](../course/patient-information.qmd).
 :::
 
 ### Part A: grade the model (10 minutes)

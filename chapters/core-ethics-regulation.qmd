@@ -376,9 +376,9 @@ safeguard, not the sign.
 with a vendor only under a **business associate agreement** (BAA). That is a
 contract that makes the vendor legally responsible for protecting the data.
 An institution-licensed scribe or a model built into the EHR runs under one.
-The consumer chatbot on your phone does not. Your institutional ChatGPT Edu
-or Copilot account does not either, unless your institution says so in
-writing. The month-one boundary case from [the appraisal chapter](core-appraisal.qmd), a tool your hospital
+The consumer chatbot on your phone does not. At CU Anschutz, ChatGPT Edu and
+Microsoft Copilot are covered when you sign in with university credentials;
+the same tools through a personal account are not. The month-one boundary case from [the appraisal chapter](core-appraisal.qmd), a tool your hospital
 licenses inside the EHR, depends on one question: *is there a BAA for this tool, and does the policy say what I
 may put into it?* If nobody can answer in a sentence, the answer is no.
 
@@ -461,6 +461,9 @@ Nothing in this exercise involves a real patient, a real note, or a
 classmate's data. Mr. Alvarez is synthetic. If you use a chatbot at all in
 Part A, use it to find documents, not to answer the question. The answer must
 come from the primary source, with its URL and the date you checked it.
+
+What counts as patient information, and why taking out the name is not
+enough: [the patient information page](../course/patient-information.qmd).
 :::
 
 ### Part A: the regulatory scavenger hunt (20 minutes)

@@ -1,0 +1,231 @@
+# Patient information and AI tools {.unnumbered}
+
+[What HIPAA protects, why the course rule is stricter, and what to do if you slip · about 15 minutes]{.subtitle .lead}
+
+::: {.callout-note title="What you'll learn"}
+By the end of this page you will be able to:
+
+1. Say what makes health information *protected* under HIPAA, and why taking out the name is not enough.
+2. Say why the course rule (no real patient, ever) is stricter than the law, and why.
+3. Say what a business associate agreement is, and what to ask before you put anything into a tool.
+4. Say what to do the same day if you put patient information somewhere it should not go.
+:::
+
+## The case you want to ask about
+
+It is 2 a.m. on night float. A patient came in with a presentation you have
+never seen. You want to ask a chatbot for a differential. You think: *I will
+leave out the name.* So you type "94-year-old retired rancher from Kremmling,
+admitted Tuesday with fever and a new murmur."
+
+That sentence has no name in it. It is still protected health information.
+The rest of this page explains why, and what to do instead.
+
+## What the law protects
+
+**HIPAA** is the federal health privacy law. It applies to **covered
+entities**: health plans, and health care providers that send claims and other standard
+transactions electronically, which includes your hospital. It also applies to their **workforce**. The
+regulation defines workforce as employees, volunteers, *and trainees* whose
+work the hospital directs, paid or not
+([45 CFR 160.103](https://www.law.cornell.edu/cfr/text/45/160.103)). As a
+medical student on a rotation, you are part of it.
+
+The law protects **individually identifiable health information**: information
+about a person's health, care, or payment for care that identifies them, *or
+where there is a reasonable basis to believe it could be used to identify
+them* (45 CFR 160.103). That second part matters. A sentence can identify a
+person without a name.
+
+## Taking out the name is not enough
+
+HIPAA offers a checklist, called **Safe Harbor**, for making information no
+longer identifiable ([45 CFR
+164.514(b)](https://www.law.cornell.edu/cfr/text/45/164.514)). It lists
+eighteen kinds of identifier that must all be removed, for the patient and for
+their relatives, employer, and household. In plain words:
+
+- names
+- any place smaller than a state: street, city, county, and most of the ZIP code
+- every part of a date except the year, for dates about the person: birth, admission, discharge, death
+- any age over 89 (these can only be grouped as "90 or older")
+- phone and fax numbers, email addresses, web addresses, and IP addresses
+- Social Security, medical record, health plan, account, and licence numbers
+- vehicle and device identifiers and serial numbers
+- fingerprints, voice prints, and full-face photographs or similar images
+- **any other unique identifying number, characteristic, or code**
+
+And one more condition: the hospital must not *know* that what is left could
+still identify the person. A rare disease in a small town, or a case that was
+on the evening news, can identify someone with every item above removed.
+
+Now look at the 2 a.m. sentence again. "94" is an age over 89. "Kremmling" is
+a town. "Tuesday" is part of an admission date. Three identifiers, no name.
+
+## Why the course rule is stricter than the law
+
+The rule in every chapter of this book is: **no real patient, ever.** Not a
+de-identified one. Not one you are sure nobody could recognise. There are two
+reasons.
+
+First, under the regulation, *the covered entity* decides that information has
+been de-identified, by Safe Harbor or by a statistician's formal review
+(45 CFR 164.514(b)). You are not in a position to make that call alone at 2 a.m.
+
+Second, the habit matters more than the case. The exercises in this course
+use made-up patients, public cases, or published examples. If you practise
+with invented patients now, you will not have to decide under pressure later.
+
+The law also has a **minimum necessary** rule: when information is used or
+shared, it should be limited to what the purpose needs ([45 CFR
+164.502(b)](https://www.law.cornell.edu/cfr/text/45/164.502)). Sharing with
+another clinician to treat the patient is an exception. A question to a
+chatbot is not treatment of that patient by another provider.
+
+## The contract that decides which tools are allowed
+
+A hospital may share protected health information with an outside company
+only under a **business associate agreement** (BAA). That is a contract that
+makes the company legally responsible for protecting the data. A scribe or
+model your hospital licenses inside the EHR runs under one. The consumer
+chatbot on your phone does not.
+
+At CU Anschutz, **ChatGPT Edu and Microsoft Copilot are covered** when you
+sign in with your university credentials. The same products through a personal
+account are not. Check which account you are signed in to before you type.
+Other tools, including Google's, are covered only if the institution tells you
+so in writing.
+
+A covered account is for patient care, under the institution's policy. It does
+not change the course rule: course exercises use made-up patients, whatever
+account you use.
+
+Before you put anything into a tool, ask two questions. *Is there a BAA for
+this tool, in the account I am signed in to? Does the policy say I may put
+this into it?* If nobody can answer
+in a sentence, the answer is no. [The ethics and regulation
+chapter](../chapters/core-ethics-regulation.qmd) takes this further.
+
+## Your patient may do what you may not
+
+HIPAA applies to covered entities and their workforce. A patient is neither.
+Your patient may paste their own discharge summary into any chatbot they like.
+That is their choice about their own information. The same summary, pasted by
+you, is a disclosure by the hospital's workforce. [The patient communication
+chapter](../chapters/core-patient-communication.qmd) covers how to talk with a
+patient who has done this.
+
+## If you slip
+
+If you put patient information into a tool by mistake, act the same day.
+
+1. Stop. Do not add more.
+2. Tell your supervising resident or attending.
+3. Report it to your institution's patient privacy office. If you do not know
+   how to reach it, your supervisor or the course director will.
+
+Deleting the conversation may not remove it from the company's systems, so
+deleting is not the same as reporting. Reporting early is what the process is
+for. Nobody expects you to fix it alone.
+
+## Check yourself
+
+Six short questions. They use made-up patients.
+
+::: {.self-check}
+**1.** You copy these values from a real chart, with nothing else: "Hemoglobin
+7.2, MCV 68, ferritin 4." Under HIPAA, is this protected health information?
+
+- Yes, because it came from a chart
+- [Probably not on its own, but the course rule still says no]{.correct}
+- No, and you may paste it anywhere
+
+::: {.explain}
+Three lab values with no identifier and no unusual detail probably do not
+identify anyone, so on their own they are likely not protected. But they came
+from a real patient, and you are not the person who decides they are
+de-identified. The course rule is no real patient, ever.
+:::
+:::
+
+::: {.self-check}
+**2.** "Mr. G, 94, retired rancher from Kremmling, admitted Tuesday with a hip
+fracture." How many Safe Harbor identifiers does this sentence contain, not
+counting "Mr. G"?
+
+- One
+- Two
+- [Three or more]{.correct}
+
+::: {.explain}
+The age is over 89, Kremmling is a place smaller than a state, and "Tuesday"
+is part of an admission date. "Retired rancher" in a small town can also
+narrow it to one person. "Mr. G" is part of a name, which makes four.
+:::
+:::
+
+::: {.self-check}
+**3.** A 7-year-old with a very rare genetic disease was on the local news
+last month. You remove every item on the Safe Harbor list and keep the
+diagnosis and the hospital. Is the information now safe to share?
+
+- Yes, every listed identifier is gone
+- [No, the rare diagnosis plus the news coverage can still identify the child]{.correct}
+
+::: {.explain}
+Safe Harbor includes "any other unique identifying characteristic," and it
+fails if the hospital knows the rest could still identify the person. A
+publicised rare disease is exactly that.
+:::
+:::
+
+::: {.self-check}
+**4.** Your patient pastes her own discharge summary into a free chatbot and
+asks it to explain her medications. Has she broken HIPAA?
+
+- Yes, the summary is protected health information
+- [No, HIPAA applies to the hospital and its workforce, not to her]{.correct}
+
+::: {.explain}
+She is not a covered entity. She may share her own information however she
+chooses. If you pasted the same summary, it would be a disclosure by the
+hospital's workforce.
+:::
+:::
+
+::: {.self-check}
+**5.** You realise you pasted a real patient's note into a chatbot an hour
+ago. What is the first thing to do after you stop typing?
+
+- Delete the conversation and move on
+- [Tell your supervising resident or attending, then report it to the patient privacy office]{.correct}
+- Wait to see whether anyone notices
+
+::: {.explain}
+Deleting may not remove it from the company's systems, and it does not count
+as reporting. Tell your supervisor and report the same day. Reporting early is
+what the process is for.
+:::
+:::
+
+::: {.self-check}
+**6.** On rounds, a resident asks you to summarise a long consult note with
+ChatGPT. You open the app on your phone. It is signed in to your personal
+account. Is that covered by the university's business associate agreement?
+
+- Yes, ChatGPT is covered at CU Anschutz
+- [No, only the university-login ChatGPT Edu account is covered]{.correct}
+
+::: {.explain}
+The agreement is with the university's account, not with the product. The
+same app signed in to a personal account is a consumer tool. Switch to the
+university login, and follow the institution's policy for clinical use.
+:::
+:::
+
+## Go deeper
+
+- [45 CFR 160.103](https://www.law.cornell.edu/cfr/text/45/160.103), the definitions: covered entity, workforce, protected health information.
+- [45 CFR 164.514](https://www.law.cornell.edu/cfr/text/45/164.514), de-identification and the Safe Harbor list.
+- [45 CFR 164.502](https://www.law.cornell.edu/cfr/text/45/164.502), including the minimum necessary rule.
+- [The ethics and regulation chapter](../chapters/core-ethics-regulation.qmd), for business associate agreements and liability.

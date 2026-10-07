@@ -417,6 +417,9 @@ consumer tool you are using has no business associate agreement, the contract
 that makes a vendor legally responsible for protecting patient data, and free
 tiers may use what you type to train the next model. Institutional accounts do
 not change this rule.
+
+What counts as patient information, and why taking out the name is not
+enough: [the patient information page](../course/patient-information.qmd).
 :::
 
 ### Part A: three sentences, twice (10 minutes)

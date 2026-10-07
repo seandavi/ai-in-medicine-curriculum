@@ -1,0 +1,78 @@
+<!--
+  Self-check widget. Included after the body of every page (_quarto.yml).
+
+  Authoring, in any .qmd:
+
+    ::: {.self-check}
+    The question, in one or more paragraphs.
+
+    - [The right answer]{.correct}
+    - A wrong answer
+    - Another wrong answer
+
+    ::: {.explain}
+    Why the right answer is right. Shown after the student answers.
+    :::
+    :::
+
+  Without JavaScript the block reads as a question, a list, and the
+  explanation, so nothing is lost. With it, the options become buttons, the
+  student picks one, and the block marks it and reveals the explanation.
+  Nothing is stored or sent anywhere.
+-->
+<script>
+(function () {
+  function build(block) {
+    var list = block.querySelector(":scope > ul");
+    if (!list || !list.querySelector(".correct")) return;
+    var explain = block.querySelector(":scope > .explain");
+    var feedback = document.createElement("p");
+    feedback.className = "self-check-feedback";
+    feedback.setAttribute("aria-live", "polite");
+
+    var buttons = [];
+    Array.prototype.forEach.call(list.children, function (li) {
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "self-check-option";
+      button.dataset.correct = li.querySelector(".correct") ? "1" : "0";
+      button.innerHTML = li.innerHTML;
+      li.innerHTML = "";
+      li.appendChild(button);
+      buttons.push(button);
+    });
+
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        var right = button.dataset.correct === "1";
+        buttons.forEach(function (b) {
+          b.classList.remove("chosen");
+          if (b.dataset.correct === "1") b.classList.add("is-correct");
+        });
+        button.classList.add("chosen");
+        if (!right) button.classList.add("is-wrong");
+        feedback.textContent = right ? "Right." : "Not quite. The marked answer is the right one.";
+        block.classList.add("answered");
+      });
+    });
+
+    if (explain) block.insertBefore(feedback, explain);
+    else block.appendChild(feedback);
+
+    var reset = document.createElement("button");
+    reset.type = "button";
+    reset.className = "self-check-reset";
+    reset.textContent = "Try again";
+    reset.addEventListener("click", function () {
+      buttons.forEach(function (b) { b.classList.remove("chosen", "is-correct", "is-wrong"); });
+      feedback.textContent = "";
+      block.classList.remove("answered");
+      buttons[0].focus();
+    });
+    block.appendChild(reset);
+    block.classList.add("js-ready");
+  }
+
+  document.querySelectorAll(".self-check").forEach(build);
+})();
+</script>

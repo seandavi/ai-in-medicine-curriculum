@@ -419,6 +419,9 @@ The harder case you will meet in month one: a tool your hospital licenses and
 runs inside the EHR is a different question. Ask whether a business associate
 agreement exists, and what your institution's policy says about documenting that
 you used it. [the ethics and regulation chapter](core-ethics-regulation.qmd) covers that.
+
+What counts as patient information, and why taking out the name is not
+enough: [the patient information page](../course/patient-information.qmd).
 :::
 
 ::: {.callout-tip title="PubMed is the verification tool"}

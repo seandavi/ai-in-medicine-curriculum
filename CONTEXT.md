@@ -133,6 +133,7 @@ Anything requiring a login re-creates the problem the LMS already has.
 
 Confirmed 2026-09-07: students have institutional ChatGPT Edu and Microsoft
 Copilot accounts. Chapters can assume one general-purpose chatbot without a
-signup step. Institutional accounts do not change the no-PHI rule; they are not
-covered by a business associate agreement for clinical use unless the
-institution says so.
+signup step. Confirmed by the course director 2026-10-07: ChatGPT Edu and
+Copilot are covered by a business associate agreement for clinical use when
+signed in with university credentials (not through personal accounts). The
+course rule is unchanged: course exercises use made-up patients only.
