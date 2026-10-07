@@ -4,55 +4,66 @@ subtitle: "What the four weeks look like"
 ---
 
 A four-week, ungraded elective, delivered over Zoom, for fourth-year medical
-students. Two live sessions a week, one chapter of this book before each, and
-one running assignment, the [weekly resource log](resource-log.qmd). Nothing
-in the course needs an install, a paid account, or a real patient.
-
-## What a week looks like
-
-| When | What | Time |
-|---|---|---|
-| Before each session | Read the chapter, watch or listen to its episode, do the activity, and score yourself on the Check. | 1 to 2 hours per chapter |
-| Two sessions a week | Ninety minutes on Zoom. Ten minutes of introduction, a short demo, forty minutes in breakouts of four or five doing the chapter's activity together, then report-back and the standing question: *what does this change about how you'll practice?* | 3 hours |
-| Across the week | Three to five entries in the [resource log](resource-log.qmd), and a two-sentence note on whether you used a chatbot and what it got wrong. | 1 to 2 hours |
-| Small group | Once a week. Each student names one resource and one surprise. | 30 to 45 minutes |
-
-: A week in the course. The chapter times are stated in each chapter's subtitle. {#tbl-week}
+students, running October 12 to November 6, 2026. You read the chapters of
+this book on your own time. The live hours are for what a book cannot do:
+questions, demonstrations, trying tools together, and talking with each
+other. Nothing in the course needs an install, a paid account, or a real
+patient.
 
 Three rules hold everywhere: **no patient information enters any tool, ever;
 verify before it counts; you sign the note.** What counts as patient information is on
 [its own page](patient-information.qmd).
 
-## The default order
+## Week 1: the foundations, live
 
-Eleven chapters for eight sessions. The three spare chapters can be swapped in
-by cohort interest. Every chapter stands alone, so a missed week costs one
-chapter, not the course.
+In week 1 the course director teaches each day. Read the two week-1 chapters
+alongside the talks.
 
-| Week | Session | Chapter |
+| Day | Live session | Read this week |
 |---|---|---|
-| 1 · Orientation and stance | 1 | [How these systems work](../chapters/core-foundations.qmd) |
-| | 2 | [Centaur or cyborg](../chapters/core-centaur-cyborg.qmd) |
-| 2 · Judgment | 3 | [Critical appraisal](../chapters/core-appraisal.qmd) |
-| | 4 | [Bias and equity](../chapters/core-bias-equity.qmd) |
-| 3 · Practice | 5 | [Agentic coding](../chapters/enrichment-agentic-coding.qmd) |
-| | 6 | [Talking to patients about AI](../chapters/core-patient-communication.qmd) |
-| 4 · Consequences and closing | 7 | [Will AI take your job?](../chapters/enrichment-workforce-economics.qmd) *or* [What AI costs the planet](../chapters/enrichment-environment.qmd), the cohort's choice |
-| | 8 | [Ethics, liability, and the device line](../chapters/core-ethics-regulation.qmd) |
-| Spare | | [Prompting lab](../chapters/enrichment-prompting-lab.qmd), [Grounding AI in real sources](../chapters/enrichment-rag-notebooklm.qmd) |
+| Monday, October 12 | Welcome: how the course works, and how adults learn best | [How these systems work](../chapters/core-foundations.qmd) |
+| Tuesday, October 13 | A short history of AI | [Centaur or cyborg](../chapters/core-centaur-cyborg.qmd) |
+| Wednesday, October 14 | From AI to machine learning to deep learning to large language models | |
+| Friday, October 16 | Small groups: introductions, then the week's questions | |
 
-: The default four-week assembly. {#tbl-order}
+: Week 1. Days and times may shift; Canvas has the current schedule. {#tbl-week1}
+
+## Weeks 2 to 4: the same rhythm each week
+
+| When | What | Expected? | Time |
+|---|---|---|---|
+| Monday, 60 minutes, recorded | Start of the week: the week's question, a short demonstration, the guests coming up, and your questions | Strongly encouraged; the recording counts | 1 hour |
+| On your own | The week's chapters: read, watch or listen, do the activity, score yourself on the Check | Yes | 2 to 4 hours |
+| Mid-week, 60 minutes, recorded | [Open lab](../appendix/open-labs.qmd): we try one tool together. The class votes on which. | Optional | 1 hour |
+| Through the week | Guest talks from clinicians and researchers using AI in their fields | Attend or watch two | About 2 hours |
+| Thursday night | [Resource log](resource-log.qmd) entry for the week | Yes | 1 to 2 hours |
+| Friday, 60 minutes | Small group, in one of three time slots you choose. Breakout rooms of four or five, the same people each week, then the whole group. | Yes, one slot | 1 hour |
+
+: Weeks 2 to 4. Exact times and the guest schedule are posted in Canvas. {#tbl-week}
+
+| Week | Theme | Chapters |
+|---|---|---|
+| 2 · October 19 to 23 | Judgment | [Critical appraisal](../chapters/core-appraisal.qmd), [Bias and equity](../chapters/core-bias-equity.qmd) |
+| 3 · October 26 to 30 | Practice | [Agentic coding](../chapters/enrichment-agentic-coding.qmd), [Talking to patients about AI](../chapters/core-patient-communication.qmd) |
+| 4 · November 2 to 6 | Consequences and closing | [Will AI take your job?](../chapters/enrichment-workforce-economics.qmd) *or* [What AI costs the planet](../chapters/enrichment-environment.qmd), your choice; [Ethics, liability, and the device line](../chapters/core-ethics-regulation.qmd) |
+| Any week | Spare chapters | [Prompting lab](../chapters/enrichment-prompting-lab.qmd), [Grounding AI in real sources](../chapters/enrichment-rag-notebooklm.qmd) |
+
+: The chapters, week by week. Every chapter stands alone, so a missed week costs one chapter, not the course. {#tbl-order}
+
+If you are away interviewing, the recordings and the chapters let you keep
+up. Tell the course director which Friday you will miss, and add one line to
+that week's resource log about a recording you watched.
 
 ## Due dates
 
 | Week | Due | What |
 |---|---|---|
-| 1 | [day/time] | Resource log, week 1 |
-| 2 | [day/time] | Resource log, week 2 |
-| 3 | [day/time] | Resource log, week 3, naming your week 4 theme |
-| 4 | [day/time] | One-page synthesis and a five-minute presentation in small group |
+| 1 | Thursday, October 15 | Resource log, week 1 |
+| 2 | Thursday, October 22 | Resource log, week 2 |
+| 3 | Thursday, October 29 | Resource log, week 3, naming your week 4 theme |
+| 4 | Thursday, November 5 | One-page synthesis, presented in five minutes at your Friday small group on November 6 |
 
-: Due dates for the current offering are set by the course coordinator and posted in the learning management system. {#tbl-due}
+: Due dates. Submit through the course form: [VERIFY: link to the Microsoft Form]{.verify} {#tbl-due}
 
 ## Before the course starts
 
