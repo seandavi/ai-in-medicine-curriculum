@@ -6,6 +6,14 @@ An open lab is an hour spent *trying* something: a tool, a workflow, a way of
 working that is hard to picture until you have done it. The objectives are
 loose on purpose. The point is the experience, and what you notice.
 
+The format borrows from NYU Langone's Prompt-a-thon, where staff picked a
+project from a set of "project cards" and worked through it with a chatbot.
+Participants reported more confidence afterwards, whether or not they had
+been given sample prompts [@pmid:39042600]. That was a survey after one
+event, so it shows the format was liked, not that it taught skills. The
+[project cards](https://github.com/smallw03/NYULH-Generative-AI-Prompt-a-thon-Project-Cards)
+are public if you want more ideas.
+
 **How they run.** Each week of weeks 2 to 4, the class votes on one lab, and we
 do it together live for an hour on Zoom. The session is recorded. You can also
 do any lab on your own, at any time, from this page. Every lab is
