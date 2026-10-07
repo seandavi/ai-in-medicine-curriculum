@@ -44,6 +44,10 @@ $sidebar-active-color: $accent;
 
 $code-bg: $paper-sunk;
 $code-color: $ink;
+// Plain fenced blocks (the fill-in templates) otherwise render black text,
+// which disappears in dark mode.
+$pre-color: $ink;
+$code-block-bg: $paper-sunk;
 
 $callout-color-note: $accent;
 $callout-color-tip: $accent;
@@ -52,6 +56,15 @@ $callout-color-important: $alert;
 $callout-color-caution: $caution;
 
 /*-- scss:rules --*/
+
+// Fill-in templates are plain fenced blocks: give them a visible panel.
+main.content pre:not(.sourceCode) {
+  color: $ink;
+  background: $paper-sunk;
+  border: 1px solid $rule;
+  border-radius: 6px;
+  padding: .8rem 1rem;
+}
 
 // Interface text (navigation, captions, callout titles) is sans; reading text is serif.
 .sidebar, #TOC, .breadcrumb, .callout-header, .callout-title-container, figcaption,
