@@ -74,3 +74,7 @@
 .chunks { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: .8em; margin: 1.2em 0; }
 .chunk { background: #fffdf5; border: 1px dashed #b8a66a; padding: .6em .8em; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .78em; white-space: pre-wrap; overflow-x: auto; }
 .chunk .lbl { display: block; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: .85em; letter-spacing: .08em; text-transform: uppercase; color: #8a7a5a; margin-bottom: .3em; }
+/* The illustrative artifacts above depict real screens and paper, so they stay light in dark mode.
+   Their text colour is pinned here because otherwise it inherits the dark theme's pale body text. */
+.lab-report, .chat, .app-mock, .ehr-note, .chat-pane, .grounded-answer, .chunk, .press-clip { color: #1f2328; }
+.lab-report a, .chat a, .app-mock a, .ehr-note a, .chat-pane a, .grounded-answer a, .chunk a { color: #0f5c63; }
