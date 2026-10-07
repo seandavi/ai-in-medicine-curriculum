@@ -121,8 +121,8 @@ If you put patient information into a tool by mistake, act the same day.
 
 1. Stop. Do not add more.
 2. Tell your supervising resident or attending.
-3. Report it to the institution's privacy office. [VERIFY: CU Anschutz privacy
-   office contact and reporting route for students]{.verify}
+3. Report it to your institution's patient privacy office. If you do not know
+   how to reach it, your supervisor or the course director will.
 
 Deleting the conversation may not remove it from the company's systems, so
 deleting is not the same as reporting. Reporting early is what the process is
@@ -198,7 +198,7 @@ hospital's workforce.
 ago. What is the first thing to do after you stop typing?
 
 - Delete the conversation and move on
-- [Tell your supervising resident or attending, then report it to the privacy office]{.correct}
+- [Tell your supervising resident or attending, then report it to the patient privacy office]{.correct}
 - Wait to see whether anyone notices
 
 ::: {.explain}
