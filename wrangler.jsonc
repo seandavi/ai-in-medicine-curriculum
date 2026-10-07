@@ -9,7 +9,10 @@
   "assets": {
     "directory": "./_book",
     "not_found_handling": "404-page"
-  }
-  // To attach a custom domain (DNS for seandavis.net is already on Cloudflare):
-  // "routes": [{ "pattern": "aim.seandavis.net", "custom_domain": true }]
+  },
+  // Custom domain on the seandavis.net zone (same Cloudflare account as ../talks).
+  // The workers.dev address stays live, so links already shared keep working.
+  "routes": [
+    { "pattern": "aim.seandavis.net", "custom_domain": true }
+  ]
 }
