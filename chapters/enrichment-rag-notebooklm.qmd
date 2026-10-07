@@ -405,8 +405,8 @@ Sources for this exercise are published papers, guidelines, or things you
 wrote yourself. Not a de-identified case you typed up. Not a screenshot of a
 note. Not your classmate's data. A consumer Google account carries no
 business associate agreement, the contract that makes a vendor legally
-responsible for protecting patient data. An institutional account does not
-change the rule unless your institution has said in writing that it does. The
+responsible for protecting patient data. The course rule holds in every
+account, institutional or personal. The
 rule is strict on purpose. The unusual cases are where people get it wrong.
 
 What counts as patient information, and why taking out the name is not

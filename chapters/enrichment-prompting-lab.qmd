@@ -318,10 +318,11 @@ The four cases below are fiction, written for this course. Do not substitute a
 patient from your sub-internship, however well you have de-identified them in
 your head. What Sam did at 2:40 a.m., typing a real patient's presentation into
 a personal phone, is the thing this callout forbids, and the patient did not
-know it happened. Consumer chatbots and institutional accounts alike have no
-business associate agreement unless your institution tells you in writing that
-one exists. That agreement is the contract that makes a vendor legally
-responsible for protecting patient data. A tool your hospital runs inside the
+know it happened. Consumer chatbots have no business associate agreement, the
+contract that makes a vendor legally responsible for protecting patient data.
+Your university ChatGPT Edu and Copilot accounts have one when you sign in with
+university credentials, but it covers patient care. These cases are
+coursework, so they stay fictional. A tool your hospital runs inside the
 EHR is a different question, and [the ethics and regulation chapter](core-ethics-regulation.qmd) takes it up.
 
 What counts as patient information, and why taking out the name is not

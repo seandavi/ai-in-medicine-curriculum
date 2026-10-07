@@ -434,10 +434,11 @@ not need it.
 ::: {.callout-warning title="No patient information, ever"}
 Both parts of this exercise use public or made-up material. Part A uses a
 small practice dataset built into the site. Part B asks the model about a published
-scoring system, not about a patient. Your institutional account does not
-change this. It is not covered by a business associate agreement, the contract
-that would make the vendor legally responsible for protecting patient data,
-unless your institution has told you so explicitly. The question you will be
+scoring system, not about a patient. Your university ChatGPT Edu or Copilot
+account, signed in with university credentials, is covered by a business
+associate agreement, the contract that makes the vendor legally responsible
+for protecting patient data. That covers patient care. This exercise is not
+patient care. The question you will be
 tempted to ask about the patient from this morning is one you do not ask. And
 whatever drafts a note, you sign it. What to document when a tool helped is
 [the ethics and regulation chapter's](core-ethics-regulation.qmd) question.

@@ -90,15 +90,19 @@ makes the company legally responsible for protecting the data. A scribe or
 model your hospital licenses inside the EHR runs under one. The consumer
 chatbot on your phone does not.
 
-Your institutional ChatGPT Edu and Microsoft Copilot accounts are a different
-question. [VERIFY: whether CU Anschutz's ChatGPT Edu and Copilot accounts are
-covered by a BAA for clinical use, and what the institutional policy allows;
-ask the compliance or privacy office]{.verify} Until the institution tells you
-in writing that a tool is covered *and* that the policy allows your use, treat
-it as not covered.
+At CU Anschutz, **ChatGPT Edu and Microsoft Copilot are covered** when you
+sign in with your university credentials. The same products through a personal
+account are not. Check which account you are signed in to before you type.
+Other tools, including Google's, are covered only if the institution tells you
+so in writing.
+
+A covered account is for patient care, under the institution's policy. It does
+not change the course rule: course exercises use made-up patients, whatever
+account you use.
 
 Before you put anything into a tool, ask two questions. *Is there a BAA for
-this tool? Does the policy say I may put this into it?* If nobody can answer
+this tool, in the account I am signed in to? Does the policy say I may put
+this into it?* If nobody can answer
 in a sentence, the answer is no. [The ethics and regulation
 chapter](../chapters/core-ethics-regulation.qmd) takes this further.
 
@@ -126,7 +130,7 @@ for. Nobody expects you to fix it alone.
 
 ## Check yourself
 
-Five short questions. They use made-up patients.
+Six short questions. They use made-up patients.
 
 ::: {.self-check}
 **1.** You copy these values from a real chart, with nothing else: "Hemoglobin
@@ -201,6 +205,21 @@ ago. What is the first thing to do after you stop typing?
 Deleting may not remove it from the company's systems, and it does not count
 as reporting. Tell your supervisor and report the same day. Reporting early is
 what the process is for.
+:::
+:::
+
+::: {.self-check}
+**6.** On rounds, a resident asks you to summarise a long consult note with
+ChatGPT. You open the app on your phone. It is signed in to your personal
+account. Is that covered by the university's business associate agreement?
+
+- Yes, ChatGPT is covered at CU Anschutz
+- [No, only the university-login ChatGPT Edu account is covered]{.correct}
+
+::: {.explain}
+The agreement is with the university's account, not with the product. The
+same app signed in to a personal account is a consumer tool. Switch to the
+university login, and follow the institution's policy for clinical use.
 :::
 :::
 

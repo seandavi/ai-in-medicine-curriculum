@@ -394,9 +394,9 @@ skip step 1 of Part A; the point of step 1 is to guess before you know.
 
 ::: {.callout-warning title="No patient information, ever"}
 Nothing in this exercise involves a patient. You will ask a chatbot about
-itself and read public documents. Your institutional account is not a
-clinical tool. It carries no agreement that covers patient data; [the ethics
-and regulation chapter](core-ethics-regulation.qmd) takes that up. If a question about the scribe's water
+itself and read public documents. Your university chatbot account is covered
+for patient care when you sign in with university credentials, but this
+exercise is not patient care; [the ethics and regulation chapter](core-ethics-regulation.qmd) takes that up. If a question about the scribe's water
 use ever tempts you to paste in a note to "see what it costs," stop.
 
 What counts as patient information, and why taking out the name is not
