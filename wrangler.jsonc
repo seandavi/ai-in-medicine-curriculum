@@ -11,7 +11,9 @@
     "not_found_handling": "404-page"
   },
   // Custom domain on the seandavis.net zone (same Cloudflare account as ../talks).
-  // The workers.dev address stays live, so links already shared keep working.
+  // Wrangler turns the workers.dev address off once a route exists unless told
+  // otherwise; keep it on so links already shared keep working.
+  "workers_dev": true,
   "routes": [
     { "pattern": "aim.seandavis.net", "custom_domain": true }
   ]
