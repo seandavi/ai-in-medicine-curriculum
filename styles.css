@@ -1,11 +1,12 @@
 /* Verification flags carried from research/ into chapters. Grep-able as [VERIFY. */
-.verify { font-size: 0.85em; color: #7a5a00; background: #fff4cc; padding: 0 0.35em; border-radius: 3px; white-space: nowrap; }
+/* Wraps like ordinary text: some flags are a full sentence, and nowrap pushed them into the margin. */
+.verify { font-size: 0.85em; color: #7a5a00; background: #fff4cc; padding: 0 0.35em; border-radius: 3px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 
 /* A vendor slide, drawn in CSS so it is obviously illustrative and never a real company's copyright. */
 .vendor-slide { max-width: 560px; margin: 1.2em auto; padding: 1.1em 1.4em; background: linear-gradient(135deg,#0b3d91,#1565c0); color: #fff; border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,.25); font-family: "Segoe UI", Helvetica, Arial, sans-serif; }
 .vendor-slide .brand { font-size: .8em; letter-spacing: .12em; text-transform: uppercase; opacity: .8; }
 .vendor-slide h4 { color: #fff; margin: .2em 0 .6em; font-weight: 600; }
-.vendor-slide .stats { display: flex; gap: 1.2em; justify-content: space-around; margin: .6em 0; }
+.vendor-slide .stats { display: flex; flex-wrap: wrap; gap: 1.2em; justify-content: space-around; margin: .6em 0; }
 .vendor-slide .stat { text-align: center; }
 .vendor-slide .stat b { display: block; font-size: 2.4em; line-height: 1; }
 .vendor-slide .stat span { font-size: .85em; opacity: .9; }
@@ -21,7 +22,7 @@
 .press-clip .date { font-size: .75em; color: #6b5f48; }
 
 /* Comics and photos: keep them modest on the page. */
-.figure img.comic { max-width: 420px; }
+.figure img.comic { max-width: min(420px, 100%); }
 
 /* core-foundations chapter: a lab-report line and a chatbot reply, drawn in CSS so both are obviously illustrative. */
 .lab-report { max-width: 560px; margin: 1.2em auto; padding: .8em 1.1em; background: #fff; border: 1px solid #cfd6df; border-radius: 4px; font-family: "Courier New", Courier, monospace; font-size: .9em; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
@@ -78,3 +79,19 @@
    Their text colour is pinned here because otherwise it inherits the dark theme's pale body text. */
 .lab-report, .chat, .app-mock, .ehr-note, .chat-pane, .grounded-answer, .chunk, .press-clip { color: #1f2328; }
 .lab-report a, .chat a, .app-mock a, .ehr-note a, .chat-pane a, .grounded-answer a, .chunk a { color: #0f5c63; }
+/* A grid column will not shrink below its widest child by default, so a table in a reply pushed the pane past the text column. */
+.chat-pane { min-width: 0; }
+.chat-pane .reply { overflow-x: auto; }
+/* enrichment-workforce-economics: a horizontal bar chart drawn from zero. Mermaid's xychart starts bars at the axis minimum, which made a negative value look positive. Scale is -10 to +20; positions are percent of the track. */
+.hbars { max-width: 640px; margin: 1.2em auto; font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif; font-size: .9em; }
+.hbars-title { text-align: center; font-weight: 600; margin-bottom: .6em; }
+.hbar { display: grid; grid-template-columns: minmax(8em, 13em) 1fr; align-items: center; gap: .6em; margin: .35em 0; }
+.hbar .lbl { text-align: right; line-height: 1.2; }
+.hbar .track { position: relative; height: 1.8em; margin-right: 2.8em; }
+.hbar .zero { position: absolute; left: 33.33%; top: -.2em; bottom: -.2em; border-left: 1.5px solid currentColor; opacity: .6; }
+.hbar .bar { position: absolute; top: .2em; bottom: .2em; background: #4a90c2; border-radius: 2px; }
+.hbar .bar.neg { background: #c0563f; }
+.hbar .val { position: absolute; top: 50%; transform: translateY(-50%); white-space: nowrap; font-weight: 600; }
+.hbar .bar.neg + .val { transform: translate(-110%, -50%); }
+.hbar.axis .track { height: 1.2em; font-size: .8em; opacity: .75; }
+.hbar.axis .track span { position: absolute; transform: translateX(-50%); }
