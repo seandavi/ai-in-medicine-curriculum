@@ -34,7 +34,7 @@ It is 6:10 on the first Monday of intern year. You have six patients, a
 badge that opens more doors than it should, and a list.
 
 ```{=html}
-<div style="max-width:520px;margin:1.2em auto;padding:1em 1.3em;background:#fffdf5;border:1px solid #e0d9c3;border-left:6px solid #c9a227;font-family:'Segoe UI',Helvetica,Arial,sans-serif;box-shadow:2px 2px 0 #e0d9c3;">
+<div style="max-width:520px;margin:1.2em auto;padding:1em 1.3em;background:#fffdf5;color:#1f2328;border:1px solid #e0d9c3;border-left:6px solid #c9a227;font-family:'Segoe UI',Helvetica,Arial,sans-serif;box-shadow:2px 2px 0 #e0d9c3;">
 <div style="font-size:.75em;letter-spacing:.1em;text-transform:uppercase;color:#7a6a3a;">Mon · day 1 · before rounds</div>
 <ol style="margin:.5em 0 .3em 1.2em;padding:0;line-height:1.55;">
 <li>Pre-round: beds 4, 7, 9, 12, 14, 15. Overnight events, vitals, labs.</li>
@@ -250,7 +250,7 @@ Below is a progress note drafted by an assistant from a made-up chart. The
 patient is invented; the note is the kind you will be handed. Read the plan.
 
 ```{=html}
-<div style="max-width:600px;margin:1.2em auto;padding:0;border:1px solid #cfd6df;border-radius:6px;font-family:Menlo,Consolas,'Courier New',monospace;font-size:.82em;background:#f8fafc;box-shadow:0 4px 12px rgba(0,0,0,.12);">
+<div style="max-width:600px;margin:1.2em auto;padding:0;border:1px solid #cfd6df;border-radius:6px;font-family:Menlo,Consolas,'Courier New',monospace;font-size:.82em;background:#f8fafc;color:#1f2328;box-shadow:0 4px 12px rgba(0,0,0,.12);">
 <div style="background:#1565c0;color:#fff;padding:.45em .9em;font-family:'Segoe UI',Helvetica,Arial,sans-serif;font-size:.9em;display:flex;justify-content:space-between;"><span>&#10024; Draft progress note &middot; hospital day 3</span><span style="opacity:.8">Accept &middot; Edit &middot; Discard</span></div>
 <div style="padding:.8em 1em;line-height:1.5;color:#222;white-space:pre-wrap;">S: Pt reports breathing "a little better." Slept flat x2 pillows. No CP.
 O: T 37.1 HR 88 BP 118/70 RR 18 SpO2 94% RA. Wt 84.2 kg (admit 87.0).

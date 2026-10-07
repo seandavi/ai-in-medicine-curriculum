@@ -96,16 +96,16 @@ the specialty for 1,083 positions.[^nrmp]
 
 ```{mermaid}
 %%| label: fig-match
-%%| fig-alt: "Bar chart. Diagnostic radiology PGY-2 positions offered and filled in each Match from 2022 to 2026. Offered rose from 997 to 1,083; filled rose from 996 to 1,066. The two bars are nearly equal every year."
-%%| fig-cap: "Diagnostic radiology advanced (PGY-2) positions offered and filled in the Main Residency Match, 2022 to 2026. Redrawn from NRMP Results and Data 2026, Tables 3 and 7A. Positions rose every year; the gap between the bars is the number unfilled."
+%%| fig-alt: "Line chart. Diagnostic radiology PGY-2 positions offered and filled in each Match from 2022 to 2026. Offered rose from 997 to 1,083; filled rose from 996 to 1,066. The two lines are nearly equal every year."
+%%| fig-cap: "Diagnostic radiology advanced (PGY-2) positions offered and filled in the Main Residency Match, 2022 to 2026. Redrawn from NRMP Results and Data 2026, Tables 3 and 7A. Positions rose every year; the gap between the lines is the number unfilled. The axis starts at 900."
 xychart-beta
     accTitle: Diagnostic radiology advanced (PGY-2) positions offered and filled in the Main Residency Match, 2022 to 2026
-    accDescr: Bar chart. Diagnostic radiology PGY-2 positions offered and filled in each Match from 2022 to 2026. Offered rose from 997 to 1,083. Filled rose from 996 to 1,066. The two bars are nearly equal every year.
+    accDescr: Line chart. Diagnostic radiology PGY-2 positions offered and filled in each Match from 2022 to 2026. Offered rose from 997 to 1,083. Filled rose from 996 to 1,066. The two lines are nearly equal every year.
     title "Diagnostic radiology PGY-2 positions, NRMP Main Match"
     x-axis [2022, 2023, 2024, 2025, 2026]
     y-axis "Positions" 900 --> 1120
-    bar "Offered" [997, 1006, 1017, 1057, 1083]
-    bar "Filled" [996, 1006, 1016, 1042, 1066]
+    line "Offered" [997, 1006, 1017, 1057, 1083]
+    line "Filled" [996, 1006, 1016, 1042, 1066]
 ```
 
 The other workforce numbers agree. The Neiman Health Policy
@@ -382,18 +382,21 @@ that publishes ten-year employment projections for every occupation, in its
 *Occupational Outlook Handbook*. Three of those occupations sit side by side
 in the medical records department (@fig-bls).
 
-```{mermaid}
-%%| label: fig-bls
-%%| fig-alt: "Bar chart of projected employment change 2025 to 2035. Medical transcriptionists minus 4 percent, medical records specialists plus 8 percent, health information technologists plus 16 percent."
-%%| fig-cap: "Projected employment change, 2025 to 2035, for three health-information occupations. Redrawn from the BLS Occupational Outlook Handbook pages for each occupation, read 2026-09-07. Same industry, same technology, opposite directions."
-xychart-beta
-    accTitle: Projected employment change, 2025 to 2035, for three health-information occupations
-    accDescr: Bar chart of projected employment change 2025 to 2035. Medical transcriptionists minus 4 percent, medical records specialists plus 8 percent, health information technologists plus 16 percent.
-    title "BLS projected employment change, 2025–2035 (percent)"
-    x-axis ["Medical transcriptionists", "Medical records specialists", "Health information technologists"]
-    y-axis "Percent change" -10 --> 20
-    bar [-4, 8, 16]
+::: {#fig-bls}
+
+```{=html}
+<div class="hbars" role="img" aria-label="Bar chart of projected employment change 2025 to 2035. Medical transcriptionists minus 4 percent, medical records specialists plus 8 percent, health information technologists plus 16 percent.">
+<div class="hbars-title">BLS projected employment change, 2025–2035 (percent)</div>
+<div class="hbar"><span class="lbl">Medical transcriptionists</span><span class="track"><span class="zero"></span><span class="bar neg" style="left:20%;width:13.33%"></span><span class="val" style="left:20%">−4%</span></span></div>
+<div class="hbar"><span class="lbl">Medical records specialists</span><span class="track"><span class="zero"></span><span class="bar" style="left:33.33%;width:26.67%"></span><span class="val" style="left:61%">+8%</span></span></div>
+<div class="hbar"><span class="lbl">Health information technologists</span><span class="track"><span class="zero"></span><span class="bar" style="left:33.33%;width:53.33%"></span><span class="val" style="left:88%">+16%</span></span></div>
+<div class="hbar axis"><span class="lbl"></span><span class="track"><span style="left:0">−10</span><span style="left:33.33%">0</span><span style="left:66.67%">+10</span><span style="left:100%">+20</span></span></div>
+</div>
 ```
+
+Projected employment change, 2025 to 2035, for three health-information occupations. Redrawn from the BLS Occupational Outlook Handbook pages for each occupation, read 2026-09-07. Same industry, same technology, opposite directions.
+
+:::
 
 | Occupation | 2025 jobs | Projected change, 2025–35 | BLS's stated reason |
 |---|---|---|---|
