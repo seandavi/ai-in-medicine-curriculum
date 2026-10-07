@@ -49,6 +49,22 @@ on PubMed Central, the entry says so.
   12 min). A short conference talk on where clinical AI helps and where it
   goes wrong. <https://youtu.be/gF5QPYP6KIM>
 
+## Your applications and your coursework
+
+- **How to use AI in residency applications? Learn the rules of the road**
+  (AMA News, September 9, 2026; article). Summarises the AAMC's guidance for
+  applicants: AI may help you brainstorm, proofread, or edit, but it cannot be
+  the author, and the final application must be your own work. Read it before
+  you open a chatbot next to your personal statement.
+  <https://www.ama-assn.org/medical-students/preparing-residency/how-use-ai-residency-applications-learn-rules-road>
+- **Principles for the Responsible Use of Artificial Intelligence in and for
+  Medical Education** (AAMC, version 2.0, July 2025; web page). Seven
+  principles written for medical schools, including ethical and transparent
+  use and protecting data privacy. It does not set rules for students, but it
+  shows what schools and programs are building their own policies on. For your
+  school's rules on AI in coursework, check its own policy.
+  <https://www.aamc.org/about-us/mission-areas/medical-education/principles-ai-use>
+
 ## Appraisal and evidence
 
 - **The testing of AI in medicine is a mess. Here's how it should be done**
