@@ -310,8 +310,11 @@ tool has been validated locally, your institution's policy will say so, and
 Your institutional ChatGPT Edu account is not covered by a business associate
 agreement for clinical use unless your institution says it is. A business
 associate agreement is the contract that makes a vendor legally responsible
-for protecting patient data. Without one, pasting a real patient's labs into
-the tool is a privacy violation, whatever you intended. Consumer and free
+for protecting patient data. Without one, pasting a real patient's
+information into the tool can be an unauthorized disclosure, whatever you
+intended. Lab values alone may not identify anyone, but you are not the person
+who decides that; see [what counts as patient
+information](../course/patient-information.qmd). Consumer and free
 tiers never have one, and free tiers may use what you type to train the next
 model.
 
