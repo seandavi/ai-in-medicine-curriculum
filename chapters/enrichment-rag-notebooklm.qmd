@@ -408,6 +408,9 @@ business associate agreement, the contract that makes a vendor legally
 responsible for protecting patient data. An institutional account does not
 change the rule unless your institution has said in writing that it does. The
 rule is strict on purpose. The unusual cases are where people get it wrong.
+
+What counts as patient information, and why taking out the name is not
+enough: [the patient information page](../course/patient-information.qmd).
 :::
 
 ::: {.callout-tip title="Getting in"}

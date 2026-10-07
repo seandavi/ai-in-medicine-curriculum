@@ -471,6 +471,9 @@ sub-internship, a classmate's case, or a de-identified real chart. Consumer
 and institutional chatbots alike sit outside the business associate agreement
 that covers the EHR. Free tiers may also use what you type to train the next
 model.
+
+What counts as patient information, and why taking out the name is not
+enough: [the patient information page](../course/patient-information.qmd).
 :::
 
 ### Part A: your policy (20 minutes)

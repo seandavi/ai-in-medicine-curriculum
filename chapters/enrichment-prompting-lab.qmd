@@ -323,6 +323,9 @@ business associate agreement unless your institution tells you in writing that
 one exists. That agreement is the contract that makes a vendor legally
 responsible for protecting patient data. A tool your hospital runs inside the
 EHR is a different question, and [the ethics and regulation chapter](core-ethics-regulation.qmd) takes it up.
+
+What counts as patient information, and why taking out the name is not
+enough: [the patient information page](../course/patient-information.qmd).
 :::
 
 You will run one case twice, score both answers, and then check two claims from

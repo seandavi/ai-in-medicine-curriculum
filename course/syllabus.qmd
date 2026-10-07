@@ -20,7 +20,8 @@ in the course needs an install, a paid account, or a real patient.
 : A week in the course. The chapter times are stated in each chapter's subtitle. {#tbl-week}
 
 Three rules hold everywhere: **no patient information enters any tool, ever;
-verify before it counts; you sign the note.**
+verify before it counts; you sign the note.** What counts as patient information is on
+[its own page](patient-information.qmd).
 
 ## The default order
 

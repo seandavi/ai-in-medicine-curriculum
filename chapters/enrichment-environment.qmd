@@ -398,6 +398,9 @@ itself and read public documents. Your institutional account is not a
 clinical tool. It carries no agreement that covers patient data; [the ethics
 and regulation chapter](core-ethics-regulation.qmd) takes that up. If a question about the scribe's water
 use ever tempts you to paste in a note to "see what it costs," stop.
+
+What counts as patient information, and why taking out the name is not
+enough: [the patient information page](../course/patient-information.qmd).
 :::
 
 ### Part A: trace the bottle (15 minutes)

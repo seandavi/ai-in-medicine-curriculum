@@ -441,6 +441,9 @@ unless your institution has told you so explicitly. The question you will be
 tempted to ask about the patient from this morning is one you do not ask. And
 whatever drafts a note, you sign it. What to document when a tool helped is
 [the ethics and regulation chapter's](core-ethics-regulation.qmd) question.
+
+What counts as patient information, and why taking out the name is not
+enough: [the patient information page](../course/patient-information.qmd).
 :::
 
 ### Part A: overfitting you can see (8 minutes)

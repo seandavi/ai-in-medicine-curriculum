@@ -461,6 +461,9 @@ Nothing in this exercise involves a real patient, a real note, or a
 classmate's data. Mr. Alvarez is synthetic. If you use a chatbot at all in
 Part A, use it to find documents, not to answer the question. The answer must
 come from the primary source, with its URL and the date you checked it.
+
+What counts as patient information, and why taking out the name is not
+enough: [the patient information page](../course/patient-information.qmd).
 :::
 
 ### Part A: the regulatory scavenger hunt (20 minutes)
