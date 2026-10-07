@@ -5,26 +5,48 @@ institutional mechanics so it can be reassembled for any cohort. This file holds
 part that is specific to the CU Anschutz offering, because it exists nowhere else in
 the repo and is the first thing you will want when you come back to this cold.
 
-**Last updated: 2026-09-01.** Everything below is operational state and goes stale
+**Last updated: 2026-10-07.** Everything below is operational state and goes stale
 fast — check it before acting on it.
 
 ## The offering
 
 **IDPT 8079 — The Frontier of AI & Medicine.** A fourth-year selective at the
-University of Colorado Anschutz School of Medicine. ~40 MS4s, Zoom-only, ungraded.
+University of Colorado Anschutz School of Medicine. 49 MS4s enrolled for fall 2026
+(Canvas, 2026-10-07), Zoom-only, ungraded.
 This repo is the redesign; the course has run in prior years, and the AY 25-26
 evaluation data exists (see *Evaluation* below).
 
-**Dates for the next offering are not yet fixed.** Nothing downstream — guest
-invitations, pre-work account lists, the CQI cycle — can move until they are. Treat
-this as the first blocking question, not a detail.
+**Fall 2026 offering: October 12 to November 6, 2026** (Canvas course IDPT 8079
+A39F, unpublished as of 2026-10-07; its modules and assignments are still the 2025
+copy). The student-facing week-by-week plan is in `course/syllabus.qmd`.
+
+## Delivery, fall 2026 (decided 2026-10-07)
+
+- **Week 1 (Oct 12 to 16):** the course director teaches live: welcome and adult
+  learning (from the 2024 Google Slides intro deck), history of AI, then AI to ML
+  to DL to LLMs (the foundations deck, PR #60, trimmed; keep a few slides on
+  overfitting). Students read `core-foundations` and `core-centaur-cyborg`.
+- **Weeks 2 to 4, each week:** Monday 60 min, recorded (start of week, demo,
+  questions); mid-week 60 min open lab, recorded, the class votes from
+  `appendix/open-labs.qmd`; guest talks (attend or watch two); resource log due
+  Thursday night; Friday small group, required, one of three slots, 60 min,
+  breakout rooms of 4 to 5 with the same members each week. No live teaching of
+  chapter content unless week 2's resource logs and Friday discussions show
+  students are not doing the chapters.
+- **Why not teach the chapters live:** October to November is residency interview
+  season; recordings plus self-contained chapters keep away students on track.
+- **Submissions:** Microsoft Form (university login, data stays in CU Microsoft
+  365), reviewed on Fridays. A custom submission and chatbot app is a
+  post-course project; start CU's data-use review early.
+- **Chat channel:** undecided. Microsoft Teams preferred over Discord (no new
+  accounts, stays inside the institution).
 
 ## People
 
 | Role | Who |
 |---|---|
 | Course director | Sean Davis |
-| Co-directors | Christina Olson (pediatric hospitalist; Telehealth Medical Director, Children's Colorado) · Matt Zuckerman (emergency medicine) |
+| Co-directors | Christina Olson (pediatric hospitalist; Telehealth Medical Director, Children's Colorado): one two-hour session with students in fall 2026 · Matt Zuckerman (emergency medicine): one or two lectures. The course director runs everything else alone. |
 | Dean-level champion | Shanta Zimmer |
 | Course coordinator / CQI | Maritza Casillas |
 | Evaluation data | Erin Broening |
@@ -37,9 +59,19 @@ consumer of `curriculum/competencies.md`.
 
 ## Guest lecturers
 
-The design constraints cap guests deliberately — **one per session, two across the
-whole course.** Every session is built to pair an idea with an activity, and a
-guest-heavy course reverts to lectures without anyone deciding to.
+**Fall 2026: the two-guest cap is lifted for weeks 2 to 4** (decided 2026-10-07).
+The course director teaches week 1; guests give 45 to 50 minute talks plus
+questions in weeks 2 to 4, from a signup sheet (Google Sheet
+"ai-in-medicine-lecturer-signup": Monday to Thursday, 9, 10, 11 and 1, Oct 19 to
+Nov 6, 48 slots). The chapters carry the course's teaching, so the risk the cap
+guarded against (the course turning back into lectures) is handled by making the
+chapters and Friday groups the spine, not the talks. Confirmed as of
+2026-10-07: Mike Rosenberg (cardiology, Thu Oct 29, 1 pm), Elizabeth Kudron
+(pediatrics, Mon Nov 2, 11 am), Sorabh Singhal (psychiatry, Mon Nov 2, 1 pm).
+
+The original reasoning for the cap, kept for future offerings: every session pairs
+an idea with an activity, and a guest-heavy course reverts to lectures without
+anyone deciding to.
 
 The strongest local source is the **UCHealth Oncology AI Steer Group**, which as of
 Aug 2026 was preparing a patient-facing AI tipsheet for system-wide release. Its
