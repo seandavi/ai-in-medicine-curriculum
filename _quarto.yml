@@ -61,7 +61,10 @@ link-citations: true
 
 format:
   html:
-    theme: cosmo
+    # Modern-textbook theme over Bootstrap; dark mode swaps the palette only.
+    theme:
+      light: [theme/textbook.scss]
+      dark: [theme/textbook.scss, theme/textbook-dark.scss]
     css: styles.css
     # Mermaid's auto-derived theme gave dark node fills with dark text; neutral is
     # light boxes, black text, readable regardless of the page theme.
