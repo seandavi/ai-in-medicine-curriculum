@@ -164,3 +164,17 @@ main.content table th { border-bottom: 2px solid $ink; }
 
 // Previous / next chapter links at the foot of each page.
 .nav-page a { color: $accent; font-weight: 600; }
+
+// Long bare URLs and long link text break rather than run into the margin.
+main.content a.uri { overflow-wrap: anywhere; }
+main.content { overflow-wrap: break-word; }
+// Inline code (search strings, prompts) wraps like text; code blocks still scroll.
+main.content :not(pre) > code { white-space: normal; overflow-wrap: anywhere; }
+// Mermaid clips axis labels at the SVG edge; let them show.
+main.content .mermaid svg, main.content .cell-output-display svg { overflow: visible; }
+
+// On a phone, a table wider than the screen scrolls sideways inside its own box
+// instead of pushing the page wider.
+@media (max-width: 767.98px) {
+  main.content table { display: block; max-width: 100%; overflow-x: auto; }
+}
