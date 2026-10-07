@@ -88,6 +88,34 @@ item is the reason this chapter closes the course.
 
 ## How it works
 
+### How a scribe turns a conversation into a note
+
+An ambient scribe does four things in order. Errors can enter at the second
+and third steps, and they look different.
+
+::: {.pipeline}
+<div class="step"><b>1. Record</b><span>A phone or room microphone records the visit. This is the step that needs the patient's consent.</span></div>
+<div class="step"><b>2. Transcribe</b><span>Speech recognition turns the audio into text and tries to tell the speakers apart.</span><em>Errors here: a word misheard, a "no" dropped, a daughter's words put in the patient's mouth.</em></div>
+<div class="step"><b>3. Summarize</b><span>A language model reads the transcript and writes a draft note, section by section.</span><em>Errors here: a sentence that was never said, a detail mentioned in passing left out.</em></div>
+<div class="step"><b>4. Review and sign</b><span>You edit the draft. Your signature makes every sentence yours.</span></div>
+<div class="fine">Illustrative diagram for this chapter, not any vendor's design.</div>
+:::
+
+The difference matters when you read the draft. A transcription error often
+*looks* wrong: an odd word, a drug name that does not fit. A summarizing error
+usually looks right. The model writes the kind of sentence that usually appears
+in a note like this one. Mr. Alvarez's draft is that kind. The transcript could
+have been perfect, and the summary could still say what is usual for a patient
+with atrial fibrillation: that he continues apixaban. So read the draft against
+what you remember the patient *said*, not against what sounds like a normal note.
+
+You will likely meet one of these tools on your first day of residency. In
+February 2026, UCHealth announced it was rolling out Abridge, an ambient scribe,
+across its system, after a nine-month pilot with 250 clinicians ([press
+release](https://www.businesswire.com/news/home/20260224659841/en/UCHealth-Partners-With-Abridge-to-Deploy-Enterprise-Grade-AI-Systemwide-Enhancing-Patient-and-Provider-Experience)).
+The [scribe open lab](../appendix/open-labs.qmd#hear-it-draft-it-check-it-a-scribe-from-the-inside) lets you watch each step make its own
+kind of error, on a made-up visit.
+
 ### No court has answered yet, and what a plaintiff must prove anyway
 
 Malpractice is a type of negligence. To win a negligence case, the person

@@ -1,0 +1,244 @@
+---
+title: "Open labs"
+---
+
+An open lab is an hour spent *trying* something: a tool, a workflow, a way of
+working that is hard to picture until you have done it. The objectives are
+loose on purpose. The point is the experience, and what you notice.
+
+The format borrows from NYU Langone's Prompt-a-thon, where staff picked a
+project from a set of "project cards" and worked through it with a chatbot.
+Participants reported more confidence afterwards, whether or not they had
+been given sample prompts [@pmid:39042600]. That was a survey after one
+event, so it shows the format was liked, not that it taught skills. The
+[project cards](https://github.com/smallw03/NYULH-Generative-AI-Prompt-a-thon-Project-Cards)
+are public if you want more ideas.
+
+**How they run.** Each week of weeks 2 to 4, the class votes on one lab, and we
+do it together live for an hour on Zoom. The session is recorded. You can also
+do any lab on your own, at any time, from this page. Every lab is
+self-contained: it says what you need, it uses free or university tools in a
+browser, and it uses made-up material only.
+
+**How to vote.** [VERIFY: link to the vote (a Canvas survey or a Microsoft
+Form), opened each Monday]{.verify} Pick the lab you would most like to do
+live. The others stay here for you to try on your own.
+
+::: {.callout-warning title="No patient information, ever"}
+Every lab uses invented patients, public documents, or your own made-up
+material. Do not swap in anything from a rotation. Your university ChatGPT Edu
+and Copilot accounts are covered for patient care, and these labs are not
+patient care.
+
+What counts as patient information, and why taking out the name is not
+enough: [the patient information page](../course/patient-information.qmd).
+:::
+
+## The labs
+
+| Lab | You will have... | Time | Status |
+|---|---|---|---|
+| [Hear it, draft it, check it](#hear-it-draft-it-check-it-a-scribe-from-the-inside) | watched a scribe mishear a visit and a model invent part of the note | 60 min | Ready |
+| [Same question, three tools](#same-question-three-tools) | seen how much the wording and the tool change the answer | 45 min | Ready, in [the prompting lab](../chapters/enrichment-prompting-lab.qmd) |
+| [A study guide that cites its sources](#a-study-guide-that-cites-its-sources) | built a notebook from papers you chose and caught what it adds | 45 min | Ready, in [the grounding chapter](../chapters/enrichment-rag-notebooklm.qmd) |
+| [Build a calculator, then break it](#build-a-calculator-then-break-it) | built a working clinical tool in an hour and found what is wrong with it | 60 min | Ready, in [the agentic coding chapter](../chapters/enrichment-agentic-coding.qmd) |
+| [Draw me a doctor](#draw-me-a-doctor) | counted who an image model pictures when you ask for a doctor, a nurse, a surgeon | 30 min | Idea |
+| [The patient who talks back](#the-patient-who-talks-back) | practised a hard conversation with a chatbot playing the patient | 45 min | Idea |
+| [Deep research, checked](#deep-research-checked) | checked every citation in a chatbot's "deep research" report | 45 min | Idea |
+| [Teach a machine in ten minutes](#teach-a-machine-in-ten-minutes) | trained an image classifier in your browser and watched it fail on new pictures | 30 min | Idea |
+| [Write your own board question](#write-your-own-board-question) | written exam-style questions with a chatbot and checked the answer and every wrong option | 45 min | Idea |
+| [A handout your patient can read](#a-handout-your-patient-can-read) | made a patient handout plainer, translated it, and checked what changed | 45 min | Idea |
+
+"Ready" labs are written out in full. "Idea" labs are a short description for
+now; the ones the class votes for get written out first.
+
+## Hear it, draft it, check it: a scribe from the inside
+
+You will play a clinic visit, turn it into a transcript, have a chatbot draft
+the note, and then check the note the way you would at 6:40 p.m. with fourteen
+notes to sign. The point is to see the two kinds of error from [the ethics
+chapter](../chapters/core-ethics-regulation.qmd): words *misheard* when speech
+becomes text, and sentences *never said* when a model writes the note.
+
+**Time.** About 60 minutes. **You need** your university Microsoft 365 login
+(for Word for the web) and your university ChatGPT Edu or Copilot login. The
+visit is invented. Nothing installs.
+
+::: {.callout-warning title="No patient information, ever"}
+The visit below is fiction, written for this lab. Do not replace it with a
+visit you saw on a rotation, and do not record a real patient. Your university
+accounts are covered for patient care, and this is coursework.
+
+What counts as patient information, and why taking out the name is not
+enough: [the patient information page](../course/patient-information.qmd).
+:::
+
+### The visit
+
+Three speakers: the clinician (C), the patient, Mrs. Ellen Park, 79 (P), and
+her daughter (D). Read it at a normal speed, with the pauses and corrections as
+written. It takes about three minutes.
+
+```{.script}
+C: Good morning, Mrs. Park. What brings you in today?
+P: The dizziness. It started Tuesday. No, wait, it was Sunday. Sunday after church.
+C: Any chest pain with it?
+P: No chest pain. No. And I'm not short of breath.
+C: Are you still taking the hydralazine, twenty-five milligrams three times a day?
+P: Yes. And I took some of my husband's hydroxyzine for the itching last week.
+C: Okay. Anything else changed with your medicines?
+P: I stopped the atorvastatin about a month ago. My legs ached.
+D: She's been falling, though. Twice this month.
+P: I didn't fall. I sat down hard. That's different.
+C: Are you checking your sugars at home?
+P: Usually around one fifty. Sometimes two fifty in the morning.
+C: Let's hold the hydralazine if you're dizzy when you stand,
+   check your blood pressure lying and standing today,
+   and I'll see you back in two weeks.
+D: We can't come back in two weeks. Her grandson's wedding is in Fort Collins.
+C: Then three weeks, and call us if the dizziness gets worse.
+```
+
+### Part A: record and transcribe (10 minutes)
+
+Two or three of you read the parts. Alone, read all of them and change your
+voice a little for each speaker.
+
+1. Open a blank document in **Word for the web** with your university login.
+2. Choose **Dictate**, then **Transcribe**, then **Start recording**. Read the
+   visit. Stop, and let Word finish the transcript.
+3. Copy the transcript into a new document.
+
+If Transcribe is not available in your account, use your phone's voice-memo
+app if it makes a transcript. If neither works, skip to Part C and use the
+script above as a perfect transcript. You will lose the transcription errors,
+but not the drafting ones.
+
+### Part B: what was misheard (5 minutes)
+
+Read the transcript against the script. Mark every place where it differs:
+a word misheard, a "no" dropped, a speaker label wrong, a correction lost.
+Drug names that sound alike are the first place to look.
+
+### Part C: draft the note (5 minutes)
+
+Paste the transcript into ChatGPT Edu or Copilot, signed in with your
+university account, with this prompt:
+
+```
+You are an ambient documentation tool in an outpatient clinic.
+Write a SOAP progress note from this visit transcript.
+Use standard clinical abbreviations.
+```
+
+### Part D: check it as if you were signing it (25 minutes)
+
+Go through the note sentence by sentence against the script. Put every problem
+in one of five boxes:
+
+| Box | What it means | Which step it came from |
+|---|---|---|
+| Misheard | The transcript was wrong and the note repeated it | Transcribe |
+| Never said | A statement that is not in the visit at all | Summarize |
+| Left out | Something said that the note dropped | Summarize |
+| Wrong person | Something the daughter said, written as the patient's | Either |
+| True but not yours | Correct, but not what you would sign, such as a plan you did not make | Summarize |
+
+Then look hard at four lines: the start of the dizziness, the falls, the two
+"-zine" drugs, and the atorvastatin. Those are where this visit was built to
+go wrong. If your note gets all four right, compare it with a neighbour's.
+The same prompt can give different notes.
+
+**Optional, 10 more minutes.** Run Part C again, but paste the *script* instead
+of your transcript. Any error left now cannot be a transcription error. That
+shows you what the model adds on its own.
+
+### Part E: one rule (5 minutes)
+
+Write one sentence: the rule you will use to read a scribe's draft before you
+sign it. In the live lab, we collect these and compare.
+
+::: {.self-check}
+In Mr. Alvarez's case, the note said he "continues apixaban" after he said he
+had stopped it. Which step most likely produced that sentence?
+
+- Record
+- Transcribe
+- [Summarize]{.correct}
+
+::: {.explain}
+It is a fluent sentence that says what is usual for a patient with atrial
+fibrillation. A transcription error tends to look like a wrong word. A
+sentence that sounds exactly like a normal note, and is false, is the
+summarizing step's kind of error.
+:::
+:::
+
+## Same question, three tools
+
+Ask one clinical question three ways, in three tools, and put the answers side
+by side. You will see how much the wording of a question, and the tool you
+ask, changes what comes back. Written out in full as [the prompting
+lab](../chapters/enrichment-prompting-lab.qmd).
+
+## A study guide that cites its sources
+
+Load a few published papers you chose into NotebookLM, ask it questions, and
+check each answer against the paper it cites. You will see what grounding in
+your own sources fixes, and what it does not. Written out in full in [the
+grounding chapter](../chapters/enrichment-rag-notebooklm.qmd).
+
+## Build a calculator, then break it
+
+Describe a clinical score to an AI app builder and have it build a working
+calculator in the browser. Then try to break it with made-up patients at the
+edges. You will see how fast a tool appears, and how hard it is to know
+whether it is right. Written out in full in [the agentic coding
+chapter](../chapters/enrichment-agentic-coding.qmd).
+
+## Draw me a doctor
+
+*Idea.* Ask an image generator for "a doctor", "a nurse", "a surgeon", "a
+patient with a rash". Make twenty of each and count what you see: age, sex,
+skin tone, setting. Compare with real workforce numbers. Connects to [bias and
+equity](../chapters/core-bias-equity.qmd).
+
+## The patient who talks back
+
+*Idea.* Give a chatbot a made-up patient and a hard conversation: a new
+cancer diagnosis, a medication error, a patient who wants antibiotics for a
+cold. Have it play the patient while you play the doctor, then ask it to play
+an observer and critique you. Connects to [talking to
+patients](../chapters/core-patient-communication.qmd). [NYU Grossman's Prompt-a-Thon library](https://promptathon.iime.cloud/)
+has virtual-patient prompts to start from; copy them into your university
+ChatGPT Edu or Copilot.
+
+## Deep research, checked
+
+*Idea.* Run a "deep research" query on a narrow clinical question. Then check
+every citation in the report: does the paper exist, does it say that, is it
+the best evidence? Connects to [critical
+appraisal](../chapters/core-appraisal.qmd).
+
+## Teach a machine in ten minutes
+
+*Idea.* Train an image classifier in your browser with a free tool and your
+webcam: two classes, a few dozen pictures each. Then change the lighting, the
+background, or the person, and watch it fail. Connects to [how these systems
+work](../chapters/core-foundations.qmd).
+
+## A handout your patient can read
+
+*Idea.* Take a public patient handout, ask a chatbot to rewrite it at a sixth-
+grade reading level and then translate it into Spanish. Translate it back and
+compare. What changed, and what would a patient now misunderstand? Connects to
+[talking to patients](../chapters/core-patient-communication.qmd).
+
+## Write your own board question
+
+*Idea.* Ask a chatbot to write five exam-style multiple-choice questions on a
+topic you are studying. Then check each one against a real source: is the
+keyed answer right, is each wrong option clearly wrong, and would the question
+teach anything? [NYU Grossman's Prompt-a-Thon library](https://promptathon.iime.cloud/) has question-writing prompts to start from. Connects to
+[critical appraisal](../chapters/core-appraisal.qmd).
+

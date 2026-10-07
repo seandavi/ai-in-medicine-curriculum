@@ -250,3 +250,34 @@ main.content .mermaid svg, main.content .cell-output-display svg { overflow: vis
   border-radius: 4px;
   cursor: pointer;
 }
+
+// A numbered process drawn as steps (core-ethics-regulation: how a scribe works).
+// Uses the palette, so it follows light and dark mode.
+.pipeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+  gap: .6rem;
+  margin: 1.4rem 0;
+  font-family: $font-family-sans-serif;
+  font-size: .88rem;
+  line-height: 1.4;
+  .step {
+    padding: .7rem .8rem;
+    background: $paper-sunk;
+    border: 1px solid $rule;
+    border-top: 4px solid $accent;
+    border-radius: 0 0 6px 6px;
+    b { display: block; margin-bottom: .3rem; color: $accent; }
+    span { display: block; }
+    em { display: block; margin-top: .45rem; font-style: normal; color: $alert; }
+  }
+  .fine { grid-column: 1 / -1; font-size: .75rem; color: $ink-muted; }
+}
+
+// A script to read aloud (open labs): wraps like prose, so nobody scrolls sideways mid-sentence.
+main.content pre.script, main.content div.script pre {
+  white-space: pre-wrap;
+  font-family: $font-family-sans-serif;
+  font-size: .95rem;
+  line-height: 1.6;
+}
