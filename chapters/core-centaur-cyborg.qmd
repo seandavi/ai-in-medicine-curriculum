@@ -1,32 +1,26 @@
 ---
 title: "Centaur or cyborg: what you hand to the machine, and what you keep"
-subtitle: "AIM-5 · AIM-X · AIM-4 · about 90 minutes"
+subtitle: "AIM-5 · AIM-X · AIM-4 · about one hour"
 ---
 
 ::: {.callout-note title="What you'll learn"}
-By the end of this chapter you will be able to:
+By the end of this chapter you will have:
 
-1. Sort the tasks on an intern's list into three kinds of use. For each, give
-   a reason that names the task's risk and whether any tool has been validated
-   for it.
-2. Tell deskilling from never-skilling from mis-skilling, and name one task in
-   your own coming internship at risk from each.
-3. Rewrite a prompt that asks for an answer into one that asks for a hint,
-   using the Who / Where / What pattern, and say what the rewrite made you do
-   that the original did not.
-4. State what the randomized trials of physicians working with a language model
-   found, what the randomized studies of learners found, and name two techniques
-   that counter the second finding.
-5. Say what you document, and whom you tell, when a machine drafted something
-   that carries your signature.
-6. Write down which part of clinical judgment you will not hand over, and why.
+1. Used a chatbot for three everyday tasks of a new intern, and kept the
+   prompt that worked best as something you will use again.
+2. Decided, for a task, whether to work with the machine as a centaur or a
+   cyborg, by asking what happens if the output is wrong.
+3. Turned a prompt that asks for an answer into one that asks for a hint, and
+   had the tool quiz you.
+4. Named the three ways a tool can cost you a skill, and the habit that
+   protects against each.
+5. Written down the one part of clinical judgment you will not hand over, and
+   why.
 :::
 
-**Time.** About 30 minutes of reading, 25 minutes of listening, 30 minutes of
-doing, and five minutes at the end that you should not skip. You need one
-general-purpose chatbot for the second half of the Do; your institutional
-ChatGPT Edu or Microsoft Copilot account is enough, and so is any free
-general-purpose chatbot. The first half of the Do needs only a pen. There is nothing to install.
+**Time.** About 20 minutes of reading, 30 minutes of doing, and five minutes
+at the end. The podcast is optional. You need your university ChatGPT Edu or
+Microsoft Copilot account. There is nothing to install.
 
 ## The first list
 
@@ -50,58 +44,50 @@ badge that opens more doors than it should, and a list.
 
 Your senior resident has been an intern for exactly one year. She looks at the
 list and says what every senior says now: "Have it draft the notes. Have it
-draft the discharge summary. That's what it's for." She means the assistant
-built into the chart, the one with the sparkle icon, or the institutional
-chatbot in the other tab. She is right that it can. Last week, on your
-sub-internship, you watched an attending send an AI-drafted reply to a patient
-message without reading it. Nobody said whether that was fine.
+draft the discharge summary. That's what it's for." She is right that it can.
+She has also found it useful for things nobody told her about: getting the
+gist of a paper in five minutes, rewriting a patient handout so a
+twelve-year-old could follow it, rehearsing a phone call she was dreading.
 
-Look at the list again with one question. For each line, if you hand it to the
-machine, what do you get back, and what do you lose? The notes are the easy
-case. Even there the answer splits in two. A note that is *drafted* for you and
-a note that is *written* by you are different things that share one template.
-The discharge summary is the hard case. It is the only document on the list
-that forces you to read eleven days of chart and decide what happened to this
-person. That reading is most of what you will know about them when their
-primary care doctor calls you next month. The consult question is a different
-kind of hard. The machine will produce a very good question. But the reason you
-are calling is that you do not yet know what to ask.
+So look at the list again with two questions. For each line, what could the
+machine do for you that you have not thought of? And if you hand it over, what
+do you get back, and what do you lose? The notes are the easy case. Even there
+the answer splits in two. A note that is *drafted* for you and a note that is
+*written* by you are different things that share one template. The discharge
+summary is harder. It is the only document on the list that forces you to read
+eleven days of chart and decide what happened to this person. The consult
+question is a different kind of hard. The machine will produce a very good
+question. But the reason you are calling is that you do not yet know what to
+ask.
 
-This chapter is about that sorting. It does not ask whether you should use
-these tools at all. You will meet them in the chart regardless, and "never" is
-one of the verdicts open to you for any single line. It asks *what kind* of
-use, for *which* task, at *what* risk. And it asks you to write your answer
-down.
+This chapter is about that sorting, and about getting good at the part you do
+hand over. **It is your job to learn where these tools help your work.** Nobody
+can do the sorting for you, and the way to learn it is to try.
 
 ## Why this matters
 
-In three months, the list above is yours. The tool will be in the chart whether
-or not you have decided how to use it. Health systems are building these
-assistants into systems you do not control. You will use them more often, with
-less supervision, and with more freedom, in roughly that order. Two of this
-course's faculty, quoted from its prior session, describe the two ends of this.
-One put it bluntly at a national medical-education meeting: you *can* choose to
-avoid AI, but is that really an option? (Chad Stickrath, MD). The other, a
-pediatric hospitalist, said what this chapter must not forget: we should
-be scared, because what we do is scary (Christina Olson, MD). Both are right.
+In three months, the list above is yours, and the tool will be in the chart
+whether or not you have decided how to use it. Two of this course's faculty,
+quoted from its prior session, describe the two ends of this. One asked
+whether avoiding AI is really an option (Chad Stickrath, MD). The other, a
+pediatric hospitalist, said we should be scared, because what we do is scary
+(Christina Olson, MD). Both are right. This chapter is about using the tool
+well enough that the first is true without forgetting the second.
 
-There is a second reason, and it is specific to your stage of training. You are
-about to learn clinical reasoning for the first time, on real patients. A tool
-will be available that produces a plausible answer to every question you were
-supposed to struggle with. Someone who has practiced for fifteen years and
-starts using these tools risks losing a skill. You risk never gaining it, or
-gaining it wrong. Those are three different problems. The most useful point in
-this chapter is that they need three different defenses.
+There is one thing specific to your stage of training. You are about to learn
+clinical reasoning on real patients, with a tool that produces a plausible
+answer to every question you were supposed to struggle with. Used one way, it
+makes you better faster. Used another way, it stops you learning. The
+difference is mostly in how you ask.
 
 ## How it works
 
 ### Two ways to work with a machine
 
-[the appraisal chapter](core-appraisal.qmd) ends with a randomized trial and a puzzle, and this
-chapter starts there. Fifty
-physicians were each given six diagnostic cases. Half also had a language
-model: the kind of AI behind ChatGPT and Copilot, a program that produces text
-in reply to text. The physicians with the model did no better than the
+[The appraisal chapter](core-appraisal.qmd) ends with a randomized trial and a
+puzzle, and this chapter starts there. Fifty physicians were each given six
+diagnostic cases. Half also had a language model: the kind of AI behind
+ChatGPT and Copilot. The physicians with the model did no better than the
 physicians without it. The adjusted difference was 2 points on a 100-point
 reasoning score (95% CI −4 to 8). The model working alone scored 16 points
 above the physicians (95% CI 2 to 30) [@pmid:39466245].
@@ -141,49 +127,36 @@ paper reports the difference, not a median. Redrawn from the published numbers
 [@pmid:39466245]; data are not copyrightable.
 :::
 
-The tool was capable. The physicians using it did not get the benefit. The
-authors read the gap as a training problem. They call for "technology and
-workforce development to realize the potential of physician–artificial
-intelligence collaboration." Workforce development means you.
+The tool was capable. The physicians did not get the benefit. The same group
+ran a second trial a year later, on management rather than diagnosis. This
+time the physicians with the model scored 6.5 points higher than those without
+(95% CI 2.7 to 10.2), and could not be told apart from the model alone
+[@pmid:39910272]. Same team, same kind of tool, opposite result. What changed
+was the task, and how the physicians worked with it. That is a skill, and
+skills can be learned.
 
-The same group ran a second trial a year later, this time on management rather
-than diagnosis. Ninety-two physicians worked through five cases, making
-treatment and testing decisions as each case unfolded. This time the
-physicians with the model scored 6.5 points higher than those without (95% CI
-2.7 to 10.2). They spent about two minutes longer per case. Their scores could
-not be told apart from the model alone [@pmid:39910272]. Two trials, same
-team, same kind of tool, opposite result. The thing that changed was not the
-model. It was the task, and how the physicians worked with it.
+There are names for the ways of working. They come from a 2023 experiment in
+which several hundred management consultants were given GPT-4, and researchers
+watched how the successful ones worked [@doi:10.2139/ssrn.4573321]:
 
-There are names for those ways of working. They come from a 2023 field
-experiment in which several hundred management consultants were given GPT-4,
-the model behind ChatGPT at the time. The researchers watched how the successful ones worked
-[@doi:10.2139/ssrn.4573321]. Two patterns appeared, and the names are still used:
-
-- A **centaur** divides the work. Like the creature, there is a clean line
-  between the human half and the horse half. You give the machine one clearly
-  marked piece of the task. You keep the rest. You check what comes back
-  before you use it anywhere.
+- A **centaur** divides the work. There is a clean line between the human half
+  and the horse half. You give the machine one clearly marked piece of the
+  task, keep the rest, and check what comes back before you use it.
 - A **cyborg** blends the work. You move back and forth with the machine
   inside a single piece of work: drafting a sentence, asking for three
   alternatives, taking one, rewriting it, asking what is missing.
 
-Neither way is the correct one. Chess players were the first to use the word
-centaur, after Kasparov's human-plus-computer exhibition matches in the late
-1990s. Within a few years they found the same thing: in a 2005 online tournament,
-two amateurs with three computers and a good process beat grandmasters with a
-worse one.[^kasparov] The skill is knowing which way of working a task calls
-for, and switching. The 2025 *NEJM*
-review this chapter is based on gives a simple rule [@pmid:40834302]. Work
-as a centaur for high-stakes tasks, and for tools that have not been validated
-for the use you are putting them to. Work as a cyborg where the task is
-low-risk or creative, or where the tool is well validated for exactly this.
-@fig-modes turns that rule into two questions.
+The same study found something worth remembering. The tool helped most on
+tasks inside what it could do well, and hurt on tasks just outside it. The
+authors called that uneven edge the **jagged frontier**. You cannot see where
+the frontier runs from the outside, and it moves every few months. You find it
+by trying things.
 
-[^kasparov]: Garry Kasparov, "The Chess Master and the Computer," *New York
-    Review of Books*, 11 February 2010,
-    <https://www.nybooks.com/articles/2010/02/11/the-chess-master-and-the-computer/>.
-    Kasparov's own account; an essay, not a study.
+Neither way of working is the correct one. The skill is knowing which a task
+calls for. The 2025 *NEJM* review this chapter is based on gives a simple rule
+[@pmid:40834302]: work as a centaur when the stakes are high or the tool is
+not validated for that use; work as a cyborg when the task is low-risk or
+creative. @fig-modes turns that into two questions.
 
 ```{mermaid}
 %%| label: fig-modes
@@ -201,53 +174,30 @@ flowchart TD
   V2 -- Yes --> C4["Cyborg.<br/>Go back and forth freely."]
 ```
 
-[the appraisal chapter](core-appraisal.qmd) spends two hours on the phrase "validated for this use."
-Here it means one thing. Someone has measured how the tool performs on *this*
-task, on patients like yours, and you know the number. Take an ambient scribe,
-the tool that listens to a visit and drafts the note. With three randomized
-trials behind it, it is validated for drafting a visit note. The same product
-is not validated for writing your discharge summary. The chatbot in the other
-tab is validated for nothing on your list. The validation column will look
-different in twelve months. The sorting will not.
+"Validated for this use" means someone has measured how the tool performs on
+*this* task, on patients like yours. An ambient scribe, with randomized trials
+behind it, is validated for drafting a visit note. The same product is not
+validated for writing your discharge summary. The chatbot in the other tab is
+validated for nothing on your list, which is why it belongs on the cyborg side
+for low-risk work and the centaur side for anything that reaches a patient.
 
-### Three ways to lose a skill
+### Three ways to lose a skill, and how to keep it
 
-The 2025 review names three perils. They are worth learning as three words,
-because the defenses differ [@pmid:40834302]:
+The review names three ways a tool can cost you a skill
+[@pmid:40834302]. They are worth knowing as three words, because the habit
+that protects you is different for each:
 
-- **Deskilling**: losing a reasoning skill you had.
-- **Never-skilling**: never learning a skill at all, because the tool arrived
-  before the skill did.
-- **Mis-skilling**: learning a wrong pattern, because the tool's plausible
-  wrong answers became your template.
-
-None of these is hypothetical. Two of them have been measured.
-
-**Deskilling has a number.** At four endoscopy centers in Poland, computer-aided
-polyp detection was switched on at the end of 2021. In the three months
-*before*, endoscopists doing ordinary colonoscopy without the tool found
-adenomas in 28.4% of patients. In the three months *after*, doing the same
-colonoscopy on days the tool was off, they found them in 22.4%. That is an
-absolute drop of 6 points (95% CI −10.5 to −1.6). It happened in a skill these
-were experts at, after a few months of having a machine draw the boxes for
-them [@pmid:40816301]. The study is observational and the authors say "might."
-But the direction is the one every clinician who has stopped reading their own
-ECGs would predict.
-
-**Never-skilling has a trial.** Nearly a thousand high-school students in
-Turkey were randomized during math practice sessions to one of three groups:
-no AI, a plain GPT-4 chat, or a GPT-4 "tutor" prompted to give hints rather
-than answers. While they had the tool, both AI groups did far better on
-practice problems: 48% higher scores with the plain chat, 127% with the tutor.
-Then the tool was taken away for the exam. The plain-chat students scored 17%
-*worse* than the students who had never had access. The tutor group's losses
-were much smaller [@pmid:40560616]. The authors' word for what the plain
-chat became is *crutch*. The finding is not that the tool failed. The thing it
-improved and the thing the students needed were two different things.
-
-**Mis-skilling has no trial yet.** That is why the chapter draws it instead.
-Below is a progress note drafted by an assistant from a made-up chart. The
-patient is invented; the note is the kind you will be handed. Read the plan.
+- **Deskilling**: losing a skill you had. At four endoscopy centers, doctors
+  doing colonoscopy on days without the AI tool found adenomas in 22.4% of
+  patients, after a few months of working with it, against 28.4% before it
+  arrived. The study is observational [@pmid:40816301].
+- **Never-skilling**: never building a skill, because the tool answered
+  first. In a randomized trial of nearly a thousand students, a plain chatbot
+  raised practice scores and then *lowered* exam scores once it was taken
+  away. A version set up to give hints instead of answers had a much smaller
+  cost [@pmid:40560616].
+- **Mis-skilling**: learning a wrong pattern from plausible output. Read the
+  plan in this made-up draft note.
 
 ```{=html}
 <div style="max-width:600px;margin:1.2em auto;padding:0;border:1px solid #cfd6df;border-radius:6px;font-family:Menlo,Consolas,'Courier New',monospace;font-size:.82em;background:#f8fafc;color:#1f2328;box-shadow:0 4px 12px rgba(0,0,0,.12);">
@@ -269,15 +219,12 @@ Dispo: continue inpatient diuresis.</div>
 </div>
 ```
 
-Problem 2 is fluent and correctly formatted. It also contradicts problem 1.
-The plan removes fluid from the patient and gives fluid to the patient in the
-same note. A rising creatinine on day 3 of diuresis is the expected cost of
-getting fluid off a congested kidney. The decision an intern is supposed to
-make here, and to be quizzed on at rounds, is whether to hold the diuretic,
-slow it, or continue it. The draft made that decision by template. If you
-accept it, you have a note with a wrong plan. If you accept it on ten patients,
-you have a pattern: creatinine up, add fluids. That is mis-skilling. The danger
-is that nothing about the sentence looks wrong. It looks like every other note.
+Problem 2 is fluent and correctly formatted, and it contradicts problem 1:
+it gives fluid to a patient the plan is drying out. A rising creatinine on day
+3 of diuresis is the expected cost of getting fluid off. The decision an intern
+should make here (hold, slow, or continue the diuretic) was made by template.
+Accept that on ten patients and you have learned a pattern: creatinine up, add
+fluids.
 
 | Peril | What it is | The intern task most exposed | The defense |
 |---|---|---|---|
@@ -287,57 +234,38 @@ is that nothing about the sentence looks wrong. It looks like every other note.
 
 : Three perils, three defenses. The middle row is where a fourth-year is most exposed. {#tbl-perils}
 
-### The learners' study, and six techniques
-
-The Turkish trial measured grades. A separate randomized study measured what
-learners *do*. It compared students working with a chatbot, with a human
-expert, and with a checklist tool. It recorded their behavior as well as
-their scores. The chatbot group did better on the immediate task. They did not
-gain more knowledge, more motivation, or more ability to apply what they
-learned to a new problem. The authors' name for the behavior behind that gap
-is *metacognitive laziness*: handing the job of monitoring and checking your
-own thinking to the tool [@doi:10.1111/bjet.13544]. Metacognition is the
-ordinary word for noticing what you know and do not know. Laziness here is not
-a moral judgment. It is what any of us does when there is a faster way.
-
-The same authors' answer to "should learners use these tools?" is *probably,
-yes*. The course's prior session turned their recommendations into five
-techniques and added a sixth. They are the defense against never-skilling in
-@tbl-perils, made specific:
+The middle row is the one to watch as a fourth-year, and the fix is
+encouraging: it is in how you ask. In a randomized study of learners, students
+who worked with a chatbot did better on the task in front of them but did not
+learn more. The authors traced the gap to students letting the tool do the
+noticing for them [@doi:10.1111/bjet.13544]. Their answer to "should learners
+use these tools?" is *probably, yes*. Six habits, built from their
+recommendations:
 
 1. **Start on your own.** Build your differential before you ask anything.
-   The struggle is the part that does the learning. Ask for help when you are
-   truly stuck, not when you are merely unsure.
-2. **Ask for hints, not answers.** Not "give me the differential for this
-   presentation." Instead: "I have settled on a cardiac cause and I think I am
-   missing something in the abdomen. What categories should I be considering
-   that I have not named?"
-3. **Teach back.** State your reasoning in your own words and ask whether it
-   is right. Do not ask for the reasoning to be supplied.
-4. **Focus on the why.** Why this drug and not that one, why this cutoff, why
-   first-line. The reason is what lets you apply the knowledge to the next
-   patient.
-5. **Use the four patterns on purpose.** Explanation of something you already
-   read. Debugging your own reasoning after it failed. Clearing up a concept.
-   Learning a better approach *after* you have solved the problem yourself.
-6. **Ask it to quiz you.** When the tool tests you, it is least able to make
-   you dependent on it. It also turns around the relationship in the opening
-   quote of the prior session, where a student described comparing their own
-   thinking against the machine's "as if the program is a mentor or learner."
+   Ask for help when you are stuck, not when you are merely unsure.
+2. **Ask for hints, not answers.** Not "give me the differential." Instead:
+   "I think this is cardiac and I may be missing something in the abdomen.
+   What categories have I not named?"
+3. **Teach back.** Explain your reasoning and ask whether it is right.
+4. **Ask why.** Why this drug and not that one, why this cutoff. The reason is
+   what transfers to the next patient.
+5. **Use it after, too.** Once you have solved a problem yourself, ask for a
+   better approach, or for what an expert would have done differently.
+6. **Ask it to quiz you.** When the tool tests you, it cannot make you
+   dependent on it.
 
 ### Who, where, what
 
-Half of the difference between a hint and an answer is in the prompt. If
-English is not your first language, or you are new to these tools, the
-difference is not obvious. The pattern the course uses has three parts:
+Half of the difference between a hint and an answer is in the prompt. The
+pattern this course uses has three parts:
 
 - **Who** you are: "I am a fourth-year medical student."
 - **Where** you are: "I am on an inpatient medicine rotation, day 3 of a
   patient admitted with a heart-failure exacerbation."
-- **What** you want, phrased as the thing you want to *understand* rather than
-  the thing you want *produced*: "I want to understand how to think about a
-  rising creatinine during diuresis, and I want you to ask me what I think
-  first."
+- **What** you want, as the thing you want to *understand* rather than the
+  thing you want *produced*: "I want to understand how to think about a
+  rising creatinine during diuresis. Ask me what I think first."
 
 Here is the same request both ways, for the made-up patient above.
 
@@ -356,308 +284,171 @@ Here is the same request both ways, for the made-up patient above.
 > what I have missed.
 :::
 
-The first prompt gets a plan, and sometimes the plan will be the one in the
-draft note. The second gets a conversation. In it you have to say what you
-think before the tool says anything. That is the only arrangement in which
-being wrong teaches you something.
+The first prompt gets a plan, and sometimes it will be the plan in the draft
+note. The second gets a conversation in which you say what you think first.
+That is the arrangement in which being wrong teaches you something. It is also
+a better conversation: try it and see.
 
-### The practical rules, in the order you will need them
+### Four rules for the wards
 
-This section is for the reader who skipped the explanations above. Each rule
-has a reason and a limit.
+- **You sign the note.** Whatever drafted it, the signature and the
+  responsibility are yours. *If you could not have written it, do not sign
+  it.*
+- **Use the covered account.** At CU Anschutz, ChatGPT Edu and Microsoft
+  Copilot are covered for patient care when you sign in with university
+  credentials; a personal account is not. In this course, use made-up cases
+  only. See [the patient information page](../course/patient-information.qmd).
+- **Document what your institution asks.** Some systems add a line to
+  AI-drafted notes; some ask you to attest. [VERIFY: current attestation and
+  disclosure language at the course institution; policies differ by system
+  and change yearly]{.verify} You should always be able to answer "did a tool
+  draft this?" honestly.
+- **Read before you send.** When one health system turned on AI-drafted
+  replies to patient messages, clinicians used the drafts for about 20% of
+  replies, and their workload and exhaustion fell, because they read and
+  edited them [@pmid:38506805]. That is the centaur version of the task.
 
-**You sign the note.** Whatever drafted it, the signature is yours, and so is
-the responsibility. In every chart review, malpractice case, and
-quality-committee process that exists today, the question is what the signing
-clinician knew and did, not what the software suggested. The limit: a tool
-your institution licenses and runs inside the EHR (the electronic health
-record) is covered by a business associate agreement. That is the contract
-that makes a vendor legally responsible for protecting patient data. The tool
-is also governed by an institutional policy, which may say how to document its
-use. Ask what that policy says in your first week. A consumer chatbot in the
-other tab has no such agreement. At CU Anschutz, ChatGPT Edu and Microsoft
-Copilot are covered when you sign in with your university credentials. The
-same tools through a personal account are not.
-
-**No patient information in a consumer tool, ever.** A consumer tool is a
-chatbot you reach through a personal account: ChatGPT, Claude, or Gemini on
-your own login. Not a name. Not a paraphrase of a case with the name removed. Not a screenshot. The temptation
-you will feel is time pressure at 6:10 a.m. The rule holds. A made-up case
-that makes the same teaching point is always available, and this chapter gives
-you one.
-
-**Document what you did, in the words your institution uses.** Some systems
-add a line to AI-drafted notes and messages automatically. Some require the
-clinician to attest, that is, to add a signed statement. Some say nothing yet.
-[VERIFY: current attestation and
-disclosure language at the course institution; policies differ by system and
-change yearly]{.verify} The lasting rule is this. You should be able to answer
-"did a tool draft this?" honestly and without hesitation, to a patient, an
-attending, or a lawyer. The answer should already be in the record if your
-institution has a place for it.
-
-**Telling the patient is a separate question from documenting.** The attending
-who sent the unread draft made two decisions: not to read it, and not to tell
-the patient. The second is the one the patient would care about. It is the
-subject of [the patient-communication chapter](core-patient-communication.qmd). Here, one number. When a large
-academic system turned on AI-drafted replies for 162 clinicians, the drafts
-were used for about 20% of replies. Reply time did not change. Clinicians'
-task load and exhaustion fell significantly [@pmid:38506805]. The tool reduced
-burden without saving time. That is what you would expect if the clinicians
-were reading and editing the drafts. That is the centaur version of the task.
-Sending unread is not a way of working. It is the absence of one.
-
-**The one sentence for a co-intern.** *If you could not have written it, do not
-sign it.* That sentence covers the drafted note, the discharge summary, the
-consult question, and the portal reply. It is the working form of the third
-row in @tbl-perils.
-
-### Your supervisors are learning this too
-
-One more thing from the *NEJM* review, and it changes how you should read your
-own supervisors in three months. The authors note that supervisors often have
-less experience with these tools than their learners. They recommend that
-supervisor and learner look into the question together, rather than the
-supervisor acting as the authority [@pmid:40834302]. The structure they propose
-for that conversation is a debrief. You will be the one being debriefed, so
-learn it now.
-
-::: {.callout-note title="DEFT-AI: the debrief"}
-- **D**iagnosis, or discussion: what was your reasoning, and how did the tool
-  assist?
-- **E**vidence: how did you verify?
-- **F**eedback: what could improve?
-- **T**eaching: what did you learn, about the tool and about reasoning?
-- **AI** recommendation: what are the next steps for safe use?
-
-Five questions. The second is the one that matters. If the honest answer to
-"how did you verify?" is "I did not," the rest of the debrief follows from that.
-:::
-
-The review names one more thing the perils above depend on, and calls it the
-foundation: **adaptive expertise**. That is the ability to shift between fast,
-routine practice and slower, creative problem-solving. Critical thinking, in
-their account, has to be taught, modeled, and assessed *during* AI use rather
-than assumed to survive it. That is the reason this course exists. It is the
-reason this chapter ends with you writing a policy rather than reading one.
-
-## Watch or listen
+## Watch or listen (optional)
 
 **Podcast.** *NEJM AI Grand Rounds*, episode 35, "Medicine, Machines, and Magic:
 Dr. Jonathan Chen on Medical AI" (October 15, 2025; 48 min).
 <https://ai-podcast.nejm.org/e/medicine-machines-and-magic-dr-jonathan-chen-on-medical-ai/>
 
-Chen is the senior author of both randomized trials above. Budget 25 minutes.
-Listen for three things. First, his own account of why the model beat the
-physicians in the first trial and why the second trial came out differently.
-Second, what he says about automation anxiety, which is the feeling the
-perils section is about. Third, the claim in the episode's own summary that empathy,
-rather than memorization, may become the most valuable clinical skill. Then ask
-the question this chapter asks: which of the tasks on the 6:10 a.m. list does
-that claim actually change, and which does it leave exactly where it was?
-
-**Alternative.** *NEJM AI Grand Rounds*, "AI and the Evolution of Medical
-Thought with Dr. Adam Rodman" (June 19, 2024).
-<https://ai-podcast.nejm.org/e/ai-and-the-evolution-of-medical-thought-with-dr-adam-rodman>
-Rodman is a co-author on both trials and a historian of clinical reasoning. The
-episode takes the historical view: what clinicians have handed to instruments before,
-and what happened to the skill each time. The episode is 53 minutes.
+Chen is the senior author of both trials above. The first 25 minutes are
+enough. Listen for why the second trial came out differently, and what he says
+about the anxiety people feel about these tools.
 
 ## Do
 
-::: {.callout-warning title="No patient information, ever"}
-Part A needs no tool. Part B uses the made-up patient from this chapter, or a
-made-up case you write yourself. Do not use a patient from your
-sub-internship, a classmate's case, or a de-identified real chart. Consumer
-chatbots have no business associate agreement. Your university ChatGPT Edu and
-Copilot accounts have one, but it covers patient care, and this is coursework.
-Free tiers may also use what you type to train the next model.
+Use your university ChatGPT Edu or Copilot account, and made-up material only.
 
-What counts as patient information, and why taking out the name is not
-enough: [the patient information page](../course/patient-information.qmd).
-:::
+### Part A: try it on three tasks (20 minutes)
 
-### Part A: your policy (20 minutes)
+Do all three. For each, try one prompt, then improve it at least once.
 
-This is the piece of work you will keep from this chapter. It is a set of
-positions, not evaluations. You will be asked to reread it in the final session
-of the course.
-
-**Step 1. Sort the eight tasks.** These are the tasks from the course's prior
-session. They are the 6:10 a.m. list with the phone call and the pre-rounding
-added. For each one, write a verdict, a risk, whether you know of a
-validated tool for it, the peril it exposes you to most, and one sentence of
-justification. Copy the grid into a document.
+**1. Get ready for journal club.** Pick an open-access paper in your
+specialty, or any recent one you have been meaning to read. Paste the abstract
+and try:
 
 ```
-Task                              Kind of use (centaur / cyborg / not at all)
-                                  Risk if wrong (patient / me / nobody)
-                                  Validated tool at my institution? (Y / N / don't know)
-                                  Peril (deskill / never-skill / mis-skill)
-                                  One-sentence rule
-
-1. Drafting a progress note       ______  ______  ______  ______  ______________________
-2. Writing a progress note        ______  ______  ______  ______  ______________________
-3. Literature search              ______  ______  ______  ______  ______________________
-4. Building a differential        ______  ______  ______  ______  ______________________
-5. Patient education handout      ______  ______  ______  ______  ______________________
-6. Journal club slides            ______  ______  ______  ______  ______________________
-7. Summarizing a paper            ______  ______  ______  ______  ______________________
-8. Answering a patient message    ______  ______  ______  ______  ______________________
-
-The task on this list I would add: _________________________________
-Its row: ______  ______  ______  ______  ______________________
+I am a fourth-year medical student presenting this paper at journal club.
+Explain it to me in three levels: one sentence, one paragraph, and the
+details a skeptical attending would ask about. Then give me three questions
+I should be ready to answer.
 ```
 
-The first two rows are deliberately a pair. If you gave them the same verdict,
-stop. Ask what the difference is between a task where a human is already
-writing and one where nobody is. Most of the learning in this exercise
-is in that pair.
+**2. Make a patient handout.** Pick a common condition in your specialty.
+Ask for a one-page handout at a sixth-grade reading level. Then make it
+better twice: ask for something specific (shorter, a list of warning signs,
+the questions a patient should ask). Check one medical fact in it against a
+source you trust.
 
-For row 3, you may want a real search to sort rather than an imagined one. Use
-this pattern with your specialty as the variable, and take the first paper that
-fits your journal-club slot:
+**3. Learn, do not just get an answer.** Use the hint-seeking prompt above
+for the made-up heart-failure patient, or write your own three-line made-up
+case. Answer the tool's questions. Then type: "Now quiz me on this. Three
+questions, one at a time, and tell me when I am wrong."
 
-```
-("large language model" OR "artificial intelligence") AND <your specialty>
-AND (validation OR "external validation")
-```
-
-Filter to the last three years. The paper counts toward this week's resource
-log.
-
-**Step 2. Add two columns.** For every row you marked *centaur* or *cyborg*,
-write what you would document and whom you would tell. "Nothing" and "nobody"
-are acceptable answers if you can say why. For row 8, answer for the patient
-specifically.
-
-**Step 3. Find your disagreement.** Pick the row you are least sure of. Write
-the strongest case for the opposite verdict, in two sentences, as if a
-co-intern were making it. Then say whether you have changed your mind, and on
-what grounds. An unresolved disagreement, written down with both positions, is
-a better result than a forced answer.
-
-### Part B: the prompt (10 minutes)
-
-**Step 1. Take the task you rated most suited to cyborg use.** Write the
-prompt you would actually type: the fast version, the one you would type at
-6:10 a.m. Keep it.
-
-**Step 2. Rewrite it with Who / Where / What.** Make it ask for a hint, a
-question, or a check on your reasoning rather than the finished product. Use
-the made-up heart-failure patient above if the task needs a case, or write
-your own in three lines with no real person in it.
-
-**Step 3. Run the second prompt.** Then, in the same conversation, type: "Now
-quiz me on this. Three questions, one at a time, and tell me when I am wrong."
-Answer them.
-
-**Step 4. Record it.**
+Then record the best of the three:
 
 ```
-Task: ____________________________________________
+The task where the tool helped most: ______________________________
 
-Fast prompt (as I would have typed it):
-______________________________________________________________
+My best prompt (the version I would use again):
+__________________________________________________________________
 
-Rewritten prompt (Who / Where / What, hint-seeking):
-______________________________________________________________
-______________________________________________________________
+What I changed from my first try, and why it worked better:
+__________________________________________________________________
 
-One thing the rewritten prompt made me do that the fast one would not have:
-______________________________________________________________
-
-Of the three quiz questions, the one I got wrong, and why:
-______________________________________________________________
+One thing I checked, and whether the tool had it right:
+__________________________________________________________________
 ```
 
-If the tool answered the rewritten prompt with a finished plan anyway, note
-that. It happens. It is the reason "ask for hints" is a technique rather than
-a setting.
+Save that prompt somewhere you will find it in July. It is the first entry in
+your own toolkit.
 
-::: {.callout-tip title="If you have ten minutes and no appetite for the chatbot"}
-Do Step 1 of Part A and nothing else. The sort is a judgment task, not a tool
-task. A completed grid with honest "don't know" entries in the validation
-column is enough. The tool can wait until you have decided what you
-would let it do.
-:::
+### Part B: sort four tasks (10 minutes)
+
+For each task below, write a verdict (centaur, cyborg, or not at all) and one
+sentence of reasoning, using @fig-modes.
+
+```
+1. Drafting a progress note          ______  _________________________________
+2. Writing a progress note           ______  _________________________________
+3. The discharge summary, bed 12     ______  _________________________________
+4. The question for nephrology       ______  _________________________________
+```
+
+The first two are deliberately a pair. If you gave them the same verdict, ask
+what the difference is between a task where you are already writing and one
+where nobody is. Most of the learning in this part is in that pair.
 
 ## Check
 
-Score yourself against this before moving on.
-
 | You have | Meets | Falls short |
 |---|---|---|
-| Eight sorted tasks | Each verdict names the risk and the validation status, and the draft/write pair has different verdicts or a stated reason they do not | Verdicts without risk or validation; the pair sorted together without comment |
-| A peril per row | Deskilling, never-skilling, and mis-skilling each appear at least once, on a task where that peril fits | One word used for every row |
-| Documentation and disclosure columns | Row 8 answers for the patient, and "nothing" is justified where it appears | Columns blank or "N/A" |
-| A written disagreement | The opposing case is one a co-intern could actually make, and your verdict states its grounds | A weak version no co-intern would make, or "I still think I'm right" |
-| Two prompts | The rewrite says who, where, and what, and asks for a hint or a question rather than the product | The rewrite is the fast prompt with "please" added |
-| The two findings | You can say what the two physician trials found, what the two learner studies found, and why they are not in conflict | "AI is better than doctors" or "AI hurts learning" alone |
-| Two techniques | Two of the six, in your own words, with the peril each defends against | "Be careful" |
-| The one sentence | *If you could not have written it, do not sign it*, and you can say which task on the list it applies to most | Only the slogan |
+| Three tasks tried | Each tried at least twice, with one improvement you can describe | One prompt each, no second try |
+| A kept prompt | It is specific (who, where, what) and you would use it again | A generic prompt like "explain this paper" |
+| One check | A fact checked against a source, and what you found | No check, or "it seemed right" |
+| Four sorted tasks | Each verdict has a reason, and the draft/write pair differs or you say why not | Verdicts without reasons |
+| The three perils | You can name one habit that protects against each | "Be careful" |
 
 ## What this changes for you
 
 *What does this change about how you'll practice?* Go back to 6:10 a.m. The
-senior resident has said "have it draft the notes," and she is waiting. Your
-grid is your answer. But say it in two sentences she could repeat: which lines
-on the list go to the machine, in which way, and which one line does not go at
-all.
+senior resident has said "have it draft the notes." Say in two sentences which
+lines on the list go to the machine, in which way, and which one does not.
+Then add one thing from Part A you will use that she has not thought of.
 
-Then the sentence this course collects and rereads in the final session.
-*Which part of clinical judgment will you not hand over, and why?* Write it,
-date it, and keep a copy where you will find it in four weeks and, ideally, in
-four years. Not a category ("patient care") and not a slogan. A task, and a
-reason. If you cannot yet name one, write that down instead. It is an honest
-answer, and it is the one this chapter most wants you to revisit.
+Then the sentence this course collects and rereads at the end. *Which part of
+clinical judgment will you not hand over, and why?* Write it, date it, and
+keep it. A task and a reason, not a slogan. If you cannot name one yet, write
+that down instead; it is an honest answer.
 
 ## Summary
 
-- The question is not whether to use the tool. It is what kind of use, for
-  which task, at what risk. A centaur divides the work and checks it; a cyborg
-  blends the work and goes back and forth. The task's risk and the tool's
-  validation decide which.
-- In one randomized trial, physicians with a model did no better than
-  physicians without it, while the model alone did. In a second trial, on
-  management tasks, they did better. The model was not the variable. How they
-  worked with it was.
-- Deskilling, never-skilling, and mis-skilling are three problems with three
-  defenses. A fourth-year is most exposed to the middle one.
-- Randomized studies of learners find the tool improves the task and not the
-  learning. Asking for hints, teaching back, and being quizzed are the
-  techniques that reduce that gap.
-- You sign the note. Institutional tools are covered by an agreement and a
-  policy; the chatbot in the other tab is covered by neither.
-- If you could not have written it, do not sign it.
-- The list at 6:10 a.m. is yours in three months. The sort is yours now.
+- It is your job to learn where these tools help your work, and you learn it
+  by trying. The edge of what they do well is jagged and moves, so nobody can
+  map it for you.
+- A centaur divides the work and checks it; a cyborg blends the work and goes
+  back and forth. The task's risk and the tool's validation decide which.
+- In one trial, physicians with a model did no better than without; in a
+  second, on a different task, they did better. How they worked with it was
+  the difference.
+- Deskilling, never-skilling, and mis-skilling have different defenses. Ask
+  for hints, teach back, and get quizzed, and the tool makes you better
+  rather than replacing your learning.
+- You sign the note. If you could not have written it, do not sign it.
 
 ## Go deeper
 
 **Papers**
 
 - The review this chapter is based on, with the three perils, adaptive
-  expertise, and DEFT-AI in full [@pmid:40834302].
+  expertise, and DEFT-AI, a five-question debrief for when a supervisor asks
+  how you used a tool [@pmid:40834302].
 - The two physician trials: diagnosis [@pmid:39466245] and management
-  [@pmid:39910272]. Read the discussion sections for what the physicians
-  actually did with the tool.
+  [@pmid:39910272].
 - Never-skilling in a randomized field experiment [@pmid:40560616], and
   deskilling in a multicenter observational study [@pmid:40816301].
-- The learner study that named metacognitive laziness
-  [@doi:10.1111/bjet.13544]; the implications section is written for teachers
-  and is the source of the six techniques.
-- The consultants' experiment that gave centaur and cyborg their current
-  meaning [@doi:10.2139/ssrn.4573321]. Not medicine, but worth reading for one
-  finding: the tool helped most on tasks inside its competence and hurt on
-  tasks just outside it. The authors call that edge the jagged frontier.
-- AI-drafted patient replies at scale: no time saved, burden reduced, drafts
-  read and edited [@pmid:38506805].
+- The learner study behind the six habits [@doi:10.1111/bjet.13544].
+- The consultants' experiment that gave centaur, cyborg, and the jagged
+  frontier their meaning [@doi:10.2139/ssrn.4573321].
+- AI-drafted patient replies at scale: burden reduced, drafts read and edited
+  [@pmid:38506805].
+
+**Listen**
+
+- *NEJM AI Grand Rounds*, "AI and the Evolution of Medical Thought with Dr.
+  Adam Rodman" (June 19, 2024; 53 min): what clinicians have handed to
+  instruments before, and what happened to the skill each time.
+  <https://ai-podcast.nejm.org/e/ai-and-the-evolution-of-medical-thought-with-dr-adam-rodman>
 
 **Talks**
 
 - [Prompt engineering](https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/):
-  ten rules with clinical examples throughout. Who / Where / What is a
-  shortened form of the first three. [the prompting lab](enrichment-prompting-lab.qmd) is based on this deck.
+  ten rules with clinical examples. Who / Where / What is a shortened form of
+  the first three. [The prompting lab](enrichment-prompting-lab.qmd) builds on
+  this deck.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/):
-  attribution and academic integrity, for the moment one of these tools drafts
-  something with your name on it outside the hospital.
+  attribution and academic integrity, for when a tool helps with something
+  that has your name on it.
