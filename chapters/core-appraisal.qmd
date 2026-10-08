@@ -1,6 +1,6 @@
 ---
 title: "Critical appraisal: checking AI tools, their answers, and the evidence about both"
-subtitle: "AIM-2 · AIM-9 · about two hours"
+subtitle: "AIM-2 · AIM-1 · AIM-4 · AIM-9 · about two hours"
 ---
 
 ::: {.callout-note title="What you'll learn"}

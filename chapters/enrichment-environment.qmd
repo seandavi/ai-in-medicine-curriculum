@@ -1,6 +1,6 @@
 ---
 title: "What AI costs the planet: the number everyone quotes"
-subtitle: "AIM-3 · AIM-X · about one hour"
+subtitle: "AIM-3 · AIM-2 · AIM-7 · about one hour"
 ---
 
 ::: {.callout-note title="What you'll learn"}

@@ -1,6 +1,6 @@
 ---
 title: "Ethics, liability, and the device line: who answers for the note"
-subtitle: "AIM-4 · AIM-7 · AIM-X · about 75 minutes"
+subtitle: "AIM-4 · AIM-X · about 75 minutes"
 ---
 
 ::: {.callout-note title="What you'll learn"}
