@@ -1,6 +1,6 @@
 # Learn it with AI {.unnumbered}
 
-[The main activity of the course: use AI to teach yourself something you care about · 3 to 6 hours a week]{.subtitle .lead}
+[The main activity of the course: use AI to teach yourself something you care about · 2 to 4 hours a week]{.subtitle .lead}
 
 **It is your job to learn where AI helps your work.** Nobody can tell you in
 advance. The tools change every few months, and your work is not anyone
@@ -125,4 +125,5 @@ the habit is the point.
 - **It will not help.** Try the other tool. ChatGPT Edu and Copilot behave
   differently, and that difference is worth noticing too.
 
-Bring what worked, and what did not, to Friday's small group.
+Bring what you are stuck on to Thursday's office hours. Bring what worked,
+and what did not, to Friday's small group.
