@@ -25,11 +25,21 @@ One topic can last all four weeks, or you can change each week.
 
 ## Use your university account
 
-Sign in to **ChatGPT Edu** or **Microsoft Copilot** with your university
-credentials. Both are covered for patient care at CU Anschutz, and both are
-free to you. This work is learning, not patient care, so use made-up cases,
-never real patient information. That is the only line; everything else is
-yours to try. See [the patient information page](patient-information.qmd).
+Sign in to your university's chatbot with your university credentials. Many
+universities create the account only after you finish a required AI training.
+At CU Anschutz, for example, you use **ChatGPT Edu** or **Microsoft Copilot**.
+Both are free to you, and the ChatGPT Edu account is created after a short
+Canvas course. The Canvas announcement tells you how to join it.
+
+A personal ChatGPT account is not covered by the university's agreement. Do
+not use it for university information.
+
+This work is learning, not patient care, so use made-up cases, never real
+patient information. That is the only line; everything else is yours to try.
+See [the patient information page](patient-information.qmd).
+
+If you would rather talk than type, ChatGPT Edu has a voice mode where your
+institution turns it on.
 
 ## A starter kit
 
