@@ -10,6 +10,12 @@ project:
     - course/
     - appendix/
 
+# Quarto reads llms-txt from the website section, even for a book.
+# It writes llms.txt and a plain .llms.md copy of every page, so chatbots
+# and agents can read the book without the HTML around it.
+website:
+  llms-txt: true
+
 book:
   title: "AI in Medicine"
   subtitle: "A four-week elective for fourth-year medical students"
