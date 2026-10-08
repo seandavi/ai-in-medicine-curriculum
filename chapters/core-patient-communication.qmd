@@ -1,6 +1,6 @@
 ---
 title: "Talking to patients about AI"
-subtitle: "AIM-6 · AIM-4 · about one hour"
+subtitle: "AIM-6 · AIM-4 · about 70 minutes"
 ---
 
 ::: {.callout-note title="What you'll learn"}
@@ -11,7 +11,7 @@ By the end of this chapter you will have:
    cannot, and what you do not know.
 2. Told a patient what an AI tool did, what a person did, and who is
    responsible, as three separate sentences.
-3. Practised, with a chatbot playing the patient, answering someone who brings
+3. Practiced, with a chatbot playing the patient, answering someone who brings
    chatbot output that is partly right, without giving in and without talking
    down to them.
 4. Explained why text that raters call more empathetic can still persuade
@@ -19,7 +19,7 @@ By the end of this chapter you will have:
 5. Kept a set of sentences to say out loud at your Friday small group.
 :::
 
-**Time.** About 15 minutes of reading, 40 minutes of doing, and five minutes
+**Time.** About 70 minutes: 15 to 20 of reading, about 45 of doing, and five
 at the end. The podcast is optional. Use your university ChatGPT Edu or
 Microsoft Copilot account; any free chatbot also works. There is nothing to
 install, and nothing in this chapter involves a real patient.
@@ -55,7 +55,7 @@ She is not embarrassed and she is not hostile, and the phone is still
 listening. You have perhaps ninety seconds to answer both questions, in the right order,
 without losing her trust. That is the whole chapter.
 
-If you would rather practise first and read after, go to [Part B of the
+If you would rather practice first and read after, go to [Part B of the
 Do](#part-b-practice-patient) now. Then come back.
 
 ## Why this matters
@@ -79,7 +79,8 @@ right.
 
 That makes it a good place to use a chatbot well. It can play the patient,
 point out your jargon, and tell you the order you spoke in. Then you say the
-words to a person, which is what Friday is for.
+words to a person, which is what [the Friday small
+group](../course/friday-groups.qmd) is for.
 
 ## How it works
 
@@ -91,7 +92,7 @@ questions from a public forum where verified physicians answer, and had a
 chatbot answer them too. Clinician raters, not told which answer was which,
 compared the two [@pmid:37115527].
 
-![Blinded raters preferred the chatbot's answer 78.6 percent of the time.
+![Raters who did not know the source preferred the chatbot's answer 78.6 percent of the time.
 Redrawn from the abstract of Ayers et al., *JAMA Internal Medicine* 2023;
 data are not copyrightable, drawing by the course.](../images/ayers-2023-redrawn.svg){#fig-ayers fig-alt="Three pairs of horizontal bars comparing physician and chatbot responses. Rated good or very good quality: physician 22.1 percent, chatbot 78.5 percent. Rated empathetic or very empathetic: physician 4.6 percent, chatbot 45.1 percent. Median length in words: physician 52, chatbot 211."}
 
@@ -106,13 +107,14 @@ physicians answering strangers for free.
 The second finding favors the person. In a Zurich course, 52 medical students
 watched four short pieces on the same treatment. They came from a patient, a
 clinician, an expert, and ChatGPT, whose text was read aloud by a synthetic
-voice. Before and after each one, the students rated their own
+voice and labeled "general information from the internet." Before and after each one, the students rated their own
 expectation that the treatment would work [@pmid:39177012]. Every version
 raised expectations. The patient's account raised them most, and the chatbot's
 least, even though the students had rated the chatbot text as moderately
 clear, safe, and correctly written. Two limits. The humans appeared on video
 and the machine did not, so the study cannot separate who wrote the words from
-how they were delivered. And the students rated their own expectations, not a
+how they were delivered. The internet label may also have lowered trust in the
+chatbot text. And the students rated their own expectations, not a
 patient's.
 
 Put together: a tool can produce text that raters prefer and still fail to
@@ -138,8 +140,8 @@ slightly *less* satisfied when told AI had been involved, by about a tenth of a
 point on a five-point scale. More than three quarters were satisfied either
 way [@pmid:40067301]. In follow-up interviews, 40 of those patients were
 comfortable with drafted replies on one condition: a clinician reviewed them
-and stayed responsible for them. They broadly supported telling patients
-[@pmid:42412426].
+and stayed responsible for them. They broadly supported telling patients, but
+differed on when and how [@pmid:42412426].
 
 So the label costs a little, and it is true. Leave it in; the Duke survey's
 authors said the same. Some states, among them California and Texas, now
@@ -158,8 +160,8 @@ already using one. Of those, 63 percent routinely asked the patient's consent,
 and no more than one patient in ten said no. Errors were most frequent when
 more than one person was talking, when the history was complex, and when the
 visit was not in English [@pmid:42386325]. So the patients most likely to be
-poorly served by the note are the ones least likely to be asked in a language
-they can say no in.
+poorly served by the note may also be the least likely to be asked in a
+language they can say no in.
 
 Which AI uses require telling the patient is not settled. What is settled is
 narrower: if the tool is recording them, ask; if they ask, answer.
@@ -174,7 +176,7 @@ narrower: if the tool is recording them, ask; if they ask, answer.
 
 : What can be refused, and what you can say. Institutional policy varies; the middle column is the common case, not a rule. {#tbl-decline}
 
-"None of it, if you say so" is a comforting lie. The honest version names what
+Telling her "none of it, if you say so" is a comforting lie. The honest version names what
 she can refuse, what she cannot, and who signs the note. That last part is
 what the patient came for.
 
@@ -185,15 +187,17 @@ don't know how long they keep it; I'll find out, and I can turn it off today."
 The wrong answer is a reassuring number you made up.
 
 If she says no, turn it off, type the note, and write in it that the patient
-declined ambient documentation.
+declined ambient documentation. If your institution logs consent, log it.
 :::
 
 ### The printout: say what is right first
 
-A 2026 study asked five tools the same questions in a clinician's words and in
-a patient's words. The patient version was worse. The share of ChatGPT's
-references that were made up rose from 2.1 percent to 20.0 percent
-[@pmid:42232526]. When physicians graded chatbot answers to their own
+A 2026 study asked five tools matching spine-surgery questions, once in a
+clinician's words and once in a patient's words. The four general-purpose
+tools did worse on the patient version. The share of ChatGPT's references that
+were made up rose from 2.1 percent to 20.0 percent [@pmid:42232526]. If
+English is not your first language, or you write the way you talk, your own
+prompts may get worse answers in the same way. When physicians graded chatbot answers to their own
 questions, most were largely right, but one in eight was mostly or completely
 wrong, in the same fluent tone [@pmid:37782499]. A general-purpose chatbot writes
 the most plausible next words; it does not look the answer up. So the printout's
@@ -261,8 +265,8 @@ Patients will have read about these.
 In 2023 an eating-disorder helpline's chatbot, Tessa, gave callers weight-loss
 advice: harmless for most people, harmful for the people the service existed
 to help. A lawsuit filed in July 2026 alleges that a chatbot reassured a man
-with weeks of dizziness. The next day he was admitted to intensive care with a
-pulmonary embolism. The case has not been decided. The safety organization
+with weeks of dizziness. The complaint says that the next day he was admitted
+to intensive care with a pulmonary embolism. The case has not been decided. The safety organization
 ECRI named chatbot misuse its top health-technology hazard for 2026.
 
 ## Watch or listen (optional)
@@ -285,10 +289,10 @@ was wrong.
 
 Use your university ChatGPT Edu or Copilot account. Every patient here is made
 up: do not model one on someone from a rotation, and do not paste a real note,
-message, or result. See [the patient information
-page](../course/patient-information.qmd).
+message, or result. Free tiers may use what you type to train later models.
+See [the patient information page](../course/patient-information.qmd).
 
-### Part A: write your sentences, then improve them (15 minutes)
+### Part A: write your sentences, then improve them (20 minutes)
 
 Write each of these yourself first, in words you would actually say. Each
 should take under a minute aloud.
@@ -311,7 +315,7 @@ should take under a minute aloud.
 Then paste all three into your chatbot with this prompt:
 
 ```
-I am a medical student practising what to say to patients about AI tools.
+I am a medical student practicing what to say to patients about AI tools.
 Below are three things I plan to say. For each one: (1) list any word a
 patient with no medical training might not understand, and give a plain
 word for it; (2) tell me if any sentence claims something I could not
@@ -322,7 +326,7 @@ Do not rewrite them for me.
 Fix what you agree with. The last line is deliberate: the sentences should
 sound like you, not like the chatbot.
 
-### Part B: the printout, with a chatbot playing the patient (25 minutes) {#part-b-practice-patient}
+### Part B: the printout, with a chatbot playing the patient (25 to 30 minutes) {#part-b-practice-patient}
 
 Open a fresh conversation and paste this prompt, exactly:
 
@@ -380,7 +384,7 @@ Bring this to your Friday small group on October 30. The week 3 cards on [the
 Friday small groups page](../course/friday-groups.qmd) include the scribe
 question and a caregiver who arrives with a chatbot's advice. They are the
 conversations from Parts A and B, said out loud to a person. That is where you find out
-whether a sentence is heard the way you meant it. To practise another card
+whether a sentence is heard the way you meant it. To practice another card
 first, change the character in the Part B prompt.
 
 ## Check
