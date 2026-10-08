@@ -73,8 +73,9 @@ out has made the conversation easier, not more honest.
 
 ## What this changes for you: model answers for Mr. Alvarez
 
-1. **Box.** B (AI departed from standard; physician followed), by way of the
-   signed plan: "continue apixaban" on a false premise. A defensible
+1. **Box.** The chapter asks "Which box is that?" and does not answer it.
+   One reading: B (AI departed from standard; physician followed), by way of
+   the signed plan: "continue apixaban" on a false premise. A defensible
    alternative: "not on the grid; the scribe made no recommendation, and the
    liability is ordinary documentation negligence." Either earns credit if the
    recommendation is named.
@@ -90,8 +91,7 @@ out has made the conversation easier, not more honest.
    a written institutional policy requiring plan-versus-conversation review
    (toward breach if ignored, toward defense if followed); Mr. Alvarez's
    knowledge of the scribe (consent claim, separate from malpractice); the
-   time of day and note count (mitigates breach in a jury's eyes, per the
-   Tobia and Tacconelli findings on reasonableness); whether the intern
+   time of day and note count (may mitigate breach; untested); whether the intern
    addressed the stopped apixaban verbally even though the note was wrong
    (breaks causation).
 4. **The fourteenth note.** Any specific, doable habit passes: read the plan
