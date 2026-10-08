@@ -359,6 +359,13 @@ paste this:
 > leave you with one concrete next step? Then tell me the single moment you
 > were most likely to stop listening.
 
+Typing is the default. If you want to practice out loud, run the same
+role-play in your chatbot's voice mode, if your account has one (ChatGPT Edu
+calls it "Start Voice"). Say STOP when you are done, then type the observer
+prompt in the same conversation; if the chatbot has no transcript to score,
+ask it for one, or note the exchanges yourself as you go. The patient is still
+made up, out loud as on the page.
+
 Two warnings. A chatbot playing a patient is more agreeable than a patient; if
 it gave in on the first exchange, start again with "be harder to persuade"
 added. And the score is a language model's opinion of a transcript. Use it to
