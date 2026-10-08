@@ -14,15 +14,11 @@ event, so it shows the format was liked, not that it taught skills. The
 [project cards](https://github.com/smallw03/NYULH-Generative-AI-Prompt-a-thon-Project-Cards)
 are public if you want more ideas.
 
-**How they run.** Each week of weeks 2 to 4, the class votes on one lab, and we
-do it together live for an hour on Zoom. The session is recorded. You can also
-do any lab on your own, at any time, from this page. Every lab is
-self-contained: it says what you need, it uses free or university tools in a
-browser, and it uses made-up material only.
-
-**How to vote.** [VERIFY: link to the vote (a Canvas survey or a Microsoft
-Form), opened each Monday]{.verify} Pick the lab you would most like to do
-live. The others stay here for you to try on your own.
+**How they run.** You do them on your own, at any time, from this page. Every
+lab is self-contained: it says what you need, it uses free or university tools
+in a browser, and it uses made-up material only. A lab can also become a
+Wednesday talk topic, which the class votes on (see the
+[syllabus](../course/syllabus.qmd)).
 
 ::: {.callout-warning title="No patient information, ever"}
 Every lab uses invented patients, public documents, or your own made-up
@@ -52,7 +48,7 @@ enough: [the patient information page](../course/patient-information.qmd).
 | [A handout your patient can read](#a-handout-your-patient-can-read) | made a patient handout plainer, translated it, and checked what changed | 45 min | Idea |
 
 "Ready" labs are written out in full. "Idea" labs are a short description for
-now; the ones the class votes for get written out first.
+now; the ones students ask for get written out first.
 
 **Have an idea for a lab?** Post it in the course channel or send it to the
 course director. Good ideas get added here, and you may get to run it.
@@ -161,7 +157,7 @@ shows you what the model adds on its own.
 ### Part E: one rule (5 minutes)
 
 Write one sentence: the rule you will use to read a scribe's draft before you
-sign it. In the live lab, we collect these and compare.
+sign it. Bring it to your Friday group and compare.
 
 ::: {.self-check}
 In Mr. Alvarez's case, the note said he "continues apixaban" after he said he
