@@ -125,7 +125,7 @@ reason the patient follows it.
 
 A portal message is the secure message a patient sends the clinic through the
 online system they also use to see results. Some health systems now draft a
-reply before the clinician opens it.
+reply before the clinician opens it [@pmid:38506805; @pmid:38619840].
 
 ::: {.press-clip}
 <div class="src">Patient portal · illustrative message, written for this chapter</div>
@@ -209,9 +209,9 @@ Telling her that is not the right first step. The order is:
 tests I was going to order. The sleep questions are good ones." This is not a
 tactic. It is true.
 
-**Then ask what sent her there.** Almost nobody arrives with a printout because
-they trust a chatbot more than a doctor. They arrive because of the last
-visit. Here, the last physician gave her eight minutes and said it was probably
+**Then ask what sent her there.** In this course's experience, patients rarely
+bring a printout because they trust a chatbot more than a doctor. More often,
+it is because of the last visit. Here, the last physician gave her eight minutes and said it was probably
 stress. She will not volunteer that. Ask: "What made you go looking?" A
 clinician who wins the argument about the ANA and never asks has lost her
 trust.
@@ -238,8 +238,8 @@ chapter calls that shape the spine. Learn the shape, not the wording.
 
 Start with who is responsible and you sound defensive; never reach it and the
 patient believes a machine decided. Keep the first two sentences separate:
-patients merge "the computer flagged it" and "the radiologist agreed" into one
-fact, and they are two. Say the second only when you know it is true; the
+patients may hear "the computer flagged it" and "the radiologist agreed" as one
+fact. They are two. Say the second only when you know it is true; the
 signed report tells you who read the study.
 
 The same shape handles the phone: it listens and drafts; I read, change, and
