@@ -39,7 +39,7 @@ enough: [the patient information page](../course/patient-information.qmd).
 | Lab | You will have... | Time | Status |
 |---|---|---|---|
 | [Hear it, draft it, check it](#hear-it-draft-it-check-it-a-scribe-from-the-inside) | watched a scribe mishear a visit and a model invent part of the note | 60 min | Ready |
-| [Same question, three tools](#same-question-three-tools) | seen how much the wording and the tool change the answer | 45 min | Ready, in [the prompting lab](../chapters/enrichment-prompting-lab.qmd) |
+| [Same case, two prompts](#same-case-two-prompts) | run one made-up case twice in one tool, bare and structured, and checked the claim the plan depends on | 45 min | Ready, in [the prompting lab](../chapters/enrichment-prompting-lab.qmd) |
 | [A study guide that cites its sources](#a-study-guide-that-cites-its-sources) | built a notebook from papers you chose and caught what it adds | 45 min | Ready, in [the grounding chapter](../chapters/enrichment-rag-notebooklm.qmd) |
 | [Build a calculator, then break it](#build-a-calculator-then-break-it) | built a working clinical tool in an hour and found what is wrong with it | 60 min | Ready, in [the agentic coding chapter](../chapters/enrichment-agentic-coding.qmd) |
 | [Draw me a doctor](#draw-me-a-doctor) | counted who an image model pictures when you ask for a doctor, a nurse, a surgeon | 30 min | Idea |
@@ -179,11 +179,12 @@ summarizing step's kind of error.
 :::
 :::
 
-## Same question, three tools
+## Same case, two prompts
 
-Ask one clinical question three ways, in three tools, and put the answers side
-by side. You will see how much the wording of a question, and the tool you
-ask, changes what comes back. Written out in full as [the prompting
+Run one made-up case twice in one tool: once typed the way you would say it,
+once as a five-part prompt. Score both answers, then check the one claim the
+plan depends on. You will see what a better prompt changes, and what it does
+not. Written out in full in [the prompting
 lab](../chapters/enrichment-prompting-lab.qmd).
 
 ## A study guide that cites its sources
