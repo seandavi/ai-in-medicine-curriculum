@@ -158,7 +158,7 @@ nationally representative sample of 2,000 US adults, physicians who followed
 an AI recommendation for standard care were judged less liable than those who
 rejected it. Rejecting a *nonstandard* recommendation gave no similar
 protection [@pmid:32978285]. A 2026 study found the same pattern
-[@pmid:42242875]. The practical lesson: the tool is safest to follow when it
+in US and German adults and in German physicians [@pmid:42242875]. The practical lesson: the tool is safest to follow when it
 agrees with what you would have done anyway. When it disagrees, you carry the
 risk yourself, whichever way you decide.
 
@@ -226,8 +226,8 @@ the tool, 64.1% of patients said the physician [@pmid:40694347].
 
 These are complaints, not findings, so treat them as allegations. They rely
 on California's all-party-consent recording law, its medical-confidentiality
-statute, and the federal Wiretap Act. About a dozen states require every
-party's consent to record a conversation. Whether a waiting-room sign meets
+statute, and the federal Wiretap Act. Several states, California among them,
+require every party's consent to record a conversation. Whether a waiting-room sign meets
 that requirement is what the courts are being asked. This chapter's view: a
 conversation with the patient does more than the sign, and [the patient communication
 chapter](core-patient-communication.qmd) covers how to have it.
@@ -391,7 +391,7 @@ them in July.
 | The apixaban decision | What you would write in the plan and do before signing, and by when | Signed as drafted |
 | What you would tell the patient | Two or three plain sentences, including who answers for the note, and honesty about what you do not know | Jargon, or a promise you cannot keep |
 | A box for the original note | A box of @tbl-price, with the recommendation named | "It depends" |
-| The Jabbour sentence | What explanations did and did not do, with the direction of the numbers | "Explainable AI helps" |
+| Your reading rule | One sentence that would have caught the apixaban error in the original draft | "Read it carefully" |
 
 ## What this changes for you
 

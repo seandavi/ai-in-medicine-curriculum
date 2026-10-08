@@ -103,7 +103,13 @@ out has made the conversation easier, not more honest.
 The reread of the week 1 sentence is not graded. A student who changes it
 and can say why has done what the course hopes for.
 
-## Check: the Jabbour sentence
+## Check: the reading rule
+
+Same as Part A's rule: one sentence that would have caught the apixaban error.
+The best ones name the plan ("read the plan against what the patient said,
+not against the draft"). "Read it carefully" falls short.
+
+## Jabbour (if a student asks; no longer a Check row)
 
 A standard model raised accuracy (73.0% baseline) by 2.9 points, or 4.4 with
 explanations. A systematically biased model lowered it by 11.3 points;
