@@ -1,6 +1,6 @@
 ---
 title: "Grounding AI in real sources: what a retrieval tool fixes, and what it cannot"
-subtitle: "AIM-1 · AIM-9 · about one hour"
+subtitle: "AIM-1 · AIM-2 · AIM-9 · about one hour"
 ---
 
 ::: {.callout-note title="What you'll learn"}
