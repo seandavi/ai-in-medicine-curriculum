@@ -58,6 +58,15 @@ AI-in-education materials, with published surveys of what medical students
 want to learn, and with the competency frameworks. The coverage table in the
 preface comes from that last review.
 
+Then an independent review, run by a fresh AI agent with no stake in the
+book, found what the author had suspected: the book was long, cautious, and
+gave students little practice actually using a chatbot. Students the year
+before had said they were afraid to use these tools and felt lost. So the
+course was refocused on skill and confidence: one core chapter a week plus a
+menu, a weekly routine, and most of each week spent using AI to learn
+something the student cares about. The chapters are being revisited one at a
+time to match.
+
 ## What the ledger shows
 
 The [AI ledger](ai-ledger.qmd) records each piece of AI-assisted work and what

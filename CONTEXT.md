@@ -22,14 +22,28 @@ copy). The student-facing week-by-week plan is in `course/syllabus.qmd`.
 
 ## Delivery, fall 2026 (decided 2026-10-07)
 
+**Refocus (decided 2026-10-07/08): skill and confidence first.** The course's
+mantra: *it is your job to learn where AI helps your work, and you learn that by
+trying.* Each week has one core chapter plus a menu (week 1 centaur-cyborg; week
+2 prompting lab; week 3 patient communication; week 4 ethics). Students aim for
+5 to 10 hours a week of AI-related learning, 2 to 4 with the book; the main
+activity is "Learn it with AI" (`course/learn-with-ai.qmd`). The resource log is
+replaced by a learning journal. Friday groups practise conversations about AI
+from scenario cards (`course/friday-groups.qmd`). The Monday hour includes "How
+I used AI this week" (the director's own work, shown live). Bias is not core
+this offering (Friday card instead). Why: 2025 students were afraid to use
+chatbots and felt lost; see `curriculum/design-constraints.md` constraint 5.
+**Next:** revisit each chapter before the week it is used, to cut it to its
+framework core and move hands-on work toward success first.
+
 - **Week 1 (Oct 12 to 16):** the course director teaches live: welcome and adult
   learning (from the 2024 Google Slides intro deck), history of AI, then AI to ML
   to DL to LLMs (the foundations deck, PR #60, trimmed; keep a few slides on
   overfitting). Students read `core-foundations` and `core-centaur-cyborg`.
 - **Weeks 2 to 4, each week:** Monday 60 min, recorded (start of week, demo,
   questions); mid-week 60 min open lab, recorded, the class votes from
-  `appendix/open-labs.qmd`; guest talks (attend or watch two); resource log due
-  Thursday night; Friday small group, required, one of three slots, 60 min,
+  `appendix/open-labs.qmd`; guest talks (attend or watch two); learning journal
+  due Thursday night; Friday small group, required, one of three slots, 60 min,
   breakout rooms of 4 to 5 with the same members each week. No live teaching of
   chapter content unless week 2's resource logs and Friday discussions show
   students are not doing the chapters.

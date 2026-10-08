@@ -128,5 +128,8 @@ every specific tool taught here has been replaced.
   four-week offering; AIM-4 and AIM-5 should recur, since they are the ones
   accreditation will eventually ask about.
 - AIM-7 through AIM-9 are optional and belong to enrichment modules.
+- *Fall 2026 exception (decided 2026-10-07):* the core chapters do not include
+  bias and equity; AIM-3 is covered by a week 2 Friday scenario card and the
+  bias chapter on the menu. See constraint 5 in `design-constraints.md`.
 - AIM-X is not a session. It is the recurring closing question — *what did this
   change about how you will practice?* — and the subject of the final session.
