@@ -117,7 +117,7 @@ explanations recovered 2.3 points, with a confidence interval crossing zero.
 So explanations did not reliably protect clinicians from a biased model
 (pmid:38112814).
 
-## Optional: the regulatory detail and "has it moved?"
+## Optional: the regulatory detail and "has it changed?"
 
 Everything dated here is the state on 2026-09-07. These answers move;
 re-check before each cohort and update this file.

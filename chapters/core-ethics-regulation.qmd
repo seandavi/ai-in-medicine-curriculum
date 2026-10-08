@@ -401,7 +401,7 @@ and which of the four elements would be hardest for Mr. Alvarez's lawyer to
 prove. Second, name one fact that would change your answer if it were
 different. Candidates: the time of day, the number of notes, an attestation
 line inserted automatically, a clinic policy on reading drafts, or whether
-Mr. Alvarez knew the scribe was running. Say which way it moves. Third, what you will do
+Mr. Alvarez knew the scribe was running. Say which way it changes your answer. Third, what you will do
 differently with the fourteenth note.
 
 Then reread the sentence you wrote in [week 1](core-centaur-cyborg.qmd), on
@@ -420,7 +420,7 @@ Date both and keep them.
   significantly repair it.
 - Tell the patient, know what the attestation says, and know whether there is
   a BAA for the tool.
-- Cleared is not validated, and the rules move. Check the date on the source.
+- Cleared is not validated, and the rules change. Check the date on the source.
 
 ## Go deeper
 
@@ -455,7 +455,7 @@ Date both and keep them.
 ### The regulatory detail (optional)
 
 About 15 minutes. Everything here was current in early September 2026, and
-much of it will move.
+much of it will change.
 
 **Where a tool becomes a medical device.** Software that gives clinicians
 recommendations is either a medical device, regulated by FDA, or it is not.
@@ -518,7 +518,7 @@ paper is not guidance ([FDA, *Considerations for the Regulation of Generative
 AI-Enabled Medical Devices*, August 18,
 2026](https://www.fda.gov/medical-devices/digital-health-center-excellence/considerations-regulation-generative-ai-enabled-medical-devices-discussion-paper-and-request)).
 
-::: {.callout-important title="This line moved twice while the course was being written"}
+::: {.callout-important title="This guidance was replaced twice while the course was being written"}
 The four criteria come from a 2016 statute. FDA's guidance on them was issued
 in September 2022, replaced on January 6, 2026, and replaced again on
 January 29, 2026. The January 29 version is the one linked above. The
@@ -586,7 +586,7 @@ Someone in the GME office can tell you what it says. Ask in orientation, not
 after.
 :::
 
-**Optional exercise: has it moved? (about 15 minutes).** Pick one question.
+**Optional exercise: has it changed? (about 15 minutes).** Pick one question.
 Find the current answer from the primary source: the agency, the statute, the
 court docket (the court's own record of a case), or the organization's own
 page. Record the URL, the date you checked, and the date shown on the source.
