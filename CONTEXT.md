@@ -6,11 +6,11 @@ part that is specific to the CU Anschutz offering, because it exists nowhere els
 the repo and is the first thing you will want when you come back to this cold.
 
 **Last updated: 2026-10-08.** Everything below is operational state and goes stale
-fast — check it before acting on it.
+fast. Check it before acting on it.
 
 ## The offering
 
-**IDPT 8079 — The Frontier of AI & Medicine.** A fourth-year selective at the
+**IDPT 8079: The Frontier of AI & Medicine.** A fourth-year selective at the
 University of Colorado Anschutz School of Medicine. 49 MS4s enrolled for fall 2026
 (Canvas, 2026-10-07), Zoom-only, ungraded.
 This repo is the redesign; the course has run in prior years, and the AY 25-26
@@ -128,7 +128,7 @@ Candidate matches by module:
 |---|---|---|
 | `core-centaur-cyborg` | Ambient documentation and AI in oncology workflow, as deployed | Wells Messersmith; UCHealth clinical informatics leads |
 | `core-patient-communication` | Disclosure conversations; the tipsheet's "why" | UCHealth patient-experience + the tipsheet authors |
-| `core-appraisal` | How a tool actually gets approved here — governance and procurement | UCHealth AI governance leads |
+| `core-appraisal` | How a tool actually gets approved here: governance and procurement | UCHealth AI governance leads |
 | `core-ethics-regulation` | Device boundary, liability, local policy | CU Genomic Governance Committee; SOM compliance |
 | `core-bias-equity` | Proxy failure in a model that was really deployed | DBMI faculty |
 | `enrichment-workforce-economics` | What AI is doing to a specific specialty's job market | Medical oncology; radiology |
@@ -136,21 +136,21 @@ Candidate matches by module:
 
 **Invitation should specify:** date and time, a 20-minute slot inside a 90-minute
 session (never a 50-minute lecture), the competency the session serves, Zoom-only,
-~40 MS4s, ungraded — and the actual ask: *bring one thing you deployed and one thing
+~40 MS4s, ungraded; and the actual ask: *bring one thing you deployed and one thing
 that went wrong.* Sending them as one batch with the Dean's co-signature converts
 maybes to yeses; sending them ad hoc does not.
 
 ## Evaluation and CQI
 
 The school runs a Continuous Quality Improvement review on each selective. It covers
-course evaluations, syllabus updates, learning objectives and assessments — i.e. it
+course evaluations, syllabus updates, learning objectives and assessments. That is, it
 consumes exactly what this repo produces, so the redesign makes the CQI cheaper
 rather than competing with it.
 
 AY 25-26 course evaluation comments and numeric data live in the CU Tableau instance
 (`viz-public.cu.edu`, Electives Evaluation Summary Dashboard → set *Select View* to
 *By Program* → Selectives), plus a comments spreadsheet from the evaluation office.
-**Read that before rebuilding sessions** — it is the only direct evidence of what
+**Read that before rebuilding sessions**: it is the only direct evidence of what
 landed and what did not.
 
 *Status 2026-09-01: the CQI was postponed on the grounds that reviewing the course
@@ -159,37 +159,37 @@ immediately before it is rebuilt reviews a version about to be replaced.*
 ## Registration
 
 Enrollment runs through OASIS. There is a **recurring defect where students who were
-enrolled later show as waitlisted** — observed at least three times in 2026. If
+enrolled later show as waitlisted**, observed at least three times in 2026. If
 students report enrollment confusion, treat it as the known registrar issue and
 escalate once for all affected students rather than replying individually.
 
-## Open design decision — the student-facing tool
+## Open design decision: the student-facing tool
 
 Unresolved as of 2026-09-01. The question is not "NotebookLM or custom" but *what
 artifact should exist at the end of four weeks that does not exist now.*
 
-**A — Stay on NotebookLM.** Zero build. But no persistence you can see, no shared
+**A. Stay on NotebookLM.** Zero build. But no persistence you can see, no shared
 collection, and the tool being taught and the tool being used are the same thing.
 Fine for `enrichment-rag-notebooklm`; thin as a course spine.
 
-**B — Chat over a course corpus.** A self-hosted Open WebUI instance over the modules,
+**B. Chat over a course corpus.** A self-hosted Open WebUI instance over the modules,
 the readings, the competency framework and the talks archive. Students get one URL:
-no accounts, no cost, no install — which satisfies design constraint 4 (free tools,
+no accounts, no cost, no install, which satisfies design constraint 4 (free tools,
 no installs) better than asking 40 students to register for anything. This pattern is
 already proven on adjacent work.
 
-**C — A resource dashboard.** Students *collect* sources into a shared, cited,
+**C. A resource dashboard.** Students *collect* sources into a shared, cited,
 browsable board rather than posting into a dead LMS thread. Better pedagogy, because
 the artifact is cumulative and visible to the cohort, and because "curate a defensible
 source set" is literally AIM-9.
 
-B and C are complementary — C is the collection layer, B the query layer over what
-gets collected — but building both before the course runs means neither gets
+B and C are complementary (C is the collection layer, B the query layer over what
+gets collected), but building both before the course runs means neither gets
 rehearsed. **Before building anything, write the sentence that says what a student
 does with it in week 2.** If that sentence is hard to write, ship B and stop.
 
 A fourth use worth considering: point the agent at the *course* rather than the
-content — "which session covers X?", "what did the cohort conclude in week 2?" That
+content: "which session covers X?", "what did the cohort conclude in week 2?" That
 is the PBL curriculum-mapping idea aimed at this curriculum, and it produces
 accreditation evidence as a byproduct.
 
@@ -200,10 +200,10 @@ Anything requiring a login re-creates the problem the LMS already has.
 
 - **AAMC national AI competencies are expected fall 2026.** The `AIM-*` IDs exist so
   this is a crosswalk rather than a rewrite. Do the mapping when they land.
-- **LCME revised Standard 7, Element 7.2** — approved in principle Feb 2025, not yet
+- **LCME revised Standard 7, Element 7.2**: approved in principle Feb 2025, not yet
   in force, and it requires *experiential* learning for the clinical-application
   domain. That is the accreditation argument for the hands-on modules.
-- The 57 verification flags across `research/` and `modules/` — see the README.
+- The 57 verification flags across `research/` and `modules/`; see the README.
 
 ## Student tool access
 
