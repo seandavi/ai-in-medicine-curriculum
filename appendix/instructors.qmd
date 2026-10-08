@@ -44,23 +44,27 @@ Eleven modules, eight slots. The surplus is deliberate. Swap by cohort interest.
 ### The default assembly (fall 2026)
 
 Since October 2026 the chapters are a framework and a menu, not a sequence to
-teach. Each week has one **core** chapter and a menu of others. Students spend
-2 to 4 hours on the book and most of their time on [Learn it with
-AI](../course/learn-with-ai.qmd).
+teach. Each week has one **core** chapter and a menu of others. In weeks 2 to
+4 the instructor's two weekly talks are the main event: Monday on the core
+chapter's topic, Wednesday on a menu chapter or a topic beyond the book. The
+core chapter is the companion to Monday's talk, read after it, or instead of
+it by a student who missed it. Students spend most of their own time on
+[Learn it with AI](../course/learn-with-ai.qmd).
 
-| Week | Core | Menu |
-|---|---|---|
-| 1 | Centaur or cyborg | How these systems work (covered by the live talks) |
-| 2 | Prompting lab | Critical appraisal; Bias and equity; Grounding AI in real sources |
-| 3 | Talking to patients about AI | Agentic coding; the scribe open lab |
-| 4 | Ethics, liability, and the device line | Will AI take your job?; What AI costs the planet |
+| Week | Core (Monday talk) | Wednesday talk (class vote) | Menu |
+|---|---|---|---|
+| 1 | Centaur or cyborg | Week 1 is taught live; no vote | How these systems work (covered by the live talks) |
+| 2 | Prompting lab | Scholarly writing, or answers grounded in real sources | Critical appraisal; Bias and equity; Grounding AI in real sources |
+| 3 | Talking to patients about AI | Bias and equity, or building a small tool live | Agentic coding; the scribe open lab |
+| 4 | Ethics, liability, and the device line | Where this is going (jobs, the planet) and what you will keep; no vote | Will AI take your job?; What AI costs the planet |
 
-: Core chapter and menu by week. {#tbl-default}
+: Core chapter, Wednesday talk, and menu by week. Wednesday topics are a starting plan for fall 2026. {#tbl-default}
 
 Coverage check: the core chapters make AIM-2, AIM-4, AIM-5, and AIM-6 main
 subjects. AIM-1 is covered by the week 1 live talks. **AIM-3 (bias) is not in a
-core chapter**; it is covered by the week 2 Friday scenario card on bias and by
-the bias chapter on the menu. This is a deliberate trade, recorded in
+core chapter**; it is covered by the week 2 Friday scenario card on bias, by
+the bias chapter on the menu, and by the week 3 Wednesday talk if the class
+votes for it. This is a deliberate trade, recorded in
 `curriculum/design-constraints.md`.
 
 ### Variants
@@ -97,18 +101,25 @@ every tool taught here has been replaced.
 
 ## Running a week
 
-Every week has the same shape, so students always know what comes next.
+Weeks 2 to 4 have the same shape, so students always know what comes next.
+Week 1 is taught live on its own schedule (see the
+[syllabus](../course/syllabus.qmd)).
 
 | When | What |
 |---|---|
-| Monday, 60 min, recorded | Start of the week, including 20 to 30 minutes of **"How I used AI this week"**: the instructor's own real, unpolished tasks, talked through on screen, including one that went wrong and how it was caught. End with a dare: try one of these this week. No patient data or confidential review material on screen. |
-| On their own | The week's core chapter and one menu item (2 to 4 hours), and [Learn it with AI](../course/learn-with-ai.qmd) (3 to 6 hours). |
-| Mid-week, 60 min, recorded | Open lab, voted from the appendix. |
-| Through the week | Guest talks; students attend or watch two. |
-| Thursday night | [Learning journal](../course/learning-journal.qmd) entry. |
+| Monday, 60 min, live and recorded | Opens with 20 to 30 minutes of **"How I used AI this week"**: the instructor's own real, unpolished tasks, talked through on screen, including one that went wrong and how it was caught. End that part with a dare: try one of these this week. No patient data or confidential review material on screen. Then a talk on the week's core chapter topic, with live demonstrations. |
+| Wednesday, 60 min, live and recorded | A talk on a menu chapter or a topic beyond the book. The class votes the week before from a short list. |
+| On their own | The core chapter, after Monday's talk or instead of it (about 1 hour), and [Learn it with AI](../course/learn-with-ai.qmd) (2 to 4 hours). Menu chapters and [open labs](open-labs.qmd) are optional. |
+| Through the week | Guest talks; students attend or watch one. |
+| Thursday, 45 min, live | Office hours: students bring what they are stuck on. Not recorded. [Learning journal](../course/learning-journal.qmd) entry due that night. |
 | Friday, 60 min | Small group: what AI taught you, one thing you caught, then the [scenario cards](../course/friday-groups.qmd) practised out loud. |
 
-: A week in the course. {#tbl-week-run}
+: A week in the course, weeks 2 to 4. Recordings count as attending. {#tbl-week-run}
+
+The instructor's cost is real: about 5.75 live hours a week (Monday, Wednesday,
+Thursday, and three Friday slots) plus two new talks to write. An instructor
+with less time can run the Wednesday talk as an open lab or hand it to a
+guest.
 
 Running notes:
 
