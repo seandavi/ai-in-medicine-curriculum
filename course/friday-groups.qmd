@@ -1,0 +1,74 @@
+# Friday small groups {.unnumbered}
+
+[One hour every Friday, required, in one of three time slots · practise talking about AI out loud]{.subtitle .lead}
+
+Being able to talk about AI with an attending, a colleague, a patient, or an
+interviewer is a skill, and it gets better with practice, not reading. Friday
+is where you practise.
+
+## How the hour runs
+
+| Minutes | What |
+|---|---|
+| 0 to 15 | Round the group: one thing AI helped you learn this week, and one thing you caught it getting wrong. From your [learning journal](learning-journal.qmd). |
+| 15 to 45 | Breakout rooms of four or five, the same people each week. Two scenario cards, below. |
+| 45 to 60 | Back together: what was hard to say, and what worked. |
+
+: The Friday hour. {#tbl-friday}
+
+**How to use a card.** One person plays the role on the card, one answers, and
+the others watch. Three minutes, then two minutes of feedback: what landed,
+what was vague, what was more certain than the evidence allows. Swap roles and
+run it again. There is no right script. The goal is to sound like yourself:
+informed, honest about what you do not know, and not defensive.
+
+## The cards
+
+### Week 1 (October 16): introductions
+
+**The interview question.** *Play: a residency interviewer.* "So, what do you
+think about AI in medicine?" Then one follow-up: "Do you use it yourself?"
+
+**The worried classmate.** *Play: a classmate who has never used a chatbot.* "I
+keep hearing it makes things up. Why would I trust it with anything?"
+
+### Week 2 (October 23)
+
+**The skeptical attending.** *Play: an attending.* "I saw you had ChatGPT open.
+We don't do that on my service. Convince me it's not a shortcut."
+
+**The fair score.** *Play: a resident.* "This risk score doesn't use race, so it
+can't be biased." The answerer explains how a score can be unfair without
+using race at all. [The bias chapter](../chapters/core-bias-equity.qmd) has the
+examples.
+
+**The co-intern who pasted it in.** *Play: a co-intern.* "I put the discharge
+summary into ChatGPT on my phone to clean it up. I took the name out. That's
+fine, right?" See [the patient information
+page](patient-information.qmd).
+
+### Week 3 (October 30)
+
+**The scribe question.** *Play: a patient.* "Is that phone listening to us? Who
+hears this?" [Talking to patients about
+AI](../chapters/core-patient-communication.qmd) covers this conversation.
+
+**The caregiver who came prepared.** *Play: a parent or adult child.* "I talked
+it through with ChatGPT last night. It said we should get an MRI and see a
+specialist, and I want both today."
+
+**The patient who talks to a bot instead.** *Play: a patient.* "Honestly, I talk
+to an AI app about my anxiety more than I talk to anyone. It helps. Is that
+bad?"
+
+### Week 4 (November 6): what you will keep
+
+The week 4 hour is for your five-minute presentations from the
+[learning journal](learning-journal.qmd). If there is time, one last card:
+
+**The trust question.** *Play: a friend.* "I asked a chatbot who to vote for and
+it gave me a really reasonable answer. Why not just go with it?" Talk about
+where an answer comes from, and who decides what a chatbot says.
+
+**The incoming intern.** *Play: a nervous new intern next July.* "Should I be
+using this stuff? Where do I start?"
