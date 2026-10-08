@@ -5,7 +5,7 @@ institutional mechanics so it can be reassembled for any cohort. This file holds
 part that is specific to the CU Anschutz offering, because it exists nowhere else in
 the repo and is the first thing you will want when you come back to this cold.
 
-**Last updated: 2026-10-07.** Everything below is operational state and goes stale
+**Last updated: 2026-10-08.** Everything below is operational state and goes stale
 fast — check it before acting on it.
 
 ## The offering
@@ -25,9 +25,10 @@ copy). The student-facing week-by-week plan is in `course/syllabus.qmd`.
 **Refocus (decided 2026-10-07/08): skill and confidence first.** The course's
 mantra: *it is your job to learn where AI helps your work, and you learn that by
 trying.* Each week has one core chapter plus a menu (week 1 centaur-cyborg; week
-2 prompting lab; week 3 patient communication; week 4 ethics). Students aim for
-5 to 10 hours a week of AI-related learning, 2 to 4 with the book; the main
-activity is "Learn it with AI" (`course/learn-with-ai.qmd`). The resource log is
+2 prompting lab; week 3 patient communication; week 4 ethics). "Students aim for
+5 to 10 hours a week of AI-related learning, 2 to 4 with the book" was the
+first budget; with two talks a week it is restated as about 8 to 10 hours
+(see the syllabus table). The main hands-on activity is "Learn it with AI" (`course/learn-with-ai.qmd`). The resource log is
 replaced by a learning journal. Friday groups practise conversations about AI
 from scenario cards (`course/friday-groups.qmd`). The Monday hour includes "How
 I used AI this week" (the director's own work, shown live). Bias is not core
@@ -40,15 +41,43 @@ framework core and move hands-on work toward success first.
   learning (from the 2024 Google Slides intro deck), history of AI, then AI to ML
   to DL to LLMs (the foundations deck, PR #60, trimmed; keep a few slides on
   overfitting). Students read `core-foundations` and `core-centaur-cyborg`.
-- **Weeks 2 to 4, each week:** Monday 60 min, recorded (start of week, demo,
-  questions); mid-week 60 min open lab, recorded, the class votes from
-  `appendix/open-labs.qmd`; guest talks (attend or watch two); learning journal
-  due Thursday night; Friday small group, required, one of three slots, 60 min,
-  breakout rooms of 4 to 5 with the same members each week. No live teaching of
-  chapter content unless week 2's resource logs and Friday discussions show
-  students are not doing the chapters.
-- **Why not teach the chapters live:** October to November is residency interview
-  season; recordings plus self-contained chapters keep away students on track.
+- **Weeks 2 to 4, each week (decided 2026-10-08):** the course director's
+  talks are the main event and each core chapter is their companion ("read it
+  after the talk, or instead of it if you missed the talk").
+  - Monday, 60 min, live and recorded: "How I used AI this week", then a talk
+    on the week's core chapter topic with live demos.
+  - Wednesday, 60 min, live and recorded: a talk on a menu chapter or a topic
+    beyond the book. The class votes on the topic from a short list, the week
+    before. This replaces the voted mid-week open lab; the open labs stay as
+    self-paced activities and as Wednesday topic candidates.
+  - Thursday, 45 min, live, not recorded: office hours. Learning journal due
+    Thursday night.
+  - Friday, 60 min: small group, required, one of three slots, breakout rooms
+    of 4 to 5 with the same members each week.
+  - Guest talks: attend or watch one a week (was two, cut so the week still
+    adds up; see the syllabus table).
+  - Recordings count as attending.
+  Starting topic grid (the director's starting point, subject to change):
+  week 2, Monday "getting good answers" (prompting lab), Wednesday vote
+  between AI for scholarly writing (co-led with a co-director) and answers
+  grounded in real sources; week 3, Monday talking with patients about AI,
+  Wednesday vote between bias and equity and building a small tool live;
+  week 4, Monday who answers for the note (ethics), Wednesday where this is
+  going (workforce, environment) and what you will keep. Open question: bias
+  is meant to carry AIM-3 this offering, but as a vote option it may not run;
+  the week 2 Friday bias card is the only certain coverage.
+- **Why lectures now (2026-10-08):** the director lectures well (evaluations
+  in every course he teaches say he is the best part), and writing a talk
+  forces him to make the material good. The earlier rule was "no live
+  teaching of chapter content unless week 2 shows students are not doing the
+  chapters", on the grounds that October to November is residency interview
+  season and recordings plus self-contained chapters keep away students on
+  track. Recordings still do that job, so interview season no longer argues
+  against talks.
+- **Known cost:** the director is live about 5.75 hours a week in weeks 2 to 4
+  (Monday 1, Wednesday 1, Thursday 0.75, three Friday slots 3) and writes two
+  new talks a week. Watch for this in week 2. A suggestion, not decided: if it
+  is too much, the Wednesday talk is the first thing to hand to a guest.
 - **Submissions:** Microsoft Form (university login, data stays in CU Microsoft
   365), reviewed on Fridays. A custom submission and chatbot app is a
   post-course project; start CU's data-use review early.
@@ -77,9 +106,10 @@ consumer of `curriculum/competencies.md`.
 The course director teaches week 1; guests give 45 to 50 minute talks plus
 questions in weeks 2 to 4, from a signup sheet (Google Sheet
 "ai-in-medicine-lecturer-signup": Monday to Thursday, 9, 10, 11 and 1, Oct 19 to
-Nov 6, 48 slots). The chapters carry the course's teaching, so the risk the cap
-guarded against (the course turning back into lectures) is handled by making the
-chapters and Friday groups the spine, not the talks. Confirmed as of
+Nov 6, 48 slots). The cap guarded against the course turning back into lectures.
+Since 2026-10-08 the director's own talks are the main event by choice, so the
+cap's worry now applies to guests only: students are asked to attend or watch
+one guest talk a week, not two. Confirmed as of
 2026-10-07: Mike Rosenberg (cardiology, Thu Oct 29, 1 pm), Elizabeth Kudron
 (pediatrics, Mon Nov 2, 11 am), Sorabh Singhal (psychiatry, Mon Nov 2, 1 pm).
 
