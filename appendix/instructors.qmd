@@ -8,7 +8,8 @@ not need to read: the module catalog and its variants, the session structure,
 how to run the [weekly resource log](../course/resource-log.qmd), how to ask a
 guest to speak, and how to adapt the course for another cohort. The design
 files themselves are in `curriculum/` in the
-[repository](https://github.com/seandavi/ai-in-medicine-curriculum).
+[repository](https://github.com/seandavi/ai-in-medicine-curriculum)
+(private for now; it will be made public).
 
 ## The modules
 

@@ -14,12 +14,13 @@ students at the University of Colorado School of Medicine (IDPT 8079; 49
 students in fall 2026), delivered over Zoom. The book carries the teaching:
 eleven chapters, each standing alone, read on your own time. The live hours
 are for questions, demonstrations, open labs, guest talks, and small groups.
-It is built with [Quarto](https://quarto.org/) and the source is public at
-[github.com/seandavi/ai-in-medicine-curriculum](https://github.com/seandavi/ai-in-medicine-curriculum).
+It is built with [Quarto](https://quarto.org/). The source is in a GitHub
+repository, [seandavi/ai-in-medicine-curriculum](https://github.com/seandavi/ai-in-medicine-curriculum),
+which is private for now and will be made public.
 
 ## How it was made
 
-The design was done in the open, in the repository, and every step left a file
+The design was done in the repository, and every step left a file
 or a GitHub issue behind. In outline, it went in four phases.
 
 **Design before drafting (August to early September 2026).** The fixed facts
@@ -67,7 +68,7 @@ course runs, and what the book may claim about local policy. AI tools drafted,
 looked things up, and checked drafts against the book's standards. The author
 read the result and decided what to publish.
 
-**Checking found real errors, and they were fixed in the open.** While the
+**Checking found real errors, and each fix was recorded.** While the
 visual design was being changed, two charts turned out to misstate their
 data: the charting tool drew bars from the bottom of the axis, so a 4 percent
 fall looked like a rise. A sentence about privacy law said more than the law

@@ -162,4 +162,5 @@ verify; this is the course doing the same.
 
 The design behind the book, competencies, constraints, and schedule, is in
 the `curriculum/` directory of the
-[repository](https://github.com/seandavi/ai-in-medicine-curriculum).
+[repository](https://github.com/seandavi/ai-in-medicine-curriculum)
+(private for now; it will be made public).
