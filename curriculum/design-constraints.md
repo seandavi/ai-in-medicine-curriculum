@@ -52,6 +52,10 @@ and hit each more than once, in different modes.
    time allow.
 3. **Every session does something.** No 50-minute lecture blocks. Each session
    pairs an idea with an activity that produces an artifact or a judgment.
+   *(Amended 2026-10-08: in weeks 2 to 4 of fall 2026 the course director's
+   Monday and Wednesday talks are lectures with live demonstrations, by
+   choice. See constraint 5. The rule still holds for Friday groups and for
+   guests.)*
 4. **Free tools only, no installs.** Institutional accounts where available;
    otherwise browser-based free tiers. Cost is an equity problem, not a
    footnote — see the `pricing` fragment in the talks repo.
@@ -71,3 +75,20 @@ and hit each more than once, in different modes.
    mistakes; what they lack is confidence (`research/student-interests-survey-2026-10-07.md`).
    The original reasoning still holds in part: products change, so teach the
    habit of finding where a tool helps, not a product.
+
+   **Amended 2026-10-08: lectures are the weekly main event; chapters are
+   the companion.** In weeks 2 to 4 the course director gives two talks a
+   week (Monday on the core chapter's topic, Wednesday on a menu chapter or
+   a topic beyond the book), live and recorded, with demonstrations on
+   screen. Each core chapter goes with its talk: read it after the talk, or
+   instead of it if you missed the talk. Recordings count as attending.
+   "Learn it with AI" stays the main hands-on activity.
+   **Why:** the director lectures well (evaluations in every course he
+   teaches say he is the best part), and writing a talk forces him to make
+   the material good. Until then the plan (`CONTEXT.md`, 2026-10-07) was
+   that the chapters carry the teaching, with no live teaching of chapter
+   content, because October to November is residency interview season. Recordings
+   answer that concern, so it no longer rules out talks.
+   **Cost:** about 5.75 live hours a week for the director, plus two new
+   talks a week. Constraint 3's "no 50-minute lecture blocks" is set aside
+   for these talks.
