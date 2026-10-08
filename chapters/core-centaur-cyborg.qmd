@@ -18,9 +18,10 @@ By the end of this chapter you will have:
    why.
 :::
 
-**Time.** About 20 minutes of reading, 30 minutes of doing, and five minutes
-at the end. The podcast is optional. You need your university ChatGPT Edu or
-Microsoft Copilot account. There is nothing to install.
+**Time.** About 20 minutes of reading, 45 minutes of doing, and five minutes
+at the end. The podcast is optional. Use your university ChatGPT Edu or
+Microsoft Copilot account; any free chatbot also works. There is nothing to
+install.
 
 ## The first list
 
@@ -45,9 +46,9 @@ badge that opens more doors than it should, and a list.
 Your senior resident has been an intern for exactly one year. She looks at the
 list and says what every senior says now: "Have it draft the notes. Have it
 draft the discharge summary. That's what it's for." She is right that it can.
-She has also found it useful for things nobody told her about: getting the
-gist of a paper in five minutes, rewriting a patient handout so a
-twelve-year-old could follow it, rehearsing a phone call she was dreading.
+She has also found uses nobody told her about. She gets the gist of a paper in
+five minutes. She rewrites patient handouts so a twelve-year-old could follow
+them. She rehearses phone calls she is dreading.
 
 So look at the list again with two questions. For each line, what could the
 machine do for you that you have not thought of? And if you hand it over, what
@@ -64,15 +65,18 @@ This chapter is about that sorting, and about getting good at the part you do
 hand over. **It is your job to learn where these tools help your work.** Nobody
 can do the sorting for you, and the way to learn it is to try.
 
+If you would rather try first and read after, open your chatbot now and do
+task 1 of the [Do](#do). Then come back.
+
 ## Why this matters
 
 In three months, the list above is yours, and the tool will be in the chart
 whether or not you have decided how to use it. Two of this course's faculty,
-quoted from its prior session, describe the two ends of this. One asked
+speaking in last year's course, describe the two ends of this. One asked
 whether avoiding AI is really an option (Chad Stickrath, MD). The other, a
 pediatric hospitalist, said we should be scared, because what we do is scary
-(Christina Olson, MD). Both are right. This chapter is about using the tool
-well enough that the first is true without forgetting the second.
+(Christina Olson, MD). Both are right. This chapter is about using the tool,
+and using it well, while keeping the second in mind.
 
 There is one thing specific to your stage of training. You are about to learn
 clinical reasoning on real patients, with a tool that produces a plausible
@@ -84,8 +88,8 @@ difference is mostly in how you ask.
 
 ### Two ways to work with a machine
 
-[The appraisal chapter](core-appraisal.qmd) ends with a randomized trial and a
-puzzle, and this chapter starts there. Fifty physicians were each given six
+Start with a randomized trial and a puzzle. [The appraisal
+chapter](core-appraisal.qmd), in week 2, comes back to it. Fifty physicians were each given six
 diagnostic cases. Half also had a language model: the kind of AI behind
 ChatGPT and Copilot. The physicians with the model did no better than the
 physicians without it. The adjusted difference was 2 points on a 100-point
@@ -149,8 +153,7 @@ watched how the successful ones worked [@doi:10.2139/ssrn.4573321]:
 The same study found something worth remembering. The tool helped most on
 tasks inside what it could do well, and hurt on tasks just outside it. The
 authors called that uneven edge the **jagged frontier**. You cannot see where
-the frontier runs from the outside, and it moves every few months. You find it
-by trying things.
+the frontier runs from the outside. You find it by trying things.
 
 Neither way of working is the correct one. The skill is knowing which a task
 calls for. The 2025 *NEJM* review this chapter is based on gives a simple rule
@@ -175,7 +178,8 @@ flowchart TD
 ```
 
 "Validated for this use" means someone has measured how the tool performs on
-*this* task, on patients like yours. An ambient scribe, with randomized trials
+*this* task, on patients like yours. An ambient scribe (the tool that listens
+to a visit and drafts the note), with randomized trials
 behind it, is validated for drafting a visit note. The same product is not
 validated for writing your discharge summary. The chatbot in the other tab is
 validated for nothing on your list, which is why it belongs on the cyborg side
@@ -188,16 +192,18 @@ The review names three ways a tool can cost you a skill
 that protects you is different for each:
 
 - **Deskilling**: losing a skill you had. At four endoscopy centers, doctors
-  doing colonoscopy on days without the AI tool found adenomas in 22.4% of
-  patients, after a few months of working with it, against 28.4% before it
-  arrived. The study is observational [@pmid:40816301].
+  found adenomas in 28.4% of colonoscopies before an AI tool arrived. A few
+  months after it arrived, on days they worked without it, they found them in
+  22.4%. The study is observational [@pmid:40816301].
 - **Never-skilling**: never building a skill, because the tool answered
-  first. In a randomized trial of nearly a thousand students, a plain chatbot
+  first. In a randomized trial of nearly a thousand high-school math students,
+  a plain chatbot
   raised practice scores and then *lowered* exam scores once it was taken
   away. A version set up to give hints instead of answers had a much smaller
   cost [@pmid:40560616].
-- **Mis-skilling**: learning a wrong pattern from plausible output. Read the
-  plan in this made-up draft note.
+- **Mis-skilling**: learning a wrong pattern from plausible output. There is
+  no trial of this yet, so here is an example. Read the plan in this made-up
+  draft note.
 
 ```{=html}
 <div style="max-width:600px;margin:1.2em auto;padding:0;border:1px solid #cfd6df;border-radius:6px;font-family:Menlo,Consolas,'Courier New',monospace;font-size:.82em;background:#f8fafc;color:#1f2328;box-shadow:0 4px 12px rgba(0,0,0,.12);">
@@ -237,10 +243,11 @@ fluids.
 The middle row is the one to watch as a fourth-year, and the fix is
 encouraging: it is in how you ask. In a randomized study of learners, students
 who worked with a chatbot did better on the task in front of them but did not
-learn more. The authors traced the gap to students letting the tool do the
-noticing for them [@doi:10.1111/bjet.13544]. Their answer to "should learners
-use these tools?" is *probably, yes*. Six habits, built from their
-recommendations:
+learn more. The authors' name for the behavior behind that gap is
+*metacognitive laziness*: letting the tool check your thinking for you
+[@doi:10.1111/bjet.13544]. Their answer to "should learners use these tools?"
+is *probably, yes*. Last year's course turned their recommendations into five
+habits and added a sixth:
 
 1. **Start on your own.** Build your differential before you ask anything.
    Ask for help when you are stuck, not when you are merely unsure.
@@ -252,8 +259,8 @@ recommendations:
    what transfers to the next patient.
 5. **Use it after, too.** Once you have solved a problem yourself, ask for a
    better approach, or for what an expert would have done differently.
-6. **Ask it to quiz you.** When the tool tests you, it cannot make you
-   dependent on it.
+6. **Ask it to quiz you.** When the tool tests you, it is least able to make
+   you dependent on it.
 
 ### Who, where, what
 
@@ -295,8 +302,9 @@ a better conversation: try it and see.
   responsibility are yours. *If you could not have written it, do not sign
   it.*
 - **Use the covered account.** At CU Anschutz, ChatGPT Edu and Microsoft
-  Copilot are covered for patient care when you sign in with university
-  credentials; a personal account is not. In this course, use made-up cases
+  Copilot are covered by a business associate agreement (the contract that
+  makes the company responsible for patient data) when you sign in with
+  university credentials; a personal account is not. In this course, use made-up cases
   only. See [the patient information page](../course/patient-information.qmd).
 - **Document what your institution asks.** Some systems add a line to
   AI-drafted notes; some ask you to attest. [VERIFY: current attestation and
@@ -305,8 +313,9 @@ a better conversation: try it and see.
   draft this?" honestly.
 - **Read before you send.** When one health system turned on AI-drafted
   replies to patient messages, clinicians used the drafts for about 20% of
-  replies, and their workload and exhaustion fell, because they read and
-  edited them [@pmid:38506805]. That is the centaur version of the task.
+  replies. Reply time did not change, but their task load and exhaustion
+  scores fell [@pmid:38506805]. That fits clinicians who read and edit the
+  drafts, which is the centaur version of the task.
 
 ## Watch or listen (optional)
 
@@ -314,20 +323,20 @@ a better conversation: try it and see.
 Dr. Jonathan Chen on Medical AI" (October 15, 2025; 48 min).
 <https://ai-podcast.nejm.org/e/medicine-machines-and-magic-dr-jonathan-chen-on-medical-ai/>
 
-Chen is the senior author of both trials above. The first 25 minutes are
-enough. Listen for why the second trial came out differently, and what he says
+Chen is the senior author of both trials above. Budget 25 minutes. Listen for why the second trial came out differently, and what he says
 about the anxiety people feel about these tools.
 
 ## Do
 
 Use your university ChatGPT Edu or Copilot account, and made-up material only.
 
-### Part A: try it on three tasks (20 minutes)
+### Part A: try it on three tasks (about 35 minutes)
 
 Do all three. For each, try one prompt, then improve it at least once.
 
-**1. Get ready for journal club.** Pick an open-access paper in your
-specialty, or any recent one you have been meaning to read. Paste the abstract
+**1. Get ready for journal club.** Use the abstract of any paper you have
+already read, or of the first trial in this chapter (search PubMed for
+"Large Language Model Influence on Diagnostic Reasoning"). Paste the abstract
 and try:
 
 ```
@@ -343,9 +352,10 @@ better twice: ask for something specific (shorter, a list of warning signs,
 the questions a patient should ask). Check one medical fact in it against a
 source you trust.
 
-**3. Learn, do not just get an answer.** Use the hint-seeking prompt above
-for the made-up heart-failure patient, or write your own three-line made-up
-case. Answer the tool's questions. Then type: "Now quiz me on this. Three
+**3. Learn, do not just get an answer.** Write your own hint-seeking prompt
+with Who / Where / What, for the made-up heart-failure patient or a three-line
+made-up case of your own. Use the example above as a model, not a copy.
+Answer the tool's questions. Then type: "Now quiz me on this. Three
 questions, one at a time, and tell me when I am wrong."
 
 Then record the best of the three:
@@ -389,6 +399,7 @@ where nobody is. Most of the learning in this part is in that pair.
 | Three tasks tried | Each tried at least twice, with one improvement you can describe | One prompt each, no second try |
 | A kept prompt | It is specific (who, where, what) and you would use it again | A generic prompt like "explain this paper" |
 | One check | A fact checked against a source, and what you found | No check, or "it seemed right" |
+| A hint prompt | You wrote it yourself with who, where, and what, and answered the quiz | The example pasted unchanged |
 | Four sorted tasks | Each verdict has a reason, and the draft/write pair differs or you say why not | Verdicts without reasons |
 | The three perils | You can name one habit that protects against each | "Be careful" |
 
@@ -407,13 +418,13 @@ that down instead; it is an honest answer.
 ## Summary
 
 - It is your job to learn where these tools help your work, and you learn it
-  by trying. The edge of what they do well is jagged and moves, so nobody can
-  map it for you.
+  by trying. The edge of what they do well is jagged, so nobody can map it
+  for you.
 - A centaur divides the work and checks it; a cyborg blends the work and goes
   back and forth. The task's risk and the tool's validation decide which.
 - In one trial, physicians with a model did no better than without; in a
-  second, on a different task, they did better. How they worked with it was
-  the difference.
+  second, on a different task, they did better. The task, and how they worked
+  with the tool, made the difference.
 - Deskilling, never-skilling, and mis-skilling have different defenses. Ask
   for hints, teach back, and get quizzed, and the tool makes you better
   rather than replacing your learning.
@@ -430,10 +441,10 @@ that down instead; it is an honest answer.
   [@pmid:39910272].
 - Never-skilling in a randomized field experiment [@pmid:40560616], and
   deskilling in a multicenter observational study [@pmid:40816301].
-- The learner study behind the six habits [@doi:10.1111/bjet.13544].
+- The learner study behind five of the six habits [@doi:10.1111/bjet.13544].
 - The consultants' experiment that gave centaur, cyborg, and the jagged
   frontier their meaning [@doi:10.2139/ssrn.4573321].
-- AI-drafted patient replies at scale: burden reduced, drafts read and edited
+- AI-drafted patient replies at scale: no time saved, burden reduced
   [@pmid:38506805].
 
 **Listen**
