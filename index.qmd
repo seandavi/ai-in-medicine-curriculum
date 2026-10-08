@@ -43,11 +43,10 @@ best case. A chapter that uses one of these says so.
 
 ## The chapters, in the default order
 
-Eleven chapters for eight sessions. The default four-week assembly runs them
-in this order, and the book's contents are grouped by week the same way; the
-three spare chapters can be swapped in by cohort interest. Each one stands
-alone, so any order works. The [syllabus](course/syllabus.qmd) says what a
-week looks like and when things are due. One assignment runs across all four
+Eleven chapters across four weeks, read on your own time. The book's contents
+are grouped by week in this order; the spare chapters can be read any week.
+Each one stands alone, so any order works. The [syllabus](course/syllabus.qmd)
+gives the live sessions, the week-by-week plan, and the due dates. One assignment runs across all four
 weeks, the [weekly resource log](course/resource-log.qmd), where your own
 reading goes; several chapter activities feed it. Whoever runs the course
 reads the [For instructors](appendix/instructors.qmd) appendix.
@@ -98,29 +97,41 @@ regulation; AIM-5 clinical use; AIM-6 talking to patients; AIM-7 workflow and
 systems; AIM-8 health data science; AIM-9 research and scholarship; AIM-X
 professional identity, the closing question.
 
-| Chapter | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | X |
+| Material | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | X |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| [How these systems work](chapters/core-foundations.qmd) | ● | ● | | | | | | | | |
-| [Centaur or cyborg](chapters/core-centaur-cyborg.qmd) | | | | ● | ● | | | | | ● |
-| [Critical appraisal](chapters/core-appraisal.qmd) | | ● | | | | | | | ● | |
-| [Bias and equity](chapters/core-bias-equity.qmd) | | | ● | | | | | | | |
-| [Agentic coding](chapters/enrichment-agentic-coding.qmd) | | ● | | ● | ● | | | | | |
-| [Talking to patients about AI](chapters/core-patient-communication.qmd) | | | | ● | | ● | | | | |
-| [Will AI take your job?](chapters/enrichment-workforce-economics.qmd) | | | ● | | | | ● | | | |
-| [What AI costs the planet](chapters/enrichment-environment.qmd) | | | ● | | | | | | | ● |
-| [Ethics, liability, and the device line](chapters/core-ethics-regulation.qmd) | | | | ● | | | ● | | | ● |
-| [Prompting lab](chapters/enrichment-prompting-lab.qmd) | | ● | | | ● | | | | | |
-| [Grounding AI in real sources](chapters/enrichment-rag-notebooklm.qmd) | ● | | | | | | | | ● | |
+| **Week 1** | | | | | | | | | | |
+| [How these systems work](chapters/core-foundations.qmd) | ● | ● | | | ○ | | | ○ | | ○ |
+| [Centaur or cyborg](chapters/core-centaur-cyborg.qmd) | | ○ | | ● | ● | ○ | ○ | | | ● |
+| **Week 2** | | | | | | | | | | |
+| [Critical appraisal](chapters/core-appraisal.qmd) | ● | ● | | ● | ○ | | ○ | | ● | ○ |
+| [Bias and equity](chapters/core-bias-equity.qmd) | | ○ | ● | | | | | ○ | ○ | ○ |
+| **Week 3** | | | | | | | | | | |
+| [Agentic coding](chapters/enrichment-agentic-coding.qmd) | ○ | ● | | ● | ● | | ○ | | | ○ |
+| [Talking to patients about AI](chapters/core-patient-communication.qmd) | | ○ | | ● | ○ | ● | | | | ○ |
+| **Week 4** (one of the first two) | | | | | | | | | | |
+| [Will AI take your job?](chapters/enrichment-workforce-economics.qmd) | | ● | ○ | ○ | | | ● | | ○ | ● |
+| [What AI costs the planet](chapters/enrichment-environment.qmd) | | ● | ● | | | | ● | | ○ | ○ |
+| [Ethics, liability, and the device line](chapters/core-ethics-regulation.qmd) | | ○ | ○ | ● | ○ | ○ | ○ | | ○ | ● |
+| **Spare** | | | | | | | | | | |
+| [Prompting lab](chapters/enrichment-prompting-lab.qmd) | | ● | | ○ | ● | | | | ○ | ○ |
+| [Grounding AI in real sources](chapters/enrichment-rag-notebooklm.qmd) | ● | ● | | ○ | ○ | | | | ● | ○ |
+| **Course pages and appendices** | | | | | | | | | | |
+| [Patient information and AI tools](course/patient-information.qmd) | | | | ● | | | | | | |
+| [Weekly resource log](course/resource-log.qmd) | | ○ | | ○ | | | | | ● | ○ |
+| [Open lab: hear it, draft it, check it](appendix/open-labs.qmd) | ○ | ○ | | ○ | ○ | | | | | ○ |
 
-: Which chapter serves which competency, from each chapter's own subtitle and objectives. {#tbl-coverage}
+: Which material serves which competency. ● the main subject: taught, and practised in the Do or Check. ○ taught, but not practised. Judged from what each chapter teaches and checks (reviewed October 2026), not from its subtitle. {#tbl-coverage}
 
-The rules say AIM-1 through AIM-6 must each appear at least once in any
-four-week assembly, with AIM-4 and AIM-5 recurring. The default order above
-meets them: every core competency appears, AIM-4 four times, AIM-2 three
-times, AIM-5 twice. AIM-8, health data science, is not the main subject of
-any chapter; the foundations chapter covers training and test sets, area
-under the curve, and dataset shift while making its own point, and that is
-the depth this course goes to.
+The rules say AIM-1 through AIM-6 must each be a main subject at least once in
+any four-week assembly, with AIM-4 and AIM-5 recurring. The default order
+meets them: AIM-4 is a main subject in five chapters, AIM-2 in four, AIM-1 and
+AIM-5 in two. Two are narrow. AIM-6, talking to patients, rests on one chapter,
+so missing it costs the most. AIM-3, bias and equity, gets a second chapter
+only if the cohort picks the environment chapter in week 4. AIM-8, health data
+science, is not the main subject of any chapter. The foundations chapter
+covers training and test sets, area under the curve, and dataset shift along
+the way. Every Check is scored by you against a rubric, so "practised"
+here means self-assessed, not graded.
 
 ## The tutor and the answer keys
 
@@ -141,8 +152,9 @@ checked against PubMed, an answer key, and a review as six invented readers.
 The author read the result, and the chapters then went through a
 plain-language pass, a second six-persona review, a cross-reference pass,
 and a pass replacing metaphor with direct statement, each also run by AI
-agents under the author's direction. The author
-edited and committed all of it. The full account, including what the AI did
+agents under the author's direction. In October, once the course's dates and
+format were fixed, the syllabus, new pages, and appendices were added the same
+way. The author edited and committed all of it. The full account, including what the AI did
 and what a person checked, is in the appendix
 [How this book was made](appendix/about.qmd) and the
 [AI ledger](appendix/ai-ledger.qmd). The course asks you to disclose and
