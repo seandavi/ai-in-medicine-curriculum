@@ -11,9 +11,10 @@ use should do the same.
 
 A four-week, ungraded elective on AI in medicine for fourth-year medical
 students at the University of Colorado School of Medicine (IDPT 8079; 49
-students in fall 2026), delivered over Zoom. The book carries the teaching:
-eleven chapters, each standing alone, read on your own time. The live hours
-are for questions, demonstrations, open labs, guest talks, and small groups.
+students in fall 2026), delivered over Zoom. The course director teaches it
+live in two recorded talks a week, and the book goes with the talks: eleven
+chapters, each standing alone, read on your own time. The other live hours are
+for office hours, guest talks, and small groups.
 It is built with [Quarto](https://quarto.org/). The source is in a GitHub
 repository, [seandavi/ai-in-medicine-curriculum](https://github.com/seandavi/ai-in-medicine-curriculum),
 which is private for now and will be made public.
@@ -65,7 +66,9 @@ before had said they were afraid to use these tools and felt lost. So the
 course was refocused on skill and confidence: one core chapter a week plus a
 menu, a weekly routine, and most of each week spent using AI to learn
 something the student cares about. The chapters are being revisited one at a
-time to match.
+time to match. Then, on October 8, the course director chose to teach more
+live. Weeks 2 to 4 now have two recorded talks a week in place of the voted
+open lab, and each core chapter goes with its talk.
 
 ## What the ledger shows
 
