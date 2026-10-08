@@ -1,7 +1,7 @@
 # Answer key — enrichment-prompting-lab
 
 Not rendered. Fed to the tutor; used by the instructor in any live session or
-open lab, where the traps are released after both runs (about 25 minutes into
+open lab, where the traps are released after both runs (about 10 minutes into
 Part B). Revised 2026-10-08 for the week 2 core version of the chapter
 ("Prompting lab: getting good answers, and knowing their limits"): Part A
 (build a prompt that works) is new, Part B checks one claim instead of two, and
@@ -86,7 +86,7 @@ No single right answer; the student's own topic. What to look for:
 |---|---|
 | 1 A kept five-part template | Part A and "What you keep"; Check row 1; "What this changes" part 2 |
 | 2 One part changed at a time | Part A; Check row 2 |
-| 3 Bare vs structured, organisation vs correctness | Part B Steps 2 to 4 and the one-sentence finding; Check rows 3 and 6 |
+| 3 Bare vs structured, organisation vs correctness | Part B Steps 2 to 4 and the one-sentence finding; Check row 3 |
 | 4 The claim the plan depends on, checked against a source | Part B Step 5; Check row 4; "What this changes" part 1 |
 | 5 The two trials | Check row 5 |
 
@@ -108,4 +108,5 @@ Run all four cases through the institution's ChatGPT Edu and Copilot the
 morning of the session, bare and structured, and keep the transcripts. If a
 tool catches every trap on the bare prompt, say so in the frame and let the
 class result stand; the chapter's "one case is not a study" note covers it.
-Release the traps callout (or this key) at 35 minutes, not before.
+Release the traps callout (or this key) after both runs (about 10 minutes into
+Part B), not before.
