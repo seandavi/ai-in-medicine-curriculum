@@ -101,7 +101,14 @@ framework core and move hands-on work toward success first.
   calendar and in the week 3 and 4 modules: Matt DeCamp, ethics (Tue Oct 27,
   1 p.m.); Mike Rosenberg, cardiology (Thu Oct 29, 1 p.m.); Elizabeth Kudron,
   pediatrics (Mon Nov 2, 11 a.m.); Sorabh Singhal, psychiatry (Mon Nov 2,
-  1 p.m.). All agreed to recording. None yet in week 2. Last year's
+  1 p.m.). All agreed to recording. None yet in week 2.
+  Home page rewritten 2026-10-09 (Canvas keeps the old version in the page's
+  history): points to the book and the modules, states the schedule, the
+  attendance rule (recordings count; Friday group required), drop-in office
+  hours, and the made-up-cases rule; links this year's three standing
+  discussions (created the same day) instead of last year's course; the
+  syllabus link is the book, not the old Word file. School resource sections
+  unchanged. Last year's
   assignments are unpublished, not deleted. The course is still unpublished. A custom submission and chatbot app is a
   post-course project; start CU's data-use review early.
 - **Chat channel:** undecided. Microsoft Teams preferred over Discord (no new
