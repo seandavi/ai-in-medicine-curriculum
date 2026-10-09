@@ -125,6 +125,9 @@ framework core and move hands-on work toward success first.
   small-group channels: Fridays use Zoom). Owner: Sean Davis. Members so far:
   Maritza Casillas, Christina Olson, Matt Zuckerman. Students not yet added.
   Canvas stays the official record (announcements, calendar, journals).
+  Canvas discussions retired 2026-10-09 (the three standing ones unpublished,
+  Discussions hidden from the student menu); Canvas Announcements is the
+  one-way channel and is now shown in the menu (it had been hidden).
 
 ## People
 
