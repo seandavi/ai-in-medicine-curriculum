@@ -379,7 +379,7 @@ reasoning (adjusted difference 2 points, 95% CI −4 to 8). The model alone scor
 16 points higher than physicians using conventional resources (95% CI 2 to 30)
 [@pmid:39466245]. A tool can be capable and still fail to help the person
 holding it. That is an appraisal finding about humans, and [the centaur-or-cyborg
-chapter](core-centaur-cyborg.qmd) returns to that finding.
+chapter](core-centaur-cyborg.qmd) starts from that finding.
 
 ## Watch or listen
 

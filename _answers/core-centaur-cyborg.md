@@ -6,48 +6,40 @@ verdicts with the reasoning the tutor should look for, not the only correct
 ones. A student who sorts a task the other way with a stated reason tied to
 risk and validation meets the rubric.
 
-## Part A — the eight-task sort
+## Part A — three tasks tried
+
+No single right answer. The tutor rewards trying, improving, and checking:
+
+- **Journal club.** A good kept prompt names who the student is, the purpose
+  (presenting), and the levels wanted. The check: does the explanation match
+  the paper's own abstract, especially the limitations? Summaries often drop
+  them; a student who notices that has done the check well.
+- **Patient handout.** Two improvements should be specific ("add warning
+  signs", "cut to 150 words"), not "make it better". The fact check should
+  name the source (guideline, UpToDate, a society page) and what it found.
+- **Learn, do not just get an answer.** The hint-seeking prompt should contain
+  the student's own current position. If the tool answered with a plan
+  anyway, the student has observed something true; ask what they did next.
+  For the quiz, ask what they got wrong and whether they can explain the
+  correction (habit 4, ask why).
+
+The kept prompt is the point of Part A: a reusable, specific prompt the
+student would use again. Praise specificity and a described improvement over
+the first try.
+
+## Part B — the four-task sort
 
 | Task | Defensible verdict | Risk | Validation (typical, 2026) | Peril | What the tutor listens for |
 |---|---|---|---|---|---|
 | 1. Drafting a progress note | Centaur | Patient | Ambient scribes: yes for visit notes (see appraisal chapter); EHR inpatient note drafting: institution-specific, often piloted, rarely validated on outcomes | Mis-skilling | The draft is a bounded delegation; every assessment/plan line is read against the student's own reasoning before signing. The student should name the day-3 creatinine example or an equivalent. |
 | 2. Writing a progress note | Not at all, or centaur for structure only | Patient | None for the reasoning content | Never-skilling | The difference from row 1: here nobody has done the thinking yet. The note *is* the reasoning. Students who give rows 1 and 2 the same verdict have not seen that one has a human holding the pen and one does not. |
-| 3. Literature search | Cyborg with retrieval-grounded tools; centaur with a general chatbot | Me, then patient | Retrieval-grounded tools: near-zero fabrication (appraisal chapter); general chatbot: not validated for citations | Deskilling of search skill; mis-skilling if citations are trusted | Verification in PubMed is the check. "Cyborg" is fine if the student says which tool and why. |
-| 4. Building a differential | Centaur, after starting alone | Patient | Goh 2024: model alone strong, physician+model no better; not validated for unsupervised use | Never-skilling (the sharpest one for an MS4) | Technique 1 and 2: own differential first, then hint-seeking. A student who says "cyborg" must explain how they preserve the grappling. |
-| 5. Patient education handout | Cyborg | Patient, moderate (reading level, wrong facts) | Not validated; patient-facing text must be read and checked | Mis-skilling is low; the risk is to the patient, not the learner | Read every fact; reading-level check; disclosure to the patient that it was AI-assisted is reasonable (patient-communication chapter). |
-| 6. Journal club slides | Cyborg | Me | Not needed; low stakes | Deskilling of synthesis is the honest concern | The one task on the list where iterating freely is fine. Slides are not the paper; the reading is. |
-| 7. Summarizing a paper | Centaur | Me, then patient if acted on | Not validated; summaries drop the limitations section | Never-skilling (critical appraisal) | Read the methods yourself; use the tool to check your summary, not to replace it (teach-back). |
-| 8. Answering a patient message | Centaur | Patient | Garcia 2024 (pmid:38506805): institutional, EHR-integrated, BAA-covered; 20% utilization, no time saved, burden reduced | Mis-skilling of tone and content | Read and edit every draft; never send unread. Disclosure: institution-specific; the student should say whether the patient is told and by whom. Consumer chatbot: never, PHI. |
+| 3. The discharge summary, bed 12 | Centaur at most: the student reads the chart and writes the narrative; a tool may format or check completeness | Patient | Not validated for multi-service hospital summaries | Never-skilling | Reading eleven days of chart is how the intern learns what happened; handing it over loses the knowledge the next phone call needs. |
+| 4. The question for nephrology | Not at all for forming the question; cyborg is fine for wording it after | Patient (indirectly) | None | Never-skilling | The student must know what they are asking before the tool polishes it. "Ask me what I think first" is the right use. |
 
-The tutor should reward a grid in which "don't know" appears in the
-validation column. Most students do not know what their institution has
-validated, and saying so is the correct answer.
-
-## Part A step 3 — the disagreement
-
-A good disagreement names the opposing case's strongest premise. Examples the
-tutor can offer if the student is stuck:
-
-- Row 1 vs 2: "A drafted note I edit heavily *is* a note I wrote." Counter: the
-  editing preserves the plan's structure and anchors on its conclusions
-  (mis-skilling). Resolution: draft only after writing your own one-line
-  assessment.
-- Row 4: "The model alone scored higher than the physicians; refusing to use it
-  harms patients." Counter: the physicians *with* the model did no better, so
-  the benefit is not automatic; and the trial measured attendings and
-  residents, not learners building the skill.
-
-## Part B — the prompt
-
-A rewritten prompt meets the rubric if it (a) states who and where, (b) asks
-for a hint, a question, or a check rather than the product, and (c) contains the
-student's own current position. The chapter's worked example is the model.
-Common failure: the rewrite adds context but still ends "what should I do?"
-
-The quiz step: the tutor should ask what the student got wrong and whether
-they could explain why the tool's correction was correct (technique 4). A
-student who reports the tool refused to quiz and gave a plan anyway has
-observed something true; note it and move on.
+A student who sorts a task the other way with a stated reason tied to risk and
+validation meets the rubric. The tutor should reward "don't know" in the
+validation reasoning; most students do not know what their institution has
+validated.
 
 ## The drafted note
 
@@ -89,10 +81,9 @@ flagged for the final session.
 ## Instructor prep
 
 - Confirm the institution's current attestation/disclosure language for
-  AI-drafted notes and portal replies before the live session; the chapter
-  carries a `[VERIFY]` for it.
-- Run the hint-seeking prompt from the chapter the morning of the session in
-  the institutional tool and see whether it answers with a plan anyway. If it
-  does, that is the demo.
-- The live session's Breakout B is Part A with groups of 4–5; the report-back
-  grids the eight tasks against group verdicts and spends the time on rows 1–2.
+  AI-drafted notes and portal replies; the chapter carries a `[VERIFY]` for it.
+- Run the three Part A prompts in ChatGPT Edu before week 1, so you can say
+  what students will see. If the hint-seeking prompt returns a plan anyway,
+  that is a good demonstration for the Monday hour.
+- Friday groups: students can share the prompt they kept; the draft/write pair
+  in Part B is the best two minutes of discussion.

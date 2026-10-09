@@ -39,11 +39,11 @@ enough: [the patient information page](../course/patient-information.qmd).
 | Lab | You will have... | Time | Status |
 |---|---|---|---|
 | [Hear it, draft it, check it](#hear-it-draft-it-check-it-a-scribe-from-the-inside) | watched a scribe mishear a visit and a model invent part of the note | 60 min | Ready |
-| [Same question, three tools](#same-question-three-tools) | seen how much the wording and the tool change the answer | 45 min | Ready, in [the prompting lab](../chapters/enrichment-prompting-lab.qmd) |
+| [Your case in a second tool, and the other three](#your-case-in-a-second-tool-and-the-other-three) | run your prompting-lab case in a second tool, then tried the three cases you did not pick | 60 min | Ready, builds on Part B of [the prompting lab](../chapters/enrichment-prompting-lab.qmd) |
 | [A study guide that cites its sources](#a-study-guide-that-cites-its-sources) | built a notebook from papers you chose and caught what it adds | 45 min | Ready, in [the grounding chapter](../chapters/enrichment-rag-notebooklm.qmd) |
 | [Build a calculator, then break it](#build-a-calculator-then-break-it) | built a working clinical tool in an hour and found what is wrong with it | 60 min | Ready, in [the agentic coding chapter](../chapters/enrichment-agentic-coding.qmd) |
 | [Draw me a doctor](#draw-me-a-doctor) | counted who an image model pictures when you ask for a doctor, a nurse, a surgeon | 30 min | Idea |
-| [The patient who talks back](#the-patient-who-talks-back) | practised a hard conversation with a chatbot playing the patient | 45 min | Idea |
+| [The patient who talks back](#the-patient-who-talks-back) | practised a hard conversation with a chatbot playing the patient | 45 min | Ready, in [talking to patients](../chapters/core-patient-communication.qmd#part-b-practice-patient) |
 | [Deep research, checked](#deep-research-checked) | checked every citation in a chatbot's "deep research" report | 45 min | Idea |
 | [Teach a machine in ten minutes](#teach-a-machine-in-ten-minutes) | trained an image classifier in your browser and watched it fail on new pictures | 30 min | Idea |
 | [Write your own board question](#write-your-own-board-question) | written exam-style questions with a chatbot and checked the answer and every wrong option | 45 min | Idea |
@@ -179,12 +179,15 @@ summarizing step's kind of error.
 :::
 :::
 
-## Same question, three tools
+## Your case in a second tool, and the other three
 
-Ask one clinical question three ways, in three tools, and put the answers side
-by side. You will see how much the wording of a question, and the tool you
-ask, changes what comes back. Written out in full as [the prompting
-lab](../chapters/enrichment-prompting-lab.qmd).
+Part B of [the prompting lab](../chapters/enrichment-prompting-lab.qmd) runs
+one made-up case twice in one tool. Here, take the same case and both prompts
+to a second tool (for example Copilot if you used ChatGPT Edu) and score it the
+same way, about 15 minutes. Then run the bare and structured prompts on the
+three cases you did not pick, about 15 minutes each. You will see whether a
+trap that one tool caught, another missed, and which kind of trap structure
+helps with.
 
 ## A study guide that cites its sources
 
@@ -210,11 +213,12 @@ equity](../chapters/core-bias-equity.qmd).
 
 ## The patient who talks back
 
-*Idea.* Give a chatbot a made-up patient and a hard conversation: a new
-cancer diagnosis, a medication error, a patient who wants antibiotics for a
-cold. Have it play the patient while you play the doctor, then ask it to play
-an observer and critique you. Connects to [talking to
-patients](../chapters/core-patient-communication.qmd). [NYU Grossman's Prompt-a-Thon library](https://promptathon.iime.cloud/)
+*Ready.* The full lab is [Part B of talking to
+patients](../chapters/core-patient-communication.qmd#part-b-practice-patient):
+a chatbot plays a patient who brings a chatbot's printout, you play the doctor,
+and then it scores you as an observer. In the open lab, run that, then change
+the patient to another hard conversation: a new cancer diagnosis, a medication
+error, a patient who wants antibiotics for a cold. [NYU Grossman's Prompt-a-Thon library](https://promptathon.iime.cloud/)
 has virtual-patient prompts to start from; copy them into your university
 ChatGPT Edu or Copilot.
 

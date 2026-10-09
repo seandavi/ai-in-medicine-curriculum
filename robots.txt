@@ -1,0 +1,5 @@
+# Everything here is open to people, search engines and AI tools.
+User-agent: *
+Allow: /
+
+Sitemap: https://aim.seandavis.net/sitemap.xml
