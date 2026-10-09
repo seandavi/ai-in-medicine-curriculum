@@ -24,8 +24,8 @@ information is on [its own page](patient-information.qmd).
 
 In weeks 2 to 4, the two talks are the main event. The course director
 teaches the week's topic live on Monday and a second topic on Wednesday, with
-demonstrations on screen. Both are recorded, and watching the recording counts
-as attending. The week's core chapter goes with Monday's talk: read it after
+demonstrations on screen. Both are recorded, so you can catch up if you miss
+one. The week's core chapter goes with Monday's talk: read it after
 the talk, or instead of it if you missed the talk.
 
 Plan on about 8 to 10 hours a week. The table adds up to 7.5 to 9.5 hours for
@@ -33,8 +33,8 @@ what is expected, plus anything optional you choose.
 
 | When | What | Expected? | Time |
 |---|---|---|---|
-| Monday, 10 a.m., 60 minutes, live and recorded | **"How I used AI this week"**: the course director's own real tasks, shown on screen. Then **a talk on the week's core topic**, with live demonstrations | Yes, live or the recording | 1 hour |
-| Wednesday, 10 a.m., 60 minutes, live and recorded | **A talk on a second topic**: a menu chapter, or something beyond the book. The class votes on the topic from a short list | Yes, live or the recording | 1 hour |
+| Monday, 10 a.m., 60 minutes, live and recorded | **"How I used AI this week"**: the course director's own real tasks, shown on screen. Then **a talk on the week's core topic**, with live demonstrations | Yes | 1 hour |
+| Wednesday, 10 a.m., 60 minutes, live and recorded | **A talk on a second topic**: a menu chapter, or something beyond the book. The class votes on the topic from a short list | Yes | 1 hour |
 | After Monday's talk | The week's **core chapter** | Yes | About 1 hour |
 | On your own | **[Learn it with AI](learn-with-ai.qmd)**: use AI to teach yourself something you care about. This is the main hands-on work of the course | Yes | 2 to 4 hours |
 | Through the week | Guest talks from clinicians and researchers using AI in their work | Attend or watch one | About 1 hour |
@@ -111,10 +111,16 @@ week. The menu is there so you can follow what interests you.
 
 : Core chapter and menu. {#tbl-order}
 
-If you are away interviewing, the recordings and the chapters let you keep up.
-Watching a talk's recording counts as attending it. Tell the course director
-which Friday you will miss, and add one line to that week's journal about a
-recording you watched.
+## Attendance
+
+Attendance at the live sessions and your Friday small group is expected. If
+you will miss a session, follow your school's process for reporting absences,
+and let the course director know.
+
+This is a busy time of year, with interviews and travel, and the course is
+flexible about it. You are also taking responsibility for your own learning,
+so in rare cases life or another learning opportunity may come first. When
+that happens, the recordings and the chapters let you catch up.
 
 ## Due dates
 
