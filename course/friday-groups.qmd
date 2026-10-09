@@ -11,7 +11,7 @@ is where you practise.
 | Minutes | What |
 |---|---|
 | 0 to 15 | Round the group: one thing AI helped you learn this week, and one thing you caught it getting wrong. From your [learning journal](learning-journal.qmd). |
-| 15 to 45 | Breakout rooms of four or five, the same people each week. Two scenario cards, below. |
+| 15 to 45 | Two scenario cards, below. |
 | 45 to 60 | Back together: what was hard to say, and what worked. |
 
 : The Friday hour. {#tbl-friday}

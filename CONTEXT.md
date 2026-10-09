@@ -60,8 +60,8 @@ framework core and move hands-on work toward success first.
   - Thursday, 45 min, live, not recorded: office hours. Learning journal due
     Thursday night.
   - Friday, 60 min: small group, required, one of four slots (10 a.m., 11 a.m., 1 p.m.,
-    2 p.m.; up to 15 students each for 49 enrolled; decided 2026-10-09), breakout rooms
-    of 4 to 5 with the same members each week.
+    2 p.m.; up to 15 students each for 49 enrolled; decided 2026-10-09). Whether to use
+    breakout rooms is undecided; the book does not mention them.
   - Guest talks: attend or watch one a week (was two, cut so the week still
     adds up; see the syllabus table).
   - Recordings count as attending.
