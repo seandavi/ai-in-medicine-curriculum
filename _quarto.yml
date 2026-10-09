@@ -4,14 +4,27 @@ project:
   # every render. Run it by hand (with network) before pushing:
   #   quartobot resolve --from-scan . --id-mode citation-key
   pre-render: quartobot resolve --from-scan . --id-mode citation-key
+  # Tidies llms.txt and writes llms-full.txt (the whole book in one file).
+  post-render: scripts/llms_full.py
+  # Copied to the site root as is; points crawlers at the sitemap.
+  resources:
+    - robots.txt
   render:
     - index.qmd
     - chapters/
     - course/
     - appendix/
 
+# Quarto reads llms-txt from the website section, even for a book.
+# It writes llms.txt and a plain .llms.md copy of every page, so chatbots
+# and agents can read the book without the HTML around it.
+website:
+  llms-txt: true
+
 book:
   title: "AI in Medicine"
+  # Gives every page a canonical address and makes Quarto write sitemap.xml.
+  site-url: https://aim.seandavis.net
   subtitle: "A four-week elective for fourth-year medical students"
   author: "Sean Davis"
   date: today
