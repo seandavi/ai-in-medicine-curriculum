@@ -127,7 +127,8 @@ framework core and move hands-on work toward success first.
   Canvas stays the official record (announcements, calendar, journals).
   Canvas: Announcements is the one-way channel (now shown in the menu; it had
   been hidden) plus one discussion, "General Questions", linked from the home
-  page. Random and Social discussions unpublished (2026-10-09).
+  page. Students cannot start new topics, only reply there. Random and Social
+  discussions unpublished (2026-10-09).
 
 ## People
 
