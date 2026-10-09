@@ -59,7 +59,8 @@ framework core and move hands-on work toward success first.
     self-paced activities and as Wednesday topic candidates.
   - Thursday, 45 min, live, not recorded: office hours. Learning journal due
     Thursday night.
-  - Friday, 60 min: small group, required, one of three slots, breakout rooms
+  - Friday, 60 min: small group, required, one of four slots (10 a.m., 11 a.m., 1 p.m.,
+    2 p.m.; up to 17 students each; decided 2026-10-09), breakout rooms
     of 4 to 5 with the same members each week.
   - Guest talks: attend or watch one a week (was two, cut so the week still
     adds up; see the syllabus table).
@@ -81,8 +82,8 @@ framework core and move hands-on work toward success first.
   season and recordings plus self-contained chapters keep away students on
   track. Recordings still do that job, so interview season no longer argues
   against talks.
-- **Known cost:** the director is live about 5.75 hours a week in weeks 2 to 4
-  (Monday 1, Wednesday 1, Thursday 0.75, three Friday slots 3) and writes two
+- **Known cost:** the director is live about 6.75 hours a week in weeks 2 to 4
+  (Monday 1, Wednesday 1, Thursday 0.75, four Friday slots 4) and writes two
   new talks a week. Watch for this in week 2. A suggestion, not decided: if it
   is too much, the Wednesday talk is the first thing to hand to a guest.
 - **Submissions:** Canvas text-entry assignments, one per week, complete or
@@ -93,7 +94,7 @@ framework core and move hands-on work toward success first.
   the journal assignment; calendar events for every live session; signup
   sheets for week 1 office hours (three 15-minute slots after Thursday's
   session) and for the Friday small-group slot (10 a.m., 11 a.m., 1 p.m.,
-  chosen once on October 16); plain events for later Fridays. Last year's
+  2 p.m., up to 17 each, chosen once on October 16); plain events for later Fridays. Last year's
   assignments are unpublished, not deleted. The course is still unpublished. A custom submission and chatbot app is a
   post-course project; start CU's data-use review early.
 - **Chat channel:** undecided. Microsoft Teams preferred over Discord (no new

@@ -40,7 +40,7 @@ what is expected, plus anything optional you choose.
 | Through the week | Guest talks from clinicians and researchers using AI in their work | Attend or watch one | About 1 hour |
 | Thursday, 45 minutes, live | **Office hours**: bring what you are stuck on. Not recorded | Optional | 45 minutes |
 | Thursday night | [Learning journal](learning-journal.qmd) entry | Yes | 30 minutes |
-| Friday, 60 minutes | [Small group](friday-groups.qmd), in one of three time slots you choose: what AI taught you, and practising conversations about AI out loud | Yes, one slot | 1 hour |
+| Friday, 60 minutes | [Small group](friday-groups.qmd), in one of four time slots you choose: what AI taught you, and practising conversations about AI out loud | Yes, one slot | 1 hour |
 | Any time | Chapters from the **menu**, and the [open labs](../appendix/open-labs.qmd) | Optional | As you like |
 
 : Your week, weeks 2 to 4. All times are Mountain time (Denver). Office hours times and the guest schedule are posted in Canvas. {#tbl-week}

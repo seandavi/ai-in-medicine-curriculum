@@ -116,8 +116,8 @@ Week 1 is taught live on its own schedule (see the
 
 : A week in the course, weeks 2 to 4. Recordings count as attending. {#tbl-week-run}
 
-The instructor's cost is real: about 5.75 live hours a week (Monday, Wednesday,
-Thursday, and three Friday slots) plus two new talks to write. An instructor
+The instructor's cost is real: about 6.75 live hours a week (Monday, Wednesday,
+Thursday, and four Friday slots) plus two new talks to write. An instructor
 with less time can run the Wednesday talk as an open lab or hand it to a
 guest.
 
