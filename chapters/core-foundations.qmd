@@ -122,7 +122,7 @@ on the right. The thing the lab can measure is on the left. The equation is
 the bridge, and the bridge was built from a specific set of people.
 
 A stand-in like this, something you measure because the real thing cannot
-be measured, is called a **proxy**. The first of the course's three recurring
+be measured, is called a **proxy**. The first of the course's four recurring
 lessons is **proxies fail**: the stand-in and the real thing can come apart,
 and they come apart for some patients more than for others. [The bias and
 equity chapter](core-bias-equity.qmd) depends on that lesson. This chapter's
@@ -269,7 +269,7 @@ performance. It simply had not been measured on patients like those.
 
 ::: {.callout-important title="The one sentence"}
 A model's performance on the population it was built from is the optimistic
-number. That is the third of the course's three recurring lessons, **the
+number. That is the third of the course's four recurring lessons, **the
 published number is the optimistic one**, in its first form. Ask what it was
 trained on, and ask what it was tested on. If those
 are the same set, you have learned nothing yet.

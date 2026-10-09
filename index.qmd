@@ -38,12 +38,14 @@ one is). The safety rules are short: **use your university account; never put
 real patient information into a course activity; check what matters before you
 rely on it; you sign the note.**
 
-Three ideas recur across the chapters, and each is named the same way wherever
+Four ideas recur across the chapters, and each is named the same way wherever
 it appears. **Proxies fail**: almost every AI failure in medicine is a stand-in
 that looked reasonable. **Efficiency gains get eaten by volume**: per-unit
 savings are cancelled out by growth in use. **The published number is the
 optimistic one**: the most prominently reported statistic is nearly always the
-best case. A chapter that uses one of these says so.
+best case. **Who benefits, who bears the risk, who decides**: the people a
+tool helps are often not the people it puts at risk, or the people who chose
+it. A chapter that uses one of these says so.
 
 ## The chapters, week by week
 

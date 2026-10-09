@@ -74,9 +74,9 @@ week 2 core and the prompting lab a menu item.
 
 **A cohort with no live week 1.** Make How these systems work the week 1 core.
 
-### Three ideas that recur
+### Four ideas that recur
 
-Modules are independent, but three ideas recur across all of them. Name them in
+Modules are independent, but four ideas recur across them. Name them in
 week one and call them by name whenever they reappear. They are what turns
 eight sessions into a course, and they are what students will still have when
 every tool taught here has been replaced.
@@ -98,6 +98,12 @@ every tool taught here has been replaced.
    curated hard cases beat real-world deployment. The gap between the most
    prominently reported statistic and the trial result is the most reliable
    teaching material in this field.
+4. **Who benefits, who bears the risk, who decides.** Introduced in the week 4
+   ethics chapter. A scribe relieves the clinician; the errors land in the
+   patient's record, and the patient is told at the door. A data center's
+   costs fall on neighbors who were not asked. Displaced transcriptionists have
+   the least money in reserve. The question to train: *are these three the
+   same people, and if not, what closes the gap?*
 
 ## Running a week
 

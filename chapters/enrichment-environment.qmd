@@ -70,7 +70,9 @@ what happens somewhere else, to someone else, when you press enter. That makes
 it a question of fairness, not only a question of adding up carbon. Water and
 air pollution are local. A data center's cooling draws from one county's
 groundwater. A gas turbine's exhaust lands in one neighborhood. The people
-who bear that cost do not use the tool and were not asked. In the emergency
+who bear that cost do not use the tool and were not asked. That is the
+course's fourth recurring lesson, **who benefits, who bears the risk, who
+decides**, explained in [the ethics chapter](core-ethics-regulation.qmd). In the emergency
 department of that neighborhood, an asthma exacerbation is an asthma
 exacerbation. No one can say what caused it, and you would treat it the same.
 This chapter is about being able to say, honestly and in proportion, what the
@@ -261,7 +263,7 @@ in 2024, and 81 percent above in 2025, with data-center electricity use up 37
 percent in the last of those years
 ([ESG Dive, 2 July 2025](https://www.esgdive.com/news/googles-emissions-rise-despite-data-center-decarbonization-ppas-environmental-report-2025/752236/);
 [ESG Dive, 2 July 2026](https://www.esgdive.com/news/googles-emissions-continue-to-climb-due-to-ai-buildout/824373/)).
-This is the second of the course's three recurring lessons, **efficiency
+This is the second of the course's four recurring lessons, **efficiency
 gains get eaten by volume**. Economists call it the Jevons effect, after the
 observation in 1865 that more efficient steam engines led Britain to burn more
 coal, not less. When a

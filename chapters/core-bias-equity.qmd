@@ -108,7 +108,7 @@ The stand-in quantity is called a **proxy**: something you measure because
 the real thing cannot be measured. The **proxy problem** is the whole chapter
 in one sentence: *an algorithm is only as fair as the link between what it
 measures and what you hoped it measured, and that link can differ by group.*
-It is the first of the course's three recurring lessons, **proxies fail**,
+It is the first of the course's four recurring lessons, **proxies fail**,
 and this chapter is where that lesson is explained in full. [The
 foundations chapter](core-foundations.qmd) showed it in the eGFR, a stand-in for
 a filtration rate nobody measured.
@@ -272,7 +272,10 @@ representation harm is a system that carries a demeaning or dismissive
 picture of a group, whether or not any resource is given or withheld. A model that
 repeats a debunked claim about Black patients' pain tolerance has harmed
 someone before any decision is made. Most of the cases below are allocation
-harms. At least one is not, and the exercise asks you to decide which.
+harms. At least one is not, and the exercise asks you to decide which. Asking
+who bears a harm, and whether they had any say in the tool, is the course's
+fourth recurring lesson, **who benefits, who bears the risk, who decides**,
+explained in [the ethics chapter](core-ethics-regulation.qmd).
 
 ### The cases in one table
 

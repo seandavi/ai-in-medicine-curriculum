@@ -230,7 +230,7 @@ benchmarks.
 
 **4. Demand: if the task gets cheaper, is more of it ordered?** Making a task
 cheaper does not obviously reduce the number of people doing it. This is the
-second of the course's three recurring lessons, **efficiency gains get eaten
+second of the course's four recurring lessons, **efficiency gains get eaten
 by volume**; economists call it the Jevons paradox. In the nineteenth century, more efficient steam
 engines led to more coal being burned, not less, because cheaper power got
 used more. Imaging works the same way: cheaper scans get ordered more often.
@@ -414,7 +414,9 @@ first test. The job is judgment about what a record means and what a payer
 will accept, and the bot wars above are *increasing* that work, not removing
 it. The people whose jobs change first are your colleagues, and the harm is
 not spread evenly. Transcription pays less than the two occupations that are
-growing, so the displaced workers are the ones with the least money in reserve. [The
+growing, so the displaced workers are the ones with the least money in reserve.
+That is the course's fourth recurring lesson, **who benefits, who bears the
+risk, who decides**, explained in [the ethics chapter](core-ethics-regulation.qmd). [The
 bias and equity chapter](core-bias-equity.qmd) has a name for that, harms of allocation, and it
 applies to jobs as much as to diagnosis.
 
