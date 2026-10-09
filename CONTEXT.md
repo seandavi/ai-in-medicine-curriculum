@@ -100,7 +100,10 @@ framework core and move hands-on work toward success first.
   calendar and in the week 3 and 4 modules: Matt DeCamp, ethics (Tue Oct 27,
   1 p.m.); Mike Rosenberg, cardiology (Thu Oct 29, 1 p.m.); Elizabeth Kudron,
   pediatrics (Mon Nov 2, 11 a.m.); Sorabh Singhal, psychiatry (Mon Nov 2,
-  1 p.m.). All agreed to recording. None yet in week 2.
+  1 p.m.). Added later the same day: Dan Denman, AI in neuroscience (Wed
+  Oct 21, 1 p.m.); Matt Zuckerman, AI in medical education (Thu Oct 22,
+  1 p.m.). All agreed to recording. Christina Olson's workshop: Tue Oct 27,
+  10 a.m., blocked to noon (about 90 minutes, breakout rooms; title to come).
   Home page rewritten 2026-10-09 (Canvas keeps the old version in the page's
   history): points to the book and the modules, states the schedule, the
   attendance rule (recordings count; Friday group required), drop-in office
