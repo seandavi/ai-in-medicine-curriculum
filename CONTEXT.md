@@ -44,7 +44,7 @@ framework core and move hands-on work toward success first.
   #60, trimmed; keep a few slides on overfitting); Thursday a hands-on session,
   "centaur or cyborg, live" (everyone in ChatGPT Edu, trying things together;
   left open-ended on purpose; also catches account problems early), then
-  office hours by signup.
+  office hours.
   Friday small groups in the signed-up slots. Students read `core-foundations`
   and `core-centaur-cyborg`. Weeks 2 to 4 Monday and Wednesday talks are also
   at 10 a.m.
@@ -57,7 +57,8 @@ framework core and move hands-on work toward success first.
     beyond the book. The class votes on the topic from a short list, the week
     before. This replaces the voted mid-week open lab; the open labs stay as
     self-paced activities and as Wednesday topic candidates.
-  - Thursday, 45 min, live, not recorded: office hours. Learning journal due
+  - Thursday, 11 to 11:45 a.m., live, not recorded: office hours, drop in
+    (no signup; decided 2026-10-09). Learning journal due
     Thursday night.
   - Friday, 60 min: small group, required, one of four slots (10 a.m., 11 a.m., 1 p.m.,
     2 p.m.; up to 15 students each for 49 enrolled; decided 2026-10-09). Whether to use
@@ -91,9 +92,10 @@ framework core and move hands-on work toward success first.
   reviewed on Fridays.
 - **Canvas (built 2026-10-09):** modules Start here and Weeks 1 to 4, each
   linking the Zoom meeting and the week's chapters on aim.seandavis.net plus
-  the journal assignment; calendar events for every live session; signup
-  sheets for week 1 office hours (one 45-minute block, up to 10 students, after Thursday's
-  session) and for the Friday small-group slot (10 a.m., 11 a.m., 1 p.m.,
+  the journal assignment; calendar events for every live session; drop-in
+  office hours every Thursday 11 to 11:45 a.m., titled with the instructor's
+  name ("Office hours: Sean Davis") so other instructors can add their own;
+  a signup sheet for the Friday small-group slot (10 a.m., 11 a.m., 1 p.m.,
   2 p.m., up to 15 each, chosen once on October 16); plain events for later Fridays.
   Guest talks (from the lecturer signup sheet, 2026-10-09), on the Canvas
   calendar and in the week 3 and 4 modules: Matt DeCamp, ethics (Tue Oct 27,

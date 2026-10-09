@@ -38,12 +38,12 @@ what is expected, plus anything optional you choose.
 | After Monday's talk | The week's **core chapter** | Yes | About 1 hour |
 | On your own | **[Learn it with AI](learn-with-ai.qmd)**: use AI to teach yourself something you care about. This is the main hands-on work of the course | Yes | 2 to 4 hours |
 | Through the week | Guest talks from clinicians and researchers using AI in their work | Attend or watch one | About 1 hour |
-| Thursday, 45 minutes, live | **Office hours**: bring what you are stuck on. Not recorded | Optional | 45 minutes |
+| Thursday, 11 to 11:45 a.m., live | **Office hours**, drop in: bring what you are stuck on. Not recorded | Optional | 45 minutes |
 | Thursday night | [Learning journal](learning-journal.qmd) entry | Yes | 30 minutes |
 | Friday, 60 minutes | [Small group](friday-groups.qmd), in one of four time slots you choose: what AI taught you, and practising conversations about AI out loud | Yes, one slot | 1 hour |
 | Any time | Chapters from the **menu**, and the [open labs](../appendix/open-labs.qmd) | Optional | As you like |
 
-: Your week, weeks 2 to 4. All times are Mountain time (Denver). Office hours times and the guest schedule are posted in Canvas. {#tbl-week}
+: Your week, weeks 2 to 4. All times are Mountain time (Denver). The guest schedule is posted in Canvas. {#tbl-week}
 
 ## Week 1: live, October 12 to 16
 
@@ -58,7 +58,7 @@ schedule if anything changes.
 | Tuesday, October 13, 10 a.m. | A short history of AI |
 | Wednesday, October 14, 10 a.m. | What AI is: from AI to machine learning to deep learning to large language models, with time to try it together |
 | Thursday, October 15, 10 a.m. | **Hands-on: centaur or cyborg, live.** Bring your ChatGPT Edu account and try things together. Goes with the week's core chapter, [Centaur or cyborg](../chapters/core-centaur-cyborg.qmd). |
-| Thursday, October 15, after the session | Office hours, by signup. Bring what you are stuck on |
+| Thursday, October 15, 11 a.m. | Office hours, drop in. Bring what you are stuck on |
 | Friday, October 16 | Small groups, in the time slot you signed up for: introductions, then the first scenario cards |
 
 : Week 1. All times are Mountain time (Denver). {#tbl-week1}
