@@ -90,15 +90,19 @@ makes the company legally responsible for protecting the data. A scribe or
 model your hospital licenses inside the EHR runs under one. The consumer
 chatbot on your phone does not.
 
-At CU Anschutz, **ChatGPT Edu and Microsoft Copilot are covered** when you
-sign in with your university credentials. The same products through a personal
-account are not. Check which account you are signed in to before you type.
-Other tools, including Google's, are covered only if the institution tells you
-so in writing.
+So the rule is: a tool is covered only if your institution has a BAA for it,
+in the account you sign in with, and says so in writing. At the University of
+Colorado, for example, the BAA covers **ChatGPT Edu and Microsoft Copilot**
+when you sign in with your university credentials on the Anschutz and Denver
+campuses. It does not cover CU Boulder. The same products through a personal
+account are not covered. Check which account you are signed in to before you
+type. Other tools, including Google's, are covered only if the institution
+tells you so in writing.
 
 A covered account is for patient care, under the institution's policy. It does
 not change the course rule: course exercises use made-up patients, whatever
-account you use.
+account you use. The cases are for learning, and this book is meant to work at
+schools that have no such agreement.
 
 Before you put anything into a tool, ask two questions. *Is there a BAA for
 this tool, in the account I am signed in to? Does the policy say I may put

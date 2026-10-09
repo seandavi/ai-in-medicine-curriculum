@@ -22,6 +22,11 @@ what was vague, what was more certain than the evidence allows. Swap roles and
 run it again. There is no right script. The goal is to sound like yourself:
 informed, honest about what you do not know, and not defensive.
 
+**Optional: keep the group's notes in one place.** If your account offers it,
+your group can keep its cards and notes in a shared Project in ChatGPT Edu.
+Only people you invite can see it, and sharing a Project turns off personal
+memory in it.
+
 ## The cards
 
 ### Week 1 (October 16): introductions

@@ -11,28 +11,28 @@ The fixed facts about this offering, and what each one forces. Everything in
 | Duration | 4 weeks |
 | Delivery | Zoom only, no in-person component |
 | Assessment | Ungraded |
-| Predecessor | IDPT 8079 (CU Anschutz) — prior lectures inventoried in `research/talks-inventory.md` |
+| Predecessor | IDPT 8079 (CU Anschutz); prior lectures inventoried in `research/talks-inventory.md` |
 
 ## What each constraint forces
 
 **Fourth-year students, ungraded.** MS4s are post-Step 2, matched or matching,
 and pulled in many directions. Attendance is voluntary in practice even when
 nominally required, so every session has to justify itself on the day. This
-argues for sessions that are useful immediately — things they can use in
-residency in a few months — rather than foundational-then-applied sequencing
+argues for sessions that are useful immediately (things they can use in
+residency in a few months) rather than foundational-then-applied sequencing
 that only pays off at the end. It also means no exams, no graded assignments,
 and no busywork: participation is the only currency, and it is earned, not
 compelled.
 
 **~40 students on Zoom.** Too many for one conversation, fine for breakouts of
-4–6. Plenary discussion will be silence unless it is seeded — polls, chat
+4–6. Plenary discussion will be silence unless it is seeded: polls, chat
 waterfalls, or a named cold-call convention agreed to up front. Any hands-on
 activity has to survive 40 people on 40 different machines with no one able to
 look over a shoulder, which rules out anything requiring local installs and
 argues for browser-based tools.
 
 **Zoom, not in-person.** Attention decays faster than in a room. Plan in
-15–20 minute blocks with a change of mode at each boundary — talk, then do,
+15–20 minute blocks with a change of mode at each boundary: talk, then do,
 then discuss. Breakout rooms are the only way to get real participation at this
 size. Screen-share demos work; silent independent work does not.
 
@@ -52,9 +52,13 @@ and hit each more than once, in different modes.
    time allow.
 3. **Every session does something.** No 50-minute lecture blocks. Each session
    pairs an idea with an activity that produces an artifact or a judgment.
+   *(Amended 2026-10-08: in weeks 2 to 4 of fall 2026 the course director's
+   Monday and Wednesday talks are lectures with live demonstrations, by
+   choice. See constraint 5. The rule still holds for Friday groups and for
+   guests.)*
 4. **Free tools only, no installs.** Institutional accounts where available;
    otherwise browser-based free tiers. Cost is an equity problem, not a
-   footnote — see the `pricing` fragment in the talks repo.
+   footnote; see the `pricing` fragment in the talks repo.
 5. **Skill and confidence first; appraisal inside the use.** *(Revised
    2026-10-07; this replaces "critical appraisal over tool training".)* The
    course's aim is that students leave confident and practised at using AI in
@@ -71,3 +75,20 @@ and hit each more than once, in different modes.
    mistakes; what they lack is confidence (`research/student-interests-survey-2026-10-07.md`).
    The original reasoning still holds in part: products change, so teach the
    habit of finding where a tool helps, not a product.
+
+   **Amended 2026-10-08: lectures are the weekly main event; chapters are
+   the companion.** In weeks 2 to 4 the course director gives two talks a
+   week (Monday on the core chapter's topic, Wednesday on a menu chapter or
+   a topic beyond the book), live and recorded, with demonstrations on
+   screen. Each core chapter goes with its talk: read it after the talk, or
+   instead of it if you missed the talk. Recordings count as attending.
+   "Learn it with AI" stays the main hands-on activity.
+   **Why:** the director lectures well (evaluations in every course he
+   teaches say he is the best part), and writing a talk forces him to make
+   the material good. Until then the plan (`CONTEXT.md`, 2026-10-07) was
+   that the chapters carry the teaching, with no live teaching of chapter
+   content, because October to November is residency interview season. Recordings
+   answer that concern, so it no longer rules out talks.
+   **Cost:** about 5.75 live hours a week for the director, plus two new
+   talks a week. Constraint 3's "no 50-minute lecture blocks" is set aside
+   for these talks.
