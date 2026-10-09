@@ -42,9 +42,9 @@ framework core and move hands-on work toward success first.
   adult learning (from the 2024 Google Slides intro deck); Tuesday history of
   AI; Wednesday what AI is, AI to ML to DL to LLMs (the foundations deck, PR
   #60, trimmed; keep a few slides on overfitting); Thursday a hands-on session,
-  "centaur or cyborg, live" (everyone in ChatGPT Edu, three everyday intern
-  tasks, decide collaborate or hand over and check; catches account problems
-  early and feeds the journal due that night), then office hours by signup.
+  "centaur or cyborg, live" (everyone in ChatGPT Edu, trying things together;
+  left open-ended on purpose; also catches account problems early), then
+  office hours by signup.
   Friday small groups in the signed-up slots. Students read `core-foundations`
   and `core-centaur-cyborg`. Weeks 2 to 4 Monday and Wednesday talks are also
   at 10 a.m.

@@ -57,14 +57,11 @@ schedule if anything changes.
 | Monday, October 12, 10 a.m. | Welcome: how the course works, and how adults learn best |
 | Tuesday, October 13, 10 a.m. | A short history of AI |
 | Wednesday, October 14, 10 a.m. | What AI is: from AI to machine learning to deep learning to large language models, with time to try it together |
-| Thursday, October 15, 10 a.m. | **Hands-on: centaur or cyborg, live.** Everyone in their ChatGPT Edu account at once. Together we try three everyday tasks of a new intern with a chatbot, then decide which to work on with it back and forth and which to hand over and check line by line. Goes with the week's core chapter, [Centaur or cyborg](../chapters/core-centaur-cyborg.qmd). Bring your account; if you cannot sign in yet, come anyway and we will sort it out. |
+| Thursday, October 15, 10 a.m. | **Hands-on: centaur or cyborg, live.** Bring your ChatGPT Edu account and try things together. Goes with the week's core chapter, [Centaur or cyborg](../chapters/core-centaur-cyborg.qmd). |
 | Thursday, October 15, after the session | Office hours, by signup. Bring what you are stuck on |
 | Friday, October 16 | Small groups, in the time slot you signed up for: introductions, then the first scenario cards |
 
 : Week 1. All times are Mountain time (Denver). {#tbl-week1}
-
-Thursday's session gives you something to write about: your first
-[journal entry](learning-journal.qmd) is due that night.
 
 ## Weeks 2 to 4: the talks
 
