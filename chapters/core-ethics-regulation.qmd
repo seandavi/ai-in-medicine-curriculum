@@ -1,6 +1,6 @@
 ---
 title: "Ethics: what you owe when you sign the note"
-subtitle: "AIM-4 · AIM-X · about one hour"
+subtitle: "AIM-4 · AIM-X · about 70 minutes"
 ---
 
 ::: {.callout-note title="What you'll learn"}
@@ -19,8 +19,8 @@ By the end of this chapter you will have:
    course's fourth recurring lesson.
 :::
 
-**Time.** About 20 minutes of reading, 35 to 40 minutes of doing, and five
-minutes of writing at the end: about one hour. The podcast and everything in
+**Time.** About 20 to 25 minutes of reading, about 45 minutes of doing, and
+five minutes of writing at the end: about 70 minutes. The podcast and everything in
 Go deeper are optional. Use the chatbot account your school provides (at CU
 Anschutz, ChatGPT Edu or Microsoft Copilot); any free chatbot also works,
 because everything you type here is made up. There is nothing to install.
@@ -74,8 +74,8 @@ systemwide rollout of the Abridge scribe in February 2026 ([press
 release](https://www.businesswire.com/news/home/20260224659841/en/UCHealth-Partners-With-Abridge-to-Deploy-Enterprise-Grade-AI-Systemwide-Enhancing-Patient-and-Provider-Experience)).
 
 **It is your job to learn where these tools help your work, and you learn
-that by trying.** A scribe can give you back time, and the trials below
-suggest it does. It is also the clearest case where your signature goes on
+that by trying.** A scribe can save you some time, and the trials below
+suggest it does, modestly. It is also the clearest case where your signature goes on
 words a tool produced.
 
 Most writing about this asks what you *risk*. This chapter asks what you
@@ -142,7 +142,21 @@ you did.
 
 So the duty is honesty, in a plain sense: do not sign a sentence you cannot
 stand behind. If you find an error after signing, add an addendum; do not
-quietly edit the signed note.
+quietly edit the signed note. If the error may have harmed him, you also owe
+him an honest explanation, through your institution's disclosure process.
+
+**Telling him a tool drafted it.** Should you tell a patient that AI drafted
+a note or message? Honesty may cost some trust. In two preregistered
+experiments, 2,280 participants rated identical advice in made-up scenarios
+as less reliable and less empathetic when it was labeled as from AI, or from
+a physician with AI, and were less willing to follow it [@pmid:39054373]. The
+American Medical Association's November 2024 policy says AI may not generate
+records or communications for a physician without that physician's "consent
+and final review", and that AI use in patient-facing content "should be
+disclosed or otherwise noted within the content" ([AMA, November
+2024](https://www.ama-assn.org/system/files/ama-ai-principles.pdf)).
+How to say it is in [the patient communication
+chapter](core-patient-communication.qmd#the-portal-reply-say-a-tool-helped).
 
 ### Does review fix it?
 
@@ -166,7 +180,8 @@ changed ranged from 1.9% to 69.3% [@pmid:41996389].
 hospital, six radiation oncologists answered made-up messages from patients
 with cancer. They answered first on their own, then by editing a draft
 written by GPT-4. The edited replies were closer in content to the drafts than to the physicians' own
-replies. The authors read this as anchoring and automation bias: the
+replies. The authors read this as anchoring (sticking close to the first answer you
+see) and automation bias: the
 physicians might be adopting the draft's assessment, not just its wording
 [@pmid:38664108]. **Automation bias** is the habit of trusting a machine's
 suggestion more than it deserves.
@@ -220,10 +235,9 @@ what happens if clinicians start refusing to see patients who say no
 [@pmid:41767129]. Participants in the pilot above also suggested nonclinical
 staff support and a clear way to opt out [@pmid:40694347].
 
-**Many patients do not know.** In an online survey of 12,153 adults in
-Canada in early 2025, only 28.3% were aware that AI scribes were being used.
-61.8% were reluctant about future use, and people with privacy concerns were
-less willing [@pmid:41350107].
+**Many patients do not know.** In a 2025 online survey of 12,153 Canadian
+adults, only 28.3% knew AI scribes were in use, and 61.8% were reluctant
+about future use [@pmid:41350107].
 
 Mr. Alvarez had a sign, a sentence at check-in, and then his own doctor
 starting the visit with the phone already on the desk. Could he comfortably
@@ -233,8 +247,8 @@ chapter](core-patient-communication.qmd#the-phone-on-the-desk-what-the-patient-c
 
 ### Who the tool fails
 
-A scribe does not fail everyone equally. The evidence is thin, but it points
-one way.
+A scribe does not fail everyone equally. The research is thin, but the results
+agree.
 
 - **Race.** In a 2020 study of five commercial speech recognition systems,
   the average word error rate was 0.35 for Black speakers and 0.19 for White
@@ -276,30 +290,29 @@ The benefit to patients is less clear. In one primary care study, patients
 who knew about the scribe said the physician seemed more focused on them. But
 in a masked comparison of 304 patients' visits with and without the
 scribe, ratings of the patient-physician relationship did not differ
-[@pmid:38834180]. Across 31,917 patient surveys, ratings of communication
-and satisfaction did not change significantly for physicians using a scribe,
-compared with those who were not [@pmid:42334196].
+[@pmid:38834180]. In a pilot of 31 physicians, compared with 125 control
+physicians across 31,917 patient surveys, ratings of communication and
+satisfaction did not change significantly [@pmid:42334196].
 
 So the clinician's relief is measured, and the patient's experience of the
 visit has not been shown to change in either direction. When the draft is
 wrong, the wrong fact sits in *his* record.
 
-A made-up case: a scribe saves each clinician in a clinic about 15 minutes a
-day, and the clinic fills that time with one more visit a day. Who gained?
-The clinician did not go home earlier. The clinic billed more. That is the
-course's second recurring lesson, **efficiency gains get eaten by volume**,
-which [the workforce
+A made-up case: a scribe saves each clinician about 15 minutes a day, and
+the clinic fills that time with one more visit; who gained? [The workforce
 chapter](enrichment-workforce-economics.qmd#the-economics-the-debate-leaves-out)
-shows in real billing data. Here it is also a question of fairness.
+shows this volume lesson in real billing data; here it is a question of
+fairness.
 
 ::: {.callout-important title="The fourth recurring lesson: who benefits, who bears the risk, who decides"}
-The course has three recurring lessons so far: **proxies fail**,
+The course's first three recurring lessons are **proxies fail**,
 **efficiency gains get eaten by volume**, and **the published number is the
-optimistic one**. This chapter adds a fourth. For any AI tool, ask:
+optimistic one**. This chapter explains the fourth. For any AI tool, ask:
 
 1. **Who benefits?** For a scribe: the clinician, who is less exhausted, and
-   the health system, which may see more patients and bill more fully
-   [@pmid:42745555].
+   the health system, which may bill more fully [@pmid:42745555]. Possibly
+   the patient, through a more attentive visit, though a masked comparison
+   has not shown it [@pmid:38834180].
 2. **Who bears the risk?** The patient. The errors land in his record, and
    the recording is of his conversation.
 3. **Who decides?** The health system buys the tool. The clinician turns it
@@ -333,8 +346,8 @@ can turn it off today."
 
 ### What the law adds
 
-The law is one way the duties above are enforced. It sets a floor, not the
-whole of what you owe. The detail is optional, in [Go
+The law is one way the duties above are enforced. It is the least you owe, not
+all of it. The detail is optional, in [Go
 deeper](#liability-in-more-detail-optional).
 
 **You sign it, you answer for it.** Under current law, courts measure the
@@ -364,7 +377,8 @@ covered only if your institution has a BAA for it, in the account you sign in
 with. At the University of Colorado, for example, ChatGPT Edu and Microsoft
 Copilot are covered when you sign in with your university credentials on the
 Anschutz and Denver campuses. CU Boulder and personal accounts are not.
-Check your own institution's policy.
+Check your own institution's policy, and ask whether your clinic's scribe
+runs under one.
 
 **The FDA.** A scribe that records and summarizes, without recommending, is
 probably outside the US Food and Drug Administration's review of
@@ -390,7 +404,7 @@ Use made-up material only. Mr. Alvarez and his visit are invented. What counts a
 patient information, and why taking out the name is not enough: [the patient
 information page](../course/patient-information.qmd).
 
-### Part A: draft the note, then decide what you would sign (about 25 minutes)
+### Part A: draft the note, then decide what you would sign (about 30 minutes)
 
 Here is the conversation from the opening scenario. C is the clinician, P is
 Mr. Alvarez.
@@ -447,7 +461,7 @@ in the transcript. If the plan for a problem was not stated, write
 The second prompt asks the tool to show you where to look. Its lists can
 still be wrong, so you still read the whole note.
 
-**4. Decide what you would sign (12 minutes).** Take the better draft. Read
+**4. Decide what you would sign (15 to 18 minutes).** Take the better draft. Read
 it sentence by sentence against the conversation and mark each sentence:
 *said*, *not said*, or *changed*. Then list anything said that the note left
 out. Look hardest at three things: the apixaban, the naproxen, and the plan
@@ -546,8 +560,8 @@ Date both and keep them.
   thin.
 - The fourth recurring lesson: who benefits, who bears the risk, who decides.
   For a scribe, the relief is the clinician's and the risk is the patient's.
-- The law makes the signer answer for the note. It is a floor, not the whole
-  of what you owe.
+- The law makes the signer answer for the note. It is the least you owe, not
+  all of it.
 
 ## Go deeper
 

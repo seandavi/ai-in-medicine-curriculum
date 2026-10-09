@@ -123,7 +123,8 @@ the bridge, and the bridge was built from a specific set of people.
 
 A stand-in like this, something you measure because the real thing cannot
 be measured, is called a **proxy**. The first of the course's four recurring
-lessons is **proxies fail**: the stand-in and the real thing can come apart,
+lessons (the fourth, *who benefits, who bears the risk, who decides*, comes in
+[the ethics chapter](core-ethics-regulation.qmd)) is **proxies fail**: the stand-in and the real thing can come apart,
 and they come apart for some patients more than for others. [The bias and
 equity chapter](core-bias-equity.qmd) depends on that lesson. This chapter's
 job is narrower: to show you the bridge at all.

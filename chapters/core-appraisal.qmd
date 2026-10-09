@@ -283,8 +283,10 @@ and documentation time 16.0 minutes per day, with 0.49 more visits per week. But
 after-hours EHR time did not change significantly [@pmid:41920565]. You will work
 out why in the exercise, before reading the explanation.
 
-This is the third of the course's four recurring lessons: **the published
-number is the optimistic one.** The 0.49 extra visits may also be a small
+This is the third of the course's four recurring lessons (the fourth, *who
+benefits, who bears the risk, who decides*, comes in [the ethics
+chapter](core-ethics-regulation.qmd)): **the published number is the
+optimistic one.** The 0.49 extra visits may also be a small
 example of the second, **efficiency gains get eaten by volume**: time saved
 tends to get filled with more work. [The workforce chapter](enrichment-workforce-economics.qmd)
 explains how that saved time turns into billing.

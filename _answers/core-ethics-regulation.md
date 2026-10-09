@@ -18,7 +18,11 @@ apixaban and the nosebleeds, with a time frame, passes; this is about the
 order of work, not the best anticoagulation decision. Reasonable plans
 include discussing with the attending today, checking a CBC, reviewing the
 bleeding source (ENT), and deciding about restarting or switching, with a call
-back to the patient before the eight-week visit. Ask the student afterwards:
+back to the patient before the eight-week visit. A strong plan notices that
+he was also taking over-the-counter naproxen, an NSAID that likely contributed
+to the nosebleeds. With the naproxen stopped, restarting apixaban may be
+reasonable; that is a clinical judgment for the student to reason through and
+discuss with the attending, not a rule. Ask the student afterwards:
 did the draft's plan differ from yours, and did reading it make you want to
 change yours? A student who notices the pull toward the draft has seen the
 anchoring finding in the chapter (pmid:38664108) for themselves. A plan
@@ -94,7 +98,7 @@ A passing answer, in two or three plain sentences:
 Falls short: jargon ("ambient AI documentation leveraging an LLM"), "it is
 completely secure", or "the AI is very accurate". The consent study
 (pmid:40694347) is useful here: consent fell from 81.6% to 55.3% when patients
-were told about data storage and the company, so a student who leaves those
+were told about AI features, data storage, and the company, so a student who leaves those
 out has made the conversation easier, not more honest.
 
 ## Part C: what you owe
@@ -103,7 +107,9 @@ One specific sentence each. Model answers:
 
 - **To Mr. Alvarez:** a note that says what he told me (he stopped apixaban
   because of nosebleeds) and a plan I actually made, with a call back before
-  eight weeks; and an honest answer about the recording.
+  eight weeks; and an honest answer about the recording. If an error in the
+  note may have harmed him, an honest explanation through the institution's
+  disclosure process.
 - **To the next clinician:** a record they can act on without having been in
   the room: no "continue apixaban" on a drug he is not taking, and "plan not
   yet made" if it was not.
@@ -215,7 +221,7 @@ re-check before each cohort and update this file.
 | 1 | FDA CDS guidance issued **29 January 2026**, superseding the **6 January 2026** version, which superseded September 2022. Four criteria unchanged; enforcement discretion for a single clinically appropriate recommendation; time-critical use fails criterion 4; automation bias named. | fda.gov CDS guidance page; PDF cover page | A student who reports "January 6" has read a secondary summary. Both dates are correct in sequence; the point is that the document date on the PDF is the 29th. |
 | 2 | **Not finalized.** HTI-5 proposed rule; comment period closed 27 Feb 2026; would remove DSI "model card" source attributes. HTI-1 remains in force. | healthit.gov HTI-5 fact sheet; Federal Register | If a student finds a final rule, the chapter's HTI-1 callout needs updating and the appraisal chapter's with it. |
 | 3 | **No guidance.** Discussion paper "Considerations for the Regulation of Generative AI-Enabled Medical Devices," 18 Aug 2026, comments due 19 Oct 2026 (docket FDA-2026-N-7874). Lifecycle-management guidance (Jan 2025 draft) still draft. | fda.gov | A discussion paper is not guidance. |
-| 4 | **None found** as of 2026-09-07. Consumer-chatbot suits (Character.AI settlements Jan 2026; *Raine v. OpenAI* 2025; *Winters v. OpenAI* ~July 2026, alleging delayed care before a pulmonary embolism) are product/negligence claims against AI companies, not clinical-AI malpractice verdicts. | Legal press; dockets | If a student finds a verdict, that is the most important thing anyone brings back all course; the chapter's "no verdict" sentence (in "Why this matters" and the Summary) needs updating. |
+| 4 | **None found** as of 2026-09-07. Consumer-chatbot suits (Character.AI settlements Jan 2026; *Raine v. OpenAI* 2025; *Winters v. OpenAI* ~July 2026, alleging delayed care before a pulmonary embolism) are product/negligence claims against AI companies, not clinical-AI malpractice verdicts. | Legal press; dockets | If a student finds a verdict, that is the most important thing anyone brings back all course; the chapter's "no verdict" sentence (under "What the law adds") needs updating. |
 | 5 | Institution-specific. | Institutional policy | Accept "asked X, who said none exists" as a valid answer with a name and date. |
 
 Questions dropped from the student list in the October 2026 revision, kept
