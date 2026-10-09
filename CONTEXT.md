@@ -85,8 +85,16 @@ framework core and move hands-on work toward success first.
   (Monday 1, Wednesday 1, Thursday 0.75, three Friday slots 3) and writes two
   new talks a week. Watch for this in week 2. A suggestion, not decided: if it
   is too much, the Wednesday talk is the first thing to hand to a guest.
-- **Submissions:** Microsoft Form (university login, data stays in CU Microsoft
-  365), reviewed on Fridays. A custom submission and chatbot app is a
+- **Submissions:** Canvas text-entry assignments, one per week, complete or
+  incomplete (decided 2026-10-09; replaces the planned Microsoft Form),
+  reviewed on Fridays.
+- **Canvas (built 2026-10-09):** modules Start here and Weeks 1 to 4, each
+  linking the Zoom meeting and the week's chapters on aim.seandavis.net plus
+  the journal assignment; calendar events for every live session; signup
+  sheets for week 1 office hours (three 15-minute slots after Thursday's
+  session) and for the Friday small-group slot (10 a.m., 11 a.m., 1 p.m.,
+  chosen once on October 16); plain events for later Fridays. Last year's
+  assignments are unpublished, not deleted. The course is still unpublished. A custom submission and chatbot app is a
   post-course project; start CU's data-use review early.
 - **Chat channel:** undecided. Microsoft Teams preferred over Discord (no new
   accounts, stays inside the institution).
