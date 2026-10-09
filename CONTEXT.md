@@ -124,11 +124,16 @@ framework core and move hands-on work toward success first.
   were unpublished. Book branches are not pushed. Last year's
   assignments are unpublished, not deleted. The course is still unpublished. A custom submission and chatbot app is a
   post-course project; start CU's data-use review early.
-- **Chat channel:** Microsoft Teams (decided 2026-10-09; invite by email, no
-  new accounts, stays inside CU Microsoft 365). Team "AI in Medicine (IDPT
-  8079), Fall 2026", private, "Other" template, General channel only (no
-  small-group channels: Fridays use Zoom). Owner: Sean Davis. Members so far:
-  Maritza Casillas, Christina Olson, Matt Zuckerman. Students not yet added.
+- **Chat channel:** Discord (decided 2026-10-09 in the meeting with Christina
+  Olson and Matt Zuckerman: every class already has its own student Discord,
+  and students do not use Teams much). Server "Frontier of AI in Medicine
+  2026" (reused from Sean's September server, renamed; teal heartbeat-to-
+  network icon): #welcome (welcome post: unofficial, Canvas is official,
+  made-up cases only), #general, #resources, #show-and-tell, General voice.
+  Framed as an unofficial experiment; some phases discourage course
+  directors from contacting students outside Canvas. Students not yet
+  invited. The Teams team created earlier the same day (Sean, Maritza,
+  Christina, Matt) is superseded.
   Canvas stays the official record (announcements, calendar, journals).
   Canvas: Announcements is the one-way channel (now shown in the menu; it had
   been hidden) plus one discussion, "General Questions", linked from the home
