@@ -92,7 +92,7 @@ framework core and move hands-on work toward success first.
 - **Canvas (built 2026-10-09):** modules Start here and Weeks 1 to 4, each
   linking the Zoom meeting and the week's chapters on aim.seandavis.net plus
   the journal assignment; calendar events for every live session; signup
-  sheets for week 1 office hours (three 15-minute slots after Thursday's
+  sheets for week 1 office hours (one 45-minute block, up to 10 students, after Thursday's
   session) and for the Friday small-group slot (10 a.m., 11 a.m., 1 p.m.,
   2 p.m., up to 15 each, chosen once on October 16); plain events for later Fridays.
   Guest talks (from the lecturer signup sheet, 2026-10-09), on the Canvas
