@@ -107,8 +107,16 @@ framework core and move hands-on work toward success first.
   attendance rule (recordings count; Friday group required), drop-in office
   hours, and the made-up-cases rule; links this year's three standing
   discussions (created the same day) instead of last year's course; the
-  syllabus link is the book, not the old Word file. School resource sections
-  unchanged. Last year's
+  syllabus link was the book. School resource sections unchanged.
+  **Published to students 2026-10-09, with the book hidden** (the author wants
+  the calendar out first; the book still needs work). Hidden, to turn back on
+  later: every module item linking aim.seandavis.net and the "The course
+  book", "Core chapter", and "Menu (optional)" headers (unpublished items;
+  modules stay published); book links removed from calendar events, the
+  Friday signup, the home page (syllabus section says "posted soon"), and
+  the ChatGPT Edu page. Journal instructions are written into each journal
+  assignment instead of linking the book. Last year's four published pages
+  were unpublished. Book branches are not pushed. Last year's
   assignments are unpublished, not deleted. The course is still unpublished. A custom submission and chatbot app is a
   post-course project; start CU's data-use review early.
 - **Chat channel:** undecided. Microsoft Teams preferred over Discord (no new
