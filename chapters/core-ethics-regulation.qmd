@@ -158,14 +158,14 @@ source is the clinician's own visit [@pmid:40717487].
 Armitage's argument assumes that review happens, and that it works. Three
 pieces of evidence test that.
 
-**Review is uneven.** In the pilot from the opening, besides the unedited
-notes, the share of the draft's words that physicians changed ranged from
-1.9% to 69.3%, depending on the physician [@pmid:41996389].
+**Review is uneven.** Besides the unedited notes in the pilot from the
+opening, physicians differed widely. The share of the draft's words they
+changed ranged from 1.9% to 69.3% [@pmid:41996389].
 
 **Drafts change what clinicians decide.** In a simulation at one Boston
 hospital, six radiation oncologists answered made-up messages from patients
-with cancer twice: first on their own, then by editing a draft written by
-GPT-4. The edited replies were closer in content to the drafts than to the physicians' own
+with cancer. They answered first on their own, then by editing a draft
+written by GPT-4. The edited replies were closer in content to the drafts than to the physicians' own
 replies. The authors read this as anchoring and automation bias: the
 physicians might be adopting the draft's assessment, not just its wording
 [@pmid:38664108]. **Automation bias** is the habit of trusting a machine's
@@ -308,18 +308,18 @@ optimistic one**. This chapter adds a fourth. For any AI tool, ask:
 The answers are often three different people. When the person who bears the
 risk neither benefits nor decides, ethics asks for something in return: a
 real choice, a careful review, an honest answer. The same pattern appears in [the environment
-chapter](enrichment-environment.qmd), where the people near a data center
-bear its costs and were not asked, and in [the workforce
-chapter](enrichment-workforce-economics.qmd), where the workers displaced
-first have the least money in reserve.
+chapter](enrichment-environment.qmd): the people near a data center bear its
+costs and were not asked. It appears in [the workforce
+chapter](enrichment-workforce-economics.qmd) too: the workers displaced first
+have the least money in reserve.
 :::
 
 ### What happens to the recording
 
 A recording keeps everything said in the room. O'Neil and colleagues point
 out that a full transcript may capture things a clinician typing a note would
-think twice about including, such as abortion counseling in a state that
-restricts it, or a patient's immigration status. They note that HIPAA, the
+think twice about including. Their examples are abortion counseling in a
+state that restricts it, and a patient's immigration status. They note that HIPAA, the
 federal health privacy law, places no limit on how de-identified data may be
 used, and that modern AI can re-identify such data. They argue that most
 patients do not expect their conversations to be shared outside their health
@@ -363,12 +363,12 @@ makes the company legally responsible for protecting the data. A tool is
 covered only if your institution has a BAA for it, in the account you sign in
 with. At the University of Colorado, for example, ChatGPT Edu and Microsoft
 Copilot are covered when you sign in with your university credentials on the
-Anschutz and Denver campuses; CU Boulder and personal accounts are not.
+Anschutz and Denver campuses. CU Boulder and personal accounts are not.
 Check your own institution's policy.
 
 **The FDA.** A scribe that records and summarizes, without recommending, is
 probably outside the US Food and Drug Administration's review of
-decision-support software; check FDA's current position before you rely on
+decision-support software. Check FDA's current position before you rely on
 that. If so, your review is the check.
 
 ## Watch or listen (optional)
