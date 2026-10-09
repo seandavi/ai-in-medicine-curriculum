@@ -1,36 +1,28 @@
 ---
 title: "Talking to patients about AI"
-subtitle: "AIM-6 · AIM-4 · about ninety minutes"
+subtitle: "AIM-6 · AIM-4 · about 70 minutes"
 ---
 
 ::: {.callout-note title="What you'll learn"}
-By the end of this chapter you will be able to:
+By the end of this chapter you will have:
 
-1. Tell a patient, in plain words and in under a minute, what an AI tool did
-   in their care and what a person did, as two separate facts.
-2. Say out loud who is responsible for a decision an AI tool helped shape,
-   without dodging.
-3. Tell a patient about a tool in the room, including what they can refuse and
-   what they cannot.
-4. Respond to a patient who arrives with chatbot output that is confident,
-   well written, and partly right, without giving in and without talking down
-   to them.
-5. Explain why text that raters call more empathetic still persuades patients
-   less than a person does, and why that makes delivering the message yourself
-   part of your job.
-6. Say "I don't know how that system works, and here is how I'll find out" in a
-   way that keeps the patient's trust.
+1. Written, and improved with a chatbot's help, what you will say when a
+   patient asks about a tool in the room: what they can refuse, what they
+   cannot, and what you do not know.
+2. Told a patient what an AI tool did, what a person did, and who is
+   responsible, as three separate sentences.
+3. Practiced, with a chatbot playing the patient, answering someone who brings
+   chatbot output that is partly right, without giving in and without talking
+   down to them.
+4. Explained why text that raters call more empathetic can still persuade
+   patients less than a person does.
+5. Kept a set of sentences to say out loud at your Friday small group.
 :::
 
-**Time.** About 25 minutes of reading, 20 minutes of listening, 35 minutes of
-doing, and 10 for the check and the standing question. You need one
-general-purpose chatbot. Your institutional ChatGPT Edu or Microsoft Copilot
-account is enough, and a personal free-tier account works too. Nothing
-installs, and nothing in this chapter involves a real patient.
-
-This chapter is the pre-work and the make-up for a live session. The live
-session runs the same conversations in breakout rooms. The section *What the
-live session adds* says what you cannot get from a chapter alone.
+**Time.** About 70 minutes: 15 to 20 of reading, about 45 of doing, and five
+at the end. The podcast is optional. Use your university ChatGPT Edu or
+Microsoft Copilot account; any free chatbot also works. There is nothing to
+install, and nothing in this chapter involves a real patient.
 
 ## Two printed pages and a phone on the desk
 
@@ -53,17 +45,18 @@ I'd like these tests."
 <p><i>This is general information and not a substitute for medical advice.</i></p>
 :::
 
-Read the two pages the way she did, before reading on. About a third of it is
-reasonable. Ferritin, thyroid function, a sleep history, and a depression screen
-are exactly where you were going. A third is testing for things she has no
-reason to have. And the last paragraph tells her to start a drug before anyone
-has measured whether she needs it.
+Read the two pages the way she did. About a third is reasonable: ferritin,
+thyroid function, a sleep history, and a depression screen are exactly where
+you were going. A third is testing for things she has no reason to have. And
+the last paragraph tells her to start a drug before anyone has measured
+whether she needs it.
 
-She is not embarrassed and she is not hostile. She did homework and some of it
-is good. She wants the tests, and the phone on the desk is still listening.
-
-You have perhaps ninety seconds to answer both questions, in the right order,
+She is not embarrassed and she is not hostile, and the phone is still
+listening. You have perhaps ninety seconds to answer both questions, in the right order,
 without losing her trust. That is the whole chapter.
+
+If you would rather practice first and read after, go to [Part B of the
+Do](#part-b-practice-patient) now. Then come back.
 
 ## Why this matters
 
@@ -72,100 +65,67 @@ the tool is either on the desk, in the chart, or in the patient's hand. Photo:
 National Cancer Institute, public domain (US federal government work), via
 [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Doctor_talking_with_a_patient.jpg).](../images/doctor-talking-with-patient.jpg){#fig-desk fig-alt="A physician in a white coat sits across a desk from a patient, both facing each other in conversation, with paperwork between them."}
 
-Every published list of what physicians should know about AI (a "competency
-framework") names this skill. The two main US lists are an expert-interview
-study that produced six competency domains [@pmid:36731054] and a 2026 review
-that mapped 54 competency proposals from 22 countries [@pmid:42120544]. Both
-put communication with patients inside the visit itself. A review of the
-programs that actually exist found it covered in about one in five of the
-papers describing them [@pmid:39023999]. Nothing else in this course has a gap that wide between what
-the field says matters and what it teaches. The reason is not that it is
-unimportant. It is that it cannot be taught by lecture. The skill is not
-knowing what to say. It is saying it to a person who is frightened, or
-skeptical, or already convinced the chatbot was right.
+You will need this in your first month. A tool will listen to your visits. A
+draft of your portal reply will be written before you open the message. A
+patient will bring you a printout.
 
-You will need it in your first month. A tool will listen to your visits. A draft
-of your portal reply will be written before you open the message. A patient
-will bring you a printout. Each of those is a conversation you will have
-whether or not you have prepared for it. The patient will remember how it
-went longer than they remember the plan.
+Published lists of what physicians should know about AI (called competency
+frameworks) name this skill [@pmid:36731054; @pmid:42120544]. Yet a review of
+the training programs that exist found it covered in about one in five of the
+papers describing them [@pmid:39023999]. One reason is that it cannot be
+taught by lecture. The skill is not knowing what to say. It is saying it to a
+person who is frightened, or skeptical, or already convinced the chatbot was
+right.
+
+That makes it a good place to use a chatbot well. It can play the patient,
+point out your jargon, and tell you the order you spoke in. Then you say the
+words to a person, which is what [the Friday small
+group](../course/friday-groups.qmd) is for.
 
 ## How it works
 
-### The failure is not coldness
+### More empathetic on the page, less persuasive in the room
 
-Ask a room of students what goes wrong when a machine talks to a patient, and
-the answer is coldness. The evidence says the opposite. In 2023 a team drew 195
-patient questions from a public forum where verified physicians answer. They had
-a chatbot answer the same questions, then put both answers in front of
-clinician raters who were not told which was which, so-called blinded raters
-[@pmid:37115527]. @fig-ayers
-shows the result.
+Ask students what goes wrong when a machine talks to a patient, and the answer
+is coldness. The evidence says otherwise. In 2023 a team took 195 patient
+questions from a public forum where verified physicians answer, and had a
+chatbot answer them too. Clinician raters, not told which answer was which,
+compared the two [@pmid:37115527].
 
-![Blinded raters preferred the chatbot's answer 78.6 percent of the time.
+![Raters who did not know the source preferred the chatbot's answer 78.6 percent of the time.
 Redrawn from the abstract of Ayers et al., *JAMA Internal Medicine* 2023;
 data are not copyrightable, drawing by the course.](../images/ayers-2023-redrawn.svg){#fig-ayers fig-alt="Three pairs of horizontal bars comparing physician and chatbot responses. Rated good or very good quality: physician 22.1 percent, chatbot 78.5 percent. Rated empathetic or very empathetic: physician 4.6 percent, chatbot 45.1 percent. Median length in words: physician 52, chatbot 211."}
 
-The chatbot's answers were rated more empathetic nearly ten times as often, and
-they were four times longer. A 2025 repeat of the study with 1,454 lay
-participants found the same ordering, and added the reason. The chatbot's
-answers contained more validation, more reassurance, more non-judgmental
-language, and read as less rushed [@pmid:41359230]. Those are teachable
-behaviors. The machine had been trained on a great deal of text in which people
-did them. The physicians on the forum were answering strangers for free at the
-end of a day.
+As @fig-ayers shows, the chatbot's answers were rated more empathetic nearly
+ten times as often, and were four times longer. A 2025 repeat with 1,454 lay
+participants found the same ordering. The chatbot's answers contained more
+validation, more reassurance, and more non-judgmental language, and read as
+less rushed [@pmid:41359230]. Those are behaviors a person can learn. But this
+is text judged by readers, with no relationship and no follow-up, against
+physicians answering strangers for free.
 
-Now the mistake to avoid. The finding is not that chatbots should answer your patients. It
-is a finding about text, judged by readers. The course's third recurring
-lesson, **the published number is the optimistic one**, applies to a
-preference rating as much as to a vendor slide. There was no relationship and no
-follow-up. It compared a tool with unlimited time against physicians with none.
-It says nothing about whether the patient got better, whether they came back,
-or whether they believed a word of it. Treat it as a warning about what a rushed
-clinician produces, and as a reason not to assume the person is warmer by
-default.
-
-### More empathetic on the page, less persuasive in the room
-
-The second finding favors the person. The two together are the core of
-this chapter. In a Zurich course, 52 medical students watched four short
-pieces on the same treatment over four weeks: a patient describing their
-experience, a clinician, an expert, and a text written by ChatGPT. The chatbot
-text was read aloud by a synthetic voice and labeled "general information from
-the internet." Before and after each one, the students rated their own
+The second finding favors the person. In a Zurich course, 52 medical students
+watched four short pieces on the same treatment. They came from a patient, a
+clinician, an expert, and ChatGPT, whose text was read aloud by a synthetic
+voice and labeled "general information from the internet." Before and after each one, the students rated their own
 expectation that the treatment would work [@pmid:39177012]. Every version
-raised expectations. The patient's account raised them most, the clinician's
-and the expert's less, and the chatbot's least.
+raised expectations. The patient's account raised them most, and the chatbot's
+least, even though the students had rated the chatbot text as moderately
+clear, safe, and correctly written. Two limits. The humans appeared on video
+and the machine did not, so the study cannot separate who wrote the words from
+how they were delivered. The internet label may also have lowered trust in the
+chatbot text. And the students rated their own expectations, not a
+patient's.
 
-The same students, separately, had rated the chatbot text as moderately clear,
-safe, and correctly written, and better still when the prompt was improved. So
-the text was fine. It just did not change what anyone expected.
-
-Two honest limits. The comparison mixes up who wrote the words with how they
-were delivered, since the humans appeared on video and the machine did not. And
-the students were rating their own expectations, not a patient's. That is a
-reason to treat the finding with care, not to drop it. Its pattern matches what
-every clinician already knows about a handout: accurate, easy to read, and
-ignored, because nobody said *this one matters, and here is why*.
-
-Put the two findings together. A tool can produce text that raters prefer and
-still fail to change what a person does. This chapter calls that the empathy
-paradox. Empathy on the page is not influence in the room, and closing the gap
-between them is your job. The machine can draft the handout. You are the
+Put together: a tool can produce text that raters prefer and still fail to
+change what a person does. The machine can draft the handout. You are the
 reason the patient follows it.
 
-### The portal reply: telling the patient costs a little and is still owed
+### The portal reply: say a tool helped
 
-You will first see this in the inbox. A portal message is the secure message a
-patient sends the clinic through the online system they also use to see
-results. Health systems now generate a draft reply before the clinician opens
-the message. At Stanford, in the first weeks after one such tool was introduced, clinicians
-used the draft about a fifth of the time. They reported less workload and
-exhaustion, with no change in how long a reply took [@pmid:38506805]. At UC San
-Diego, clinics were switched on at random. There, drafts made replies 18 percent
-longer and did not shorten the time to write them [@pmid:38619840]. On the
-intern who watched an attending send a draft without reading it: that happens.
-The draft was the attending's message the moment it was sent.
+A portal message is the secure message a patient sends the clinic through the
+online system they also use to see results. Some health systems now draft a
+reply before the clinician opens it [@pmid:38506805; @pmid:38619840].
 
 ::: {.press-clip}
 <div class="src">Patient portal · illustrative message, written for this chapter</div>
@@ -174,59 +134,37 @@ The draft was the attending's message the moment it was sent.
 <p>Dr. Okonkwo</p>
 :::
 
-Look at the italic line. Would you leave it in? Patients have been asked. Duke
-surveyed 1,455 members of a patient advisory panel. Respondents slightly
-*preferred* AI-drafted replies over human ones. They were slightly *less*
-satisfied when told AI had been involved, by about a tenth of a point on a
-five-point scale. More than three quarters were satisfied either way
-[@pmid:40067301]. In a follow-up, 40 of those patients were interviewed. They
-were comfortable with drafted replies on one condition: a clinician reviewed
-them and stayed responsible for them. They broadly supported telling patients,
-and disagreed only about when and how [@pmid:42412426]. The repeat of the
-empathy study found the same pattern. Participants rated a response as more
-empathetic when told a physician wrote it, whether or not one had
-[@pmid:41359230].
+Would you leave the italic line in? Duke surveyed 1,455 members of a patient
+advisory panel. Respondents slightly *preferred* AI-drafted replies, and were
+slightly *less* satisfied when told AI had been involved, by about a tenth of a
+point on a five-point scale. More than three quarters were satisfied either
+way [@pmid:40067301]. In follow-up interviews, 40 of those patients were
+comfortable with drafted replies on one condition: a clinician reviewed them
+and stayed responsible for them. They broadly supported telling patients, but
+differed on when and how [@pmid:42412426].
 
-So the label costs something, and the label is true. Leave it in. The authors
-of the Duke survey said the same: telling patients may slightly reduce
-satisfaction, and should be done anyway. In some states you no longer have the
-choice. Since January 2025, California has required a disclaimer on
-generative-AI messages about a patient's clinical care unless a licensed
-clinician read and reviewed them. Since September 2025, Texas has required a
-practitioner who uses AI for diagnosis to tell the patient and to review what
-the AI wrote. Since January 2026, a second Texas law has required anyone
-providing health care to say when a patient is interacting with an AI system,
-by the date of the first service. Check your own state.
-[The ethics and regulation chapter](core-ethics-regulation.qmd) covers the law. Here the point is that what
-the patient expects and what the statute requires are starting to say the same
-thing.
+So the label costs a little, and it is true. Leave it in; the Duke survey's
+authors said the same. Some states, among them California and Texas, now
+require telling patients about AI use in some cases (see Go deeper). A draft
+you send is your message.
 
 ### The phone on the desk: what the patient can refuse
 
-The tool listening to the visit is called ambient documentation, or an ambient
-scribe. It is software that records the conversation, transcribes it, and
-drafts the note for the clinician to edit and sign. Of everything in this
-chapter, it is the one that most obviously needs the patient's agreement,
-because it is recording them.
+The tool listening to the visit is called an ambient scribe: software that
+records the conversation, transcribes it, and drafts the note for the
+clinician to edit and sign. It is recording the patient, so it most obviously
+needs her agreement.
 
-In a survey of UK general practitioners in August 2025, one in seven was already
-using one. Of those, 63 percent routinely asked the patient's consent, and no
-more than one patient in ten said no. Errors were most frequent when more than
-one person was talking, when the history was complex, and when the visit was
-not in English [@pmid:42386325]. Remember that last finding. The patients most
-likely to be poorly served by the note are the ones least likely to be asked
-about it in a language they can say no in.
+In a survey of UK general practitioners in August 2025, one in seven was
+already using one. Of those, 63 percent routinely asked the patient's consent,
+and no more than one patient in ten said no. Errors were most frequent when
+more than one person was talking, when the history was complex, and when the
+visit was not in English [@pmid:42386325]. So the patients most likely to be
+poorly served by the note may also be the least likely to be asked in a
+language they can say no in.
 
-Which kinds of AI use require telling the patient is not settled, and this
-chapter will not pretend otherwise. Recording a visit, drafting a reply,
-scoring a chart in the background, and marking an image are four different
-things. The profession has not finished arguing about which of them the
-patient must be told about. What is settled is narrower: if the tool is
-recording them, ask; if they ask, answer.
-
-[the appraisal chapter](core-appraisal.qmd) listed questions a vendor's sales slide never answers.
-The question the patient in the scenario asked, "is that recording us," is the
-seventh. The answer has three parts, and the third is the one students skip.
+Which AI uses require telling the patient is not settled. What is settled is
+narrower: if the tool is recording them, ask; if they ask, answer.
 
 | The tool | Can the patient refuse it? | What you can honestly say |
 |---|---|---|
@@ -238,79 +176,57 @@ seventh. The answer has three parts, and the third is the one students skip.
 
 : What can be refused, and what you can say. Institutional policy varies; the middle column is the common case, not a rule. {#tbl-decline}
 
-The honest version of this conversation includes the things you do not control.
-A student who tells the patient in one of the live session's scenario cards,
-"none of it, if you say so," has told a comforting lie. The strong version names what she can
-refuse, names what she cannot, and then names who signs the note and who is
-responsible for the decision. That last sentence is what the patient came for.
+Telling her "none of it, if you say so" is a comforting lie. The honest version names what
+she can refuse, what she cannot, and who signs the note. That last part is
+what the patient came for.
 
 ::: {.callout-important title="What you do not know about the vendor contract"}
 Where the recording goes, how long it is kept, and who at the vendor can hear
 it are questions about a contract you have not read. The right answer is "I
 don't know how long they keep it; I'll find out, and I can turn it off today."
-The wrong answer is a reassuring number you made up. Watch for it in yourself.
-It is the most common failure in the scribe conversation, and the one most
-likely to be repeated back to you later.
+The wrong answer is a reassuring number you made up.
 
 If she says no, turn it off, type the note, and write in it that the patient
-declined ambient documentation. If your institution logs consent, log it. The
-note is where the next clinician learns that this patient asked.
+declined ambient documentation. If your institution logs consent, log it.
 :::
 
-### The printout: her words, not yours
+### The printout: say what is right first
 
-Now the two pages. Something from [the appraisal chapter](core-appraisal.qmd) applies directly to
-them. A 2026 study compared five tools. It asked the same questions in a
-clinician's voice and in a patient's voice (linguists call that difference
-**register**, the way a particular group of people talks), and got different
-answers. The
-patient version was worse. The share of ChatGPT's references that were made up
-rose from 2.1 percent to 20.0 percent, and the tools were more likely to cite
-websites rather than papers [@pmid:42232526]. When physicians graded chatbot
-answers to their own questions, most were largely right. One in eight was
-mostly or completely wrong, in the same fluent tone [@pmid:37782499].
+A 2026 study asked five tools matching spine-surgery questions, once in a
+clinician's words and once in a patient's words. The four general-purpose
+tools did worse on the patient version. The share of ChatGPT's references that
+were made up rose from 2.1 percent to 20.0 percent [@pmid:42232526]. If
+English is not your first language, or you write the way you talk, your own
+prompts may get worse answers in the same way. When physicians graded chatbot answers to their own
+questions, most were largely right, but one in eight was mostly or completely
+wrong, in the same fluent tone [@pmid:37782499]. A general-purpose chatbot writes
+the most plausible next words; it does not look the answer up. So the printout's
+confidence comes from the writing, not the evidence.
 
-The reason is how the tool works. A general-purpose chatbot does not look the
-answer up. It writes the most plausible next words given the question. So a
-question phrased the way a patient talks gets an answer shaped like the
-internet's answers to patients, references and all. [the appraisal chapter](core-appraisal.qmd)
-explains that in detail. Here it is enough to know that the printout's confidence
-comes from the writing, not from the evidence.
-
-Your patient asked in her own words. What she was handed is, on average, less
-reliable than what you would have been handed for the same question, and it
-reads exactly as confidently. She has no way to know that, and telling her so
-is not the right first step. If English is not your first language, or you
-write the way you talk, the same is true of your own prompts. [The appraisal
-chapter's](core-appraisal.qmd) exercise will show you by how much. What matters here is the order of
-what you say.
+Telling her that is not the right first step. The order is:
 
 **Say what is right first.** "Ferritin and thyroid function are the next two
 tests I was going to order. The sleep questions are good ones." This is not a
-tactic. It is true, and it is the thing the patient in this scenario needs to
-hear before anything else. The first item on the observer's checklist (the one
-in the Check section) is whether you found out what the patient already
-believed before correcting anything.
+tactic. It is true.
 
-**Then ask what sent her there.** Almost nobody arrives with a printout because
-they trust a chatbot more than a doctor. They arrive because of what happened at
-the last visit. In this case the last physician gave her eight minutes and said
-it was probably stress. She will not volunteer that. You have to ask: "What made
-you go looking?" A clinician who wins the argument about the ANA and never asks
-that question has lost the patient's trust.
+**Then ask what sent her there.** In this course's experience, patients rarely
+bring a printout because they trust a chatbot more than a doctor. More often,
+it is because of the last visit. Here, the last physician gave her eight minutes and said it was probably
+stress. She will not volunteer that. Ask: "What made you go looking?" A
+clinician who wins the argument about the ANA and never asks has lost her
+trust.
 
 **Then the parts that are wrong, with a reason each.** "The cortisol, the Lyme
 test, and the heavy metals are tests for things your story doesn't point to,
-and a positive on any of them would more likely be a false one that leads to
-more testing than an answer. And I'd hold off on the iron until we've measured
-it, because if your ferritin is normal the iron does nothing except upset your
-stomach, and if it's high we need to know that too."
+and a positive would more likely be a false one that leads to more testing.
+And I'd hold off on the iron until we've measured it. If your ferritin is
+normal, iron does nothing except upset your stomach, and if it's high we need
+to know that too."
 
 ### The three-sentence spine
 
-Most conversations about a tool, whatever the tool, fit a shape of three
-sentences in a fixed order. This chapter calls that shape the spine. Learn the
-shape, not the wording.
+Most conversations about a tool fit three sentences in a fixed order. This
+chapter calls that shape the spine. Learn the shape, not the wording.
 
 ::: {.callout-tip title="What it did. What a person did. Who is responsible."}
 **What it did.** "The software marked an area on your mammogram for a closer look."
@@ -320,37 +236,25 @@ shape, not the wording.
 **Who is responsible.** "The decision to bring you back is hers and mine, not the software's."
 :::
 
-The order matters more than the words. Students who start with who is
-responsible sound defensive. Students who never reach it leave the patient
-believing a machine decided. And the first two sentences have to be separate.
-Patients merge "the computer flagged it" and "the radiologist agreed" into
-one fact, and they are two.
+Start with who is responsible and you sound defensive; never reach it and the
+patient believes a machine decided. Keep the first two sentences separate:
+patients may hear "the computer flagged it" and "the radiologist agreed" as one
+fact. They are two. Say the second only when you know it is true; the
+signed report tells you who read the study.
 
-Say the second sentence only when you know it is true. The signed report tells
-you who read the study; if it does not, say what you do know and find out the
-rest.
+The same shape handles the phone: it listens and drafts; I read, change, and
+sign; the note is mine. And the printout: the tool made a list; I am reading
+it with you; the plan is ours.
 
-The same shape handles the phone on the desk: it listens and drafts; I read,
-change, and sign; the note is mine. And the printout: the tool made a list; I
-am reading it with you; the plan is ours.
-
-### "I don't know how that system works"
-
-The last skill is the one students most need permission to use. You will be
-asked about tools you have never used, in your first month, because tools
-arrive in your day without warning. "I don't know how that system works,
-and here is how I'll find out" is a correct, professional answer. On the
-observer's checklist, honesty about what you personally do not know is the item
-that best predicts whether the patient still trusts you after the visit.
-
-The patient who asked about the recording deserves to know how long it is kept
-and who can hear it. She does not need that in the next ninety seconds. She
-needs to know that you will get it, and that the visit will not wait on it.
-Say both.
+When you do not know how a tool works, say so. "I don't know how that system
+works, and here is how I'll find out" is a correct, professional answer. The
+patient who asked about the recording does not need the retention policy in
+the next ninety seconds. She needs to know you will get it, and that the visit
+will not wait on it.
 
 ### Where it has already gone wrong
 
-Two things patients will have read about, and one they should have.
+Patients will have read about these.
 
 ::: {.press-clips}
 <div class="press-clip"><div class="src">CNN Business · news</div><a class="hl" href="https://edition.cnn.com/2023/06/01/tech/eating-disorder-chatbot">National Eating Disorders Association takes its AI chatbot offline after complaints of "harmful" advice</a><div class="date">1 June 2023</div></div>
@@ -358,96 +262,73 @@ Two things patients will have read about, and one they should have.
 <div class="press-clip"><div class="src">Association of Health Care Journalists · blog</div><a class="hl" href="https://healthjournalism.org/blog/2026/02/misuse-of-ai-chatbots-in-health-care-tops-2026-health-tech-hazard-report/">Misuse of AI chatbots in health care tops 2026 Health Tech Hazard Report</a><div class="date">5 February 2026</div></div>
 :::
 
-The first is the best-known case. In 2023 the National Eating Disorders
-Association replaced its human helpline with a chatbot, Tessa. The chatbot was
-then found giving callers weight-loss advice: calorie deficits, weekly
-weigh-ins, skinfold calipers. The organization took it offline within days.
-Note what kind of failure it was. Not a wrong fact, but generic advice that
-would be harmless for most people and was harmful for exactly the people the
-service existed to help.
+In 2023 an eating-disorder helpline's chatbot, Tessa, gave callers weight-loss
+advice: harmless for most people, harmful for the people the service existed
+to help. A lawsuit filed in July 2026 alleges that a chatbot reassured a man
+with weeks of dizziness. The complaint says that the next day he was admitted
+to intensive care with a pulmonary embolism. The case has not been decided. The safety organization
+ECRI named chatbot misuse its top health-technology hazard for 2026.
 
-The second is different in kind, and the difference matters. It is a lawsuit
-filed in July 2026. The complaint says that a consumer chatbot told a man with
-weeks of dizziness to stay home in a recliner, dismissed a nurse's concern, and
-reassured him about groin pain. The next day he was admitted to intensive care
-with a pulmonary embolism. Those are allegations, not findings; the case has
-not been decided. It is here for two reasons. It is the first 2025–2026 example
-this course has found of a patient-facing chatbot incident with a named
-patient. And the alleged failure is the one from the printout: fluent,
-personalized, reassuring, and unsupervised. The third clipping is the safety
-organization ECRI naming that kind of failure its top health-technology hazard
-for 2026.
-
-Who is harmed in each case is not the clinician. It is a person with an
-eating disorder, a man with a clot, a patient who asked in her own words. That
-is the population this chapter exists for.
-
-## Watch or listen
+## Watch or listen (optional)
 
 **Podcast.** *NEJM AI Grand Rounds*, "Partners in Diagnosis: ChatGPT, a
 Mother's Intuition, and a Doctor's Expertise, with Courtney Hofmann and Dr.
 Holly Gilmer" (November 20, 2024; 40 min).
 <https://ai-podcast.nejm.org/e/partners-in-diagnosis-chatgpt-a-mother-s-intuition-and-a-doctor-s-expertise-with-courtney-hofman-and-dr-holly-gilmer>
 
-A mother spent three years and many physicians looking for a diagnosis for her
-son. She put his records into ChatGPT and got a suggestion nobody had made:
-tethered cord, a spinal cord held under tension at its lower end, which surgery
-can correct. A pediatric neurosurgeon confirmed it and operated. This is the
-printout scenario from the other side of the desk, with a good ending. Listen
-for what the earlier clinicians did that sent her to a chatbot, and for what
-Gilmer did when the printout arrived. Both are the checklist's first two items.
-Then ask what this story does not show, which is every printout that was wrong.
-The first twenty minutes tell the story; the rest is worth hearing if you have time.
-
-**Alternative.** *Today, Explained* (Vox), "Paging Dr. ChatBot" (October 26,
-2025; 30 min), on patients and physicians both turning to chatbots, if you want
-the version written for a general audience. *Tradeoffs*, "Should I Trust AI to
-Diagnose Me?" (October 30, 2025; 25 min), with physician and writer Dhruv Khullar,
-covers the same topics. It adds the argument that relying on the tool weakens
-your own skill, often called deskilling
-[VERIFY: episode length]{.verify}.
+After three years and many physicians, a mother put her son's records into
+ChatGPT. It suggested something nobody had: tethered cord, a spinal cord held
+under tension at its lower end, which surgery can correct. A pediatric
+neurosurgeon confirmed it and operated. It is the printout from the other side
+of the desk, with a good ending. Budget 20 minutes, which covers the
+story. Listen for what sent her to a chatbot, and what Gilmer did when the
+printout arrived. Then ask what this story does not show: every printout that
+was wrong.
 
 ## Do
 
-::: {.callout-warning title="No patient information, ever"}
-Every person in this exercise is fictional and every detail you or the chatbot
-invent stays invented. Do not model the patient on someone from a rotation. Do
-not paste a real note, a real message, or a real result into anything. The
-consumer tool you are using has no business associate agreement, the contract
-that makes a vendor legally responsible for protecting patient data, and free
-tiers may use what you type to train the next model. Institutional accounts do
-not change this rule.
+Use your university ChatGPT Edu or Copilot account. Every patient here is made
+up: do not model one on someone from a rotation, and do not paste a real note,
+message, or result. Free tiers may use what you type to train later models.
+See [the patient information page](../course/patient-information.qmd).
 
-What counts as patient information, and why taking out the name is not
-enough: [the patient information page](../course/patient-information.qmd).
-:::
+### Part A: write your sentences, then improve them (20 minutes)
 
-### Part A: three sentences, twice (10 minutes)
+Write each of these yourself first, in words you would actually say. Each
+should take under a minute aloud.
 
-Write the three-sentence spine, in words you would actually say, for two
-situations. Time yourself; each should take under a minute aloud.
-
-1. **The phone on the desk.** The patient from the opening has asked whether
-   it is recording. Write what it did, what you do, and whose note it is.
-   Then add one sentence saying what she can refuse, and one saying what you
-   do not know and how you will find out.
+1. **The phone on the desk.** The patient from the opening asks whether it is
+   recording. Write the spine. Add one sentence on what she can refuse, and one
+   on what you do not know and how you will find out.
 2. **The computer found something.** A screening mammogram was read with
-   FDA-cleared computer-aided detection, software that marks regions on the
-   image for the radiologist to look at. The software flagged a region, the
-   radiologist agreed, and more pictures are recommended. The patient was told
-   by a scheduler that "the computer found something." She is 47, has not
-   slept in two days, and will ask whether this means she has cancer. Write
-   the three sentences. Then write the sentence that comes *before* them,
-   because in this case something has to.
+   computer-aided detection, software that marks regions for the radiologist
+   to look at. It flagged a region, the radiologist agreed, and more pictures
+   are recommended. A scheduler told the patient "the computer found
+   something." She is 47, has not slept in two days, and will ask whether she
+   has cancer. Write the spine, and the sentence that comes *before* it.
+3. **The alert you cannot explain.** Pick a tool you have seen in a hospital
+   and could not explain, such as a sepsis alert or a risk score. Write two
+   sentences for a patient who asks how it works. The first admits you do not
+   know. The second says what you will do and by when. If either reassures,
+   rewrite it.
 
-Keep both. You will read the first one aloud in the live session and find out
-how much of it still works when said to a person.
+Then paste all three into your chatbot with this prompt:
 
-### Part B: the printout, with a chatbot playing the patient (20 minutes)
+```
+I am a medical student practicing what to say to patients about AI tools.
+Below are three things I plan to say. For each one: (1) list any word a
+patient with no medical training might not understand, and give a plain
+word for it; (2) tell me if any sentence claims something I could not
+know; (3) tell me what a frightened patient would most likely ask next.
+Do not rewrite them for me.
+```
 
-You cannot role-play alone, but a chatbot can play a character well enough to
-practice the order of what you say. Open a fresh conversation and paste this
-prompt, exactly:
+Fix what you agree with. The last line is deliberate: the sentences should
+sound like you, not like the chatbot.
+
+### Part B: the printout, with a chatbot playing the patient (25 to 30 minutes) {#part-b-practice-patient}
+
+Open a fresh conversation and paste this prompt, exactly:
 
 > You are going to play a patient in a communication exercise for a medical
 > student. Stay in character until I write STOP. You are a 34-year-old software
@@ -478,127 +359,124 @@ paste this:
 > leave you with one concrete next step? Then tell me the single moment you
 > were most likely to stop listening.
 
-Two warnings about the exercise itself. A chatbot playing a patient is more
-agreeable than a patient. If it gave in on the first exchange, say so in your
-notes and try once more with "be harder to persuade" added. And the score it
-gives you is a language model's opinion of a transcript. That is exactly the
-kind of evidence the first half of this chapter told you to treat with care.
-Use it to notice the order you spoke in, not to grade yourself.
+Typing is the default. If you want to practice out loud, run the same
+role-play in your chatbot's voice mode, if your account has one (ChatGPT Edu
+calls it "Start Voice"). Say STOP when you are done, then type the observer
+prompt in the same conversation; if the chatbot has no transcript to score,
+ask it for one, or note the exchanges yourself as you go. The patient is still
+made up, out loud as on the page.
 
-Record it:
+Two warnings. A chatbot playing a patient is more agreeable than a patient; if
+it gave in on the first exchange, start again with "be harder to persuade"
+added. And the score is a language model's opinion of a transcript. Use it to
+notice the order you spoke in, not to grade yourself.
+
+### Keep it
 
 ```
 Exchanges before I said something on the printout was right:   ___
 Did I ask what sent her to the chatbot?                        Y / N
-Exchange in which the hidden detail came out (or never):       ___
 Tests I declined with a reason each:                           ___ of 6
-Tests I declined without a reason:                             ___
 The moment the model said she was most likely to stop listening:
 _________________________________________________________________
+
+My sentences for the phone on the desk (after Part A):
+_________________________________________________________________
+
 One thing to keep:   _____________________________________________
 One thing to change: _____________________________________________
 ```
 
-### Part C: the sentence you need permission to say (5 minutes)
-
-Pick a tool you have seen in a hospital and could not explain: a sepsis alert,
-a risk score in the chart, a scribe, an imaging flag. Write, in two sentences, what
-you would say to a patient who asks how it works, given that you do not know.
-The first sentence admits it. The second says what you will do and by when. If
-either sentence reassures, rewrite it.
-
-### What the live session adds
-
-The chapter can teach you the order. It cannot put you across from a person
-who is frightened, or make you play that person. That is where students
-discover that the sentence they wrote is heard nothing like the way they meant it.
-The live session runs three rounds in groups of three over Zoom: clinician,
-patient, observer, with six scenario cards and the checklist below. Breakouts
-are not recorded, and every patient is fiction. Bring your Part A sentences;
-they are your first round.
+Bring this to your Friday small group on October 30. The week 3 cards on [the
+Friday small groups page](../course/friday-groups.qmd) include the scribe
+question and a caregiver who arrives with a chatbot's advice. They are the
+conversations from Parts A and B, said out loud to a person. That is where you find out
+whether a sentence is heard the way you meant it. To practice another card
+first, change the character in the Part B prompt.
 
 ## Check
 
-Score yourself against this before moving on. It is the observer's checklist
-from the live session, applied to your own Part A and B.
-
 | You have | Meets | Falls short |
 |---|---|---|
-| Three sentences for the scribe (objective 1, 3) | What it did and what you do are two separate sentences, under a minute aloud, and one names what she can refuse | "It helps with the note" as one sentence |
+| Sentences for the scribe (objective 1) | What it did and what you do are separate sentences, under a minute aloud; one names what she can refuse; one says what you do not know | "It helps with the note"; a made-up retention period |
+| The alert you cannot explain (objective 1) | Admits what you do not know and commits to a time | Reassures |
 | Who is responsible (objective 2) | A sentence with a name in it: mine, Dr. Chen's, ours | "The team," "the system," or no sentence |
-| The sentence before the mammogram spine (objective 3) | Responds to the fear before explaining the software | Starts with "the software" |
-| The Part B transcript (objective 4) | Something right was named before anything wrong; you asked what sent her; each declined test has a reason | Won the argument; never asked; "we don't need those" |
-| The empathy paradox (objective 5) | You can say in your own words why text raters prefer can still persuade a patient less, and name the two studies' limits | "AI is more empathetic" or "AI is cold" |
-| The Part C sentences (objective 6) | Admits what you do not know and commits to a time | Reassures |
-| Jargon | The chatbot flagged none, or you can list what it flagged and the plain word for each | "Serology," "false positive," "ambient" unexplained |
+| The sentence before the mammogram spine (objective 2) | Responds to the fear before explaining the software | Starts with "the software" |
+| The Part B transcript (objective 3) | Something right named before anything wrong; you asked what sent her; each declined test has a reason | Won the argument; never asked; "we don't need those" |
+| The empathy finding (objective 4) | You can say why text raters prefer can still persuade less, and name one limit of each study | "AI is more empathetic" or "AI is cold" |
+| Kept sentences (objective 5) | You changed what the chatbot flagged that you agreed with, and the sentences still sound like you | Pasted a rewrite, or nothing kept |
 
 ## What this changes for you
 
-*What does this change about how you'll practice?* Write it down before you
-close this chapter, in two parts. First, the sentence you will say to the first
-patient who asks whether a computer was involved in their care; not the shape,
-the sentence. Second, go back to the desk. The phone is still listening and the
-two pages are still in front of you. In what order do you answer her two
-questions, and what is the first thing you say about the pages? If your first
-sentence about the printout is a correction, start again.
+*What does this change about how you'll practice?* Write it down in two parts.
+First, the sentence you will say to the first patient who asks whether a
+computer was involved in their care; not the shape, the sentence. Second, go
+back to the desk. The phone is still listening and the two pages are still in
+front of you. In what order do you answer her two questions, and what is the
+first thing you say about the pages? If it is a correction, start again.
 
 ## Summary
 
-- Every framework names this skill; about one in five program papers covers it.
-  The reason is that it cannot be taught by lecture.
-- Blinded raters preferred chatbot answers to physicians' and called them more
-  empathetic ten times as often. That is a finding about text, not patients.
-- The same kind of text, accurate and clear, produced the smallest change in
-  what people expected of a treatment. Empathy on the page is not influence in
-  the room; closing the gap is your job.
+- Raters called chatbot text more empathetic; in another study, the same kind
+  of text changed expectations least. You are the reason a patient follows the
+  handout.
 - Patients slightly prefer AI-drafted replies and are slightly less satisfied
-  when told. Tell them anyway; increasingly the law agrees.
-- The scribe can be refused; the alert in the chart cannot. Say which is which,
-  say what you do not know about the contract, and say whose note it is.
-- A printout written in the patient's words is less reliable than one written
-  in yours, and reads just as confident. Say what is right first, ask what sent
-  them, then give a reason for each no.
+  when told. Tell them anyway.
+- The scribe can be refused; the alert in the chart cannot. Say which, say what
+  you do not know, and say whose note it is.
+- With a printout: say what is right first, ask what sent them, then give a
+  reason for each no.
 - What it did; what a person did; who is responsible. In that order.
-- "I don't know how that system works, and here is how I'll find out" is a
-  correct answer.
+- A chatbot is a good practice patient. Friday is where you say it to a person.
 
 ## Go deeper
 
 **Papers**
 
 - The empathy study [@pmid:37115527] and its repeat with the reasons coded
-  [@pmid:41359230]; read the repeat's discussion of what the authorship label
-  did to the ratings.
-- The Zurich course, for the persuasion experiment and for a worked example of
-  teaching students to judge patient-facing text [@pmid:39177012].
+  [@pmid:41359230]. The repeat also found that participants rated a response
+  as more empathetic when told a physician wrote it, whether or not one had.
+- The Zurich course, for the persuasion experiment and for teaching students to
+  judge patient-facing text [@pmid:39177012].
 - The two Duke studies on AI-drafted portal messages, the survey
-  [@pmid:40067301] and the interviews [@pmid:42412426]; together they are the
-  best current evidence on what patients want to be told and when.
+  [@pmid:40067301] and the interviews [@pmid:42412426]; together the best
+  current evidence on what patients want to be told and when.
+- What drafts do for clinicians. At Stanford, in the first weeks after one tool
+  was introduced, clinicians used the draft about a fifth of the time and
+  reported less workload and exhaustion, with no change in how long a reply
+  took [@pmid:38506805]. At UC San Diego, where clinics were switched on at
+  random, drafts made replies 18 percent longer and did not shorten the time to
+  write them [@pmid:38619840].
 - The UK scribe survey [@pmid:42386325], and a short argument for
   patient-centred consent to ambient recording [@pmid:42399409].
 - A 2019 nationally representative US survey, before chatbots: two thirds of
   respondents said it was very important to be told when AI played a big role
-  in their diagnosis or treatment, and nine in ten worried about misdiagnosis
-  [@pmid:35507346]. The numbers are old; the ordering has not changed.
-- The clinician-versus-patient prompt comparison [@pmid:42232526], for the
-  reason the printout is less reliable than it looks.
+  in their diagnosis or treatment [@pmid:35507346].
+- The clinician-versus-patient prompt comparison [@pmid:42232526]; the tools
+  were also more likely to cite websites rather than papers.
 
-**Talks**
+**The state laws.** Since January 2025, California has required a disclaimer
+on generative-AI messages about a patient's clinical care unless a licensed
+clinician read and reviewed them. Since September 2025, Texas has required a
+practitioner who uses AI for diagnosis to tell the patient and to review what
+the AI wrote. Since January 2026, a second Texas law has required anyone
+providing health care to say when a patient is interacting with an AI system,
+by the date of the first service.
 
-- [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/)
-  contains the student-attitudes material and a four-level classification of AI
-  policies; useful background, written for faculty. Also in [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd).
-- [Constructive and Safe AI in the Clinic](https://talks.seandavis.net/2025-10-21-idpt-ai-clinical-safe/)
-  (IDPT 8079, October 21, 2025), the *ai-safety* deck, for the *keep
-  transparency intact* habit: cite AI use; use it to prepare work, not as a
-  substitute for it.
-  [VERIFY: public URL for the deck]{.verify}
+**Listen**
+
+- *Tradeoffs*, "Should I Trust AI to Diagnose Me?" (October 30, 2025; 25 min),
+  with physician and writer Dhruv Khullar, which adds the argument that
+  relying on the tool weakens your own skill
+  [VERIFY: episode length]{.verify}.
 
 **Elsewhere in this course**
 
-- [the appraisal chapter](core-appraisal.qmd), for the seventh question and for what a made-up
-  reference looks like when your patient brings one.
-- [the ethics and regulation chapter](core-ethics-regulation.qmd), for the statutes, the business associate
-  agreement, and liability when the tool is wrong.
-- [the bias and equity chapter](core-bias-equity.qmd), for "does this thing work for people like me,"
-  which this chapter deliberately does not cover.
+- [The appraisal chapter](core-appraisal.qmd), for the questions a vendor's
+  slide never answers, and what a made-up reference looks like.
+- [The ethics and regulation chapter](core-ethics-regulation.qmd), for consent
+  to recording, the business associate agreement, and liability.
+- [The bias and equity chapter](core-bias-equity.qmd), for "does this thing
+  work for people like me," which this chapter does not cover.
+- [The open labs](../appendix/open-labs.qmd): the scribe lab and a lab on
+  making a patient handout plainer.

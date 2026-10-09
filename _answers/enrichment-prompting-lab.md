@@ -1,7 +1,11 @@
 # Answer key — enrichment-prompting-lab
 
-Not rendered. Fed to the tutor; used by the instructor in the live session,
-where the traps are released at the 35-minute mark.
+Not rendered. Fed to the tutor; used by the instructor in any live session or
+open lab, where the traps are released after both runs (about 10 minutes into
+Part B). Revised 2026-10-08 for the week 2 core version of the chapter
+("Prompting lab: getting good answers, and knowing their limits"): Part A
+(build a prompt that works) is new, Part B checks one claim instead of two, and
+reference scoring was dropped from the Do.
 
 ## The opening case (Sam's phone)
 
@@ -22,6 +26,22 @@ Sam's structured prompt with and without that sentence. The chapter's chat
 answers are composed, not observed; nobody has yet run this case through the
 institutional tools. Run it the morning of the session and use whichever
 result you get.
+
+## Part A: build a prompt that works
+
+No single right answer; the student's own topic. What to look for:
+
+- The template has all five parts. The fifth line is about what to do with
+  gaps or disagreement ("say so instead of picking one"), not "be accurate".
+- One line per change. Expected observations (from the design, not yet
+  observed in a class run; record what students actually see): changing the audience to patients
+  shortens sentences and drops jargon; changing to an attending adds evidence
+  and nuance; format changes length and order but rarely content; deleting the
+  last line usually removes hedges and statements about guideline
+  disagreement, so the answer reads more confident without being better
+  sourced. Accept any honest observation, including "nothing changed".
+- The kept template is the deliverable. A student who keeps it and names a
+  task to reuse it on has met objective 1.
 
 ## The four traps
 
@@ -45,25 +65,42 @@ result you get.
   Cases C and D least, since structure does not make a model read a medication
   list more carefully; it makes it format what it read. Record what actually
   happened here after the first run.
-- References, if any, on the appraisal chapter's 2/1/0 scale (McLaughlin et
-  al. 2026, pmid:42232526). Do not accept "looked real".
+- References are no longer scored in this version of the Do (the appraisal
+  chapter is a week 2 menu item). If a student scores them anyway, use the
+  appraisal chapter's 2/1/0 scale (McLaughlin et al. 2026, pmid:42232526) and
+  do not accept "looked real".
 - A reply that asks for the missing information instead of committing to a
   plan (increasingly the default on the bare prompt) scores as the trap caught
   for Case A, and as organisation point 5 for any case. It is not a
   non-answer; it is the behaviour the uncertainty line is trying to produce.
-- Step 5 verdicts: accept *not addressed* as a legitimate verdict. A common
-  student error is to check a claim against a second chatbot; that scores as
-  unchecked.
+- Step 5 verdict (one claim, the one the plan depends on): accept *not
+  addressed* as a legitimate verdict. A common student error is to check a
+  claim against a second chatbot; that scores as unchecked. A good choice of
+  claim is the one that would change the next step: for Case A, any "low risk"
+  or "D-dimer first"; for B, "start antibiotics"; for C, any statement about
+  simvastatin dose or the macrolide; for D, a single named diagnosis.
 
 ## Objectives to activities
 
 | Objective | Where assessed |
 |---|---|
-| 1 Structured prompt | Do Step 3; Check row 1 |
-| 2 Organisation vs correctness | Do Step 4 and the one-sentence finding; Check row 2 |
-| 3 Confident error against a source | Do Step 5; Check row 3 |
-| 4 Why the neat wrong answer is worse | Check row 4; "The question you keep" part 1 |
-| 5 The randomized evidence | Check row 5; "The question you keep" part 2 |
+| 1 A kept five-part template | Part A and "What you keep"; Check row 1; "What this changes" part 2 |
+| 2 One part changed at a time | Part A; Check row 2 |
+| 3 Bare vs structured, organisation vs correctness | Part B Steps 2 to 4 and the one-sentence finding; Check row 3 |
+| 4 The claim the plan depends on, checked against a source | Part B Step 5; Check row 4; "What this changes" part 1 |
+| 5 The two trials | Check row 5 |
+
+## "What this changes for you", part 1 (Sam)
+
+A strong answer to Sam, in three sentences: the second answer is better
+organised (ranked, for and against, a next step per row) and that is worth
+keeping; but a negative D-dimer only excludes PE at low pretest probability,
+and this patient (surgery within four weeks, HR over 100, signs of DVT) is not
+low on Wells, so the next step is imaging; next time add "where the case lacks
+information you would need, say what is missing instead of assuming it", and
+check the claim the plan depends on (here, in MDCalc) before it goes in the
+note. Extra credit for noting that Sam typed a real patient into a phone,
+which the course rule forbids.
 
 ## Instructor prep
 
@@ -71,4 +108,5 @@ Run all four cases through the institution's ChatGPT Edu and Copilot the
 morning of the session, bare and structured, and keep the transcripts. If a
 tool catches every trap on the bare prompt, say so in the frame and let the
 class result stand; the chapter's "one case is not a study" note covers it.
-Release the traps callout (or this key) at 35 minutes, not before.
+Release the traps callout (or this key) after both runs (about 10 minutes into
+Part B), not before.
