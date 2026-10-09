@@ -60,7 +60,7 @@ framework core and move hands-on work toward success first.
   - Thursday, 45 min, live, not recorded: office hours. Learning journal due
     Thursday night.
   - Friday, 60 min: small group, required, one of four slots (10 a.m., 11 a.m., 1 p.m.,
-    2 p.m.; up to 17 students each; decided 2026-10-09), breakout rooms
+    2 p.m.; up to 15 students each for 49 enrolled; decided 2026-10-09), breakout rooms
     of 4 to 5 with the same members each week.
   - Guest talks: attend or watch one a week (was two, cut so the week still
     adds up; see the syllabus table).
@@ -94,7 +94,7 @@ framework core and move hands-on work toward success first.
   the journal assignment; calendar events for every live session; signup
   sheets for week 1 office hours (three 15-minute slots after Thursday's
   session) and for the Friday small-group slot (10 a.m., 11 a.m., 1 p.m.,
-  2 p.m., up to 17 each, chosen once on October 16); plain events for later Fridays. Last year's
+  2 p.m., up to 15 each, chosen once on October 16); plain events for later Fridays. Last year's
   assignments are unpublished, not deleted. The course is still unpublished. A custom submission and chatbot app is a
   post-course project; start CU's data-use review early.
 - **Chat channel:** undecided. Microsoft Teams preferred over Discord (no new
