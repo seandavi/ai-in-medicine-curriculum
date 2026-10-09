@@ -33,8 +33,8 @@ what is expected, plus anything optional you choose.
 
 | When | What | Expected? | Time |
 |---|---|---|---|
-| Monday, 60 minutes, live and recorded | **"How I used AI this week"**: the course director's own real tasks, shown on screen. Then **a talk on the week's core topic**, with live demonstrations | Yes, live or the recording | 1 hour |
-| Wednesday, 60 minutes, live and recorded | **A talk on a second topic**: a menu chapter, or something beyond the book. The class votes on the topic from a short list | Yes, live or the recording | 1 hour |
+| Monday, 10 a.m., 60 minutes, live and recorded | **"How I used AI this week"**: the course director's own real tasks, shown on screen. Then **a talk on the week's core topic**, with live demonstrations | Yes, live or the recording | 1 hour |
+| Wednesday, 10 a.m., 60 minutes, live and recorded | **A talk on a second topic**: a menu chapter, or something beyond the book. The class votes on the topic from a short list | Yes, live or the recording | 1 hour |
 | After Monday's talk | The week's **core chapter** | Yes | About 1 hour |
 | On your own | **[Learn it with AI](learn-with-ai.qmd)**: use AI to teach yourself something you care about. This is the main hands-on work of the course | Yes | 2 to 4 hours |
 | Through the week | Guest talks from clinicians and researchers using AI in their work | Attend or watch one | About 1 hour |
@@ -43,21 +43,28 @@ what is expected, plus anything optional you choose.
 | Friday, 60 minutes | [Small group](friday-groups.qmd), in one of three time slots you choose: what AI taught you, and practising conversations about AI out loud | Yes, one slot | 1 hour |
 | Any time | Chapters from the **menu**, and the [open labs](../appendix/open-labs.qmd) | Optional | As you like |
 
-: Your week, weeks 2 to 4. Exact times and the guest schedule are posted in Canvas. {#tbl-week}
+: Your week, weeks 2 to 4. All times are Mountain time (Denver). Office hours times and the guest schedule are posted in Canvas. {#tbl-week}
 
 ## Week 1: live, October 12 to 16
 
-In week 1 the course director teaches live. Days and times may shift; Canvas
-has the current schedule.
+Week 1 is different from the rest. The course director teaches live every
+weekday morning, Monday to Thursday, at 10 a.m. Mountain time (Denver). The
+small groups meet for the first time on Friday. Canvas has the current
+schedule if anything changes.
 
 | Day | Live session |
 |---|---|
-| Monday, October 12 | Welcome: how the course works, and how adults learn best |
-| Tuesday, October 13 | A short history of AI |
-| Wednesday, October 14 | From AI to machine learning to deep learning to large language models, with time to try it together |
-| Friday, October 16 | Small groups: introductions, then the first scenario cards |
+| Monday, October 12, 10 a.m. | Welcome: how the course works, and how adults learn best |
+| Tuesday, October 13, 10 a.m. | A short history of AI |
+| Wednesday, October 14, 10 a.m. | What AI is: from AI to machine learning to deep learning to large language models, with time to try it together |
+| Thursday, October 15, 10 a.m. | **Hands-on: centaur or cyborg, live.** Everyone in their ChatGPT Edu account at once. Together we try three everyday tasks of a new intern with a chatbot, then decide which to work on with it back and forth and which to hand over and check line by line. Goes with the week's core chapter, [Centaur or cyborg](../chapters/core-centaur-cyborg.qmd). Bring your account; if you cannot sign in yet, come anyway and we will sort it out. |
+| Thursday, October 15, after the session | Office hours, by signup. Bring what you are stuck on |
+| Friday, October 16 | Small groups, in the time slot you signed up for: introductions, then the first scenario cards |
 
-: Week 1. {#tbl-week1}
+: Week 1. All times are Mountain time (Denver). {#tbl-week1}
+
+Thursday's session gives you something to write about: your first
+[journal entry](learning-journal.qmd) is due that night.
 
 ## Weeks 2 to 4: the talks
 

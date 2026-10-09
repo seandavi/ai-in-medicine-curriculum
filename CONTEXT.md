@@ -37,10 +37,17 @@ chatbots and felt lost; see `curriculum/design-constraints.md` constraint 5.
 **Next:** revisit each chapter before the week it is used, to cut it to its
 framework core and move hands-on work toward success first.
 
-- **Week 1 (Oct 12 to 16):** the course director teaches live: welcome and adult
-  learning (from the 2024 Google Slides intro deck), history of AI, then AI to ML
-  to DL to LLMs (the foundations deck, PR #60, trimmed; keep a few slides on
-  overfitting). Students read `core-foundations` and `core-centaur-cyborg`.
+- **Week 1 (Oct 12 to 16):** the course director teaches live, Monday to
+  Thursday at 10 a.m. Mountain time (decided 2026-10-09): Monday welcome and
+  adult learning (from the 2024 Google Slides intro deck); Tuesday history of
+  AI; Wednesday what AI is, AI to ML to DL to LLMs (the foundations deck, PR
+  #60, trimmed; keep a few slides on overfitting); Thursday a hands-on session,
+  "centaur or cyborg, live" (everyone in ChatGPT Edu, three everyday intern
+  tasks, decide collaborate or hand over and check; catches account problems
+  early and feeds the journal due that night), then office hours by signup.
+  Friday small groups in the signed-up slots. Students read `core-foundations`
+  and `core-centaur-cyborg`. Weeks 2 to 4 Monday and Wednesday talks are also
+  at 10 a.m.
 - **Weeks 2 to 4, each week (decided 2026-10-08):** the course director's
   talks are the main event and each core chapter is their companion ("read it
   after the talk, or instead of it if you missed the talk").
