@@ -54,9 +54,8 @@ framework core and move hands-on work toward success first.
   - Monday, 60 min, live and recorded: "How I used AI this week", then a talk
     on the week's core chapter topic with live demos.
   - Wednesday, 60 min, live and recorded: a talk on a menu chapter or a topic
-    beyond the book. The class votes on the topic from a short list, the week
-    before. This replaces the voted mid-week open lab; the open labs stay as
-    self-paced activities and as Wednesday topic candidates.
+    beyond the book, sometimes a guest. No class vote (dropped 2026-10-09). The
+    open labs stay as self-paced activities.
   - Thursday, 11 to 11:45 a.m., live, not recorded: office hours, drop in
     (no signup; decided 2026-10-09). Learning journal due
     Thursday night.
@@ -67,13 +66,13 @@ framework core and move hands-on work toward success first.
     adds up; see the syllabus table).
   - Recordings count as attending.
   Starting topic grid (the director's starting point, subject to change):
-  week 2, Monday "getting good answers" (prompting lab), Wednesday vote
-  between AI for scholarly writing (co-led with a co-director) and answers
-  grounded in real sources; week 3, Monday talking with patients about AI,
-  Wednesday vote between bias and equity and building a small tool live;
+  week 2, Monday "getting good answers" (prompting lab), Wednesday October 21
+  "Professional work with AI: writing and beyond", given by Christina Olson
+  (decided 2026-10-09); week 3, Monday talking with patients about AI,
+  Wednesday to be announced, bias and equity or building a small tool live;
   week 4, Monday who answers for the note (ethics), Wednesday where this is
   going (workforce, environment) and what you will keep. Open question: bias
-  is meant to carry AIM-3 this offering, but as a vote option it may not run;
+  is meant to carry AIM-3 this offering, but as one of two options it may not run;
   the week 2 Friday bias card is the only certain coverage.
 - **Why lectures now (2026-10-08):** the director lectures well (evaluations
   in every course he teaches say he is the best part), and writing a talk

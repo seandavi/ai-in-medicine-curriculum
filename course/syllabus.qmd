@@ -34,7 +34,7 @@ what is expected, plus anything optional you choose.
 | When | What | Expected? | Time |
 |---|---|---|---|
 | Monday, 10 a.m., 60 minutes, live and recorded | **"How I used AI this week"**: the course director's own real tasks, shown on screen. Then **a talk on the week's core topic**, with live demonstrations | Yes | 1 hour |
-| Wednesday, 10 a.m., 60 minutes, live and recorded | **A talk on a second topic**: a menu chapter, or something beyond the book. The class votes on the topic from a short list | Yes | 1 hour |
+| Wednesday, 10 a.m., 60 minutes, live and recorded | **A talk on a second topic**: a menu chapter, or something beyond the book. Some weeks a guest gives it | Yes | 1 hour |
 | After Monday's talk | The week's **core chapter** | Yes | About 1 hour |
 | On your own | **[Learn it with AI](learn-with-ai.qmd)**: use AI to teach yourself something you care about. This is the main hands-on work of the course | Yes | 2 to 4 hours |
 | Through the week | Guest talks from clinicians and researchers using AI in their work | Attend or watch one | About 1 hour |
@@ -66,33 +66,29 @@ schedule if anything changes.
 ## Weeks 2 to 4: the talks
 
 This is a starting plan, and topics may change. Canvas has the current one.
-Each Wednesday topic is chosen by a class vote from the short list below. The
-vote runs the week before, so the talk can be prepared. [VERIFY: link to the
-vote (a Canvas survey or a Microsoft Form)]{.verify}
 
 **Week 2, October 19 to 23: getting good at it**
 
 - Monday: **Getting good answers.** How a chatbot reads your prompt, with a
   live demonstration. Goes with the core chapter, the
   [prompting lab](../chapters/enrichment-prompting-lab.qmd).
-- Wednesday, the class chooses one: **AI for scholarly writing**, or
-  **answers that come from real sources** (goes with
-  [Grounding AI in real sources](../chapters/enrichment-rag-notebooklm.qmd)).
+- Wednesday: **Professional work with AI: writing and beyond**, with
+  co-director Christina Olson.
 
 **Week 3, October 26 to 30: AI and your patients**
 
 - Monday: **Talking with patients about AI**, starting from what patients
   already do with it. Goes with the core chapter,
   [Talking to patients about AI](../chapters/core-patient-communication.qmd).
-- Wednesday, the class chooses one: **bias and equity** (goes with
-  [Bias and equity](../chapters/core-bias-equity.qmd)), or **building a small
+- Wednesday: to be announced, either **bias and equity** (goes with
+  [Bias and equity](../chapters/core-bias-equity.qmd)) or **building a small
   tool live** (goes with [Agentic coding](../chapters/enrichment-agentic-coding.qmd)).
 
 **Week 4, November 2 to 6: responsibility**
 
 - Monday: **Who answers for the note.** Goes with the core chapter,
   [Ethics, liability, and the device line](../chapters/core-ethics-regulation.qmd).
-- Wednesday, no vote: **Where this is going**, for jobs and for the planet,
+- Wednesday: **Where this is going**, for jobs and for the planet,
   and what you will keep from the course. Goes with
   [Will AI take your job?](../chapters/enrichment-workforce-economics.qmd) and
   [What AI costs the planet](../chapters/enrichment-environment.qmd).
