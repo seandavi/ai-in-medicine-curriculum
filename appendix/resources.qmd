@@ -3,7 +3,8 @@ title: "Starter resources"
 ---
 
 Students in the 2024 and 2025 offerings of this course added more than 600
-resources to the [weekly resource log](../course/resource-log.qmd). This page
+resources to the course's weekly resource log (now the
+[learning journal](../course/learning-journal.qmd)). This page
 lists about thirty of them, picked because they are clear, recent, or from a
 primary source. Use them to get started, then find your own.
 

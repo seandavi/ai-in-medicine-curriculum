@@ -55,6 +55,19 @@ and hit each more than once, in different modes.
 4. **Free tools only, no installs.** Institutional accounts where available;
    otherwise browser-based free tiers. Cost is an equity problem, not a
    footnote — see the `pricing` fragment in the talks repo.
-5. **Critical appraisal over tool training.** Specific products will be
-   obsolete before these students finish residency. The durable skill is
-   judging whether an AI claim or tool deserves trust.
+5. **Skill and confidence first; appraisal inside the use.** *(Revised
+   2026-10-07; this replaces "critical appraisal over tool training".)* The
+   course's aim is that students leave confident and practised at using AI in
+   their own work, and able to talk about it with colleagues and patients.
+   "It is your job to learn where AI helps your work; you learn that by
+   trying." Checking is taught as part of using a tool well, not as a reason
+   to avoid it. The chapters are a framework (one core chapter a week plus a
+   menu), not a curriculum that teaches everything; less is better.
+   **Why it changed:** students in the 2025 offering said they were afraid to
+   use chatbots and felt the course lacked structure. An independent review
+   of this book (`research/independent-review-2026-10-08.md`) found about two
+   hours of hands-on chatbot use across the whole course, most of it designed
+   to make the tool fail. Surveys show students are already told AI makes
+   mistakes; what they lack is confidence (`research/student-interests-survey-2026-10-07.md`).
+   The original reasoning still holds in part: products change, so teach the
+   habit of finding where a tool helps, not a product.

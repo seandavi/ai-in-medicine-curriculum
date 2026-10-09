@@ -4,75 +4,84 @@ subtitle: "What the four weeks look like"
 ---
 
 A four-week, ungraded elective, delivered over Zoom, for fourth-year medical
-students, running October 12 to November 6, 2026. You read the chapters of
-this book on your own time. The live hours are for what a book cannot do:
-questions, demonstrations, trying tools together, and talking with each
-other. Nothing in the course needs an install, a paid account, or a real
-patient.
+students, running October 12 to November 6, 2026. Nothing in the course needs
+an install, a paid account, or a real patient.
 
-Three rules hold everywhere: **no patient information enters any tool, ever;
-verify before it counts; you sign the note.** What counts as patient information is on
-[its own page](patient-information.qmd).
+## The one idea
 
-## Week 1: the foundations, live
+**It is your job to learn where AI helps your work.** Nobody can tell you in
+advance, and the tools change every few months. You find out by trying, often,
+on things that matter to you, and you learn where AI fails the same way. This
+course gives you a framework, a routine, and people to try things with. Most of
+your learning will be your own, done with AI.
 
-In week 1 the course director teaches each day. Read the two week-1 chapters
-alongside the talks.
+The safety rules are short. **Use your university ChatGPT Edu or Copilot
+account. Never put real patient information into a course activity. Check what
+matters before you rely on it. You sign the note.** What counts as patient
+information is on [its own page](patient-information.qmd).
 
-| Day | Live session | Read this week |
-|---|---|---|
-| Monday, October 12 | Welcome: how the course works, and how adults learn best | [How these systems work](../chapters/core-foundations.qmd) |
-| Tuesday, October 13 | A short history of AI | [Centaur or cyborg](../chapters/core-centaur-cyborg.qmd) |
-| Wednesday, October 14 | From AI to machine learning to deep learning to large language models | |
-| Friday, October 16 | Small groups: introductions, then the week's questions | |
+## Your week
 
-: Week 1. Days and times may shift; Canvas has the current schedule. {#tbl-week1}
-
-## Weeks 2 to 4: the same rhythm each week
+Aim for 5 to 10 hours a week on AI-related learning. About 2 to 4 of those are
+with this book; the rest is yours.
 
 | When | What | Expected? | Time |
 |---|---|---|---|
-| Monday, 60 minutes, recorded | Start of the week: the week's question, a short demonstration, the guests coming up, and your questions | Strongly encouraged; the recording counts | 1 hour |
-| On your own | The week's chapters: read, watch or listen, do the activity, score yourself on the Check | Yes | 2 to 4 hours |
-| Mid-week, 60 minutes, recorded | [Open lab](../appendix/open-labs.qmd): we try one tool together. The class votes on which. | Optional | 1 hour |
-| Through the week | Guest talks from clinicians and researchers using AI in their fields | Attend or watch two | About 2 hours |
-| Thursday night | [Resource log](resource-log.qmd) entry for the week | Yes | 1 to 2 hours |
-| Friday, 60 minutes | Small group, in one of three time slots you choose. Breakout rooms of four or five, the same people each week, then the whole group. | Yes, one slot | 1 hour |
+| Monday, 60 minutes, recorded | Start of the week, including **"How I used AI this week"**: the course director's own real tasks, shown on screen | Strongly encouraged; the recording counts | 1 hour |
+| On your own | The week's **core chapter**, and one item from the **menu** | Core: yes. Menu: choose one | 2 to 4 hours |
+| On your own | **[Learn it with AI](learn-with-ai.qmd)**: use AI to teach yourself something you care about | Yes | 3 to 6 hours |
+| Mid-week, 60 minutes, recorded | [Open lab](../appendix/open-labs.qmd): we try a tool together. The class votes on which. | Optional | 1 hour |
+| Through the week | Guest talks from clinicians and researchers using AI in their work | Attend or watch two | About 2 hours |
+| Thursday night | [Learning journal](learning-journal.qmd) entry | Yes | 30 minutes |
+| Friday, 60 minutes | [Small group](friday-groups.qmd), in one of three time slots you choose: what AI taught you, and practising conversations about AI out loud | Yes, one slot | 1 hour |
 
-: Weeks 2 to 4. Exact times and the guest schedule are posted in Canvas. {#tbl-week}
+: Your week. Exact times and the guest schedule are posted in Canvas. {#tbl-week}
 
-| Week | Theme | Chapters |
+## Week 1: live, October 12 to 16
+
+In week 1 the course director teaches live. Days and times may shift; Canvas
+has the current schedule.
+
+| Day | Live session |
+|---|---|
+| Monday, October 12 | Welcome: how the course works, and how adults learn best |
+| Tuesday, October 13 | A short history of AI |
+| Wednesday, October 14 | From AI to machine learning to deep learning to large language models, with time to try it together |
+| Friday, October 16 | Small groups: introductions, then the first scenario cards |
+
+: Week 1. {#tbl-week1}
+
+## Core and menu, week by week
+
+Each chapter stands alone. The core chapter is the one framework idea for the
+week. The menu is there so you can follow what interests you.
+
+| Week | Core | Menu (choose one or more) |
 |---|---|---|
-| 2 · October 19 to 23 | Judgment | [Critical appraisal](../chapters/core-appraisal.qmd), [Bias and equity](../chapters/core-bias-equity.qmd) |
-| 3 · October 26 to 30 | Practice | [Agentic coding](../chapters/enrichment-agentic-coding.qmd), [Talking to patients about AI](../chapters/core-patient-communication.qmd) |
-| 4 · November 2 to 6 | Consequences and closing | [Will AI take your job?](../chapters/enrichment-workforce-economics.qmd) *or* [What AI costs the planet](../chapters/enrichment-environment.qmd), your choice; [Ethics, liability, and the device line](../chapters/core-ethics-regulation.qmd) |
-| Any week | Spare chapters | [Prompting lab](../chapters/enrichment-prompting-lab.qmd), [Grounding AI in real sources](../chapters/enrichment-rag-notebooklm.qmd) |
+| 1 · October 12 to 16 | [Centaur or cyborg](../chapters/core-centaur-cyborg.qmd): what to hand to AI, and what to keep | [How these systems work](../chapters/core-foundations.qmd) (the live talks cover it) |
+| 2 · October 19 to 23 | [Prompting lab](../chapters/enrichment-prompting-lab.qmd): getting good answers, and knowing their limits | [Critical appraisal](../chapters/core-appraisal.qmd), [Bias and equity](../chapters/core-bias-equity.qmd), [Grounding AI in real sources](../chapters/enrichment-rag-notebooklm.qmd) |
+| 3 · October 26 to 30 | [Talking to patients about AI](../chapters/core-patient-communication.qmd) | [Agentic coding](../chapters/enrichment-agentic-coding.qmd), the [scribe open lab](../appendix/open-labs.qmd) |
+| 4 · November 2 to 6 | [Ethics, liability, and the device line](../chapters/core-ethics-regulation.qmd) | [Will AI take your job?](../chapters/enrichment-workforce-economics.qmd), [What AI costs the planet](../chapters/enrichment-environment.qmd) |
 
-: The chapters, week by week. Every chapter stands alone, so a missed week costs one chapter, not the course. {#tbl-order}
+: Core chapter and menu. {#tbl-order}
 
-If you are away interviewing, the recordings and the chapters let you keep
-up. Tell the course director which Friday you will miss, and add one line to
-that week's resource log about a recording you watched.
+If you are away interviewing, the recordings and the chapters let you keep up.
+Tell the course director which Friday you will miss, and add one line to that
+week's journal about a recording you watched.
 
 ## Due dates
 
-| Week | Due | What |
-|---|---|---|
-| 1 | Thursday, October 15 | Resource log, week 1 |
-| 2 | Thursday, October 22 | Resource log, week 2 |
-| 3 | Thursday, October 29 | Resource log, week 3, naming your week 4 theme |
-| 4 | Thursday, November 5 | One-page synthesis, presented in five minutes at your Friday small group on November 6 |
+| Due | What |
+|---|---|
+| Thursday, October 15 | Learning journal, week 1 |
+| Thursday, October 22 | Learning journal, week 2 |
+| Thursday, October 29 | Learning journal, week 3 |
+| Thursday, November 5 | Week 4 piece, "what you will keep", presented in five minutes at your Friday group on November 6 |
 
 : Due dates. Submit through the course form: [VERIFY: link to the Microsoft Form]{.verify} {#tbl-due}
 
-## Before the course starts
-
-Some chapters use a chatbot. Institutional ChatGPT Edu and Microsoft Copilot
-accounts are enough; no chapter needs a paid tier. Any session that needs a
-separate free account says so a week ahead so that nobody creates one live.
-
 ## Grading
 
-The course is ungraded. The resource log is marked complete or incomplete,
-with short feedback in weeks 1 and 2 while the habit forms. What is expected
-in each entry is on the [resource log](resource-log.qmd) page.
+The course is ungraded. The learning journal is marked complete or incomplete,
+with a one-line reply in weeks 1 and 2. What goes in each entry is on the
+[learning journal](learning-journal.qmd) page.

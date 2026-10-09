@@ -1,0 +1,128 @@
+# Learn it with AI {.unnumbered}
+
+[The main activity of the course: use AI to teach yourself something you care about · 3 to 6 hours a week]{.subtitle .lead}
+
+**It is your job to learn where AI helps your work.** Nobody can tell you in
+advance. The tools change every few months, and your work is not anyone
+else's. The way to find out is to try it, often, on things that matter to
+you. You will learn where it fails the same way: by trying.
+
+So each week, pick something you want to learn and use AI as your tutor and
+research assistant. The chapters give you a framework. This is where most of
+your learning happens.
+
+## Pick a topic
+
+Choose something tied to your own path. Some starting points:
+
+- the AI tools already used in the specialty you are applying to
+- a clinical topic you want to be sharp on for residency
+- a paper, guideline, or debate in your field you keep meaning to understand
+- a skill: reading a statistics section, writing a research question,
+  preparing for interviews
+
+One topic can last all four weeks, or you can change each week.
+
+## Use your university account
+
+Sign in to **ChatGPT Edu** or **Microsoft Copilot** with your university
+credentials. Both are covered for patient care at CU Anschutz, and both are
+free to you. This work is learning, not patient care, so use made-up cases,
+never real patient information. That is the only line; everything else is
+yours to try. See [the patient information page](patient-information.qmd).
+
+## A starter kit
+
+Copy a prompt, change the parts in brackets, and see what happens. Then change
+it again. Every prompt below is a starting point, not a recipe.
+
+### Make me a plan
+
+```
+I am a fourth-year medical student going into [specialty]. I have about
+four hours this week to learn about [topic]. Make me a study plan in
+short steps. For each step, say what I should be able to do at the end.
+Ask me two questions first about what I already know.
+```
+
+### Explain it three ways
+
+```
+Explain [concept] three ways: first as you would to a patient, then to a
+medical student, then to an attending in [specialty]. After each, ask me
+one question to check I understood.
+```
+
+### Quiz me, and make me explain
+
+```
+Quiz me on [topic], one question at a time. Do not give the answer until
+I have tried. When I am wrong, ask me a follow-up question instead of
+correcting me straight away. Keep score and stop after ten questions.
+```
+
+### Teach it back
+
+```
+I am going to explain [topic] to you as if you were a new intern. Point
+out anything I got wrong, anything important I left out, and anything I
+said that was more confident than the evidence allows.
+```
+
+### Find me the sources
+
+```
+I want to understand the evidence on [question]. Tell me what kinds of
+studies would answer it, what to search for in PubMed, and the names of
+any landmark papers you know of. Mark every specific paper as
+"to be verified", because you may be wrong about titles and authors.
+```
+
+Then look the papers up yourself. This is where a chatbot is most likely to
+invent something, and checking takes a minute: search the title in PubMed.
+
+### Argue the other side
+
+```
+Here is what I currently think about [topic or claim]: [your view].
+Make the strongest honest case against it. Then tell me which of your
+points is weakest.
+```
+
+### Practise the interview question
+
+```
+You are a residency interviewer in [specialty]. Ask me, "What do you
+think about AI in medicine?" and then two follow-up questions based on
+my answers. Afterwards, tell me what was strong, what was vague, and
+one thing a skeptical faculty member would push back on.
+```
+
+### Make something I will keep
+
+```
+Turn what we covered into a one-page reference I can keep: the five
+things to remember, two common mistakes, and three questions I should
+still ask an expert.
+```
+
+## One check a week
+
+Each week, take **one** thing the AI told you that mattered and check it
+against a source: a paper, a guideline, a textbook, an expert. Note what you
+found in your [learning journal](learning-journal.qmd). Sometimes it will be
+right. Sometimes it will be confidently wrong. Both are worth knowing, and
+the habit is the point.
+
+## When you get stuck
+
+- **The answer is too vague.** Say who you are and what you need it for.
+  Ask for an example.
+- **It is too long.** Ask for five bullet points, or "answer in three
+  sentences".
+- **It sounds sure but you are not.** Ask, "How confident are you, and what
+  would change your mind?" Then check it.
+- **It will not help.** Try the other tool. ChatGPT Edu and Copilot behave
+  differently, and that difference is worth noticing too.
+
+Bring what worked, and what did not, to Friday's small group.

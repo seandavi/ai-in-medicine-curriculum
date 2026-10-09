@@ -33,29 +33,30 @@ book:
     - part: "Running the course"
       chapters:
         - course/syllabus.qmd
-        - course/resource-log.qmd
+        - course/learn-with-ai.qmd
+        - course/learning-journal.qmd
+        - course/friday-groups.qmd
         - course/patient-information.qmd
-    - part: "Week 1 · Orientation and stance"
+    # Each week: the core chapter first, then the menu (see the syllabus).
+    - part: "Week 1 · Working with AI"
       chapters:
-        - chapters/core-foundations.qmd
         - chapters/core-centaur-cyborg.qmd
-    - part: "Week 2 · Judgment"
-      chapters:
-        - chapters/core-appraisal.qmd
-        - chapters/core-bias-equity.qmd
-    - part: "Week 3 · Practice"
-      chapters:
-        - chapters/enrichment-agentic-coding.qmd
-        - chapters/core-patient-communication.qmd
-    - part: "Week 4 · Consequences and closing"
-      chapters:
-        - chapters/enrichment-workforce-economics.qmd
-        - chapters/enrichment-environment.qmd
-        - chapters/core-ethics-regulation.qmd
-    - part: "Spare enrichment chapters"
+        - chapters/core-foundations.qmd
+    - part: "Week 2 · Getting good at it"
       chapters:
         - chapters/enrichment-prompting-lab.qmd
+        - chapters/core-appraisal.qmd
+        - chapters/core-bias-equity.qmd
         - chapters/enrichment-rag-notebooklm.qmd
+    - part: "Week 3 · AI and your patients"
+      chapters:
+        - chapters/core-patient-communication.qmd
+        - chapters/enrichment-agentic-coding.qmd
+    - part: "Week 4 · Responsibility"
+      chapters:
+        - chapters/core-ethics-regulation.qmd
+        - chapters/enrichment-workforce-economics.qmd
+        - chapters/enrichment-environment.qmd
   appendices:
     - appendix/open-labs.qmd
     - appendix/resources.qmd
