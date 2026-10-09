@@ -224,7 +224,7 @@ American radiology societies describes current tools as helping the
 radiologist's interpretation, not replacing it. Tools that act on their own
 are treated as a separate question needing their own evidence
 [@pmid:38276923]. Where a device stops and who is liable when a tool is wrong
-belong to [the ethics and regulation chapter](core-ethics-regulation.qmd). The point here is only that the
+belong to [the ethics chapter](core-ethics-regulation.qmd). The point here is only that the
 rules are built to keep a human involved in every decision, and rules change more slowly than
 benchmarks.
 
@@ -661,5 +661,5 @@ able to check.
   patients, providers, researchers, and administrators. It also lists eight
   guiding principles [@doi:10.1038/s43856-023-00279-9]. Two of them, "have
   high healthcare value" and "reduce overdiagnosis and overtreatment," are
-  the CAD story stated as rules. The deck is also in [the ethics and regulation chapter](core-ethics-regulation.qmd); the
+  the CAD story stated as rules. The deck is also in [the ethics chapter](core-ethics-regulation.qmd); the
   principles are also in [the appraisal chapter](core-appraisal.qmd).

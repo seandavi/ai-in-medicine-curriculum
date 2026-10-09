@@ -313,7 +313,7 @@ paper with it.
 :::
 
 The device boundary, the Predetermined Change Control Plan, and the clinical
-decision support criteria belong to [the ethics and regulation chapter](core-ethics-regulation.qmd). The
+decision support criteria belong to [the ethics chapter](core-ethics-regulation.qmd). The
 FDA's list of AI-enabled devices held 1,614 authorizations when it was updated
 on 4 September 2026, with decisions through June 2026. The FDA says the list is
 not complete, and one product can appear more than once, so quote the count
@@ -356,7 +356,7 @@ trained on, how it was validated, and whether fairness was tested. That is the
 closest thing to a legal right to traceability. It applies to the tool built
 into your EHR, not to the consumer chatbot on your phone. The rule is in force
 as of September 2026. A proposed rule, HTI-5, would remove the source-attribute
-requirement; [the ethics and regulation chapter](core-ethics-regulation.qmd) tracks its status.
+requirement; [the ethics chapter](core-ethics-regulation.qmd) tracks its status.
 :::
 
 There is a seventh question the six do not ask. It belongs to the patient in
@@ -418,7 +418,7 @@ not.
 The harder case you will meet in month one: a tool your hospital licenses and
 runs inside the EHR is a different question. Ask whether a business associate
 agreement exists, and what your institution's policy says about documenting that
-you used it. [the ethics and regulation chapter](core-ethics-regulation.qmd) covers that.
+you used it. [the ethics chapter](core-ethics-regulation.qmd) covers that.
 
 What counts as patient information, and why taking out the name is not
 enough: [the patient information page](../course/patient-information.qmd).
@@ -722,7 +722,7 @@ an answer to either.
   the Part B claims fail.
 - The National Academy of Medicine's AI Code of Conduct, in its discussion
   draft [@pmid:39830818]; the 2025 final is a NAM publication and the principles
-  are the same. Also in [the ethics and regulation chapter](core-ethics-regulation.qmd).
+  are the same. Also in [the ethics chapter](core-ethics-regulation.qmd).
 - Eight guiding principles for AI tools in health care [@doi:10.1038/s43856-023-00279-9].
   "Report clinically meaningful outcomes" and "have high healthcare value" are what
   Part B teaches in exercise form.

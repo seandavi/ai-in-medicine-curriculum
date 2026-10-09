@@ -87,7 +87,7 @@ vote (a Canvas survey or a Microsoft Form)]{.verify}
 **Week 4, November 2 to 6: responsibility**
 
 - Monday: **Who answers for the note.** Goes with the core chapter,
-  [Ethics, liability, and the device line](../chapters/core-ethics-regulation.qmd).
+  [Ethics: what you owe when you sign the note](../chapters/core-ethics-regulation.qmd).
 - Wednesday, no vote: **Where this is going**, for jobs and for the planet,
   and what you will keep from the course. Goes with
   [Will AI take your job?](../chapters/enrichment-workforce-economics.qmd) and
@@ -103,7 +103,7 @@ week. The menu is there so you can follow what interests you.
 | 1 · October 12 to 16 | [Centaur or cyborg](../chapters/core-centaur-cyborg.qmd): what to hand to AI, and what to keep | [How these systems work](../chapters/core-foundations.qmd) (the live talks cover it) |
 | 2 · October 19 to 23 | [Prompting lab](../chapters/enrichment-prompting-lab.qmd): getting good answers, and knowing their limits | [Critical appraisal](../chapters/core-appraisal.qmd), [Bias and equity](../chapters/core-bias-equity.qmd), [Grounding AI in real sources](../chapters/enrichment-rag-notebooklm.qmd) |
 | 3 · October 26 to 30 | [Talking to patients about AI](../chapters/core-patient-communication.qmd) | [Agentic coding](../chapters/enrichment-agentic-coding.qmd), the [scribe open lab](../appendix/open-labs.qmd) |
-| 4 · November 2 to 6 | [Ethics, liability, and the device line](../chapters/core-ethics-regulation.qmd) | [Will AI take your job?](../chapters/enrichment-workforce-economics.qmd), [What AI costs the planet](../chapters/enrichment-environment.qmd) |
+| 4 · November 2 to 6 | [Ethics: what you owe when you sign the note](../chapters/core-ethics-regulation.qmd) | [Will AI take your job?](../chapters/enrichment-workforce-economics.qmd), [What AI costs the planet](../chapters/enrichment-environment.qmd) |
 
 : Core chapter and menu. {#tbl-order}
 

@@ -80,8 +80,7 @@ appendix.
 
 **Week 4, responsibility**
 
-- Core: [Ethics, liability, and the device line](chapters/core-ethics-regulation.qmd):
-  who answers for the note.
+- Core: [Ethics: what you owe when you sign the note](chapters/core-ethics-regulation.qmd).
 - Menu: [Will AI take your job?](chapters/enrichment-workforce-economics.qmd),
   [What AI costs the planet](chapters/enrichment-environment.qmd).
 
@@ -109,7 +108,7 @@ professional identity, the closing question.
 | [Talking to patients about AI](chapters/core-patient-communication.qmd) (core) | | ○ | | ● | ○ | ● | | | | ○ |
 | [Agentic coding](chapters/enrichment-agentic-coding.qmd) | ○ | ● | | ● | ● | | ○ | | | ○ |
 | **Week 4** | | | | | | | | | | |
-| [Ethics, liability, and the device line](chapters/core-ethics-regulation.qmd) (core) | | ○ | ○ | ● | ○ | ○ | ○ | | ○ | ● |
+| [Ethics: what you owe when you sign the note](chapters/core-ethics-regulation.qmd) (core) | | ○ | ○ | ● | ○ | ○ | ○ | | ○ | ● |
 | [Will AI take your job?](chapters/enrichment-workforce-economics.qmd) | | ● | ○ | ○ | | | ● | | ○ | ● |
 | [What AI costs the planet](chapters/enrichment-environment.qmd) | | ● | ● | | | | ● | | ○ | ○ |
 | **Course pages and appendices** | | | | | | | | | | |

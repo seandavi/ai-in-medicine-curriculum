@@ -25,7 +25,7 @@ the course survivable when a third of the class misses week two.
 | `core-appraisal` | [Critical appraisal](../chapters/core-appraisal.qmd) | 90 | AIM-2, AIM-1, AIM-4, AIM-9 |
 | `core-bias-equity` | [Bias and equity](../chapters/core-bias-equity.qmd) | 90 | AIM-3 |
 | `core-patient-communication` | [Talking to patients about AI](../chapters/core-patient-communication.qmd) | 90 | AIM-6, AIM-4 |
-| `core-ethics-regulation` | [Ethics, liability, and the device line](../chapters/core-ethics-regulation.qmd) | 75 | AIM-4, AIM-X |
+| `core-ethics-regulation` | [Ethics: what you owe when you sign the note](../chapters/core-ethics-regulation.qmd) | 75 | AIM-4, AIM-X |
 
 : Core modules. Minutes are the live session, not the chapter. {#tbl-core}
 
@@ -56,7 +56,7 @@ it by a student who missed it. Students spend most of their own time on
 | 1 | Centaur or cyborg | Week 1 is taught live; no vote | How these systems work (covered by the live talks) |
 | 2 | Prompting lab | Scholarly writing, or answers grounded in real sources | Critical appraisal; Bias and equity; Grounding AI in real sources |
 | 3 | Talking to patients about AI | Bias and equity, or building a small tool live | Agentic coding; the scribe open lab |
-| 4 | Ethics, liability, and the device line | Where this is going (jobs, the planet) and what you will keep; no vote | Will AI take your job?; What AI costs the planet |
+| 4 | Ethics: what you owe when you sign the note | Where this is going (jobs, the planet) and what you will keep; no vote | Will AI take your job?; What AI costs the planet |
 
 : Core chapter, Wednesday talk, and menu by week. Wednesday topics are a starting plan for fall 2026. {#tbl-default}
 
