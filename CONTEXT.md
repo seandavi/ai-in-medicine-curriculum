@@ -94,7 +94,12 @@ framework core and move hands-on work toward success first.
   the journal assignment; calendar events for every live session; signup
   sheets for week 1 office hours (three 15-minute slots after Thursday's
   session) and for the Friday small-group slot (10 a.m., 11 a.m., 1 p.m.,
-  2 p.m., up to 15 each, chosen once on October 16); plain events for later Fridays. Last year's
+  2 p.m., up to 15 each, chosen once on October 16); plain events for later Fridays.
+  Guest talks (from the lecturer signup sheet, 2026-10-09), on the Canvas
+  calendar and in the week 3 and 4 modules: Matt DeCamp, ethics (Tue Oct 27,
+  1 p.m.); Mike Rosenberg, cardiology (Thu Oct 29, 1 p.m.); Elizabeth Kudron,
+  pediatrics (Mon Nov 2, 11 a.m.); Sorabh Singhal, psychiatry (Mon Nov 2,
+  1 p.m.). All agreed to recording. None yet in week 2. Last year's
   assignments are unpublished, not deleted. The course is still unpublished. A custom submission and chatbot app is a
   post-course project; start CU's data-use review early.
 - **Chat channel:** undecided. Microsoft Teams preferred over Discord (no new
