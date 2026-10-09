@@ -43,7 +43,7 @@ enough: [the patient information page](../course/patient-information.qmd).
 | [A study guide that cites its sources](#a-study-guide-that-cites-its-sources) | built a notebook from papers you chose and caught what it adds | 45 min | Ready, in [the grounding chapter](../chapters/enrichment-rag-notebooklm.qmd) |
 | [Build a calculator, then break it](#build-a-calculator-then-break-it) | built a working clinical tool in an hour and found what is wrong with it | 60 min | Ready, in [the agentic coding chapter](../chapters/enrichment-agentic-coding.qmd) |
 | [Draw me a doctor](#draw-me-a-doctor) | counted who an image model pictures when you ask for a doctor, a nurse, a surgeon | 30 min | Idea |
-| [The patient who talks back](#the-patient-who-talks-back) | practised a hard conversation with a chatbot playing the patient | 45 min | Idea |
+| [The patient who talks back](#the-patient-who-talks-back) | practised a hard conversation with a chatbot playing the patient | 45 min | Ready, in [talking to patients](../chapters/core-patient-communication.qmd#part-b-practice-patient) |
 | [Deep research, checked](#deep-research-checked) | checked every citation in a chatbot's "deep research" report | 45 min | Idea |
 | [Teach a machine in ten minutes](#teach-a-machine-in-ten-minutes) | trained an image classifier in your browser and watched it fail on new pictures | 30 min | Idea |
 | [Write your own board question](#write-your-own-board-question) | written exam-style questions with a chatbot and checked the answer and every wrong option | 45 min | Idea |
@@ -213,11 +213,12 @@ equity](../chapters/core-bias-equity.qmd).
 
 ## The patient who talks back
 
-*Idea.* Give a chatbot a made-up patient and a hard conversation: a new
-cancer diagnosis, a medication error, a patient who wants antibiotics for a
-cold. Have it play the patient while you play the doctor, then ask it to play
-an observer and critique you. Connects to [talking to
-patients](../chapters/core-patient-communication.qmd). [NYU Grossman's Prompt-a-Thon library](https://promptathon.iime.cloud/)
+*Ready.* The full lab is [Part B of talking to
+patients](../chapters/core-patient-communication.qmd#part-b-practice-patient):
+a chatbot plays a patient who brings a chatbot's printout, you play the doctor,
+and then it scores you as an observer. In the open lab, run that, then change
+the patient to another hard conversation: a new cancer diagnosis, a medication
+error, a patient who wants antibiotics for a cold. [NYU Grossman's Prompt-a-Thon library](https://promptathon.iime.cloud/)
 has virtual-patient prompts to start from; copy them into your university
 ChatGPT Edu or Copilot.
 
