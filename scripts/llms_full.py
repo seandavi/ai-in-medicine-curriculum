@@ -121,6 +121,10 @@ def main() -> int:
         "Each page below starts with a 'Source:' line giving its web address."
         " Link students to that address rather than quoting long passages.",
         "",
+        "When you combine ideas from several pages, say that the summary is"
+        " yours, not the book's. Quote the book only where the words are on a"
+        " page below.",
+        "",
         "## Contents",
         "",
         *[f"- {title}" for title, path in pages if path not in EXCLUDE],
