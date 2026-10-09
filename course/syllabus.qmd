@@ -40,7 +40,7 @@ what is expected, plus anything optional you choose.
 | Through the week | Guest talks from clinicians and researchers using AI in their work | Attend or watch one | About 1 hour |
 | Thursday, 11 to 11:45 a.m., live | **Office hours**, drop in: bring what you are stuck on. Not recorded | Optional | 45 minutes |
 | Thursday night | [Learning journal](learning-journal.qmd) entry | Yes | 30 minutes |
-| Friday, 60 minutes | [Small group](friday-groups.qmd), in one of four time slots you choose: what AI taught you, and practising conversations about AI out loud | Yes, one slot | 1 hour |
+| Friday, 60 minutes, live | [Small group](friday-groups.qmd), in one of four time slots you choose: what AI taught you, and practising conversations about AI out loud. Not recorded | Yes, one slot | 1 hour |
 | Any time | Chapters from the **menu**, and the [open labs](../appendix/open-labs.qmd) | Optional | As you like |
 
 : Your week, weeks 2 to 4. All times are Mountain time (Denver). The guest schedule is posted in Canvas. {#tbl-week}
@@ -48,8 +48,8 @@ what is expected, plus anything optional you choose.
 ## Week 1: live, October 12 to 16
 
 Week 1 is different from the rest. The course director teaches live every
-weekday morning, Monday to Thursday, at 10 a.m. Mountain time (Denver). The
-small groups meet for the first time on Friday. Canvas has the current
+weekday morning, Monday to Thursday, at 10 a.m. Mountain time (Denver). These
+sessions are recorded. The small groups meet for the first time on Friday. Canvas has the current
 schedule if anything changes.
 
 | Day | Live session |

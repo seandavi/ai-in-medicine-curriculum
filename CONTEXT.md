@@ -64,7 +64,10 @@ framework core and move hands-on work toward success first.
     breakout rooms is undecided; the book does not mention them.
   - Guest talks: attend or watch one a week (was two, cut so the week still
     adds up; see the syllabus table).
-  - Recordings count as attending.
+  - Recording (decided 2026-10-09): week 1 lectures, Monday and Wednesday
+    talks, guest talks, and Christina Olson's sessions are recorded; office
+    hours and Friday small groups are not. Recordings are for catching up;
+    they no longer count as attending.
   Starting topic grid (the director's starting point, subject to change):
   week 2, Monday "getting good answers" (prompting lab), Wednesday October 21
   "Professional work with AI: writing and beyond", given by Christina Olson
@@ -106,7 +109,7 @@ framework core and move hands-on work toward success first.
   10 a.m., blocked to noon (about 90 minutes, breakout rooms; title to come).
   Home page rewritten 2026-10-09 (Canvas keeps the old version in the page's
   history): points to the book and the modules, states the schedule, the
-  attendance rule (recordings count; Friday group required), drop-in office
+  attendance rule (expected, flexible; register absences with the SOM), drop-in office
   hours, and the made-up-cases rule; links this year's three standing
   discussions (created the same day) instead of last year's course; the
   syllabus link was the book. School resource sections unchanged.

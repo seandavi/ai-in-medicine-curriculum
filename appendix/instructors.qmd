@@ -112,9 +112,9 @@ Week 1 is taught live on its own schedule (see the
 | On their own | The core chapter, after Monday's talk or instead of it (about 1 hour), and [Learn it with AI](../course/learn-with-ai.qmd) (2 to 4 hours). Menu chapters and [open labs](open-labs.qmd) are optional. |
 | Through the week | Guest talks; students attend or watch one. |
 | Thursday, 45 min, live | Office hours: students bring what they are stuck on. Not recorded. [Learning journal](../course/learning-journal.qmd) entry due that night. |
-| Friday, 60 min | Small group: what AI taught you, one thing you caught, then the [scenario cards](../course/friday-groups.qmd) practised out loud. |
+| Friday, 60 min | Small group: what AI taught you, one thing you caught, then the [scenario cards](../course/friday-groups.qmd) practised out loud. Not recorded. |
 
-: A week in the course, weeks 2 to 4. Recordings count as attending. {#tbl-week-run}
+: A week in the course, weeks 2 to 4. Talks are recorded; office hours and Friday groups are not. {#tbl-week-run}
 
 The instructor's cost is real: about 6.75 live hours a week (Monday, Wednesday,
 Thursday, and four Friday slots) plus two new talks to write. An instructor
