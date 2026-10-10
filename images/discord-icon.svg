@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="38%" cy="32%" r="80%">
+      <stop offset="0" stop-color="#1f8a8f"/>
+      <stop offset="0.55" stop-color="#0f5c63"/>
+      <stop offset="1" stop-color="#083a3f"/>
+    </radialGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <!-- faint ring to sit inside Discord's circular crop -->
+  <circle cx="256" cy="256" r="222" fill="none" stroke="#ffffff" stroke-opacity="0.10" stroke-width="3"/>
+  <!-- network edges (right half) -->
+  <g stroke="#e3b45c" stroke-opacity="0.75" stroke-width="5" stroke-linecap="round">
+    <line x1="300" y1="256" x2="360" y2="186"/>
+    <line x1="300" y1="256" x2="360" y2="256"/>
+    <line x1="300" y1="256" x2="360" y2="326"/>
+    <line x1="360" y1="186" x2="420" y2="221"/>
+    <line x1="360" y1="186" x2="420" y2="291"/>
+    <line x1="360" y1="256" x2="420" y2="221"/>
+    <line x1="360" y1="256" x2="420" y2="291"/>
+    <line x1="360" y1="326" x2="420" y2="221"/>
+    <line x1="360" y1="326" x2="420" y2="291"/>
+  </g>
+  <!-- heartbeat trace (left half) running into the first node -->
+  <polyline filter="url(#glow)" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"
+    points="70,256 130,256 152,226 172,256 192,256 214,140 244,360 266,256 300,256"/>
+  <!-- nodes -->
+  <g fill="#e3b45c" stroke="#083a3f" stroke-width="5">
+    <circle cx="300" cy="256" r="17" fill="#ffffff"/>
+    <circle cx="360" cy="186" r="15"/>
+    <circle cx="360" cy="256" r="15"/>
+    <circle cx="360" cy="326" r="15"/>
+    <circle cx="420" cy="221" r="15"/>
+    <circle cx="420" cy="291" r="15"/>
+  </g>
+</svg>

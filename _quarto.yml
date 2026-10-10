@@ -28,6 +28,8 @@ book:
   subtitle: "A four-week elective for fourth-year medical students"
   author: "Sean Davis"
   date: today
+  # The course icon, shared with the course Discord server.
+  favicon: images/discord-icon.svg
   chapters:
     - index.qmd
     - part: "Running the course"
