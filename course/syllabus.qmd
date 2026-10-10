@@ -23,7 +23,8 @@ information is on [its own page](patient-information.qmd).
 ## Your week
 
 There are more sessions on the calendar than anyone needs to attend: talks
-from the course director on Monday and Wednesday, guest talks, and workshops.
+from the course director on Monday and Wednesday, guest talks, workshops, and
+a hands-on "Watch and do" session on Wednesday afternoons.
 **Aim for about 3 hours a week of sessions, live or recorded, chosen by your
 interest.** Come to more if you like. The talks are recorded. The week's core
 chapter goes with Monday's talk: read it after the talk, or instead of it.
@@ -37,6 +38,7 @@ about 3 hours of sessions you choose, plus the rest of the week.
 | Wednesday, 10 a.m., 60 minutes, live and recorded | **A talk on a second topic**: a menu chapter, or something beyond the book. Some weeks a guest gives it | Your choice | 1 hour |
 | After Monday's talk | The week's **core chapter** | Yes | About 1 hour |
 | On your own | **[Learn it with AI](learn-with-ai.qmd)**: use AI to teach yourself something you care about. This is the main hands-on work of the course | Yes | 2 to 4 hours |
+| Wednesday, 2 to 3:30 p.m., live and recorded | **Watch and do: try it live, together.** Hands-on, content announced in Canvas | Optional | 90 minutes |
 | Through the week | Guest talks and workshops from clinicians and researchers using AI in their work | Your choice | 1 to 2 hours |
 | Thursday, 11 to 11:45 a.m., live | **Office hours**, drop in: bring what you are stuck on. Not recorded | Optional | 45 minutes |
 | Thursday night | [Learning journal](learning-journal.qmd) entry | Yes | 30 minutes |
