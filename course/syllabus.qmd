@@ -59,7 +59,7 @@ schedule if anything changes.
 | Monday, October 12, 10 a.m. | Welcome: how the course works, and how adults learn best |
 | Tuesday, October 13, 10 a.m. | A short history of AI |
 | Wednesday, October 14, 10 a.m. | What AI is: from AI to machine learning to deep learning to large language models, with time to try it together |
-| Thursday, October 15, 10 a.m. | **Getting set up, then hands-on.** First, everyone signs in to the three tools you can use as a student: ChatGPT Edu, the School of Medicine's Microsoft Copilot (through your school email account), and OpenEvidence. Set-up instructions will be posted in Canvas. Then **centaur or cyborg, live**: try things together. Goes with the week's core chapter, [Centaur or cyborg](../chapters/core-centaur-cyborg.qmd). |
+| Thursday, October 15, 10 a.m. | **Getting set up, then hands-on.** First, everyone signs in to ChatGPT Edu and we check that it works. Set-up instructions will be posted in Canvas. Then **centaur or cyborg, live**: try things together. Goes with the week's core chapter, [Centaur or cyborg](../chapters/core-centaur-cyborg.qmd). |
 | Thursday, October 15, 11 a.m. | Office hours, drop in. Bring what you are stuck on |
 | Friday, October 16 | Small groups, in the time slot you signed up for: introductions, then the first scenario cards |
 

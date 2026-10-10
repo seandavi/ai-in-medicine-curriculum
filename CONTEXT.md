@@ -30,8 +30,9 @@ trying.* Each week has one core chapter plus a menu (week 1 centaur-cyborg; week
 first budget; with two talks a week it is restated as about 8 to 10 hours
 (see the syllabus table). The main hands-on activity is "Learn it with AI" (`course/learn-with-ai.qmd`). The resource log is
 replaced by a learning journal, which keeps one piece of it: three resources
-of the student's own choosing, any topic, across the four weeks (the course
-director, 2026-10-09 meeting; once versus weekly was not stated). Friday groups practise conversations about AI
+a week of the student's own choosing, anything related to AI, one line each,
+meant to be low-key (the course director, 2026-10-09 meeting; three a week
+decided 2026-10-10). Friday groups practise conversations about AI
 from scenario cards (`course/friday-groups.qmd`). The Monday hour includes "How
 I used AI this week" (the director's own work, shown live). Bias is not core
 this offering (Friday card instead). Why: 2025 students were afraid to use
@@ -46,9 +47,11 @@ framework core and move hands-on work toward success first.
   #60, trimmed; keep a few slides on overfitting); Thursday a hands-on session,
   "centaur or cyborg, live" (everyone in ChatGPT Edu, trying things together;
   left open-ended on purpose; also catches account problems early), then
-  office hours. Thursday opens with onboarding to ChatGPT Edu, the SOM
-  Copilot, and OpenEvidence (asked for by Christina Olson and Matt Zuckerman
-  in the 2026-10-09 meeting; set-up materials still to be written).
+  office hours. Thursday opens with onboarding to ChatGPT Edu only
+  (Christina Olson and Matt Zuckerman also suggested the SOM Copilot and
+  OpenEvidence in the 2026-10-09 meeting; the course director dropped those on
+  2026-10-10 to keep the session on ChatGPT Edu; set-up materials still to be
+  written).
   Friday small groups in the signed-up slots. Students read `core-foundations`
   and `core-centaur-cyborg`. Weeks 2 to 4 Monday and Wednesday talks are also
   at 10 a.m.
