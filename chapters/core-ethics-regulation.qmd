@@ -232,6 +232,13 @@ that requirement is what the courts are being asked. This chapter's view: a
 conversation with the patient does more than the sign, and [the patient communication
 chapter](core-patient-communication.qmd) covers how to have it.
 
+Your health system also has its own rules on AI use, for example whether a
+patient can refuse an AI tool or a recording. The health system sets these
+rules, not your medical school. In Colorado, for example, Children's Colorado
+and UCHealth have some different rules, so check each one when you move
+between them. The rules also change. Know the current rules where you work,
+and follow them.
+
 **The contract.** HIPAA, the federal health privacy law, lets a **covered
 entity** such as your hospital share protected health information with a
 vendor only under a **business associate agreement** (BAA). That contract
