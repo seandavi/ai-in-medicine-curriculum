@@ -1,17 +1,18 @@
 # Friday small groups {.unnumbered}
 
-[One hour every Friday, required, in one of three time slots · practise talking about AI out loud]{.subtitle .lead}
+[One hour every Friday, best effort, in one of four time slots · practise talking about AI out loud]{.subtitle .lead}
 
 Being able to talk about AI with an attending, a colleague, a patient, or an
 interviewer is a skill, and it gets better with practice, not reading. Friday
-is where you practise.
+is where you practise. The groups are not recorded, so you can try things out
+loud and get them wrong.
 
 ## How the hour runs
 
 | Minutes | What |
 |---|---|
 | 0 to 15 | Round the group: one thing AI helped you learn this week, and one thing you caught it getting wrong. From your [learning journal](learning-journal.qmd). |
-| 15 to 45 | Breakout rooms of four or five, the same people each week. Two scenario cards, below. |
+| 15 to 45 | Two scenario cards, below. |
 | 45 to 60 | Back together: what was hard to say, and what worked. |
 
 : The Friday hour. {#tbl-friday}

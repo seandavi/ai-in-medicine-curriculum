@@ -51,20 +51,20 @@ core chapter is the companion to Monday's talk, read after it, or instead of
 it by a student who missed it. Students spend most of their own time on
 [Learn it with AI](../course/learn-with-ai.qmd).
 
-| Week | Core (Monday talk) | Wednesday talk (class vote) | Menu |
+| Week | Core (Monday talk) | Wednesday talk | Menu |
 |---|---|---|---|
-| 1 | Centaur or cyborg | Week 1 is taught live; no vote | How these systems work (covered by the live talks) |
-| 2 | Prompting lab | Scholarly writing, or answers grounded in real sources | Critical appraisal; Bias and equity; Grounding AI in real sources |
-| 3 | Talking to patients about AI | Bias and equity, or building a small tool live | Agentic coding; the scribe open lab |
-| 4 | Ethics, liability, and the device line | Where this is going (jobs, the planet) and what you will keep; no vote | Will AI take your job?; What AI costs the planet |
+| 1 | Centaur or cyborg | Week 1 is taught live | How these systems work (covered by the live talks) |
+| 2 | Prompting lab | Professional work with AI: writing and beyond (a co-director) | Critical appraisal; Bias and equity; Grounding AI in real sources |
+| 3 | Talking to patients about AI | To be announced: bias and equity, or building a small tool live | Agentic coding; the scribe open lab |
+| 4 | Ethics, liability, and the device line | Where this is going (jobs, the planet) and what you will keep | Will AI take your job?; What AI costs the planet |
 
 : Core chapter, Wednesday talk, and menu by week. Wednesday topics are a starting plan for fall 2026. {#tbl-default}
 
 Coverage check: the core chapters make AIM-2, AIM-4, AIM-5, and AIM-6 main
 subjects. AIM-1 is covered by the week 1 live talks. **AIM-3 (bias) is not in a
 core chapter**; it is covered by the week 2 Friday scenario card on bias, by
-the bias chapter on the menu, and by the week 3 Wednesday talk if the class
-votes for it. This is a deliberate trade, recorded in
+the bias chapter on the menu, and by the week 3 Wednesday talk if it is
+chosen. This is a deliberate trade, recorded in
 `curriculum/design-constraints.md`.
 
 ### Variants
@@ -108,16 +108,16 @@ Week 1 is taught live on its own schedule (see the
 | When | What |
 |---|---|
 | Monday, 60 min, live and recorded | Opens with 20 to 30 minutes of **"How I used AI this week"**: the instructor's own real, unpolished tasks, talked through on screen, including one that went wrong and how it was caught. End that part with a dare: try one of these this week. No patient data or confidential review material on screen. Then a talk on the week's core chapter topic, with live demonstrations. |
-| Wednesday, 60 min, live and recorded | A talk on a menu chapter or a topic beyond the book. The class votes the week before from a short list. |
+| Wednesday, 60 min, live and recorded | A talk on a menu chapter or a topic beyond the book, sometimes by a guest. |
 | On their own | The core chapter, after Monday's talk or instead of it (about 1 hour), and [Learn it with AI](../course/learn-with-ai.qmd) (2 to 4 hours). Menu chapters and [open labs](open-labs.qmd) are optional. |
 | Through the week | Guest talks; students attend or watch one. |
 | Thursday, 45 min, live | Office hours: students bring what they are stuck on. Not recorded. [Learning journal](../course/learning-journal.qmd) entry due that night. |
-| Friday, 60 min | Small group: what AI taught you, one thing you caught, then the [scenario cards](../course/friday-groups.qmd) practised out loud. |
+| Friday, 60 min | Small group: what AI taught you, one thing you caught, then the [scenario cards](../course/friday-groups.qmd) practised out loud. Not recorded. |
 
-: A week in the course, weeks 2 to 4. Recordings count as attending. {#tbl-week-run}
+: A week in the course, weeks 2 to 4. Talks are recorded; office hours and Friday groups are not. {#tbl-week-run}
 
-The instructor's cost is real: about 5.75 live hours a week (Monday, Wednesday,
-Thursday, and three Friday slots) plus two new talks to write. An instructor
+The instructor's cost is real: about 6.75 live hours a week (Monday, Wednesday,
+Thursday, and four Friday slots) plus two new talks to write. An instructor
 with less time can run the Wednesday talk as an open lab or hand it to a
 guest.
 

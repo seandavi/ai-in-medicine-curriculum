@@ -16,3 +16,7 @@ references.json
 # wrangler
 node_modules/
 .wrangler/
+
+# Secrets
+.env
+.env.*
