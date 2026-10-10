@@ -29,7 +29,9 @@ trying.* Each week has one core chapter plus a menu (week 1 centaur-cyborg; week
 5 to 10 hours a week of AI-related learning, 2 to 4 with the book" was the
 first budget; with two talks a week it is restated as about 8 to 10 hours
 (see the syllabus table). The main hands-on activity is "Learn it with AI" (`course/learn-with-ai.qmd`). The resource log is
-replaced by a learning journal. Friday groups practise conversations about AI
+replaced by a learning journal, which keeps one piece of it: three resources
+of the student's own choosing, any topic, across the four weeks (the course
+director, 2026-10-09 meeting; once versus weekly was not stated). Friday groups practise conversations about AI
 from scenario cards (`course/friday-groups.qmd`). The Monday hour includes "How
 I used AI this week" (the director's own work, shown live). Bias is not core
 this offering (Friday card instead). Why: 2025 students were afraid to use

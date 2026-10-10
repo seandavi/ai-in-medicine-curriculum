@@ -29,9 +29,13 @@ Answer four questions. A few sentences each is enough.
    whether the AI had it right.
 ```
 
-**Optional: share a resource.** If you found a paper, video, podcast, or tool
-worth a classmate's time, add one or two, with a sentence on why. The best ones
-go into the [starter resources](../appendix/resources.qmd) for future students.
+**Three resources of your own choosing.** Over the four weeks, find three
+resources about AI and spend real time with each: a paper, a video, a podcast,
+a news piece, a tool, anything. The topic is up to you, medical or not. For
+example, what do data centers really cost the places where they are built,
+beyond the headlines? When you finish one, add it to that week's entry with
+one or two sentences on what you took from it. The best ones go into the
+[starter resources](../appendix/resources.qmd) for future students.
 
 ## Week 4: what you will keep
 
