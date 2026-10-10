@@ -60,3 +60,19 @@ You may use AI to help you think, organise, or tidy your writing. The
 experiences and the judgments must be yours. One sentence at the end saying how
 you used AI on the entry, if you did, is enough. That is the same disclosure
 journals and residency programs now expect.
+
+**Optional: keep an AI-use ledger.** When you use AI to make something, such
+as slides for your week 4 talk, keep a ledger as you go. A ledger is a running
+list, one line per step, of what you did and what the AI did. Any chatbot
+works, including a free one, and nothing in it should be about a real patient.
+At the start of the chat, type:
+
+```
+Keep a ledger of our work in this chat: one line per step,
+saying what I did and what you did.
+```
+
+At the end, ask it to turn the ledger into a short statement of how the work
+was made. Read the statement and correct it, because the chatbot can get its
+own part wrong. The result says much more than "AI was used to draft and
+edit." This book keeps one: see the [AI ledger](../appendix/ai-ledger.qmd).
