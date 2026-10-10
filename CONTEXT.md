@@ -5,7 +5,7 @@ institutional mechanics so it can be reassembled for any cohort. This file holds
 part that is specific to the CU Anschutz offering, because it exists nowhere else in
 the repo and is the first thing you will want when you come back to this cold.
 
-**Last updated: 2026-10-08.** Everything below is operational state and goes stale
+**Last updated: 2026-10-10.** Everything below is operational state and goes stale
 fast. Check it before acting on it.
 
 ## The offering
@@ -44,7 +44,9 @@ framework core and move hands-on work toward success first.
   #60, trimmed; keep a few slides on overfitting); Thursday a hands-on session,
   "centaur or cyborg, live" (everyone in ChatGPT Edu, trying things together;
   left open-ended on purpose; also catches account problems early), then
-  office hours.
+  office hours. Thursday opens with onboarding to ChatGPT Edu, the SOM
+  Copilot, and OpenEvidence (asked for by Christina Olson and Matt Zuckerman
+  in the 2026-10-09 meeting; set-up materials still to be written).
   Friday small groups in the signed-up slots. Students read `core-foundations`
   and `core-centaur-cyborg`. Weeks 2 to 4 Monday and Wednesday talks are also
   at 10 a.m.
@@ -62,6 +64,10 @@ framework core and move hands-on work toward success first.
   - Friday, 60 min: small group, best effort (decided 2026-10-10), one of four slots (10 a.m., 11 a.m., 1 p.m.,
     2 p.m.; up to 15 students each for 49 enrolled; decided 2026-10-09). Whether to use
     breakout rooms is undecided; the book does not mention them.
+    Friday October 30 is "bring your clinical stories" (2026-10-09 meeting):
+    students bring situations where AI helped or hurt and lead the talk;
+    Christina Olson joins two slots, Matt Zuckerman one afternoon slot.
+    Which slots is not yet decided.
   - Guest talks: attend or watch one a week (was two, cut so the week still
     adds up; see the syllabus table).
   - Attendance (decided 2026-10-10): aim for about 3 hours a week of sessions,

@@ -53,7 +53,16 @@ summary into ChatGPT on my phone to clean it up. I took the name out. That's
 fine, right?" See [the patient information
 page](patient-information.qmd).
 
-### Week 3 (October 30)
+### Week 3 (October 30): bring your clinical stories
+
+This week the stories come from you, and you lead the discussion. Bring a
+clinical situation you have seen where AI helped or could help, or where it
+caused harm or could. For example: a family that arrived with a chatbot's care
+plan, or a talk with a patient about AI. Leave out anything that could
+identify the patient (see [the patient information page](patient-information.qmd)).
+Co-director Christina Olson joins two of the four slots, and co-director Matt
+Zuckerman joins one afternoon slot. If the group runs short of stories, use
+the cards below.
 
 **The scribe question.** *Play: a patient.* "Is that phone listening to us? Who
 hears this?" [Talking to patients about
