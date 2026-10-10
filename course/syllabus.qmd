@@ -22,28 +22,28 @@ information is on [its own page](patient-information.qmd).
 
 ## Your week
 
-In weeks 2 to 4, the two talks are the main event. The course director
-teaches the week's topic live on Monday and a second topic on Wednesday, with
-demonstrations on screen. Both are recorded, so you can catch up if you miss
-one. The week's core chapter goes with Monday's talk: read it after
-the talk, or instead of it if you missed the talk.
+There are more sessions on the calendar than anyone needs to attend: talks
+from the course director on Monday and Wednesday, guest talks, and workshops.
+**Aim for about 3 hours a week of sessions, live or recorded, chosen by your
+interest.** Come to more if you like. The talks are recorded. The week's core
+chapter goes with Monday's talk: read it after the talk, or instead of it.
 
-Plan on about 8 to 10 hours a week. The table adds up to 7.5 to 9.5 hours for
-what is expected, plus anything optional you choose.
+Plan on about 8 to 10 hours a week. The table adds up to 7.5 to 9.5 hours:
+about 3 hours of sessions you choose, plus the rest of the week.
 
 | When | What | Expected? | Time |
 |---|---|---|---|
-| Monday, 10 a.m., 60 minutes, live and recorded | **"How I used AI this week"**: the course director's own real tasks, shown on screen. Then **a talk on the week's core topic**, with live demonstrations | Yes | 1 hour |
-| Wednesday, 10 a.m., 60 minutes, live and recorded | **A talk on a second topic**: a menu chapter, or something beyond the book. Some weeks a guest gives it | Yes | 1 hour |
+| Monday, 10 a.m., 60 minutes, live and recorded | **"How I used AI this week"**: the course director's own real tasks, shown on screen. Then **a talk on the week's core topic**, with live demonstrations | Your choice | 1 hour |
+| Wednesday, 10 a.m., 60 minutes, live and recorded | **A talk on a second topic**: a menu chapter, or something beyond the book. Some weeks a guest gives it | Your choice | 1 hour |
 | After Monday's talk | The week's **core chapter** | Yes | About 1 hour |
 | On your own | **[Learn it with AI](learn-with-ai.qmd)**: use AI to teach yourself something you care about. This is the main hands-on work of the course | Yes | 2 to 4 hours |
-| Through the week | Guest talks from clinicians and researchers using AI in their work | Attend or watch one | About 1 hour |
+| Through the week | Guest talks and workshops from clinicians and researchers using AI in their work | Your choice | 1 to 2 hours |
 | Thursday, 11 to 11:45 a.m., live | **Office hours**, drop in: bring what you are stuck on. Not recorded | Optional | 45 minutes |
 | Thursday night | [Learning journal](learning-journal.qmd) entry | Yes | 30 minutes |
-| Friday, 60 minutes, live | [Small group](friday-groups.qmd), in one of four time slots you choose: what AI taught you, and practising conversations about AI out loud. Not recorded | Yes, one slot | 1 hour |
+| Friday, 60 minutes, live | [Small group](friday-groups.qmd), in one of four time slots you choose: what AI taught you, and practising conversations about AI out loud. Not recorded | Best effort, in your slot | 1 hour |
 | Any time | Chapters from the **menu**, and the [open labs](../appendix/open-labs.qmd) | Optional | As you like |
 
-: Your week, weeks 2 to 4. All times are Mountain time (Denver). The guest schedule is posted in Canvas. {#tbl-week}
+: Your week, weeks 2 to 4. "Your choice" rows together: about 3 hours a week. All times are Mountain time (Denver). The guest schedule is posted in Canvas. {#tbl-week}
 
 ## Week 1: live, October 12 to 16
 
@@ -109,14 +109,14 @@ week. The menu is there so you can follow what interests you.
 
 ## Attendance
 
-Attendance at the live sessions and your Friday small group is expected. If
-you will miss a session, register the absence with your school, following its
-process for reporting absences.
+There is more on the calendar than anyone needs. Aim for about 3 hours a week
+of sessions, live or recorded, chosen by your interest. Friday small groups
+are best effort: come when you can, in your signed-up slot. If you will miss
+a session, follow your school's process for registering absences.
 
-This is a busy time of year, with interviews and travel, and the course is
-flexible about it. You are also taking responsibility for your own learning,
-so in rare cases life or another learning opportunity may come first. When
-that happens, the recordings and the chapters let you catch up.
+This is a busy time of year, with interviews and travel. You are taking
+responsibility for your own learning, so choose what serves it. The
+recordings and the chapters let you catch up.
 
 ## Due dates
 

@@ -59,11 +59,16 @@ framework core and move hands-on work toward success first.
   - Thursday, 11 to 11:45 a.m., live, not recorded: office hours, drop in
     (no signup; decided 2026-10-09). Learning journal due
     Thursday night.
-  - Friday, 60 min: small group, required, one of four slots (10 a.m., 11 a.m., 1 p.m.,
+  - Friday, 60 min: small group, best effort (decided 2026-10-10), one of four slots (10 a.m., 11 a.m., 1 p.m.,
     2 p.m.; up to 15 students each for 49 enrolled; decided 2026-10-09). Whether to use
     breakout rooms is undecided; the book does not mention them.
   - Guest talks: attend or watch one a week (was two, cut so the week still
     adds up; see the syllabus table).
+  - Attendance (decided 2026-10-10): aim for about 3 hours a week of sessions,
+    live or recorded, chosen by interest, in every week including week 1; Friday
+    groups best effort and not counted; register absences per SOM protocols.
+    Matt agreed in the 2026-10-09 meeting that 6 to 7 lecture hours a week is too
+    much; neither co-director commented on the 3-hour figure.
   - Recording (decided 2026-10-09): week 1 lectures, Monday and Wednesday
     talks, guest talks, and Christina Olson's sessions are recorded; office
     hours and Friday small groups are not. Recordings are for catching up;
