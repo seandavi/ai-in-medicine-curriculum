@@ -71,7 +71,7 @@ framework core and move hands-on work toward success first.
     much; neither co-director commented on the 3-hour figure.
   - Watch and do (decided 2026-10-10): optional hands-on session, Wednesdays
     2 to 3:30 p.m., October 21 and 28 and November 4; content to be announced;
-    marked recorded; who runs it not yet decided.
+    marked recorded; Sean is responsible for it each week, whoever runs it.
   - Recording (decided 2026-10-09): week 1 lectures, Monday and Wednesday
     talks, guest talks, and Christina Olson's sessions are recorded; office
     hours and Friday small groups are not. Recordings are for catching up;
