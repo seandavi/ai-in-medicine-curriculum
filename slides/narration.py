@@ -50,6 +50,8 @@ def slides(qmd: str):
                 yield title, notes
             text = heading.group(2)
             menu = re.search(r'data-menu-title="([^"]+)"', text)
+            # Drop the slide's attributes and a [Part 1]{.year} kicker.
+            text = re.sub(r"\[[^\]]*\]\{\.year\}\s*", "", text)
             title = re.sub(r"\s*\{.*\}\s*$", "", text).strip() or (menu.group(1) if menu else "(untitled)")
             notes = []
     if title is not None:
