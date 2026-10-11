@@ -1,7 +1,7 @@
 ---
 title: "How these systems work"
 subtitle: "From the eGFR on a chemistry panel to the next word"
-author: "AI in Medicine · Week 1 · AIM-1 and AIM-2 · 75 minutes live, about 95 minutes on your own"
+author: "AI in Medicine · Week 1 · AIM-1 and AIM-2 · 60 minutes live, about 70 minutes on your own"
 footer: "[The chapter for this session](../chapters/core-foundations.html) · AI in Medicine"
 ---
 
@@ -14,13 +14,13 @@ footer: "[The chapter for this session](../chapters/core-foundations.html) · AI
 Rule 2 follows from how these systems are built, and today you will see why. Rule 1 follows from who receives what you type.
 
 ::: notes
-Welcome. This session takes about seventy-five minutes live, or about ninety-five on your own with the pauses. You will do two short exercises in a browser, and nothing needs installing.
+Welcome. This session takes about sixty minutes live, or about seventy on your own with the pauses. You will try several things in a browser as we go, and nothing needs installing.
 
 Three rules apply in every session of this course. No patient information goes into any chatbot, including the one your school gives you, unless your hospital's privacy office has approved that tool in writing. A claim you have not checked is not a fact yet. And you sign the note, whatever helped you write it.
 
 The second rule follows from how these systems are built, and by the end of today you should be able to say why in one sentence. The first rule follows from something simpler: whoever runs the tool receives what you type.
 
-LIVE: Run sheet, with minutes per block. A week before: tell students to set up a chatbot account (slide 3). Before class: create the slide 6 question as an anonymous Zoom poll, and make the class's shared page (a slide or document anyone with the link can edit) with two headings per group: "our three sentences" and "our checked error, with its one-sentence explanation". If you have none, groups paste into the Zoom chat. 0 to 8 (8 min): slides 1 to 8, with the poll. 8 to 22 (14 min): slides 9 to 19; keep slide 17 to two minutes. 22 to 42 (20 min): breakout 1. Before opening rooms, paste into the chat the three links on slide 18, the three questions and the "You have it if" line on slide 20, and the shared-page link. When rooms close, show slide 20 for one minute. 42 to 54 (12 min): slides 21 to 37; skip 26, 28 and 34; give slide 29 one sentence; demonstrate the tokenizer, the sampler and the window sliders yourself rather than waiting for everyone, about 45 seconds each. 54 to 68 (14 min): breakout 2; paste prompts A and B, the template on slide 42, and the shared-page link into the chat first. 68 to 75 (7 min): slides 44 to 47; two groups report, ninety seconds each; read slide 46 in one minute. Slides 43 and 48 to 50 are for students afterwards.
+LIVE: Run sheet, with minutes per block, for about 57 minutes of talk and 3 for questions. Before class: create the slide 7 question as an anonymous Zoom poll. 0 to 5 (5 min): slides 1 to 4. 5 to 14 (9 min): slides 5 to 10, with the poll on slide 7; on slide 10, move the two sliders yourself for about two minutes, then press "Show the best fit". 14 to 31 (17 min): slides 11 to 23; slide 17 ninety seconds; slide 19 two minutes; slide 20 one minute; slide 21 fifteen seconds, pointing to it for after class; slide 22 one minute, as a callback to Tuesday's talk. 31 to 48 (17 min): slides 24 to 36; skip 27 and 29; give slide 30 one sentence; demonstrate the tokenizer, the sampler and the window sliders yourself rather than waiting for everyone, about 45 seconds each. 48 to 57 (9 min): slides 37 to 40; read slide 39 in one minute; end on the Thursday line on slide 40. 57 to 60: questions. Slides 41 to 43 are for students afterwards.
 
 LIVE: Turn on Zoom live captions and paste the deck link into the chat at the start. Paragraphs in these notes that start with PAUSE are for the recorded version; skip them live. ChatGPT Edu and Microsoft Copilot are this course's institutional tools; swap in your school's. Click outside a slider or text box before using the arrow keys.
 :::
@@ -29,28 +29,29 @@ LIVE: Turn on Zoom live captions and paste the deck link into the chat at the st
 
 By the end of this session you can:
 
-1. Say what the eGFR was **learned from**, and name its inputs, its output, and the people it was fit to.
-2. Sort any model with **two questions**.
-3. Explain why a model's score on cases it **has already seen** tells you nothing.
-4. Say in one sentence why a chatbot can give you a **citation that does not exist**.
-5. Name two limits of the **context window**, and what each changes about how you type.
+1. Say how **AI, machine learning, deep learning, and generative AI** fit inside each other.
+2. Say what the eGFR was **learned from**: its inputs, its output, the people it was fit to, and what **fitting** it meant.
+3. Sort any model with **two questions**.
+4. Explain why a model's score on cases it **has already seen** tells you nothing, and what the **three sets** are for.
+5. Say in one sentence why a chatbot can give you a **citation that does not exist**.
+6. Name two limits of the **context window**, and what each changes about how you type.
 
-| Talk | Do | Talk | Do | Close |
+| Start | The eGFR, and how models learn | From tables to words | Back to the clinic | Questions |
 |---|---|---|---|---|
-| 22 min | 20 min, in a browser | 12 min | 14 min, with a chatbot | 7 min |
+| 5 min | 26 min | 17 min | 9 min | 3 min |
 
-**You need:** a browser, and for the last exercise (from about minute 54) a chatbot account set up before class. Use your school's assistant (in this course, ChatGPT Edu or Microsoft Copilot). If your school gives you none, use a free chatbot web page that does not ask for your phone number. If a tool asks for your phone number, use a different tool.
+**You need:** a browser. Nothing to install, and no account. You will try things on the slides as we go.
 
 [Click outside a slider or answer box before using the arrow keys. The narration is also available [as text](core-foundations-narration.txt).]{.src}
 
 ::: notes
-Here is what you will be able to do by the end. Say what the eGFR was learned from, and name its inputs, its output, and the people it was fit to. Sort any model with two questions. Explain why a model's score on cases it has already seen tells you nothing. Say in one sentence why a chatbot can give you a citation that does not exist. And name two limits of the context window, and what each one changes about how you type.
+Here is what you will be able to do by the end. Say how AI, machine learning, deep learning, and generative AI fit inside each other. Say what the eGFR was learned from: its inputs, its output, the people it was fit to, and what fitting it meant. Sort any model with two questions. Explain why a model's score on cases it has already seen tells you nothing, and what the three sets are for. Say in one sentence why a chatbot can give you a citation that does not exist. And name two limits of the context window, and what each one changes about how you type.
 
-The session alternates. A short talk, then something you do in a browser, then another talk, then an exercise with a chatbot, then a close.
+The session is a talk in three parts, with short things to try in your browser as we go. First the eGFR, and how any model learns from data. Then the chatbot, which is the same idea with words. Then back to the clinic.
 
-For the last exercise you need a chatbot account, set up before the session. Use your school's assistant. If your school gives you none, use a free chatbot web page that does not ask for your phone number. If a tool asks for your phone number, use a different tool.
+You need only a browser. Nothing needs installing, and you do not need an account.
 
-If you only want what to do on the wards, the practical slides are 21, 40 to 42, 45 and 46.
+If you only want what to do on the wards, the practical slides are 22, 38 and 39.
 :::
 
 ## Four words, each inside the one before
@@ -1091,17 +1092,24 @@ If you tell a co-intern one sentence, make it this one. It sounds just as sure w
 Write it down before you close this deck. Then one more: the next time a chatbot gives you a citation, **what will you do in the next two minutes?** For example: open PubMed and search the first author and year.
 :::
 
+::: fragment
+**Thursday:** we open ChatGPT Edu together and use it to set up your own learning goals and journal.
+:::
+
 ::: notes
 Every session ends on the same question. What does this change about how you will practice? Write your answer down before you close this deck. It is not optional, and one word is not an answer.
 
 PAUSE: 2 min. Pause here and write it.
 
 Then one more. The next time a chatbot gives you a citation with a first author, a journal, and a year, what will you do in the next two minutes because of it? For example: open PubMed and search for the first author and the year.
+
+Thursday: we open ChatGPT Edu together and use it to set up your own learning goals and journal.
 :::
 
 ## Summary {.smaller}
 
-- The eGFR is a **model learned from data**: creatinine, age, and sex in; a stand-in for measured GFR out; 8,254 adults as the population it was fit to.
+- **AI** contains **machine learning**, which contains **deep learning**, which contains **generative AI**.
+- The eGFR is a **model learned from data**: creatinine, age, and sex in; a stand-in for measured GFR out; 8,254 adults as the population it was fit to. **Fitting** chose its numbers to make the error as small as possible.
 - **Supervised** has the answer in the training data; **unsupervised** does not. **Classification** gives a category; **regression** gives a number.
 - A score on the training data describes the fit. **Ask for the test set, and who ran it.**
 - A language model **predicts the next token, picks one, and repeats**. People then tune it toward answers they rate well.
@@ -1109,7 +1117,9 @@ Then one more. The next time a chatbot gives you a citation with a first author,
 - The context window is **a fixed size**, and its **middle gets less attention**.
 
 ::: notes
-To sum up. The eGFR is a model learned from data, with predictors, a response, and a population it was fit to. Every learned model has those three parts, and you can ask for them.
+To sum up. AI contains machine learning, which contains deep learning, which contains generative AI.
+
+The eGFR is a model learned from data, with predictors, a response, and a population it was fit to. Fitting chose its numbers to make the error as small as possible. Every learned model has those three parts, and you can ask for them.
 
 Supervised learning has the answer in the training data; unsupervised does not. Classification gives a category; regression gives a number.
 
