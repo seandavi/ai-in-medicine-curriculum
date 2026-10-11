@@ -420,70 +420,6 @@ If you were only ever shown the training error, you would pick the worst model.
 PAUSE: 2 min. Pause here and move the slider from one end to the other.
 :::
 
-## Breakout: overfitting you can see {.smaller}
-
-Open **[playground.tensorflow.org](https://playground.tensorflow.org)**. No account, no install. The task: a small neural network learns to **separate orange dots from blue dots**. All three steps use the same noisy data, with only 20% of the dots used for training.
-
-| Step | The network | Open it ready-made |
-|---|---|---|
-| 1 · Too simple | One layer of 2 units; inputs X₁ and X₂ only | [step 1](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=2&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false) |
-| 2 · In between | Two layers of 6; X₁, X₂, sin(X₁), sin(X₂) | [step 2](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=6,6&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=true&cosY=false&sinY=true&collectStats=false&problem=classification&initZero=false&hideText=false) |
-| 3 · Too flexible | Six layers of 8; all seven inputs | [step 3](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=8,8,8,8,8,8&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=true&xSquared=true&ySquared=true&cosX=false&sinX=true&cosY=false&sinY=true&collectStats=false&problem=classification&initZero=false&hideText=false) |
-
-Press **play**, then press **pause** when the **epoch** counter (one pass through the data) reaches about 500. Under **OUTPUT**, write down two numbers: **training loss**, the error on the dots it learns from, and **test loss**, the error on dots it never sees. Do not press *regenerate*. **Overfitting** is what you will see in step 3: a network that learns the training dots, noise included, and does worse on new ones.
-
-[Live: 20 min in groups. On your own: about 8 min. The site calls predictors *features* and the units *neurons*; **noise** is random error added to the dots. TensorFlow Playground by Daniel Smilkov and Shan Carter. If the site is down, the [course deck on deep learning](https://talks.seandavis.net/archive/2024-11-06-deep-learning-intro/) has screenshots of the same exercise.]{.src}
-
-::: notes
-Now you do it with a real neural network. Open playground dot tensorflow dot org. It needs no account and no install. The network's job is to separate orange dots from blue dots. In all three steps the data are the same: a noisy spiral, and only one dot in five is used for training. The rest are held back for testing.
-
-Each link on the slide opens the site already set up. Step one is too simple. Step two is in between. Step three is very flexible. Each time, press play, then press pause when the epoch counter reaches about five hundred. An epoch is one pass through the data. Then, under the word output, write down the two numbers. Training loss is the error on the dots the network learns from. Test loss is the error on dots it never sees. Do not press regenerate, because that changes the data.
-
-Here is what one run gave at five hundred epochs. Step one: training and test loss both near zero point five, which is barely better than guessing. Step two: training loss near zero point zero nine, test loss near zero point two seven. Step three: training loss near zero point one, almost as low as step two. But its test loss is near zero point five five, worse than even the too-simple network. That is overfitting: the network learned the noise in the training dots.
-
-If you let step three run much longer, its test loss comes down again. That is worth noticing: a single number depends on when you stop.
-
-PAUSE: 8 min. Pause the recording here and run the three steps.
-
-LIVE: Breakouts of four or five, twenty minutes. Paste the three links, and the three questions and the "You have it if" line from slide 20, into the chat before you open the rooms. Do not lecture over this part; the point is that they see the two numbers separate themselves. At about 500 epochs, step 3 has the worst test loss; if a group runs it much longer, step 3's test loss comes down, which is worth discussing.
-:::
-
-## {background-iframe="https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=2&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false" background-interactive="true" data-menu-title="The playground, live"}
-
-::: notes
-This is the playground itself, set up for step one, running inside the slide. You can click on it. Press play and watch what a model that is too simple does with a noisy spiral.
-
-LIVE: Use this slide to demonstrate step one before opening the rooms. Click outside the frame before using the arrow keys to move on.
-:::
-
-## Write three sentences, and keep them
-
-```
-Which network was too simple, and how could you tell?
-____________________________________________________________
-
-Which was too flexible, and how could you tell?
-____________________________________________________________
-
-If you had only ever been shown the training loss, how would steps 2
-and 3 have compared, and what did the test loss show?
-____________________________________________________________
-```
-
-::: fragment
-**You have it if** your third sentence says this: at about 500 epochs, training loss makes steps 2 and 3 look about the same, but on new dots step 3 is the worst of the three. You will ask the same question of **every performance figure on every vendor slide**.
-:::
-
-::: notes
-When you have run all three steps, write three sentences. Which network was too simple, and how could you tell? Which was too flexible, and how could you tell? And if you had only ever been shown the training loss, how would steps two and three have compared, and what did the test loss show?
-
-PAUSE: 3 min. Pause here and write them.
-
-You have it if your third sentence says this. At about five hundred epochs, training loss makes steps two and three look about the same. But on new dots, step three is the worst of the three. So training loss alone could not tell you which network to trust. Keep these sentences. It is the same question you will ask of every performance figure on every vendor slide for the rest of your career.
-
-LIVE: Each group puts its three sentences on the class's shared slide, or in the Zoom chat if there is none.
-:::
-
 ## Same failure in the clinic: a sepsis model tested on new patients {.smaller}
 
 :::: {.columns}
@@ -751,7 +687,7 @@ At no step does the model itself look anything up, consult a database, or compar
 
 A real citation and a made-up one are both plausible ways to continue the words "the original paper was". The model is not lying, and it is not broken. It is doing what it was built to do, and what it was built to do has no truth step in it.
 
-Some tools you use add a web search around the model. Then the answer is built from what the search found, and the model can still misreport what it found. That is a different situation, and the critical appraisal session tests it. In today's exercise you will try your tool both ways.
+Some tools you use add a web search around the model. Then the answer is built from what the search found, and the model can still misreport what it found. That is a different situation, and the critical appraisal session tests it.
 :::
 
 ## What that looks like when it reaches you {.smaller}
@@ -763,50 +699,16 @@ Some tools you use add a web search around the model. Then the answer is built f
 <div class="bot">The HEART score assigns 0–2 points each for History, ECG, Age, Risk factors, and Troponin, for a total of 0–10. Patients scoring 0–3 are low risk (about 1.7% risk of a major adverse cardiac event at 6 weeks) and can be discharged; 4–6 is intermediate (about 12–17%); 7–10 is high risk (about 50–65%) and warrants early invasive management.<br/><br/>Original publication: Backus BE, Six AJ, Kelder JC, et al. "A prospective validation of the HEART score for chest pain patients at the emergency department." <em>Int J Cardiol.</em> 2013;168(3):2153–2158.</div>
 :::
 
+::: fragment
+[The paper named is real: a 2013 study that tested the score [@pmid:23465250]. The score was first described in 2008, in a different journal [@pmid:18665203].]{.src}
+:::
+
 ::: notes
 Here is what that can look like when it reaches you. This exchange is made up for the course, but it is the kind of thing these tools produce.
 
 Read it as a clinician and it looks fine. The structure is right. The names are real people who have written about this score. The journal exists. But is the original publication the one named? Are the percentages from that paper, or a later one, or nowhere? Do the cutoffs match what MDCalc shows?
 
-The citation is the easiest error to find. The cutoffs and the advice to discharge are the parts that could hurt a patient, and you check those on MDCalc. Let's test the citation on the next slide.
-:::
-
-## Which is the *original* HEART score paper? {.smaller}
-
-```{ojs}
-{
-  const options = [
-    "Backus et al., International Journal of Cardiology",
-    "Six et al., Netherlands Heart Journal",
-    "Backus et al., Critical Pathways in Cardiology"
-  ];
-  const form = radioInput(options, "heart");
-  const result = html`<div role="status"></div>`;
-  const reveal = html`<button class="w-btn" type="button">Show the answer</button>`;
-  reveal.onclick = () => {
-    const pick = form.value;
-    const cls = pick === null ? "" : pick === 1 ? "ok" : "no";
-    result.replaceChildren(html`<div class="fb ${cls}">
-      <p><b>The first description is Six, Backus, and Kelder, <i>Netherlands Heart Journal</i>, 2008.</b> The 2010 and 2013 papers are later studies that tested the score in more patients.</p>
-      <p>All three are real. "Original" is a fact about dates, and nothing in predicting the next word looks up a date. Any of the three is a plausible continuation.</p>
-    </div>`);
-  };
-  return html`${form}${reveal}${result}`;
-}
-```
-
-::: fragment
-[First description: @pmid:18665203. Later validations: @pmid:20802272 and @pmid:23465250. All three were checked in PubMed by tool on 3 October 2026.]{.src}
-:::
-
-::: notes
-Three papers. All three are real, by the same research group, about the HEART score. Which one first described it?
-
-PAUSE: 1 min. Make your guess before you press the button.
-
-The answer is the 2008 paper in the Netherlands Heart Journal. The 2010 and 2013 papers are later studies that tested the score in more patients.
-
-This is the hard case, and it is common. A chatbot that gives the 2013 paper has not invented anything. It gives a real paper as the answer to a question that paper does not answer. "Original" is a fact about dates and priority, and nothing in predicting the next word looks up a date. In the exercise you will see what your own tool does.
+The citation is the easiest part to check. The paper named is real, but it is a 2013 study that tested the score in more patients. The score was first described in 2008, in a different journal. Nothing in predicting the next word looks up a date, so both are plausible answers to "the original publication". The cutoffs and the advice to discharge are the parts that matter most for a patient, and you check those on MDCalc.
 :::
 
 ## What this does and does not mean
@@ -827,27 +729,6 @@ This does not mean the answer is usually wrong. On common, well-documented quest
 It means the error rate is not zero, and the tone does not change when the answer is wrong. A made-up citation reads exactly like a real one.
 
 If you are someone who distrusts these tools, that is partly justified, and this is the part: they can be wrong in a confident voice. Checking every claim is a skill, not a weakness. Keep it. What is out of date is the idea that they are useless. They are useful when you check them.
-:::
-
-## Optional: watch a real model pick the next word {.smaller}
-
-```{=html}
-<div class="loadframe">
-  <button class="w-btn" type="button" onclick="const f=this.parentElement.querySelector('iframe'); f.src='https://poloclub.github.io/transformer-explainer/'; f.style.display='block'; this.remove();">Load Transformer Explainer (downloads about 600 MB)</button>
-  <iframe title="Transformer Explainer, Georgia Tech Polo Club" style="display:none" loading="lazy"></iframe>
-</div>
-```
-
-[Transformer Explainer, Polo Club of Data Science, Georgia Tech, runs GPT-2, a small 2019 model, in your browser. Type made-up text only. Then move the Temperature slider and watch the probabilities on the right. Use wifi. It may be slow on an older computer or a phone; skipping it loses nothing. Or open it in its own tab: [poloclub.github.io/transformer-explainer](https://poloclub.github.io/transformer-explainer/).]{.src}
-
-::: notes
-This slide is optional. The button loads Transformer Explainer, a free teaching tool from Georgia Tech. It runs a real language model, GPT-2, inside your browser. GPT-2 is small and old, from 2019, but it does exactly what the made-up table did a few slides ago.
-
-Type the start of a made-up sentence and press generate. The column on the right shows the probability of each possible next token. Move the temperature slider and watch those probabilities flatten or sharpen.
-
-The download is about six hundred megabytes, and it may be slow on an older computer. Skipping it loses nothing.
-
-LIVE: Skip in a live session.
 :::
 
 ## The context window is a fixed size {.smaller}
@@ -928,139 +809,6 @@ PAUSE: 2 min. Pause here and write your two rules before you look at the next pa
 Here are two that many people use. Because the middle gets less attention, put your question and the facts that matter at the start or the end of what you paste. Do not bury them in the middle of a long document. And what you paste is a guideline or a paper, never a chart. Because the window is a fixed size, when a conversation is long and has changed subject, start a new one.
 
 LIVE: Ask for one rule in the chat, sent on your count, then show the fragment.
-:::
-
-# Get a chatbot to say something wrong, on purpose {background-color="#1d2733"}
-
-::: notes
-Now the second exercise. You are going to get a chatbot to tell you something wrong, and then explain why it happened. People often call this a hallucination. In this exercise you will explain it without that word.
-:::
-
-## No patient information, unless approved in writing
-
-::: {.callout-warning title="Before you open the chatbot"}
-This exercise asks about a **published scoring system or guideline**, not about a patient.
-
-Do not put patient information into any chatbot, including your school's. A **business associate agreement** is the contract that obliges a vendor to protect patient data for a hospital. Whether one covers a tool is decided by your hospital's privacy office, not by you or your school. Until that office tells you in writing, the answer is no.
-
-A personal paid account has no such agreement. The question you will be tempted to ask about the patient in the clinic story is one you do not ask.
-:::
-
-::: notes
-Before you open the chatbot, one warning. This exercise asks about a published scoring system or guideline, not about a patient.
-
-Do not put patient information into any chatbot, including your school's. A business associate agreement is the contract that obliges a vendor to protect patient data for a hospital. Whether one covers a tool is decided by your hospital's privacy office, not by you or your school. Until that office tells you in writing, the answer is no. A personal paid account is covered by nothing of the kind.
-
-The question you will be tempted to ask about the patient in the clinic story is one you do not ask.
-:::
-
-## Pick one you know {.smaller}
-
-| Specialty | Score or guideline | First publication (checked in PubMed) |
-|---|---|---|
-| Emergency medicine | HEART score | @pmid:18665203, *Neth Heart J* |
-| Internal medicine | CURB-65 | @pmid:12728155, *Thorax* |
-| Surgery | Alvarado score | @pmid:3963537, *Ann Emerg Med* |
-| Psychiatry, primary care | PHQ-9 | @pmid:11556941, *J Gen Intern Med* |
-| Gastroenterology | Glasgow-Blatchford | @pmid:11073021, *Lancet* |
-| Oncology | ECOG performance status | @pmid:7165009, *Am J Clin Oncol* |
-| Radiology | Fleischner, small lung nodules | @pmid:16244247, *Radiology*; updated 2017 |
-| Pediatrics, obstetrics | Apgar score | Apgar (1953), *Curr Res Anesth Analg*, [PMID 13083014](https://pubmed.ncbi.nlm.nih.gov/13083014/) |
-| Any medicine service | Wells score for PE | @pmid:10744147, *Thromb Haemost* |
-
-: {tbl-colwidths="[22,26,52]"}
-
-::: notes
-Pick one score or guideline from this table, in a specialty you have rotated through, so you already know roughly what the right answer is. The first publication for each row was checked in PubMed, so you have a verified target to compare against.
-
-If you pick HEART, you already know the answer to the citation part, so pick something else if you can. Radiology students: the Fleischner guidelines were first published in 2005 and updated in 2017, which makes "the original" a good trap.
-:::
-
-## Ask, then check {.smaller}
-
-**Ask, in a fresh conversation** (the *New chat* button). **Copy the prompt exactly.**
-
-> **A. Required.** Give me the exact point values and cutoffs of the `<score>`, the outcome each cutoff was validated against, and the full original publication that first described it: first author, journal, year, volume, and pages.
-
-**Check:** every value on **[MDCalc](https://www.mdcalc.com)**; the publication in **[PubMed](https://pubmed.ncbi.nlm.nih.gov)**, not Google Scholar.
-
-**If A came back all correct:** (B) ask for five references, with PubMed IDs, that support `<a claim from the score's original paper>`. Open each PMID in PubMed and **read the title**: a wrong PMID usually opens a real, unrelated paper. Large current models usually get A right on these famous scores; B is where they slip. **If you have time:** run A again with web search switched on (often a *Search* or *Web* button near the message box) and compare.
-
-[Live: 14 min in groups. On your own: about 10 min for A, about 10 more for B. For a guideline such as Fleischner, ask for the size thresholds and follow-up intervals instead of "the outcome each cutoff was validated against". Wording changes answers: if yours differs from a classmate's, that is expected.]{.src}
-
-::: notes
-Open your chatbot in a fresh conversation, with the New chat button, and copy prompt A exactly, with your score in place of the brackets. Prompt A is the required part. For a guideline such as Fleischner, ask for the size thresholds and follow-up intervals instead.
-
-Then check. Compare every point value and cutoff with MDCalc. Look up the publication in PubMed, not Google Scholar. Scholar's loose matching will show you a different, real paper for a citation that does not exist, and you will mark it as found.
-
-If prompt A comes back all correct, go on to prompt B. It asks for five references, with PubMed IDs. Open each PMID in PubMed and read the title. A wrong PMID usually opens a real paper about something else, so a link that works proves nothing. Large current models usually get prompt A right on scores this famous. Prompt B is where they slip. If you still have time, run prompt A again with web search switched on, and compare. That is how you find out what the search step adds.
-
-Wording changes answers, so if yours differs from a classmate's, that is expected.
-
-PAUSE: 15 min. Pause the recording here and do the exercise: prompt A, then prompt B if A was all correct.
-
-LIVE: Same breakout groups, fourteen minutes. Paste prompts A and B and the record template from the next slide into the chat before opening the rooms. Run both prompts yourself the morning of the session, so you know what students will see. In a test on 3 October 2026 with search off, one run each, GPT-5.4 and Claude named the right original paper for all six scores tried. Gemini 2.5 Flash and GPT-4o-mini made up citations, often with the volume and pages of an unrelated real paper, or named a later or earlier paper as the original. On prompt B, GPT-5.4 gave 9 of 10 correct PMIDs, Claude Sonnet 5 gave 5 of 10, and Gemini 2.5 Flash gave 0 of 10: the wrong ones were real PMIDs for unrelated papers. Details are in research/foundations-chatbot-test-2026-10-03.md.
-:::
-
-## Record it {.smaller}
-
-```
-Tool, model version if shown: ______________________________
-Web search: off / on / could not tell
-Score or guideline: ________________________________________
-
-Point values and cutoffs: all correct / one wrong / more than one wrong
-  What was wrong, exactly: _________________________________
-
-Original publication as given by the tool:
-  ____________________________________________________________
-  Matches the checked original?  Y / N / partly (which fields differ)
-
-How the tool produced this, in one sentence, using the words "token"
-or "plausible continuation" and not the word "hallucinate"
-(the usual word for a confident wrong answer):
-  ____________________________________________________________
-
-What I would check before using an answer like this in a note or order:
-  ____________________________________________________________
-```
-
-::: fragment
-**It got everything right?** Write that down, then write the sentence anyway. Suppose a tool is right nine times in ten, with no change of tone on the tenth: that is the more dangerous tool.
-:::
-
-::: notes
-Record what you found, using this template.
-
-The line about how the tool produced this is the one the course asks for. "It made a mistake" is not an explanation. "It predicted the most plausible next tokens after 'the original publication was', and a plausible citation looks exactly like a real one" is an explanation. The last line asks what you would check before an answer like this went into a note or an order.
-
-The tool may get everything right. If it does, write that down too, and then write the sentence anyway. Suppose a tool is right nine times in ten, with no change of tone on the tenth. That is the more dangerous tool, because you stop checking. That is why an unchecked answer is dangerous rather than merely useless.
-
-PAUSE: 3 min. Pause here and fill in the template.
-
-LIVE: Each group posts one checked error and its one-sentence explanation to the shared slide, or the Zoom chat. A group that found no error reports that too.
-:::
-
-## Check yourself {.smaller}
-
-| You can | You have it if |
-|---|---|
-| Name the eGFR's predictors, response, and training population | Creatinine, age, sex; measured GFR; 8,254 research participants in 10 studies, and you can say why that matters for her |
-| Sort the four models with the two questions | Supervised regression; supervised classification; unsupervised; supervised (the next word is the label) |
-| Explain your third Playground sentence | At about 500 epochs, training loss made steps 2 and 3 look about the same; test loss showed step 3 was the worst |
-| Explain the error you found | One sentence about plausible next tokens, without "hallucinate", that says why the tone did not change |
-| State your two rules for the keyboard | One follows from the fixed size, one from the middle getting less attention, and each says what you will do differently |
-
-: {tbl-colwidths="[38,62]"}
-
-::: notes
-Score yourself before moving on. Each row matches one of the five things you set out to be able to do.
-
-Can you name the eGFR's predictors, response, and training population, and say why the last one matters for her? Can you sort the four models? Does your third Playground sentence say that training loss made steps two and three look about the same, while test loss showed step three was the worst? Does your one-sentence explanation talk about plausible next tokens, without the word hallucinate? And do your two keyboard rules each follow from one limit of the context window?
-
-PAUSE: 3 min. Pause here and check yourself against the table. The chapter has the same table with what falling short looks like.
-
-LIVE: Skip in a live session. Students do it afterwards.
 :::
 
 # What this changes for you {background-color="#1d2733"}
