@@ -45,7 +45,7 @@ framework core and move hands-on work toward success first.
   "centaur or cyborg, live" (everyone in ChatGPT Edu, trying things together;
   left open-ended on purpose; also catches account problems early), then
   office hours.
-  Friday small groups in the signed-up slots. Students read `core-foundations`
+  Friday small groups, from that week's signup. Students read `core-foundations`
   and `core-centaur-cyborg`. Weeks 2 to 4 Monday and Wednesday talks are also
   at 10 a.m.
 - **Weeks 2 to 4, each week (decided 2026-10-08):** the course director's
@@ -105,8 +105,11 @@ framework core and move hands-on work toward success first.
   the journal assignment; calendar events for every live session; drop-in
   office hours every Thursday 11 to 11:45 a.m., titled with the instructor's
   name ("Office hours: Sean Davis") so other instructors can add their own;
-  a signup sheet for the Friday small-group slot (10 a.m., 11 a.m., 1 p.m.,
-  2 p.m., up to 15 each, chosen once on October 16); plain events for later Fridays.
+  a Canvas signup (appointment group) for every Friday (10 a.m., 11 a.m.,
+  1 p.m., 2 p.m., up to 15 each, one time per student); students sign up again
+  each week, so groups change from week to week (decided 2026-10-10, replacing
+  one choice on October 16 plus plain events for later Fridays). The signups
+  open when the course starts (Canvas course start date, October 11).
   Guest talks (from the lecturer signup sheet, 2026-10-09), on the Canvas
   calendar and in the week 3 and 4 modules: Matt DeCamp, ethics (Tue Oct 27,
   1 p.m.); Mike Rosenberg, cardiology (Thu Oct 29, 1 p.m.); Elizabeth Kudron,
