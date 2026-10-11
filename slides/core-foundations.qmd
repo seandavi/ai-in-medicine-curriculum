@@ -1,7 +1,7 @@
 ---
 title: "How these systems work"
 subtitle: "From the eGFR on a chemistry panel to the next word"
-author: "AI in Medicine · Week 1 · AIM-1 and AIM-2 · 60 minutes live, about 70 minutes on your own"
+author: "AI in Medicine · Week 1 · AIM-1 and AIM-2 · 60 minutes live, about 60 minutes on your own"
 footer: "[The chapter for this session](../chapters/core-foundations.html) · AI in Medicine"
 ---
 
@@ -20,7 +20,7 @@ Three rules apply in every session of this course. No patient information goes i
 
 The second rule follows from how these systems are built, and by the end of today you should be able to say why in one sentence. The first rule follows from something simpler: whoever runs the tool receives what you type.
 
-LIVE: Run sheet, with minutes per block, for about 57 minutes of talk and 3 for questions. Before class: create the slide 7 question as an anonymous Zoom poll. 0 to 5 (5 min): slides 1 to 4. 5 to 14 (9 min): slides 5 to 10, with the poll on slide 7; on slide 10, move the two sliders yourself for about two minutes, then press "Show the best fit". 14 to 31 (17 min): slides 11 to 23; slide 17 ninety seconds; slide 19 two minutes; slide 20 one minute; slide 21 fifteen seconds, pointing to it for after class; slide 22 one minute, as a callback to Tuesday's talk. 31 to 48 (17 min): slides 24 to 36; skip 27 and 29; give slide 30 one sentence; demonstrate the tokenizer, the sampler and the window sliders yourself rather than waiting for everyone, about 45 seconds each. 48 to 57 (9 min): slides 37 to 40; read slide 39 in one minute; end on the Thursday line on slide 40. 57 to 60: questions. Slides 41 to 43 are for students afterwards.
+LIVE: Run sheet, with minutes per block, for about 57 minutes of talk and 3 for questions. Before class: create the slide 7 question as an anonymous Zoom poll. 0 to 5 (5 min): slides 1 to 4. 5 to 14 (9 min): slides 5 to 10, with the poll on slide 7; on slide 10, move the two sliders yourself for about two minutes, then press "Show the best fit". 14 to 31 (17 min): slides 11 to 22; slide 17 ninety seconds; slide 19 two minutes; slide 20 one minute; slide 21 one minute, as a callback to Tuesday's talk. 31 to 48 (17 min): slides 23 to 35; skip 26 and 28; give slide 29 one sentence; demonstrate the tokenizer, the sampler and the window sliders yourself rather than waiting for everyone, about 45 seconds each. 48 to 57 (9 min): slides 36 to 39; read slide 38 in one minute; end on the Thursday line on slide 39. 57 to 60: questions. Slides 40 to 42 are for students afterwards; slide 41 has the further-exploration list, including the TensorFlow Playground exercise.
 
 LIVE: Turn on Zoom live captions and paste the deck link into the chat at the start. Paragraphs in these notes that start with PAUSE are for the recorded version; skip them live. ChatGPT Edu and Microsoft Copilot are this course's institutional tools; swap in your school's. Click outside a slider or text box before using the arrow keys.
 :::
@@ -68,7 +68,7 @@ The session is a talk in three parts, with short things to try in your browser a
 
 You need only a browser. Nothing needs installing, and you do not need an account.
 
-If you only want what to do on the wards, the practical slides are 22, 38 and 39.
+If you only want what to do on the wards, the practical slides are 21, 37 and 38.
 :::
 
 ## Four words, each inside the one before
@@ -606,40 +606,6 @@ A model is called interpretable when a person can read why it gave its answer. N
 LIVE: One minute. Read the last line and move on.
 :::
 
-## Try it after class: overfitting you can see {.smaller}
-
-Open **[playground.tensorflow.org](https://playground.tensorflow.org)**. No account, no install. A small neural network learns to **separate orange dots from blue dots**. All three steps use the same noisy data, with only 20% of the dots used for training.
-
-| Step | The network | Open it ready-made |
-|---|---|---|
-| 1 · Too simple | One layer of 2 units; inputs X₁ and X₂ only | [step 1](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=2&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false) |
-| 2 · In between | Two layers of 6; X₁, X₂, sin(X₁), sin(X₂) | [step 2](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=6,6&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=true&cosY=false&sinY=true&collectStats=false&problem=classification&initZero=false&hideText=false) |
-| 3 · Too flexible | Six layers of 8; all seven inputs | [step 3](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=8,8,8,8,8,8&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=true&xSquared=true&ySquared=true&cosX=false&sinX=true&cosY=false&sinY=true&collectStats=false&problem=classification&initZero=false&hideText=false) |
-
-: {.big}
-
-Press **play**, and **pause** at about 500 **epochs** (passes through the data). Under **OUTPUT**, note **training loss** (error on the dots it learns from) and **test loss** (error on dots it never sees). Then answer:
-
-1. Which network was too simple, and how could you tell?
-2. Which was too flexible, and how could you tell?
-3. If you had only been shown the training loss, how would steps 2 and 3 have compared? What did the test loss show?
-
-[About 10 minutes, on your own. The site calls predictors *features* and the units *neurons*; **noise** is random error added to the dots. Do not press *regenerate*, which changes the data. TensorFlow Playground by Daniel Smilkov and Shan Carter. If the site is down, the [course deck on deep learning](https://talks.seandavis.net/archive/2024-11-06-deep-learning-intro/) has screenshots of the same exercise.]{.src}
-
-::: notes
-Here is something to try after class, on your own, in about ten minutes. It is the slider you just moved, with a real neural network. Open playground dot tensorflow dot org. It needs no account and no install. The network's job is to separate orange dots from blue dots. In all three steps the data are the same: a noisy spiral, and only one dot in five is used for training. The rest are held back for testing.
-
-Each link on the slide opens the site already set up. Step one is too simple. Step two is in between. Step three is very flexible. Each time, press play, then press pause when the epoch counter reaches about five hundred. An epoch is one pass through the data. Then, under the word output, note the two numbers. Training loss is the error on the dots the network learns from. Test loss is the error on dots it never sees. Do not press regenerate, because that changes the data. Then answer the three questions on the slide.
-
-PAUSE: 10 min. If you are watching the recording, you can do it now: pause here, run the three steps, and answer the three questions.
-
-Here is what one run gave at five hundred epochs. Step one: training and test loss both near zero point five, which is barely better than guessing. Step two: training loss near zero point zero nine, test loss near zero point two seven. Step three: training loss near zero point one, almost as low as step two. But its test loss is near zero point five five, worse than even the too-simple network. That is overfitting: the network learned the noise in the training dots.
-
-You have it if your third answer says this. At about five hundred epochs, training loss makes steps two and three look about the same. But on new dots, step three is the worst of the three. If you let step three run much longer, its test loss comes down again. That is worth noticing: a single number depends on when you stop.
-
-LIVE: Fifteen seconds. Point to the links and the three questions, say it is for after class, and move on. Paste the deck link in the chat again so students can open the links later.
-:::
-
 ## You saw this sepsis model yesterday {.smaller}
 
 :::: {.columns}
@@ -1171,21 +1137,56 @@ The fifty-seven on the panel came from somewhere. So does everything else.
 LIVE: Skip in a live session.
 :::
 
-## Go deeper
+## Further exploration
 
-- **The chapter** for this session, with the full eGFR history and the self-check: [How these systems work](../chapters/core-foundations.html)
-- 3Blue1Brown, [*But what is a GPT?*](https://www.youtube.com/watch?v=yMQPQuz5WpA) (April 2024, 27 min), for attention and the inside of the model
-- Andrej Karpathy, [*Intro to Large Language Models*](https://www.youtube.com/watch?v=zjkBMFhNj_g) (November 2023, about 1 hour)
-- Dataset shift for clinicians, in two pages [@pmid:34260843]
-- MYCIN, a 1970s system that advised on antibiotics. In a blinded evaluation on ten meningitis cases, it was rated above five faculty specialists [@pmid:480542]
-- The narration for this deck [as text](core-foundations-narration.txt)
+:::: {.columns}
+::: {.column width="50%"}
+::: {.panel .warm}
+[Try: overfitting you can see]{.ptitle}
 
-[This deck was drafted with an AI assistant. Its citations were checked against PubMed, Crossref, or arXiv by tool, and its numbers against the papers. The [AI ledger](../appendix/ai-ledger.html) records what was checked and by whom.]{.src}
+**[TensorFlow Playground](https://playground.tensorflow.org)**, 10 minutes, no account. Open [step 1](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=2&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false) (too simple), [step 2](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=6,6&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=true&cosY=false&sinY=true&collectStats=false&problem=classification&initZero=false&hideText=false) (in between) and [step 3](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=8,8,8,8,8,8&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=true&xSquared=true&ySquared=true&cosX=false&sinX=true&cosY=false&sinY=true&collectStats=false&problem=classification&initZero=false&hideText=false) (too flexible). At about 500 epochs, compare **training loss** with **test loss**.
+:::
+:::
+
+::: {.column width="50%"}
+::: panel
+[Watch: inside a language model]{.ptitle}
+
+**[3Blue1Brown, *But what is a GPT?*](https://www.youtube.com/watch?v=yMQPQuz5WpA)**, April 2024, 27 minutes. A visual tour of the inside of the model, including attention.
+:::
+:::
+::::
+
+:::: {.columns style="margin-top: 0.3em;"}
+::: {.column width="50%"}
+::: panel
+[Watch: how chatbots are built]{.ptitle}
+
+**[Andrej Karpathy, *Intro to Large Language Models*](https://www.youtube.com/watch?v=zjkBMFhNj_g)**, November 2023, 1 hour. How chatbots are trained, step by step.
+:::
+:::
+
+::: {.column width="50%"}
+::: panel
+[Read: when the patients change]{.ptitle}
+
+**[*The clinician and dataset shift in AI*](https://doi.org/10.1056/NEJMc2104626)**, *NEJM*, 2021. Why models fail on new kinds of patients.
+:::
+:::
+::::
+
+::: aside
+Dataset shift: [@pmid:34260843]. The chapter: [How these systems work](../chapters/core-foundations.html). Narration [as text](core-foundations-narration.txt). Drafted with an AI assistant; see the [AI ledger](../appendix/ai-ledger.html).
+:::
 
 ::: notes
-If you want more, the chapter for this session has the full eGFR history and a self-check. The longer 3Blue1Brown video goes further inside the model, including attention. Andrej Karpathy's one-hour talk covers both training stages in more depth. There is a two-page paper on dataset shift written for clinicians. And the evaluation of MYCIN, a 1970s system that advised on antibiotics, is a reminder that rating well in a test and being used on the ward are different things.
+For students who want more, four things to follow by interest.
 
-This deck was drafted with an AI assistant. Its citations were checked against PubMed, Crossref, or arXiv by tool, and its numbers against the papers. The course's AI ledger records what was checked and by whom.
+Try: the TensorFlow Playground exercise. Each link opens the site already set up, with the same noisy spiral and only one dot in five used for training. Press play, pause at about five hundred epochs, and compare training loss with test loss. One run gave: step one, both near 0.5; step two, training near 0.09 and test near 0.27; step three, training near 0.1 but test near 0.55. That is overfitting: training loss makes steps two and three look alike, but on new dots step three is the worst. Do not press regenerate, which changes the data.
+
+Watch: 3Blue1Brown's longer video on the inside of the model, and Andrej Karpathy's one-hour talk on how chatbots are trained.
+
+Read: a two-page paper on dataset shift, written for clinicians.
 
 LIVE: Skip in a live session.
 :::
