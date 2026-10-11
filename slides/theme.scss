@@ -776,7 +776,8 @@ $callout-color-warning: $gold;
 .reveal .seg-pasted { background: $teal; }
 .reveal .seg-question { background: $terracotta; }
 // The room left is a light tint: free space, not content.
-.reveal .seg-answer { background: mix($teal, $card, 22%); color: $ink; }
+.reveal .seg-answer { background: mix($teal, $card, 22%); }
+.reveal .budget .seg-answer { color: $ink; }
 
 // Click-to-load iframe for heavy embeds.
 .reveal .loadframe iframe {
