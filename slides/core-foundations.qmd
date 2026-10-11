@@ -55,9 +55,9 @@ If you only want what to do on the wards, the practical slides are 21, 40 to 42,
 
 ## Four words, each inside the one before
 
-![Each term is one kind of the term around it.](../images/ai-nested-circles.svg){.card fig-alt="Four nested circles. The largest is artificial intelligence: a computer doing a task that seems to need judgment, such as MYCIN in the 1970s, whose rules were written by hand. Inside it is machine learning: the rules are learned from data, such as the eGFR equation. Inside that is deep learning: machine learning with many layers, a neural network, such as a model that reads chest X-rays. The smallest is generative AI: deep learning that writes new text or makes images, such as a chatbot." height="430"}
+![](../images/ai-nested-circles.svg){.card fig-alt="Four nested circles. The largest is artificial intelligence: a computer doing a task that seems to need judgment, such as MYCIN in the 1970s, whose rules were written by hand. Inside it is machine learning: the rules are learned from data, such as the eGFR equation. Inside that is deep learning: machine learning with many layers, a neural network, such as a model that reads chest X-rays. The smallest is generative AI: deep learning that writes new text or makes images, such as a chatbot." height="450"}
 
-Yesterday we saw how we got here. Today: what goes on inside each circle.
+Each is one kind of the one around it. Yesterday we saw how we got here. Today: how the models inside these circles are made.
 
 ::: notes
 Yesterday's talk was the history: how we got from rules written by hand to the chatbots of today. Here are four words from that history, and how they fit together. If you missed yesterday, nothing today depends on it.
@@ -187,6 +187,101 @@ A few thousand people did have their GFR measured. Their creatinine, age, and se
 The eGFR is a model. It is the model you already trust most, and you have probably never asked what it was trained on.
 
 Remember this patient. She weighs forty-five kilograms and has lost a good deal of muscle over a year of illness. We will come back to her at the end. Nobody has told her that a model had a part in the fifty-seven.
+:::
+
+## Fit the curve yourself {.smaller}
+
+```{ojs}
+dialData = {
+  let s = 20261014;
+  const rand = () => { s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s ^ (s >>> 15), 1 | s);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const gauss = () => Math.sqrt(-2 * Math.log(1 - rand())) * Math.cos(2 * Math.PI * rand());
+  return Array.from({ length: 40 }, () => { const cr = 0.6 * Math.pow(4 / 0.6, rand()); return { cr, gfr: 80 * Math.pow(cr, -1.1) * Math.exp(0.15 * gauss()) }; });
+}
+dialCurve = (a, b) => cr => a * Math.pow(cr, -b)
+dialMiss = (a, b) => { const f = dialCurve(a, b); return dialData.reduce((t, p) => t + Math.abs(f(p.cr) - p.gfr), 0) / dialData.length; }
+// The best fit, found by trying every setting the two sliders allow.
+dialBest = {
+  let best = { a: 0, b: 0, miss: Infinity };
+  for (let a = 30; a <= 150; a++) for (let k = 0; k <= 40; k++) { const b = +(k * 0.05).toFixed(2), miss = dialMiss(a, b); if (miss < best.miss) best = { a, b, miss }; }
+  return best;
+}
+```
+
+:::: {.columns}
+::: {.column width="56%"}
+<div class="illus-label">Illustrative data, not the CKD-EPI data. A simpler curve than the real eGFR.</div>
+
+```{ojs}
+{
+  const W = 560, H = 380, l = 64, r = 14, t = 12, b = 54, ymax = 170;
+  const X = cr => l + (cr - 0.5) / 3.5 * (W - l - r), Y = g => H - b - Math.min(g, ymax) / ymax * (H - b - t);
+  const f = dialCurve(dialA, dialB);
+  const grid = Array.from({ length: 141 }, (_, i) => 0.5 + i * 0.025);
+  const path = "M" + grid.map(c => `${X(c).toFixed(1)},${Y(f(c)).toFixed(1)}`).join("L");
+  return html`<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Forty made-up people, creatinine against measured GFR, with the curve for a ${dialA} and b ${dialB}. Average miss ${dialMiss(dialA, dialB).toFixed(1)}.">
+    ${[0, 40, 80, 120, 160].map(v => `<line x1="${l}" x2="${W - r}" y1="${Y(v)}" y2="${Y(v)}" stroke="#3c4043"/><text x="${l - 8}" y="${Y(v) + 6}" fill="#b8bec5" font-size="17" text-anchor="end">${v}</text>`).join("")}
+    ${[1, 2, 3, 4].map(v => `<text x="${X(v)}" y="${H - b + 24}" fill="#b8bec5" font-size="17" text-anchor="middle">${v}</text>`).join("")}
+    ${dialData.map(p => `<line x1="${X(p.cr).toFixed(1)}" x2="${X(p.cr).toFixed(1)}" y1="${Y(p.gfr).toFixed(1)}" y2="${Y(f(p.cr)).toFixed(1)}" stroke="#fcad70" stroke-width="1.5" opacity=".7"/>`).join("")}
+    ${dialData.map(p => `<circle cx="${X(p.cr).toFixed(1)}" cy="${Y(p.gfr).toFixed(1)}" r="5" fill="#e8eaed"/>`).join("")}
+    <path d="${path}" fill="none" stroke="#8ab4f8" stroke-width="4"/>
+    <text x="${(l + W - r) / 2}" y="${H - 8}" fill="#e8eaed" font-size="18" text-anchor="middle">creatinine, mg/dL</text>
+    <text x="16" y="${(t + H - b) / 2}" fill="#e8eaed" font-size="18" text-anchor="middle" transform="rotate(-90 16 ${(t + H - b) / 2})">measured GFR</text>
+  </svg>`;
+}
+```
+:::
+::: {.column .dials width="44%"}
+<p class="eq">GFR = <b>a</b> × creatinine<sup>−<b>b</b></sup></p>
+
+```{ojs}
+viewof dialA = rangeInput({ label: "a", min: 30, max: 150, step: 1, value: 50 })
+viewof dialB = rangeInput({ label: "b", min: 0, max: 2, step: 0.05, value: 0.3 })
+```
+
+[**a**: the GFR when creatinine is 1.0. **b**: how fast GFR falls as creatinine rises.]{.defn}
+
+```{ojs}
+{
+  const miss = dialMiss(dialA, dialB), best = dialA === dialBest.a && dialB === dialBest.b;
+  return html`<div class="readout" role="status"><span class="k test">Average miss: <b class="dial-miss">${miss.toFixed(1)}</b> mL/min/1.73 m²</span></div>
+    ${best ? html`<div class="fb ok">The best fit: no setting of a and b misses by less.</div>` : ""}`;
+}
+```
+
+```{ojs}
+{
+  const button = html`<button class="w-btn" type="button">Show the best fit</button>`;
+  button.onclick = () => {
+    for (const [view, v] of [[viewof dialA, dialBest.a], [viewof dialB, dialBest.b]]) {
+      const input = view.querySelector("input");
+      input.value = v;
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+    }
+  };
+  return button;
+}
+```
+
+::: fragment
+**Fitting** means a computer turns these dials until the error is as small as it can get.
+:::
+:::
+::::
+
+[● one made-up person · orange line: how far the curve misses them · blue: the curve your dials make. Generated in your browser.]{.src}
+
+::: notes
+Here is fitting, done by hand. Each dot is one made-up person: creatinine across, measured GFR up. The blue curve is a simple equation with two numbers in it, a and b. Those two numbers are the dials. The number a sets how high the curve sits: it is the GFR the curve gives at a creatinine of one. The number b sets how fast GFR falls as creatinine rises. Each thin orange line is a miss: how far one person's measured GFR is from the curve. The number beside the sliders is the average miss.
+
+PAUSE: 2 min. Move the two sliders and make the average miss as small as you can. Then press "Show the best fit".
+
+Fitting means a computer turns these dials until the error is as small as it can get. Here the computer tries every setting the sliders allow and keeps the best one. Real fitting uses faster methods, with the same goal. The real eGFR equation has a few more numbers in it, and it was fit to eight thousand two hundred fifty-four people whose GFR was measured, not to forty made-up dots. A chatbot is the same idea with billions of numbers.
+
+The data on this slide are made up, and the curve is simpler than the real equation. Its numbers are not the real eGFR's.
+
+LIVE: About two minutes. Move the sliders yourself and ask the room which way to move b. Then press the button, and show the last line.
 :::
 
 # The loop every model comes from {background-color="#1d2733"}

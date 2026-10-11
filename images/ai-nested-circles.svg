@@ -1,31 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" font-family="Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 600" width="1300" height="600" role="img" font-family="Helvetica, Arial, sans-serif">
 <title>AI, machine learning, deep learning, and generative AI, each inside the one before</title>
 <desc>Four nested circles. The largest is artificial intelligence: a computer doing a task that seems to need judgment, such as MYCIN in the 1970s, whose rules were written by hand. Inside it is machine learning: the rules are learned from data, such as the eGFR equation. Inside that is deep learning: machine learning with many layers, a neural network, such as a model that reads chest X-rays. The smallest, inside deep learning, is generative AI: deep learning that writes new text or makes images, such as a chatbot.</desc>
 <defs><marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2933"/></marker><marker id="head-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5f6b7a"/></marker></defs>
-<rect x="0" y="0" width="1200" height="600" rx="14" fill="#ffffff"/>
-<circle cx="315" cy="300" r="270" fill="#f1f3f5" stroke="#9aa0a6" stroke-width="3"/>
-<circle cx="315" cy="365" r="205" fill="#eef3fb" stroke="#1f5fa8" stroke-width="3"/>
-<circle cx="315" cy="430" r="140" fill="#fff7e6" stroke="#c45a00" stroke-width="3"/>
-<circle cx="315" cy="492" r="78" fill="#eef7f1" stroke="#2e7d4f" stroke-width="3"/>
-<text x="315" y="75" font-size="26" fill="#1f2933" text-anchor="middle" font-weight="bold">AI</text>
-<text x="315" y="205" font-size="26" fill="#1f2933" text-anchor="middle" font-weight="bold">Machine learning</text>
-<text x="315" y="335" font-size="26" fill="#1f2933" text-anchor="middle" font-weight="bold">Deep learning</text>
-<text x="315" y="486" font-size="24" fill="#1f2933" text-anchor="middle" font-weight="bold">Generative</text>
-<text x="315" y="516" font-size="24" fill="#1f2933" text-anchor="middle" font-weight="bold">AI</text>
-<circle cx="654" cy="62" r="14" fill="#f1f3f5" stroke="#9aa0a6" stroke-width="3"/>
-<text x="680" y="70" font-size="25" fill="#1f2933" text-anchor="start" font-weight="bold">Artificial intelligence</text>
-<text x="680" y="104" font-size="20" fill="#1f2933" text-anchor="start" font-weight="normal">A computer doing a task that seems to need judgment.</text>
-<text x="680" y="132" font-size="20" fill="#5f6b7a" text-anchor="start" font-weight="normal">Example: MYCIN (1970s), rules written by hand.</text>
-<circle cx="654" cy="194" r="14" fill="#eef3fb" stroke="#1f5fa8" stroke-width="3"/>
-<text x="680" y="202" font-size="25" fill="#1f2933" text-anchor="start" font-weight="bold">Machine learning</text>
-<text x="680" y="236" font-size="20" fill="#1f2933" text-anchor="start" font-weight="normal">The rules are learned from data, not written by hand.</text>
-<text x="680" y="264" font-size="20" fill="#5f6b7a" text-anchor="start" font-weight="normal">Example: the eGFR equation.</text>
-<circle cx="654" cy="326" r="14" fill="#fff7e6" stroke="#c45a00" stroke-width="3"/>
-<text x="680" y="334" font-size="25" fill="#1f2933" text-anchor="start" font-weight="bold">Deep learning</text>
-<text x="680" y="368" font-size="20" fill="#1f2933" text-anchor="start" font-weight="normal">Machine learning with many layers: a neural network.</text>
-<text x="680" y="396" font-size="20" fill="#5f6b7a" text-anchor="start" font-weight="normal">Example: a model that reads chest X-rays.</text>
-<circle cx="654" cy="458" r="14" fill="#eef7f1" stroke="#2e7d4f" stroke-width="3"/>
-<text x="680" y="466" font-size="25" fill="#1f2933" text-anchor="start" font-weight="bold">Generative AI</text>
-<text x="680" y="500" font-size="20" fill="#1f2933" text-anchor="start" font-weight="normal">Deep learning that writes new text or makes images.</text>
-<text x="680" y="528" font-size="20" fill="#5f6b7a" text-anchor="start" font-weight="normal">Example: a chatbot.</text>
+<rect x="0" y="0" width="1300" height="600" rx="14" fill="#ffffff"/>
+<circle cx="285" cy="320" r="255" fill="#f1f3f5" stroke="#9aa0a6" stroke-width="3"/>
+<circle cx="285" cy="380" r="195" fill="#eef3fb" stroke="#1f5fa8" stroke-width="3"/>
+<circle cx="285" cy="440" r="135" fill="#fff7e6" stroke="#c45a00" stroke-width="3"/>
+<circle cx="285" cy="500" r="75" fill="#eef7f1" stroke="#2e7d4f" stroke-width="3"/>
+<text x="285" y="117" font-size="27" fill="#1f2933" text-anchor="middle" font-weight="bold">AI</text>
+<text x="285" y="237" font-size="27" fill="#1f2933" text-anchor="middle" font-weight="bold">Machine learning</text>
+<text x="285" y="357" font-size="27" fill="#1f2933" text-anchor="middle" font-weight="bold">Deep learning</text>
+<text x="285" y="496" font-size="25" fill="#1f2933" text-anchor="middle" font-weight="bold">Generative</text>
+<text x="285" y="526" font-size="25" fill="#1f2933" text-anchor="middle" font-weight="bold">AI</text>
+<circle cx="591" cy="60" r="16" fill="#f1f3f5" stroke="#9aa0a6" stroke-width="3"/>
+<text x="621" y="70" font-size="31" fill="#1f2933" text-anchor="start" font-weight="bold">Artificial intelligence</text>
+<text x="621" y="110" font-size="25" fill="#1f2933" text-anchor="start" font-weight="normal">A computer doing a task that seems to need judgment.</text>
+<text x="621" y="144" font-size="24" fill="#5f6b7a" text-anchor="start" font-weight="normal">Example: MYCIN (1970s), rules written by hand.</text>
+<circle cx="591" cy="200" r="16" fill="#eef3fb" stroke="#1f5fa8" stroke-width="3"/>
+<text x="621" y="210" font-size="31" fill="#1f2933" text-anchor="start" font-weight="bold">Machine learning</text>
+<text x="621" y="250" font-size="25" fill="#1f2933" text-anchor="start" font-weight="normal">The rules are learned from data, not written by hand.</text>
+<text x="621" y="284" font-size="24" fill="#5f6b7a" text-anchor="start" font-weight="normal">Example: the eGFR equation.</text>
+<circle cx="591" cy="340" r="16" fill="#fff7e6" stroke="#c45a00" stroke-width="3"/>
+<text x="621" y="350" font-size="31" fill="#1f2933" text-anchor="start" font-weight="bold">Deep learning</text>
+<text x="621" y="390" font-size="25" fill="#1f2933" text-anchor="start" font-weight="normal">Machine learning with many layers: a neural network.</text>
+<text x="621" y="424" font-size="24" fill="#5f6b7a" text-anchor="start" font-weight="normal">Example: a model that reads chest X-rays.</text>
+<circle cx="591" cy="480" r="16" fill="#eef7f1" stroke="#2e7d4f" stroke-width="3"/>
+<text x="621" y="490" font-size="31" fill="#1f2933" text-anchor="start" font-weight="bold">Generative AI</text>
+<text x="621" y="530" font-size="25" fill="#1f2933" text-anchor="start" font-weight="normal">Deep learning that writes new text or makes images.</text>
+<text x="621" y="564" font-size="24" fill="#5f6b7a" text-anchor="start" font-weight="normal">Example: a chatbot.</text>
 </svg>

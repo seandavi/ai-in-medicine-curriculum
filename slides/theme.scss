@@ -120,3 +120,8 @@ $presentation-heading-color: #f1f3f4;
 
 // Click-to-load iframe for heavy embeds.
 .reveal .loadframe iframe { width: 100%; height: 520px; border: 0; background: #fff; border-radius: 8px; }
+
+// Fitting by hand: the two parameter sliders beside the eGFR-style curve.
+.reveal .dials .eq { font-size: 30px; margin: 0 0 .2em; }
+.reveal .dials .w-range span { min-width: 1em; font-weight: bold; }
+.reveal .dials .w-range input[type="range"] { width: 10em; }
