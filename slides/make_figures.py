@@ -6,8 +6,9 @@ Standard library only. Run from the repository root:
 
 Writes into images/, next to the book's other figures, so a chapter can use
 the same file. Every figure draws its own white card, so it reads the same on
-the dark slide theme and the light book theme. Data figures are redrawn from
-the numbers in the cited paper; the illustrative figure says so in its legend.
+the paper-coloured slide theme and the light book theme. Data figures are
+redrawn from the numbers in the cited paper; the illustrative figure says so in
+its legend.
 """
 
 from pathlib import Path
