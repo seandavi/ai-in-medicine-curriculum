@@ -53,10 +53,30 @@ For the last exercise you need a chatbot account, set up before the session. Use
 If you only want what to do on the wards, the practical slides are 21, 40 to 42, 45 and 46.
 :::
 
+## Four words, each inside the one before
+
+![Each term is one kind of the term around it.](../images/ai-nested-circles.svg){.card fig-alt="Four nested circles. The largest is artificial intelligence: a computer doing a task that seems to need judgment, such as MYCIN in the 1970s, whose rules were written by hand. Inside it is machine learning: the rules are learned from data, such as the eGFR equation. Inside that is deep learning: machine learning with many layers, a neural network, such as a model that reads chest X-rays. The smallest is generative AI: deep learning that writes new text or makes images, such as a chatbot." height="430"}
+
+Yesterday we saw how we got here. Today: what goes on inside each circle.
+
+::: notes
+Yesterday's talk was the history: how we got from rules written by hand to the chatbots of today. Here are four words from that history, and how they fit together. If you missed yesterday, nothing today depends on it.
+
+Artificial intelligence is the largest circle. It means a computer doing a task that seems to need judgment, by any method. MYCIN, from the 1970s, advised on antibiotics with rules that experts wrote by hand.
+
+Machine learning is inside it. The rules are not written by hand. They are learned from data. The eGFR equation on every chemistry panel is an example. A statistician would call it a regression. The line between statistics and machine learning is blurry, and for this course a model learned from data counts.
+
+Deep learning is inside machine learning. It uses a neural network: many layers of simple units, each passing numbers to the next. Models that read images, such as chest X-rays, are usually built this way.
+
+Generative AI is inside deep learning. These models write new text or make new images. A chatbot is the example you know.
+
+Today we start in the second circle, with the eGFR, and end in the smallest, with the chatbot. The same loop is under both.
+:::
+
 # The number nobody measured {background-color="#1d2733"}
 
 ::: notes
-We start in a clinic, not with a definition.
+Now to a clinic, and a model you already use.
 :::
 
 ## Pre-op clinic, surgery sub-internship
