@@ -86,6 +86,49 @@ def legend_line(x, y, label, dashed=False) -> list[str]:
     ]
 
 
+def ai_nested_circles() -> str:
+    """Four terms, each inside the one before: AI, machine learning, deep learning, generative AI."""
+    w, h = 1200, 600
+    rings = [
+        # name, fill, stroke, radius, the one plain-language line, an example
+        ("Artificial intelligence", "#f1f3f5", "#9aa0a6", 270,
+         "A computer doing a task that seems to need judgment.", "Example: MYCIN (1970s), rules written by hand."),
+        ("Machine learning", "#eef3fb", BLUE, 205,
+         "The rules are learned from data, not written by hand.", "Example: the eGFR equation."),
+        ("Deep learning", "#fff7e6", ORANGE, 140,
+         "Machine learning with many layers: a neural network.", "Example: a model that reads chest X-rays."),
+        ("Generative AI", "#eef7f1", GREEN, 78,
+         "Deep learning that writes new text or makes images.", "Example: a chatbot."),
+    ]
+    cx, bottom = 315, 570
+    body = []
+    # Circles share a bottom edge, so each sits inside the one before.
+    for _name, fill, stroke, r, _line, _example in rings:
+        body.append(f'<circle cx="{cx}" cy="{bottom - r}" r="{r}" fill="{fill}" stroke="{stroke}" stroke-width="3"/>')
+    labels = [("AI", 75), ("Machine learning", 205), ("Deep learning", 335)]
+    for label, y in labels:
+        body.append(text(cx, y, label, 26, INK, "middle", "bold"))
+    body.append(text(cx, bottom - 78 - 6, "Generative", 24, INK, "middle", "bold"))
+    body.append(text(cx, bottom - 78 + 24, "AI", 24, INK, "middle", "bold"))
+    # Legend: one entry per circle, outermost first.
+    lx, ly = 640, 70
+    for name, fill, stroke, _r, line, example in rings:
+        body.append(f'<circle cx="{lx + 14}" cy="{ly - 8}" r="14" fill="{fill}" stroke="{stroke}" stroke-width="3"/>')
+        body.append(text(lx + 40, ly, name, 25, INK, weight="bold"))
+        body.append(text(lx + 40, ly + 34, line, 20, INK))
+        body.append(text(lx + 40, ly + 62, example, 20, MUTED))
+        ly += 132
+    return svg(
+        w, h, body,
+        "AI, machine learning, deep learning, and generative AI, each inside the one before",
+        "Four nested circles. The largest is artificial intelligence: a computer doing a task that seems to need "
+        "judgment, such as MYCIN in the 1970s, whose rules were written by hand. Inside it is machine learning: "
+        "the rules are learned from data, such as the eGFR equation. Inside that is deep learning: machine learning "
+        "with many layers, a neural network, such as a model that reads chest X-rays. The smallest, inside deep "
+        "learning, is generative AI: deep learning that writes new text or makes images, such as a chatbot.",
+    )
+
+
 def egfr_bridge() -> str:
     """What the eGFR equation takes in and what it stands for (Inker et al. 2021)."""
     w, h = 1200, 560
@@ -301,6 +344,7 @@ def embeddings_illustrative() -> str:
 
 def main() -> None:
     figures = {
+        "ai-nested-circles.svg": ai_nested_circles(),
         "egfr-bridge.svg": egfr_bridge(),
         "model-loop.svg": model_loop(),
         "lost-in-the-middle-liu-2024.svg": lost_in_the_middle(),
