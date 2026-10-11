@@ -432,12 +432,18 @@ Fit a formula to 8,254 people, then report how well it predicts **those same peo
 A **separate test set** is the least you should accept.<br>A number with no test set is not a number yet.
 :::
 
+::: fragment
+[The usual rule is three sets: a **training set** to fit the model, a **validation set** to choose between models, and a **test set**, used once, at the end.]{.defn}
+:::
+
 ::: notes
 Here is the mistake the eGFR researchers avoided, and the mistake many vendor slides make.
 
 Suppose you fit a formula to eight thousand people, and then you report how well it predicts those same eight thousand people. You have measured how well the formula memorized them, not how well it will work on the next patient. A flexible enough model can fit its training data perfectly and still be useless.
 
-That is why a separate test set is the least you should accept. Fit on one set of cases, and report performance on a different set the model never saw. When someone gives you one number and does not say which set it came from, you do not have a number yet. The next slide shows it happening.
+That is why a separate test set is the least you should accept. Fit on one set of cases, and report performance on a different set the model never saw. When someone gives you one number and does not say which set it came from, you do not have a number yet.
+
+The usual rule uses three sets. The training set is used to fit the model. The validation set is used to choose between models, for example between a simpler one and a more flexible one. The test set is kept aside and used once, at the end. If the test set is used to choose, it becomes a second validation set, and its number is optimistic too. The next slide shows why this matters.
 :::
 
 ## Too simple, too flexible
@@ -535,6 +541,45 @@ If you were only ever shown the training error, you would pick the worst model.
 PAUSE: 2 min. Pause here and move the slider from one end to the other.
 :::
 
+## Simple models are easier to check {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+### Simple: the eGFR equation
+
+- A **handful of numbers**. You can read each one.
+- You can check them against what you know: higher creatinine, lower eGFR.
+- A few thousand people were enough to fit it.
+- It can only follow the shape its equation allows.
+:::
+::: {.column width="50%"}
+### Flexible: a neural network
+
+- **Thousands to billions of numbers**. Nobody reads them one by one.
+- It can fit complex patterns: an image, a sentence.
+- It is harder to explain why it gave one answer.
+- It **needs much more data**, or it fits the noise, as on the last slide.
+:::
+::::
+
+::: {.fragment .statement}
+More flexible: more patterns it can fit,<br>less you can explain, more data it needs.
+:::
+
+[A model is **interpretable** when a person can read why it gave its answer.]{.defn}
+
+::: notes
+The slider showed one trade-off. Here is a second one that comes with it.
+
+The eGFR equation is a handful of numbers. You can read each one and check it against what you know. Higher creatinine gives a lower eGFR, older age gives a lower eGFR, and you could work it out by hand. A few thousand people were enough to fit it. The cost is that it can only follow the shape its equation allows.
+
+A neural network has thousands to billions of numbers. It can fit patterns no short equation can, such as what a pneumothorax looks like on a film, or how a sentence goes on. But nobody can read those numbers one by one, so it is harder to explain why it gave a particular answer. And it needs far more data, or it fits the noise, as the slider showed at the far right.
+
+A model is called interpretable when a person can read why it gave its answer. Neither kind is better in general. For a lab value, a simple model you can check is often the right choice. Images and language need the flexible kind, and then the test set matters even more.
+
+LIVE: One minute. Read the last line and move on.
+:::
+
 ## Try it after class: overfitting you can see {.smaller}
 
 Open **[playground.tensorflow.org](https://playground.tensorflow.org)**. No account, no install. A small neural network learns to **separate orange dots from blue dots**. All three steps use the same noisy data, with only 20% of the dots used for training.
@@ -567,11 +612,11 @@ You have it if your third answer says this. At about five hundred epochs, traini
 LIVE: Fifteen seconds. Point to the links and the three questions, say it is for after class, and move on. Paste the deck link in the chat again so students can open the links later.
 :::
 
-## Same failure in the clinic: a sepsis model tested on new patients {.smaller}
+## You saw this sepsis model yesterday {.smaller}
 
 :::: {.columns}
 ::: {.column width="42%"}
-A vendor sepsis model, in use at hundreds of US hospitals in 2021, was tested at one academic center on **38,455 hospitalizations** (2018 to 2019), by people who had not built it [@pmid:34152373].
+Here is why it belongs in today's talk: it is the same failure, **on new patients**. A vendor sepsis model, in use at hundreds of US hospitals in 2021, was tested at one academic center on **38,455 hospitalizations** (2018 to 2019), by people who had not built it [@pmid:34152373].
 
 - About **7 in 100** admissions had sepsis.
 - Area under the curve **0.63** (0.5 is chance; 1.0 is perfect).
@@ -586,13 +631,15 @@ A vendor sepsis model, in use at hundreds of US hospitals in 2021, was tested at
 [A test on patients from a different setting than the ones the model was built on is called **external validation**. **No alert does not mean no sepsis.**]{.defn}
 
 ::: notes
-The clinical version of the same problem. One EHR vendor's sepsis model, the Epic Sepsis Model, was in use at hundreds of US hospitals in 2021. One academic center tested it on thirty-eight thousand four hundred fifty-five of its own hospitalizations, from 2018 and 2019. A test on patients from a different setting than the ones the model was built on is called external validation. Here the testers were also independent of the vendor.
+You saw this model yesterday. Here is why it belongs in today's talk: it is the same failure as the slider, in the clinic. One EHR vendor's sepsis model, the Epic Sepsis Model, was in use at hundreds of US hospitals in 2021. One academic center tested it on thirty-eight thousand four hundred fifty-five of its own hospitalizations. A test on patients from a different setting than the ones the model was built on is called external validation.
 
-About seven in a hundred admissions had sepsis. The area under the curve was zero point six three, on a scale where zero point five is no better than chance. Of every hundred patients who had sepsis, the model missed sixty-seven. And it alerted on eighteen of every hundred admissions. Since only seven in a hundred had sepsis, most alerts were for patients who did not.
+The area under the curve was zero point six three, where zero point five is no better than chance. Of every hundred patients who had sepsis, the model missed sixty-seven. And since it alerted on eighteen of every hundred admissions, when only about seven had sepsis, most alerts were for patients who did not.
 
-The study shows that the model performed poorly at this center. It does not show why. A common reason is that the patients a model meets in use differ from the patients it was built on. The name for that is dataset shift.
+The study does not show why. A common reason is that the patients a model meets in use differ from the patients it was built on. The name for that is dataset shift.
 
 For the wards: no alert does not mean no sepsis. And if you silence an alert, you should be able to say why.
+
+LIVE: One minute. They saw this study yesterday; name the link to the test set and move on.
 :::
 
 ## The published number is the optimistic one
