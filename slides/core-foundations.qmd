@@ -5,7 +5,7 @@ author: "AI in Medicine · Week 1 · AIM-1 and AIM-2 · 60 minutes live, about 7
 footer: "[The chapter for this session](../chapters/core-foundations.html) · AI in Medicine"
 ---
 
-## Three rules for every session
+## Three rules for every session {.center-v}
 
 1. **No patient information** in any chatbot, including your school's, unless your hospital's privacy office has approved that tool in writing.
 2. **Check it before it counts.** A claim you have not checked is not a fact yet.
@@ -27,7 +27,10 @@ LIVE: Turn on Zoom live captions and paste the deck link into the chat at the st
 
 ## What you will be able to do {.smaller}
 
-By the end of this session you can:
+:::: {.columns}
+::: {.column width="64%"}
+::: panel
+[By the end of this session you can]{.ptitle}
 
 1. Say how **AI, machine learning, deep learning, and generative AI** fit inside each other.
 2. Say what the eGFR was **learned from**: its inputs, its output, the people it was fit to, and what **fitting** it meant.
@@ -35,12 +38,26 @@ By the end of this session you can:
 4. Explain why a model's score on cases it **has already seen** tells you nothing, and what the **three sets** are for.
 5. Say in one sentence why a chatbot can give you a **citation that does not exist**.
 6. Name two limits of the **context window**, and what each changes about how you type.
+:::
+:::
+::: {.column width="36%"}
+::: {.panel .warm}
+[The hour]{.ptitle}
 
-| Start | The eGFR, and how models learn | From tables to words | Back to the clinic | Questions |
-|---|---|---|---|---|
-| 5 min | 26 min | 17 min | 9 min | 3 min |
+| Block | Minutes |
+|---|--:|
+| Start | 5 |
+| The eGFR, and how models learn | 26 |
+| From tables to words | 17 |
+| Back to the clinic | 9 |
+| Questions | 3 |
+
+: {.big tbl-colwidths="[75,25]"}
 
 **You need:** a browser. Nothing to install, and no account. You will try things on the slides as we go.
+:::
+:::
+::::
 
 [Click outside a slider or answer box before using the arrow keys. The narration is also available [as text](core-foundations-narration.txt).]{.src}
 
@@ -56,7 +73,7 @@ If you only want what to do on the wards, the practical slides are 22, 38 and 39
 
 ## Four words, each inside the one before
 
-![](../images/ai-nested-circles.svg){.card fig-alt="Four nested circles. The largest is artificial intelligence: a computer doing a task that seems to need judgment, such as MYCIN in the 1970s, whose rules were written by hand. Inside it is machine learning: the rules are learned from data, such as the eGFR equation. Inside that is deep learning: machine learning with many layers, a neural network, such as a model that reads chest X-rays. The smallest is generative AI: deep learning that writes new text or makes images, such as a chatbot." height="450"}
+![](../images/ai-nested-circles.svg){.card fig-alt="Four nested circles. The largest is artificial intelligence: a computer doing a task that seems to need judgment, such as MYCIN in the 1970s, whose rules were written by hand. Inside it is machine learning: the rules are learned from data, such as the eGFR equation. Inside that is deep learning: machine learning with many layers, a neural network, such as a model that reads chest X-rays. The smallest is generative AI: deep learning that writes new text or makes images, such as a chatbot." height="560"}
 
 Each is one kind of the one around it. Yesterday we saw how we got here. Today: how the models inside these circles are made.
 
@@ -74,13 +91,13 @@ Generative AI is inside deep learning. These models write new text or make new i
 Today we start in the second circle, with the eGFR, and end in the smallest, with the chatbot. The same loop is under both.
 :::
 
-# The number nobody measured {background-color="#1d2733"}
+## [Part 1]{.year} The number nobody measured {.divider background-color="#173f45"}
 
 ::: notes
 Now to a clinic, and a model you already use.
 :::
 
-## Pre-op clinic, surgery sub-internship
+## Pre-op clinic, surgery sub-internship {.center-v}
 
 :::: {.columns}
 ::: {.column width="48%"}
@@ -115,8 +132,9 @@ The attending asks whether her kidneys are all right for the contrast CT the sur
 The panel on the slide is made up for this course. It is not a real patient.
 :::
 
-## Where does the 57 come from? {.smaller}
+## Where does the 57 come from?
 
+::: panel
 ```{ojs}
 {
   const options = [
@@ -139,6 +157,7 @@ The panel on the slide is made up for this course. It is not a real patient.
   return html`${form}${reveal}${result}`;
 }
 ```
+:::
 
 ::: notes
 Before I go on, commit to an answer. Where does the fifty-seven come from? Did a machine measure it in her blood? Was it measured from a timed urine collection? Or did an equation calculate it from three other numbers?
@@ -148,7 +167,7 @@ PAUSE: 1 min. Pause here, pick one, then press the button.
 LIVE: Run this as the anonymous Zoom poll. Show the poll result before you press the button on the slide.
 :::
 
-## Nobody measured her GFR
+## Nobody measured her GFR {.center-v}
 
 ::: incremental
 - Measuring GFR means **infusing a marker** the kidney filters and does nothing else with, such as iohexol, and timing how fast it clears.
@@ -166,7 +185,7 @@ Nobody measured her glomerular filtration rate. Measuring it means infusing a ma
 The fifty-seven was computed from three things the lab did have: her creatinine, her age, and her sex. Something turned those three numbers into a kidney function, and you trusted it enough to clear her for contrast.
 :::
 
-## Where did the equation come from? {.center}
+## Where did the equation come from? {.center-v}
 
 ::: {.statement}
 Not from physiology.<br>It was **learned from data**.
@@ -190,7 +209,7 @@ The eGFR is a model. It is the model you already trust most, and you have probab
 Remember this patient. She weighs forty-five kilograms and has lost a good deal of muscle over a year of illness. We will come back to her at the end. Nobody has told her that a model had a part in the fifty-seven.
 :::
 
-## Fit the curve yourself {.smaller}
+## Fit the curve yourself
 
 ```{ojs}
 dialData = {
@@ -216,19 +235,19 @@ dialBest = {
 
 ```{ojs}
 {
-  const W = 560, H = 380, l = 64, r = 14, t = 12, b = 54, ymax = 170;
+  const W = 640, H = 400, l = 64, r = 14, t = 12, b = 54, ymax = 170;
   const X = cr => l + (cr - 0.5) / 3.5 * (W - l - r), Y = g => H - b - Math.min(g, ymax) / ymax * (H - b - t);
   const f = dialCurve(dialA, dialB);
   const grid = Array.from({ length: 141 }, (_, i) => 0.5 + i * 0.025);
   const path = "M" + grid.map(c => `${X(c).toFixed(1)},${Y(f(c)).toFixed(1)}`).join("L");
-  return html`<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Forty made-up people, creatinine against measured GFR, with the curve for a ${dialA} and b ${dialB}. Average miss ${dialMiss(dialA, dialB).toFixed(1)}.">
-    ${[0, 40, 80, 120, 160].map(v => `<line x1="${l}" x2="${W - r}" y1="${Y(v)}" y2="${Y(v)}" stroke="#3c4043"/><text x="${l - 8}" y="${Y(v) + 6}" fill="#b8bec5" font-size="17" text-anchor="end">${v}</text>`).join("")}
-    ${[1, 2, 3, 4].map(v => `<text x="${X(v)}" y="${H - b + 24}" fill="#b8bec5" font-size="17" text-anchor="middle">${v}</text>`).join("")}
-    ${dialData.map(p => `<line x1="${X(p.cr).toFixed(1)}" x2="${X(p.cr).toFixed(1)}" y1="${Y(p.gfr).toFixed(1)}" y2="${Y(f(p.cr)).toFixed(1)}" stroke="#fcad70" stroke-width="1.5" opacity=".7"/>`).join("")}
-    ${dialData.map(p => `<circle cx="${X(p.cr).toFixed(1)}" cy="${Y(p.gfr).toFixed(1)}" r="5" fill="#e8eaed"/>`).join("")}
-    <path d="${path}" fill="none" stroke="#8ab4f8" stroke-width="4"/>
-    <text x="${(l + W - r) / 2}" y="${H - 8}" fill="#e8eaed" font-size="18" text-anchor="middle">creatinine, mg/dL</text>
-    <text x="16" y="${(t + H - b) / 2}" fill="#e8eaed" font-size="18" text-anchor="middle" transform="rotate(-90 16 ${(t + H - b) / 2})">measured GFR</text>
+  return html`<svg class="wchart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Forty made-up people, creatinine against measured GFR, with the curve for a ${dialA} and b ${dialB}. Average miss ${dialMiss(dialA, dialB).toFixed(1)}.">
+    ${[0, 40, 80, 120, 160].map(v => `<line x1="${l}" x2="${W - r}" y1="${Y(v)}" y2="${Y(v)}" stroke="${ink.rule}"/><text x="${l - 8}" y="${Y(v) + 6}" fill="${ink.muted}" font-size="17" text-anchor="end">${v}</text>`).join("")}
+    ${[1, 2, 3, 4].map(v => `<text x="${X(v)}" y="${H - b + 24}" fill="${ink.muted}" font-size="17" text-anchor="middle">${v}</text>`).join("")}
+    ${dialData.map(p => `<line x1="${X(p.cr).toFixed(1)}" x2="${X(p.cr).toFixed(1)}" y1="${Y(p.gfr).toFixed(1)}" y2="${Y(f(p.cr)).toFixed(1)}" stroke="${ink.terracotta}" stroke-width="1.5" opacity=".8"/>`).join("")}
+    ${dialData.map(p => `<circle cx="${X(p.cr).toFixed(1)}" cy="${Y(p.gfr).toFixed(1)}" r="5" fill="${ink.ink}"/>`).join("")}
+    <path d="${path}" fill="none" stroke="${ink.teal}" stroke-width="4"/>
+    <text x="${(l + W - r) / 2}" y="${H - 8}" fill="${ink.inkSoft}" font-size="18" text-anchor="middle">creatinine, mg/dL</text>
+    <text x="22" y="${(t + H - b) / 2}" fill="${ink.inkSoft}" font-size="18" text-anchor="middle" transform="rotate(-90 22 ${(t + H - b) / 2})">measured GFR</text>
   </svg>`;
 }
 ```
@@ -271,10 +290,10 @@ viewof dialB = rangeInput({ label: "b", min: 0, max: 2, step: 0.05, value: 0.3 }
 :::
 ::::
 
-[● one made-up person · orange line: how far the curve misses them · blue: the curve your dials make. Generated in your browser.]{.src}
+[● one made-up person · thin line: how far the curve misses them · thick line: the curve your dials make. Generated in your browser.]{.src}
 
 ::: notes
-Here is fitting, done by hand. Each dot is one made-up person: creatinine across, measured GFR up. The blue curve is a simple equation with two numbers in it, a and b. Those two numbers are the dials. The number a sets how high the curve sits: it is the GFR the curve gives at a creatinine of one. The number b sets how fast GFR falls as creatinine rises. Each thin orange line is a miss: how far one person's measured GFR is from the curve. The number beside the sliders is the average miss.
+Here is fitting, done by hand. Each dot is one made-up person: creatinine across, measured GFR up. The thick curve is a simple equation with two numbers in it, a and b. Those two numbers are the dials. The number a sets how high the curve sits: it is the GFR the curve gives at a creatinine of one. The number b sets how fast GFR falls as creatinine rises. Each thin line is a miss: how far one person's measured GFR is from the curve. The number beside the sliders is the average miss.
 
 PAUSE: 2 min. Move the two sliders and make the average miss as small as you can. Then press "Show the best fit".
 
@@ -285,7 +304,7 @@ The data on this slide are made up, and the curve is simpler than the real equat
 LIVE: About two minutes. Move the sliders yourself and ask the room which way to move b. Then press the button, and show the last line.
 :::
 
-# The loop every model comes from {background-color="#1d2733"}
+## [Part 1, continued]{.year} The loop every model comes from {.divider background-color="#173f45"}
 
 ::: notes
 The next fifteen minutes give you five words and two questions. They will sort every model you meet in residency.
@@ -293,7 +312,7 @@ The next fifteen minutes give you five words and two questions. They will sort e
 
 ## What the equation connects
 
-![Redrawn from the description of the CKD-EPI 2021 development [@pmid:34554658].](../images/egfr-bridge.svg){.card fig-alt="Diagram. Age, sex, and creatinine, the three things the lab has, feed an equation learned from 8,254 people whose GFR was measured. The equation outputs the eGFR on your panel, which stands in for measured GFR, rarely done in routine care. A grey box, muscle mass, diet, and drugs that block secretion, changes creatinine without changing GFR." height="400"}
+![Redrawn from the description of the CKD-EPI 2021 development [@pmid:34554658].](../images/egfr-bridge.svg){.card fig-alt="Diagram. Age, sex, and creatinine, the three things the lab has, feed an equation learned from 8,254 people whose GFR was measured. The equation outputs the eGFR on your panel, which stands in for measured GFR, rarely done in routine care. A grey box, muscle mass, diet, and drugs that block secretion, changes creatinine without changing GFR." height="540"}
 
 [A **proxy** is a number you use in place of the one you want, because the one you want is hard to get. Here the eGFR, calculated from three lab values, stands in for measured GFR.]{.defn}
 
@@ -305,7 +324,7 @@ Look at the grey box at the bottom. Muscle mass, diet, and some drugs change cre
 A number you use in place of the one you want, because the one you want is hard to get, is called a proxy. Here the eGFR, calculated from three lab values, stands in for the measured GFR. One of this course's recurring lessons is that proxies fail: the stand-in and the real thing can come apart, and they come apart for some patients more than for others.
 :::
 
-## Five words for the rest of the course {.smaller}
+## Five words for the rest of the course
 
 | Word | Meaning | In the eGFR |
 |---|---|---|
@@ -315,7 +334,7 @@ A number you use in place of the one you want, because the one you want is hard 
 | **Test set** | cases held back to check it afterwards | 4,050 people in 12 other studies |
 | **Model** | the equation once fit | `eGFR = f(creatinine, age, sex)` |
 
-: {tbl-colwidths="[18,32,50]"}
+: {.big tbl-colwidths="[18,32,50]"}
 
 [*f* stands for **function**: a rule that turns inputs into an output. **Fit** means a computer tried numbers in the equation until its predictions were as close to the measured values as they could get [@pmid:34554658].]{.defn}
 
@@ -327,7 +346,7 @@ Predictors are the inputs: creatinine, age, and sex. The response is the thing b
 The letter f stands for function, which just means a rule that turns inputs into an output. Fit means that a computer tried numbers in the equation until its predictions were as close to the measured values as they could get. For the eGFR, the model is a handful of numbers. For a chatbot, it is billions. The role is the same.
 :::
 
-## One equation, three generations {.smaller}
+## One equation, three generations
 
 | Equation | Learned from | Where it failed, and for whom |
 |---|---|---|
@@ -335,7 +354,7 @@ The letter f stands for function, which just means a rule that turns inputs into
 | CKD-EPI, 2009 | 8,254 people in 10 studies | Included a race term. Even with it, the equation overestimated measured GFR in Black adults (median 3.7 mL/min/1.73 m²). An overestimate makes kidney disease look milder than it is [@pmid:34554658] |
 | CKD-EPI, 2021 | the same 8,254, refit without race | Now a few mL/min too low in Black adults and too high in others. A version that adds cystatin C, a second blood marker that does not depend on muscle, is more accurate [@pmid:34554658; @pmid:34563581] |
 
-: {tbl-colwidths="[16,26,58]"}
+: {.big tbl-colwidths="[16,26,58]"}
 
 ::: {.fragment .statement}
 The training population is part of the model,<br>as much as the equation is.
@@ -353,7 +372,7 @@ LIVE: If asked why the race term was added: in the 2009 data, Black participants
 
 ## The loop, drawn once
 
-![The loop every learned model comes from. The symbol ≈ means "approximately equal to".](../images/model-loop.svg){.card fig-alt="Diagram. Raw material such as labs, images, notes, or text becomes predictors. The truth for each case, such as measured GFR, sepsis yes or no, or the next word, joins them in a learning step that finds f so that truth is approximately f of predictors. The result is a model. A new case with unknown truth goes through the model to give a prediction." height="400"}
+![The loop every learned model comes from. The symbol ≈ means "approximately equal to".](../images/model-loop.svg){.card fig-alt="Diagram. Raw material such as labs, images, notes, or text becomes predictors. The truth for each case, such as measured GFR, sepsis yes or no, or the next word, joins them in a learning step that finds f so that truth is approximately f of predictors. The result is a model. A new case with unknown truth goes through the model to give a prediction." height="520"}
 
 The eGFR, a sepsis alert, and a chatbot all come from this loop. Only the contents of the boxes differ.
 
@@ -370,6 +389,8 @@ The eGFR, a sepsis alert in the EHR, and a chatbot differ only in what goes in t
 | Does the training data contain the answer? | **Supervised** | **Unsupervised** |
 | If supervised: does the model give a category? | **Classification** | **Regression** (a number) |
 
+: {.big tbl-colwidths="[50,25,25]"}
+
 ::: fragment
 A regression is wrong **by an amount**. A classification is wrong **by a kind**: a miss or a false alarm. A miss costs the patient who was missed. A false alarm costs the staff who answer it, and the patient worked up for nothing.
 :::
@@ -384,7 +405,7 @@ Second, and only for a supervised model: does it give a category or a number? Th
 The difference matters for how you judge it. A regression is wrong by an amount. A classification is wrong by a kind, a miss or a false alarm. A miss costs the patient who was missed. A false alarm costs the staff who answer it, and the patient who is worked up for nothing.
 :::
 
-## Try it: sort four models {.smaller}
+## Try it: sort four models
 
 ```{ojs}
 sorterRows = [
@@ -423,7 +444,7 @@ The last one is the surprise. A chatbot is trained with an answer for every case
 LIVE: Give the room ninety seconds. Ask for the chatbot row in the chat, sent on your count, before you press check.
 :::
 
-## Cases it has already seen prove nothing {.center}
+## Cases it has already seen prove nothing {.center-v}
 
 ::: {.statement}
 Fit a formula to 8,254 people, then report how well it predicts **those same people**, and you have measured how well it *memorized* them.
@@ -485,16 +506,16 @@ bvFit = fitPoly(bvData.train, degree)
 ::: {.column width="56%"}
 ```{ojs}
 {
-  const W = 540, H = 340, p = 14;
+  const W = 600, H = 340, p = 14;
   const x = v => p + (v + 1) / 2 * (W - 2 * p), y = v => H / 2 - Math.max(-3, Math.min(3, v)) / 2.2 * (H / 2 - p);
   const grid = Array.from({ length: 241 }, (_, i) => -1 + i / 120);
   const path = f => "M" + grid.map(v => `${x(v).toFixed(1)},${y(f(v)).toFixed(1)}`).join("L");
   const now = bvErrors[degree];
-  return html`<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Fitted curve at flexibility ${degree}: training error ${now.train.toFixed(2)}, test error ${now.test.toFixed(2)}.">
-    <path d="${path(bvData.truth)}" fill="none" stroke="#9aa0a6" stroke-width="2" stroke-dasharray="6 6"/>
-    ${bvData.test.map(d => `<circle cx="${x(d.x).toFixed(1)}" cy="${y(d.y).toFixed(1)}" r="4" fill="none" stroke="#fcad70" stroke-width="1.6"/>`).join("")}
-    ${bvData.train.map(d => `<circle cx="${x(d.x).toFixed(1)}" cy="${y(d.y).toFixed(1)}" r="6.5" fill="#e8eaed"/>`).join("")}
-    <path d="${path(bvFit)}" fill="none" stroke="#8ab4f8" stroke-width="4"/>
+  return html`<svg class="wchart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Fitted curve at flexibility ${degree}: training error ${now.train.toFixed(2)}, test error ${now.test.toFixed(2)}.">
+    <path d="${path(bvData.truth)}" fill="none" stroke="${ink.muted}" stroke-width="2" stroke-dasharray="6 6"/>
+    ${bvData.test.map(d => `<circle cx="${x(d.x).toFixed(1)}" cy="${y(d.y).toFixed(1)}" r="4" fill="none" stroke="${ink.terracotta}" stroke-width="1.8"/>`).join("")}
+    ${bvData.train.map(d => `<circle cx="${x(d.x).toFixed(1)}" cy="${y(d.y).toFixed(1)}" r="6.5" fill="${ink.ink}"/>`).join("")}
+    <path d="${path(bvFit)}" fill="none" stroke="${ink.teal}" stroke-width="4"/>
   </svg>`;
 }
 ```
@@ -502,19 +523,19 @@ bvFit = fitPoly(bvData.train, degree)
 ::: {.column width="44%"}
 ```{ojs}
 {
-  const W = 420, H = 340, l = 54, r = 16, t = 16, b = 46, cap = 1.5;
+  const W = 520, H = 340, l = 54, r = 16, t = 16, b = 46, cap = 1.5;
   const X = d => l + d / 11 * (W - l - r), Y = e => H - b - Math.min(e, cap) / cap * (H - b - t);
   const line = key => "M" + bvErrors.map(e => `${X(e.d).toFixed(1)},${Y(e[key]).toFixed(1)}`).join("L");
   const off = bvErrors.some(e => e.test > cap);
   const now = bvErrors[degree];
-  return html`<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Error by flexibility. Training error falls steadily. Test error falls, then rises${off ? " off the chart" : ""}. At flexibility ${degree}: training ${now.train.toFixed(2)}, test ${now.test.toFixed(2)}.">
-    ${[0, 0.5, 1, 1.5].map(v => `<line x1="${l}" x2="${W - r}" y1="${Y(v)}" y2="${Y(v)}" stroke="#3c4043"/><text x="${l - 8}" y="${Y(v) + 6}" fill="#b8bec5" font-size="17" text-anchor="end">${v.toFixed(1)}</text>`).join("")}
-    <line x1="${X(degree)}" x2="${X(degree)}" y1="${t}" y2="${H - b}" stroke="#fdd663" stroke-width="2"/>
-    <path d="${line("train")}" fill="none" stroke="#e8eaed" stroke-width="3"/>
-    <path d="${line("test")}" fill="none" stroke="#fcad70" stroke-width="3"/>
-    ${off ? `<text x="${W - r}" y="${t + 34}" fill="#fcad70" font-size="17" text-anchor="end">test error off the chart ↑</text>` : ""}
-    <text x="${(l + W - r) / 2}" y="${H - 12}" fill="#e8eaed" font-size="18" text-anchor="middle">more flexible →</text>
-    <text x="16" y="${(t + H - b) / 2}" fill="#e8eaed" font-size="18" text-anchor="middle" transform="rotate(-90 16 ${(t + H - b) / 2})">error</text>
+  return html`<svg class="wchart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Error by flexibility. Training error falls steadily. Test error falls, then rises${off ? " off the chart" : ""}. At flexibility ${degree}: training ${now.train.toFixed(2)}, test ${now.test.toFixed(2)}.">
+    ${[0, 0.5, 1, 1.5].map(v => `<line x1="${l}" x2="${W - r}" y1="${Y(v)}" y2="${Y(v)}" stroke="${ink.rule}"/><text x="${l - 8}" y="${Y(v) + 6}" fill="${ink.muted}" font-size="17" text-anchor="end">${v.toFixed(1)}</text>`).join("")}
+    <line x1="${X(degree)}" x2="${X(degree)}" y1="${t}" y2="${H - b}" stroke="${ink.gold}" stroke-width="2.5"/>
+    <path d="${line("train")}" fill="none" stroke="${ink.ink}" stroke-width="3"/>
+    <path d="${line("test")}" fill="none" stroke="${ink.terracotta}" stroke-width="3"/>
+    ${off ? `<text x="${W - r}" y="${t + 34}" fill="${ink.terracotta}" font-size="17" text-anchor="end">test error off the chart ↑</text>` : ""}
+    <text x="${(l + W - r) / 2}" y="${H - 12}" fill="${ink.inkSoft}" font-size="18" text-anchor="middle">more flexible →</text>
+    <text x="16" y="${(t + H - b) / 2}" fill="${ink.inkSoft}" font-size="18" text-anchor="middle" transform="rotate(-90 16 ${(t + H - b) / 2})">error</text>
   </svg>`;
 }
 ```
@@ -531,7 +552,7 @@ bvFit = fitPoly(bvData.train, degree)
 [● cases the model learns from · ○ cases held back for testing · dashed: the real pattern, which the model never sees. Made-up data, generated in your browser. **Bias**: the error of a model that is too simple. **Variance**: the error of a model that is too flexible.]{.src}
 
 ::: notes
-Move the slider and watch. The filled dots are the cases the model learns from. The hollow orange dots were held back for testing. The dashed line is the real pattern, which the model never gets to see. Under the charts, the two numbers are the error on each set.
+Move the slider and watch. The filled dots are the cases the model learns from. The hollow dots were held back for testing. The dashed line is the real pattern, which the model never gets to see. Under the charts, the two numbers are the error on each set.
 
 At the far left the model is too simple. It is a flat or straight line through a curve, and it is wrong everywhere, on both sets. Statisticians call that kind of error bias, in a technical sense that has nothing to do with the social meaning.
 
@@ -546,20 +567,24 @@ PAUSE: 2 min. Pause here and move the slider from one end to the other.
 
 :::: {.columns}
 ::: {.column width="50%"}
-### Simple: the eGFR equation
+::: panel
+[Simple: the eGFR equation]{.ptitle}
 
 - A **handful of numbers**. You can read each one.
 - You can check them against what you know: higher creatinine, lower eGFR.
 - A few thousand people were enough to fit it.
 - It can only follow the shape its equation allows.
 :::
+:::
 ::: {.column width="50%"}
-### Flexible: a neural network
+::: {.panel .warm}
+[Flexible: a neural network]{.ptitle}
 
 - **Thousands to billions of numbers**. Nobody reads them one by one.
 - It can fit complex patterns: an image, a sentence.
 - It is harder to explain why it gave one answer.
 - It **needs much more data**, or it fits the noise, as on the last slide.
+:::
 :::
 ::::
 
@@ -590,6 +615,8 @@ Open **[playground.tensorflow.org](https://playground.tensorflow.org)**. No acco
 | 1 · Too simple | One layer of 2 units; inputs X₁ and X₂ only | [step 1](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=2&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false) |
 | 2 · In between | Two layers of 6; X₁, X₂, sin(X₁), sin(X₂) | [step 2](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=6,6&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=true&cosY=false&sinY=true&collectStats=false&problem=classification&initZero=false&hideText=false) |
 | 3 · Too flexible | Six layers of 8; all seven inputs | [step 3](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=8,8,8,8,8,8&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=true&xSquared=true&ySquared=true&cosX=false&sinX=true&cosY=false&sinY=true&collectStats=false&problem=classification&initZero=false&hideText=false) |
+
+: {.big}
 
 Press **play**, and **pause** at about 500 **epochs** (passes through the data). Under **OUTPUT**, note **training loss** (error on the dots it learns from) and **test loss** (error on dots it never sees). Then answer:
 
@@ -626,10 +653,10 @@ Here is why it belongs in today's talk: it is the same failure, **on new patient
 :::
 ::: {.column width="58%"}
 ![Redrawn from the numbers reported by Wong et al. (2021).](../images/sepsis-alert-external-validation.svg){.card fig-alt="Two grids of 100 squares. Left: of 100 patients who had sepsis, 33 got an alert and 67 did not. Right: of 100 admissions of any kind, 18 set off an alert."}
-:::
-::::
 
 [A test on patients from a different setting than the ones the model was built on is called **external validation**. **No alert does not mean no sepsis.**]{.defn}
+:::
+::::
 
 ::: notes
 You saw this model yesterday. Here is why it belongs in today's talk: it is the same failure as the slider, in the clinic. One EHR vendor's sepsis model, the Epic Sepsis Model, was in use at hundreds of US hospitals in 2021. One academic center tested it on thirty-eight thousand four hundred fifty-five of its own hospitalizations. A test on patients from a different setting than the ones the model was built on is called external validation.
@@ -643,7 +670,7 @@ For the wards: no alert does not mean no sepsis. And if you silence an alert, yo
 LIVE: One minute. They saw this study yesterday; name the link to the test set and move on.
 :::
 
-## The published number is the optimistic one
+## The published number is the optimistic one {.center-v}
 
 ::: {.statement}
 A model's performance on the cases it was built from is **usually the optimistic number**.
@@ -659,13 +686,13 @@ That gives you another of the course's recurring lessons: the published number i
 A model's performance on the cases it was built from is usually the best it will look. On new patients, especially from another hospital, it is usually lower. So ask three things of any model. What was it trained on? What was it tested on, and by whom? If the cases it was tested on are the cases it was trained on, you have not learned anything yet.
 :::
 
-# From tables to words {background-color="#1d2733"}
+## [Part 2]{.year} From tables to words {.divider background-color="#173f45"}
 
 ::: notes
 Now the chatbot. It is the same loop, with a different table. Seeing that is the main point of the second half.
 :::
 
-## A language model is the same loop, with a different table {.smaller}
+## A language model is the same loop, with a different table
 
 *the patient was started on empiric vancomycin*
 
@@ -678,7 +705,7 @@ Now the chatbot. It is the same loop, with a different table. Seeing that is the
 | the patient was started on | empiric |
 | the patient was started on empiric | vancomycin |
 
-: {tbl-colwidths="[65,35]"}
+: {.big tbl-colwidths="[65,35]"}
 
 ::: fragment
 Nobody labels anything. **Every sentence ever written is already a table like this.**
@@ -692,7 +719,7 @@ Now turn it into a table, the same kind of table as the eGFR. The predictors are
 Nobody had to label anything, because the next word is already in the text. Every sentence ever written becomes training cases with no labelling work. That is why these models could be trained on a very large fraction of the written internet.
 :::
 
-## The model reads tokens, not words {.smaller}
+## The model reads tokens, not words
 
 A **token** is a word or a piece of a word.
 
@@ -726,7 +753,7 @@ Each token is then turned into a list of numbers. That is the next slide.
 
 ## Words become numbers
 
-![Illustrative: positions placed by hand to show the idea, not computed from a model.](../images/embeddings-illustrative.svg){.card fig-alt="Illustrative scatter. Four antibiotics sit together at upper left, three loop diuretics together at upper right, and three days of the week together at the bottom, far from both drug groups." height="380"}
+![Illustrative: positions placed by hand to show the idea, not computed from a model.](../images/embeddings-illustrative.svg){.card fig-alt="Illustrative scatter. Four antibiotics sit together at upper left, three loop diuretics together at upper right, and three days of the week together at the bottom, far from both drug groups." height="520"}
 
 Each token becomes a list of numbers called an **embedding**. Tokens used in similar sentences get similar numbers.
 
@@ -740,7 +767,7 @@ This is the "raw material to predictors" box of the loop, done for words.
 LIVE: Skip in a live session.
 :::
 
-## Predict, pick, repeat {.smaller}
+## Predict, pick, repeat
 
 ```{ojs}
 nextTable = ({
@@ -798,14 +825,14 @@ nextDist = {
     if (w !== ".") line.append(" ");
     line.append(Object.assign(document.createElement(i === 0 ? "b" : "span"), { className: i === 0 ? "" : "picked", textContent: w }));
   });
-  return html`${line}
+  return html`<div class="sampler"><div>${line}
   <div class="illus-label">Made-up probabilities for this slide, not from a real model or from prescribing data.</div>
-  <div class="bars">${nextDist
-    ? nextDist.map(d => html`<div class="bar-row"><span>${d.token}</span><div class="bar" style="width:${(d.p * 100).toFixed(0)}%"></div><span class="num">${(d.p * 100).toFixed(0)}%</span></div>`)
+  <div>${go}${reset}</div></div>
+  <div class="bars with-num">${nextDist
+    ? nextDist.map(d => html`<div class="bar-row"><span class="bar-label">${d.token}</span><div class="bar-track"><div class="bar-fill warm" style="width:${(d.p * 100).toFixed(0)}%"></div></div><span class="bar-num">${(d.p * 100).toFixed(0)}%</span></div>`)
     : storyDone === "finished"
       ? html`<p>The sentence is finished. Press <b>Start over</b> and you will probably get a different one.</p>`
-      : html`<p>This small made-up table stops here. A real model never runs out: it has a probability for every token it knows, every time.</p>`}</div>
-  ${go}${reset}`;
+      : html`<p>This small made-up table stops here. A real model never runs out: it has a probability for every token it knows, every time.</p>`}</div></div>`;
 }
 ```
 
@@ -825,7 +852,7 @@ A real model does this with a vocabulary of roughly a hundred thousand tokens, l
 
 ## Watch: inside the model (8 min)
 
-{{< video https://www.youtube.com/watch?v=LPZh9BOjkQs width="100%" height="460" title="Large Language Models explained briefly, 3Blue1Brown" >}}
+{{< video https://www.youtube.com/watch?v=LPZh9BOjkQs width="100%" height="600" title="Large Language Models explained briefly, 3Blue1Brown" >}}
 
 [3Blue1Brown, *Large Language Models explained briefly*, 20 November 2024, 7 min 58 s, on [YouTube](https://www.youtube.com/watch?v=LPZh9BOjkQs) with captions. Transcript at [3blue1brown.com/lessons/mini-llm](https://www.3blue1brown.com/lessons/mini-llm).]{.src}
 
@@ -839,7 +866,7 @@ If you want the longer version, the chapter points you to the twenty-seven-minut
 LIVE: Skip the video in a live session and assign it.
 :::
 
-## A second training stage shapes the answers
+## A second training stage shapes the answers {.center-v}
 
 ::: incremental
 - People are paid to compare **pairs of answers** and say which they prefer.
@@ -861,7 +888,7 @@ It also means the model has been trained toward answers people rate well, which 
 LIVE: In a live session, say the last sentence on this slide and move on.
 :::
 
-## Nothing in this process checks whether a claim is true {.center}
+## Nothing in this process checks whether a claim is true {.center-v}
 
 ::: {.statement}
 At no step does the model itself look anything up, consult a database, or compare a statement to the world.
@@ -885,7 +912,7 @@ A real citation and a made-up one are both plausible ways to continue the words 
 Some tools you use add a web search around the model. Then the answer is built from what the search found, and the model can still misreport what it found. That is a different situation, and the critical appraisal session tests it.
 :::
 
-## What that looks like when it reaches you {.smaller}
+## What that looks like when it reaches you
 
 <div class="illus-label">Made-up exchange, not a real chatbot's output. Do not use it as a source for the HEART score.</div>
 
@@ -906,7 +933,7 @@ Read it as a clinician and it looks fine. The structure is right. The names are 
 The citation is the easiest part to check. The paper named is real, but it is a 2013 study that tested the score in more patients. The score was first described in 2008, in a different journal. Nothing in predicting the next word looks up a date, so both are plausible answers to "the original publication". The cutoffs and the advice to discharge are the parts that matter most for a patient, and you check those on MDCalc.
 :::
 
-## What this does and does not mean
+## What this does and does not mean {.center-v}
 
 ::: incremental
 - It does **not** mean the answer is usually wrong. On common, well-documented questions, the most plausible continuation is often the fact.
@@ -926,7 +953,7 @@ It means the error rate is not zero, and the tone does not change when the answe
 If you are someone who distrusts these tools, that is partly justified, and this is the part: they can be wrong in a confident voice. Checking every claim is a skill, not a weakness. Keep it. What is out of date is the idea that they are useless. They are useful when you check them.
 :::
 
-## The context window is a fixed size {.smaller}
+## The context window is a fixed size
 
 The **context window** is everything the model can see at once, counted in tokens.
 
@@ -944,11 +971,11 @@ viewof earlierTurns = rangeInput({ label: "Earlier turns in this chat", min: 0, 
   const keptTurns = Math.max(0, Math.min(earlierTurns, Math.floor((avail - reserve - pasted) / turn)));
   const answer = avail - pasted - keptTurns * turn;
   const full = earlierTurns > keptTurns || cutPages > 0;
-  const seg = (label, size, color) => size > 0 ? html`<div style="flex-basis:${size}%;background:${color}">${size > 16 ? label : ""}</div>` : "";
+  const seg = (label, size, cls) => size > 0 ? html`<div class="${cls}" style="flex-basis:${size}%">${size > 16 ? label : ""}</div>` : "";
   return html`<div class="budget" role="img" aria-label="Instructions ${sys}%, earlier turns ${Math.round(keptTurns * turn)}%, pasted ${Math.round(pasted)}%, question ${q}%, room for the answer ${Math.round(answer)}%.">
-    ${seg("Instructions", sys, "#9aa0a6")}${seg("Earlier turns", keptTurns * turn, "#d7aefb")}${seg("What you pasted", pasted, "#8ab4f8")}${seg("Question", q, "#fdd663")}${seg("Room for the answer", answer, "#81c995")}
+    ${seg("Instructions", sys, "seg-sys")}${seg("Earlier turns", keptTurns * turn, "seg-turns")}${seg("What you pasted", pasted, "seg-pasted")}${seg("Question", q, "seg-question")}${seg("Room for the answer", answer, "seg-answer")}
   </div>
-  <div class="budget-legend"><span class="sw" style="background:#9aa0a6"></span>the tool's own instructions <span class="sw" style="background:#d7aefb"></span>earlier turns <span class="sw" style="background:#8ab4f8"></span>what you pasted <span class="sw" style="background:#fdd663"></span>your question <span class="sw" style="background:#81c995"></span>room for the answer</div>
+  <div class="budget-legend"><span class="sw seg-sys"></span>the tool's own instructions <span class="sw seg-turns"></span>earlier turns <span class="sw seg-pasted"></span>what you pasted <span class="sw seg-question"></span>your question <span class="sw seg-answer"></span>room for the answer</div>
   <div class="fb ${full ? "no" : "ok"}" role="status">${full
     ? html`The window is full. ${earlierTurns > keptTurns ? `${earlierTurns - keptTurns} older turns were dropped or shortened. ` : ""}${cutPages > 0 ? `${cutPages} pages of what you pasted did not fit. ` : ""}Tools handle this differently: some cut, some summarize, some refuse.`
     : html`Everything fits. Room left for the answer: about ${Math.round(answer)}% of the window.`}</div>`;
@@ -960,7 +987,7 @@ viewof earlierTurns = rangeInput({ label: "Earlier turns in this chat", min: 0, 
 ::: notes
 One more built-in fact, because it changes how you type. Everything the model can see at once has to fit inside a fixed number of tokens, called the context window. That includes the tool's own instructions, the conversation so far, anything you pasted, your question, and the answer as it writes it. So the window is a shared budget.
 
-PAUSE: 1 min. Move the sliders. Paste more pages of a guideline, or keep a long conversation going, and watch the green space for the answer shrink.
+PAUSE: 1 min. Move the sliders. Paste more pages of a guideline, or keep a long conversation going, and watch the space for the answer shrink.
 
 When the window is full, something is removed. Older turns are dropped or shortened, or the end of what you pasted is cut. Different tools do this differently, and most do not tell you.
 
@@ -969,11 +996,16 @@ The sizes here are made up. Real windows are larger, and the figures change with
 
 ## The middle gets less attention {.smaller}
 
-![Redrawn from the appendix table for 20 documents in @doi:10.1162/tacl_a_00638.](../images/lost-in-the-middle-liu-2024.svg){.card fig-alt="Line chart. GPT-3.5-Turbo answered questions from 20 documents, one of which held the answer. Accuracy was 75.8% with the answer first, 57.2% at position 5, 53.8% at position 10, 55.4% at position 15, and 63.2% last. A dashed line at 56.1% shows the same model with no documents at all." height="390"}
-
+:::: {.columns}
+::: {.column width="56%"}
+![Redrawn from the appendix table for 20 documents in @doi:10.1162/tacl_a_00638.](../images/lost-in-the-middle-liu-2024.svg){.card fig-alt="Line chart. GPT-3.5-Turbo answered questions from 20 documents, one of which held the answer. Accuracy was 75.8% with the answer first, 57.2% at position 5, 53.8% at position 10, 55.4% at position 15, and 63.2% last. A dashed line at 56.1% shows the same model with no documents at all." width="100%"}
+:::
+::: {.column width="44%"}
 With the answer in the middle, the model did about as well as it did **with no documents at all**. Long inputs bring a related problem. A 2025 test covered 13 newer models. At 32,000 tokens, 11 of them scored less than half as well as on short inputs [@doi:10.48550/arXiv.2502.05167].
 
 [**Attention** here means how much weight the model gives each part of what it reads.]{.defn}
+:::
+::::
 
 ::: notes
 The second limit. Researchers gave a model twenty documents and a question, and only one document held the answer. They moved that document from first place to last and measured accuracy.
@@ -985,12 +1017,12 @@ This was GPT-3.5 in 2023. A 2025 study found a related problem in thirteen newer
 LIVE: If asked what attention is: it is the part of the model that decides how much each earlier token counts toward the next prediction. The twenty-seven-minute 3Blue1Brown video explains it. If asked why the middle gets less: the 2023 paper measured it and did not settle why.
 :::
 
-## Your two rules for the keyboard
+## Your two rules for the keyboard {.center-v}
 
 Write one rule you will follow because the window is a **fixed size**, and one because the **middle gets less attention**.
 
-::: fragment
-Rules many people use:
+::: {.fragment .panel .warm}
+[Rules many people use]{.ptitle}
 
 1. Put **the question and the facts that matter** at the start or the end of what you paste (a guideline or a paper, never a chart). Never only in the middle of a long document.
 2. When a conversation is long and has changed subject, **start a new one**.
@@ -1006,13 +1038,13 @@ Here are two that many people use. Because the middle gets less attention, put y
 LIVE: Ask for one rule in the chat, sent on your count, then show the fragment.
 :::
 
-# What this changes for you {background-color="#1d2733"}
+## [Part 3]{.year} What this changes for you {.divider background-color="#173f45"}
 
 ::: notes
 Last few minutes. Back to the clinic.
 :::
 
-## Back to the pre-op clinic {.smaller}
+## Back to the pre-op clinic {.smaller .center-v}
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -1058,15 +1090,20 @@ LIVE: Ask for answers in the chat, sent on your count. Cystatin C is the answer 
 
 ## On the wards {.smaller}
 
+:::: {.columns}
+::: {.column width="62%"}
 - **An alert fires, or stays quiet.** No alert does not mean no sepsis. If you silence one, be able to say why.
 - **A chatbot gives you a fact or a citation.** Check it in the primary source before it goes in a note or an order.
 - **A tool drafted your note or message.** Read all of it before you sign. You are responsible for what it says.
 - **Patient information.** Not in any chatbot, unless your hospital's privacy office has approved that tool in writing.
 - **Documentation.** What to record when a tool helped depends on your site's policy. Ask your supervisor.
-
-::: {.fragment .statement}
+:::
+::: {.column width="38%"}
+::: {.fragment .panel .warm .statement}
 It sounds just as sure when it is wrong.<br>Check it before it goes in the chart.
 :::
+:::
+::::
 
 ::: notes
 Here is what this means on the wards tomorrow.
@@ -1082,7 +1119,7 @@ And patient information goes into no chatbot, unless your hospital's privacy off
 If you tell a co-intern one sentence, make it this one. It sounds just as sure when it is wrong, so check it before it goes in the chart.
 :::
 
-## The standing question
+## The standing question {.center-v}
 
 ::: {.statement}
 *What does this change about how you'll practice?*
@@ -1134,7 +1171,7 @@ The fifty-seven on the panel came from somewhere. So does everything else.
 LIVE: Skip in a live session.
 :::
 
-## Go deeper {.smaller}
+## Go deeper
 
 - **The chapter** for this session, with the full eGFR history and the self-check: [How these systems work](../chapters/core-foundations.html)
 - 3Blue1Brown, [*But what is a GPT?*](https://www.youtube.com/watch?v=yMQPQuz5WpA) (April 2024, 27 min), for attention and the inside of the model
@@ -1153,13 +1190,16 @@ This deck was drafted with an AI assistant. Its citations were checked against P
 LIVE: Skip in a live session.
 :::
 
-## References {.smaller .scrollable}
+## References {.scrollable}
 
 ::: {#refs}
 :::
 
 ```{ojs}
 //| output: false
+// The theme's palette (theme.scss), for the widget charts drawn in SVG.
+ink = ({ ink: "#24211d", inkSoft: "#4a443c", muted: "#7a7064", rule: "#d8ccb6",
+  teal: "#1f5a61", terracotta: "#a9472a", gold: "#b98a2f" })
 // Plain HTML controls for the widgets, so the slides need no input library.
 function rangeInput({ label, min, max, step, value }) {
   const form = html`<form class="w-range" onsubmit="return false"><label><span>${label}</span><input type="range" min="${min}" max="${max}" step="${step}" value="${value}" aria-label="${label}"><output>${value}</output></label></form>`;
