@@ -42,9 +42,12 @@ framework core and move hands-on work toward success first.
   adult learning (from the 2024 Google Slides intro deck); Tuesday history of
   AI; Wednesday what AI is, AI to ML to DL to LLMs (the foundations deck, PR
   #60, trimmed; keep a few slides on overfitting); Thursday a hands-on session,
-  "centaur or cyborg, live" (everyone in ChatGPT Edu, trying things together;
-  left open-ended on purpose; also catches account problems early), then
-  office hours.
+  "set up your learning with ChatGPT" (decided 2026-10-11, replacing
+  "centaur or cyborg, live"): everyone in ChatGPT Edu, writing personal
+  learning goals and designing their learning journal with starter prompts;
+  `course/first-session.qmd`. First contact is something useful, not a hunt
+  for AI errors, because students arrive wary of chatbots; also catches
+  account problems early. Then office hours.
   Friday small groups, from that week's signup. Students read `core-foundations`
   and `core-centaur-cyborg`. Weeks 2 to 4 Monday and Wednesday talks are also
   at 10 a.m.

@@ -35,6 +35,7 @@ book:
         - course/syllabus.qmd
         - course/learn-with-ai.qmd
         - course/learning-journal.qmd
+        - course/first-session.qmd
         - course/friday-groups.qmd
         - course/patient-information.qmd
     # Each week: the core chapter first, then the menu (see the syllabus).
