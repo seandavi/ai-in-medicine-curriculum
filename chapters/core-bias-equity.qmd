@@ -522,7 +522,7 @@ the most:
 
 Fill in the same seven-question worksheet for your case. Then write your row
 in the four columns of @tbl-proxies. That row is what you hand in, and the
-paper you found can be the "one thing I checked" in this
+paper you found can be the check in question 2 of this
 week's [learning journal](../course/learning-journal.qmd).
 
 **Optional step, if you use a chatbot (5 minutes).** Ask your institutional
