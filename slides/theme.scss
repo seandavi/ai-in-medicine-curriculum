@@ -539,6 +539,12 @@ $callout-color-warning: $gold;
   font-size: 0.75em;
 }
 
+// A prompt students copy, sized to fill its panel.
+.reveal .prompt-big pre {
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
 // One sentence, large: the serif lede voice.
 .reveal .statement {
   font-family: $font-family-serif;

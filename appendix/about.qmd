@@ -103,7 +103,7 @@ from the author and colleagues, and the book marks them as local facts.
 deck follows the session plan rather than the chapter's order. It adds what a
 page cannot do: small programs that run in the browser (two sliders that fit a
 curve by hand, a model sorter, a slider that shows overfitting, a real
-tokenizer, a next-word sampler, a context-window budget), a further-exploration list (with the
+tokenizer, a next-word sampler), a slide on asking the chatbot to check its own citations, a further-exploration list (with the
 TensorFlow Playground), and a short video. The speaker notes are written to be read aloud, so the deck can be
 narrated for students who miss the session. A script pulls the narration out
 of the notes. The deck was reviewed by the same six readers as the chapters,

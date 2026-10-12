@@ -6,18 +6,18 @@ project:
   pre-render: quartobot resolve --from-scan . --id-mode citation-key
   # Tidies llms.txt and writes llms-full.txt (the whole book in one file).
   post-render: scripts/llms_full.py
-  # Copied to the site root as is; points crawlers at the sitemap.
+  # robots.txt is copied to the site root as is; it points crawlers at the
+  # sitemap. images/ copies every image into _book/images/, including ones
+  # only the slide decks in slides/ use. The decks render into _book/slides/
+  # and link ../images/.
   resources:
     - robots.txt
+    - images/
   render:
     - index.qmd
     - chapters/
     - course/
     - appendix/
-  # Copy every image into _book/images/, including ones only the slide decks
-  # in slides/ use. The decks render into _book/slides/ and link ../images/.
-  resources:
-    - images/
 
 # Quarto reads llms-txt from the website section, even for a book.
 # It writes llms.txt and a plain .llms.md copy of every page, so chatbots
