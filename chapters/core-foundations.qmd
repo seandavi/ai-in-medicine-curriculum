@@ -1,6 +1,6 @@
 ---
 title: "How these systems work: from the eGFR on a chemistry panel to the next word"
-subtitle: "AIM-1 · AIM-2 · about 75 minutes"
+subtitle: "AIM-1 · AIM-2 · about 80 minutes"
 ---
 
 ::: {.callout-note title="What you'll learn"}
@@ -23,7 +23,7 @@ By the end of this chapter you will be able to:
    one changes about how you will prompt.
 :::
 
-**Time.** About 22 minutes of reading, 27 minutes of watching, 20 minutes of
+**Time.** About 22 minutes of reading, 27 minutes of watching, 25 minutes of
 doing, and 6 minutes for the check and the closing question. No math and no
 coding are assumed. The only equation in the chapter is one you already use.
 You need a browser and your institutional ChatGPT Edu or Microsoft Copilot
@@ -123,9 +123,9 @@ they are, named:
 on the right. The thing the lab can measure is on the left. The equation is
 the bridge, and the bridge was built from a specific set of people.
 
-A stand-in like this, something you measure because the real thing cannot
-be measured, is called a **proxy**. The first of the course's four recurring
-lessons (the fourth, *who benefits, who bears the risk, who decides*, comes in
+A number used in place of the one you want, because that one is hard to get,
+is called a **proxy**. The first of the course's four recurring lessons (the
+fourth, *who benefits, who bears the risk, who decides*, comes in
 [the ethics chapter](core-ethics-regulation.qmd)) is **proxies fail**: the stand-in and the real thing can come apart,
 and they come apart for some patients more than for others. [The bias and
 equity chapter](core-bias-equity.qmd) depends on that lesson. This chapter's
@@ -225,7 +225,7 @@ the ones the Check asks you to apply:
 | Question | If yes | If no |
 |---|---|---|
 | Does the training data contain the answer? | Supervised | Unsupervised |
-| Does the model give a category? | Classification | Regression (a number) |
+| If supervised: does the model give a category? | Classification | Regression (a number) |
 
 : Two questions that sort any model. {#tbl-two-questions}
 
@@ -263,15 +263,16 @@ the model meets in real use differ from the patients in its training set, so
 performance measured during development does not hold [@pmid:34260843].
 Here is an example. One EHR vendor built a sepsis model that runs in hundreds
 of US hospitals. One academic center tested it on its own 38,455
-hospitalizations, a test the literature calls *external validation*, because
-the testers had no part in building the model. The model had an area under the
+hospitalizations, in a setting the model was not built on. A test
+like that is called *external validation*; here the testers also had no part
+in building the model. The model had an area under the
 curve of 0.63, on a scale where 0.5 is no better than chance and 1.0 is perfect. It
 missed 67 percent of patients with sepsis, and it alerted on 18 percent of all
 admissions [@pmid:34152373]. Nobody had lied about the development
 performance. It simply had not been measured on patients like those.
 
 ::: {.callout-important title="The one sentence"}
-A model's performance on the population it was built from is the optimistic
+A model's performance on the cases it was built from is usually the optimistic
 number. That is the third of the course's four recurring lessons, **the
 published number is the optimistic one**, in its first form. Ask what it was
 trained on, and ask what it was tested on. If those
@@ -455,41 +456,46 @@ enough: [the patient information page](../course/patient-information.qmd).
 Open <https://playground.tensorflow.org> in any browser. No account, no
 install, and the site's own tagline is "don't worry, you can't break it". It
 lets you build a small neural network, a flexible *f* from @fig-loop, and
-watch it learn to separate two colors of dot. Two curves are plotted in the
-top right. The **training loss** is the model's error on the data it is
-learning from. The **test loss** is its error on data it is not. That pair of
-curves is the point of the exercise. If the site is down, the deep learning
-deck under Go deeper has screenshots of the same spiral fit. Read those and
+watch it learn to separate orange dots from blue dots. Under OUTPUT, two
+numbers are shown. The **training loss** is the model's error on the dots it
+is learning from. The **test loss** is its error on dots it never sees. That
+pair of numbers is the point of the exercise. If the site is down, the deep
+learning deck under Go deeper has screenshots of a spiral fit. Read those and
 write the three sentences from them.
 
-1. In the DATA panel on the left, choose the **spiral** dataset (the bottom
-   right of the four). Leave the noise slider at 0. In the FEATURES column,
-   keep only `X₁` and `X₂` selected. Set the network to one hidden layer with
-   two neurons (use the plus and minus buttons). "Hidden layer" and "neuron"
-   are the site's words for the middle stage of the network and the units
-   inside it. Press play. Let the epoch
-   counter at the top reach a few hundred; one epoch is one pass through the
-   data. Write down what the training loss does and what the picture looks
-   like.
-2. Now make the model more flexible. Select all seven features, add layers
-   until you have four, and give each six to eight neurons. Run it until the
-   training loss is near zero. Look at the test loss on the same plot. Write
-   down both numbers.
-3. Drag the noise slider to 40 or 50, press the regenerate button, and run
-   the large network again. Watch the boundary between the colors bend around
-   individual dots. Note the gap between training and test loss now.
+All three steps use the same data: a noisy spiral (the dots have random
+scatter added), with only one dot in five
+used for training. Each link opens the site already set up. "Hidden layer" and
+"neuron" are the site's words for the middle stage of the network and the
+units inside it; "features" are its predictors. Do not press the regenerate
+button, because that changes the data.
+
+1. **Too simple.** Open
+   [step 1](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=2&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false):
+   one hidden layer of two neurons, and only `X₁` and `X₂`. Press play, and
+   press pause when the epoch counter reaches about 500; one epoch is one pass
+   through the data. Write down both losses and what the picture looks like.
+2. **In between.** Open
+   [step 2](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=6,6&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=true&cosY=false&sinY=true&collectStats=false&problem=classification&initZero=false&hideText=false):
+   two layers of six neurons, with `sin(X₁)` and `sin(X₂)` added to `X₁` and
+   `X₂`. Run it to about 500 epochs and write down both losses.
+3. **Too flexible.** Open
+   [step 3](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=8,8,8,8,8,8&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=true&xSquared=true&ySquared=true&cosX=false&sinX=true&cosY=false&sinY=true&collectStats=false&problem=classification&initZero=false&hideText=false):
+   six layers of eight neurons and all the features. Run it to about 500
+   epochs, write down both losses, and watch the boundary between the colors
+   bend around individual dots.
 
 Then write three sentences, and keep them. You will need them for the Check.
 
 ```
-Which configuration was too simple, and how could you tell?
+Which network was too simple, and how could you tell?
 ______________________________________________________________
 
-Which was too complex, and how could you tell?
+Which was too flexible, and how could you tell?
 ______________________________________________________________
 
-If you had only ever been shown the training loss, what would you
-have concluded about the model, and would you have been right?
+If you had only ever been shown the training loss, how would steps 2
+and 3 have compared, and what did the test loss show?
 ______________________________________________________________
 ```
 
@@ -497,7 +503,7 @@ The third sentence is the one you will use again. It is the same question you
 will ask of every performance figure on every vendor slide for the rest of
 your career.
 
-### Part B: produce a hallucination on purpose (10 minutes)
+### Part B: produce a hallucination on purpose (15 minutes)
 
 Pick one scoring system from @tbl-scores in a specialty you have rotated
 through, so that you already know roughly what the right answer is. Each row's
@@ -530,6 +536,17 @@ PubMed and not Google Scholar. Scholar's loose matching will show you a
 different real paper for a citation that does not exist, and you will score it
 as found.
 
+Large current models usually get this right for scores this well known. If
+yours did, ask a second question in the same conversation:
+
+> Give me five references, with PubMed IDs, that support `<a claim from the
+> score's original paper>`.
+
+Open each PMID in PubMed and read the title. A wrong PMID usually opens a real
+paper about something else, so a link that works proves nothing. When the
+course tested four models with this question on 3 October 2026, with web
+search off, every one of them gave at least one wrong PMID.
+
 Record:
 
 ```
@@ -542,6 +559,10 @@ Point values and cutoffs: all correct / one wrong / more than one wrong
 Original publication as given by the model:
   ____________________________________________________________
   Matches the verified original?  Y / N / partly (which fields differ)
+
+Second question, if you asked it:
+  PMIDs whose title matched the paper described: ___ of 5
+  What the wrong ones opened: ________________________________
 
 How the model produced this, in one sentence, using the words "token"
 or "plausible continuation" and not the word "hallucinate":
@@ -585,7 +606,7 @@ top.
 |---|---|---|
 | Name the eGFR model's predictors, response, and training population (objective 1) | Creatinine, age, sex; measured GFR; 8,254 research participants in 10 studies, and you can say why the last one matters for the patient in the clinic | "Creatinine and stuff" or a training population you cannot describe |
 | Sort four models with the two questions in @tbl-two-questions (objective 2): the eGFR; an EHR sepsis alert; a tool that groups tumor expression profiles with no diagnoses attached; a chatbot predicting the next token | Supervised regression; supervised classification; unsupervised; supervised (the next word is the label), and you can say why the last one needs no human labeler | Any row you had to guess |
-| Explain the three sentences from Part A (objective 3) | The third sentence says that training loss alone would have made the over-fit model look best, and that this is why a performance figure with no test set is not yet a number | The first two sentences only, or a third sentence that restates the training loss |
+| Explain the three sentences from Part A (objective 3) | The third sentence says that at about 500 epochs, training loss made steps 2 and 3 look about the same, while test loss showed step 3 was the worst, and that this is why a performance figure with no test set is not yet a number | The first two sentences only, or a third sentence that restates the training loss |
 | Give the one-sentence explanation from Part B (objective 4) | One sentence about plausible next tokens, no "hallucinate", and it explains why the tone did not change when the answer was wrong | "It hallucinated" or "it made a mistake" |
 | State the two window rules from Part C (objective 5) | One rule follows from the shared budget, one from the middle getting less attention, and each says what you will actually do differently at the keyboard | Rules that do not name a limit, or that you could have written before reading the chapter |
 

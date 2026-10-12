@@ -25,13 +25,21 @@ the attending that 57 is probably an overestimate.
 | Tumor expression clustering, no diagnoses | No | Groups | Unsupervised |
 | Chatbot next-token prediction | Yes, the next token is in the text | Category (one of ~100k tokens) | Supervised classification; no human labeler because the label is the text itself. "Self-supervised" is the term of art and is a bonus, not required |
 
-**Objective 3, Part A.** Too simple: 2 raw features, one small layer; training
-loss plateaus well above zero and the picture is a straight or gently curved
-boundary through a spiral. Too complex: all features, 4 layers, noise 40–50;
-training loss near zero, test loss substantially higher, boundary wraps
-individual dots. Third sentence: training loss alone ranks the over-fit model
-best; a student would have concluded it was the best model and been wrong.
-The transfer: a vendor number with no test set is that training loss.
+**Objective 3, Part A.** All three steps use the same noisy spiral (noise 50)
+with 20% of the dots used for training and a fixed seed. Measured in a
+headless browser on 2026-10-03, at about 500 epochs: step 1 (one layer of two,
+X₁ and X₂) training loss about 0.45, test about 0.49, a near-straight boundary
+through the spiral; step 2 (two layers of six, with sin(X₁) and sin(X₂) added)
+about 0.09 and 0.27; step 3
+(six layers of eight, all features) about 0.10 and 0.55, with the boundary
+wrapping individual dots. Third sentence: on training loss alone, steps 2 and 3
+look about the same (0.09 against 0.10, close enough that either can come out
+ahead depending on when the student pauses); test loss shows step 3 is the
+worst of the three. So training loss alone could not have told the student
+which network to trust. If a group lets step 3 run past about 1,500 epochs its test loss
+falls again; that is a good discussion point (the number depends on when you
+stop), not a wrong result. The transfer: a vendor number with no test set is
+that training loss.
 
 **Objective 4, Part B.** Any sentence of the form "the model produced the most
 plausible next tokens after `the original publication was`, and a plausible
@@ -46,9 +54,18 @@ validation paper as the original (HEART: Backus 2013 Int J Cardiol instead of
 Six 2008 Neth Heart J; Wells: the 1998 Ann Intern Med paper or a 2001 paper
 instead of Thromb Haemost 2000), (b) wrong volume/pages with correct author and
 year, (c) outcome percentages from a different cohort attached to the original.
-All three are "partly matches" and are the intended specimen. A student whose
-model got everything right should still write the one-sentence explanation; see the
-chapter.
+All three are "partly matches" and are the intended specimen.
+
+A 2026-10-03 run with search off, one run per prompt (research note
+`research/foundations-chatbot-test-2026-10-03.md`): GPT-5.4
+and Claude named the correct original for all six scores tried, so a student
+on a large current model will often get the first question right. The second
+question (five references with PMIDs) then usually produces an error: correct
+PMIDs were 9 of 10 for GPT-5.4, 5 of 10 for Claude Sonnet 5, 0 of 10 for
+Gemini 2.5 Flash, and 0 of 5 for GPT-4o-mini. Every wrong PMID was a real
+record for an unrelated paper, so the student must read the title, not just
+confirm the link opens. A student whose model got everything right on both
+questions should still write the one-sentence explanation; see the chapter.
 
 **Objective 5, Part C.** Budget rule examples: paste only the section that
 matters rather than the whole guideline; start a new conversation when the
@@ -82,10 +99,10 @@ literature and are not to be quoted from the chapter.
 
 ## Instructor prep
 
-Run Part B yourself the morning of the session on two scores. If both come
-back fully correct with the original publication right, switch the live demo
-to the "uncommon drug in renal impairment with a source" prompt from the
-module, which fails more reliably. Also confirm playground.tensorflow.org is
-up; it has no fallback, and the exercise cannot be done without it. If it is
-down, the archive deck `2024-11-06-deep-learning-intro` has screenshots of the
-spiral fit that can substitute for a talk-through.
+Run both Part B questions yourself the morning of the session on two scores.
+If everything comes back correct, the second question is the one to
+demonstrate live: in testing it failed far more often than the first. Also
+confirm playground.tensorflow.org is up and that the three step links still
+open with the spiral and the 20% training split; the exercise cannot be done
+without it. If it is down, the archive deck `2024-11-06-deep-learning-intro`
+has screenshots of a spiral fit that can substitute for a talk-through.
