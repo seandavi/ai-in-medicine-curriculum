@@ -1,28 +1,29 @@
 ---
-title: "Ethics, liability, and the device line: who answers for the note"
-subtitle: "AIM-4 · AIM-X · about one hour"
+title: "Ethics: what you owe when you sign the note"
+subtitle: "AIM-4 · AIM-X · about 70 minutes"
 ---
 
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will have:
 
-1. Used a chatbot to draft a clinic note from a made-up visit, improved the
+1. Drafted a clinic note from a made-up visit with a chatbot, improved the
    prompt once, and kept the version you would use again.
-2. Read an AI draft against what the patient said, and decided what you would
-   sign, what you would change, and what you would do first.
-3. Explained why, under current law, the clinician who signs answers for the
-   note, and placed a case in the Price, Gerke, and Cohen four-box grid.
-4. Said what one randomized study found when a model explained its reasoning,
-   and what that means for "explainable AI" as a safeguard.
-5. Practised telling a patient, in plain words, what an AI scribe does and who
-   is responsible for the note.
+2. Written your own plan before reading the draft's, and decided what you
+   would sign.
+3. Said what a signed note promises, and to whom.
+4. Weighed the evidence on whether a clinician's review makes a drafted note
+   safe.
+5. Judged whether a patient's consent to a scribe was a real choice, and
+   practised answering "Do I have to say yes?"
+6. Named who benefits from a scribe, who bears the risk, and who decides: the
+   course's fourth recurring lesson.
 :::
 
-**Time.** About 15 to 20 minutes of reading, 40 minutes of doing, and five minutes
-of writing at the end. The podcast and the regulatory detail in Go deeper are
-optional. Use the chatbot account your school provides (at CU Anschutz,
-ChatGPT Edu or Microsoft Copilot); any free chatbot also works, because
-everything you type here is made up. There is nothing to install.
+**Time.** About 20 to 25 minutes of reading, about 45 minutes of doing, and
+five minutes of writing at the end: about 70 minutes. The podcast and everything in
+Go deeper are optional. Use the chatbot account your school provides (at CU
+Anschutz, ChatGPT Edu or Microsoft Copilot); any free chatbot also works,
+because everything you type here is made up. There is nothing to install.
 
 ## The sentence you did not write
 
@@ -49,19 +50,18 @@ of these tools describe. It is not a slip in the transcript. It is a fluent,
 believable sentence that says the opposite of what the patient said. In a
 pilot at one academic health system, physicians reviewed 356 scribe-drafted
 notes. 18% contained an omission, 11.5% contained a made-up statement, and
-5.3% contained an error rated as a serious risk if not corrected. 14.9% of all
-notes were signed with no edits at all [@pmid:41996389].
+5.3% contained an error rated as a serious risk if not corrected. Across the
+notes the vendor tracked, 14.9% were left with no edits at all
+[@pmid:41996389].
 
 Three weeks later Mr. Alvarez is admitted with a stroke. The admitting team
-reads your note. Then the hospital's risk manager reads it, and asks you a
-question with one answer: *who wrote this sentence?* The note has your name on
-it. The waiting room has a sign about "AI-assisted documentation", and the
-medical assistant mentions it at check-in. Whether that counts as consent is a
-question courts are being asked right now.
+reads your note and believes he was taking his apixaban. The waiting room had
+a sign about "AI-assisted documentation", and the medical assistant mentioned
+it at check-in. Nobody asked him whether he minded.
 
-Nobody in this scenario has done anything unusual. A tool that is allowed to
-be in the room was wrong, and your name is on the result. This chapter is
-about that one question: who answers for the note?
+The hospital's risk manager will ask who wrote the sentence. That question
+matters, and this chapter answers it briefly near the end. The first question
+is a different one: *what did you owe Mr. Alvarez when you signed?*
 
 If you would rather try first and read after, do Part A of the [Do](#do) now.
 It uses Mr. Alvarez's visit. Then come back.
@@ -74,16 +74,17 @@ systemwide rollout of the Abridge scribe in February 2026 ([press
 release](https://www.businesswire.com/news/home/20260224659841/en/UCHealth-Partners-With-Abridge-to-Deploy-Enterprise-Grade-AI-Systemwide-Enhancing-Patient-and-Provider-Experience)).
 
 **It is your job to learn where these tools help your work, and you learn
-that by trying.** A scribe is meant to save you time on the note. It is
-also the clearest case where your signature goes on what a tool produced.
-This chapter is about knowing what you are signing, and being able to explain
-that to a colleague, a patient, or a risk manager.
+that by trying.** A scribe can save you some time, and the trials below
+suggest it does, modestly. It is also the clearest case where your signature goes on
+words a tool produced.
 
-There is little law here. As far as this course could find, no US malpractice
-claim involving a clinical AI tool had reached a verdict by September 2026.
-There is no rule to memorize. There is one old principle (you sign it, you
-answer for it), a way to reason about legal risk, and a few habits that
-protect you and your patient.
+Most writing about this asks what you *risk*. This chapter asks what you
+*owe*: to the patient, to the next clinician, and to yourself. The two
+questions are easy to confuse. A review
+of 34 papers on digital health found that moral responsibility "is often
+equated with liability or accountability, without clear justification"
+[@pmid:39614032]. Liability is what a court can make you pay. Ethics is what
+you owe even when no one would ever find out.
 
 ## How it works
 
@@ -109,161 +110,280 @@ against what sounds like a normal note. The [scribe open
 lab](../appendix/open-labs.qmd#hear-it-draft-it-check-it-a-scribe-from-the-inside)
 lets you watch each step make its own kind of error.
 
-### You sign it, you answer for it
+### A note is a promise
 
-Malpractice is a type of negligence. To win a negligence case, the person
-suing (the **plaintiff**) must prove four things, which lawyers call the four
-**elements**. First, that you owed the patient a duty. Second, that you fell
-below the **standard of care**, meaning what a reasonably competent physician
-in your position would have done. Third, that this failure caused the harm.
-Fourth, that the harm was real. The tool is not a defendant in that list. It
-is evidence. Under current law, courts measure the *physician* against the
-standard of care. They do not measure the AI against anything
-[@pmid:31584609; @pmid:38231630].
+A signed note makes two promises: *this is what happened*, and *this is what
+I decided*. Both are made to people who will read it later.
 
-So "the AI was wrong" is not, by itself, a legal argument. The question a
-court will ask is whether *you* should have known better than to rely on the
-output, given what you knew at the time [@pmid:38231630]. Suing the vendor
-instead is harder than you might expect. Courts have usually treated clinical
-software as a service rather than a product. And under the **learned
-intermediary doctrine**, a manufacturer's duty to warn runs to the physician,
-who stands between the product and the patient. Price, Gerke, and Cohen note
-that this may shift as tools become too opaque for a physician to check
-([Price, Gerke, and Cohen, 2024](https://www.ncbi.nlm.nih.gov/books/NBK613216/)).
+**The next clinician.** The admitting team met your note before they met Mr.
+Alvarez. Words in a note change how the next reader treats the patient. In a
+randomized study, 413 medical students and residents
+at one US academic center read a note about the same made-up patient, a
+28-year-old man with sickle cell disease. Half read it in neutral language
+and half in stigmatizing language. Those who read the stigmatizing version
+had more negative attitudes toward him. Residents who read it chose less
+aggressive treatment for his pain [@pmid:29374357]. That study was about
+tone. A false fact about a blood thinner is a more direct risk.
 
-The rule that you answer for what you sign is not new. It applied to a note
-drafted by a human scribe or a resident. Mr. Alvarez's case would be argued as "the physician
-signed a note saying the patient was taking a medication he had told her he
-had stopped." Is that below the standard of care at 6:40 p.m. with fourteen
-notes to sign? No court has yet answered that question.
+**The patient.** Many patients can now read their own notes in the patient
+portal. One recent paper lists four jobs a note does: helping you reason,
+telling other clinicians what happened, meeting billing and legal
+requirements, and explaining care to a patient who reads it
+[@pmid:42258767]. Mr. Alvarez could read tonight that he "continues apixaban
+without bleeding complications", and wonder whether he should restart it.
 
-### Four boxes
+**What the scribe actually writes.** A scribe is not a fast typist. One
+group of physicians argues that in the assessment and plan, ambient scribes "do not transcribe clinical reasoning but
+rather generate it". The generated text and the transcribed text look the
+same in the final note, so the person signing cannot tell where one ends and
+the other begins [@pmid:42745555]. "Continue apixaban" is a plan nobody made.
+The patient did not say it, and you did not decide it. Your signature says
+you did.
 
-Price, Gerke, and Cohen published a widely used framework
-[@pmid:31584609]. It asks two questions. Did the AI's recommendation match the
-standard of care? Did the physician follow it? Two yes-or-no questions give
-four boxes. Here, "exposure" means how much legal risk the physician carries.
+So the duty is honesty, in a plain sense: do not sign a sentence you cannot
+stand behind. If you find an error after signing, add an addendum; do not
+quietly edit the signed note. If the error may have harmed him, you also owe
+him an honest explanation, through your institution's disclosure process.
 
-| | **Physician followed the AI** | **Physician overrode the AI** |
-|---|---|---|
-| **AI matched the standard of care** | A. Good outcome likely. If harm occurs, exposure is low. One open question: can following a correct recommendation you could not explain still create exposure? | C. High exposure. The physician left the standard of care *and* disagreed with a tool that got it right. |
-| **AI departed from the standard of care** | B. High exposure. The physician did the nonstandard thing because the machine said so. | D. The physician was right. What risk remains is in the documentation, in hospital policy, and in the fact that the tool stayed in use. |
+**Telling him a tool drafted it.** Should you tell a patient that AI drafted
+a note or message? Honesty may cost some trust. In two preregistered
+experiments, 2,280 participants rated identical advice in made-up scenarios
+as less reliable and less empathetic when it was labeled as from AI, or from
+a physician with AI, and were less willing to follow it [@pmid:39054373]. The
+American Medical Association's November 2024 policy says AI may not generate
+records or communications for a physician without that physician's "consent
+and final review", and that AI use in patient-facing content "should be
+disclosed or otherwise noted within the content" ([AMA, November
+2024](https://www.ama-assn.org/system/files/ama-ai-principles.pdf)).
+How to say it is in [the patient communication
+chapter](core-patient-communication.qmd#the-portal-reply-say-a-tool-helped).
 
-: The Price, Gerke, and Cohen 2×2. Rows are what the AI said; columns are what the physician did. {#tbl-price}
+### Does review fix it?
 
-The uncomfortable box is B. Under current law, the physician who *follows* the
-AI into nonstandard care carries the most risk [@pmid:31584609]. Two
-experiments asked members of the public, and one also asked physicians. In a
-nationally representative sample of 2,000 US adults, physicians who followed
-an AI recommendation for standard care were judged less liable than those who
-rejected it. Rejecting a *nonstandard* recommendation gave no similar
-protection [@pmid:32978285]. A 2026 study found the same pattern
-in US and German adults and in German physicians [@pmid:42242875]. The practical lesson: the tool is safest to follow when it
-agrees with what you would have done anyway. When it disagrees, you carry the
-risk yourself, whichever way you decide.
+This is a real disagreement. Sun, Miller, and Hull, writing in a medical
+ethics journal, argue that AI-drafted documentation may spread bias across
+clinical teams who rely on earlier notes. They propose telling patients when AI-drafted documentation
+meaningfully affects their understanding of their care, and requiring
+clinicians to review drafts [@pmid:40436441]. Armitage replied that, for
+documentation, these concerns "either do not arise or are easily mitigated"
+by the clinician reviewing, editing, and approving the draft. His reason: the
+source is the clinician's own visit [@pmid:40717487].
 
-Where does Mr. Alvarez's note sit? At first, nowhere: the scribe made no
-recommendation. But the note *is* a recommendation once signed. "Continue
-apixaban" was the plan. It was written on a premise the patient had
-contradicted, and you signed it. Which box is that?
+Armitage's argument assumes that review happens, and that it works. Three
+pieces of evidence test that.
 
-### Explanations did not protect against a biased model
+**Review is uneven.** Besides the unedited notes in the pilot from the
+opening, physicians differed widely. The share of the draft's words they
+changed ranged from 1.9% to 69.3% [@pmid:41996389].
 
-A common answer from institutions is "we will require explainable AI." One
-randomized study tested that, and in that test it did not protect clinicians
-from a biased model. ([The bias and equity
-chapter](core-bias-equity.qmd) uses the same study.)
+**Drafts change what clinicians decide.** In a simulation at one Boston
+hospital, six radiation oncologists answered made-up messages from patients
+with cancer. They answered first on their own, then by editing a draft
+written by GPT-4. The edited replies were closer in content to the drafts than to the physicians' own
+replies. The authors read this as anchoring (sticking close to the first answer you
+see) and automation bias: the
+physicians might be adopting the draft's assessment, not just its wording
+[@pmid:38664108]. **Automation bias** is the habit of trusting a machine's
+suggestion more than it deserves.
 
-Jabbour and colleagues gave 457 hospitalists, nurse practitioners, and
-physician assistants written cases of acute respiratory failure. Baseline
-diagnostic accuracy was 73.0%. A standard AI model raised accuracy by 2.9
-points; with an image-based explanation of its reasoning, by 4.4 points. A
-*systematically biased* model lowered accuracy by 11.3 points. Adding
-explanations to the biased model recovered 2.3 points. The confidence interval
-for that difference crossed zero, so the true recovery may be nothing
-[@pmid:38112814].
+**Explanations did not reliably protect clinicians from a biased model.**
+This study is about diagnosis, not notes, but it tests a safeguard
+institutions often offer. ([The bias and equity
+chapter](core-bias-equity.qmd) uses the same study.) Jabbour and colleagues
+gave 457 hospitalists, nurse practitioners, and physician assistants written
+cases of acute respiratory failure. Baseline diagnostic accuracy was 73.0%. A
+standard AI model raised accuracy by 2.9 points; with an image-based
+explanation of its reasoning, by 4.4 points. A *systematically biased* model
+lowered accuracy by 11.3 points. Adding explanations to the biased model
+recovered 2.3 points. The confidence interval for that difference crossed
+zero, so the true recovery may be nothing [@pmid:38112814].
 
 ![The Jabbour finding, redrawn from the paper's own numbers. Explanations
 helped a little when the model was right and did not significantly help when
 the model was wrong. Data from Jabbour et al., *JAMA* 2023;330:2275–2284;
 figure drawn for this chapter.](../images/jabbour-2023-explanations.svg){#fig-jabbour fig-alt="Bar chart of change in clinician diagnostic accuracy in percentage points from a 73.0% baseline. Standard AI model without explanation plus 2.9; with explanation plus 4.4; biased model without explanation minus 11.3; biased model with explanation minus 9.1. Whiskers show 95% confidence intervals; the two biased-model intervals overlap."}
 
-Apply that to @tbl-price. A defense that says "the tool showed its reasoning,
-so the physician should have caught it" must answer this evidence.
-**Automation bias** is the habit of trusting a machine's suggestion more than
-it deserves. In this study, image-based explanations did not reliably reduce
-it.
-Automation bias is a property of tired people under time pressure, which is
-what you will be at 6:40 p.m.
+In this study, image-based explanations did not reliably reduce automation
+bias. Automation bias is a property of tired people under time pressure,
+which is what you will be at 6:40 p.m.
 
-### The note, the patient, and the contract
+So review is a duty, not a guarantee. One habit may help: decide the plan
+yourself before you read the draft's. McGaughey and colleagues propose that
+trainees state their own reasoning before the note is generated
+[@pmid:42745555]. The Do asks you to try it.
 
-Three things follow when an AI tool touches a note, and they are separate.
+### Consent he can actually refuse
 
-**The note.** First, read the *plan* against the *conversation*, not against
-the draft's own subjective section. The draft agrees with itself even when it
-is wrong. If you find an error after signing, add an addendum; do not quietly
-edit the signed note. Second, where your institution's policy calls for it,
-record that the note was drafted with ambient documentation and reviewed by
-you. Many systems add that line automatically. If yours does, know what it
-says. It is an **attestation**, a statement in your name that something is
-true. A complaint against Sharp HealthCare alleges that the vendor's tool
-inserted a statement that the patient "consented" to recording when, the
-plaintiff says, no one asked.
+Recording a person's conversation about their body is something done *to*
+them. Asking first respects that the conversation is partly theirs. Some
+state laws require it, but the ethical question is whether Mr. Alvarez had a
+real choice.
 
-**The patient.** Whether the patient knows an AI is in the room is an ethical
-question first, and increasingly a legal one. In one academic center's
-ambient-documentation pilot, 81.6% of patients consented when given basic
-information. That fell to 55.3% when they were told about data storage and the
-company involved. Asked who should answer for a documentation error linked to
-the tool, 64.1% of patients said the physician [@pmid:40694347].
+**What he is told changes his answer.** In a quality improvement pilot at one
+large US academic health center, 103 patients were asked about an ambient
+scribe. When given basic information, 81.6% consented. When told about the
+tool's AI features, data storage, and the company involved, 55.3% did
+[@pmid:40694347]. A yes that holds only when the details are left out is not
+informed.
+
+**Who asks matters too.** O'Neil, Rodman, and Lehmann argue that a
+physician's authority "may inadvertently pressure patients" to agree when the
+physician asks at the point of care. They suggest telling patients in
+advance, having nonclinical staff confirm the patient's preference, and
+letting patients opt in or out without physician pressure. They also ask
+what happens if clinicians start refusing to see patients who say no
+[@pmid:41767129]. Participants in the pilot above also suggested nonclinical
+staff support and a clear way to opt out [@pmid:40694347].
+
+**Many patients do not know.** In a 2025 online survey of 12,153 Canadian
+adults, only 28.3% knew AI scribes were in use, and 61.8% were reluctant
+about future use [@pmid:41350107].
+
+Mr. Alvarez had a sign, a sentence at check-in, and then his own doctor
+starting the visit with the phone already on the desk. Could he comfortably
+have said no? What would have made that easier? How to have that conversation
+is in [the patient communication
+chapter](core-patient-communication.qmd#the-phone-on-the-desk-what-the-patient-can-refuse).
+
+### Who the tool fails
+
+A scribe does not fail everyone equally. The research is thin, but the results
+agree.
+
+- **Race.** In a 2020 study of five commercial speech recognition systems,
+  the average word error rate was 0.35 for Black speakers and 0.19 for White
+  speakers. That is roughly one word in three wrong, against one in five
+  [@pmid:32205437]. These were general speech recognition systems tested on
+  recorded interviews, not medical scribes, and they predate current tools.
+- **Language.** In simulated English and Spanish clinic visits, ambient
+  scribes carried interpreters' errors into the clinical note
+  [@pmid:42520279].
+- **Speech.** In a UK simulation with one scribe, summaries were broadly
+  stable across most accents. Word recognition fell markedly for one kind of
+  speech impairment (phonological impairment) [@pmid:42031419].
+
+The research for this chapter found no study of real-world scribe error
+rates by patient race, language, or disability. So the honest statement is
+narrow: the patients most likely to be misrecorded are probably not random.
+Had Mr. Alvarez spoken through an interpreter, the draft might have been more
+likely to be wrong, and he less able to read and correct it. [The bias and
+equity chapter](core-bias-equity.qmd) explains why harms like this follow
+existing inequity.
+
+### Your relief, his risk
+
+The benefit to clinicians has been tested in randomized trials.
+
+- In a trial of 66 practitioners in clinics in two states, an ambient
+  scribe reduced work exhaustion and interpersonal disengagement. The increase in
+  professional fulfillment was not significant. Time on notes fell by 0.36
+  hours a day [@pmid:41625485].
+- In a trial of 238 outpatient physicians, one of two scribes cut time in
+  notes by 9.5%, and the other did not. Burnout scores suggested improvement
+  with both, as secondary outcomes that need confirmation. Clinicians said
+  clinically significant errors happened "occasionally" [@pmid:41497288].
+- In a trial of 160 volunteer outpatient clinicians at one academic center,
+  both products tested reduced burnout scores. After-hours time in the record
+  was largely unchanged [@pmid:41729180].
+
+The benefit to patients is less clear. In one primary care study, patients
+who knew about the scribe said the physician seemed more focused on them. But
+in a masked comparison of 304 patients' visits with and without the
+scribe, ratings of the patient-physician relationship did not differ
+[@pmid:38834180]. In a pilot of 31 physicians, compared with 125 control
+physicians across 31,917 patient surveys, ratings of communication and
+satisfaction did not change significantly [@pmid:42334196].
+
+So the clinician's relief is measured, and the patient's experience of the
+visit has not been shown to change in either direction. When the draft is
+wrong, the wrong fact sits in *his* record.
+
+A made-up case: a scribe saves each clinician about 15 minutes a day, and
+the clinic fills that time with one more visit; who gained? [The workforce
+chapter](enrichment-workforce-economics.qmd#the-economics-the-debate-leaves-out)
+shows this volume lesson in real billing data; here it is a question of
+fairness.
+
+::: {.callout-important title="The fourth recurring lesson: who benefits, who bears the risk, who decides"}
+The course's first three recurring lessons are **proxies fail**,
+**efficiency gains get eaten by volume**, and **the published number is the
+optimistic one**. This chapter explains the fourth. For any AI tool, ask:
+
+1. **Who benefits?** For a scribe: the clinician, who is less exhausted, and
+   the health system, which may bill more fully [@pmid:42745555]. Possibly
+   the patient, through a more attentive visit, though a masked comparison
+   has not shown it [@pmid:38834180].
+2. **Who bears the risk?** The patient. The errors land in his record, and
+   the recording is of his conversation.
+3. **Who decides?** The health system buys the tool. The clinician turns it
+   on. The patient is told at the door, if at all.
+
+The answers are often three different people. When the person who bears the
+risk neither benefits nor decides, ethics asks for something in return: a
+real choice, a careful review, an honest answer. The same pattern appears in [the environment
+chapter](enrichment-environment.qmd): the people near a data center bear its
+costs and were not asked. It appears in [the workforce
+chapter](enrichment-workforce-economics.qmd) too: the workers displaced first
+have the least money in reserve.
+:::
+
+### What happens to the recording
+
+A recording keeps everything said in the room. O'Neil and colleagues point
+out that a full transcript may capture things a clinician typing a note would
+think twice about including. Their examples are abortion counseling in a
+state that restricts it, and a patient's immigration status. They note that HIPAA, the
+federal health privacy law, places no limit on how de-identified data may be
+used, and that modern AI can re-identify such data. They argue that most
+patients do not expect their conversations to be shared outside their health
+system [@pmid:41767129].
+
+What do vendors actually do with recordings, and what do patients expect? The
+research for this chapter found no study that measures either. You cannot
+honestly tell Mr. Alvarez where his words go if no one has told you. The
+honest answer is "I don't know how long they keep it. I'll find out, and I
+can turn it off today."
+
+### What the law adds
+
+The law is one way the duties above are enforced. It is the least you owe, not
+all of it. The detail is optional, in [Go
+deeper](#liability-in-more-detail-optional).
+
+**You sign it, you answer for it.** Under current law, courts measure the
+*physician* against the standard of care, meaning what a reasonably competent
+physician in your position would have done. They do not measure the AI
+against anything [@pmid:31584609; @pmid:38231630]. The same rule applied to
+a note drafted by a human scribe or a resident. As far as this
+course could find, no US malpractice claim involving a clinical AI tool had
+reached a verdict by September 2026.
+
+**Recording law.** Several states, California among them, require every
+party's consent to record a conversation. Lawsuits in California allege that
+health systems recorded visits with scribes without consent. One alleges that
+the vendor's tool inserted a statement that the patient "consented" to
+recording when, the plaintiff says, no one asked. These are allegations, not
+findings.
 
 ::: {.press-clips}
 <div class="press-clip"><div class="src">KPBS · news</div><a class="hl" href="https://www.kpbs.org/news/health/2025/12/11/lawsuit-claims-sharp-healthcare-secretly-recorded-exam-room-conversations-without-patient-consent">Lawsuit claims Sharp HealthCare secretly recorded exam room conversations without patient consent</a><div class="date">11 December 2025</div></div>
 <div class="press-clip"><div class="src">TechTarget · Healthtech Security</div><a class="hl" href="https://www.techtarget.com/healthtechsecurity/news/366641717/Sutter-Health-MemorialCare-face-class-action-lawsuit-over-AI-scribe-use">Sutter Health, MemorialCare face class action lawsuit over AI scribe use</a><div class="date">14 April 2026</div></div>
-<div class="press-clip"><div class="src">Becker's Hospital Review</div><a class="hl" href="https://www.beckershospitalreview.com/strategy/ambient-ai-lawsuit-highlights-importance-of-patient-consent/">Ambient AI lawsuit highlights importance of patient consent</a><div class="date">2026</div></div>
 :::
 
-These are complaints, not findings, so treat them as allegations. They rely
-on California's all-party-consent recording law, its medical-confidentiality
-statute, and the federal Wiretap Act. Several states, California among them,
-require every party's consent to record a conversation. Whether a waiting-room sign meets
-that requirement is what the courts are being asked. This chapter's view: a
-conversation with the patient does more than the sign, and [the patient communication
-chapter](core-patient-communication.qmd) covers how to have it.
+**The contract.** HIPAA lets a hospital share protected health information
+with a company only under a **business associate agreement** (BAA), a contract that
+makes the company legally responsible for protecting the data. A tool is
+covered only if your institution has a BAA for it, in the account you sign in
+with. At the University of Colorado, for example, ChatGPT Edu and Microsoft
+Copilot are covered when you sign in with your university credentials on the
+Anschutz and Denver campuses. CU Boulder and personal accounts are not.
+Check your own institution's policy, and ask whether your clinic's scribe
+runs under one.
 
-**The contract.** HIPAA, the federal health privacy law, lets a **covered
-entity** such as your hospital share protected health information with a
-vendor only under a **business associate agreement** (BAA). That contract
-makes the vendor legally responsible for protecting the data. An
-institution-licensed scribe should run under one; ask. The consumer chatbot on your phone
-does not. Which tools are covered, and in which account, is set by your
-institution's policy, so check it. At CU Anschutz, for example, ChatGPT Edu
-and Microsoft Copilot are covered when you sign in with university
-credentials. They are not covered through a personal account. If nobody can tell you in a
-sentence whether a tool has a BAA and what the policy allows, the answer is
-no.
-
-### The rules, in brief
-
-Much of the regulation is changing. Three points are enough for now; the
-full version is optional, in [Go deeper](#the-regulatory-detail-optional).
-
-- **Not every AI tool is a regulated device.** The US Food and Drug
-  Administration (FDA) uses four criteria to decide whether software that
-  gives clinicians recommendations escapes its review. The fourth usually
-  decides: can the clinician check the basis for the advice, with time to do
-  so? Your scribe is probably not regulated as decision support, because it
-  records and summarizes rather than recommends. If so, FDA does not review
-  it, and your review before you sign is the check.
-- **Cleared is not validated.** FDA clearance means the manufacturer convinced
-  FDA the device is about as safe and effective as something already on the
-  market. Of 130 FDA decision summaries for AI devices, about half reported any
-  clinical performance data [@pmid:33820998], and a 2024 follow-up found the
-  gap persists [@pmid:39187696].
-- **The rules change.** FDA's decision-support guidance was replaced twice in
-  January 2026. Before you quote any rule, open the primary source and check
-  the date at the top.
+**The FDA.** A scribe that records and summarizes, without recommending, is
+probably outside the US Food and Drug Administration's review of
+decision-support software. Check FDA's current position before you rely on
+that. If so, your review is the check.
 
 ## Watch or listen (optional)
 
@@ -272,17 +392,19 @@ and Safety Challenges," with Michelle Mello and Neel Guha (November 21, 2024;
 48 min). A full transcript is on the episode page.
 <https://law.stanford.edu/stanford-legal/exploring-ai-in-healthcare-legal-regulatory-and-safety-challenges/>
 
-Mello and Guha wrote the *NEJM* liability analysis cited above
-[@pmid:38231630]. In the first 20 minutes, listen for who can be sued when a
-tool causes harm, and ask which one Mr. Alvarez's lawyer would name first.
+This episode is about the law, which this chapter keeps short. Mello and
+Guha wrote the *NEJM* liability analysis cited above [@pmid:38231630]. In the
+first 20 minutes, listen for who can be sued when a tool causes harm. Then
+ask whether that is the same as who owed Mr. Alvarez something. The course
+found no dated episode on the ethics of scribes.
 
 ## Do
 
-Use made-up material only. Mr. Alvarez and his visit are invented. What counts
-as patient information, and why taking out the name is not enough: [the
-patient information page](../course/patient-information.qmd).
+Use made-up material only. Mr. Alvarez and his visit are invented. What counts as
+patient information, and why taking out the name is not enough: [the patient
+information page](../course/patient-information.qmd).
 
-### Part A: draft the note, then decide what you would sign (about 25 minutes)
+### Part A: draft the note, then decide what you would sign (about 30 minutes)
 
 Here is the conversation from the opening scenario. C is the clinician, P is
 Mr. Alvarez.
@@ -310,7 +432,11 @@ P: Every morning.
 C: Good. Let's see you back in eight weeks.
 ```
 
-**1. Get a draft (5 minutes).** Paste the conversation into your chatbot with
+**1. Your plan first (3 minutes).** Before you open a chatbot, write two or
+three lines: what you would do about the apixaban, and by when. You will
+compare the draft's plan with yours, so write yours before you see it.
+
+**2. Get a draft (5 minutes).** Paste the conversation into your chatbot with
 this prompt:
 
 ```
@@ -318,10 +444,9 @@ You are an ambient documentation tool in an outpatient clinic.
 Write a SOAP progress note from this visit transcript.
 ```
 
-Read the draft once, the way you would at 6:40 p.m. Note anything you would
-change.
+Read it once, the way you would at 6:40 p.m.
 
-**2. Ask for a better draft (5 minutes).** Start a new chat, paste the
+**3. Ask for a better draft (5 minutes).** Start a new chat, paste the
 conversation again, and try this:
 
 ```
@@ -333,18 +458,18 @@ in the transcript. If the plan for a problem was not stated, write
 (2) anything said in the visit that is not in the note.
 ```
 
-Compare the two drafts. The second prompt asks the tool to show you where to
-look. Its lists can still be wrong, so you still read the whole note.
+The second prompt asks the tool to show you where to look. Its lists can
+still be wrong, so you still read the whole note.
 
-**3. Decide what you would sign (15 minutes).** Take the better draft. Read
+**4. Decide what you would sign (15 to 18 minutes).** Take the better draft. Read
 it sentence by sentence against the conversation and mark each sentence:
 *said*, *not said*, or *changed*. Then list anything said that the note left
 out. Look hardest at three things: the apixaban, the naproxen, and the plan
-for anticoagulation. Then edit the draft into the note you would sign.
+for anticoagulation. Compare the draft's anticoagulation plan with the one
+you wrote in step 1. Then edit the draft into the note you would sign.
 
-Your draft may or may not get the apixaban right. Either way, look at the plan.
-The clinician said "we'll come back to it" and never did. No draft can make
-that decision for you. Decide what you would do about it, and when.
+The clinician said "we'll come back to it" and never did. If a draft wrote a
+sensible plan anyway, it is still a plan nobody made.
 
 Record this:
 
@@ -352,17 +477,17 @@ Record this:
 My drafting prompt (the version I would use again):
 __________________________________________________________________
 
-A sentence I changed, added, or deleted before signing, and why:
+My apixaban plan, and how the draft's plan differed:
 __________________________________________________________________
 
-What I would do about the apixaban before I sign, and by when:
+A sentence I changed, added, or deleted before signing, and why:
 __________________________________________________________________
 
 My rule for reading a drafted note, in one sentence:
 __________________________________________________________________
 ```
 
-### Part B: explain it to the patient (about 15 minutes)
+### Part B: explain it to the patient (about 12 minutes)
 
 Mr. Alvarez saw the sign in the waiting room. Practise the conversation. Use
 this prompt:
@@ -371,38 +496,52 @@ this prompt:
 Play Mr. Alvarez, a 68-year-old man at a clinic visit. The waiting room
 has a sign saying the clinic uses AI-assisted documentation. Ask me,
 one at a time: what the phone on the desk is doing, who hears the
-recording, and who is responsible if the note gets something wrong.
-React as a real patient would. After three questions, step out of the
-role and tell me which answer was clear, which was vague, and anything
-I said that I may not actually know.
+recording, who is responsible if the note gets something wrong, and
+"Do I have to say yes?" React as a real patient would. After four
+questions, step out of the role and tell me which answer was clear,
+which was vague, and anything I said that I may not actually know.
 ```
 
 Answer in your own words. If you do not know something, such as where the
-recording is stored, say so and say who would know. Then write the two or
-three sentences you would actually say to a patient. Keep them; you will need
-them in July.
+recording is stored, say so and say who would know. Do not promise he can say
+no unless you know your clinic allows it. Then write the two or three
+sentences you would actually say to a patient. Keep them for July.
+
+### Part C: what you owe (about 3 minutes)
+
+Write one sentence for each:
+
+```
+What I owed Mr. Alvarez when I signed:
+__________________________________________________________________
+
+What I owed the next clinician who reads the note:
+__________________________________________________________________
+
+What I owe myself (a habit, a limit, or a question I will ask):
+__________________________________________________________________
+```
 
 ## Check
 
 | You have | Meets | Falls short |
 |---|---|---|
 | Two drafts | A first prompt and a better one, and what changed in the output | One prompt only |
+| Your plan first | An apixaban plan written before reading the draft, and how the draft's plan differed | Plan written after reading the draft, or copied from it |
 | A line-by-line read | Each sentence marked said, not said, or changed, against the conversation | "It read well" |
 | The apixaban decision | What you would write in the plan and do before signing, and by when | Signed as drafted |
-| What you would tell the patient | Two or three plain sentences, including who answers for the note, and honesty about what you do not know | Jargon, or a promise you cannot keep |
-| A box for the original note | A box of @tbl-price, with the recommendation named | "It depends" |
+| What you would tell the patient | Two or three plain sentences, including who answers for the note, an honest answer to "Do I have to say yes?", and honesty about what you do not know | Jargon, or a promise you cannot keep |
+| What you owed, and to whom | One specific sentence each for the patient, the next clinician, and yourself | "Be careful", or only what you risk legally |
 | Your reading rule | One sentence that would have caught the apixaban error in the original draft | "Read it carefully" |
 
 ## What this changes for you
 
 Go back to 6:40 p.m., the original draft, and the stroke three weeks later.
-Write three sentences. First, which box of @tbl-price the signed note is in,
-and which of the four elements would be hardest for Mr. Alvarez's lawyer to
-prove. Second, name one fact that would change your answer if it were
-different. Candidates: the time of day, the number of notes, an attestation
-line inserted automatically, a clinic policy on reading drafts, or whether
-Mr. Alvarez knew the scribe was running. Say which way it changes your answer. Third, what you will do
-differently with the fourteenth note.
+Write three sentences. First, what did you owe Mr. Alvarez before you signed?
+Second, what would you have needed to give it: more time, a tool setting, a
+clinic policy, or something else? Third, answer the fourth lesson's questions
+for his visit: who benefited from the scribe, who bore the risk, and who
+decided it would be in the room?
 
 Then reread the sentence you wrote in [week 1](core-centaur-cyborg.qmd), on
 the part of clinical judgment you will not hand over. Would you change it now?
@@ -410,19 +549,94 @@ Date both and keep them.
 
 ## Summary
 
-- The clinician who signs the note answers for it. The AI is evidence, not a
-  defendant. As far as this course could find, no US malpractice claim
-  involving a clinical AI tool had reached a verdict by September 2026.
-- A summarizing error looks like a normal note. Read the plan against what the
-  patient said. Ask the tool to mark what it inferred, and still read it all.
-- The riskiest box is following a tool into nonstandard care.
-- A biased model cut clinician accuracy by 11 points, and explanations did not
-  significantly repair it.
-- Tell the patient, know what the attestation says, and know whether there is
-  a BAA for the tool.
-- Cleared is not validated, and the rules change. Check the date on the source.
+- A signed note promises the patient and the next clinician: this is what
+  happened, and this is what I decided.
+- In the plan, a scribe writes reasoning nobody did. Decide the plan yourself
+  before you read the draft's.
+- Review is a duty, not a guarantee. Editing is uneven, and drafts pull
+  decisions toward them.
+- Consent is a real choice only if saying no is easy.
+- The tool probably fails some patients more than others; the research is
+  thin.
+- The fourth recurring lesson: who benefits, who bears the risk, who decides.
+  For a scribe, the relief is the clinician's and the risk is the patient's.
+- The law makes the signer answer for the note. It is the least you owe, not
+  all of it.
 
 ## Go deeper
+
+### Liability in more detail (optional)
+
+About 10 minutes. This is the legal reasoning that "What the law adds"
+summarizes.
+
+**The four elements.** Malpractice is a type of negligence. To win a
+negligence case, the person suing (the **plaintiff**) must prove four things,
+which lawyers call the four **elements**. First, that you owed the patient a
+duty. Second, that you fell below the **standard of care**, meaning what a
+reasonably competent physician in your position would have done. Third, that
+this failure caused the harm. Fourth, that the harm was real. The tool is not
+a defendant in that list. It is evidence. Under current law, courts measure
+the *physician* against the standard of care. They do not measure the AI
+against anything [@pmid:31584609; @pmid:38231630].
+
+So "the AI was wrong" is not, by itself, a legal argument. The question a
+court will ask is whether *you* should have known better than to rely on the
+output, given what you knew at the time [@pmid:38231630]. Suing the vendor
+instead is harder than you might expect. Courts have usually treated clinical
+software as a service rather than a product. And under the **learned
+intermediary doctrine**, a manufacturer's duty to warn runs to the physician,
+who stands between the product and the patient. Price, Gerke, and Cohen note
+that this may shift as tools become too opaque for a physician to check
+([Price, Gerke, and Cohen, 2024](https://www.ncbi.nlm.nih.gov/books/NBK613216/)).
+
+Mr. Alvarez's case would be argued as "the physician signed a note saying the
+patient was taking a medication he had told her he had stopped." Is that
+below the standard of care at 6:40 p.m. with fourteen notes to sign? No court
+has yet answered that question.
+
+**Four boxes.** Price, Gerke, and Cohen published a widely used framework
+[@pmid:31584609]. It asks two questions. Did the AI's recommendation match the
+standard of care? Did the physician follow it? Two yes-or-no questions give
+four boxes. Here, "exposure" means how much legal risk the physician carries.
+
+| | **Physician followed the AI** | **Physician overrode the AI** |
+|---|---|---|
+| **AI matched the standard of care** | A. Good outcome likely. If harm occurs, exposure is low. One open question: can following a correct recommendation you could not explain still create exposure? | C. High exposure. The physician left the standard of care *and* disagreed with a tool that got it right. |
+| **AI departed from the standard of care** | B. High exposure. The physician did the nonstandard thing because the machine said so. | D. The physician was right. What risk remains is in the documentation, in hospital policy, and in the fact that the tool stayed in use. |
+
+: The Price, Gerke, and Cohen 2×2. Rows are what the AI said; columns are what the physician did. {#tbl-price}
+
+The uncomfortable box is B. Under current law, the physician who *follows* the
+AI into nonstandard care carries the most risk [@pmid:31584609]. Two
+experiments asked members of the public, and one also asked physicians. In a
+nationally representative sample of 2,000 US adults, physicians who followed
+an AI recommendation for standard care were judged less liable than those who
+rejected it. Rejecting a *nonstandard* recommendation gave no similar
+protection [@pmid:32978285]. A 2026 study found the same pattern
+in US and German adults and in German physicians [@pmid:42242875]. The
+practical lesson: the tool is safest to follow when it agrees with what you
+would have done anyway. When it disagrees, you carry the risk yourself,
+whichever way you decide.
+
+Where does Mr. Alvarez's note sit? At first, nowhere: the scribe made no
+recommendation. But the note *is* a recommendation once signed. "Continue
+apixaban" was the plan. It was written on a premise the patient had
+contradicted, and you signed it. Which box is that?
+
+A defense that says "the tool showed its reasoning, so the physician should
+have caught it" must answer the Jabbour evidence in @fig-jabbour.
+
+**Attestation.** Where your institution's policy calls for it, record that
+the note was drafted with ambient documentation and reviewed by you. Many
+systems add that line automatically. If yours does, know what it says. It is
+an **attestation**, a statement in your name that something is true.
+
+**Cleared is not validated.** FDA clearance means the manufacturer convinced
+FDA the device is about as safe and effective as something already on the
+market. Of 130 FDA decision summaries for AI devices, about half reported any
+clinical performance data [@pmid:33820998], and a 2024 follow-up found the
+gap persists [@pmid:39187696].
 
 ### Papers
 
@@ -444,7 +658,6 @@ Date both and keep them.
   study [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd) uses), and a
   2026 systematic review of automation bias and deskilling with generative
   tools [@pmid:42445869].
-- Cleared is not validated [@pmid:33820998; @pmid:39187696].
 - The National Academy of Medicine's AI Code of Conduct, discussion draft
   [@pmid:39830818] and the informatics community's commentary on it
   [@pmid:39658328]; the 2025 final is a NAM publication.

@@ -25,7 +25,7 @@ the course survivable when a third of the class misses week two.
 | `core-appraisal` | [Critical appraisal](../chapters/core-appraisal.qmd) | 90 | AIM-2, AIM-1, AIM-4, AIM-9 |
 | `core-bias-equity` | [Bias and equity](../chapters/core-bias-equity.qmd) | 90 | AIM-3 |
 | `core-patient-communication` | [Talking to patients about AI](../chapters/core-patient-communication.qmd) | 90 | AIM-6, AIM-4 |
-| `core-ethics-regulation` | [Ethics, liability, and the device line](../chapters/core-ethics-regulation.qmd) | 75 | AIM-4, AIM-X |
+| `core-ethics-regulation` | [Ethics: what you owe when you sign the note](../chapters/core-ethics-regulation.qmd) | 70 | AIM-4, AIM-X |
 
 : Core modules. Minutes are the live session, not the chapter. {#tbl-core}
 
@@ -56,7 +56,7 @@ it by a student who missed it. Students spend most of their own time on
 | 1 | Centaur or cyborg | Week 1 is taught live | How these systems work (covered by the live talks) |
 | 2 | Prompting lab | Professional work with AI: writing and beyond (a co-director) | Critical appraisal; Bias and equity; Grounding AI in real sources |
 | 3 | Talking to patients about AI | To be announced: bias and equity, or building a small tool live | Agentic coding; the scribe open lab |
-| 4 | Ethics, liability, and the device line | Where this is going (jobs, the planet) and what you will keep | Will AI take your job?; What AI costs the planet |
+| 4 | Ethics: what you owe when you sign the note | Where this is going (jobs, the planet) and what you will keep | Will AI take your job?; What AI costs the planet |
 
 : Core chapter, Wednesday talk, and menu by week. Wednesday topics are a starting plan for fall 2026. {#tbl-default}
 
@@ -74,10 +74,11 @@ week 2 core and the prompting lab a menu item.
 
 **A cohort with no live week 1.** Make How these systems work the week 1 core.
 
-### Three ideas that recur
+### Four ideas that recur
 
-Modules are independent, but three ideas recur across all of them. Name them in
-week one and call them by name whenever they reappear. They are what turns
+Modules are independent, but four ideas recur across them. Name the first
+three in week one, preview the fourth, which week 4 explains, and call them
+by name whenever they reappear. They are what turns
 eight sessions into a course, and they are what students will still have when
 every tool taught here has been replaced.
 
@@ -98,6 +99,12 @@ every tool taught here has been replaced.
    curated hard cases beat real-world deployment. The gap between the most
    prominently reported statistic and the trial result is the most reliable
    teaching material in this field.
+4. **Who benefits, who bears the risk, who decides.** Introduced in the week 4
+   ethics chapter. A scribe relieves the clinician; the errors land in the
+   patient's record, and the patient is told at the door. A data center's
+   costs fall on neighbors who were not asked. Displaced transcriptionists have
+   the least money in reserve. The question to train: *are these three the
+   same people, and if not, what closes the gap?*
 
 ## Running a week
 

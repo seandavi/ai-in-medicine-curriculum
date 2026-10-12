@@ -107,7 +107,7 @@ schools that have no such agreement.
 Before you put anything into a tool, ask two questions. *Is there a BAA for
 this tool, in the account I am signed in to? Does the policy say I may put
 this into it?* If nobody can answer
-in a sentence, the answer is no. [The ethics and regulation
+in a sentence, the answer is no. [The ethics
 chapter](../chapters/core-ethics-regulation.qmd) takes this further.
 
 ## Your patient may do what you may not
@@ -232,4 +232,4 @@ university login, and follow the institution's policy for clinical use.
 - [45 CFR 160.103](https://www.law.cornell.edu/cfr/text/45/160.103), the definitions: covered entity, workforce, protected health information.
 - [45 CFR 164.514](https://www.law.cornell.edu/cfr/text/45/164.514), de-identification and the Safe Harbor list.
 - [45 CFR 164.502](https://www.law.cornell.edu/cfr/text/45/164.502), including the minimum necessary rule.
-- [The ethics and regulation chapter](../chapters/core-ethics-regulation.qmd), for business associate agreements and liability.
+- [The ethics chapter](../chapters/core-ethics-regulation.qmd), for consent, business associate agreements, and liability.

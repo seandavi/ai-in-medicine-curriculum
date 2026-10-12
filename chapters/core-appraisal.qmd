@@ -283,8 +283,10 @@ and documentation time 16.0 minutes per day, with 0.49 more visits per week. But
 after-hours EHR time did not change significantly [@pmid:41920565]. You will work
 out why in the exercise, before reading the explanation.
 
-This is the third of the course's three recurring lessons: **the published
-number is the optimistic one.** The 0.49 extra visits may also be a small
+This is the third of the course's four recurring lessons (the fourth, *who
+benefits, who bears the risk, who decides*, comes in [the ethics
+chapter](core-ethics-regulation.qmd)): **the published number is the
+optimistic one.** The 0.49 extra visits may also be a small
 example of the second, **efficiency gains get eaten by volume**: time saved
 tends to get filled with more work. [The workforce chapter](enrichment-workforce-economics.qmd)
 explains how that saved time turns into billing.
@@ -299,7 +301,7 @@ for roughly a quarter. Well under a third of those with clinical data gave
 sex-specific results [@pmid:33820998]. A 2024 follow-up found the gap persists:
 many authorized tools have no published clinical validation [@pmid:39187696].
 A benchmark score standing in for performance on patients is the first of the
-course's three recurring lessons, **proxies fail**, in regulatory form.
+course's four recurring lessons, **proxies fail**, in regulatory form.
 [The bias and equity chapter](core-bias-equity.qmd) explains that lesson in
 full.
 
@@ -313,7 +315,7 @@ paper with it.
 :::
 
 The device boundary, the Predetermined Change Control Plan, and the clinical
-decision support criteria belong to [the ethics and regulation chapter](core-ethics-regulation.qmd). The
+decision support criteria belong to [the ethics chapter](core-ethics-regulation.qmd). The
 FDA's list of AI-enabled devices held 1,614 authorizations when it was updated
 on 4 September 2026, with decisions through June 2026. The FDA says the list is
 not complete, and one product can appear more than once, so quote the count
@@ -356,7 +358,7 @@ trained on, how it was validated, and whether fairness was tested. That is the
 closest thing to a legal right to traceability. It applies to the tool built
 into your EHR, not to the consumer chatbot on your phone. The rule is in force
 as of September 2026. A proposed rule, HTI-5, would remove the source-attribute
-requirement; [the ethics and regulation chapter](core-ethics-regulation.qmd) tracks its status.
+requirement; [the ethics chapter](core-ethics-regulation.qmd) tracks its status.
 :::
 
 There is a seventh question the six do not ask. It belongs to the patient in
@@ -418,7 +420,7 @@ not.
 The harder case you will meet in month one: a tool your hospital licenses and
 runs inside the EHR is a different question. Ask whether a business associate
 agreement exists, and what your institution's policy says about documenting that
-you used it. [the ethics and regulation chapter](core-ethics-regulation.qmd) covers that.
+you used it. [the ethics chapter](core-ethics-regulation.qmd) covers that.
 
 What counts as patient information, and why taking out the name is not
 enough: [the patient information page](../course/patient-information.qmd).
@@ -722,7 +724,7 @@ an answer to either.
   the Part B claims fail.
 - The National Academy of Medicine's AI Code of Conduct, in its discussion
   draft [@pmid:39830818]; the 2025 final is a NAM publication and the principles
-  are the same. Also in [the ethics and regulation chapter](core-ethics-regulation.qmd).
+  are the same. Also in [the ethics chapter](core-ethics-regulation.qmd).
 - Eight guiding principles for AI tools in health care [@doi:10.1038/s43856-023-00279-9].
   "Report clinically meaningful outcomes" and "have high healthcare value" are what
   Part B teaches in exercise form.
