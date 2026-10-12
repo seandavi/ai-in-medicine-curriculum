@@ -46,10 +46,11 @@ book:
         - course/friday-groups.qmd
         - course/patient-information.qmd
     # Each week: the core chapter first, then the menu (see the syllabus).
+    # Week 1 opens with the planning chapter, because it plans the whole course.
     - part: "Week 1 · Working with AI"
       chapters:
-        - chapters/core-foundations.qmd
         - chapters/plan-your-learning.qmd
+        - chapters/core-foundations.qmd
     - part: "Week 2 · Getting good at it"
       chapters:
         - chapters/enrichment-prompting-lab.qmd
