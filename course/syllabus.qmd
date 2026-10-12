@@ -42,7 +42,7 @@ about 3 hours of sessions you choose, plus the rest of the week.
 | Through the week | Guest talks and workshops from clinicians and researchers using AI in their work | Your choice | 1 to 2 hours |
 | Thursday, 11 to 11:45 a.m., live | **Office hours**, drop in: bring what you are stuck on. Not recorded | Optional | 45 minutes |
 | Thursday night | [Learning journal](learning-journal.qmd) entry | Yes | 30 minutes |
-| Friday, 60 minutes, live | [Small group](friday-groups.qmd), in one of four time slots you choose: what AI taught you, and practising conversations about AI out loud. Not recorded | Best effort, in your slot | 1 hour |
+| Friday, 60 minutes, live | [Small group](friday-groups.qmd), in one of four time slots you choose: open discussion, with topics you bring. Not recorded | Best effort, in your slot | 1 hour |
 | Any time | Chapters from the **menu**, and the [open labs](../appendix/open-labs.qmd) | Optional | As you like |
 
 : Your week, weeks 2 to 4. "Your choice" rows together: about 3 hours a week. All times are Mountain time (Denver). The guest schedule is posted in Canvas. {#tbl-week}
@@ -59,9 +59,9 @@ schedule if anything changes.
 | Monday, October 12, 10 a.m. | Welcome: how the course works, and how adults learn best |
 | Tuesday, October 13, 10 a.m. | A short history of AI |
 | Wednesday, October 14, 10 a.m. | What AI is: from AI to machine learning to deep learning to large language models, with time to try it together |
-| Thursday, October 15, 10 a.m. | **Hands-on: centaur or cyborg, live.** Bring your ChatGPT Edu account and try things together. Goes with the week's core chapter, [Centaur or cyborg](../chapters/core-centaur-cyborg.qmd). |
+| Thursday, October 15, 10 a.m. | **Hands-on: set up your learning with ChatGPT.** Bring your ChatGPT Edu account. We open it together and use it to write your learning goals and design your learning journal. See [Thursday's session](first-session.qmd). |
 | Thursday, October 15, 11 a.m. | Office hours, drop in. Bring what you are stuck on |
-| Friday, October 16 | Small groups, in the time slot you signed up for: introductions, then the first scenario cards |
+| Friday, October 16 | Small groups, in the time slot you signed up for: introductions, then open discussion |
 
 : Week 1. All times are Mountain time (Denver). {#tbl-week1}
 
@@ -102,7 +102,7 @@ week. The menu is there so you can follow what interests you.
 
 | Week | Core | Menu (choose one or more) |
 |---|---|---|
-| 1 · October 12 to 16 | [Centaur or cyborg](../chapters/core-centaur-cyborg.qmd): what to hand to AI, and what to keep | [How these systems work](../chapters/core-foundations.qmd) (the live talks cover it) |
+| 1 · October 12 to 16 | [How these systems work](../chapters/core-foundations.qmd) (the live talks cover it) | None |
 | 2 · October 19 to 23 | [Prompting lab](../chapters/enrichment-prompting-lab.qmd): getting good answers, and knowing their limits | [Critical appraisal](../chapters/core-appraisal.qmd), [Bias and equity](../chapters/core-bias-equity.qmd), [Grounding AI in real sources](../chapters/enrichment-rag-notebooklm.qmd) |
 | 3 · October 26 to 30 | [Talking to patients about AI](../chapters/core-patient-communication.qmd) | [Agentic coding](../chapters/enrichment-agentic-coding.qmd), the [scribe open lab](../appendix/open-labs.qmd) |
 | 4 · November 2 to 6 | [Ethics: what you owe when you sign the note](../chapters/core-ethics-regulation.qmd) | [Will AI take your job?](../chapters/enrichment-workforce-economics.qmd), [What AI costs the planet](../chapters/enrichment-environment.qmd) |

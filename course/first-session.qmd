@@ -1,0 +1,123 @@
+# Thursday: set up your learning with ChatGPT {.unnumbered}
+
+[Week 1 hands-on session · Thursday, October 15, 10 a.m. · 60 minutes]{.subtitle .lead}
+
+Today you open ChatGPT Edu and use it for something useful: you write your
+own learning goals for the course, and the journal you will keep each week.
+You leave with two things you made and will use again.
+
+You do not need any experience with chatbots. If this is your first time,
+that is fine. ChatGPT will ask the questions; you answer them.
+
+## What you need
+
+- A laptop with a web browser.
+- Your **ChatGPT Edu** account. Sign in at [chatgpt.com](https://chatgpt.com)
+  with your university email. If you have not set it up yet, follow the
+  Canvas page "Get your ChatGPT Edu account" before class.
+- Nothing about patients. Today is about you and your learning.
+
+## The plan
+
+| Time | Step |
+|---|---|
+| 10 min | 1. Sign in and get set up |
+| 20 min | 2. Write your learning goals with ChatGPT |
+| 15 min | 3. Design your learning journal |
+| 10 min | 4. Save your work, and share one goal |
+| 5 min | 5. What happens next week |
+
+## Sign in and get set up
+
+1. Go to [chatgpt.com](https://chatgpt.com) and sign in with your university
+   email.
+2. Check the bottom left of the screen. It should say
+   **"CU - Anschutz (Edu)"**. If it does not, say so now and we will sort it
+   out together.
+3. Make a **project** for this course. Look for **Projects** in the left
+   sidebar, make a new one, and name it "AI in Medicine". A project keeps
+   your chats for this course together, so you can come back to them.
+4. Start a new chat inside the project.
+
+## Write your learning goals
+
+Copy this prompt into the chat. Fill in the part in brackets first.
+
+```
+I'm a fourth-year medical student starting a 4-week
+course on AI in medicine. I'm applying in
+[your specialty, or "undecided"].
+
+Interview me, one question at a time, about what I
+want from this course: what I have tried with AI so
+far, what worries me about it, and where AI might
+help my work as a resident.
+
+After about six questions, suggest 3 to 5 learning
+goals, written in my own words, each with one small
+thing I could try this week. Then ask me what I want
+to change.
+```
+
+Answer each question in a sentence or two. There are no wrong answers. If
+you are not sure what you want yet, say that; it is a useful answer.
+
+When ChatGPT suggests your goals, read them and **make them yours**. Change
+anything that does not sound like you. Ask for a goal to be smaller, bigger,
+or more specific to your specialty. Keep going until you would be happy to
+show them to a colleague.
+
+## Design your learning journal
+
+Each week you write a short [learning journal](learning-journal.qmd) entry.
+Now you design your own version of it. In the same chat, copy this prompt:
+
+```
+Using the goals we just wrote, help me design a
+weekly learning journal I can fill in within 30
+minutes. Make it a short markdown template.
+
+It must include these four course questions:
+1. What I set out to learn
+2. How I used AI to learn it
+3. What went wrong, and how I noticed
+4. One thing I checked
+
+Add one or two headings of your own that connect
+each entry to my goals. Then fill in a sample entry
+for this week so I can see how it works.
+```
+
+Read the template. Move, rename, or cut the extra headings until it suits
+how you think. The four course questions stay.
+
+## Save your work, and share one goal
+
+- Copy your final goals and your journal template into a document you keep:
+  a notes app, Word, or Google Docs. Name it "AI in Medicine journal".
+- Your chat stays in the "AI in Medicine" project, so you can return to it.
+
+Then, if you are willing, read one of your goals aloud or type it in the
+chat. Hearing what classmates want from the course is often the most useful
+part of the hour.
+
+## What happens next week
+
+Your journal template is where your week 1 entry goes, due Thursday night in
+Canvas. Each week after that:
+
+1. Open your "AI in Medicine" project and start a new chat for the week.
+2. Paste in your journal document and tell ChatGPT what you tried.
+3. Ask it to help you write this week's entry in your template.
+4. Read it, make it yours, and submit it.
+
+A new chat each week works better than one long chat. Very long chats lose
+track of what was said in the middle; you will see why in Wednesday's
+session. Your document carries what matters from week to week.
+
+## Three rules, every session
+
+1. **No patient information** in a chatbot unless your hospital has approved
+   that tool for it.
+2. **Make it yours.** Read what it gives you and change what does not fit.
+3. **You sign what you submit.** Whatever helped you write it, it is yours.

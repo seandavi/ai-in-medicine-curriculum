@@ -245,6 +245,13 @@ have said no? What would have made that easier? How to have that conversation
 is in [the patient communication
 chapter](core-patient-communication.qmd#the-phone-on-the-desk-what-the-patient-can-refuse).
 
+Your health system also has its own rules on AI use, for example whether a
+patient can refuse an AI tool or a recording. The health system sets these
+rules, not your medical school. In Colorado, for example, Children's Colorado
+and UCHealth have some different rules, so check each one when you move
+between them. The rules also change. Know the current rules where you work,
+and follow them.
+
 ### Who the tool fails
 
 A scribe does not fail everyone equally. The research is thin, but the results
@@ -543,9 +550,8 @@ clinic policy, or something else? Third, answer the fourth lesson's questions
 for his visit: who benefited from the scribe, who bore the risk, and who
 decided it would be in the room?
 
-Then reread the sentence you wrote in [week 1](core-centaur-cyborg.qmd), on
-the part of clinical judgment you will not hand over. Would you change it now?
-Date both and keep them.
+Then write a fourth sentence, on the part of clinical judgment you will not
+hand over to a tool. Date all four and keep them.
 
 ## Summary
 
@@ -654,8 +660,7 @@ gap persists [@pmid:39187696].
   White speakers. So the patient most likely to be misdocumented is not
   random [@pmid:42110031].
 - Consent as it actually happens in clinic [@pmid:40694347].
-- Skill loss after using a tool, called deskilling [@pmid:40816301] (the
-  study [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd) uses), and a
+- Skill loss after using a tool, called deskilling [@pmid:40816301], and a
   2026 systematic review of automation bias and deskilling with generative
   tools [@pmid:42445869].
 - The National Academy of Medicine's AI Code of Conduct, discussion draft
@@ -836,5 +841,4 @@ Check the date on each before quoting it.
   how one campus set up rules for AI tools, plus the eight guiding
   principles.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/):
-  four levels of classroom AI policy. Also in [the centaur-or-cyborg
-  chapter](core-centaur-cyborg.qmd).
+  four levels of classroom AI policy.
