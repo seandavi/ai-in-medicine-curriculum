@@ -335,6 +335,6 @@ plan that no source told you to?
   ChatGPT Work, which your account may not have.
 - OpenAI, [Projects and chats](https://learn.chatgpt.com/docs/projects): when
   to use a project, and what it keeps.
-- [Starter resources](../appendix/resources.qmd), "Your applications and your
-  coursework": the AAMC's principles for AI in medical education, one of the
-  sources your research may find.
+- [What the field expects](../appendix/competency-frameworks.qmd): the AAMC's
+  work and the published AI competency frameworks for medical students. Use it
+  to check what your research in step 1 found, and what it missed.

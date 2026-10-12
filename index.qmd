@@ -88,7 +88,9 @@ appendix.
 ## Competency coverage
 
 The course tags every chapter to a stable competency ID so it can be mapped
-to national standards when they arrive. The IDs and the coverage rules are in
+to national standards when they arrive. Where the IDs come from, and the
+frameworks behind them, is in the appendix [What the field
+expects](appendix/competency-frameworks.qmd); the coverage rules are in
 `curriculum/competencies.md` in the repository. In short: AIM-1 foundations;
 AIM-2 critical appraisal; AIM-3 bias and equity; AIM-4 ethics, law, and
 regulation; AIM-5 clinical use; AIM-6 talking to patients; AIM-7 workflow and
