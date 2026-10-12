@@ -39,8 +39,9 @@ Ask one question; do not rewrite the plan.
 
 ## Things that go wrong in the session
 
-- **ChatGPT cannot open the course link** (`llms.txt`). The chapter tells the
-  student to paste the chapter list from the preface instead.
+- **ChatGPT works from the pasted course list,** not the book's website,
+  which it cannot read. If a student skipped that prompt, the theme-to-course
+  match will be invented; have them paste the list and ask again.
 - **No links in the research answer.** Ask ChatGPT to search the web. If the
   account has search turned off, the student can still do steps 3 to 6 and
   name the missing research in the journal.
