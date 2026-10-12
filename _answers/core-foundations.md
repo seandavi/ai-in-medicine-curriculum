@@ -25,21 +25,26 @@ the attending that 57 is probably an overestimate.
 | Tumor expression clustering, no diagnoses | No | Groups | Unsupervised |
 | Chatbot next-token prediction | Yes, the next token is in the text | Category (one of ~100k tokens) | Supervised classification; no human labeler because the label is the text itself. "Self-supervised" is the term of art and is a bonus, not required |
 
-**Objective 3, Part A.** All three steps use the same noisy spiral (noise 50)
-with 20% of the dots used for training and a fixed seed. Measured in a
-headless browser on 2026-10-03, at about 500 epochs: step 1 (one layer of two,
-X₁ and X₂) training loss about 0.45, test about 0.49, a near-straight boundary
-through the spiral; step 2 (two layers of six, with sin(X₁) and sin(X₂) added)
-about 0.09 and 0.27; step 3
-(six layers of eight, all features) about 0.10 and 0.55, with the boundary
-wrapping individual dots. Third sentence: on training loss alone, steps 2 and 3
-look about the same (0.09 against 0.10, close enough that either can come out
-ahead depending on when the student pauses); test loss shows step 3 is the
-worst of the three. So training loss alone could not have told the student
-which network to trust. If a group lets step 3 run past about 1,500 epochs its test loss
-falls again; that is a good discussion point (the number depends on when you
-stop), not a wrong result. The transfer: a vendor number with no test set is
-that training loss.
+**Objective 3, Part A.** The slider fits a polynomial to 12 made-up training
+points and scores it on 60 held-back test points (seeded, so every student sees
+the same numbers). Read from the chapter's widget code on 2026-10-12, training
+and test error (root-mean-square) by setting, approximately: 0, 0.76 and 0.80
+(a flat line, wrong on both sets: too simple); 1, 0.31 and 0.58; 3, 0.26 and
+0.42 (the lowest test error; 4 is close at 0.44); 6, 0.23 and 2.1 (the readout
+says "above 1.5" from here on); 11, 0.00 and far off the chart (the curve
+passes through every training dot: too flexible). Third sentence: on training
+error alone the student would have picked 11, because training error only
+ever falls and reaches zero there; the test error shows 11 is the worst
+setting and the best one is in the middle, around 3. A student who answers
+"too simple: 0 or 1; too flexible: 6 and above" is right. The transfer: a
+vendor number with no test set is that training error.
+
+**Fitting by hand (the eGFR sliders in "A formula learned from data").** Not a
+Check row, but students may ask. Starting setting a = 50, b = 0.3, average
+miss about 19.3 mL/min/1.73 m². The best setting the sliders allow is a = 75,
+b = 1.05, average miss about 6.1. The data were generated from
+80 × creatinine^(−1.1) with scatter, so a student near a = 80, b = 1.1 is
+close. The curve and data are illustrative, not CKD-EPI.
 
 **Objective 4, Part B.** Any sentence of the form "the model produced the most
 plausible next tokens after `the original publication was`, and a plausible
@@ -56,7 +61,7 @@ instead of Thromb Haemost 2000), (b) wrong volume/pages with correct author and
 year, (c) outcome percentages from a different cohort attached to the original.
 All three are "partly matches" and are the intended specimen.
 
-A 2026-10-03 run with search off, one run per prompt (research note
+A 2026-10-03 run, one run per prompt (research note
 `research/foundations-chatbot-test-2026-10-03.md`): GPT-5.4
 and Claude named the correct original for all six scores tried, so a student
 on a large current model will often get the first question right. The second
@@ -67,12 +72,37 @@ record for an unrelated paper, so the student must read the title, not just
 confirm the link opens. A student whose model got everything right on both
 questions should still write the one-sentence explanation; see the chapter.
 
-**Objective 5, Part C.** Budget rule examples: paste only the section that
-matters rather than the whole guideline; start a new conversation when the
-topic changes; ask for the answer before pasting the long document rather than
-after. Middle rule examples: put the question at the end (or the beginning)
-after a long paste, restate the key facts at the end, do not bury the one
-sentence that matters on page 20 of 40.
+**Objective 5, Part C.** No course test run of the check prompt yet; judge
+the record, not the model. Meets: the student says what the check corrected
+(often a PMID, volume, or page; sometimes nothing), what it marked as not found,
+and whether each of two opened links supports the claim it was attached to.
+The "could not catch" line should name at least one of: a real link whose
+source does not say what the answer says, if nobody opens it (the Wu 2025
+finding, about 3 in 10 statements unsupported, pmid:40240349); a source that
+the search itself got wrong; any fact about a patient, because in most setups
+the chatbot cannot see the chart (the dose against the patient's weight, the
+history against the notes). A student who writes "it checked everything" or
+who opened no link falls short.
+
+## The COVID-19 X-ray example
+
+Framing for the tutor: this is a classification example of a test set that
+shared the training set's flaw (shortcut learning, confounding by source), not
+classic overfitting. The split into training and test was done; both came from
+the same pooled sources. Facts the chapter uses, and only these: Roberts et al.
+2021 (doi:10.1038/s42256-021-00307-0), 62 papers in full review, 16 used the
+Kermany pediatric pneumonia set (ages one to five) as non-COVID controls, often
+without saying so, quoted as "merely detecting children versus adults", and
+the "Frankenstein datasets" warning. DeGrave et al. (journal version
+doi:10.1038/s42256-021-00338-7; preprint doi:10.1101/2020.09.13.20193565, CC
+BY 4.0, source of the two figures): Dataset I paired GitHub COVID-19 images,
+many cropped from publication figures, with NIH ChestX-ray14 non-COVID images;
+internal test good, "half of the model's predictive performance is lost" on a
+new hospital system; saliency maps highlighted laterality markers, arrows and
+annotations, image edges, the diaphragm, and the cardiac silhouette; swapping
+laterality markers shifted the output. Do not let the tutor add AUC figures or
+claims that no COVID model was clinically useful; neither was verified for
+the chapter.
 
 ## Verified originals in @tbl-scores
 
@@ -101,8 +131,7 @@ literature and are not to be quoted from the chapter.
 
 Run both Part B questions yourself the morning of the session on two scores.
 If everything comes back correct, the second question is the one to
-demonstrate live: in testing it failed far more often than the first. Also
-confirm playground.tensorflow.org is up and that the three step links still
-open with the spiral and the 20% training split; the exercise cannot be done
-without it. If it is down, the archive deck `2024-11-06-deep-learning-intro`
-has screenshots of a spiral fit that can substitute for a talk-through.
+demonstrate live: in testing it failed far more often than the first. Then
+send the Part C check prompt in the same conversation and open two of the
+links it gives on screen. The two sliders run in the page with no outside
+site, so there is nothing to confirm in advance beyond the page loading.

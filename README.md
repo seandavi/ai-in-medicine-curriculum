@@ -33,6 +33,7 @@ medical students. ~40 students, Zoom-only, ungraded. Successor to IDPT 8079.
 | `curriculum/` | Competency framework, module catalog, design constraints, and `delivery-modes.md` — an untested idea about which sessions need live Zoom and what a chat-based async path would look like |
 | `modules/` | One self-contained file per module — session plan, activities, rubrics |
 | `chapters/`, `appendix/`, `index.qmd`, `_quarto.yml` | The student-facing Quarto book; one chapter per module following `curriculum/chapter-pattern.md`. `appendix/` renders how the book was made, the review personas, and the AI ledger. `_answers/` holds answer keys that are never rendered |
+| `slides/` | Reveal.js decks for the live sessions; so far only `core-foundations`. A separate Quarto project that renders into `_book/slides/`. The speaker notes are the narration script: `narration.py` extracts them to `*-narration.md`, and `make_figures.py` generates the decks' SVG figures into `images/` |
 | `AI-LEDGER.md` | Where AI was used to build the course and who checked it; one row per content commit. The appendices (`appendix/`) describe the *current* process; when the design, review, or AI-use practice changes, update them in the same commit. They track content, not length |
 | `reviews/` | Dated six-persona reviews of chapters, one file per review; findings are also filed as GitHub issues |
 | `research/` | The background research the design rests on, with citations; `comparable-courses.md` reviews external courses for what to borrow |
@@ -46,6 +47,7 @@ four-week ungraded elective, students *will* miss sessions.
 ```
 uv tool install git+https://github.com/seandavi/quartobot   # once
 quarto render                                                 # → _book/
+quarto render slides                                          # → _book/slides/ (after the book)
 ```
 
 Cite with persistent-identifier keys — `@pmid:40206627`, `@doi:10.1126/science.aax2342` —
