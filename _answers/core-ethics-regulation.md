@@ -144,8 +144,9 @@ The chapter now asks three questions.
    answer that names three different parties and says the gap needs closing
    (consent, review, honesty).
 
-The reread of the week 1 sentence is not graded. A student who changes it
-and can say why has done what the course hopes for.
+The fourth sentence (the part of clinical judgment the student will not hand
+over to a tool) is not graded. A student who can say why has done what the
+course hopes for.
 
 ## The fourth recurring lesson (for the tutor)
 
