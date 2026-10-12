@@ -12,6 +12,8 @@ project:
   render:
     - index.qmd
     - chapters/
+    # Centaur or cyborg is kept in the repo but not published (decided 2026-10-12).
+    - "!chapters/core-centaur-cyborg.qmd"
     - course/
     - appendix/
 
@@ -41,7 +43,6 @@ book:
     # Each week: the core chapter first, then the menu (see the syllabus).
     - part: "Week 1 · Working with AI"
       chapters:
-        - chapters/core-centaur-cyborg.qmd
         - chapters/core-foundations.qmd
     - part: "Week 2 · Getting good at it"
       chapters:

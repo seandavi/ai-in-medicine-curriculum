@@ -21,11 +21,10 @@ the course survivable when a third of the class misses week two.
 | ID | Chapter | Minutes | Competencies |
 |---|---|---|---|
 | `core-foundations` | [How these systems work](../chapters/core-foundations.qmd) | 75 | AIM-1, AIM-2 |
-| `core-centaur-cyborg` | [Centaur or cyborg](../chapters/core-centaur-cyborg.qmd) | 90 | AIM-5, AIM-X, AIM-4 |
 | `core-appraisal` | [Critical appraisal](../chapters/core-appraisal.qmd) | 90 | AIM-2, AIM-1, AIM-4, AIM-9 |
 | `core-bias-equity` | [Bias and equity](../chapters/core-bias-equity.qmd) | 90 | AIM-3 |
 | `core-patient-communication` | [Talking to patients about AI](../chapters/core-patient-communication.qmd) | 90 | AIM-6, AIM-4 |
-| `core-ethics-regulation` | [Ethics, liability, and the device line](../chapters/core-ethics-regulation.qmd) | 75 | AIM-4, AIM-X |
+| `core-ethics-regulation` | [Ethics: what you owe when you sign the note](../chapters/core-ethics-regulation.qmd) | 70 | AIM-4, AIM-X |
 
 : Core modules. Minutes are the live session, not the chapter. {#tbl-core}
 
@@ -39,7 +38,7 @@ the course survivable when a third of the class misses week two.
 
 : Enrichment modules. {#tbl-enrichment}
 
-Eleven modules, eight slots. The surplus is deliberate. Swap by cohort interest.
+Ten modules, eight slots. The surplus is deliberate. Swap by cohort interest.
 
 ### The default assembly (fall 2026)
 
@@ -53,18 +52,18 @@ it by a student who missed it. Students spend most of their own time on
 
 | Week | Core (Monday talk) | Wednesday talk | Menu |
 |---|---|---|---|
-| 1 | Centaur or cyborg | Week 1 is taught live | How these systems work (covered by the live talks) |
+| 1 | How these systems work (covered by the live talks) | Week 1 is taught live | None |
 | 2 | Prompting lab | Professional work with AI: writing and beyond (a co-director) | Critical appraisal; Bias and equity; Grounding AI in real sources |
 | 3 | Talking to patients about AI | To be announced: bias and equity, or building a small tool live | Agentic coding; the scribe open lab |
-| 4 | Ethics, liability, and the device line | Where this is going (jobs, the planet) and what you will keep | Will AI take your job?; What AI costs the planet |
+| 4 | Ethics: what you owe when you sign the note | Where this is going (jobs, the planet) and what you will keep | Will AI take your job?; What AI costs the planet |
 
 : Core chapter, Wednesday talk, and menu by week. Wednesday topics are a starting plan for fall 2026. {#tbl-default}
 
 Coverage check: the core chapters make AIM-2, AIM-4, AIM-5, and AIM-6 main
 subjects. AIM-1 is covered by the week 1 live talks. **AIM-3 (bias) is not in a
-core chapter**; it is covered by the week 2 Friday scenario card on bias, by
-the bias chapter on the menu, and by the week 3 Wednesday talk if it is
-chosen. This is a deliberate trade, recorded in
+core chapter**; it is covered by the bias chapter on the menu and by the
+week 3 Wednesday talk if it is chosen. The Friday groups are open discussion,
+so they cover bias only if students raise it. This is a deliberate trade, recorded in
 `curriculum/design-constraints.md`.
 
 ### Variants
@@ -72,12 +71,11 @@ chosen. This is a deliberate trade, recorded in
 **A cohort that wants more evidence and appraisal.** Make critical appraisal the
 week 2 core and the prompting lab a menu item.
 
-**A cohort with no live week 1.** Make How these systems work the week 1 core.
+### Four ideas that recur
 
-### Three ideas that recur
-
-Modules are independent, but three ideas recur across all of them. Name them in
-week one and call them by name whenever they reappear. They are what turns
+Modules are independent, but four ideas recur across them. Name the first
+three in week one, preview the fourth, which week 4 explains, and call them
+by name whenever they reappear. They are what turns
 eight sessions into a course, and they are what students will still have when
 every tool taught here has been replaced.
 
@@ -98,6 +96,12 @@ every tool taught here has been replaced.
    curated hard cases beat real-world deployment. The gap between the most
    prominently reported statistic and the trial result is the most reliable
    teaching material in this field.
+4. **Who benefits, who bears the risk, who decides.** Introduced in the week 4
+   ethics chapter. A scribe relieves the clinician; the errors land in the
+   patient's record, and the patient is told at the door. A data center's
+   costs fall on neighbors who were not asked. Displaced transcriptionists have
+   the least money in reserve. The question to train: *are these three the
+   same people, and if not, what closes the gap?*
 
 ## Running a week
 
@@ -112,7 +116,7 @@ Week 1 is taught live on its own schedule (see the
 | On their own | The core chapter, after Monday's talk or instead of it (about 1 hour), and [Learn it with AI](../course/learn-with-ai.qmd) (2 to 4 hours). Menu chapters and [open labs](open-labs.qmd) are optional. |
 | Through the week | Guest talks; students attend or watch one. |
 | Thursday, 45 min, live | Office hours: students bring what they are stuck on. Not recorded. [Learning journal](../course/learning-journal.qmd) entry due that night. |
-| Friday, 60 min | Small group: what AI taught you, one thing you caught, then the [scenario cards](../course/friday-groups.qmd) practised out loud. Not recorded. |
+| Friday, 60 min | [Small group](../course/friday-groups.qmd): open discussion, with topics the students bring. Not recorded. |
 
 : A week in the course, weeks 2 to 4. Talks are recorded; office hours and Friday groups are not. {#tbl-week-run}
 
@@ -151,7 +155,7 @@ turns back into lectures without anyone deciding to.
 The most useful guest is someone who can talk about a tool actually deployed in
 the local health system in the last quarter. That is what a fourth-year
 audience wants and what a survey lecture cannot give. Good matches by module:
-ambient documentation as deployed (centaur or cyborg); disclosure
+ambient documentation as deployed (ethics); disclosure
 conversations and a patient-facing tipsheet (talking to patients); how a tool
 gets approved and bought locally (appraisal); the device boundary and local
 policy (ethics); a proxy failure in a model that was really deployed (bias and
@@ -183,8 +187,7 @@ elsewhere. To run it for your own cohort:
    listed in one GitHub issue on the repository.
 4. **Set your own institution's policy text** where a chapter says to check
    it, for example the attestation language for ambient documentation in
-   centaur or cyborg, and your state's disclosure statutes in talking to
-   patients.
+   ethics, and your state's disclosure statutes in talking to patients.
 5. **Choose your guests**, if any, using the section above.
 6. **Write the exemplar week** of the resource log yourself. Students copy
    what they see.

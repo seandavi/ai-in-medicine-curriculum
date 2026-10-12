@@ -5,7 +5,7 @@ institutional mechanics so it can be reassembled for any cohort. This file holds
 part that is specific to the CU Anschutz offering, because it exists nowhere else in
 the repo and is the first thing you will want when you come back to this cold.
 
-**Last updated: 2026-10-08.** Everything below is operational state and goes stale
+**Last updated: 2026-10-12.** Everything below is operational state and goes stale
 fast. Check it before acting on it.
 
 ## The offering
@@ -24,18 +24,24 @@ copy). The student-facing week-by-week plan is in `course/syllabus.qmd`.
 
 **Refocus (decided 2026-10-07/08): skill and confidence first.** The course's
 mantra: *it is your job to learn where AI helps your work, and you learn that by
-trying.* Each week has one core chapter plus a menu (week 1 centaur-cyborg; week
-2 prompting lab; week 3 patient communication; week 4 ethics). "Students aim for
+trying.* Each week has one core chapter plus a menu (week 1 foundations, with no
+menu; week 2 prompting lab; week 3 patient communication; week 4 ethics). "Students aim for
 5 to 10 hours a week of AI-related learning, 2 to 4 with the book" was the
 first budget; with two talks a week it is restated as about 8 to 10 hours
 (see the syllabus table). The main hands-on activity is "Learn it with AI" (`course/learn-with-ai.qmd`). The resource log is
-replaced by a learning journal. Friday groups practise conversations about AI
-from scenario cards (`course/friday-groups.qmd`). The Monday hour includes "How
+replaced by a learning journal. Friday groups are open,
+student-led discussion (`course/friday-groups.qmd`; scenario cards removed
+2026-10-12, ideas kept in issue #95). The Monday hour includes "How
 I used AI this week" (the director's own work, shown live). Bias is not core
-this offering (Friday card instead). Why: 2025 students were afraid to use
+this offering (menu chapter and possibly a week 3 talk). Why: 2025 students were afraid to use
 chatbots and felt lost; see `curriculum/design-constraints.md` constraint 5.
 **Next:** revisit each chapter before the week it is used, to cut it to its
 framework core and move hands-on work toward success first.
+
+**Week 1 chapter (decided 2026-10-12):** the centaur-or-cyborg chapter is kept
+in the repo (`chapters/core-centaur-cyborg.qmd` and its answer key) but no
+longer published. Week 1 has one chapter, How these systems work
+(`core-foundations`).
 
 - **Week 1 (Oct 12 to 16):** the course director teaches live, Monday to
   Thursday at 10 a.m. Mountain time (decided 2026-10-09): Monday welcome and
@@ -48,9 +54,8 @@ framework core and move hands-on work toward success first.
   `course/first-session.qmd`. First contact is something useful, not a hunt
   for AI errors, because students arrive wary of chatbots; also catches
   account problems early. Then office hours.
-  Friday small groups, from that week's signup. Students read `core-foundations`
-  and `core-centaur-cyborg`. Weeks 2 to 4 Monday and Wednesday talks are also
-  at 10 a.m.
+  Friday small groups, from that week's signup. Students read `core-foundations`.
+  Weeks 2 to 4 Monday and Wednesday talks are also at 10 a.m.
 - **Weeks 2 to 4, each week (decided 2026-10-08):** the course director's
   talks are the main event and each core chapter is their companion ("read it
   after the talk, or instead of it if you missed the talk").
@@ -87,7 +92,7 @@ framework core and move hands-on work toward success first.
   week 4, Monday who answers for the note (ethics), Wednesday where this is
   going (workforce, environment) and what you will keep. Open question: bias
   is meant to carry AIM-3 this offering, but as one of two options it may not run;
-  the week 2 Friday bias card is the only certain coverage.
+  since the Friday cards were removed (2026-10-12), nothing guarantees it.
 - **Why lectures now (2026-10-08):** the director lectures well (evaluations
   in every course he teaches say he is the best part), and writing a talk
   forces him to make the material good. The earlier rule was "no live
