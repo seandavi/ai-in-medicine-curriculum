@@ -138,8 +138,11 @@ longer published. Week 1 has one chapter, How these systems work
   pediatrics (Mon Nov 2, 11 a.m.); Sorabh Singhal, psychiatry (Mon Nov 2,
   1 p.m.). Added later the same day: Dan Denman, AI in neuroscience (Wed
   Oct 21, 1 p.m.); Matt Zuckerman, AI in medical education (Thu Oct 22,
-  1 p.m.). All agreed to recording. Christina Olson's workshop: Tue Oct 27,
-  10 a.m., blocked to noon (about 90 minutes, breakout rooms; title to come).
+  1 p.m.). All agreed to recording. Christina Olson's workshop: moved
+  2026-10-12 to Mon Oct 26, 10 a.m. to noon (about 90 minutes, breakout rooms;
+  title to come), replacing the course director's week 3 Monday talk. CT Lin
+  took Tue Oct 27, 11 a.m. (signup sheet, 2026-10-12): "I'm Sorry Dave, I'm
+  Afraid I Can't Do That (AI, Sepsis, Inbasket Replies)", recording OK.
   Home page rewritten 2026-10-09 (Canvas keeps the old version in the page's
   history): points to the book and the modules, states the schedule, the
   attendance rule (expected, flexible; register absences with the SOM), drop-in office
