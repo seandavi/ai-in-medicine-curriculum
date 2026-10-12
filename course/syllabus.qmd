@@ -102,7 +102,7 @@ week. The menu is there so you can follow what interests you.
 
 | Week | Core | Menu (choose one or more) |
 |---|---|---|
-| 1 · October 12 to 16 | [Centaur or cyborg](../chapters/core-centaur-cyborg.qmd): what to hand to AI, and what to keep | [How these systems work](../chapters/core-foundations.qmd) (the live talks cover it) |
+| 1 · October 12 to 16 | [How these systems work](../chapters/core-foundations.qmd) (the live talks cover it) | None |
 | 2 · October 19 to 23 | [Prompting lab](../chapters/enrichment-prompting-lab.qmd): getting good answers, and knowing their limits | [Critical appraisal](../chapters/core-appraisal.qmd), [Bias and equity](../chapters/core-bias-equity.qmd), [Grounding AI in real sources](../chapters/enrichment-rag-notebooklm.qmd) |
 | 3 · October 26 to 30 | [Talking to patients about AI](../chapters/core-patient-communication.qmd) | [Agentic coding](../chapters/enrichment-agentic-coding.qmd), the [scribe open lab](../appendix/open-labs.qmd) |
 | 4 · November 2 to 6 | [Ethics: what you owe when you sign the note](../chapters/core-ethics-regulation.qmd) | [Will AI take your job?](../chapters/enrichment-workforce-economics.qmd), [What AI costs the planet](../chapters/enrichment-environment.qmd) |
