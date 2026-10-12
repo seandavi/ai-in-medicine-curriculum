@@ -89,6 +89,8 @@ format:
     # light boxes, black text, readable regardless of the page theme.
     mermaid:
       theme: neutral
+    # Click a figure to see it full size.
+    lightbox: true
     toc: true
     toc-depth: 3
     citations-hover: true

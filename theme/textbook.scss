@@ -13,6 +13,7 @@ $paper-sunk: #f3efe5 !default;   // sidebar, code, tinted boxes
 $ink: #1f2328 !default;          // body text
 $ink-muted: #5b6168 !default;    // captions, meta, sidebar
 $rule: #e4dfd3 !default;         // hairlines
+$table-stripe: $paper-sunk !default; // alternate table rows
 $accent: #0f5c63 !default;       // deep teal
 $accent-soft: #e2eeec !default;  // teal tint for boxes
 $caution: #8a5a00 !default;      // amber, for the "no patient data" callouts
@@ -174,6 +175,14 @@ main.content a:not(.nav-link):not(.sidebar-link):not(.anchorjs-link) {
 figcaption, .figure-caption { font-size: .85rem; color: $ink-muted; }
 main.content table { font-size: .9rem; }
 main.content table th { border-bottom: 2px solid $ink; }
+// Tables read left to right. A captioned table sits in a .quarto-figure-center
+// float, whose Bootstrap rule centres every cell; undo that, top-align cells so
+// rows line up, and stripe alternate rows. Only markdown tables (.table) are
+// touched, so the CSS-drawn artifacts keep their own look, and a column marked
+// centred in the markdown (|:-:|) keeps its inline style.
+main.content table.table th, main.content table.table td { text-align: left; vertical-align: top; }
+main.content table.table > tbody > tr:nth-of-type(odd) > * { background-color: $table-stripe; }
+main.content figure.quarto-float-tbl figcaption { text-align: left; }
 
 // Previous / next chapter links at the foot of each page.
 .nav-page a { color: $accent; font-weight: 600; }

@@ -37,34 +37,53 @@ chatbots and felt lost; see `curriculum/design-constraints.md` constraint 5.
 **Next:** revisit each chapter before the week it is used, to cut it to its
 framework core and move hands-on work toward success first.
 
-- **Week 1 (Oct 12 to 16):** the course director teaches live: welcome and adult
-  learning (from the 2024 Google Slides intro deck), history of AI, then AI to ML
-  to DL to LLMs (the foundations deck, PR #60, trimmed; keep a few slides on
-  overfitting). Students read `core-foundations` and `core-centaur-cyborg`.
+- **Week 1 (Oct 12 to 16):** the course director teaches live, Monday to
+  Thursday at 10 a.m. Mountain time (decided 2026-10-09): Monday welcome and
+  adult learning (from the 2024 Google Slides intro deck); Tuesday history of
+  AI; Wednesday what AI is, AI to ML to DL to LLMs (the foundations deck, PR
+  #60, trimmed; keep a few slides on overfitting); Thursday a hands-on session,
+  "centaur or cyborg, live" (everyone in ChatGPT Edu, trying things together;
+  left open-ended on purpose; also catches account problems early), then
+  office hours.
+  Friday small groups, from that week's signup. Students read `core-foundations`
+  and `core-centaur-cyborg`. Weeks 2 to 4 Monday and Wednesday talks are also
+  at 10 a.m.
 - **Weeks 2 to 4, each week (decided 2026-10-08):** the course director's
   talks are the main event and each core chapter is their companion ("read it
   after the talk, or instead of it if you missed the talk").
   - Monday, 60 min, live and recorded: "How I used AI this week", then a talk
     on the week's core chapter topic with live demos.
   - Wednesday, 60 min, live and recorded: a talk on a menu chapter or a topic
-    beyond the book. The class votes on the topic from a short list, the week
-    before. This replaces the voted mid-week open lab; the open labs stay as
-    self-paced activities and as Wednesday topic candidates.
-  - Thursday, 45 min, live, not recorded: office hours. Learning journal due
+    beyond the book, sometimes a guest. No class vote (dropped 2026-10-09). The
+    open labs stay as self-paced activities.
+  - Thursday, 11 to 11:45 a.m., live, not recorded: office hours, drop in
+    (no signup; decided 2026-10-09). Learning journal due
     Thursday night.
-  - Friday, 60 min: small group, required, one of three slots, breakout rooms
-    of 4 to 5 with the same members each week.
+  - Friday, 60 min: small group, best effort (decided 2026-10-10), one of four slots (10 a.m., 11 a.m., 1 p.m.,
+    2 p.m.; up to 15 students each for 49 enrolled; decided 2026-10-09). Whether to use
+    breakout rooms is undecided; the book does not mention them.
   - Guest talks: attend or watch one a week (was two, cut so the week still
     adds up; see the syllabus table).
-  - Recordings count as attending.
+  - Attendance (decided 2026-10-10): aim for about 3 hours a week of sessions,
+    live or recorded, chosen by interest, in every week including week 1; Friday
+    groups best effort and not counted; register absences per SOM protocols.
+    Matt agreed in the 2026-10-09 meeting that 6 to 7 lecture hours a week is too
+    much; neither co-director commented on the 3-hour figure.
+  - Watch and do (decided 2026-10-10): optional hands-on session, Wednesdays
+    2 to 3:30 p.m., October 21 and 28 and November 4; content to be announced;
+    marked recorded; Sean is responsible for it each week, whoever runs it.
+  - Recording (decided 2026-10-09): week 1 lectures, Monday and Wednesday
+    talks, guest talks, and Christina Olson's sessions are recorded; office
+    hours and Friday small groups are not. Recordings are for catching up;
+    they no longer count as attending.
   Starting topic grid (the director's starting point, subject to change):
-  week 2, Monday "getting good answers" (prompting lab), Wednesday vote
-  between AI for scholarly writing (co-led with a co-director) and answers
-  grounded in real sources; week 3, Monday talking with patients about AI,
-  Wednesday vote between bias and equity and building a small tool live;
+  week 2, Monday "getting good answers" (prompting lab), Wednesday October 21
+  "Professional work with AI: writing and beyond", given by Christina Olson
+  (decided 2026-10-09); week 3, Monday talking with patients about AI,
+  Wednesday to be announced, bias and equity or building a small tool live;
   week 4, Monday who answers for the note (ethics), Wednesday where this is
   going (workforce, environment) and what you will keep. Open question: bias
-  is meant to carry AIM-3 this offering, but as a vote option it may not run;
+  is meant to carry AIM-3 this offering, but as one of two options it may not run;
   the week 2 Friday bias card is the only certain coverage.
 - **Why lectures now (2026-10-08):** the director lectures well (evaluations
   in every course he teaches say he is the best part), and writing a talk
@@ -74,15 +93,65 @@ framework core and move hands-on work toward success first.
   season and recordings plus self-contained chapters keep away students on
   track. Recordings still do that job, so interview season no longer argues
   against talks.
-- **Known cost:** the director is live about 5.75 hours a week in weeks 2 to 4
-  (Monday 1, Wednesday 1, Thursday 0.75, three Friday slots 3) and writes two
+- **Known cost:** the director is live about 6.75 hours a week in weeks 2 to 4
+  (Monday 1, Wednesday 1, Thursday 0.75, four Friday slots 4) and writes two
   new talks a week. Watch for this in week 2. A suggestion, not decided: if it
   is too much, the Wednesday talk is the first thing to hand to a guest.
-- **Submissions:** Microsoft Form (university login, data stays in CU Microsoft
-  365), reviewed on Fridays. A custom submission and chatbot app is a
+- **Submissions:** Canvas text-entry assignments, one per week, complete or
+  incomplete (decided 2026-10-09; replaces the planned Microsoft Form),
+  reviewed on Fridays.
+- **Canvas (built 2026-10-09):** modules Start here and Weeks 1 to 4, each
+  linking the Zoom meeting and the week's chapters on aim.seandavis.net plus
+  the journal assignment; calendar events for every live session; drop-in
+  office hours every Thursday 11 to 11:45 a.m., titled with the instructor's
+  name ("Office hours: Sean Davis") so other instructors can add their own;
+  a Canvas signup (appointment group) for every Friday (10 a.m., 11 a.m.,
+  1 p.m., 2 p.m., up to 15 each, one time per student); students sign up again
+  each week, so groups change from week to week (decided 2026-10-10, replacing
+  one choice on October 16 plus plain events for later Fridays). The signups
+  open when the course starts (Canvas course start date, October 11).
+  Guest talks (from the lecturer signup sheet, 2026-10-09), on the Canvas
+  calendar and in the week 3 and 4 modules: Matt DeCamp, ethics (Tue Oct 27,
+  1 p.m.); Mike Rosenberg, cardiology (Thu Oct 29, 1 p.m.); Elizabeth Kudron,
+  pediatrics (Mon Nov 2, 11 a.m.); Sorabh Singhal, psychiatry (Mon Nov 2,
+  1 p.m.). Added later the same day: Dan Denman, AI in neuroscience (Wed
+  Oct 21, 1 p.m.); Matt Zuckerman, AI in medical education (Thu Oct 22,
+  1 p.m.). All agreed to recording. Christina Olson's workshop: Tue Oct 27,
+  10 a.m., blocked to noon (about 90 minutes, breakout rooms; title to come).
+  Home page rewritten 2026-10-09 (Canvas keeps the old version in the page's
+  history): points to the book and the modules, states the schedule, the
+  attendance rule (expected, flexible; register absences with the SOM), drop-in office
+  hours, and the made-up-cases rule; links this year's three standing
+  discussions (created the same day) instead of last year's course; the
+  syllabus link was the book. School resource sections unchanged.
+  **Published to students 2026-10-09, with the book hidden** (the author wants
+  the calendar out first; the book still needs work). Hidden, to turn back on
+  later: every module item linking aim.seandavis.net and the "The course
+  book", "Core chapter", and "Menu (optional)" headers (unpublished items;
+  modules stay published); book links removed from calendar events, the
+  Friday signup, the home page (syllabus section says "posted soon"), and
+  the ChatGPT Edu page. Journal instructions are written into each journal
+  assignment instead of linking the book. Last year's four published pages
+  were unpublished. Book branches are not pushed. Last year's
+  assignments are unpublished, not deleted. The course is still unpublished. A custom submission and chatbot app is a
   post-course project; start CU's data-use review early.
-- **Chat channel:** undecided. Microsoft Teams preferred over Discord (no new
-  accounts, stays inside the institution).
+- **Chat channel:** Discord (decided 2026-10-09 in the meeting with Christina
+  Olson and Matt Zuckerman: every class already has its own student Discord,
+  and students do not use Teams much). Server "Frontier of AI in Medicine
+  2026" (reused from Sean's September server, renamed; teal heartbeat-to-
+  network icon): #welcome (welcome post: unofficial, Canvas is official,
+  made-up cases only), #general, #resources, #show-and-tell, General voice.
+  Framed as an unofficial experiment; some phases discourage course
+  directors from contacting students outside Canvas. Students not yet
+  invited. The Teams team created earlier the same day (Sean, Maritza,
+  Christina, Matt) is superseded.
+  Canvas stays the official record (announcements, calendar, journals).
+  Canvas: Announcements is the one-way channel (now shown in the menu; it had
+  been hidden) plus one discussion, "General Questions", linked from the home
+  page. Students cannot start new topics, only reply there.
+  Each week's module lists the Friday small group (published placeholder
+  linking that Friday on the calendar; week 1 says to sign up first). Random and Social
+  discussions unpublished (2026-10-09).
 
 ## People
 
