@@ -943,15 +943,16 @@ Mark anything you could not find.
 :::
 ::: {.column width="48%"}
 ::: incremental
-- **Search helps.** Chatbot versions with web search gave more accurate references than the same chatbots without it [@pmid:41546380].
-- **A second pass helps.** A model that wrote questions to check its own draft, then answered them, made fewer false claims [@doi:10.18653/v1/2024.findings-acl.212].
+- **Search helps.** Versions with web search gave more accurate references than without [@pmid:41546380].
+- **A second pass helps.** A model that checked its own draft made fewer false claims [@doi:10.18653/v1/2024.findings-acl.212].
 - **Neither makes it perfect.** With web search, about 3 in 10 statements were not supported by the source cited [@pmid:40240349].
+- **It cannot check your patient.** In most setups the chatbot cannot see the chart. Facts about the patient are still yours to check.
 :::
 :::
 ::::
 
 ::: {.fragment .statement}
-Let the chatbot do the first check. **Open the link yourself** for anything that goes in a note or an order.
+Let it check the literature. **Open the link yourself** before it goes in a note.
 :::
 
 ::: notes
@@ -960,6 +961,8 @@ Here is the most useful habit from today. The model itself has no checking step,
 This works, and the evidence says so. In a 2026 study, chatbot versions with web search turned on gave more accurate references than the same chatbots without it. In another study, a model that wrote questions to check its own first draft, answered them separately, and then rewrote the answer made fewer false claims.
 
 It does not make the answer perfect. In a 2025 study of medical questions, even with web search about three in ten statements were not supported by the source the chatbot cited. The link was real; it just did not say what the answer said.
+
+And it checks only what it can reach. It can check the published literature. In most setups it cannot see the patient's chart, so it cannot check anything about your patient: the dose against her weight, the history against the notes, the lab against last week's. Tools that check against the chart are coming, but for now that check is yours.
 
 So let the chatbot do the first check. It turns a made-up citation into a link you can open in ten seconds. Then open the link yourself for anything that goes in a note or an order. Try it on the HEART question from two slides ago.
 
@@ -1079,7 +1082,7 @@ Thursday: we open ChatGPT Edu together and use it to set up your own learning go
 - A score on the training data describes the fit. **Ask for the test set, and who ran it.**
 - A language model **predicts the next token, picks one, and repeats**. People then tune it toward answers they rate well.
 - **Nothing in that process checks whether a claim is true.** You check it, and you sign it.
-- **Ask it to check** with web search and give links. Then open the source for anything that goes in the chart.
+- **Ask it to check** with web search and give links, then open the source. It cannot check your patient; that is still yours.
 
 ::: notes
 To sum up. AI contains machine learning, which contains deep learning, which contains generative AI.
@@ -1092,7 +1095,7 @@ A score on the training data describes the fit. It is not evidence. Ask for the 
 
 A language model predicts the next token, picks one, and repeats, and people then tune it toward answers they rate well. Nothing in that process checks whether a claim is true. You check it, and you sign it.
 
-So ask it to check, with web search and links, and open the source for anything that goes in the chart.
+So ask it to check, with web search and links, and open the source for anything that goes in the chart. It cannot check facts about your patient, because in most setups it cannot see the chart. That check is still yours.
 
 The fifty-seven on the panel came from somewhere. So does everything else.
 
