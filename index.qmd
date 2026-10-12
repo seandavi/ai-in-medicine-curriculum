@@ -60,6 +60,9 @@ appendix.
 
 - Core: [How these systems work](chapters/core-foundations.qmd): the eGFR is a
   model you already trust, and the chatbot is the same loop with words.
+- Thursday's hands-on session: [Plan your four weeks with
+  ChatGPT](chapters/plan-your-learning.qmd): research what the field expects,
+  then build your own plan.
 
 **Week 2, getting good at it**
 
@@ -96,6 +99,7 @@ professional identity, the closing question.
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | **Week 1** | | | | | | | | | | |
 | [How these systems work](chapters/core-foundations.qmd) (core) | ● | ● | | | ○ | | | ○ | | ○ |
+| [Plan your four weeks](chapters/plan-your-learning.qmd) (Thursday session) | | ○ | | | ● | | | | ○ | ○ |
 | **Week 2** | | | | | | | | | | |
 | [Prompting lab](chapters/enrichment-prompting-lab.qmd) (core) | | ● | | ○ | ● | | | | ○ | ○ |
 | [Critical appraisal](chapters/core-appraisal.qmd) | ● | ● | | ● | ○ | | ○ | | ● | ○ |

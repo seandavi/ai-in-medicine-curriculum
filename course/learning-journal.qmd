@@ -1,7 +1,6 @@
----
-title: "Weekly learning journal"
-subtitle: "One short entry a week, due Thursday night"
----
+# Weekly learning journal {.unnumbered}
+
+[One short entry a week, due Thursday night]{.subtitle .lead}
 
 The journal is a record of what you tried. Each week you set out to learn
 something with AI (see [Learn it with AI](learn-with-ai.qmd)), and the journal

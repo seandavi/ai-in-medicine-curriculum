@@ -55,11 +55,15 @@ longer published. Week 1 has one chapter, How these systems work
   AI; Wednesday what AI is, AI to ML to DL to LLMs (the foundations deck, PR
   #60, trimmed; keep a few slides on overfitting); Thursday a hands-on session,
   "set up your learning with ChatGPT" (decided 2026-10-11, replacing
-  "centaur or cyborg, live"): everyone in ChatGPT Edu, writing personal
-  learning goals and designing their learning journal with starter prompts;
-  `course/first-session.qmd`. First contact is something useful, not a hunt
-  for AI errors, because students arrive wary of chatbots; also catches
-  account problems early. Then office hours.
+  "centaur or cyborg, live"): everyone in ChatGPT Edu, working through
+  `chapters/plan-your-learning.qmd` (decided 2026-10-12, replacing
+  `course/first-session.qmd`): set up a project, have ChatGPT research what
+  the field expects, then build a personal four-week plan and journal
+  template, structured on OpenAI's "Plan something from start to finish"
+  practice. The session schedule moved to the director's talk slides, so the
+  session ends with students working. First contact is something useful, not
+  a hunt for AI errors, because students arrive wary of chatbots; also
+  catches account problems early. Then office hours.
   Friday small groups, from that week's signup. Students read `core-foundations`.
   Weeks 2 to 4 Monday and Wednesday talks are also at 10 a.m.
 - **Weeks 2 to 4, each week (decided 2026-10-08):** the course director's
