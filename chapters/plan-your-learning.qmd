@@ -66,10 +66,7 @@ history and the evidence before you decide.
 
 ChatGPT can search the web while it answers. When it does, it shows links to
 the pages it used. It usually searches on its own when a question needs
-current information; if an answer has no links, ask it to search. Some
-accounts also offer **deep research**, which reads many sources over several
-minutes and writes a longer report with citations. Either works for this
-chapter.
+current information; if an answer has no links, ask it to search.
 
 Links are not proof. A chatbot can attach a real link to a claim the page does
 not make, or describe a page that does not exist. So you open a few of its
@@ -173,18 +170,35 @@ that support it. Mark any theme that only one source
 supports.
 ```
 
-Then give ChatGPT the course:
+Then give ChatGPT the course. It cannot read this book's website, so the
+prompt below includes the list of chapters. Copy all of it.
 
 ```
-Now read the list of this course's chapters at
-https://aim.seandavis.net/llms.txt
+Here is what my course offers. For each theme, which
+parts of the course cover it? Which themes does the
+course not cover?
 
-For each theme, which chapters cover it? Which themes
-does the course not cover?
+Week 1: How these systems work (how AI models learn,
+  and why chatbots make things up). Thursday: this
+  planning session.
+Week 2: Prompting lab (getting good answers, and
+  knowing their limits). Also: Critical appraisal
+  (checking AI tools, their answers, and the evidence);
+  Bias and equity; Grounding AI in real sources
+  (tools that answer from documents you give them).
+Week 3: Talking to patients about AI. Also: Agentic
+  coding (build a small clinical tool, then test it);
+  an ambient scribe lab (draft a note from a recorded
+  visit, then check it).
+Week 4: Ethics: what you owe when you sign a note
+  drafted by AI. Also: Will AI take your job?; What AI
+  costs the planet.
+Every week: talks, guest talks from clinicians in
+  several specialties, and a weekly learning journal.
 ```
 
-If ChatGPT cannot open the link, copy the list from [the chapters, week by
-week](../index.qmd#the-chapters-week-by-week) in the preface and paste it in.
+The [preface](../index.qmd#the-chapters-week-by-week) has the same list with
+links to each chapter.
 
 ### 3. Decide: let it interview you (10 minutes)
 
