@@ -380,8 +380,7 @@ physicians, access to a language model did not significantly improve diagnostic
 reasoning (adjusted difference 2 points, 95% CI −4 to 8). The model alone scored
 16 points higher than physicians using conventional resources (95% CI 2 to 30)
 [@pmid:39466245]. A tool can be capable and still fail to help the person
-holding it. That is an appraisal finding about humans, and [the centaur-or-cyborg
-chapter](core-centaur-cyborg.qmd) starts from that finding.
+holding it. That is an appraisal finding about humans.
 
 ## Watch or listen
 
@@ -716,8 +715,7 @@ an answer to either.
 - A published classroom framework built around AI citation errors, in biology but
   usable in medicine [@pmid:42200655].
 - The randomized trial of physicians with model access [@pmid:39466245], and the
-  student error-catching study [@pmid:39915801]. The trial is [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd)'s
-  main paper.
+  student error-catching study [@pmid:39915801].
 - FUTURE-AI in full, with the 30 practices behind the six principles
   [@pmid:39909534]; and TRIPOD-LLM, the reporting guideline a *study* of a
   language model should meet [@pmid:39779929], which is the standard most of
@@ -743,4 +741,4 @@ an answer to either.
   this deck.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/)
   covers attribution and academic integrity, for the moment you use one of these
-  tools in a research project. Also in [the centaur-or-cyborg chapter](core-centaur-cyborg.qmd).
+  tools in a research project.
