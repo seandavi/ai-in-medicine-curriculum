@@ -205,8 +205,7 @@ exploratory comparison, scored 16 points higher [@pmid:39466245]
 physicians with the model scored 6.5 points higher than those without (95
 percent CI 2.7 to 10.2). The model alone scored about the same as them (no
 significant difference), and the physicians with the model also took about two
-minutes longer per case [@pmid:39910272]. [The centaur-or-cyborg
-chapter](core-centaur-cyborg.qmd) covers both trials in more detail.
+minutes longer per case [@pmid:39910272].
 
 ![Two estimates from the same randomized trial. Physicians with the model did
 no better than physicians without it; the model alone did. Redrawn for this
@@ -223,9 +222,7 @@ Notice that none of the ten slides is the Uncertainty row.
 **Podcast.** *NEJM AI Grand Rounds*, "Medicine, Machines, and Magic: Dr.
 Jonathan Chen on Medical AI" (15 October 2025; 48 min).
 <https://ai-podcast.nejm.org/e/medicine-machines-and-magic-dr-jonathan-chen-on-medical-ai/>
-This is the main episode of [the centaur-or-cyborg
-chapter](core-centaur-cyborg.qmd); if you listened in week 1, skip it. Chen is
-an author of both trials above, and senior author of the first. The first
+Chen is an author of both trials above, and senior author of the first. The first
 twenty minutes are enough.
 
 ## Do
@@ -514,8 +511,7 @@ the source you would check it against.
 
 - The randomized trials of physicians with a model: diagnosis [@pmid:39466245]
   and management [@pmid:39910272]. Read the discussion sections for the
-  authors' own account of why the benefit did not appear. Both are [the
-  centaur-or-cyborg chapter](core-centaur-cyborg.qmd)'s main papers.
+  authors' own account of why the benefit did not appear.
 - A trial in *NEJM AI* randomized 44 physicians who had just finished a
   20-hour AI-literacy course. When the model's suggestion was wrong, their
   diagnostic scores fell by about 14 points, so the training did not remove
@@ -564,5 +560,4 @@ the source you would check it against.
 
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/),
   for the attribution question that arises the first time a chatbot's table
-  ends up in something you hand in. Also in [the centaur-or-cyborg
-  chapter](core-centaur-cyborg.qmd).
+  ends up in something you hand in.

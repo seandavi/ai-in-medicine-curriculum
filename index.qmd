@@ -58,9 +58,7 @@ appendix.
 
 **Week 1, working with AI**
 
-- Core: [Centaur or cyborg](chapters/core-centaur-cyborg.qmd): what you hand to
-  AI, and what you keep.
-- Menu: [How these systems work](chapters/core-foundations.qmd): the eGFR is a
+- Core: [How these systems work](chapters/core-foundations.qmd): the eGFR is a
   model you already trust, and the chatbot is the same loop with words.
 
 **Week 2, getting good at it**
@@ -97,8 +95,7 @@ professional identity, the closing question.
 | Material | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | X |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | **Week 1** | | | | | | | | | | |
-| [Centaur or cyborg](chapters/core-centaur-cyborg.qmd) (core) | | ○ | | ● | ● | ○ | ○ | | | ● |
-| [How these systems work](chapters/core-foundations.qmd) | ● | ● | | | ○ | | | ○ | | ○ |
+| [How these systems work](chapters/core-foundations.qmd) (core) | ● | ● | | | ○ | | | ○ | | ○ |
 | **Week 2** | | | | | | | | | | |
 | [Prompting lab](chapters/enrichment-prompting-lab.qmd) (core) | | ● | | ○ | ● | | | | ○ | ○ |
 | [Critical appraisal](chapters/core-appraisal.qmd) | ● | ● | | ● | ○ | | ○ | | ● | ○ |
