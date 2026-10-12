@@ -120,7 +120,7 @@ still ask an expert.
 
 Each week, take **one** thing the AI told you that mattered and check it
 against a source: a paper, a guideline, a textbook, an expert. Note what you
-found in your [learning journal](learning-journal.qmd). Sometimes it will be
+found in question 2 of your [learning journal](learning-journal.qmd). Sometimes it will be
 right. Sometimes it will be confidently wrong. Both are worth knowing, and
 the habit is the point.
 

@@ -77,11 +77,14 @@ Using the goals we just wrote, help me design a
 weekly learning journal I can fill in within 30
 minutes. Make it a short markdown template.
 
-It must include these four course questions:
-1. What I set out to learn
-2. How I used AI to learn it
-3. What went wrong, and how I noticed
-4. One thing I checked
+It must include these five course questions:
+1. What I chose to learn, and why
+2. How AI helped, and where it got in the way
+   (including one time I felt I needed to check
+   the AI: how I checked, and what I found)
+3. What surprised me
+4. What changed for me
+5. What I used, and whether it was worth my time
 
 Add one or two headings of your own that connect
 each entry to my goals. Then fill in a sample entry
@@ -89,7 +92,7 @@ for this week so I can see how it works.
 ```
 
 Read the template. Move, rename, or cut the extra headings until it suits
-how you think. The four course questions stay.
+how you think. The five course questions stay.
 
 ## Save your work, and share one goal
 

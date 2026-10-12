@@ -478,7 +478,7 @@ MRI, per laparoscopic cholecystectomy, per dialysis session, per
 telepsychiatry visit. Anesthesia, surgery, radiology, nephrology, and
 ophthalmology all have papers on this. If your specialty does not yet, use
 Eckelman's 1,692 kg per person per year [@pmid:33284703] and divide by a
-plausible number of encounters. This paper also can be the "one thing I checked" in this
+plausible number of encounters. This paper also can be the check in question 2 of this
 week's [learning journal](../course/learning-journal.qmd).
 
 ```

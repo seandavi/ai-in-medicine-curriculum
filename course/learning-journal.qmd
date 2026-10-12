@@ -10,32 +10,62 @@ complete or incomplete, and it is what you bring to Friday's small group.
 
 ## Weeks 1 to 3: the entry
 
-Answer four questions. A few sentences each is enough.
+Answer five questions. A few sentences each is enough. There are no right
+answers, and "it did not help" is a useful thing to write.
 
 ```
-1. What I set out to learn
-   The topic, and why it matters for my work or my specialty.
+1. What I chose to learn, and why
+   The topic, and how it connects to the goals I wrote in week 1.
 
-2. How I used AI to learn it
-   Which tool, which prompts, what I asked it to do.
-   What worked well enough that I would do it again?
+2. How AI helped, and where it got in the way
+   Which tool I used and what I asked it to do.
+   One time I felt I needed to check the AI: what made me want
+   to check, how I checked, and what I found.
 
-3. What went wrong, and how I noticed
-   Something vague, wrong, made up, or unhelpful, and what tipped me off.
-   (If nothing went wrong, what did I do to be sure?)
+3. What surprised me
+   Something AI did better or worse than I expected, or something
+   about how I reacted to it.
 
-4. One thing I checked
-   One claim that mattered, the source I checked it against, and
-   whether the AI had it right.
+4. What changed for me
+   One or two of these: how I understand AI, how I will use it, or
+   how I would talk about it with a colleague or a patient.
+
+5. What I used, and whether it was worth my time
+   One line each: what it was, its link, and whether I would
+   recommend it to next year's class.
 ```
 
-**Three resources a week, your choice.** Each week, add three things about AI
-that caught your interest: a paper, a video, a podcast, a news piece, a tool, a
-post. Anything related to AI counts, medical or not. Follow your own interest.
-For example, what do data centers really cost the places where they are built?
-This part is meant to be low-key. One line on each, saying what it was and what
-you took from it, is enough. The best ones go into the
-[starter resources](../appendix/resources.qmd) for future students.
+### Ways to start
+
+If a question is hard to start, borrow one of these. They are suggestions, not
+a form to fill in.
+
+1. *What I chose to learn.* "I wanted to learn how to ... because ..." "On my
+   goals list I wrote ... This week I tried ..." "I am going into ..., so I
+   picked ..."
+2. *How AI helped, and where it got in the way.* "It saved me time when ..."
+   "I got a better answer once I ..." "It was no help with ..., because ..."
+   For the check: "It told me ... I was not sure, because ... I looked it up
+   in ... and found ..." If nothing made you doubt it, say why you trusted
+   it, then check one thing anyway. Sometimes the AI will be right, and
+   sometimes it will be confidently wrong. Both are worth knowing.
+3. *What surprised me.* "I expected ..., but ..." "I did not expect it to
+   ..." "I was surprised that I felt ..."
+4. *What changed for me.* "Before this week I thought ... Now I think ..."
+   "Next time I ..., I will ..." "If a patient asked whether I use AI, I
+   would now say ..." "If a co-resident told me ..., I would say ..."
+5. *What I used.* For example: "Prompting lab chapter,
+   https://aim.seandavis.net/chapters/enrichment-prompting-lab. Yes:
+   Part A gave me a prompt I used twice more this week."
+
+**About question 5.** List the chapters and talks you used, and anything else
+you found: a paper, a video, a podcast, a news piece, a tool, a post. Aim for
+about three things a week, with at least one you found yourself. Anything
+related to AI counts, medical or not, so follow your own interest. For example,
+what do data centers really cost the places where they are built? Give the link
+so someone else can find it. This part is meant to be low-key. The course
+director uses your answers to improve the course, and the best finds go into
+the [starter resources](../appendix/resources.qmd) for future students.
 
 ## Week 4: what you will keep
 

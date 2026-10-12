@@ -137,7 +137,10 @@ Running notes:
 
 ## Running the learning journal
 
-The [student page](../course/learning-journal.qmd) has the four questions. Mark
+The [student page](../course/learning-journal.qmd) has the five questions.
+Question 5 asks which chapters, talks, and other resources students used and
+whether they would recommend them, so a quick tally each week shows what is
+working. Mark
 each entry complete or incomplete. In weeks 1 and 2, reply with one sentence:
 what to try next. Use Friday's small group, not written feedback, for anything
 longer. Shared resources that are worth keeping go into the starter resources
