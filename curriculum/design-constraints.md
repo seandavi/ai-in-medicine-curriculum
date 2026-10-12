@@ -54,8 +54,9 @@ and hit each more than once, in different modes.
    pairs an idea with an activity that produces an artifact or a judgment.
    *(Amended 2026-10-08: in weeks 2 to 4 of fall 2026 the course director's
    Monday and Wednesday talks are lectures with live demonstrations, by
-   choice. See constraint 5. The rule still holds for Friday groups and for
-   guests.)*
+   choice. See constraint 5. The rule still holds for guests. Amended
+   2026-10-12: Friday groups are open, student-led discussion with no set
+   activity, by choice; see issue #95.)*
 4. **Free tools only, no installs.** Institutional accounts where available;
    otherwise browser-based free tiers. Cost is an equity problem, not a
    footnote; see the `pricing` fragment in the talks repo.

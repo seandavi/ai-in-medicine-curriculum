@@ -61,9 +61,9 @@ it by a student who missed it. Students spend most of their own time on
 
 Coverage check: the core chapters make AIM-2, AIM-4, AIM-5, and AIM-6 main
 subjects. AIM-1 is covered by the week 1 live talks. **AIM-3 (bias) is not in a
-core chapter**; it is covered by the week 2 Friday scenario card on bias, by
-the bias chapter on the menu, and by the week 3 Wednesday talk if it is
-chosen. This is a deliberate trade, recorded in
+core chapter**; it is covered by the bias chapter on the menu and by the
+week 3 Wednesday talk if it is chosen. The Friday groups are open discussion,
+so they cover bias only if students raise it. This is a deliberate trade, recorded in
 `curriculum/design-constraints.md`.
 
 ### Variants
@@ -116,7 +116,7 @@ Week 1 is taught live on its own schedule (see the
 | On their own | The core chapter, after Monday's talk or instead of it (about 1 hour), and [Learn it with AI](../course/learn-with-ai.qmd) (2 to 4 hours). Menu chapters and [open labs](open-labs.qmd) are optional. |
 | Through the week | Guest talks; students attend or watch one. |
 | Thursday, 45 min, live | Office hours: students bring what they are stuck on. Not recorded. [Learning journal](../course/learning-journal.qmd) entry due that night. |
-| Friday, 60 min | Small group: what AI taught you, one thing you caught, then the [scenario cards](../course/friday-groups.qmd) practised out loud. Not recorded. |
+| Friday, 60 min | [Small group](../course/friday-groups.qmd): open discussion, with topics the students bring. Not recorded. |
 
 : A week in the course, weeks 2 to 4. Talks are recorded; office hours and Friday groups are not. {#tbl-week-run}
 

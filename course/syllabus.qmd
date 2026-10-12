@@ -42,7 +42,7 @@ about 3 hours of sessions you choose, plus the rest of the week.
 | Through the week | Guest talks and workshops from clinicians and researchers using AI in their work | Your choice | 1 to 2 hours |
 | Thursday, 11 to 11:45 a.m., live | **Office hours**, drop in: bring what you are stuck on. Not recorded | Optional | 45 minutes |
 | Thursday night | [Learning journal](learning-journal.qmd) entry | Yes | 30 minutes |
-| Friday, 60 minutes, live | [Small group](friday-groups.qmd), in one of four time slots you choose: what AI taught you, and practising conversations about AI out loud. Not recorded | Best effort, in your slot | 1 hour |
+| Friday, 60 minutes, live | [Small group](friday-groups.qmd), in one of four time slots you choose: open discussion, with topics you bring. Not recorded | Best effort, in your slot | 1 hour |
 | Any time | Chapters from the **menu**, and the [open labs](../appendix/open-labs.qmd) | Optional | As you like |
 
 : Your week, weeks 2 to 4. "Your choice" rows together: about 3 hours a week. All times are Mountain time (Denver). The guest schedule is posted in Canvas. {#tbl-week}
@@ -61,7 +61,7 @@ schedule if anything changes.
 | Wednesday, October 14, 10 a.m. | What AI is: from AI to machine learning to deep learning to large language models, with time to try it together |
 | Thursday, October 15, 10 a.m. | **Hands-on: set up your learning with ChatGPT.** Bring your ChatGPT Edu account. We open it together and use it to write your learning goals and design your learning journal. |
 | Thursday, October 15, 11 a.m. | Office hours, drop in. Bring what you are stuck on |
-| Friday, October 16 | Small groups, in the time slot you signed up for: introductions, then the first scenario cards |
+| Friday, October 16 | Small groups, in the time slot you signed up for: introductions, then open discussion |
 
 : Week 1. All times are Mountain time (Denver). {#tbl-week1}
 
