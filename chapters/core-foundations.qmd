@@ -1,6 +1,8 @@
 ---
 title: "How these systems work: from the eGFR on a chemistry panel to the next word"
-subtitle: "AIM-1 · AIM-2 · about 80 minutes"
+subtitle: "AIM-1 · AIM-2 · about 90 minutes"
+execute:
+  echo: false
 ---
 
 ::: {.callout-note title="What you'll learn"}
@@ -18,14 +20,16 @@ By the end of this chapter you will be able to:
 4. Describe in plain words what a language model computes at each step, and
    use that description to explain a made-up citation or a confident wrong
    answer as a natural result of how the model works, not as a bug.
-5. Name two built-in limits of the context window: it is a shared budget, and
-   material buried in the middle gets less reliable attention. Say what each
-   one changes about how you will prompt.
+5. Ask a chatbot to check its own facts and citations, and say what that
+   check does and does not catch, including why it cannot check facts about
+   your patient.
 :::
 
-**Time.** About 22 minutes of reading, 27 minutes of watching, 25 minutes of
-doing, and 6 minutes for the check and the closing question. No math and no
-coding are assumed. The only equation in the chapter is one you already use.
+**Time.** About 30 minutes of reading (two of them moving the curve-fitting
+sliders), 27 minutes of watching, 25 minutes of doing, and 6 minutes for the
+check and the closing question. No math and no
+coding are assumed. The only equations in the chapter are one you already use
+and a simpler one you can fit by hand with two sliders.
 You need a browser and your institutional ChatGPT Edu or Microsoft Copilot
 account, or whatever assistant your school provides. Nothing installs, and nothing asks you for a phone number.
 The live session uses a [slide deck](../slides/core-foundations.html) with the
@@ -118,6 +122,106 @@ they are, named:
   The *f* is whatever shape the fitting settled on. For CKD-EPI it is a handful
   of exponents and multipliers. For the systems later in this chapter it is
   billions of numbers. The role is the same.
+
+You can try fitting yourself. Each dot below is one made-up person, with
+creatinine across and measured GFR up. The curve is a simple equation with
+two numbers in it, *a* and *b*, and the two sliders set them. Each thin line
+is a miss: the distance between one person's measured GFR and the curve. Move
+the sliders until the average miss is as small as you can make it. Then press
+**Show the best fit**.
+
+```{ojs}
+//| output: false
+// Plain HTML controls for this chapter's two interactive figures, so the page
+// needs no input library. Copied from the foundations slide deck.
+function rangeInput({ label, min, max, step, value }) {
+  const form = html`<form class="w-range" onsubmit="return false"><label><span>${label}</span><input type="range" min="${min}" max="${max}" step="${step}" value="${value}" aria-label="${label}"><output>${value}</output></label></form>`;
+  const input = form.querySelector("input"), out = form.querySelector("output");
+  form.value = +input.value;
+  input.addEventListener("input", () => { form.value = +input.value; out.textContent = input.value; });
+  return form;
+}
+```
+
+```{ojs}
+dialData = {
+  let s = 20261014;
+  const rand = () => { s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s ^ (s >>> 15), 1 | s);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const gauss = () => Math.sqrt(-2 * Math.log(1 - rand())) * Math.cos(2 * Math.PI * rand());
+  return Array.from({ length: 40 }, () => { const cr = 0.6 * Math.pow(4 / 0.6, rand()); return { cr, gfr: 80 * Math.pow(cr, -1.1) * Math.exp(0.15 * gauss()) }; });
+}
+dialCurve = (a, b) => cr => a * Math.pow(cr, -b)
+dialMiss = (a, b) => { const f = dialCurve(a, b); return dialData.reduce((t, p) => t + Math.abs(f(p.cr) - p.gfr), 0) / dialData.length; }
+// The best fit, found by trying every setting the two sliders allow.
+dialBest = {
+  let best = { a: 0, b: 0, miss: Infinity };
+  for (let a = 30; a <= 150; a++) for (let k = 0; k <= 40; k++) { const b = +(k * 0.05).toFixed(2), miss = dialMiss(a, b); if (miss < best.miss) best = { a, b, miss }; }
+  return best;
+}
+```
+
+::: {.widget}
+<div class="illus-label">Illustrative data, not the CKD-EPI data; a simpler curve than the real eGFR.</div>
+
+```{ojs}
+{
+  const W = 640, H = 400, l = 64, r = 14, t = 12, b = 54, ymax = 170;
+  const X = cr => l + (cr - 0.5) / 3.5 * (W - l - r), Y = g => H - b - Math.min(g, ymax) / ymax * (H - b - t);
+  const f = dialCurve(dialA, dialB);
+  const grid = Array.from({ length: 141 }, (_, i) => 0.5 + i * 0.025);
+  const path = "M" + grid.map(c => `${X(c).toFixed(1)},${Y(f(c)).toFixed(1)}`).join("L");
+  return html`<svg class="wchart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Forty made-up people, creatinine against measured GFR, with the curve for a ${dialA} and b ${dialB}. Average miss ${dialMiss(dialA, dialB).toFixed(1)}.">
+    ${[0, 40, 80, 120, 160].map(v => `<line class="grid" x1="${l}" x2="${W - r}" y1="${Y(v)}" y2="${Y(v)}"/><text class="tick" x="${l - 8}" y="${Y(v) + 6}" font-size="17" text-anchor="end">${v}</text>`).join("")}
+    ${[1, 2, 3, 4].map(v => `<text class="tick" x="${X(v)}" y="${H - b + 24}" font-size="17" text-anchor="middle">${v}</text>`).join("")}
+    ${dialData.map(p => `<line class="miss" x1="${X(p.cr).toFixed(1)}" x2="${X(p.cr).toFixed(1)}" y1="${Y(p.gfr).toFixed(1)}" y2="${Y(f(p.cr)).toFixed(1)}"/>`).join("")}
+    ${dialData.map(p => `<circle class="dot" cx="${X(p.cr).toFixed(1)}" cy="${Y(p.gfr).toFixed(1)}" r="5"/>`).join("")}
+    <path class="curve" d="${path}"/>
+    <text class="axis" x="${(l + W - r) / 2}" y="${H - 8}" font-size="18" text-anchor="middle">creatinine, mg/dL</text>
+    <text class="axis" x="22" y="${(t + H - b) / 2}" font-size="18" text-anchor="middle" transform="rotate(-90 22 ${(t + H - b) / 2})">measured GFR</text>
+  </svg>`;
+}
+```
+
+<p class="eq">GFR = <b>a</b> × creatinine<sup>−<b>b</b></sup></p>
+
+```{ojs}
+viewof dialA = rangeInput({ label: "a", min: 30, max: 150, step: 1, value: 50 })
+viewof dialB = rangeInput({ label: "b", min: 0, max: 2, step: 0.05, value: 0.3 })
+```
+
+<p class="defn"><b>a</b>: the GFR when creatinine is 1.0. <b>b</b>: how fast GFR falls as creatinine rises.</p>
+
+```{ojs}
+{
+  const miss = dialMiss(dialA, dialB), best = dialA === dialBest.a && dialB === dialBest.b;
+  return html`<div class="readout" role="status"><span class="test">Average miss: <b class="dial-miss">${miss.toFixed(1)}</b> mL/min/1.73 m²</span></div>
+    ${best ? html`<div class="fb ok">The best fit: no setting of a and b misses by less.</div>` : ""}`;
+}
+```
+
+```{ojs}
+{
+  const button = html`<button class="w-btn" type="button">Show the best fit</button>`;
+  button.onclick = () => {
+    for (const [view, v] of [[viewof dialA, dialBest.a], [viewof dialB, dialBest.b]]) {
+      const input = view.querySelector("input");
+      input.value = v;
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+    }
+  };
+  return button;
+}
+```
+
+<p class="src">● one made-up person · thin line: how far the curve misses that person · thick line: the curve your sliders make. Generated in your browser.</p>
+:::
+
+**Fitting** means a computer does exactly this until the error is as small as
+it can get. Here the computer tries every setting the sliders allow and keeps
+the best one. Real fitting uses faster methods with the same goal. The real
+eGFR equation has a few more numbers in it, and it was fit to 8,254 people
+whose GFR was measured, not to 40 made-up dots.
 
 @fig-egfr-proxy shows what that model connects. The thing you want to know is
 on the right. The thing the lab can measure is on the left. The equation is
@@ -253,10 +357,10 @@ sees: the straight line through a curve. Statisticians call that error *bias*,
 in a technical sense that has nothing to do with the social meaning. A model
 that is **too flexible** learns the random scatter in its particular training
 set along with the real pattern. It fits those cases very closely and the next
-case badly: the wiggle through every point. That error is *variance*. You will
-see both in the exercise, in about eight minutes, on your own screen. The
-third sentence you write there is the one you will apply to every
-performance claim you are ever shown.
+case badly: the wiggle through every point. That error is *variance*. You can
+see both on your own screen, with one slider, in Part A of the Do. The third
+sentence you write there is the one you will apply to every performance claim
+you are ever shown.
 
 The clinical version of the same failure is **dataset shift**: the patients
 the model meets in real use differ from the patients in its training set, so
@@ -271,12 +375,68 @@ missed 67 percent of patients with sepsis, and it alerted on 18 percent of all
 admissions [@pmid:34152373]. Nobody had lied about the development
 performance. It simply had not been measured on patients like those.
 
+A separate test set is necessary, but it is not enough. Here is a
+classification example from early in the COVID-19 pandemic, when many groups
+built models to label a chest X-ray as COVID-19 or not COVID-19.
+
+Roberts and colleagues reviewed published machine-learning papers that
+diagnosed COVID-19 from chest X-rays or CT scans. Sixty-two papers went
+through their full review. Sixteen of the 62 took their non-COVID images from
+one public dataset of pneumonia X-rays. Many did not mention that this dataset
+consists of children aged one to five. The COVID-19 images came from adults.
+In the reviewers' words, a model built this way "is likely to overperform as it
+is merely detecting children versus adults" [@doi:10.1038/s42256-021-00307-0].
+They also warned about what they called "Frankenstein datasets": collections
+assembled from other datasets.
+
+DeGrave and colleagues rebuilt models of this kind
+[@doi:10.1038/s42256-021-00338-7]. One of their datasets combined two
+sources. The COVID-19 X-rays came from a public collection on GitHub, many of
+them cropped from figures in published papers. The non-COVID X-rays came from
+one US hospital [@doi:10.1101/2020.09.13.20193565]. On a test set held back from the same
+sources, the models did well. On radiographs from a new hospital system, in the
+authors' words, "half of the model's predictive performance is lost".
+
+@fig-covid-average shows one reason. Each panel is the average of many X-rays
+from one source. The sources differ in places that have nothing to do with
+the disease: how dark the edges of the image are, and the letter marker that shows the
+patient's right or left side.
+
+![Average images from four sources of chest X-rays. Top row, two sources of non-COVID images; bottom row, two sources of COVID-19 images. Each column is one dataset. Look at the boxes, not the lungs. Solid boxes mark side markers that differ between sources. Dashed boxes mark differences in how dark the image edges are. A model can learn these differences instead of the disease. From DeGrave, Janizek and Lee (2020), Figure 3, medRxiv preprint [@doi:10.1101/2020.09.13.20193565], [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); image from [PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC7523163/).](../images/covid-xray-average-images-degrave-2020.jpg){#fig-covid-average fig-alt="Four blurry average chest X-rays in a two-by-two grid, labelled ChestX-ray14 and PadChest on top for COVID-19 negative, and GitHub-COVID and BIMCV-COVID-19+ below for COVID-19 positive. Dashed red boxes outline the dark top corners and side edges of every image, which differ in darkness between sources. Solid red boxes mark a side marker visible in the top-left of PadChest and a faint letter R on the left of BIMCV-COVID-19+."}
+
+The authors then used *explanation methods*, tools that show which parts of an
+image a model relied on. @fig-covid-saliency shows three examples. The models
+often relied on things outside the lungs: the side markers, arrows and text
+added to the image, the edges of the image, the diaphragm, and the outline of
+the heart. In one test, the authors swapped the side markers between a
+COVID-19 X-ray and a non-COVID X-ray, and the model's output shifted. Their
+conclusion was that taking the COVID-19 and non-COVID images from separate
+sources gave the models shortcuts.
+
+![What the model looked at. Left, three chest X-rays. Right, a *saliency map* for each: the pixels that most changed the model's answer, darker red for more influence. Top, a non-COVID X-ray: the model used the lungs (open arrow) but also the side marker in the top corner (closed arrow). Middle, a COVID-19 X-ray: the strongest pixels are in the bottom corners, outside the lungs. Bottom, a COVID-19 X-ray: the only highlighted area is the diaphragm. From DeGrave, Janizek and Lee (2020), Figure 2a, cropped from the full figure, medRxiv preprint [@doi:10.1101/2020.09.13.20193565], [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); image from [PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC7523163/).](../images/covid-xray-saliency-degrave-2020.jpg){#fig-covid-saliency fig-alt="Three chest X-rays on the left, labelled COVID-19 negative, COVID-19 positive, and COVID-19 positive, each beside a speckled red map on the right. Arrows on the maps point to a side marker in the top-right corner of the first image, to the two bottom corners of the second, and to the diaphragm in the third. A colour bar runs from 0th percentile, white, to 99th percentile, dark red."}
+
+This is not the overfitting described above. The researchers did split their
+data into training and test sets. But both sets came from the same mixed
+sources, so the test set had the same flaw as the training set and
+could not catch it. The model scored well by learning what told the sources
+apart, such as a child's chest or a side marker, instead of what told the
+diseases apart. The literature calls this *shortcut learning*. Epidemiologists
+would call the source a *confounder*: a third factor linked both to the images
+and to the label. At other hospitals the shortcut no longer pointed to the
+right answer. That is dataset shift again, hidden inside the test set.
+
+So a test set protects you only if it looks like the patients you will use the
+model on. When you read a claim like this, ask where each class of images came
+from. If the cases and the comparison group came from different places, the
+model may have learned to tell the places apart.
+
 ::: {.callout-important title="The one sentence"}
 A model's performance on the cases it was built from is usually the optimistic
 number. That is the third of the course's four recurring lessons, **the
 published number is the optimistic one**, in its first form. Ask what it was
 trained on, and ask what it was tested on. If those
-are the same set, you have learned nothing yet.
+are the same set, you have learned nothing yet. If the test set does not look
+like your patients, you have learned less than the number suggests.
 :::
 
 ### From tables to words
@@ -331,7 +491,8 @@ one most likely to follow, given the tokens so far and given what people rated
 well. A real citation and a made-up one are both plausible ways to continue
 "the original paper was". The model is not lying, and it is not broken. It is
 doing exactly what it was built to do, and the thing it was built to do has no
-truth step in it.
+truth step in it. Today's chatbots can add a check on top of this process if
+you ask for one; [Ask it to check](#ask-it-to-check), below, shows how.
 :::
 
 Here is what that looks like when it reaches you. The exchange below is
@@ -365,35 +526,40 @@ belief that the tools are unreliable for everything. [The critical appraisal
 chapter](core-appraisal.qmd) measures the rates. This chapter explains why there is a rate at all.
 :::
 
-### The context window
+### Ask it to check
 
-One more built-in fact, because it changes how you will type. Everything the
-model can see at once has to fit inside a fixed number of tokens called the
-**context window**. That includes your question, anything you pasted, the
-conversation so far, and its own reply as it writes it. Two limits follow.
+The model itself has no checking step. Most chatbots now have web search built
+in. It was added to deal with two problems: the training data stops at a date,
+called the *training cutoff*, and the model can make things up. Search lets the
+chatbot compare a claim to a real source, and you can ask it to. Add this to
+your question, or send it after the answer:
 
-**It is a shared budget.** The forty pages you paste, the ten previous turns
-of the conversation, and the answer you are waiting for all draw on the same
-allowance. Fill it with a whole guideline and there is less room for the
-reasoning about your question. Older turns are pushed out or shortened. Output
-tokens also cost the provider more than input tokens. That is one reason the
-tools tend to answer briefly, and one reason the usable window is often
-smaller than the advertised one. The figures change with every release, so none
-are quoted here.
+```{.script}
+Check each fact and citation in your answer using web search. For each one, give a link (PubMed or the DOI) and a short quote from the source that supports it. Mark anything you could not find.
+```
 
-**The middle gets less attention.** Researchers placed the one relevant document
-at different positions inside a long context and asked models a question about
-it. Accuracy was highest with the document at the beginning or the end, and
-fell significantly when it was in the middle, in a U-shaped curve
-[@doi:10.1162/tacl_a_00638]. Later studies across newer models have found
-quality dropping as the input grows long, often well before the advertised
-limit. The shape is a robust finding. The thresholds are not, and they change
-with each model.
+Three studies say what a check like this does and does not do.
 
-Two habits follow, and they are the ones the Check asks for. Put the question
-and the facts that matter at the start or the end of what you paste, not in
-the middle of a long document. And when a conversation is long and has changed subject, start a
-new one rather than continuing inside a used-up budget.
+- **Search helps.** One 2026 study asked six chatbot versions for references
+  on ear, nose, and throat topics. The two versions with web search gave more
+  accurate references than the four without it. Even the best got only about
+  half of its references fully right [@pmid:41546380].
+- **A second pass helps.** In another study, a model wrote questions to check
+  its own first draft, answered them separately, and then rewrote the answer.
+  The rewritten answers made fewer false claims [@doi:10.18653/v1/2024.findings-acl.212].
+- **Neither makes it perfect.** In a 2025 study of medical questions, a chatbot
+  with web search still gave about 3 statements in 10 that the source it cited
+  did not support [@pmid:40240349]. A real link is not the same as a link that
+  says what the answer says.
+
+There is also a limit no search can fix. In most setups the chatbot cannot see
+the patient's chart. So it cannot check facts about your patient: the dose
+against the patient's weight, the history against the notes. Those are still yours to
+check. A chatbot that checks against the chart is a future capability, not
+today's.
+
+So let the chatbot check the literature. Then open the link yourself before
+anything goes in a note or an order.
 
 ::: {.callout-tip title="Two earlier systems worth thirty seconds"}
 The current systems have a history. **MYCIN**, a rule-based system for choosing
@@ -423,21 +589,19 @@ title *Transformers, the tech behind LLMs*, with a transcript. Captions are
 available on YouTube.
 
 It is the one visual explanation of these models worth the time, and it
-assumes no math beyond what is drawn on screen. Watch for three things. The
+assumes no math beyond what is drawn on screen. Watch for two things. The
 moment, early on, where the whole system is shown to produce *a probability
 for every possible next token*, then pick one and repeat. That is the process
 this chapter described in words. The passage on embeddings, where words become
 directions in space and "woman minus man" ends up near "queen minus king". That
-is the "raw material to predictors" box made visible. And the explanation of
-the context window as a fixed-size input, which is where the two limits above
-come from. If you cannot follow the section on attention, skip it. The exercise does
+is the "raw material to predictors" box made visible. If you cannot follow the section on attention, skip it. The exercise does
 not need it.
 
 ## Do
 
 ::: {.callout-warning title="No patient information, ever"}
-Both parts of this exercise use public or made-up material. Part A uses a
-small practice dataset built into the site. Part B asks the model about a published
+All three parts of this exercise use public or made-up material. Part A runs
+on made-up data in your browser. Parts B and C ask the model about a published
 scoring system, not about a patient. Your university ChatGPT Edu or Copilot
 account, signed in with university credentials, is covered by a business
 associate agreement, the contract that makes the vendor legally responsible
@@ -451,51 +615,116 @@ What counts as patient information, and why taking out the name is not
 enough: [the patient information page](../course/patient-information.qmd).
 :::
 
-### Part A: overfitting you can see (8 minutes)
+### Part A: overfitting you can see (5 minutes)
 
-Open <https://playground.tensorflow.org> in any browser. No account, no
-install, and the site's own tagline is "don't worry, you can't break it". It
-lets you build a small neural network, a flexible *f* from @fig-loop, and
-watch it learn to separate orange dots from blue dots. Under OUTPUT, two
-numbers are shown. The **training loss** is the model's error on the dots it
-is learning from. The **test loss** is its error on dots it never sees. That
-pair of numbers is the point of the exercise. If the site is down, the deep
-learning deck under Go deeper has screenshots of a spiral fit. Read those and
-write the three sentences from them.
+The slider below fits a curve to twelve made-up cases, the filled dots. Sixty
+more cases, the hollow dots, are held back as a test set; the model never
+learns from them. The dashed line is the real pattern, which the model never
+sees. The slider sets how flexible the model is. At 0 the curve is a flat
+line, at 1 a straight line, and each step to the right lets it bend more.
 
-All three steps use the same data: a noisy spiral (the dots have random
-scatter added), with only one dot in five
-used for training. Each link opens the site already set up. "Hidden layer" and
-"neuron" are the site's words for the middle stage of the network and the
-units inside it; "features" are its predictors. Do not press the regenerate
-button, because that changes the data.
+Under the charts are two numbers. The **training error** is a kind of average
+miss on the cases the model learned from. The **test error** is the same
+average miss on the held-back cases. That pair of numbers is the point of the
+exercise. The chart on the right shows both errors at every setting, and a
+vertical line marks where the slider is.
 
-1. **Too simple.** Open
-   [step 1](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=2&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false):
-   one hidden layer of two neurons, and only `X₁` and `X₂`. Press play, and
-   press pause when the epoch counter reaches about 500; one epoch is one pass
-   through the data. Write down both losses and what the picture looks like.
-2. **In between.** Open
-   [step 2](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=6,6&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=true&cosY=false&sinY=true&collectStats=false&problem=classification&initZero=false&hideText=false):
-   two layers of six neurons, with `sin(X₁)` and `sin(X₂)` added to `X₁` and
-   `X₂`. Run it to about 500 epochs and write down both losses.
-3. **Too flexible.** Open
-   [step 3](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=50&networkShape=8,8,8,8,8,8&seed=0.12345&showTestData=true&discretize=false&percTrainData=20&x=true&y=true&xTimesY=true&xSquared=true&ySquared=true&cosX=false&sinX=true&cosY=false&sinY=true&collectStats=false&problem=classification&initZero=false&hideText=false):
-   six layers of eight neurons and all the features. Run it to about 500
-   epochs, write down both losses, and watch the boundary between the colors
-   bend around individual dots.
+Move the slider slowly from 0 to 11. Stop at 0, at 3, and at 11, and write
+down both errors each time.
+
+```{ojs}
+bvData = {
+  let s = 20261003;
+  const rand = () => { s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s ^ (s >>> 15), 1 | s);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const gauss = () => Math.sqrt(-2 * Math.log(1 - rand())) * Math.cos(2 * Math.PI * rand());
+  const truth = x => Math.sin(3 * x);
+  const make = n => Array.from({ length: n }, () => { const x = rand() * 2 - 1; return { x, y: truth(x) + 0.3 * gauss() }; });
+  return { truth, train: make(12), test: make(60) };
+}
+
+// Least squares in a Legendre basis, solved by modified Gram-Schmidt QR.
+function basis(x, d) { const p = [1, x]; for (let k = 1; k < d; k++) p.push(((2 * k + 1) * x * p[k] - k * p[k - 1]) / (k + 1)); return p.slice(0, d + 1); }
+function fitPoly(pts, d) {
+  const m = pts.length, n = d + 1, Q = pts.map(p => basis(p.x, d)), R = Array.from({ length: n }, () => Array(n).fill(0));
+  for (let j = 0; j < n; j++) {
+    for (let i = 0; i < j; i++) { let dot = 0; for (let r = 0; r < m; r++) dot += Q[r][i] * Q[r][j]; R[i][j] = dot; for (let r = 0; r < m; r++) Q[r][j] -= dot * Q[r][i]; }
+    let nrm = 0; for (let r = 0; r < m; r++) nrm += Q[r][j] ** 2; nrm = Math.sqrt(nrm); R[j][j] = nrm; for (let r = 0; r < m; r++) Q[r][j] /= nrm || 1;
+  }
+  const qtb = Array.from({ length: n }, (_, j) => pts.reduce((a, p, r) => a + Q[r][j] * p.y, 0)), c = Array(n).fill(0);
+  for (let i = n - 1; i >= 0; i--) { let v = qtb[i]; for (let k = i + 1; k < n; k++) v -= R[i][k] * c[k]; c[i] = R[i][i] ? v / R[i][i] : 0; }
+  return x => basis(x, d).reduce((a, v, k) => a + v * c[k], 0);
+}
+rmse = (f, pts) => Math.sqrt(pts.reduce((a, p) => a + (f(p.x) - p.y) ** 2, 0) / pts.length)
+bvErrors = Array.from({ length: 12 }, (_, d) => { const f = fitPoly(bvData.train, d); return { d, train: rmse(f, bvData.train), test: rmse(f, bvData.test) }; })
+bvFit = fitPoly(bvData.train, degree)
+```
+
+::: {.widget}
+<div class="illus-label">Illustrative: made-up data, generated in your browser.</div>
+
+```{ojs}
+viewof degree = rangeInput({ label: "Flexibility of the model", min: 0, max: 11, step: 1, value: 1 })
+```
+
+:::: {.widget-pair}
+```{ojs}
+{
+  const W = 600, H = 340, p = 14;
+  const x = v => p + (v + 1) / 2 * (W - 2 * p), y = v => H / 2 - Math.max(-3, Math.min(3, v)) / 2.2 * (H / 2 - p);
+  const grid = Array.from({ length: 241 }, (_, i) => -1 + i / 120);
+  const path = f => "M" + grid.map(v => `${x(v).toFixed(1)},${y(f(v)).toFixed(1)}`).join("L");
+  const now = bvErrors[degree];
+  return html`<svg class="wchart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Fitted curve at flexibility ${degree}: training error ${now.train.toFixed(2)}, test error ${now.test.toFixed(2)}.">
+    <path class="truth" d="${path(bvData.truth)}"/>
+    ${bvData.test.map(d => `<circle class="test-dot" cx="${x(d.x).toFixed(1)}" cy="${y(d.y).toFixed(1)}" r="4"/>`).join("")}
+    ${bvData.train.map(d => `<circle class="dot" cx="${x(d.x).toFixed(1)}" cy="${y(d.y).toFixed(1)}" r="6.5"/>`).join("")}
+    <path class="curve" d="${path(bvFit)}"/>
+  </svg>`;
+}
+```
+
+```{ojs}
+{
+  const W = 520, H = 340, l = 64, r = 16, t = 16, b = 50, cap = 1.5;
+  const X = d => l + d / 11 * (W - l - r), Y = e => H - b - Math.min(e, cap) / cap * (H - b - t);
+  const line = key => "M" + bvErrors.map(e => `${X(e.d).toFixed(1)},${Y(e[key]).toFixed(1)}`).join("L");
+  const off = bvErrors.some(e => e.test > cap);
+  const now = bvErrors[degree];
+  return html`<svg class="wchart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Error by flexibility. Training error falls steadily. Test error falls, then rises${off ? " off the chart" : ""}. At flexibility ${degree}: training ${now.train.toFixed(2)}, test ${now.test.toFixed(2)}.">
+    ${[0, 0.5, 1, 1.5].map(v => `<line class="grid" x1="${l}" x2="${W - r}" y1="${Y(v)}" y2="${Y(v)}"/><text class="tick" x="${l - 8}" y="${Y(v) + 8}" font-size="24" text-anchor="end">${v.toFixed(1)}</text>`).join("")}
+    <line class="marker" x1="${X(degree)}" x2="${X(degree)}" y1="${t}" y2="${H - b}"/>
+    <path class="train-line" d="${line("train")}"/>
+    <path class="test-line" d="${line("test")}"/>
+    ${off ? `<text class="test-label" x="${W - r}" y="${t + 40}" font-size="24" text-anchor="end">test error off the chart ↑</text>` : ""}
+    <text class="axis" x="${(l + W - r) / 2}" y="${H - 12}" font-size="26" text-anchor="middle">more flexible →</text>
+    <text class="axis" x="20" y="${(t + H - b) / 2}" font-size="26" text-anchor="middle" transform="rotate(-90 20 ${(t + H - b) / 2})">error</text>
+  </svg>`;
+}
+```
+::::
+
+```{ojs}
+{
+  const now = bvErrors[degree];
+  return html`<div class="readout" role="status"><span class="train">● Training error ${now.train.toFixed(2)}</span><span class="test">○ Test error ${now.test > 1.5 ? "above 1.5" : now.test.toFixed(2)}</span></div>`;
+}
+```
+
+<p class="src">● cases the model learns from (the training set) · ○ cases held back for testing (the test set) · dashed line: the real pattern, which the model never sees · solid line: the model's curve.</p>
+:::
 
 Then write three sentences, and keep them. You will need them for the Check.
 
 ```
-Which network was too simple, and how could you tell?
+Which setting was too simple, and how could you tell?
 ______________________________________________________________
 
-Which was too flexible, and how could you tell?
+Which setting was too flexible, and how could you tell?
 ______________________________________________________________
 
-If you had only ever been shown the training loss, how would steps 2
-and 3 have compared, and what did the test loss show?
+If you had only seen the training error, which setting would you
+have picked, and what did the test error show?
 ______________________________________________________________
 ```
 
@@ -544,8 +773,8 @@ yours did, ask a second question in the same conversation:
 
 Open each PMID in PubMed and read the title. A wrong PMID usually opens a real
 paper about something else, so a link that works proves nothing. When the
-course tested four models with this question on 3 October 2026, with web
-search off, every one of them gave at least one wrong PMID.
+course tested four models with this question on 3 October 2026, every one of
+them gave at least one wrong PMID.
 
 Record:
 
@@ -582,20 +811,35 @@ say it out loud. The answer depends on the wording more than you would expect.
 
 ::: {.callout-tip title="If the model refuses or hedges"}
 Some assistants will now say they cannot guarantee citations, or will offer to
-search. That is a design choice added on top of the same process, and it is
-worth noting in your record. The tool has been tuned to hedge, which is
-different from the tool having checked. If it offers to search the web and
-does, you are now looking at an answer built from search results, which [the
-critical appraisal chapter](core-appraisal.qmd) treats separately. Turn search off if you can, or
-note that it was on.
+search the web. A hedge is a design choice added on top of the same process,
+and it is worth noting in your record. A tool tuned to hedge has not checked
+anything. Asking it to check is Part C.
 :::
 
-### Part C: two rules for the window (2 minutes)
+### Part C: ask it to check (5 minutes)
 
-Write down, in your own words, one rule you will follow because the context
-window is a shared budget, and one you will follow because the middle gets
-less reliable attention. Keep them next to your three sentences from Part A.
-You will be asked for them in the Check.
+Stay in the same conversation, and send the prompt from
+[Ask it to check](#ask-it-to-check):
+
+```{.script}
+Check each fact and citation in your answer using web search. For each one, give a link (PubMed or the DOI) and a short quote from the source that supports it. Mark anything you could not find.
+```
+
+Open two of the links it gives. For each one, find the quote on the page and
+decide whether the source says what the answer said.
+
+Record:
+
+```
+What the check corrected: ___________________________________
+What it marked as not found: ________________________________
+
+Link 1: does the source say what the answer said?  Y / N / partly
+Link 2: does the source say what the answer said?  Y / N / partly
+
+One thing this check could not catch, and why:
+  ____________________________________________________________
+```
 
 ## Check
 
@@ -606,9 +850,9 @@ top.
 |---|---|---|
 | Name the eGFR model's predictors, response, and training population (objective 1) | Creatinine, age, sex; measured GFR; 8,254 research participants in 10 studies, and you can say why the last one matters for the patient in the clinic | "Creatinine and stuff" or a training population you cannot describe |
 | Sort four models with the two questions in @tbl-two-questions (objective 2): the eGFR; an EHR sepsis alert; a tool that groups tumor expression profiles with no diagnoses attached; a chatbot predicting the next token | Supervised regression; supervised classification; unsupervised; supervised (the next word is the label), and you can say why the last one needs no human labeler | Any row you had to guess |
-| Explain the three sentences from Part A (objective 3) | The third sentence says that at about 500 epochs, training loss made steps 2 and 3 look about the same, while test loss showed step 3 was the worst, and that this is why a performance figure with no test set is not yet a number | The first two sentences only, or a third sentence that restates the training loss |
+| Explain the three sentences from Part A (objective 3) | The third sentence says that training error alone would have picked 11, the most flexible setting, where the training error is zero; that the test error there is off the chart; and that the lowest test error is in the middle, near 3. It also says this is why a performance figure with no test set is not yet a number | The first two sentences only, or a third sentence that restates the training error |
 | Give the one-sentence explanation from Part B (objective 4) | One sentence about plausible next tokens, no "hallucinate", and it explains why the tone did not change when the answer was wrong | "It hallucinated" or "it made a mistake" |
-| State the two window rules from Part C (objective 5) | One rule follows from the shared budget, one from the middle getting less attention, and each says what you will actually do differently at the keyboard | Rules that do not name a limit, or that you could have written before reading the chapter |
+| Report what the check in Part C did (objective 5) | You say what the check corrected and what it marked as not found; you opened two links and say whether each source supports the claim; and you name something the check cannot catch, such as a real link that does not support the claim, or any fact about a patient, because the chatbot cannot see the chart | "It checked everything", or a record with no link opened |
 
 ## What this changes for you
 
@@ -629,8 +873,9 @@ chapter's](core-patient-communication.qmd) question, not this one's.
 
 And the second half. The next time a chatbot gives you a citation with a first
 author, a journal, and a year, what is the one sentence you will say to
-yourself before you paste it anywhere? What will you do in the next two
-minutes because of it?
+yourself before you paste it anywhere? Will you ask it to check, and which
+link will you then open yourself? Which facts in the answer are about your
+patient, so that no chatbot can check them for you?
 
 ## Summary
 
@@ -640,8 +885,13 @@ minutes because of it?
   ask for them.
 - Supervised learning has the answer in the training data; unsupervised does
   not. Classification gives a category; regression gives a number.
+- Fitting means a computer adjusts the numbers in a formula until its error
+  on the training data is as small as it can get.
 - Performance on the training data describes the fit. It is not evidence.
   Ask for the test set; if there is none, there is no number yet.
+- A test set protects you only if it looks like your patients. The COVID-19
+  X-ray models scored well on test sets cut from the same flawed sources, and
+  lost about half their performance at other hospitals.
 - Too simple is bias, too flexible is variance, and a different population is
   dataset shift. All three are failures of the same object.
 - A language model turns text into a table where the predictors are the
@@ -649,8 +899,9 @@ minutes because of it?
   repeats. Human raters then tune it toward answers people prefer.
 - Nothing in that process checks whether a claim is true. A made-up citation
   is a plausible continuation, produced in the same tone as a real one.
-- The context window is a shared budget, and its middle gets less attention.
-  Put what matters at the start or the end; start over when the budget is spent.
+- You can ask a chatbot to check its facts and citations with web search. It
+  helps, it is not perfect, and it cannot check facts about your patient.
+  Open the link yourself.
 - The 57 on the panel came from somewhere. So does everything else.
 
 ## Go deeper
@@ -664,11 +915,11 @@ minutes because of it?
   with instructions hidden in the text it reads).
 - 3Blue1Brown, *But what is a neural network?* (Deep Learning, Chapter 1).
   <https://www.youtube.com/watch?v=aircAruvnKk>. For the *f* in @fig-loop,
-  if you want to see what the boxes in the Playground exercise contain.
+  if you want to see what is inside a neural network.
   October 2017; 19 minutes.
 - Course decks, permanent at the archive:
   [Deep learning intro](https://talks.seandavis.net/archive/2024-11-06-deep-learning-intro/),
-  which ends on the same Playground exercise with medical-imaging examples;
+  with medical-imaging examples;
   [Word embeddings as the basis for LLMs](https://talks.seandavis.net/archive/2024-11-12-word-embeddings-basis-for-llms/),
   which has an Embedding Projector exercise for the "words become numbers"
   step; and [AI history](https://talks.seandavis.net/archive/2025-09-30-ai-history/),
@@ -686,8 +937,10 @@ minutes because of it?
   example [@pmid:34152373].
 - A primer on how the chatbots are built and what the early clinical results
   look like [@pmid:37460753].
-- The "lost in the middle" study behind the second context-window limit
-  [@doi:10.1162/tacl_a_00638].
+- The review of COVID-19 imaging models that found the children-versus-adults
+  problem [@doi:10.1038/s42256-021-00307-0], and the study that showed what
+  the X-ray models were looking at instead of the lungs
+  [@doi:10.1038/s42256-021-00338-7].
 - MYCIN's blinded evaluation, forty-seven years old and still an example of how
   to test a decision-support tool well [@pmid:480542].
 
