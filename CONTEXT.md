@@ -5,7 +5,7 @@ institutional mechanics so it can be reassembled for any cohort. This file holds
 part that is specific to the CU Anschutz offering, because it exists nowhere else in
 the repo and is the first thing you will want when you come back to this cold.
 
-**Last updated: 2026-10-08.** Everything below is operational state and goes stale
+**Last updated: 2026-10-12.** Everything below is operational state and goes stale
 fast. Check it before acting on it.
 
 ## The offering
@@ -24,8 +24,8 @@ copy). The student-facing week-by-week plan is in `course/syllabus.qmd`.
 
 **Refocus (decided 2026-10-07/08): skill and confidence first.** The course's
 mantra: *it is your job to learn where AI helps your work, and you learn that by
-trying.* Each week has one core chapter plus a menu (week 1 centaur-cyborg; week
-2 prompting lab; week 3 patient communication; week 4 ethics). "Students aim for
+trying.* Each week has one core chapter plus a menu (week 1 foundations, with no
+menu; week 2 prompting lab; week 3 patient communication; week 4 ethics). "Students aim for
 5 to 10 hours a week of AI-related learning, 2 to 4 with the book" was the
 first budget; with two talks a week it is restated as about 8 to 10 hours
 (see the syllabus table). The main hands-on activity is "Learn it with AI" (`course/learn-with-ai.qmd`). The resource log is
@@ -37,6 +37,11 @@ chatbots and felt lost; see `curriculum/design-constraints.md` constraint 5.
 **Next:** revisit each chapter before the week it is used, to cut it to its
 framework core and move hands-on work toward success first.
 
+**Week 1 chapter (decided 2026-10-12):** the centaur-or-cyborg chapter is kept
+in the repo (`chapters/core-centaur-cyborg.qmd` and its answer key) but no
+longer published. Week 1 has one chapter, How these systems work
+(`core-foundations`).
+
 - **Week 1 (Oct 12 to 16):** the course director teaches live, Monday to
   Thursday at 10 a.m. Mountain time (decided 2026-10-09): Monday welcome and
   adult learning (from the 2024 Google Slides intro deck); Tuesday history of
@@ -45,9 +50,8 @@ framework core and move hands-on work toward success first.
   "centaur or cyborg, live" (everyone in ChatGPT Edu, trying things together;
   left open-ended on purpose; also catches account problems early), then
   office hours.
-  Friday small groups, from that week's signup. Students read `core-foundations`
-  and `core-centaur-cyborg`. Weeks 2 to 4 Monday and Wednesday talks are also
-  at 10 a.m.
+  Friday small groups, from that week's signup. Students read `core-foundations`.
+  Weeks 2 to 4 Monday and Wednesday talks are also at 10 a.m.
 - **Weeks 2 to 4, each week (decided 2026-10-08):** the course director's
   talks are the main event and each core chapter is their companion ("read it
   after the talk, or instead of it if you missed the talk").
