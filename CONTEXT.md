@@ -29,7 +29,10 @@ menu; week 2 prompting lab; week 3 patient communication; week 4 ethics). "Stude
 5 to 10 hours a week of AI-related learning, 2 to 4 with the book" was the
 first budget; with two talks a week it is restated as about 8 to 10 hours
 (see the syllabus table). The main hands-on activity is "Learn it with AI" (`course/learn-with-ai.qmd`). The resource log is
-replaced by a learning journal. Friday groups are open,
+replaced by a learning journal, which keeps one piece of it: three resources
+a week of the student's own choosing, anything related to AI, one line each,
+meant to be low-key (the course director, 2026-10-09 meeting; three a week
+decided 2026-10-10). Friday groups are open,
 student-led discussion (`course/friday-groups.qmd`; scenario cards removed
 2026-10-12, ideas kept in issue #95). The Monday hour includes "How
 I used AI this week" (the director's own work, shown live). Bias is not core
@@ -70,6 +73,10 @@ longer published. Week 1 has one chapter, How these systems work
   - Friday, 60 min: small group, best effort (decided 2026-10-10), one of four slots (10 a.m., 11 a.m., 1 p.m.,
     2 p.m.; up to 15 students each for 49 enrolled; decided 2026-10-09). Whether to use
     breakout rooms is undecided; the book does not mention them.
+    Friday October 30 is "bring your clinical stories" (2026-10-09 meeting):
+    students bring situations where AI helped or hurt and lead the talk;
+    Christina Olson joins two slots, Matt Zuckerman one afternoon slot.
+    Which slots is not yet decided.
   - Guest talks: attend or watch one a week (was two, cut so the week still
     adds up; see the syllabus table).
   - Attendance (decided 2026-10-10): aim for about 3 hours a week of sessions,

@@ -245,6 +245,13 @@ have said no? What would have made that easier? How to have that conversation
 is in [the patient communication
 chapter](core-patient-communication.qmd#the-phone-on-the-desk-what-the-patient-can-refuse).
 
+Your health system also has its own rules on AI use, for example whether a
+patient can refuse an AI tool or a recording. The health system sets these
+rules, not your medical school. In Colorado, for example, Children's Colorado
+and UCHealth have some different rules, so check each one when you move
+between them. The rules also change. Know the current rules where you work,
+and follow them.
+
 ### Who the tool fails
 
 A scribe does not fail everyone equally. The research is thin, but the results
