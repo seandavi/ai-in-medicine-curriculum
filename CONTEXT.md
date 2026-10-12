@@ -29,10 +29,11 @@ menu; week 2 prompting lab; week 3 patient communication; week 4 ethics). "Stude
 5 to 10 hours a week of AI-related learning, 2 to 4 with the book" was the
 first budget; with two talks a week it is restated as about 8 to 10 hours
 (see the syllabus table). The main hands-on activity is "Learn it with AI" (`course/learn-with-ai.qmd`). The resource log is
-replaced by a learning journal. Friday groups practise conversations about AI
-from scenario cards (`course/friday-groups.qmd`). The Monday hour includes "How
+replaced by a learning journal. Friday groups are open,
+student-led discussion (`course/friday-groups.qmd`; scenario cards removed
+2026-10-12, ideas kept in issue #95). The Monday hour includes "How
 I used AI this week" (the director's own work, shown live). Bias is not core
-this offering (Friday card instead). Why: 2025 students were afraid to use
+this offering (menu chapter and possibly a week 3 talk). Why: 2025 students were afraid to use
 chatbots and felt lost; see `curriculum/design-constraints.md` constraint 5.
 **Next:** revisit each chapter before the week it is used, to cut it to its
 framework core and move hands-on work toward success first.
@@ -88,7 +89,7 @@ longer published. Week 1 has one chapter, How these systems work
   week 4, Monday who answers for the note (ethics), Wednesday where this is
   going (workforce, environment) and what you will keep. Open question: bias
   is meant to carry AIM-3 this offering, but as one of two options it may not run;
-  the week 2 Friday bias card is the only certain coverage.
+  since the Friday cards were removed (2026-10-12), nothing guarantees it.
 - **Why lectures now (2026-10-08):** the director lectures well (evaluations
   in every course he teaches say he is the best part), and writing a talk
   forces him to make the material good. The earlier rule was "no live

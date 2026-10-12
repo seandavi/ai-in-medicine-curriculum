@@ -117,8 +117,7 @@ professional identity, the closing question.
 
 The four core chapters make AIM-2, AIM-4, AIM-5, and AIM-6 main subjects, and
 the week 1 live talks cover AIM-1. AIM-3, bias and equity, is not in a core
-chapter: it is covered by a week 2 Friday scenario card and by the bias chapter
-on the menu. That is a deliberate choice for this offering, made so the core
+chapter: it is covered by the bias chapter on the menu. That is a deliberate choice for this offering, made so the core
 can focus on using AI well. AIM-8, health data science, is not the main subject
 of any chapter; the foundations chapter covers training and test sets, area
 under the curve, and dataset shift along the way. Every Check is scored by you
