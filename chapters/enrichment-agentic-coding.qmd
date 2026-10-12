@@ -256,7 +256,7 @@ questions. @tbl-tiers redraws them from the paper's description.
 | Who uses it, and how much do they understand it? | People other than the builder, who did not see it made |
 | How many patients does it reach? | A team, a service, a hospital |
 
-: The four criteria VIBE-HI uses to place a tool on its green-to-red scale, in plain words. The tier is set by the worst answer, not the average. The tiers themselves correspond to regulatory obligations [the ethics and regulation chapter](core-ethics-regulation.qmd) covers. {#tbl-tiers}
+: The four criteria VIBE-HI uses to place a tool on its green-to-red scale, in plain words. The tier is set by the worst answer, not the average. The tiers themselves correspond to regulatory obligations [the ethics chapter](core-ethics-regulation.qmd) covers. {#tbl-tiers}
 
 Run the resident's tool through the four questions. It handles pasted labs,
 so the first answer depends on what people paste, which nobody controls. Its
@@ -286,7 +286,7 @@ computers and used to decide who gets listed, is a different question. The
 answer depends on what it shows and who relies on it. The FDA reissued its
 decision-support guidance on 29 January 2026, replacing a version dated 6
 January. What the revision changed, and the rest of the regulation, belong to
-[the ethics and regulation chapter](core-ethics-regulation.qmd).
+[the ethics chapter](core-ethics-regulation.qmd).
 
 For this chapter, the working rule is simpler than the regulation. **Toy, not
 device.** Your tool carries a banner saying so, in the prompt, before it
@@ -302,7 +302,7 @@ a note: record the score and the source you took it from. Make the source one
 that has been checked by someone other than a colleague. Today that means the
 original publication or an established calculator such as MDCalc. If a team
 tool has been validated locally, your institution's policy will say so, and
-[the ethics and regulation chapter](core-ethics-regulation.qmd) covers what to document when it has.
+[the ethics chapter](core-ethics-regulation.qmd) covers what to document when it has.
 :::
 
 ### Patient information, once more

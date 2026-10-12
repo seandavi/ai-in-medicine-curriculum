@@ -38,12 +38,14 @@ one is). The safety rules are short: **use your university account; never put
 real patient information into a course activity; check what matters before you
 rely on it; you sign the note.**
 
-Three ideas recur across the chapters, and each is named the same way wherever
+Four ideas recur across the chapters, and each is named the same way wherever
 it appears. **Proxies fail**: almost every AI failure in medicine is a stand-in
 that looked reasonable. **Efficiency gains get eaten by volume**: per-unit
 savings are cancelled out by growth in use. **The published number is the
 optimistic one**: the most prominently reported statistic is nearly always the
-best case. A chapter that uses one of these says so.
+best case. **Who benefits, who bears the risk, who decides**: the people a
+tool helps are often not the people it puts at risk, or the people who chose
+it. A chapter that uses one of these says so.
 
 ## The chapters, week by week
 
@@ -56,9 +58,7 @@ appendix.
 
 **Week 1, working with AI**
 
-- Core: [Centaur or cyborg](chapters/core-centaur-cyborg.qmd): what you hand to
-  AI, and what you keep.
-- Menu: [How these systems work](chapters/core-foundations.qmd): the eGFR is a
+- Core: [How these systems work](chapters/core-foundations.qmd): the eGFR is a
   model you already trust, and the chatbot is the same loop with words.
 
 **Week 2, getting good at it**
@@ -78,8 +78,7 @@ appendix.
 
 **Week 4, responsibility**
 
-- Core: [Ethics, liability, and the device line](chapters/core-ethics-regulation.qmd):
-  who answers for the note.
+- Core: [Ethics: what you owe when you sign the note](chapters/core-ethics-regulation.qmd).
 - Menu: [Will AI take your job?](chapters/enrichment-workforce-economics.qmd),
   [What AI costs the planet](chapters/enrichment-environment.qmd).
 
@@ -96,8 +95,7 @@ professional identity, the closing question.
 | Material | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | X |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | **Week 1** | | | | | | | | | | |
-| [Centaur or cyborg](chapters/core-centaur-cyborg.qmd) (core) | | ○ | | ● | ● | ○ | ○ | | | ● |
-| [How these systems work](chapters/core-foundations.qmd) | ● | ● | | | ○ | | | ○ | | ○ |
+| [How these systems work](chapters/core-foundations.qmd) (core) | ● | ● | | | ○ | | | ○ | | ○ |
 | **Week 2** | | | | | | | | | | |
 | [Prompting lab](chapters/enrichment-prompting-lab.qmd) (core) | | ● | | ○ | ● | | | | ○ | ○ |
 | [Critical appraisal](chapters/core-appraisal.qmd) | ● | ● | | ● | ○ | | ○ | | ● | ○ |
@@ -107,7 +105,7 @@ professional identity, the closing question.
 | [Talking to patients about AI](chapters/core-patient-communication.qmd) (core) | | ○ | | ● | ○ | ● | | | | ○ |
 | [Agentic coding](chapters/enrichment-agentic-coding.qmd) | ○ | ● | | ● | ● | | ○ | | | ○ |
 | **Week 4** | | | | | | | | | | |
-| [Ethics, liability, and the device line](chapters/core-ethics-regulation.qmd) (core) | | ○ | ○ | ● | ○ | ○ | ○ | | ○ | ● |
+| [Ethics: what you owe when you sign the note](chapters/core-ethics-regulation.qmd) (core) | | ○ | ○ | ● | ○ | ○ | ○ | | ○ | ● |
 | [Will AI take your job?](chapters/enrichment-workforce-economics.qmd) | | ● | ○ | ○ | | | ● | | ○ | ● |
 | [What AI costs the planet](chapters/enrichment-environment.qmd) | | ● | ● | | | | ● | | ○ | ○ |
 | **Course pages and appendices** | | | | | | | | | | |
@@ -119,8 +117,7 @@ professional identity, the closing question.
 
 The four core chapters make AIM-2, AIM-4, AIM-5, and AIM-6 main subjects, and
 the week 1 live talks cover AIM-1. AIM-3, bias and equity, is not in a core
-chapter: it is covered by a week 2 Friday scenario card and by the bias chapter
-on the menu. That is a deliberate choice for this offering, made so the core
+chapter: it is covered by the bias chapter on the menu. That is a deliberate choice for this offering, made so the core
 can focus on using AI well. AIM-8, health data science, is not the main subject
 of any chapter; the foundations chapter covers training and test sets, area
 under the curve, and dataset shift along the way. Every Check is scored by you

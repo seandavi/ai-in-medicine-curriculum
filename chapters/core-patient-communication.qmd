@@ -16,7 +16,7 @@ By the end of this chapter you will have:
    down to them.
 4. Explained why text that raters call more empathetic can still persuade
    patients less than a person does.
-5. Kept a set of sentences to say out loud at your Friday small group.
+5. Kept a set of sentences you could say out loud, for example at your Friday small group.
 :::
 
 **Time.** About 70 minutes: 15 to 20 of reading, about 45 of doing, and five
@@ -387,12 +387,11 @@ One thing to keep:   _____________________________________________
 One thing to change: _____________________________________________
 ```
 
-Bring this to your Friday small group on October 30. The week 3 cards on [the
-Friday small groups page](../course/friday-groups.qmd) include the scribe
-question and a caregiver who arrives with a chatbot's advice. They are the
-conversations from Parts A and B, said out loud to a person. That is where you find out
-whether a sentence is heard the way you meant it. To practice another card
-first, change the character in the Part B prompt.
+Bring this to [your Friday small group](../course/friday-groups.qmd) on
+October 30, if you like. Try the conversations from Parts A and B out loud with
+a classmate playing the patient. That is where you find out whether a sentence
+is heard the way you meant it. To practise another conversation first, change
+the character in the Part B prompt.
 
 ## Check
 
@@ -474,7 +473,7 @@ by the date of the first service.
 
 - [The appraisal chapter](core-appraisal.qmd), for the questions a vendor's
   slide never answers, and what a made-up reference looks like.
-- [The ethics and regulation chapter](core-ethics-regulation.qmd), for consent
+- [The ethics chapter](core-ethics-regulation.qmd), for consent
   to recording, the business associate agreement, and liability.
 - [The bias and equity chapter](core-bias-equity.qmd), for "does this thing
   work for people like me," which this chapter does not cover.

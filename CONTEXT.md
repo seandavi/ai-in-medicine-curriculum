@@ -5,7 +5,7 @@ institutional mechanics so it can be reassembled for any cohort. This file holds
 part that is specific to the CU Anschutz offering, because it exists nowhere else in
 the repo and is the first thing you will want when you come back to this cold.
 
-**Last updated: 2026-10-10.** Everything below is operational state and goes stale
+**Last updated: 2026-10-12.** Everything below is operational state and goes stale
 fast. Check it before acting on it.
 
 ## The offering
@@ -24,37 +24,41 @@ copy). The student-facing week-by-week plan is in `course/syllabus.qmd`.
 
 **Refocus (decided 2026-10-07/08): skill and confidence first.** The course's
 mantra: *it is your job to learn where AI helps your work, and you learn that by
-trying.* Each week has one core chapter plus a menu (week 1 centaur-cyborg; week
-2 prompting lab; week 3 patient communication; week 4 ethics). "Students aim for
+trying.* Each week has one core chapter plus a menu (week 1 foundations, with no
+menu; week 2 prompting lab; week 3 patient communication; week 4 ethics). "Students aim for
 5 to 10 hours a week of AI-related learning, 2 to 4 with the book" was the
 first budget; with two talks a week it is restated as about 8 to 10 hours
 (see the syllabus table). The main hands-on activity is "Learn it with AI" (`course/learn-with-ai.qmd`). The resource log is
 replaced by a learning journal, which keeps one piece of it: three resources
 a week of the student's own choosing, anything related to AI, one line each,
 meant to be low-key (the course director, 2026-10-09 meeting; three a week
-decided 2026-10-10). Friday groups practise conversations about AI
-from scenario cards (`course/friday-groups.qmd`). The Monday hour includes "How
+decided 2026-10-10). Friday groups are open,
+student-led discussion (`course/friday-groups.qmd`; scenario cards removed
+2026-10-12, ideas kept in issue #95). The Monday hour includes "How
 I used AI this week" (the director's own work, shown live). Bias is not core
-this offering (Friday card instead). Why: 2025 students were afraid to use
+this offering (menu chapter and possibly a week 3 talk). Why: 2025 students were afraid to use
 chatbots and felt lost; see `curriculum/design-constraints.md` constraint 5.
 **Next:** revisit each chapter before the week it is used, to cut it to its
 framework core and move hands-on work toward success first.
+
+**Week 1 chapter (decided 2026-10-12):** the centaur-or-cyborg chapter is kept
+in the repo (`chapters/core-centaur-cyborg.qmd` and its answer key) but no
+longer published. Week 1 has one chapter, How these systems work
+(`core-foundations`).
 
 - **Week 1 (Oct 12 to 16):** the course director teaches live, Monday to
   Thursday at 10 a.m. Mountain time (decided 2026-10-09): Monday welcome and
   adult learning (from the 2024 Google Slides intro deck); Tuesday history of
   AI; Wednesday what AI is, AI to ML to DL to LLMs (the foundations deck, PR
   #60, trimmed; keep a few slides on overfitting); Thursday a hands-on session,
-  "centaur or cyborg, live" (everyone in ChatGPT Edu, trying things together;
-  left open-ended on purpose; also catches account problems early), then
-  office hours. Thursday opens with onboarding to ChatGPT Edu only
-  (Christina Olson and Matt Zuckerman also suggested the SOM Copilot and
-  OpenEvidence in the 2026-10-09 meeting; the course director dropped those on
-  2026-10-10 to keep the session on ChatGPT Edu; set-up materials still to be
-  written).
-  Friday small groups in the signed-up slots. Students read `core-foundations`
-  and `core-centaur-cyborg`. Weeks 2 to 4 Monday and Wednesday talks are also
-  at 10 a.m.
+  "set up your learning with ChatGPT" (decided 2026-10-11, replacing
+  "centaur or cyborg, live"): everyone in ChatGPT Edu, writing personal
+  learning goals and designing their learning journal with starter prompts;
+  `course/first-session.qmd`. First contact is something useful, not a hunt
+  for AI errors, because students arrive wary of chatbots; also catches
+  account problems early. Then office hours.
+  Friday small groups, from that week's signup. Students read `core-foundations`.
+  Weeks 2 to 4 Monday and Wednesday talks are also at 10 a.m.
 - **Weeks 2 to 4, each week (decided 2026-10-08):** the course director's
   talks are the main event and each core chapter is their companion ("read it
   after the talk, or instead of it if you missed the talk").
@@ -95,7 +99,7 @@ framework core and move hands-on work toward success first.
   week 4, Monday who answers for the note (ethics), Wednesday where this is
   going (workforce, environment) and what you will keep. Open question: bias
   is meant to carry AIM-3 this offering, but as one of two options it may not run;
-  the week 2 Friday bias card is the only certain coverage.
+  since the Friday cards were removed (2026-10-12), nothing guarantees it.
 - **Why lectures now (2026-10-08):** the director lectures well (evaluations
   in every course he teaches say he is the best part), and writing a talk
   forces him to make the material good. The earlier rule was "no live
@@ -116,8 +120,11 @@ framework core and move hands-on work toward success first.
   the journal assignment; calendar events for every live session; drop-in
   office hours every Thursday 11 to 11:45 a.m., titled with the instructor's
   name ("Office hours: Sean Davis") so other instructors can add their own;
-  a signup sheet for the Friday small-group slot (10 a.m., 11 a.m., 1 p.m.,
-  2 p.m., up to 15 each, chosen once on October 16); plain events for later Fridays.
+  a Canvas signup (appointment group) for every Friday (10 a.m., 11 a.m.,
+  1 p.m., 2 p.m., up to 15 each, one time per student); students sign up again
+  each week, so groups change from week to week (decided 2026-10-10, replacing
+  one choice on October 16 plus plain events for later Fridays). The signups
+  open when the course starts (Canvas course start date, October 11).
   Guest talks (from the lecturer signup sheet, 2026-10-09), on the Canvas
   calendar and in the week 3 and 4 modules: Matt DeCamp, ethics (Tue Oct 27,
   1 p.m.); Mike Rosenberg, cardiology (Thu Oct 29, 1 p.m.); Elizabeth Kudron,
