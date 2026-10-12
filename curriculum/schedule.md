@@ -12,10 +12,10 @@ the course survivable when a third of the class misses week two.
 |---|---|---|---|
 | `core-foundations` | How these systems actually work | 75 | AIM-1, AIM-2 |
 | `core-centaur-cyborg` | Centaur or cyborg: constructive use in residency | 90 | AIM-5, AIM-X, AIM-4 |
-| `core-appraisal` | Critical appraisal: tools, outputs, and the evidence about both | 90 | AIM-2, AIM-9 |
+| `core-appraisal` | Critical appraisal: tools, outputs, and the evidence about both | 90 | AIM-2, AIM-1, AIM-4, AIM-9 |
 | `core-bias-equity` | Bias, equity, and the proxy problem | 90 | AIM-3 |
 | `core-patient-communication` | Talking to patients about AI | 90 | AIM-6, AIM-4 |
-| `core-ethics-regulation` | Ethics, liability, and the device boundary | 75 | AIM-4, AIM-7, AIM-X |
+| `core-ethics-regulation` | Ethics, liability, and the device boundary | 75 | AIM-4, AIM-X |
 
 ### Enrichment modules
 
@@ -23,9 +23,9 @@ the course survivable when a third of the class misses week two.
 |---|---|---|---|
 | `enrichment-agentic-coding` | Build the tool you wish existed | 75 | AIM-5, AIM-2, AIM-4 |
 | `enrichment-prompting-lab` | Prompting and clinical reasoning lab | 75 | AIM-5, AIM-2 |
-| `enrichment-workforce-economics` | Will AI take your job? Workforce and economics | 90 | AIM-3, AIM-7 |
-| `enrichment-environment` | What AI costs the planet | 60 | AIM-3, AIM-X |
-| `enrichment-rag-notebooklm` | Grounding AI in real sources (RAG lab) | 60 | AIM-1, AIM-9 |
+| `enrichment-workforce-economics` | Will AI take your job? Workforce and economics | 90 | AIM-7, AIM-2, AIM-X |
+| `enrichment-environment` | What AI costs the planet | 60 | AIM-3, AIM-2, AIM-7 |
+| `enrichment-rag-notebooklm` | Grounding AI in real sources (RAG lab) | 60 | AIM-1, AIM-2, AIM-9 |
 
 Eleven modules, eight slots. The surplus is deliberate — swap by cohort interest.
 
@@ -47,8 +47,9 @@ Eleven modules, eight slots. The surplus is deliberate — swap by cohort intere
 7. `enrichment-workforce-economics` *or* `enrichment-environment` — cohort's choice
 8. `core-ethics-regulation` — closing on AIM-X: what will you not delegate?
 
-Coverage check: AIM-1 through AIM-6 all appear; AIM-4 recurs three times, AIM-5
-twice, AIM-2 three times. Meets the coverage rules in `competencies.md`.
+Coverage check (by what each chapter teaches and checks, October 2026): AIM-1
+through AIM-6 are each a main subject at least once; AIM-4 in five chapters,
+AIM-2 in four, AIM-1 and AIM-5 in two. Meets the coverage rules in `competencies.md`.
 
 ## Variants
 

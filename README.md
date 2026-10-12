@@ -62,7 +62,7 @@ Hand-curated entries (talks, videos, reports without a DOI) go in `references.bi
 
 ## Deploying
 
-Published at <https://ai-in-medicine.seandavi.workers.dev> as a Cloudflare Workers
+Published at <https://aim.seandavis.net> (also <https://ai-in-medicine.seandavi.workers.dev>) as a Cloudflare Workers
 static-assets site, the same pattern as the talks repo. Every push to `main` renders
 and deploys via `.github/workflows/deploy.yml`. To deploy by hand:
 

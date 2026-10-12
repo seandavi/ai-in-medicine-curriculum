@@ -1,0 +1,58 @@
+---
+title: "Weekly learning journal"
+subtitle: "One short entry a week, due Thursday night"
+---
+
+The journal is a record of what you tried. Each week you set out to learn
+something with AI (see [Learn it with AI](learn-with-ai.qmd)), and the journal
+is where you write down how it went. It takes about 30 minutes. It is marked
+complete or incomplete, and it is what you bring to Friday's small group.
+
+## Weeks 1 to 3: the entry
+
+Answer four questions. A few sentences each is enough.
+
+```
+1. What I set out to learn
+   The topic, and why it matters for my work or my specialty.
+
+2. How I used AI to learn it
+   Which tool, which prompts, what I asked it to do.
+   What worked well enough that I would do it again?
+
+3. What went wrong, and how I noticed
+   Something vague, wrong, made up, or unhelpful, and what tipped me off.
+   (If nothing went wrong, what did I do to be sure?)
+
+4. One thing I checked
+   One claim that mattered, the source I checked it against, and
+   whether the AI had it right.
+```
+
+**Optional: share a resource.** If you found a paper, video, podcast, or tool
+worth a classmate's time, add one or two, with a sentence on why. The best ones
+go into the [starter resources](../appendix/resources.qmd) for future students.
+
+## Week 4: what you will keep
+
+No new topic. Write a short piece, roughly 300 to 500 words:
+
+- the two or three ways of using AI you will keep using in residency, and why,
+- one place you decided AI does not belong in your work, and why,
+- what you would tell an incoming intern who is nervous about these tools.
+
+Draw on your weeks 1 to 3 entries. Prepare a five-minute version for your
+Friday small group on November 6. Slides optional.
+
+## Submission
+
+In Canvas, as a text entry under that week's module, by Thursday night:
+October 15, 22, and 29, and November 5 for the week 4 piece.
+Plain text is fine.
+
+## Using AI to write the journal
+
+You may use AI to help you think, organise, or tidy your writing. The
+experiences and the judgments must be yours. One sentence at the end saying how
+you used AI on the entry, if you did, is enough. That is the same disclosure
+journals and residency programs now expect.
