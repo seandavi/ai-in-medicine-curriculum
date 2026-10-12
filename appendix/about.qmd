@@ -98,6 +98,17 @@ for patient care, which scribe the local health system uses, what fourth-year
 students are worried about this month, and which guests are coming: these came
 from the author and colleagues, and the book marks them as local facts.
 
+**Slides for the live session.** The foundations chapter also exists as a
+[slide deck](../slides/core-foundations.html) for the live Zoom session. The
+deck follows the session plan rather than the chapter's order. It adds what a
+page cannot do: small programs that run in the browser (two sliders that fit a
+curve by hand, a model sorter, a slider that shows overfitting, a real
+tokenizer, a next-word sampler), a slide on asking the chatbot to check its own citations, a further-exploration list (with the
+TensorFlow Playground), and a short video. The speaker notes are written to be read aloud, so the deck can be
+narrated for students who miss the session. A script pulls the narration out
+of the notes. The deck was reviewed by the same six readers as the chapters,
+in three rounds, until none of them would put it down.
+
 ## How chapters are reviewed
 
 Every chapter is read as each of six invented readers, twice: once by the agent

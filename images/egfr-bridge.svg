@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" font-family="Helvetica, Arial, sans-serif">
+<title>What the eGFR equation takes in and what it stands for</title>
+<desc>Diagram. Age, sex, and creatinine, the three things the lab has, feed an equation learned from 8,254 people whose GFR was measured. The equation outputs the eGFR on your panel, which stands in for measured GFR, rarely done in routine care. A grey box, muscle mass, diet, and drugs that block secretion, changes creatinine without changing GFR.</desc>
+<defs><marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2933"/></marker><marker id="head-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5f6b7a"/></marker></defs>
+<rect x="0" y="0" width="1200" height="560" rx="14" fill="#ffffff"/>
+<rect x="40" y="40" width="300" height="330" rx="12" fill="#f7f9fb" stroke="#d9dee5" stroke-width="2"/>
+<text x="190" y="76" font-size="22" fill="#5f6b7a" text-anchor="middle" font-weight="bold">What the lab has</text>
+<rect x="80" y="100" width="220" height="64" rx="10" fill="#eef3fb" stroke="#1f5fa8" stroke-width="2.5"/>
+<text x="190.0" y="139.7" font-size="22" fill="#1f2933" text-anchor="middle" font-weight="normal">Age</text>
+<rect x="80" y="190" width="220" height="64" rx="10" fill="#eef3fb" stroke="#1f5fa8" stroke-width="2.5"/>
+<text x="190.0" y="229.7" font-size="22" fill="#1f2933" text-anchor="middle" font-weight="normal">Sex</text>
+<rect x="80" y="280" width="220" height="64" rx="10" fill="#eef3fb" stroke="#1f5fa8" stroke-width="2.5"/>
+<text x="190.0" y="319.7" font-size="22" fill="#1f2933" text-anchor="middle" font-weight="normal">Creatinine</text>
+<rect x="395" y="140" width="370" height="150" rx="10" fill="#fff7e6" stroke="#c45a00" stroke-width="2.5"/>
+<text x="580.0" y="195.04999999999998" font-size="21" fill="#1f2933" text-anchor="middle" font-weight="bold">eGFR = f(creatinine, age, sex)</text>
+<text x="580.0" y="222.35" font-size="21" fill="#1f2933" text-anchor="middle" font-weight="normal">learned from 8,254 people</text>
+<text x="580.0" y="249.64999999999998" font-size="21" fill="#1f2933" text-anchor="middle" font-weight="normal">whose GFR was measured</text>
+<line x1="300" y1="132" x2="393" y2="190" stroke="#1f2933" stroke-width="2.5" marker-end="url(#head)"/>
+<line x1="300" y1="222" x2="393" y2="215" stroke="#1f2933" stroke-width="2.5" marker-end="url(#head)"/>
+<line x1="300" y1="312" x2="393" y2="240" stroke="#1f2933" stroke-width="2.5" marker-end="url(#head)"/>
+<rect x="830" y="150" width="330" height="110" rx="10" fill="#eef3fb" stroke="#1f5fa8" stroke-width="2.5"/>
+<text x="995.0" y="198.39999999999998" font-size="22" fill="#1f2933" text-anchor="middle" font-weight="bold">eGFR</text>
+<text x="995.0" y="226.99999999999997" font-size="22" fill="#1f2933" text-anchor="middle" font-weight="normal">the number on your panel</text>
+<line x1="765" y1="212" x2="828" y2="205" stroke="#1f2933" stroke-width="2.5" marker-end="url(#head)"/>
+<rect x="830" y="340" width="330" height="110" rx="10" fill="#eef7f1" stroke="#2e7d4f" stroke-width="2.5"/>
+<text x="995.0" y="388.4" font-size="22" fill="#1f2933" text-anchor="middle" font-weight="bold">Measured GFR</text>
+<text x="995.0" y="417.0" font-size="22" fill="#1f2933" text-anchor="middle" font-weight="normal">rarely done in routine care</text>
+<line x1="995" y1="260" x2="995" y2="338" stroke="#1f2933" stroke-width="2.5" stroke-dasharray="9 7" marker-end="url(#head)"/>
+<text x="1010" y="306" font-size="20" fill="#5f6b7a" text-anchor="start" font-weight="normal">stands in for</text>
+<rect x="40" y="420" width="330" height="80" rx="10" fill="#f1f3f5" stroke="#9aa0a6" stroke-width="2.5"/>
+<text x="205.0" y="453.70000000000005" font-size="21" fill="#5f6b7a" text-anchor="middle" font-weight="normal">Muscle mass · diet ·</text>
+<text x="205.0" y="481.00000000000006" font-size="21" fill="#5f6b7a" text-anchor="middle" font-weight="normal">drugs that block secretion</text>
+<line x1="190" y1="420" x2="190" y2="346" stroke="#5f6b7a" stroke-width="2.5" stroke-dasharray="9 7" marker-end="url(#head-muted)"/>
+<text x="205" y="395" font-size="19" fill="#5f6b7a" text-anchor="start" font-weight="normal">changes creatinine, not GFR</text>
+<line x1="430" y1="531" x2="480" y2="531" stroke="#1f2933" stroke-width="2.5" marker-end="url(#head)"/>
+<text x="492" y="538" font-size="20" fill="#5f6b7a" text-anchor="start" font-weight="normal">goes into</text>
+<line x1="640" y1="531" x2="690" y2="531" stroke="#1f2933" stroke-width="2.5" stroke-dasharray="9 7" marker-end="url(#head)"/>
+<text x="702" y="538" font-size="20" fill="#5f6b7a" text-anchor="start" font-weight="normal">stands in for, or changes without changing GFR</text>
+</svg>

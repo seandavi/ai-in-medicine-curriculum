@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500" role="img" font-family="Helvetica, Arial, sans-serif">
+<title>The loop every learned model comes from</title>
+<desc>Diagram. Raw material such as labs, images, notes, or text becomes predictors. The truth for each case, such as measured GFR, sepsis yes or no, or the next word, joins them in a learning step that finds f so that truth is approximately f of predictors. The result is a model. A new case with unknown truth goes through the model to give a prediction.</desc>
+<defs><marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2933"/></marker><marker id="head-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5f6b7a"/></marker></defs>
+<rect x="0" y="0" width="1200" height="500" rx="14" fill="#ffffff"/>
+<rect x="30" y="60" width="200" height="130" rx="10" fill="#eef3fb" stroke="#1f5fa8" stroke-width="2.5"/>
+<text x="130.0" y="105.05" font-size="21" fill="#1f2933" text-anchor="middle" font-weight="bold">Raw material</text>
+<text x="130.0" y="132.35" font-size="21" fill="#1f2933" text-anchor="middle" font-weight="normal">labs, images,</text>
+<text x="130.0" y="159.65" font-size="21" fill="#1f2933" text-anchor="middle" font-weight="normal">notes, text</text>
+<rect x="280" y="60" width="190" height="130" rx="10" fill="#eef3fb" stroke="#1f5fa8" stroke-width="2.5"/>
+<text x="375.0" y="132.7" font-size="22" fill="#1f2933" text-anchor="middle" font-weight="bold">Predictors</text>
+<rect x="520" y="60" width="260" height="130" rx="10" fill="#fff7e6" stroke="#c45a00" stroke-width="2.5"/>
+<text x="650.0" y="105.05" font-size="21" fill="#1f2933" text-anchor="middle" font-weight="bold">Learn</text>
+<text x="650.0" y="132.35" font-size="21" fill="#1f2933" text-anchor="middle" font-weight="normal">find f so that</text>
+<text x="650.0" y="159.65" font-size="21" fill="#1f2933" text-anchor="middle" font-weight="normal">truth ≈ f(predictors)</text>
+<rect x="830" y="60" width="340" height="130" rx="10" fill="#eef3fb" stroke="#1f5fa8" stroke-width="2.5"/>
+<text x="1000.0" y="118.4" font-size="22" fill="#1f2933" text-anchor="middle" font-weight="bold">Model</text>
+<text x="1000.0" y="147.0" font-size="22" fill="#1f2933" text-anchor="middle" font-weight="normal">response = f(predictors)</text>
+<line x1="230" y1="125.0" x2="278" y2="125.0" stroke="#1f2933" stroke-width="2.5" marker-end="url(#head)"/>
+<line x1="470" y1="125.0" x2="518" y2="125.0" stroke="#1f2933" stroke-width="2.5" marker-end="url(#head)"/>
+<line x1="780" y1="125.0" x2="828" y2="125.0" stroke="#1f2933" stroke-width="2.5" marker-end="url(#head)"/>
+<rect x="440" y="280" width="360" height="130" rx="10" fill="#eef7f1" stroke="#2e7d4f" stroke-width="2.5"/>
+<text x="620.0" y="325.05" font-size="21" fill="#1f2933" text-anchor="middle" font-weight="bold">Truth for each case</text>
+<text x="620.0" y="352.35" font-size="21" fill="#1f2933" text-anchor="middle" font-weight="normal">measured GFR, sepsis yes/no,</text>
+<text x="620.0" y="379.65000000000003" font-size="21" fill="#1f2933" text-anchor="middle" font-weight="normal">the next word</text>
+<line x1="620" y1="280" x2="620" y2="192" stroke="#1f2933" stroke-width="2.5" marker-end="url(#head)"/>
+<rect x="830" y="290" width="210" height="80" rx="10" fill="#f1f3f5" stroke="#9aa0a6" stroke-width="2.5"/>
+<text x="935.0" y="323.70000000000005" font-size="21" fill="#1f2933" text-anchor="middle" font-weight="normal">New case,</text>
+<text x="935.0" y="351.00000000000006" font-size="21" fill="#1f2933" text-anchor="middle" font-weight="normal">truth unknown</text>
+<rect x="1060" y="290" width="120" height="80" rx="10" fill="#f1f3f5" stroke="#9aa0a6" stroke-width="2.5"/>
+<text x="1120.0" y="337.35" font-size="21" fill="#1f2933" text-anchor="middle" font-weight="bold">Prediction</text>
+<line x1="935" y1="290" x2="935" y2="192" stroke="#1f2933" stroke-width="2.5" marker-end="url(#head)"/>
+<line x1="1120" y1="190" x2="1120" y2="288" stroke="#1f2933" stroke-width="2.5" marker-end="url(#head)"/>
+<rect x="30" y="460" width="26" height="22" rx="5" fill="#fff7e6" stroke="#c45a00" stroke-width="2"/>
+<text x="66" y="480" font-size="20" fill="#5f6b7a" text-anchor="start" font-weight="normal">the learning step</text>
+<rect x="280" y="460" width="26" height="22" rx="5" fill="#eef7f1" stroke="#2e7d4f" stroke-width="2"/>
+<text x="316" y="480" font-size="20" fill="#5f6b7a" text-anchor="start" font-weight="normal">the truth, known only for training cases</text>
+<rect x="760" y="460" width="26" height="22" rx="5" fill="#f1f3f5" stroke="#9aa0a6" stroke-width="2"/>
+<text x="796" y="480" font-size="20" fill="#5f6b7a" text-anchor="start" font-weight="normal">use on a new patient</text>
+</svg>

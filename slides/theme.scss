@@ -1,0 +1,859 @@
+/*-- scss:defaults --*/
+
+// Warm "archive paper" light theme layered on Quarto's default theme: the
+// same palette and components as the Tuesday history deck
+// (talks/2026-10-13-idpt-ai-history/custom.scss), plus this deck's
+// interactive widgets and the book's illustrative components.
+//
+// Per-day accent. Each day of week 1 has its own accent colour; everything
+// else is identical across the decks. A new day's deck changes only the three
+// variables below:
+//   $accent       h2 underline, .year kicker, list markers, .panel.warm,
+//                 progress bar, warm bar fills, quote borders
+//   $accent-deep  section divider background
+//   $secondary    plain .panel, so the two panel kinds stay distinguishable
+//                 when the accent is also the structure colour (teal)
+// Tuesday: $accent terracotta #a9472a, $secondary teal.
+// Wednesday (this deck): $accent teal #1f5a61, $secondary gold.
+
+$paper: #f7f2e8;
+$paper-deep: #efe7d6;
+$card: #fffdf8;
+$ink: #24211d;
+$ink-soft: #4a443c;
+$muted: #7a7064;
+$rule: #d8ccb6;
+$terracotta: #a9472a;
+$teal: #1f5a61;
+$teal-deep: #173f45;
+$gold: #b98a2f;
+
+$accent: $teal;
+$accent-deep: $teal-deep;
+$secondary: $gold;
+// Gold is light for small text on a card; titles use a darker shade of it.
+$secondary-text: darken($secondary, 12%);
+
+$body-bg: $paper;
+$body-color: $ink;
+$link-color: $teal;
+$link-color-hover: $terracotta;
+$selection-bg: rgba($gold, 0.3);
+
+$font-family-sans-serif: "Avenir Next", "Segoe UI", "Helvetica Neue", Inter,
+  system-ui, sans-serif;
+$font-family-serif: "Iowan Old Style", "Palatino Linotype", Palatino,
+  "Book Antiqua", Georgia, serif;
+$font-family-monospace: "SF Mono", Menlo, Consolas, monospace;
+
+$presentation-font-size-root: 40px;
+$presentation-line-height: 1.4;
+$presentation-heading-font: $font-family-serif;
+$presentation-heading-color: $ink;
+$presentation-heading-font-weight: 600;
+$presentation-heading-text-transform: none;
+$presentation-heading-letter-spacing: -0.01em;
+$presentation-h1-font-size: 2.3em;
+$presentation-h2-font-size: 1.55em;
+$presentation-h3-font-size: 1.1em;
+// A slide marked .smaller shrinks less than Quarto's 0.7, so its text
+// still reads at a distance. Headings keep their size.
+$presentation-font-smaller: 0.82;
+
+$code-block-bg: $card;
+$code-color: $teal-deep;
+
+$callout-color-note: $teal;
+$callout-color-important: $terracotta;
+$callout-color-tip: $teal;
+$callout-color-warning: $gold;
+
+/*-- scss:rules --*/
+
+.reveal-viewport {
+  background:
+    radial-gradient(ellipse 90% 70% at 15% 0%, lighten($paper, 3%) 0%, $paper 60%),
+    $paper;
+}
+
+// --- Headings and kickers --------------------------------------------------
+.reveal h2 {
+  margin-bottom: 0.55em;
+  line-height: 1.12;
+  &::after {
+    content: "";
+    display: block;
+    width: 2.2em;
+    height: 4px;
+    margin-top: 0.32em;
+    background: $accent;
+    border-radius: 2px;
+  }
+}
+.reveal h3 {
+  color: $ink;
+  margin-bottom: 0.3em;
+}
+
+.reveal .year {
+  display: block;
+  font-family: $font-family-sans-serif;
+  font-size: 0.42em;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 0.25em;
+}
+
+// --- Body text ------------------------------------------------------------
+.reveal p,
+.reveal li {
+  color: $ink-soft;
+}
+.reveal li {
+  margin-bottom: 0.38em;
+}
+.reveal li li {
+  font-size: 0.86em;
+  margin-top: 0.2em;
+}
+.reveal :is(ul, ol) > li::marker {
+  color: $accent;
+}
+.reveal ol > li::marker {
+  font-weight: 700;
+}
+.reveal strong {
+  color: $ink;
+  font-weight: 650;
+}
+.reveal em {
+  color: $teal-deep;
+}
+
+.reveal .lede {
+  display: block;
+  font-family: $font-family-serif;
+  font-size: 1.2em;
+  line-height: 1.35;
+  color: $ink;
+}
+
+.reveal .small {
+  font-size: 0.75em;
+}
+.reveal .muted {
+  color: $muted;
+}
+
+// --- Images ---------------------------------------------------------------
+.reveal img {
+  max-width: 100%;
+  object-fit: contain;
+}
+// Figures from make_figures.py draw their own white card; this frames it.
+// border-box keeps a width="100%" card inside its column.
+.reveal img.card {
+  box-sizing: border-box;
+  background: $card;
+  padding: 10px;
+  border: 1px solid $rule;
+  border-radius: 6px;
+  box-shadow: 0 10px 28px rgba(60, 40, 10, 0.14);
+}
+.reveal img.photo {
+  border-radius: 6px;
+  box-shadow: 0 10px 28px rgba(60, 40, 10, 0.2);
+}
+// A figure caption (Quarto's figcaption) reads as a credit line.
+.reveal .slide figure > figcaption {
+  font-size: 0.48em;
+  text-align: center;
+  line-height: 1.3;
+  color: $muted;
+  margin-top: 0.4em;
+}
+
+.reveal .credit {
+  display: block;
+  margin-top: 0.4em;
+  font-size: 0.48em;
+  line-height: 1.3;
+  color: $muted;
+}
+.reveal .credit a {
+  color: $muted;
+  text-decoration: underline;
+  text-decoration-color: rgba($muted, 0.4);
+}
+
+.reveal .center-col {
+  text-align: center;
+}
+
+// --- Asides (sources) -------------------------------------------------------
+.reveal .slides section aside:not(.notes),
+.reveal aside:not(.notes) {
+  font-size: 0.5em;
+  line-height: 1.35;
+  color: $muted;
+  border-top: 1px solid $rule;
+  padding-top: 0.4em;
+  margin-bottom: 1.6em;
+  a {
+    color: $muted;
+  }
+  p {
+    color: $muted;
+    margin: 0.2em 0;
+  }
+}
+
+.reveal .footer {
+  color: $muted;
+  font-size: 0.42em;
+  a {
+    color: $muted;
+  }
+}
+.reveal .slide-number {
+  background: transparent;
+  color: $muted;
+  font-family: $font-family-sans-serif;
+}
+.reveal .progress {
+  color: $accent;
+}
+
+// --- Panels (cards of text) -------------------------------------------------
+.reveal .panel {
+  background: $card;
+  border: 1px solid $rule;
+  border-top: 5px solid $secondary;
+  border-radius: 8px;
+  padding: 0.55em 0.8em 0.6em;
+  box-shadow: 0 8px 22px rgba(60, 40, 10, 0.08);
+  .ptitle {
+    display: block;
+    font-family: $font-family-sans-serif;
+    font-size: 0.6em;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $secondary-text;
+    margin-bottom: 0.4em;
+  }
+  ul,
+  ol {
+    margin-left: 0.9em;
+  }
+  li {
+    font-size: 0.9em;
+  }
+  p {
+    font-size: 0.92em;
+    margin: 0.2em 0;
+  }
+}
+.reveal .panel.warm {
+  border-top-color: $accent;
+  .ptitle {
+    color: $accent;
+  }
+}
+
+// --- Quotes ---------------------------------------------------------------
+.reveal blockquote {
+  width: 88%;
+  margin: 0.6em auto;
+  padding: 0.5em 0.9em;
+  background: $card;
+  border-left: 6px solid $accent;
+  box-shadow: none;
+  font-family: $font-family-serif;
+  font-style: italic;
+  font-size: 0.95em;
+  color: $ink;
+  p {
+    color: $ink;
+  }
+}
+.reveal .attrib {
+  display: block;
+  text-align: right;
+  font-family: $font-family-sans-serif;
+  font-style: normal;
+  font-size: 0.55em;
+  color: $muted;
+  margin-top: 0.5em;
+}
+
+// --- Section dividers ------------------------------------------------------
+.reveal section.divider {
+  h2 {
+    font-size: 2.6em;
+    color: $card;
+    margin-top: 1.6em;
+    &::after {
+      background: $gold;
+      width: 1.6em;
+    }
+  }
+  .year {
+    font-size: 0.5em;
+    color: $gold;
+  }
+  p,
+  .lede {
+    color: rgba($card, 0.88);
+    max-width: 28em;
+  }
+}
+
+// --- Title slide ----------------------------------------------------------
+// With hash-type: number the title slide has no id, so match its class too.
+.reveal :is(#title-slide, section.quarto-title-block) {
+  text-align: left;
+  padding-top: 2.2em;
+  .title {
+    font-size: 2.9em;
+    color: $ink;
+    line-height: 1.05;
+  }
+  .subtitle {
+    font-family: $font-family-serif;
+    font-style: italic;
+    font-size: 1.15em;
+    color: $accent;
+    margin-top: 0.3em;
+  }
+  .quarto-title-authors {
+    justify-content: flex-start;
+    margin-top: 1.6em;
+  }
+  .quarto-title-author-name,
+  .quarto-title-affiliation,
+  .date {
+    font-size: 0.75em;
+    color: $ink-soft;
+  }
+  .date {
+    margin-top: 0.4em;
+  }
+}
+
+// --- Big numbers -------------------------------------------------------------
+.reveal .stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5em;
+  margin-top: 0.4em;
+}
+.reveal .stat {
+  background: $card;
+  border: 1px solid $rule;
+  border-radius: 8px;
+  padding: 0.45em 0.6em;
+  .num {
+    display: block;
+    font-family: $font-family-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: $teal-deep;
+    line-height: 1.05;
+  }
+  .lab {
+    display: block;
+    font-size: 0.55em;
+    color: $ink-soft;
+    line-height: 1.3;
+  }
+}
+
+// --- Bar charts ---------------------------------------------------------------
+// The Tuesday component, also used by the next-word sampler. The sampler's
+// bars are too short to hold their own number, so .bars.with-num adds a
+// third column for it.
+.reveal .bars {
+  margin-top: 0.6em;
+  .bar-row {
+    display: grid;
+    grid-template-columns: 9.5em 1fr;
+    align-items: center;
+    gap: 0.6em;
+    margin-bottom: 0.4em;
+  }
+  .bar-label {
+    font-size: 0.72em;
+    color: $ink;
+    text-align: right;
+    line-height: 1.2;
+  }
+  .bar-track {
+    position: relative;
+    height: 1.6em;
+    background: $paper-deep;
+    border-radius: 4px;
+  }
+  .bar-fill {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: $secondary;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0.4em;
+    color: $card;
+    font-weight: 700;
+    font-size: 0.72em;
+    transition: width 0.3s;
+  }
+  .bar-fill.warm {
+    background: $accent;
+  }
+  .bar-num {
+    font-size: 0.72em;
+    color: $ink-soft;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  &.with-num .bar-row {
+    grid-template-columns: 9.5em 1fr 2.6em;
+  }
+}
+
+.reveal .illustrative {
+  font-size: 0.45em;
+  color: $muted;
+  font-style: italic;
+}
+
+// --- Tables -----------------------------------------------------------------
+.reveal table {
+  font-size: 0.6em;
+  border-collapse: collapse;
+}
+.reveal table th {
+  font-family: $font-family-sans-serif;
+  color: $teal-deep;
+  border-bottom: 2px solid $teal;
+}
+.reveal table td {
+  border-bottom: 1px solid $rule;
+  color: $ink-soft;
+}
+// A table that carries the slide's content reads at body size.
+.reveal table.big {
+  font-size: 0.78em;
+}
+
+.reveal .citation a {
+  color: $muted;
+}
+.reveal #refs {
+  column-count: 2;
+  column-gap: 1.6em;
+  font-size: 0.5em;
+  line-height: 1.35;
+}
+.reveal .csl-entry {
+  margin-bottom: 0.45em;
+}
+
+// Text-only slides sit in the middle of the frame instead of the top.
+.reveal .slides section.center-v {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+.reveal section.big-text {
+  font-size: 1.12em;
+}
+
+// Slide footnotes: small, muted.
+.reveal .footnotes,
+.reveal section .footnotes ol {
+  font-size: 0.48em;
+  line-height: 1.3;
+  color: $muted;
+}
+
+// Side-by-side panels share one height: a column that holds only a panel
+// stretches it to the height of the tallest column.
+.reveal .columns {
+  display: flex;
+  align-items: stretch;
+}
+.reveal .column > .panel:only-child {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+// =============================================================================
+// This deck's own components. Sizes are in px, not em, so a widget reads the
+// same on any slide; they are set for the 1600 x 900 slide.
+// =============================================================================
+
+// Source lines and small print under a figure or a widget.
+.reveal .src {
+  display: block;
+  font-size: 22px;
+  line-height: 1.4;
+  color: $muted;
+  margin-top: 0.4em;
+  a {
+    color: $muted;
+    text-decoration: underline;
+    text-decoration-color: rgba($muted, 0.4);
+  }
+}
+// A definition or a short gloss: a ruled note in the accent colour.
+.reveal .defn {
+  display: block;
+  font-size: 28px;
+  line-height: 1.4;
+  color: $ink-soft;
+  border-left: 4px solid $accent;
+  padding: 0.1em 0 0.1em 0.6em;
+  margin-top: 0.5em;
+}
+// "Illustrative, made up" labels: hard to miss, above the artifact.
+.reveal .illus-label {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 600;
+  color: $ink;
+  background: mix($gold, $card, 28%);
+  border-left: 4px solid $gold;
+  border-radius: 4px;
+  padding: 0.15em 0.6em;
+  margin: 0.2em 0 0.4em;
+}
+
+// Typed templates students copy.
+.reveal pre {
+  font-size: 0.75em;
+}
+
+// A prompt students copy, sized to fill its panel.
+.reveal .prompt-big pre {
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+// One sentence, large: the serif lede voice.
+.reveal .statement {
+  font-family: $font-family-serif;
+  font-size: 1.2em;
+  line-height: 1.35;
+  color: $ink;
+  margin-top: 0.8em;
+  strong {
+    color: $ink;
+  }
+  em {
+    color: $accent;
+    font-style: normal;
+  }
+}
+// A statement in a panel sits in the middle of it.
+.reveal .panel.statement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0;
+}
+
+// Interactive widgets: plain HTML controls built in the deck's last cell.
+.reveal :is(.w-range, .w-text, .w-radio) {
+  font-size: 32px;
+  margin: 0.2em 0;
+  color: $ink-soft;
+}
+.reveal .w-range label {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+.reveal input[type="range"] {
+  accent-color: $accent;
+}
+.reveal .w-range input[type="range"] {
+  width: 12em;
+}
+.reveal .w-range output {
+  min-width: 2.5em;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: $accent;
+}
+.reveal .w-text label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+.reveal .w-text input {
+  font-size: 30px;
+  color: $ink;
+  background: $card;
+  border: 1px solid $rule;
+  border-radius: 6px;
+  padding: 0.2em 0.4em;
+  width: 100%;
+  box-sizing: border-box;
+}
+.reveal .w-radio label {
+  display: block;
+  margin: 0.2em 0;
+  cursor: pointer;
+}
+// Form controls do not inherit the slide's font size, so size them in px.
+.reveal :is(.w-radio, table.sorter) input[type="radio"] {
+  width: 30px;
+  height: 30px;
+  vertical-align: -0.15em;
+  accent-color: $accent;
+}
+.reveal .w-btn {
+  font-family: $font-family-sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  padding: 0.35em 0.9em;
+  margin: 0.3em 0.4em 0.3em 0;
+  border-radius: 6px;
+  border: 2px solid $accent;
+  background: $accent;
+  color: $card;
+  cursor: pointer;
+}
+.reveal .w-btn.ghost {
+  background: transparent;
+  color: $accent;
+}
+.reveal .w-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+// Feedback after an answer: neutral, right (accent), or not right (terracotta).
+.reveal .fb {
+  font-size: 28px;
+  line-height: 1.4;
+  color: $ink;
+  padding: 0.5em 0.8em;
+  border-radius: 6px;
+  margin-top: 0.4em;
+  background: $card;
+  border: 1px solid $rule;
+  border-left: 6px solid $muted;
+}
+.reveal .fb p {
+  margin: 0.2em 0;
+}
+.reveal .fb.compact {
+  font-size: 24px;
+  padding: 0.35em 0.7em;
+}
+.reveal .fb.ok {
+  background: mix($teal, $card, 10%);
+  border-left-color: $teal;
+}
+.reveal .fb.no {
+  background: mix($terracotta, $card, 10%);
+  border-left-color: $terracotta;
+}
+.reveal .readout {
+  font-size: 30px;
+  display: flex;
+  gap: 2em;
+}
+.reveal .readout .train {
+  color: $ink;
+}
+.reveal .readout .test {
+  color: $terracotta;
+}
+
+// The model sorter: one row per model, one radio per answer.
+.reveal table.sorter {
+  font-size: 28px;
+  margin: 0 0 0.3em;
+  width: 100%;
+}
+.reveal table.sorter th {
+  font-size: 24px;
+  text-align: center;
+}
+.reveal table.sorter td {
+  vertical-align: middle;
+  padding: 0.25em 0.4em;
+}
+.reveal table.sorter td:not(:first-child) {
+  text-align: center;
+}
+
+// Token pieces from the real tokenizer: palette tints, ink text.
+.reveal .tokens {
+  font-family: $font-family-monospace;
+  font-size: 44px;
+  line-height: 2.1;
+}
+.reveal .tok {
+  padding: 0.12em 0.05em;
+  margin-right: 2px;
+  border-radius: 4px;
+  color: $ink;
+}
+.reveal .tok.t0 { background: mix($teal, $card, 24%); }
+.reveal .tok.t1 { background: mix($gold, $card, 38%); }
+.reveal .tok.t2 { background: mix($terracotta, $card, 26%); }
+.reveal .tok.t3 { background: mix($muted, $card, 28%); }
+.reveal .tok.t4 { background: mix($teal, $card, 48%); }
+.reveal .tok.t5 { background: mix($gold, $card, 64%); }
+
+// Next-word sampler: the sentence and buttons beside the bars.
+.reveal .sampler {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2em;
+  align-items: start;
+  .bars {
+    font-size: 36px;
+    margin-top: 0.2em;
+  }
+  .bar-track {
+    height: 1.1em;
+  }
+  .bars p {
+    font-size: 30px;
+  }
+}
+.reveal .story {
+  font-family: $font-family-serif;
+  font-size: 40px;
+  color: $ink;
+  margin: 0.3em 0;
+}
+.reveal .story .picked {
+  color: $accent;
+  border-bottom: 3px solid $accent;
+}
+
+// Context-window budget bar. One class per part, shared with the legend.
+.reveal .budget {
+  display: flex;
+  height: 2.4em;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0.5em 0 0.3em;
+  font-size: 26px;
+  border: 1px solid $rule;
+}
+.reveal .budget div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $card;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: flex-basis 0.3s;
+}
+.reveal .budget-legend {
+  font-size: 24px;
+  color: $ink-soft;
+}
+.reveal .budget-legend .sw {
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  border-radius: 2px;
+  vertical-align: -0.1em;
+  margin: 0 0.3em 0 0.8em;
+}
+.reveal .budget-legend .sw:first-child {
+  margin-left: 0;
+}
+.reveal .seg-sys { background: $muted; }
+.reveal .seg-turns { background: $gold; }
+.reveal .seg-pasted { background: $teal; }
+.reveal .seg-question { background: $terracotta; }
+// The room left is a light tint: free space, not content.
+.reveal .seg-answer { background: mix($teal, $card, 22%); }
+.reveal .budget .seg-answer { color: $ink; }
+
+// Click-to-load iframe for heavy embeds.
+.reveal .loadframe iframe {
+  width: 100%;
+  height: 640px;
+  border: 1px solid $rule;
+  background: $card;
+  border-radius: 8px;
+}
+
+// Fitting by hand: the two parameter sliders beside the eGFR-style curve.
+.reveal .dials .eq {
+  font-family: $font-family-serif;
+  font-size: 40px;
+  color: $ink;
+  margin: 0 0 0.2em;
+}
+.reveal .dials .w-range span {
+  min-width: 1em;
+  font-weight: bold;
+}
+.reveal .dials .w-range input[type="range"] {
+  width: 10em;
+}
+
+// Widget charts are inline SVG with a viewBox: fill the column.
+.reveal svg.wchart {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+// --- The book's illustrative components (../styles.css) ------------------
+// They are light cards already; on the slide they need a larger type size
+// and the palette's border.
+.reveal .lab-report {
+  font-size: 28px;
+  max-width: none;
+  margin: 0;
+  background: $card;
+  border-color: $rule;
+  color: $ink;
+  table {
+    font-size: 1em;
+  }
+  td {
+    border: none;
+    padding: 0.1em 0.4em;
+    color: $ink;
+  }
+  .flag {
+    color: $terracotta;
+  }
+}
+.reveal :is(.lab-report, .chat) .fine {
+  color: $muted;
+}
+.reveal .chat {
+  font-size: 26px;
+  max-width: none;
+  margin: 0.4em 0;
+  color: $ink;
+  .user {
+    background: mix($teal, $card, 14%);
+  }
+  .bot {
+    background: $card;
+    border: 1px solid $rule;
+  }
+}
+.reveal :is(.ehr-note, .app-mock, .chat-pane, .grounded-answer) {
+  color: $ink;
+}
