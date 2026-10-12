@@ -78,9 +78,12 @@ This is a starting plan, and topics may change. Canvas has the current one.
 
 **Week 3, October 26 to 30: AI and your patients**
 
-- Monday: **Talking with patients about AI**, starting from what patients
-  already do with it. Goes with the core chapter,
-  [Talking to patients about AI](../chapters/core-patient-communication.qmd).
+- Monday, 10 a.m. to noon: **a workshop with co-director Christina Olson**,
+  in place of the Monday talk. The core chapter,
+  [Talking to patients about AI](../chapters/core-patient-communication.qmd),
+  stands on its own this week.
+- Tuesday, 11 a.m.: guest talk from CT Lin, **"I'm Sorry Dave, I'm Afraid I
+  Can't Do That"**, on AI, sepsis, and replies to patient messages.
 - Wednesday: to be announced, either **bias and equity** (goes with
   [Bias and equity](../chapters/core-bias-equity.qmd)) or **building a small
   tool live** (goes with [Agentic coding](../chapters/enrichment-agentic-coding.qmd)).
