@@ -27,7 +27,9 @@ or a GitHub issue behind. In outline, it went in four phases.
 **Design before drafting (August to early September 2026).** The fixed facts
 came first: four weeks, Zoom only, ungraded, no installs, free tools only. Then
 a review of eleven published competency frameworks, from which the course's
-own competency list (`AIM-1` to `AIM-9` and `AIM-X`) was built. Then the
+own competency list (`AIM-1` to `AIM-9` and `AIM-X`) was built. The
+frameworks students most need are summarised in [What the field
+expects](competency-frameworks.qmd). Then the
 course director's earlier lectures were catalogued, one session plan was
 written per module, and a chapter pattern and six imagined readers were
 defined. One chapter, critical appraisal, was written first as the model for

@@ -1,0 +1,167 @@
+---
+title: "What the field expects: AI competency frameworks"
+---
+
+A **competency** is something a doctor should be able to know or do by a given
+stage of training. A **competency framework** is a list of them, usually
+grouped into areas called domains. Medical schools use frameworks to decide
+what to teach, and accrediting bodies use them to decide what to require.
+
+For AI, there is no single agreed framework yet. Several groups have proposed
+one, and they agree more than they differ. This appendix lists the ones worth
+knowing, says where each stands, and shows how this course is built on them.
+
+Use it in three ways:
+
+- When you [plan your four weeks](../chapters/plan-your-learning.qmd), these
+  are the sources your research with ChatGPT should find. Compare its list
+  with this one.
+- When a residency program or a school asks what you know about AI, these are
+  the areas they are likely to mean.
+- When the AAMC publishes its competencies (below), compare them with your
+  plan and with the [coverage table](../index.qmd#competency-coverage) in the
+  preface.
+
+Last checked: October 12, 2026. This area changes fast. Check the links for
+newer versions.
+
+## The AAMC
+
+The Association of American Medical Colleges (AAMC) represents US and Canadian
+medical schools. It has three pieces of work on AI.
+
+**AI Competencies Across the Learning Continuum.** A national set of AI
+competencies for medical school, residency, and practice, supported in part by
+the Josiah Macy Jr. Foundation. It is **not yet published.** The AAMC
+circulated a first draft for comment in April 2026 and a second in June 2026.
+Its stated aim is that learners "develop a shared foundation in core AI
+concepts; understand the ethical, legal, and professional implications of
+AI-enabled care; and are prepared to effectively use, evaluate, and
+collaborate around AI technologies". The same page reports that the share of
+US and Canadian MD and DO schools teaching AI rose from 53% in 2023 to 77% in
+2024. [AAMC project
+page](https://www.aamc.org/about-us/medical-education/ai-competencies).
+
+**Principles for the Responsible Use of AI in and for Medical Education.**
+Version 2.0, July 2025. Seven principles for how *schools* use AI, such as
+keeping a human-centered focus, providing equal access, and protecting data
+privacy. They are rules for institutions, not a list of what you should be
+able to do. [AAMC
+principles](https://www.aamc.org/about-us/mission-areas/medical-education/principles-ai-use).
+
+**AI Competencies for Medical Educators.** A framework for *faculty*, written
+by an AAMC regional group (the Central Group on Educational Affairs) in 2025.
+It has eight domains, from understanding AI to continuous professional
+development. That last domain asks faculty to find their own knowledge gaps
+and make a learning plan, which is what the [planning
+chapter](../chapters/plan-your-learning.qmd) asks of you.
+[Framework (PDF)](https://www.aamc.org/media/86881/download?attachment).
+
+The AAMC's international committee on AI (IACAI), run through its MedBiquitous
+program, has also published integration frameworks for medical education,
+including a matrix of recommendations focused on medical students.
+[IACAI page](https://www.medbiq.org/initiatives/international-advisory-committee-artificial-intelligence).
+
+## Other US bodies
+
+**Accreditation (LCME).** The Liaison Committee on Medical Education accredits
+US MD programs. In October 2025 it presented a proposed revision of its
+curriculum standard. The proposed element on patient care would require
+"education and experiential learning ... in the appropriate use of artificial
+intelligence and other emerging technologies in diagnosis and patient
+management". The LCME lists this as a topic not in the 2025 to 2026
+standards. It is a proposal, not yet a requirement. Note the word
+*experiential*: the proposal asks for practice, not only lectures.
+[LCME
+presentation (PDF)](https://lcme.org/wp-content/uploads/2026/03/LCME_LSL_2025_10-8-25_FINAL.pdf).
+
+**The AMA.** In November 2025 the American Medical Association adopted policy
+to develop model AI learning objectives and teaching materials for medical
+schools. As of this writing it has not published the objectives. Its free
+seven-part *AI in Health Care* series on the AMA Ed Hub is written for
+students. [AMA
+announcement](https://www.ama-assn.org/press-center/ama-press-releases/ama-adopts-policy-advance-ai-literacy-medical-education);
+[AMA ChangeMedEd AI
+series](https://www.ama-assn.org/education/changemeded-initiative/ai-medical-education).
+
+**The Macy Foundation conference.** A 2025 conference with the AAMC and the
+ACGME, which accredits residencies, made five recommendations. The first is to
+put AI curricula and competencies in place [@pmid:40424523].
+
+## Published frameworks
+
+These were developed by researchers and published in peer-reviewed journals.
+Each was built by asking experts, by reviewing earlier proposals, or both.
+
+| Framework | How it was made | What it contains | Why it is useful to you |
+|---|---|---|---|
+| Russell et al., *Academic Medicine*, 2023 [@pmid:36731054] | Interviews with 15 experts | 6 domains, 25 subcompetencies, for all health professionals | The most-cited US framework. Its domains are short and readable; start here |
+| Hunt et al., *npj Digital Medicine*, 2026 [@pmid:42120544] | Review of 54 studies from 22 countries | 7 domains, 37 competencies, 170 learning objectives | The widest summary of what has been proposed for medical students. Most of its sources were opinion pieces, not studies |
+| Lee et al., *Academic Medicine*, 2024 [@pmid:38207056] | Two expert rounds plus a national survey of students and faculty in South Korea | 6 domains, 36 competencies | Separates *essential* from *optional*: most experts rated data science and AI research optional for graduates |
+| Singla et al., *npj Digital Medicine*, 2024 [@pmid:39557985] | Three survey rounds with 18 Canadian experts | 82 of 107 competencies rated essential | Includes communication and collaboration, not only knowledge |
+| DECODE, Car et al., *JAMA Network Open*, 2025 [@pmid:39888625] | Two survey rounds with experts from many countries | 4 domains, 19 competencies; 33 required and 145 optional learning outcomes | Covers digital health generally, with AI inside it. Shows how to split a small required core from a large optional set |
+
+: Five published frameworks. Numbers are from each paper's abstract. {#tbl-frameworks}
+
+Russell's six domains give a sense of how these frameworks are written. A
+health professional should be able to:
+
+1. explain what AI is and describe its uses in health care;
+2. explain how social, economic, and political systems shape AI tools, and how
+   that affects justice, equity, and ethics;
+3. carry out clinical encounters that use AI to build patient-centered care
+   plans;
+4. evaluate AI tools for quality, accuracy, safety, fit to the setting, and
+   bias;
+5. analyze and adapt to changes in teams, roles, and workflows when AI tools
+   arrive;
+6. keep learning about AI tools through continuing education and practice
+   improvement.
+
+## What they agree on
+
+Across these frameworks, the same areas come up again and again:
+
+- **Foundations:** what AI and machine learning are, how a chatbot produces an
+  answer, and why it can be confidently wrong.
+- **Checking:** judging an AI answer, and the evidence for an AI tool, before
+  relying on it.
+- **Fairness:** where bias comes from, and who a tool may fail.
+- **Ethics, law, and professionalism:** privacy, consent, who is responsible,
+  how tools are regulated, and keeping your own skills.
+- **Using it in practice:** AI in real clinical work, with the doctor still
+  deciding.
+- **Talking with patients:** explaining when and how AI is part of their care.
+
+Data science and building AI tools appear too. Two of the frameworks above
+(Lee and DECODE) treat them as optional for a medical graduate, and this
+course does the same.
+
+## How this course uses them
+
+The course's own list of ten competencies, numbered AIM-1 to AIM-9 plus AIM-X,
+was built from the frameworks above. Each chapter's subtitle names the ones it
+serves, and the [coverage table](../index.qmd#competency-coverage) in the
+preface shows which chapters teach which. The numbers stay fixed so the course
+can be compared with the AAMC set when it is published.
+
+| ID | Area | Closest match in the frameworks above |
+|---|---|---|
+| AIM-1 | Foundations of AI and data | Russell 1; Hunt, theory and foundations; Lee 2 |
+| AIM-2 | Checking AI tools and their answers | Russell 4; Hunt, critical appraisal |
+| AIM-3 | Bias, equity, and social effects | Russell 2; Hunt, ethics |
+| AIM-4 | Ethics, law, regulation, and professionalism | Hunt, ethics, law, and professionalism; Lee 3 |
+| AIM-5 | Using AI in clinical work | Russell 3; Hunt, clinical applications; Lee 4 |
+| AIM-6 | Talking with patients about AI | Singla, communication; Russell 3 in part |
+| AIM-7 | Workflow and implementation (optional) | Russell 5 |
+| AIM-8 | Health data science (optional) | Lee 5; DECODE, health data science |
+| AIM-9 | Research and scholarship (optional) | Hunt, research and innovation; Lee 6 |
+| AIM-X | Professional identity and keeping up | Russell 6 |
+
+: The course's competencies and where each comes from. AIM-1 to AIM-6 are the core; AIM-7 to AIM-9 are optional extensions; AIM-X runs through every week. {#tbl-aim-crosswalk}
+
+Talking with patients about AI is the area this course weights most
+differently from the frameworks. Of the five in @tbl-frameworks, only Singla
+names communication as an area of its own; the others include it, if at all,
+inside wider domains. The course gives it a core week, because it is a conversation you will have in residency
+whether or not you use AI yourself.
