@@ -19,7 +19,7 @@ two spare enrichment chapters.
 | 6 | `enrichment-workforce-economics` | 90 | 3, 7 | Matching into radiology the year everyone says radiology is over |
 | 7 | `enrichment-environment` | 60 | 3, X | The water-per-query number everyone quotes and nobody has checked |
 | 8 | `core-ethics-regulation` | 75 | 4, 7, X | A scribe error in a note you signed; who answers for it |
-| 9 | `enrichment-prompting-lab` | 75 | 5, 2 | Same question, two prompts, one better-organised wrong answer |
+| 9 | `enrichment-prompting-lab` | 75 | 5, 2 | Week 2 core. Sam's structured prompt gets a better answer; a five-part template the student keeps, and one claim checked |
 | 10 | `enrichment-rag-notebooklm` | 60 | 1, 9 | Journal-club prep with a source-grounded tool |
 
 ## Per-chapter contract

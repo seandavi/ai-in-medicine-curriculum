@@ -9,100 +9,94 @@ use should do the same.
 
 ## What this is
 
-A four-week, ungraded elective on AI in medicine for about forty fourth-year
-medical students at the University of Colorado School of Medicine, delivered over
-Zoom, successor to IDPT 8079. The book is the self-paced half: one chapter per
-module, one to two hours each, standing alone so a missed week costs one chapter.
-The live sessions run the same activities in breakouts. It is built with
-[Quarto](https://quarto.org/) and the source is public at
-[github.com/seandavi/ai-in-medicine-curriculum](https://github.com/seandavi/ai-in-medicine-curriculum).
+A four-week, ungraded elective on AI in medicine for fourth-year medical
+students at the University of Colorado School of Medicine (IDPT 8079; 49
+students in fall 2026), delivered over Zoom. The course director teaches it
+live in two recorded talks a week, and the book goes with the talks: ten
+chapters, each standing alone, read on your own time. The other live hours are
+for office hours, guest talks, and small groups.
+It is built with [Quarto](https://quarto.org/). The source is in a GitHub
+repository, [seandavi/ai-in-medicine-curriculum](https://github.com/seandavi/ai-in-medicine-curriculum),
+which is private for now and will be made public.
 
-## How it was designed
+## How it was made
 
-The design was done publicly, in the repository, in this order. Each step is
-a file you can read.
+The design was done in the repository, and every step left a file
+or a GitHub issue behind. In outline, it went in four phases.
 
-**Constraints first (August 2026).** `curriculum/design-constraints.md` records
-the fixed facts, roughly forty MS4s, four weeks, Zoom only, ungraded, and what
-each one forces. Every later decision is checked against it: no installs, free
-tiers only, every session does something, critical appraisal over tool training.
+**Design before drafting (August to early September 2026).** The fixed facts
+came first: four weeks, Zoom only, ungraded, no installs, free tools only. Then
+a review of eleven published competency frameworks, from which the course's
+own competency list (`AIM-1` to `AIM-9` and `AIM-X`) was built. Then the
+course director's earlier lectures were catalogued, one session plan was
+written per module, and a chapter pattern and six imagined readers were
+defined. One chapter, critical appraisal, was written first as the model for
+the rest.
 
-**Research, then competencies.** `research/competency-frameworks.md` reviews
-eleven published AI-in-medicine competency frameworks, based mainly on Russell
-et al. (2023) and Hunt et al. (2026). From that synthesis,
-`curriculum/competencies.md` defines nine domains with stable IDs, `AIM-1`
-through `AIM-9` plus `AIM-X`, which applies across all of them. The IDs exist
-because the AAMC's national competencies are expected after this course runs;
-every module tags itself so that matching it to the national list later is a
-lookup, not a rewrite. Two more research notes inform the design:
-`research/enrichment-activities.md` for the optional modules, and
-`research/comparable-courses.md` for what to borrow from, and deliberately not
-be, other courses.
+**Drafting at scale (September 2026).** The other ten chapters were drafted at
+the same time by ten AI agents working from one brief. Each looked up its
+citations in PubMed, wrote an answer key, and reviewed its own chapter as the
+six readers. The author then read the whole book as deployed.
 
-**Prior material inventoried.** `research/talks-inventory.md` and
-`research/talks-drive-decks.md` catalogue the lectures from the predecessor
-course, including content recovered from slide decks that existed only as Drive
-stubs. Where a descriptor did not match its deck, the note says so.
+**Passes over the whole book (September 2026).** What the author found on that
+reading set the next steps. Each was a pass over every chapter with one narrow
+purpose, run by AI agents in parallel: plain language; a second review as the
+six readers; links between chapters and consistent terms; direct statement in
+place of metaphor; and working through the claims still flagged as unchecked.
+A script confirmed that the language passes changed wording only, not numbers,
+citations, or figures.
 
-**Modules, then the chapter pattern.** `modules/` holds one session plan per
-module, with activities and rubrics. `curriculum/chapter-pattern.md` (September
-2026) is the structure every student-facing chapter follows: an opening clinical
-scenario before any jargon, why it matters, how it works, one video or podcast,
-an activity you can finish alone, a self-scored check, the standing question,
-and a reading list. `curriculum/personas.md` names the six readers every chapter
-is reviewed as.
+**Fitting the book to the course (October 2026).** Once the dates and
+enrolment were fixed, the course director chose the format: week 1 taught
+live, guest talks in weeks 2 to 4, Friday small groups, and open labs. The
+book followed. The syllabus was rewritten. A page on patient information was
+added, after the institution confirmed which AI accounts are covered for
+patient care. Added at the same time: an appendix of open labs students vote
+on, starter resources picked from more than 650 links students submitted in
+earlier years, a section on how ambient scribes work, and a new visual design
+with clickable self-checks. Research notes compared the book with Stanford's
+AI-in-education materials, with published surveys of what medical students
+want to learn, and with the competency frameworks. The coverage table in the
+preface comes from that last review.
 
-**One chapter, by hand.** The appraisal chapter was written first, as the
-exemplar, because it is the most solo-able module and its activity maps directly
-to a PubMed search recipe. It was drafted with the AI assistant, read in full by
-the author, reviewed as the six personas, and revised before anything else was
-built.
+Then an independent review, run by a fresh AI agent with no stake in the
+book, found what the author had suspected: the book was long, cautious, and
+gave students little practice actually using a chatbot. Students the year
+before had said they were afraid to use these tools and felt lost. So the
+course was refocused on skill and confidence: one core chapter a week plus a
+menu, a weekly routine, and most of each week spent using AI to learn
+something the student cares about. The chapters are being revisited one at a
+time to match. Then, on October 8, the course director chose to teach more
+live. Weeks 2 to 4 now have two recorded talks a week in place of the voted
+open lab, and each core chapter goes with its talk.
 
-**A plan, then ten chapters in parallel.** `curriculum/chapter-plan.md` set the
-order, the per-chapter contract, and the passes that would follow. Each of the
-ten remaining chapters became a GitHub issue that stated that contract. Then ten
-AI agents were started at once, one per chapter, each in its own isolated branch
-of the repository, each given the module plan, the pattern, the personas, and
-the exemplar chapter. Each agent drafted its chapter, looked up every citation
-in PubMed and read the abstract before inserting the key, drew or found its
-figures, wrote an answer key, reviewed its own chapter as the six personas, and
-recorded what it had and had not been able to verify in a review file and a
-ledger row. The ten branches were merged into one integration branch and
-deployed, and the author read the deployed book.
+## What the ledger shows
 
-**Two passes over all eleven.** Reading the deployed book, the author found the
-content good and the language jargonish. A plain-language pass followed: one
-agent per chapter, again in parallel, replacing or defining on first use the
-design-document vocabulary the author had flagged, splitting long sentences, and
-removing em-dashes, with a script checking that no number, citation, flag,
-figure, or section moved. Then a second six-persona review pass, one agent per
-chapter, which filed one review issue per chapter, fixed what the findings
-called for, and left the rest as open items for the author.
+The [AI ledger](ai-ledger.qmd) records each piece of AI-assisted work and what
+a person checked. Read as a whole, it shows four things.
 
-**A cross-reference pass.** Chapters written independently overlap and
-contradict. This pass made them one book: every mention of another chapter
-became a link, block headings were made the same in every chapter, shared terms
-were checked for agreement and the recurring ideas named the same way
-everywhere, duplicated material was cut back to a short version plus a link to
-the chapter that owns it, repeated podcast episodes and readings were noted,
-the competency coverage table in the preface was built from the chapters as
-written, and every remaining `[VERIFY]` flag was inventoried into one issue for
-the author to work through.
+**The division of labor held.** The author decided what to teach, how the
+course runs, and what the book may claim about local policy. AI tools drafted,
+looked things up, and checked drafts against the book's standards. The author
+read the result and decided what to publish.
 
-**The course around the chapters.** The book was then regrouped into parts by
-week, following the default four-week order, and the material that had lived
-only in the repository was rendered: a syllabus, the
-[weekly resource log](../course/resource-log.qmd) with its four chatbot
-prompts, and a [For instructors](instructors.qmd) appendix holding the module
-catalog, the session structure, and the guest-invitation shape.
+**Checking found real errors, and each fix was recorded.** While the
+visual design was being changed, two charts turned out to misstate their
+data: the charting tool drew bars from the bottom of the axis, so a 4 percent
+fall looked like a rise. A sentence about privacy law said more than the law
+does. A research agent described a set of national principles as rules for
+students, which they are not. A fill-in template disappeared on the dark
+screen setting until a person noticed. Each is in the ledger with its fix.
 
-**A writing pass for plain statement.** Reading the passes' output, the author
-found that the language was now plain but still mannered: metaphor and set
-phrase where a literal sentence would do. One agent per chapter replaced each
-figure of speech with the direct statement, keeping only the metaphors that are
-a chapter's own explained teaching device, with the same script checking that
-nothing but the wording moved. The rule was added to the writing standard so
-later drafts and the pull-request reviewer hold to it.
+**Where a check could not be done, the book says so.** Some publisher pages
+block automated tools, some podcast pages give no length, and some sign-up
+rules could not be confirmed. Those stay flagged in the text or noted in the
+ledger, not filled in with a guess.
+
+**Some things could only come from people.** Which tools the university covers
+for patient care, which scribe the local health system uses, what fourth-year
+students are worried about this month, and which guests are coming: these came
+from the author and colleagues, and the book marks them as local facts.
 
 ## How chapters are reviewed
 
@@ -126,6 +120,11 @@ and the open items from the second pass are GitHub issues labelled `pass`.
 The order matters: Elena reads first, because if the avoider stops reading,
 nothing after matters, and Dr. Lindqvist reads last. When readers disagree,
 students win on content, faculty win on form, and the ethicist wins on harm.
+
+The pages added in October 2026 (the patient information page, the open labs
+and starter resources appendices, and the new section on ambient scribes) have
+not yet been through the six-reader review. The ledger marks them as awaiting
+the author's review.
 
 Two further checks run on every chapter:
 

@@ -4,45 +4,66 @@ project:
   # every render. Run it by hand (with network) before pushing:
   #   quartobot resolve --from-scan . --id-mode citation-key
   pre-render: quartobot resolve --from-scan . --id-mode citation-key
+  # Tidies llms.txt and writes llms-full.txt (the whole book in one file).
+  post-render: scripts/llms_full.py
+  # Copied to the site root as is; points crawlers at the sitemap.
+  resources:
+    - robots.txt
   render:
     - index.qmd
     - chapters/
+    # Centaur or cyborg is kept in the repo but not published (decided 2026-10-12).
+    - "!chapters/core-centaur-cyborg.qmd"
     - course/
     - appendix/
 
+# Quarto reads llms-txt from the website section, even for a book.
+# It writes llms.txt and a plain .llms.md copy of every page, so chatbots
+# and agents can read the book without the HTML around it.
+website:
+  llms-txt: true
+
 book:
   title: "AI in Medicine"
+  # Gives every page a canonical address and makes Quarto write sitemap.xml.
+  site-url: https://aim.seandavis.net
   subtitle: "A four-week elective for fourth-year medical students"
   author: "Sean Davis"
   date: today
+  # The course icon, shared with the course Discord server.
+  favicon: images/discord-icon.svg
   chapters:
     - index.qmd
     - part: "Running the course"
       chapters:
         - course/syllabus.qmd
-        - course/resource-log.qmd
-    - part: "Week 1 · Orientation and stance"
+        - course/learn-with-ai.qmd
+        - course/learning-journal.qmd
+        - course/first-session.qmd
+        - course/friday-groups.qmd
+        - course/patient-information.qmd
+    # Each week: the core chapter first, then the menu (see the syllabus).
+    - part: "Week 1 · Working with AI"
       chapters:
         - chapters/core-foundations.qmd
-        - chapters/core-centaur-cyborg.qmd
-    - part: "Week 2 · Judgment"
-      chapters:
-        - chapters/core-appraisal.qmd
-        - chapters/core-bias-equity.qmd
-    - part: "Week 3 · Practice"
-      chapters:
-        - chapters/enrichment-agentic-coding.qmd
-        - chapters/core-patient-communication.qmd
-    - part: "Week 4 · Consequences and closing"
-      chapters:
-        - chapters/enrichment-workforce-economics.qmd
-        - chapters/enrichment-environment.qmd
-        - chapters/core-ethics-regulation.qmd
-    - part: "Spare enrichment chapters"
+    - part: "Week 2 · Getting good at it"
       chapters:
         - chapters/enrichment-prompting-lab.qmd
+        - chapters/core-appraisal.qmd
+        - chapters/core-bias-equity.qmd
         - chapters/enrichment-rag-notebooklm.qmd
+    - part: "Week 3 · AI and your patients"
+      chapters:
+        - chapters/core-patient-communication.qmd
+        - chapters/enrichment-agentic-coding.qmd
+    - part: "Week 4 · Responsibility"
+      chapters:
+        - chapters/core-ethics-regulation.qmd
+        - chapters/enrichment-workforce-economics.qmd
+        - chapters/enrichment-environment.qmd
   appendices:
+    - appendix/open-labs.qmd
+    - appendix/resources.qmd
     - appendix/about.qmd
     - appendix/personas.qmd
     - appendix/ai-ledger.qmd
@@ -61,12 +82,19 @@ link-citations: true
 
 format:
   html:
-    theme: cosmo
+    # Modern-textbook theme over Bootstrap; dark mode swaps the palette only.
+    theme:
+      light: [theme/textbook.scss]
+      dark: [theme/textbook.scss, theme/textbook-dark.scss]
     css: styles.css
+    # Self-check questions: ::: {.self-check} blocks become clickable. See the file for authoring.
+    include-after-body: theme/self-check.html
     # Mermaid's auto-derived theme gave dark node fills with dark text; neutral is
     # light boxes, black text, readable regardless of the page theme.
     mermaid:
       theme: neutral
+    # Click a figure to see it full size.
+    lightbox: true
     toc: true
     toc-depth: 3
     citations-hover: true

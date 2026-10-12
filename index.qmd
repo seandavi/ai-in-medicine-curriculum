@@ -1,10 +1,13 @@
 # Preface {.unnumbered}
 
 This is the student-facing book for a four-week, ungraded elective on AI in
-medicine for fourth-year medical students. Each chapter is one module: one to
-two hours of reading, watching, and doing that stands alone, so a missed week
-costs one chapter, not the course. Nothing in it needs an install, a paid
-account, or a real patient.
+medicine for fourth-year medical students. Its one idea: **it is your job to
+learn where AI helps your work, and you learn that by trying.** The chapters
+are a framework, not a curriculum that tries to teach everything. Each week has
+one core chapter and a menu to choose from, and most of your learning happens
+when you [use AI to teach yourself](course/learn-with-ai.qmd). Each chapter
+stands alone. Nothing in the book needs an install, a paid account, or a real
+patient.
 
 ## How to read a chapter
 
@@ -31,62 +34,53 @@ one:
 
 A chapter's subtitle gives its time budget and the competencies it serves
 (`AIM-1` through `AIM-9` and `AIM-X`; the coverage table below says what each
-one is). Three rules hold everywhere: **no patient information enters any
-tool, ever; verify before it counts; you sign the note.**
+one is). The safety rules are short: **use your university account; never put
+real patient information into a course activity; check what matters before you
+rely on it; you sign the note.**
 
-Three ideas recur across the chapters, and each is named the same way wherever
+Four ideas recur across the chapters, and each is named the same way wherever
 it appears. **Proxies fail**: almost every AI failure in medicine is a stand-in
 that looked reasonable. **Efficiency gains get eaten by volume**: per-unit
 savings are cancelled out by growth in use. **The published number is the
 optimistic one**: the most prominently reported statistic is nearly always the
-best case. A chapter that uses one of these says so.
+best case. **Who benefits, who bears the risk, who decides**: the people a
+tool helps are often not the people it puts at risk, or the people who chose
+it. A chapter that uses one of these says so.
 
-## The chapters, in the default order
+## The chapters, week by week
 
-Eleven chapters for eight sessions. The default four-week assembly runs them
-in this order, and the book's contents are grouped by week the same way; the
-three spare chapters can be swapped in by cohort interest. Each one stands
-alone, so any order works. The [syllabus](course/syllabus.qmd) says what a
-week looks like and when things are due. One assignment runs across all four
-weeks, the [weekly resource log](course/resource-log.qmd), where your own
-reading goes; several chapter activities feed it. Whoever runs the course
-reads the [For instructors](appendix/instructors.qmd) appendix.
+Each week has one **core** chapter and a **menu**. Read the core; choose from
+the menu. The [syllabus](course/syllabus.qmd) gives the live sessions, the
+weekly routine, and the due dates. Each week you also write a short
+[learning journal](course/learning-journal.qmd) entry about what you tried.
+Whoever runs the course reads the [For instructors](appendix/instructors.qmd)
+appendix.
 
-**Week 1, orientation and stance**
+**Week 1, working with AI**
 
-1. [How these systems work](chapters/core-foundations.qmd): the eGFR is a
-   model you already trust, and the chatbot is the same loop with words.
-2. [Centaur or cyborg](chapters/core-centaur-cyborg.qmd): what you delegate to
-   the machine, and what you keep.
+- Core: [How these systems work](chapters/core-foundations.qmd): the eGFR is a
+  model you already trust, and the chatbot is the same loop with words.
 
-**Week 2, judgment**
+**Week 2, getting good at it**
 
-3. [Critical appraisal](chapters/core-appraisal.qmd): checking AI tools,
-   their answers, and the evidence about both.
-4. [Bias and equity](chapters/core-bias-equity.qmd): the proxy problem, from
-   pulse oximetry to cost-as-need.
+- Core: [Prompting lab](chapters/enrichment-prompting-lab.qmd): getting good
+  answers, and knowing their limits.
+- Menu: [Critical appraisal](chapters/core-appraisal.qmd),
+  [Bias and equity](chapters/core-bias-equity.qmd),
+  [Grounding AI in real sources](chapters/enrichment-rag-notebooklm.qmd).
 
-**Week 3, practice**
+**Week 3, AI and your patients**
 
-5. [Agentic coding](chapters/enrichment-agentic-coding.qmd): build a clinical
-   tool in an hour, then find what is wrong with it.
-6. [Talking to patients about AI](chapters/core-patient-communication.qmd):
-   the most important session in the course.
+- Core: [Talking to patients about AI](chapters/core-patient-communication.qmd).
+- Menu: [Agentic coding](chapters/enrichment-agentic-coding.qmd): build a
+  clinical tool in an hour, then test it; the
+  [scribe open lab](appendix/open-labs.qmd).
 
-**Week 4, consequences and closing**
+**Week 4, responsibility**
 
-7. [Will AI take your job?](chapters/enrichment-workforce-economics.qmd)
-   *or* [What AI costs the planet](chapters/enrichment-environment.qmd), the
-   cohort's choice.
-8. [Ethics, liability, and the device line](chapters/core-ethics-regulation.qmd):
-   who answers for the note, and the closing question.
-
-**Spare, or for a hands-on cohort**
-
-- [Prompting lab](chapters/enrichment-prompting-lab.qmd): the same wrong
-  answer, better organised.
-- [Grounding AI in real sources](chapters/enrichment-rag-notebooklm.qmd):
-  what a retrieval tool fixes, and what it cannot.
+- Core: [Ethics: what you owe when you sign the note](chapters/core-ethics-regulation.qmd).
+- Menu: [Will AI take your job?](chapters/enrichment-workforce-economics.qmd),
+  [What AI costs the planet](chapters/enrichment-environment.qmd).
 
 ## Competency coverage
 
@@ -98,29 +92,36 @@ regulation; AIM-5 clinical use; AIM-6 talking to patients; AIM-7 workflow and
 systems; AIM-8 health data science; AIM-9 research and scholarship; AIM-X
 professional identity, the closing question.
 
-| Chapter | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | X |
+| Material | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | X |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| [How these systems work](chapters/core-foundations.qmd) | ● | ● | | | | | | | | |
-| [Centaur or cyborg](chapters/core-centaur-cyborg.qmd) | | | | ● | ● | | | | | ● |
-| [Critical appraisal](chapters/core-appraisal.qmd) | | ● | | | | | | | ● | |
-| [Bias and equity](chapters/core-bias-equity.qmd) | | | ● | | | | | | | |
-| [Agentic coding](chapters/enrichment-agentic-coding.qmd) | | ● | | ● | ● | | | | | |
-| [Talking to patients about AI](chapters/core-patient-communication.qmd) | | | | ● | | ● | | | | |
-| [Will AI take your job?](chapters/enrichment-workforce-economics.qmd) | | | ● | | | | ● | | | |
-| [What AI costs the planet](chapters/enrichment-environment.qmd) | | | ● | | | | | | | ● |
-| [Ethics, liability, and the device line](chapters/core-ethics-regulation.qmd) | | | | ● | | | ● | | | ● |
-| [Prompting lab](chapters/enrichment-prompting-lab.qmd) | | ● | | | ● | | | | | |
-| [Grounding AI in real sources](chapters/enrichment-rag-notebooklm.qmd) | ● | | | | | | | | ● | |
+| **Week 1** | | | | | | | | | | |
+| [How these systems work](chapters/core-foundations.qmd) (core) | ● | ● | | | ○ | | | ○ | | ○ |
+| **Week 2** | | | | | | | | | | |
+| [Prompting lab](chapters/enrichment-prompting-lab.qmd) (core) | | ● | | ○ | ● | | | | ○ | ○ |
+| [Critical appraisal](chapters/core-appraisal.qmd) | ● | ● | | ● | ○ | | ○ | | ● | ○ |
+| [Bias and equity](chapters/core-bias-equity.qmd) | | ○ | ● | | | | | ○ | ○ | ○ |
+| [Grounding AI in real sources](chapters/enrichment-rag-notebooklm.qmd) | ● | ● | | ○ | ○ | | | | ● | ○ |
+| **Week 3** | | | | | | | | | | |
+| [Talking to patients about AI](chapters/core-patient-communication.qmd) (core) | | ○ | | ● | ○ | ● | | | | ○ |
+| [Agentic coding](chapters/enrichment-agentic-coding.qmd) | ○ | ● | | ● | ● | | ○ | | | ○ |
+| **Week 4** | | | | | | | | | | |
+| [Ethics: what you owe when you sign the note](chapters/core-ethics-regulation.qmd) (core) | | ○ | ○ | ● | ○ | ○ | ○ | | ○ | ● |
+| [Will AI take your job?](chapters/enrichment-workforce-economics.qmd) | | ● | ○ | ○ | | | ● | | ○ | ● |
+| [What AI costs the planet](chapters/enrichment-environment.qmd) | | ● | ● | | | | ● | | ○ | ○ |
+| **Course pages and appendices** | | | | | | | | | | |
+| [Patient information and AI tools](course/patient-information.qmd) | | | | ● | | | | | | |
+| [Learning journal](course/learning-journal.qmd) | | ○ | | ○ | | | | | ● | ○ |
+| [Open lab: hear it, draft it, check it](appendix/open-labs.qmd) | ○ | ○ | | ○ | ○ | | | | | ○ |
 
-: Which chapter serves which competency, from each chapter's own subtitle and objectives. {#tbl-coverage}
+: Which material serves which competency. ● the main subject: taught, and practised in the Do or Check. ○ taught, but not practised. Judged from what each chapter teaches and checks (reviewed October 2026), not from its subtitle. {#tbl-coverage}
 
-The rules say AIM-1 through AIM-6 must each appear at least once in any
-four-week assembly, with AIM-4 and AIM-5 recurring. The default order above
-meets them: every core competency appears, AIM-4 four times, AIM-2 three
-times, AIM-5 twice. AIM-8, health data science, is not the main subject of
-any chapter; the foundations chapter covers training and test sets, area
-under the curve, and dataset shift while making its own point, and that is
-the depth this course goes to.
+The four core chapters make AIM-2, AIM-4, AIM-5, and AIM-6 main subjects, and
+the week 1 live talks cover AIM-1. AIM-3, bias and equity, is not in a core
+chapter: it is covered by the bias chapter on the menu. That is a deliberate choice for this offering, made so the core
+can focus on using AI well. AIM-8, health data science, is not the main subject
+of any chapter; the foundations chapter covers training and test sets, area
+under the curve, and dataset shift along the way. Every Check is scored by you
+against a rubric, so "practised" here means self-assessed, not graded.
 
 ## The tutor and the answer keys
 
@@ -141,8 +142,9 @@ checked against PubMed, an answer key, and a review as six invented readers.
 The author read the result, and the chapters then went through a
 plain-language pass, a second six-persona review, a cross-reference pass,
 and a pass replacing metaphor with direct statement, each also run by AI
-agents under the author's direction. The author
-edited and committed all of it. The full account, including what the AI did
+agents under the author's direction. In October, once the course's dates and
+format were fixed, the syllabus, new pages, and appendices were added the same
+way. The author edited and committed all of it. The full account, including what the AI did
 and what a person checked, is in the appendix
 [How this book was made](appendix/about.qmd) and the
 [AI ledger](appendix/ai-ledger.qmd). The course asks you to disclose and
@@ -150,4 +152,5 @@ verify; this is the course doing the same.
 
 The design behind the book, competencies, constraints, and schedule, is in
 the `curriculum/` directory of the
-[repository](https://github.com/seandavi/ai-in-medicine-curriculum).
+[repository](https://github.com/seandavi/ai-in-medicine-curriculum)
+(private for now; it will be made public).

@@ -1,6 +1,6 @@
 ---
 title: "What AI costs the planet: the number everyone quotes"
-subtitle: "AIM-3 · AIM-X · about one hour"
+subtitle: "AIM-3 · AIM-2 · AIM-7 · about one hour"
 ---
 
 ::: {.callout-note title="What you'll learn"}
@@ -70,7 +70,9 @@ what happens somewhere else, to someone else, when you press enter. That makes
 it a question of fairness, not only a question of adding up carbon. Water and
 air pollution are local. A data center's cooling draws from one county's
 groundwater. A gas turbine's exhaust lands in one neighborhood. The people
-who bear that cost do not use the tool and were not asked. In the emergency
+who bear that cost do not use the tool and were not asked. That is the
+course's fourth recurring lesson, **who benefits, who bears the risk, who
+decides**, explained in [the ethics chapter](core-ethics-regulation.qmd). In the emergency
 department of that neighborhood, an asthma exacerbation is an asthma
 exacerbation. No one can say what caused it, and you would treat it the same.
 This chapter is about being able to say, honestly and in proportion, what the
@@ -261,7 +263,7 @@ in 2024, and 81 percent above in 2025, with data-center electricity use up 37
 percent in the last of those years
 ([ESG Dive, 2 July 2025](https://www.esgdive.com/news/googles-emissions-rise-despite-data-center-decarbonization-ppas-environmental-report-2025/752236/);
 [ESG Dive, 2 July 2026](https://www.esgdive.com/news/googles-emissions-continue-to-climb-due-to-ai-buildout/824373/)).
-This is the second of the course's three recurring lessons, **efficiency
+This is the second of the course's four recurring lessons, **efficiency
 gains get eaten by volume**. Economists call it the Jevons effect, after the
 observation in 1865 that more efficient steam engines led Britain to burn more
 coal, not less. When a
@@ -394,10 +396,13 @@ skip step 1 of Part A; the point of step 1 is to guess before you know.
 
 ::: {.callout-warning title="No patient information, ever"}
 Nothing in this exercise involves a patient. You will ask a chatbot about
-itself and read public documents. Your institutional account is not a
-clinical tool. It carries no agreement that covers patient data; [the ethics
-and regulation chapter](core-ethics-regulation.qmd) takes that up. If a question about the scribe's water
+itself and read public documents. Your university chatbot account is covered
+for patient care when you sign in with university credentials, but this
+exercise is not patient care; [the ethics chapter](core-ethics-regulation.qmd) takes that up. If a question about the scribe's water
 use ever tempts you to paste in a note to "see what it costs," stop.
+
+What counts as patient information, and why taking out the name is not
+enough: [the patient information page](../course/patient-information.qmd).
 :::
 
 ### Part A: trace the bottle (15 minutes)
@@ -473,8 +478,8 @@ MRI, per laparoscopic cholecystectomy, per dialysis session, per
 telepsychiatry visit. Anesthesia, surgery, radiology, nephrology, and
 ophthalmology all have papers on this. If your specialty does not yet, use
 Eckelman's 1,692 kg per person per year [@pmid:33284703] and divide by a
-plausible number of encounters. This paper also counts toward this week's
-[resource log](../course/resource-log.qmd).
+plausible number of encounters. This paper also can be the "one thing I checked" in this
+week's [learning journal](../course/learning-journal.qmd).
 
 ```
 Paper: __________________________________   PMID: ____________

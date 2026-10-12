@@ -122,8 +122,9 @@ on the right. The thing the lab can measure is on the left. The equation is
 the bridge, and the bridge was built from a specific set of people.
 
 A number used in place of the one you want, because that one is hard to get,
-is called a **proxy**. The first of the course's three recurring
-lessons is **proxies fail**: the stand-in and the real thing can come apart,
+is called a **proxy**. The first of the course's four recurring
+lessons (the fourth, *who benefits, who bears the risk, who decides*, comes in
+[the ethics chapter](core-ethics-regulation.qmd)) is **proxies fail**: the stand-in and the real thing can come apart,
 and they come apart for some patients more than for others. [The bias and
 equity chapter](core-bias-equity.qmd) depends on that lesson. This chapter's
 job is narrower: to show you the bridge at all.
@@ -270,7 +271,7 @@ performance. It simply had not been measured on patients like those.
 
 ::: {.callout-important title="The one sentence"}
 A model's performance on the cases it was built from is usually the optimistic
-number. That is the third of the course's three recurring lessons, **the
+number. That is the third of the course's four recurring lessons, **the
 published number is the optimistic one**, in its first form. Ask what it was
 trained on, and ask what it was tested on. If those
 are the same set, you have learned nothing yet.
@@ -435,13 +436,17 @@ not need it.
 ::: {.callout-warning title="No patient information, ever"}
 Both parts of this exercise use public or made-up material. Part A uses a
 small practice dataset built into the site. Part B asks the model about a published
-scoring system, not about a patient. Your institutional account does not
-change this. It is not covered by a business associate agreement, the contract
-that would make the vendor legally responsible for protecting patient data,
-unless your institution has told you so explicitly. The question you will be
+scoring system, not about a patient. Your university ChatGPT Edu or Copilot
+account, signed in with university credentials, is covered by a business
+associate agreement, the contract that makes the vendor legally responsible
+for protecting patient data. That covers patient care. This exercise is not
+patient care. The question you will be
 tempted to ask about the patient from this morning is one you do not ask. And
 whatever drafts a note, you sign it. What to document when a tool helped is
-[the ethics and regulation chapter's](core-ethics-regulation.qmd) question.
+[the ethics chapter's](core-ethics-regulation.qmd) question.
+
+What counts as patient information, and why taking out the name is not
+enough: [the patient information page](../course/patient-information.qmd).
 :::
 
 ### Part A: overfitting you can see (8 minutes)

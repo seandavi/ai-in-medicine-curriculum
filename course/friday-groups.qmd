@@ -1,0 +1,16 @@
+# Friday small groups {.unnumbered}
+
+[One hour every Friday, best effort, in one of four time slots · open discussion, led by you]{.subtitle .lead}
+
+Friday is an open discussion. You bring the topics: something AI helped you
+learn this week, something you caught it getting wrong, a question from a
+chapter or a talk, or a situation you saw on a rotation. Talking about AI with
+an attending, a colleague, a patient, or an interviewer is a skill, and it gets
+better when you practise it out loud. The groups are not recorded, so you can
+try ideas and get them wrong.
+
+Leave out anything that could identify a patient (see [the patient information
+page](patient-information.qmd)).
+
+**Week 4 (November 6).** The last group is for your five-minute "what you will
+keep" presentations from the [learning journal](learning-journal.qmd).

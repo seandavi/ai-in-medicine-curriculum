@@ -1,6 +1,6 @@
 ---
 title: "Will AI take your job? Workforce and economics"
-subtitle: "AIM-3 · AIM-7 · about 90 minutes"
+subtitle: "AIM-7 · AIM-2 · AIM-X · about 90 minutes"
 ---
 
 ::: {.callout-note title="What you'll learn"}
@@ -96,16 +96,16 @@ the specialty for 1,083 positions.[^nrmp]
 
 ```{mermaid}
 %%| label: fig-match
-%%| fig-alt: "Bar chart. Diagnostic radiology PGY-2 positions offered and filled in each Match from 2022 to 2026. Offered rose from 997 to 1,083; filled rose from 996 to 1,066. The two bars are nearly equal every year."
-%%| fig-cap: "Diagnostic radiology advanced (PGY-2) positions offered and filled in the Main Residency Match, 2022 to 2026. Redrawn from NRMP Results and Data 2026, Tables 3 and 7A. Positions rose every year; the gap between the bars is the number unfilled."
+%%| fig-alt: "Line chart. Diagnostic radiology PGY-2 positions offered and filled in each Match from 2022 to 2026. Offered rose from 997 to 1,083; filled rose from 996 to 1,066. The two lines are nearly equal every year."
+%%| fig-cap: "Diagnostic radiology advanced (PGY-2) positions offered and filled in the Main Residency Match, 2022 to 2026. Redrawn from NRMP Results and Data 2026, Tables 3 and 7A. Positions rose every year; the gap between the lines is the number unfilled. The axis starts at 900."
 xychart-beta
     accTitle: Diagnostic radiology advanced (PGY-2) positions offered and filled in the Main Residency Match, 2022 to 2026
-    accDescr: Bar chart. Diagnostic radiology PGY-2 positions offered and filled in each Match from 2022 to 2026. Offered rose from 997 to 1,083. Filled rose from 996 to 1,066. The two bars are nearly equal every year.
+    accDescr: Line chart. Diagnostic radiology PGY-2 positions offered and filled in each Match from 2022 to 2026. Offered rose from 997 to 1,083. Filled rose from 996 to 1,066. The two lines are nearly equal every year.
     title "Diagnostic radiology PGY-2 positions, NRMP Main Match"
     x-axis [2022, 2023, 2024, 2025, 2026]
     y-axis "Positions" 900 --> 1120
-    bar "Offered" [997, 1006, 1017, 1057, 1083]
-    bar "Filled" [996, 1006, 1016, 1042, 1066]
+    line "Offered" [997, 1006, 1017, 1057, 1083]
+    line "Filled" [996, 1006, 1016, 1042, 1066]
 ```
 
 The other workforce numbers agree. The Neiman Health Policy
@@ -224,13 +224,13 @@ American radiology societies describes current tools as helping the
 radiologist's interpretation, not replacing it. Tools that act on their own
 are treated as a separate question needing their own evidence
 [@pmid:38276923]. Where a device stops and who is liable when a tool is wrong
-belong to [the ethics and regulation chapter](core-ethics-regulation.qmd). The point here is only that the
+belong to [the ethics chapter](core-ethics-regulation.qmd). The point here is only that the
 rules are built to keep a human involved in every decision, and rules change more slowly than
 benchmarks.
 
 **4. Demand: if the task gets cheaper, is more of it ordered?** Making a task
 cheaper does not obviously reduce the number of people doing it. This is the
-second of the course's three recurring lessons, **efficiency gains get eaten
+second of the course's four recurring lessons, **efficiency gains get eaten
 by volume**; economists call it the Jevons paradox. In the nineteenth century, more efficient steam
 engines led to more coal being burned, not less, because cheaper power got
 used more. Imaging works the same way: cheaper scans get ordered more often.
@@ -382,18 +382,21 @@ that publishes ten-year employment projections for every occupation, in its
 *Occupational Outlook Handbook*. Three of those occupations sit side by side
 in the medical records department (@fig-bls).
 
-```{mermaid}
-%%| label: fig-bls
-%%| fig-alt: "Bar chart of projected employment change 2025 to 2035. Medical transcriptionists minus 4 percent, medical records specialists plus 8 percent, health information technologists plus 16 percent."
-%%| fig-cap: "Projected employment change, 2025 to 2035, for three health-information occupations. Redrawn from the BLS Occupational Outlook Handbook pages for each occupation, read 2026-09-07. Same industry, same technology, opposite directions."
-xychart-beta
-    accTitle: Projected employment change, 2025 to 2035, for three health-information occupations
-    accDescr: Bar chart of projected employment change 2025 to 2035. Medical transcriptionists minus 4 percent, medical records specialists plus 8 percent, health information technologists plus 16 percent.
-    title "BLS projected employment change, 2025–2035 (percent)"
-    x-axis ["Medical transcriptionists", "Medical records specialists", "Health information technologists"]
-    y-axis "Percent change" -10 --> 20
-    bar [-4, 8, 16]
+::: {#fig-bls}
+
+```{=html}
+<div class="hbars" role="img" aria-label="Bar chart of projected employment change 2025 to 2035. Medical transcriptionists minus 4 percent, medical records specialists plus 8 percent, health information technologists plus 16 percent.">
+<div class="hbars-title">BLS projected employment change, 2025–2035 (percent)</div>
+<div class="hbar"><span class="lbl">Medical transcriptionists</span><span class="track"><span class="zero"></span><span class="bar neg" style="left:20%;width:13.33%"></span><span class="val" style="left:20%">−4%</span></span></div>
+<div class="hbar"><span class="lbl">Medical records specialists</span><span class="track"><span class="zero"></span><span class="bar" style="left:33.33%;width:26.67%"></span><span class="val" style="left:61%">+8%</span></span></div>
+<div class="hbar"><span class="lbl">Health information technologists</span><span class="track"><span class="zero"></span><span class="bar" style="left:33.33%;width:53.33%"></span><span class="val" style="left:88%">+16%</span></span></div>
+<div class="hbar axis"><span class="lbl"></span><span class="track"><span style="left:0">−10</span><span style="left:33.33%">0</span><span style="left:66.67%">+10</span><span style="left:100%">+20</span></span></div>
+</div>
 ```
+
+Projected employment change, 2025 to 2035, for three health-information occupations. Redrawn from the BLS Occupational Outlook Handbook pages for each occupation, read 2026-09-07. Same industry, same technology, opposite directions.
+
+:::
 
 | Occupation | 2025 jobs | Projected change, 2025–35 | BLS's stated reason |
 |---|---|---|---|
@@ -411,7 +414,9 @@ first test. The job is judgment about what a record means and what a payer
 will accept, and the bot wars above are *increasing* that work, not removing
 it. The people whose jobs change first are your colleagues, and the harm is
 not spread evenly. Transcription pays less than the two occupations that are
-growing, so the displaced workers are the ones with the least money in reserve. [The
+growing, so the displaced workers are the ones with the least money in reserve.
+That is the course's fourth recurring lesson, **who benefits, who bears the
+risk, who decides**, explained in [the ethics chapter](core-ethics-regulation.qmd). [The
 bias and equity chapter](core-bias-equity.qmd) has a name for that, harms of allocation, and it
 applies to jobs as much as to diagnosis.
 
@@ -447,6 +452,9 @@ Your institutional chatbot account does not change the no-PHI rule (no
 protected health information, ever). Free tiers may use what you type to
 train the next model. The one thing you will paste is a public government web
 page.
+
+What counts as patient information, and why taking out the name is not
+enough: [the patient information page](../course/patient-information.qmd).
 :::
 
 ### Part A: grade the model (10 minutes)
@@ -653,5 +661,5 @@ able to check.
   patients, providers, researchers, and administrators. It also lists eight
   guiding principles [@doi:10.1038/s43856-023-00279-9]. Two of them, "have
   high healthcare value" and "reduce overdiagnosis and overtreatment," are
-  the CAD story stated as rules. The deck is also in [the ethics and regulation chapter](core-ethics-regulation.qmd); the
+  the CAD story stated as rules. The deck is also in [the ethics chapter](core-ethics-regulation.qmd); the
   principles are also in [the appraisal chapter](core-appraisal.qmd).
