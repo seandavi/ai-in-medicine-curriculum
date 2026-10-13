@@ -264,10 +264,9 @@ was wrong.
 
 ## Do
 
-Use your university ChatGPT Edu or Copilot account. Every patient here is made
-up: do not model one on someone from a rotation, and do not paste a real note,
-message, or result. Free tiers may use what you type to train later models.
-See [the patient information page](../course/patient-information.qmd).
+Use your university ChatGPT Edu or Copilot account. Made-up patients only,
+not modelled on anyone from a rotation. [What counts as patient
+information](../course/patient-information.qmd).
 
 ### Part A: write your sentences, then improve them (20 minutes)
 
@@ -364,11 +363,13 @@ One thing to keep:   _____________________________________________
 One thing to change: _____________________________________________
 ```
 
-Bring this to [your Friday small group](../course/friday-groups.qmd) on
-October 30, if you like. Try the conversations from Parts A and B out loud with
-a classmate playing the patient. That is where you find out whether a sentence
-is heard the way you meant it. To practise another conversation first, change
-the character in the Part B prompt.
+Paste these into question 4 of your [learning
+journal](../course/learning-journal.qmd), "What changed for me". Then try the
+conversations from Parts A and B out loud with a classmate playing the
+patient, at any time, or bring them to Christina Olson's workshop on Monday 26
+October. Out loud is where you find out whether a sentence is heard the way
+you meant it. To practice another conversation, change the character in the
+Part B prompt.
 
 ## Check
 
@@ -390,20 +391,6 @@ computer was involved in their care; not the shape, the sentence. Second, go
 back to the desk. The phone is still listening and the two pages are still in
 front of you. In what order do you answer her two questions, and what is the
 first thing you say about the pages? If it is a correction, start again.
-
-## Summary
-
-- Raters called chatbot text more empathetic; in another study, the same kind
-  of text changed expectations least. You are the reason a patient follows the
-  handout.
-- Patients slightly prefer AI-drafted replies and are slightly less satisfied
-  when told. Tell them anyway.
-- The scribe can be refused; the alert in the chart cannot. Say which, say what
-  you do not know, and say whose note it is.
-- With a printout: say what is right first, ask what sent them, then give a
-  reason for each no.
-- What it did; what a person did; who is responsible. In that order.
-- A chatbot is a good practice patient. Friday is where you say it to a person.
 
 ## Go deeper
 
