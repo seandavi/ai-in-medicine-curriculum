@@ -8,21 +8,23 @@ execute:
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will be able to:
 
-1. Explain, using eGFR as the worked example, what it means for a formula to be
+1. Say how AI, machine learning, deep learning, and generative AI fit inside
+   each other, with an example of each.
+2. Explain, using eGFR as the worked example, what it means for a formula to be
    *learned from data* rather than worked out from theory, and name its
    predictors, its response, and the population it was learned from.
-2. Tell supervised from unsupervised learning by asking what the training data
+3. Tell supervised from unsupervised learning by asking what the training data
    contains, and classification from regression by asking what kind of answer
    the model gives.
-3. Say why a model's performance on data it has already seen tells you nothing
+4. Say why a model's performance on data it has already seen tells you nothing
    useful, and why separate training and test data is the least you should
    accept.
-4. Describe in plain words what a language model computes at each step, and
-   use that description to explain a made-up citation or a confident wrong
-   answer as a natural result of how the model works, not as a bug.
-5. Ask a chatbot to check its own facts and citations, and say what that
-   check does and does not catch, including why it cannot check facts about
-   your patient.
+5. Describe in plain words what a language model computes at each step. Use
+   that description to explain why a made-up citation reads exactly like a
+   real one.
+6. Ask a chatbot to check its own facts and citations, and say what that
+   check does and does not catch, including why ChatGPT Edu cannot check facts
+   about your patient.
 :::
 
 **Time.** About 30 minutes of reading (two of them moving the curve-fitting
@@ -94,6 +96,20 @@ that reason out loud, "it hallucinates" stops being an empty phrase. It becomes 
 prediction about when to check.
 
 ## How it works
+
+### Four words, each inside the one before
+
+Four words are often used as if they meant the same thing. Each is one kind
+of the one around it (@fig-circles). **Artificial intelligence** is a computer
+doing a task that seems to need judgment, by any method, even rules written by
+hand. **Machine learning** learns its rules from data. The eGFR equation,
+which a statistician would call a regression, is an example. **Deep learning**
+is machine learning with a **neural network**: many layers of simple units,
+each passing numbers to the next. **Generative AI** is deep learning that
+writes text or makes images. The large language model behind a chatbot is one
+kind. This chapter starts in the second circle and ends in the smallest.
+
+![Four words, each inside the one before. The examples are MYCIN (1970s) for AI, the eGFR equation for machine learning, a chest X-ray reader for deep learning, and a chatbot for generative AI. Drawn for this course.](../images/ai-nested-circles.svg){#fig-circles fig-alt="Four nested circles. The largest is artificial intelligence: a computer doing a task that seems to need judgment, such as MYCIN in the 1970s, whose rules were written by hand. Inside it is machine learning: the rules are learned from data, such as the eGFR equation. Inside that is deep learning: machine learning with many layers, a neural network, such as a model that reads chest X-rays. The smallest is generative AI: deep learning that writes new text or makes images, such as a chatbot."}
 
 ### A formula learned from data
 
@@ -845,11 +861,12 @@ top.
 
 | You can | Meets | Falls short |
 |---|---|---|
-| Name the eGFR model's predictors, response, and training population (objective 1) | Creatinine, age, sex; measured GFR; 8,254 research participants in 10 studies, and you can say why the last one matters for the patient in the clinic | "Creatinine and stuff" or a training population you cannot describe |
-| Sort four models with the two questions in @tbl-two-questions (objective 2): the eGFR; an EHR sepsis alert; a tool that groups tumor expression profiles with no diagnoses attached; a chatbot predicting the next token | Supervised regression; supervised classification; unsupervised; supervised (the next word is the label), and you can say why the last one needs no human labeler | Any row you had to guess |
-| Explain the three sentences from Part A (objective 3) | The third sentence says that training error alone would have picked 11, the most flexible setting, where the training error is zero; that the test error there is off the chart; and that the lowest test error is in the middle, near 3. It also says this is why a performance figure with no test set is not yet a number | The first two sentences only, or a third sentence that restates the training error |
-| Give the one-sentence explanation from Part B (objective 4) | One sentence about plausible next tokens, no "hallucinate", and it explains why the tone did not change when the answer was wrong | "It hallucinated" or "it made a mistake" |
-| Report what the check in Part C did (objective 5) | You say what the check corrected and what it marked as not found; you opened two links and say whether each source supports the claim; and you name something the check cannot catch, such as a real link that does not support the claim, or any fact about a patient, because the chatbot cannot see the chart | "It checked everything", or a record with no link opened |
+| Place four examples in the circles of @fig-circles (objective 1): MYCIN, with rules written by hand; the eGFR equation; a model that reads chest X-rays; a chatbot | AI only; machine learning; deep learning; generative AI. You can say what makes each one a kind of the one around it | Calling all four "AI" with nothing more, or putting the eGFR outside machine learning without a reason |
+| Name the eGFR model's predictors, response, and training population (objective 2) | Creatinine, age, sex; measured GFR; 8,254 research participants in 10 studies, and you can say why the last one matters for the patient in the clinic | "Creatinine and stuff" or a training population you cannot describe |
+| Sort four models with the two questions in @tbl-two-questions (objective 3): the eGFR; an EHR sepsis alert; a tool that groups tumor expression profiles with no diagnoses attached; a chatbot predicting the next token | Supervised regression; supervised classification; unsupervised; supervised (the next word is the label), and you can say why the last one needs no human labeler | Any row you had to guess |
+| Explain the three sentences from Part A (objective 4) | The third sentence says that training error alone would have picked 11, the most flexible setting, where the training error is zero; that the test error there is off the chart; and that the lowest test error is in the middle, near 3. It also says this is why a performance figure with no test set is not yet a number | The first two sentences only, or a third sentence that restates the training error |
+| Give the one-sentence explanation from Part B (objective 5) | One sentence about plausible next tokens, no "hallucinate", and it explains why the tone did not change when the answer was wrong | "It hallucinated" or "it made a mistake" |
+| Report what the check in Part C did (objective 6) | You say what the check corrected and what it marked as not found; you opened two links and say whether each source supports the claim; and you name something the check cannot catch, such as a real link that does not support the claim, or any fact about a patient, because the chatbot cannot see the chart | "It checked everything", or a record with no link opened |
 
 ## What this changes for you
 
