@@ -128,8 +128,10 @@ what usually appears in a note like this one. For Mr. Alvarez, the transcript
 could have been perfect and the summary could still say what is usual: that
 he continues apixaban. So read the draft against what the patient *said*, not
 against what sounds like a normal note. The [scribe open
-lab](../appendix/open-labs.qmd#hear-it-draft-it-check-it-a-scribe-from-the-inside)
-lets you watch each step make its own kind of error.
+lab](../appendix/open-labs.qmd) lets you watch each step make its own kind
+of error. Errors may also fall more often on some patients than others, such
+as people who speak through an interpreter. The evidence is in [Go
+deeper](#who-the-tool-fails).
 
 ### A note is a promise
 
@@ -259,7 +261,7 @@ Mr. Alvarez had a sign, a sentence at check-in, and then his own doctor
 starting the visit with the phone already on the desk. Could he comfortably
 have said no? What would have made that easier? How to have that conversation
 is in [the patient communication
-chapter](core-patient-communication.qmd#the-phone-on-the-desk-what-the-patient-can-refuse).
+chapter](core-patient-communication.qmd).
 
 Your health system also has its own rules on AI use, for example whether a
 patient can refuse an AI tool or a recording. The health system sets these
@@ -268,69 +270,31 @@ and UCHealth have some different rules, so check each one when you move
 between them. The rules also change. Know the current rules where you work,
 and follow them.
 
-### Who the tool fails
-
-A scribe does not fail everyone equally. The research is thin, but the results
-agree.
-
-- **Race.** In a 2020 study of five commercial speech recognition systems,
-  the average word error rate was 0.35 for Black speakers and 0.19 for White
-  speakers. That is roughly one word in three wrong, against one in five
-  [@pmid:32205437]. These were general speech recognition systems tested on
-  recorded interviews, not medical scribes, and they predate current tools.
-- **Language.** In simulated English and Spanish clinic visits, ambient
-  scribes carried interpreters' errors into the clinical note
-  [@pmid:42520279].
-- **Speech.** In a UK simulation with one scribe, summaries were broadly
-  stable across most accents. Word recognition fell markedly for one kind of
-  speech impairment (phonological impairment) [@pmid:42031419].
-
-The research for this chapter found no study of real-world scribe error
-rates by patient race, language, or disability. So the honest statement is
-narrow: the patients most likely to be misrecorded are probably not random.
-Had Mr. Alvarez spoken through an interpreter, the draft might have been more
-likely to be wrong, and he less able to read and correct it. [The bias and
-equity chapter](core-bias-equity.qmd) explains why harms like this follow
-existing inequity.
-
 ### Your relief, his risk
 
-The benefit to clinicians has been tested in randomized trials.
-
-- In a trial of 66 practitioners in clinics in two states, an ambient
-  scribe reduced work exhaustion and interpersonal disengagement. The increase in
-  professional fulfillment was not significant. Time on notes fell by 0.36
-  hours a day [@pmid:41625485].
-- In a trial of 238 outpatient physicians, one of two scribes cut time in
-  notes by 9.5%, and the other did not. Burnout scores suggested improvement
-  with both, as secondary outcomes that need confirmation. Clinicians said
-  clinically significant errors happened "occasionally" [@pmid:41497288].
-- In a trial of 160 volunteer outpatient clinicians at one academic center,
-  both products tested reduced burnout scores. After-hours time in the record
-  was largely unchanged [@pmid:41729180].
-
-The benefit to patients is less clear. In one primary care study, patients
-who knew about the scribe said the physician seemed more focused on them. But
-in a masked comparison of 304 patients' visits with and without the
-scribe, ratings of the patient-physician relationship did not differ
-[@pmid:38834180]. In a pilot of 31 physicians, compared with 125 control
-physicians across 31,917 patient surveys, ratings of communication and
-satisfaction did not change significantly [@pmid:42334196].
-
-So the clinician's relief is measured, and the patient's experience of the
-visit has not been shown to change in either direction. When the draft is
-wrong, the wrong fact sits in *his* record.
+The clinician's relief has been measured in randomized trials, described
+under Why this matters. Studies comparing visits with and without a scribe
+have found no clear change, better or worse, in how patients rate the visit
+[@pmid:38834180; @pmid:42334196]. When the draft is wrong, the wrong fact
+sits in *his* record.
 
 A made-up case: a scribe saves each clinician about 15 minutes a day, and
-the clinic fills that time with one more visit; who gained? [The workforce
-chapter](enrichment-workforce-economics.qmd#the-economics-the-debate-leaves-out)
-shows this volume lesson in real billing data; here it is a question of
-fairness.
+the clinic fills that time with one more visit. Who gained? [The workforce
+chapter](enrichment-workforce-economics.qmd) shows this pattern in real
+billing data; here it is a question of fairness.
 
 ::: {.callout-important title="The fourth recurring lesson: who benefits, who bears the risk, who decides"}
-The course's first three recurring lessons are **proxies fail**,
-**efficiency gains get eaten by volume**, and **the published number is the
-optimistic one**. This chapter explains the fourth. For any AI tool, ask:
+The course has four recurring lessons. The first three are:
+
+- **Proxies fail.** A proxy is a stand-in: something easy to measure, used in
+  place of what you care about, such as health care cost in place of
+  illness. A tool built on a stand-in goes wrong where the two differ.
+- **Efficiency gains get eaten by volume.** Time a tool saves is often filled
+  with more work.
+- **The published number is the optimistic one.** Results in everyday use
+  are usually worse than in the first paper.
+
+This chapter explains the fourth. For any AI tool, ask:
 
 1. **Who benefits?** For a scribe: the clinician, who is less exhausted, and
    the health system, which may bill more fully [@pmid:42745555]. Possibly
@@ -378,8 +342,8 @@ deeper](#liability-in-more-detail-optional).
 physician in your position would have done. They do not measure the AI
 against anything [@pmid:31584609; @pmid:38231630]. The same rule applied to
 a note drafted by a human scribe or a resident. As far as this
-course could find, no US malpractice claim involving a clinical AI tool had
-reached a verdict by September 2026.
+course could find in a search on 12 October 2026, no US malpractice claim
+involving a clinical AI tool had reached a verdict.
 
 **Recording law.** Several states, California among them, require every
 party's consent to record a conversation. Lawsuits in California allege that
@@ -402,11 +366,6 @@ Copilot are covered when you sign in with your university credentials on the
 Anschutz and Denver campuses. CU Boulder and personal accounts are not.
 Check your own institution's policy, and ask whether your clinic's scribe
 runs under one.
-
-**The FDA.** A scribe that records and summarizes, without recommending, is
-probably outside the US Food and Drug Administration's review of
-decision-support software. Check FDA's current position before you rely on
-that. If so, your review is the check.
 
 ## Watch or listen (optional)
 
@@ -579,6 +538,31 @@ why.
 
 Everything from here to the end of the chapter is optional and is not
 counted in the chapter's time.
+
+### Who the tool fails
+
+A scribe does not fail everyone equally. The research is thin, but the results
+agree.
+
+- **Race.** In a 2020 study of five commercial speech recognition systems,
+  the average word error rate was 0.35 for Black speakers and 0.19 for White
+  speakers. That is roughly one word in three wrong, against one in five
+  [@pmid:32205437]. These were general speech recognition systems tested on
+  recorded interviews, not medical scribes, and they predate current tools.
+- **Language.** In simulated English and Spanish clinic visits, ambient
+  scribes carried interpreters' errors into the clinical note
+  [@pmid:42520279].
+- **Speech.** In a UK simulation with one scribe, summaries were broadly
+  stable across most accents. Word recognition fell markedly for one kind of
+  speech impairment (phonological impairment) [@pmid:42031419].
+
+The research for this chapter found no study of real-world scribe error
+rates by patient race, language, or disability. So the honest statement is
+narrow: the patients most likely to be misrecorded are probably not random.
+Had Mr. Alvarez spoken through an interpreter, the draft might have been more
+likely to be wrong, and he less able to read and correct it. [The bias and
+equity chapter](core-bias-equity.qmd) explains why harms like this follow
+existing inequity.
 
 ### Do explanations help?
 
