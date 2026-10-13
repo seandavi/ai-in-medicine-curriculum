@@ -118,8 +118,8 @@ chapter's Do works in an ordinary chat, so you do not need it.
 
 Use your university account. At CU Anschutz that is **ChatGPT Edu**; the
 Canvas page "Get your ChatGPT Edu account" explains how to get it. If your
-account is not ready, use any free chatbot for today and move your work over
-later.
+ChatGPT Edu account is not ready, use your university Microsoft Copilot
+account today, and move your work over later.
 
 1. Go to [chatgpt.com](https://chatgpt.com) and sign in with your university
    email.
@@ -320,13 +320,16 @@ In your journal this week, answer two questions. What did the research show
 you that you would not have picked on your own? And what did you keep in your
 plan that no source told you to?
 
-## Three rules, every session
+## The rules
 
-1. **No patient information** in a chatbot unless your hospital has approved
-   that tool for it. See [patient information and AI
-   tools](../course/patient-information.qmd).
-2. **Make it yours.** Read what it gives you and change what does not fit.
-3. **You sign what you submit.** Whatever helped you write it, it is yours.
+The course has four rules, the same in every chapter:
+
+> Use your university ChatGPT Edu or Copilot account. Never put real patient
+> information into a course activity. Check what matters before you rely on
+> it. You sign the note.
+
+What counts as patient information is on [its own
+page](../course/patient-information.qmd).
 
 ## Go deeper
 
