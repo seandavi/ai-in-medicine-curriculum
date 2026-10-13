@@ -301,25 +301,8 @@ Black. All were adult outpatients without serious other illness; none were
 children [@pmid:34554658]. None were your patient. For anyone outside that
 set, the equation is guessing beyond what it saw. Statisticians call that
 guess an *extrapolation*. The history of the equation is a history of finding
-out where the guess failed.
-
-### The history of one equation is the history of its training set
-
-| Equation | Year | Learned from | Tested on | What broke, and where |
-|---|---|---|---|---|
-| MDRD | 1999 | 1,628 patients with chronic kidney disease, of whom 1,070 were the training sample | The remaining 558 | Fit to people with reduced GFR; gave values that were too low at higher GFR, so healthy people were labeled as diseased [@pmid:10075613; @pmid:19414839] |
-| CKD-EPI | 2009 | 8,254 participants in 10 studies | 3,896 in 16 studies | More accurate at higher GFR, but included a term that adjusted the result for Black race. The 2021 study found that the equation with this term overestimated measured GFR in Black adults by a median of 3.7 mL/min/1.73 m²; with the term simply removed, it underestimated by 7.1 [@pmid:19414839; @pmid:34554658] |
-| CKD-EPI 2021 | 2021 | 8,254 participants in 10 studies, refit without race | 4,050 in 12 studies | Now recommended for all US laboratories; the refit without race still gives values a few mL/min too low in Black adults and a few mL/min too high in non-Black adults, and a cystatin C version is more accurate [@pmid:34554658; @pmid:34563581] |
-
-: Three generations of the eGFR equation, rebuilt from the numbers in the papers. Each one is a formula learned from a population, and each one's known failure is in people outside that population. {#tbl-egfr-history}
-
-Read the last column as a pattern, not as nephrology. Every row says the same
-thing: *the model was fit to these people, and here is what happened to those
-people.* [the bias and equity chapter](core-bias-equity.qmd) takes up why the race term was there in
-the first place and who was harmed by it. For this chapter the point is narrower,
-and it applies to every model. The training population is a property of the
-model, as much as the equation is. You cannot judge the one without knowing
-the other.
+out where the guess failed; the box "If you have more time", later in this
+section, tells it.
 
 ### The loop, in general
 
@@ -368,16 +351,12 @@ model never saw. The 4,050-person validation set in the eGFR paper is that
 second set. When a claim about a model gives you one number and does not say
 which set it came from, you do not yet have a number.
 
-There are two ways to get this wrong, and each has a name. A model that is
-**too simple** cannot capture the real relationship no matter how much data it
-sees: the straight line through a curve. Statisticians call that error *bias*,
-in a technical sense that has nothing to do with the social meaning. A model
-that is **too flexible** learns the random scatter in its particular training
-set along with the real pattern. It fits those cases very closely and the next
-case badly: the wiggle through every point. That error is *variance*. You can
-see both on your own screen, with one slider, in Part A of the Do. The third
-sentence you write there is the one you will apply to every performance claim
-you are ever shown.
+There are two ways to get this wrong. A model that is **too simple** misses
+the real pattern: the straight line through a curve. A model that is **too
+flexible** learns the random scatter in its training cases along with the
+real pattern, so it fits those cases closely and the next case badly: the
+wiggle through every point. You will see both with one slider in Part A of
+the Do.
 
 The clinical version of the same failure is **dataset shift**: the patients
 the model meets in real use differ from the patients in its training set, so
@@ -390,62 +369,9 @@ in building the model. The model had an area under the
 curve of 0.63, on a scale where 0.5 is no better than chance and 1.0 is perfect. It
 missed 67 percent of patients with sepsis, and it alerted on 18 percent of all
 admissions [@pmid:34152373]. Nobody had lied about the development
-performance. It simply had not been measured on patients like those.
-
-A separate test set is necessary, but it is not enough. Here is a
-classification example from early in the COVID-19 pandemic, when many groups
-built models to label a chest X-ray as COVID-19 or not COVID-19.
-
-Roberts and colleagues reviewed published machine-learning papers that
-diagnosed COVID-19 from chest X-rays or CT scans. Sixty-two papers went
-through their full review. Sixteen of the 62 took their non-COVID images from
-one public dataset of pneumonia X-rays. Many did not mention that this dataset
-consists of children aged one to five. The COVID-19 images came from adults.
-In the reviewers' words, a model built this way "is likely to overperform as it
-is merely detecting children versus adults" [@doi:10.1038/s42256-021-00307-0].
-They also warned about what they called "Frankenstein datasets": collections
-assembled from other datasets.
-
-DeGrave and colleagues rebuilt models of this kind
-[@doi:10.1038/s42256-021-00338-7]. One of their datasets combined two
-sources. The COVID-19 X-rays came from a public collection on GitHub, many of
-them cropped from figures in published papers. The non-COVID X-rays came from
-one US hospital [@doi:10.1101/2020.09.13.20193565]. On a test set held back from the same
-sources, the models did well. On radiographs from a new hospital system, in the
-authors' words, "half of the model's predictive performance is lost".
-
-@fig-covid-average shows one reason. Each panel is the average of many X-rays
-from one source. The sources differ in places that have nothing to do with
-the disease: how dark the edges of the image are, and the letter marker that shows the
-patient's right or left side.
-
-![Average images from four sources of chest X-rays. Top row, two sources of non-COVID images; bottom row, two sources of COVID-19 images. Each column is one dataset. Look at the boxes, not the lungs. Solid boxes mark side markers that differ between sources. Dashed boxes mark differences in how dark the image edges are. A model can learn these differences instead of the disease. From DeGrave, Janizek and Lee (2020), Figure 3, medRxiv preprint [@doi:10.1101/2020.09.13.20193565], [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); image from [PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC7523163/).](../images/covid-xray-average-images-degrave-2020.jpg){#fig-covid-average fig-alt="Four blurry average chest X-rays in a two-by-two grid, labelled ChestX-ray14 and PadChest on top for COVID-19 negative, and GitHub-COVID and BIMCV-COVID-19+ below for COVID-19 positive. Dashed red boxes outline the dark top corners and side edges of every image, which differ in darkness between sources. Solid red boxes mark a side marker visible in the top-left of PadChest and a faint letter R on the left of BIMCV-COVID-19+."}
-
-The authors then used *explanation methods*, tools that show which parts of an
-image a model relied on. @fig-covid-saliency shows three examples. The models
-often relied on things outside the lungs: the side markers, arrows and text
-added to the image, the edges of the image, the diaphragm, and the outline of
-the heart. In one test, the authors swapped the side markers between a
-COVID-19 X-ray and a non-COVID X-ray, and the model's output shifted. Their
-conclusion was that taking the COVID-19 and non-COVID images from separate
-sources gave the models shortcuts.
-
-![What the model looked at. Left, three chest X-rays. Right, a *saliency map* for each: the pixels that most changed the model's answer, darker red for more influence. Top, a non-COVID X-ray: the model used the lungs (open arrow) but also the side marker in the top corner (closed arrow). Middle, a COVID-19 X-ray: the strongest pixels are in the bottom corners, outside the lungs. Bottom, a COVID-19 X-ray: the only highlighted area is the diaphragm. From DeGrave, Janizek and Lee (2020), Figure 2a, cropped from the full figure, medRxiv preprint [@doi:10.1101/2020.09.13.20193565], [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); image from [PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC7523163/).](../images/covid-xray-saliency-degrave-2020.jpg){#fig-covid-saliency fig-alt="Three chest X-rays on the left, labelled COVID-19 negative, COVID-19 positive, and COVID-19 positive, each beside a speckled red map on the right. Arrows on the maps point to a side marker in the top-right corner of the first image, to the two bottom corners of the second, and to the diaphragm in the third. A colour bar runs from 0th percentile, white, to 99th percentile, dark red."}
-
-This is not the overfitting described above. The researchers did split their
-data into training and test sets. But both sets came from the same mixed
-sources, so the test set had the same flaw as the training set and
-could not catch it. The model scored well by learning what told the sources
-apart, such as a child's chest or a side marker, instead of what told the
-diseases apart. The literature calls this *shortcut learning*. Epidemiologists
-would call the source a *confounder*: a third factor linked both to the images
-and to the label. At other hospitals the shortcut no longer pointed to the
-right answer. That is dataset shift again, hidden inside the test set.
-
-So a test set protects you only if it looks like the patients you will use the
-model on. When you read a claim like this, ask where each class of images came
-from. If the cases and the comparison group came from different places, the
-model may have learned to tell the places apart.
+performance. It simply had not been measured on patients like those. So a
+test set protects you only if it looks like the patients you will use the
+model on.
 
 ::: {.callout-important title="The one sentence"}
 A model's performance on the cases it was built from is usually the optimistic
@@ -454,6 +380,65 @@ published number is the optimistic one**, in its first form. Ask what it was
 trained on, and ask what it was tested on. If those
 are the same set, you have learned nothing yet. If the test set does not look
 like your patients, you have learned less than the number suggests.
+:::
+
+::: {.callout-note collapse="true" title="If you have more time: when a good result did not carry over"}
+**The eGFR equation, three times.** Each version was learned from a
+population, and each one's known failure is in people outside it.
+
+| Equation | Year | Learned from | Tested on | What broke, and where |
+|---|---|---|---|---|
+| MDRD | 1999 | 1,628 patients with chronic kidney disease, of whom 1,070 were the training sample | The remaining 558 | Fit to people with reduced GFR; gave values that were too low at higher GFR, so healthy people were labeled as diseased [@pmid:10075613; @pmid:19414839] |
+| CKD-EPI | 2009 | 8,254 participants in 10 studies | 3,896 in 16 studies | More accurate at higher GFR, but included a term that adjusted the result for Black race. The 2021 study found that the equation with this term overestimated measured GFR in Black adults by a median of 3.7 mL/min/1.73 m²; with the term simply removed, it underestimated by 7.1 [@pmid:19414839; @pmid:34554658] |
+| CKD-EPI 2021 | 2021 | 8,254 participants in 10 studies, refit without race | 4,050 in 12 studies | Now recommended for all US laboratories; the refit without race still gives values a few mL/min too low in Black adults and a few mL/min too high in non-Black adults, and a cystatin C version is more accurate [@pmid:34554658; @pmid:34563581] |
+
+: Three generations of the eGFR equation, rebuilt from the numbers in the papers. {#tbl-egfr-history}
+
+Every row says the same thing: *the model was fit to these people, and here is
+what happened to other people.* The training population is a property of the
+model, as much as the equation is. [The bias and equity
+chapter](core-bias-equity.qmd) takes up why the race term was there and who
+was harmed by it.
+
+**Chest X-rays and COVID-19.** A separate test set is necessary, but it is
+not enough. Early in the pandemic, many groups built models to label a chest
+X-ray as COVID-19 or not. A review of 62 such papers found that 16 took their
+non-COVID images from one public set of pneumonia X-rays from children aged
+one to five, while the COVID-19 images came from adults. In the reviewers'
+words, a model built this way "is likely to overperform as it is merely
+detecting children versus adults" [@doi:10.1038/s42256-021-00307-0].
+
+DeGrave and colleagues rebuilt models of this kind, with the COVID-19 and
+non-COVID X-rays from different sources [@doi:10.1038/s42256-021-00338-7].
+On a test set held back from the same sources, the models did well. On
+radiographs from a new hospital system, in the authors' words, "half of the
+model's predictive performance is lost". @fig-covid-average shows one reason:
+the sources differ in places that have nothing to do with the disease.
+@fig-covid-saliency shows that the models used those places, such as side
+markers, image edges, and the diaphragm. When the authors swapped the side
+markers between a COVID-19 X-ray and a non-COVID X-ray, the model's output
+shifted.
+
+![Average images from four sources of chest X-rays. Top row, two sources of non-COVID images; bottom row, two sources of COVID-19 images. Look at the boxes, not the lungs. Solid boxes mark side markers that differ between sources. Dashed boxes mark differences in how dark the image edges are. From DeGrave, Janizek and Lee (2020), Figure 3, medRxiv preprint [@doi:10.1101/2020.09.13.20193565], [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); image from [PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC7523163/).](../images/covid-xray-average-images-degrave-2020.jpg){#fig-covid-average fig-alt="Four blurry average chest X-rays in a two-by-two grid, labelled ChestX-ray14 and PadChest on top for COVID-19 negative, and GitHub-COVID and BIMCV-COVID-19+ below for COVID-19 positive. Dashed red boxes outline the dark top corners and side edges of every image, which differ in darkness between sources. Solid red boxes mark a side marker visible in the top-left of PadChest and a faint letter R on the left of BIMCV-COVID-19+."}
+
+![What the model looked at. Left, three chest X-rays. Right, a *saliency map* for each: the pixels that most changed the model's answer, darker red for more influence. Top, a non-COVID X-ray: the model used the lungs (open arrow) but also the side marker in the top corner (closed arrow). Middle, a COVID-19 X-ray: the strongest pixels are in the bottom corners, outside the lungs. Bottom, a COVID-19 X-ray: the only highlighted area is the diaphragm. From DeGrave, Janizek and Lee (2020), Figure 2a, cropped from the full figure, medRxiv preprint [@doi:10.1101/2020.09.13.20193565], [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); image from [PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC7523163/).](../images/covid-xray-saliency-degrave-2020.jpg){#fig-covid-saliency fig-alt="Three chest X-rays on the left, labelled COVID-19 negative, COVID-19 positive, and COVID-19 positive, each beside a speckled red map on the right. Arrows on the maps point to a side marker in the top-right corner of the first image, to the two bottom corners of the second, and to the diaphragm in the third. A colour bar runs from 0th percentile, white, to 99th percentile, dark red."}
+
+The test set came from the same mixed sources as the training set, so it had
+the same flaw and could not catch it. The literature calls this *shortcut
+learning*. An epidemiologist would call the source a *confounder*: a third
+factor linked both to the image and to the label. When you read a claim like
+this, ask where each group of images came from.
+
+**MYCIN and Watson.** MYCIN, a rule-based system for choosing antimicrobials
+built at Stanford in the 1970s, was evaluated blind by eight experts on ten
+meningitis cases. Its acceptability rating, 65 percent, was higher than that
+of any of the five faculty specialists it was compared with [@pmid:480542].
+It was never used in routine patient care [VERIFY: a source that MYCIN never
+entered clinical use; the cited evaluation does not say]{.verify}. IBM Watson
+went from winning *Jeopardy!* in 2011 to a cancer-center collaboration that
+was set aside in 2017 after an audit, without entering clinical use
+[@pmid:30053147]. Neither story argues that today's tools will fail. Both
+show that a striking result is not the same as a tool in use on the ward.
 :::
 
 ### From tables to words
@@ -577,24 +562,6 @@ history against the notes. Those are yours to check.
 
 So let the chatbot check the literature. Then open the link yourself before
 anything goes in a note or an order.
-
-::: {.callout-tip title="Two earlier systems worth thirty seconds"}
-The current systems have a history. **MYCIN**, a rule-based system for choosing
-antimicrobials built at Stanford in the 1970s, was evaluated blind by eight
-infectious-disease experts on ten meningitis cases. It received an
-acceptability rating of 65 percent, higher than any of the five faculty
-specialists it was compared with, and it never failed to cover a treatable
-pathogen [@pmid:480542]. It was never used on a patient. Performing well and
-being adopted are different problems.
-
-**IBM Watson** went from winning *Jeopardy!* in 2011 to a cancer-center
-collaboration that was set aside in 2017 after an audit. The trade press
-reported the cost as 62 million dollars. The system never entered clinical use
-[@pmid:30053147]. A demonstration is not a working tool on the ward. Neither
-story argues that the present tools will fail. Both argue that a
-demonstration, however striking, tells you very little about what happens on
-the ward.
-:::
 
 ## Watch or listen
 
