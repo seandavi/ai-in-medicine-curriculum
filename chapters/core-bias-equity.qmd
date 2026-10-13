@@ -445,12 +445,29 @@ Case: Care management risk score (Obermeyer et al. 2019)
 Questions 1 through 4 are lookups. Question 5 is the exercise. If you wrote a
 sentence there in under two minutes, go back.
 
-### Part B: a case of your own (20 minutes)
+### Part B: a case from your specialty, found with AI (25 minutes)
 
-Now add a row to @tbl-proxies for an algorithm in the specialty you are
-entering. Two ways to find one.
+This part is a [Learn it with AI](../course/learn-with-ai.qmd) step. The
+chatbot does the first search in seconds. You check one result and turn it
+into a row of your own.
 
-**A search recipe.** In PubMed, run:
+**1. Ask (5 minutes).** In ChatGPT Edu, paste this and fill in your
+specialty:
+
+```
+Name three algorithms in [my specialty] where what is measured differs
+from what matters, by race, sex or skin tone; for each, give the paper
+and mark it to be verified.
+```
+
+You will usually get three plausible cases, each with a paper and often a
+sentence that names the stand-in. That is a fast start. Most of a good answer
+is right; your job is to find out which parts.
+
+**2. Check one paper (10 minutes).** Pick the case that interests you most.
+Search its title in PubMed, in quotation marks. If nothing comes up, search
+the authors and the topic, or run this search and filter to the last five
+years:
 
 ```
 (algorithm OR "artificial intelligence" OR "machine learning" OR "risk score"
@@ -459,50 +476,27 @@ entering. Two ways to find one.
  OR "race-neutral")
 ```
 
-Filter to the last five years. Read three abstracts. Pick the one where you
-can name, from the abstract alone, both what the tool was supposed to measure
-and what it actually measured. If none of the three gives you both, that is
-itself a finding. Note it and pick the closest.
+Read the abstract. Does the paper exist as the chatbot described it? Does
+the abstract say what the chatbot said it says? Either answer is worth
+writing down. What you checked, how, and what you found is question 2 of your
+[learning journal](../course/learning-journal.qmd).
 
-**Or a pre-vetted case.** Each of these is verified and carries at least one
-open question about adoption, which is the part of the worksheet that teaches
-the most:
+**3. Write your row (10 minutes).** Fill in the Part A worksheet for your case,
+working from the abstract, not from the chatbot's summary. Then write your
+row in the four columns of @tbl-proxies. Keep the row. List the paper and its
+PubMed link in question 5 of your journal.
 
-- *Dermatology, primary care, oncology:* Daneshjou et al. 2022, the Diverse
-  Dermatology Images benchmark [@pmid:35960806], with the 2018 viewpoint that
-  predicted it [@pmid:30073260]. Note that the viewpoint is commentary, not
-  data, and cite it as such.
-- *Nephrology, internal medicine, transplant:* the race multiplier in eGFR,
-  from the catalog of race-adjusted algorithms [@pmid:32853499] to the
-  Task Force recommendation [@pmid:34563581].
-- *Pulmonology, occupational medicine, surgery:* race-neutral spirometry,
-  from the equation [@pmid:36383197] to the ATS statement [@pmid:36973004]
-  to the modeling of what changes [@pmid:38767252]. This is the case whose
-  correct question-4 answer is "contested". Do not simplify it to "fixed".
-- *Radiology, emergency medicine, critical care:* chest radiograph
-  underdiagnosis [@pmid:34893776]. Ask specifically who wrote the ground
-  truth, meaning the labels the model was trained to match.
-- *Any specialty using a chatbot:* language models repeating race-based
-  medicine [@pmid:37864012] and building demographic stereotypes into
-  differentials and plans [@pmid:38123252]. This is the case closest to what
-  you will use next year, and the one most likely to be a representation
-  harm.
+If none of the three cases checks out, or none fits, start from a row of
+@tbl-proxies near your specialty and its cited papers. Dermatology and
+primary care: dermatology image AI. Nephrology and transplant: eGFR.
+Pulmonology and surgery: spirometry. Radiology and emergency medicine: chest
+radiograph AI. Any specialty: large language models.
 
-Fill in the same seven-question worksheet for your case. Then write your row
-in the four columns of @tbl-proxies. That row is what you hand in, and the
-paper you found can be the check in question 2 of this
-week's [learning journal](../course/learning-journal.qmd).
-
-**Optional step, if you use a chatbot (5 minutes).** Ask your institutional
-ChatGPT Edu or Copilot: *"What does `<the tool from your case>` predict, and
-what is it used to decide?"* Then compare its answer to your worksheet line 1.
-Does it name the proxy, or does it describe the tool as measuring the thing
-it was hoped to measure? Models are good at the second and bad at the first,
-because the papers they learned from mostly wrote it that way. If it named
-the gap, note that it did. If it did not, you have just watched a stand-in
-turn into a "fact", in real time, from a fluent source. Either result is
-worth one sentence in your notes. If you do not use chatbots, skip this. The
-exercise is complete without it.
+**4. One more question (2 minutes).** Ask the chatbot:
+*"What does `<the tool from your case>` predict, and what is it used to
+decide?"* Compare the answer with your worksheet line 1. Current models often name the stand-in.
+Check whether yours does, or whether it describes the tool as measuring the
+thing it was hoped to measure. One sentence in your notes is enough.
 
 ## Check
 
@@ -510,6 +504,7 @@ Score yourself against this before moving on.
 
 | You have | Meets | Falls short |
 |---|---|---|
+| The paper behind your case | You found it in PubMed yourself and can say whether it matched what the chatbot said | Took the chatbot's citation on trust |
 | Worksheet line 1, both cases | Names the quantity that mattered *and* the thing measured, as two different things | Names the tool, or names one quantity |
 | Worksheet line 2, both cases | Names the group and the decision that went differently for them | Names the group only |
 | Line 4 | States a status and says where it came from; "could not determine" with a reason counts as meeting | A status with no source, or "fixed" without checking |
@@ -532,8 +527,8 @@ told, and what.
 
 Second, you will use a clinical algorithm in your first month of residency
 that nobody in this course has heard of. What is the one question you will
-ask about it? Write your phrasing, not the chapter's. The live session
-collects these in chat, and they are worth more than the table.
+ask about it? Write your phrasing, not the chapter's. It fits question 4 of
+your journal, and it is worth bringing to your Friday group.
 
 ## Go deeper
 
@@ -553,8 +548,7 @@ collects these in chat, and they are worth more than the table.
 - The oximeter regulatory story: the JAMA viewpoint on the draft guidance
   [@pmid:40042945] and the 34-device test against it [@pmid:40832401].
 - Clinicians and biased models, with explanations [@pmid:38112814]. The
-  supplementary material shows the heat maps the participants saw. [the ethics chapter](core-ethics-regulation.qmd)
-  redraws the result as a figure.
+  supplementary material shows the heat maps the participants saw.
 - Where the dermatology gap comes from and how it closes with data
   [@pmid:35960806].
 - The language-model cases [@pmid:37864012; @pmid:38123252]. Re-run their
@@ -572,7 +566,6 @@ collects these in chat, and they are worth more than the table.
 - [AI and ML in an oncology service line](https://talks.seandavis.net/archive/2024-10-28-ai-ml-oncology-service-line/)
   for the institutional part of the answer: who audits, who monitors, and
   what "incorporate biography" means when race is standing in for exposure.
-  Also in [the ethics chapter](core-ethics-regulation.qmd).
 - Kate Crawford, "The Trouble with Bias", NeurIPS 2017 keynote, the source of
   the allocation-versus-representation distinction. On YouTube, about 50
   minutes: <https://www.youtube.com/watch?v=fMym_BKWQzk> (a third-party
