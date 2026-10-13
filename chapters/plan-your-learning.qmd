@@ -83,6 +83,13 @@ asks whether AI wrote your note. Only you know that. A good plan uses both:
 the field's view, so you do not miss something important, and your own, so
 you actually follow it.
 
+### One topic a week, learned with AI
+
+The main hands-on work of the course is [Learn it with
+AI](../course/learn-with-ai.qmd): 2 to 4 hours a week, on your own, using AI
+to teach yourself a topic you choose. Your plan names that topic for each
+week. It can be the same topic all four weeks.
+
 ### A plan that changes
 
 The plan is a first draft. In week 2 a talk will interest you more than you
@@ -195,6 +202,9 @@ Week 4: Ethics: what you owe when you sign a note
   costs the planet.
 Every week: talks, guest talks from clinicians in
   several specialties, and a weekly learning journal.
+Every week, on my own: Learn it with AI, 2 to 4 hours
+  using AI to teach myself a topic I choose. This is
+  the main hands-on work of the course.
 ```
 
 The [preface](../index.qmd#the-chapters-week-by-week) has the same list with
@@ -227,10 +237,11 @@ colleague. A goal that is yours alone, with no source behind it, is fine.
 
 ```
 Turn my goals into a plan for the four weeks. For each
-week, list the chapters, talks, or labs I will use,
-one thing I will try with AI, and how I will know it
-worked. Keep it to about 8 to 10 hours a week,
-including live sessions. Leave room to change it.
+week, list the talks, chapters, or labs I will use,
+one topic I will learn with AI (2 to 4 hours, on my
+own), and how I will know it worked. Keep it to about
+8 to 10 hours a week, including sessions. Leave room
+to change it.
 ```
 
 Ask for the plan in the form you will use: a table, a Word document, a
@@ -305,7 +316,8 @@ Look at your plan and ask:
 | The research is in it | You can say which theme or source led to each part, or that the part is yours alone |
 | You are in it | It mentions your specialty, how you learn, or what worries you, not only the course's topics |
 | You checked something | You opened two sources and know whether they said what ChatGPT said |
-| It fits | About 8 to 10 hours a week, with room to spare |
+| You learn with AI each week | Each week names one topic you will learn with AI, and why you chose it |
+| It fits | About 8 to 10 hours a week, with room to change |
 | It can change | You know when you will look at it again, and how |
 
 : What a good plan looks like. {#tbl-check}
