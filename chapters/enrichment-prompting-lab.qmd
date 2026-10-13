@@ -88,8 +88,9 @@ in Sam's prompt, and the check that catches the error.
 
 The skill has a name: **prompting**, writing what you type to a language model
 so that what comes back is more useful. A **language model** is the program
-behind ChatGPT, Copilot, Claude, and Gemini. It produces text one word-piece (a word or
-part of a word) at a time, and the words you give it are the only thing it knows about your case.
+behind ChatGPT, Copilot, Claude, and Gemini. It writes text one word-piece (a
+word or part of a word) at a time. The words you give it are the only thing it
+knows about your case.
 
 **It is your job to learn where these tools help your work, and you learn that
 by trying.** If you would rather try first and read after, open your chatbot
@@ -108,9 +109,9 @@ those given GPT-4 scored higher than those with the usual resources alone
 [@pmid:39910272]. Checking is one step in that routine, not a reason to avoid
 the tool.
 
-Few students are taught this. In a study of 148 final-year medical students,
-only 5 percent had heard the phrase "clinical prompt engineering". The
-students judged GPT-3.5's answers to ten written cases, five of which the
+The skill is new to most students. In a study of 148 final-year medical
+students, only 5 percent had heard the phrase "clinical prompt engineering".
+The students judged GPT-3.5's answers to ten written cases, five of which the
 model had got wrong. On a typical answer, only 56 percent of the students
 judged correctly whether it was right [@pmid:39915801].
 
@@ -180,8 +181,8 @@ The right next step is imaging, not a D-dimer, because a positive D-dimer would
 only delay the scan. Newer pathways, such as a two-level Wells score ("PE
 likely" or "PE unlikely") or a D-dimer cutoff that rises with age, do not
 change this for Sam: she scores "PE likely", and she is under 50. Both answers
-got this wrong. Only one of them put it in a
-column headed "Next step" beside a column of supporting findings.
+got this wrong. Only one of them put it in a column headed "Next step" beside
+a column of supporting findings.
 
 That is why the neat answer needs more care, not less. **Automation bias** is
 trusting a machine's suggestion more than it deserves, and even more when the
@@ -205,8 +206,8 @@ with your name on it.
 **Podcast.** *NEJM AI Grand Rounds*, "Medicine, Machines, and Magic: Dr.
 Jonathan Chen on Medical AI" (15 October 2025; 48 min).
 <https://ai-podcast.nejm.org/e/medicine-machines-and-magic-dr-jonathan-chen-on-medical-ai/>
-Chen led two of the first randomized trials of physicians using a chatbot
-(see Go deeper). The first twenty minutes are enough.
+Chen is an author of both randomized trials in Go deeper, and senior author
+of the first. The first twenty minutes are enough.
 
 ## Do
 
