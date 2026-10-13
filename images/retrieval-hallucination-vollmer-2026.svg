@@ -34,5 +34,5 @@
   <!-- legend -->
   <rect x="120" y="18" width="14" height="14" fill="#8a7a5a"/><text x="140" y="30">Without retrieval</text>
   <rect x="280" y="18" width="14" height="14" fill="#1565c0"/><text x="300" y="30">With guideline retrieval</text>
-  <text x="335" y="330" text-anchor="middle" font-size="11" fill="#666">Six models, 50 clinical-guideline questions. Redrawn from Vollmer et al., Diagnostics 2026, CC BY 4.0.</text>
+  <text x="335" y="330" text-anchor="middle" font-size="11" fill="#666">Five base models, 50 clinical-guideline questions. Redrawn from Vollmer et al., Diagnostics 2026, CC BY 4.0.</text>
 </svg>

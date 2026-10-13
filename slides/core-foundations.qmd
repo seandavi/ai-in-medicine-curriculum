@@ -1117,7 +1117,7 @@ LIVE: Skip in a live session.
 ::: panel
 [Watch: inside a language model]{.ptitle}
 
-**[3Blue1Brown, *But what is a GPT?*](https://www.youtube.com/watch?v=yMQPQuz5WpA)**, April 2024, 27 minutes. A visual tour of the inside of the model, including attention.
+**[3Blue1Brown, *Transformers, the tech behind LLMs*](https://www.youtube.com/watch?v=wjZofJX0v4M)** (first titled *But what is a GPT?*), April 2024, 27 minutes. A visual tour of the inside of the model, including attention.
 :::
 :::
 ::::

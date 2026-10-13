@@ -190,7 +190,8 @@ helps with.
 
 ## A study guide that cites its sources
 
-Load a few published papers you chose into NotebookLM, ask it questions, and
+Load a few published papers you chose into Gemini Notebook (formerly
+NotebookLM), ask it questions, and
 check each answer against the paper it cites. You will see what grounding in
 your own sources fixes, and what it does not. Written out in full in [the
 grounding chapter](../chapters/enrichment-rag-notebooklm.qmd).
