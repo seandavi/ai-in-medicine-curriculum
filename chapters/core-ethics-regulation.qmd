@@ -648,16 +648,13 @@ contradicted, and you signed it. Which box is that?
 A defense that says "the tool showed its reasoning, so the physician should
 have caught it" must answer the Jabbour evidence in @fig-jabbour.
 
-**Attestation.** Where your institution's policy calls for it, record that
-the note was drafted with ambient documentation and reviewed by you. Many
-systems add that line automatically. If yours does, know what it says. It is
-an **attestation**, a statement in your name that something is true.
-
 **Cleared is not validated.** FDA clearance means the manufacturer convinced
 FDA the device is about as safe and effective as something already on the
-market. Of 130 FDA decision summaries for AI devices, about half reported any
-clinical performance data [@pmid:33820998], and a 2024 follow-up found the
-gap persists [@pmid:39187696].
+market. An analysis of the 903 AI-enabled devices the FDA had authorized by
+August 2024 found a clinical performance study reported for about half of
+them [@pmid:40305017]. An earlier analysis, published in 2024, reached the
+same conclusion: not every authorized AI tool has been clinically validated
+[@pmid:39187696].
 
 ### Papers
 
@@ -687,8 +684,8 @@ gap persists [@pmid:39187696].
 
 ### The regulatory detail (optional)
 
-About 15 minutes. Everything here was current in early September 2026, and
-much of it will change.
+About 15 minutes. Everything here was checked on 12 October 2026, and much
+of it will change.
 
 **Where a tool becomes a medical device.** Software that gives clinicians
 recommendations is either a medical device, regulated by FDA, or it is not.
@@ -775,18 +772,18 @@ the plan do not trigger a new review
 The question to ask any vendor: if the model on my unit today is not the
 model that was cleared, what did clearance tell me?
 
-::: {.callout-note title="Your right to see inside the EHR's tools: status as of September 2026"}
-[The appraisal chapter](core-appraisal.qmd) said you have something close to
-a legal right to see how a decision-support tool inside your EHR was built and
-tested. The federal HTI-1 rule (2024) requires certified EHRs to show "source
-attributes" for predictive decision-support tools: what they were trained on,
-how they were validated, whether fairness was tested. **It is in force.**
-Developers began collecting a year of real-world performance data in January
-2026. But in January 2026 the same office proposed a rule to loosen this,
-called HTI-5. It would remove the "model card" source-attribute requirements
-entirely. The stated reason is that clinicians rarely opened them. The comment
-period closed on 27 February 2026. As of this writing, HTI-5 has not been
-finalized ([ASTP/ONC, HTI-5 proposed
+::: {.callout-note title="Your right to see inside the EHR's tools: status as of 12 October 2026"}
+You may read that you have something close to a legal right to see how a
+decision-support tool inside your EHR was built and tested. The federal
+HTI-1 rule (2024) requires certified EHRs to show "source attributes" for
+predictive decision-support tools: what they were trained on, how they were
+validated, whether fairness was tested. **It is in force.** Developers began
+collecting a year of real-world performance data in January 2026. But the
+same office has proposed a rule to loosen this, called HTI-5, published in
+the Federal Register on 29 December 2025. It would remove the "model card"
+source-attribute requirements entirely. The stated reason is that clinicians
+rarely opened them. The comment period closed on 27 February 2026. As of 12
+October 2026 we found no final HTI-5 rule ([ASTP/ONC, HTI-5 proposed
 rule](https://www.healthit.gov/topic/laws-regulation-and-policy/hti-5-proposed-rule-fact-sheet)).
 So the right exists today and may not next year.
 :::
@@ -800,23 +797,19 @@ December 2027 for standalone high-risk systems, and to August 2028 for AI
 built into regulated products, which is where medical devices sit
 ([Regulation (EU) 2026/1744; see the Orrick summary, July
 2026](https://www.orrick.com/en/Insights/2026/07/EU-AI-Act-Update-Digital-Omnibus-Finalizes-8-Compliance-Changes)).
-Over the same period, the United States withdrew its 2023 executive order on
+The new dates are 2 December 2027 and 2 August 2028 (checked 12 October
+2026). Over the same period, the United States withdrew its 2023 executive order on
 AI safety, loosened rules at both FDA and ONC, and tried, so far without a
 statute, to override state AI laws.
 
 ::: {.callout-note title="Your insurer, briefly"}
-Malpractice insurers have not written AI out of their policies. The chief
-operating officer of The Doctors Company told Medical Economics in 2025 that
-the carrier has no AI exclusion, and that it would defend a physician and pay a
-covered claim when AI played a role
-([interview](https://www.medicaleconomics.com/view/ai-on-trial-how-malpractice-insurers-can-help-physicians-navigate-new-risks)).
-The carrier reprinted the interview in its own newsletter. Across the wider
-market, insurers decide case by case, and they advise physicians to tell
-their insurer before adopting a clinical AI tool
-[VERIFY: quote against the Medical Economics interview; the carrier's site links it but does not repeat the wording; checked 2026-09-08]{.verify}.
-For a resident, the coverage that matters first is your institution's.
-Someone in the GME office can tell you what it says. Ask in orientation, not
-after.
+For a resident, the malpractice coverage that matters first is your
+institution's. Someone in the GME office can tell you what it says about AI
+tools. Ask in orientation, not after. The chief operating officer of one
+malpractice carrier, The Doctors Company, has advised physicians to judge
+each AI tool on its own: what data it was trained on, and whether its
+accuracy holds up over time ([Medical Economics, 9 October
+2025](https://www.medicaleconomics.com/view/ai-on-trial-how-malpractice-insurers-can-help-physicians-navigate-new-risks)).
 :::
 
 **Optional exercise: has it changed? (about 15 minutes).** Pick one question.
@@ -843,10 +836,11 @@ document itself.
 Check the date on each before quoting it.
 
 - [FDA, Clinical Decision Support Software](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software)
-- [FDA, AI-enabled medical devices list](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices).
-  1,614 authorizations at the 4 September 2026 update; 335 decisions in 2025, a
-  record year; about three quarters in radiology. The FDA says the list is not
-  complete, so re-count from its CSV and give the date when you quote it.
+- [FDA, AI-enabled medical devices list](https://www.fda.gov/medical-devices/artificial-intelligence-enabled-medical-devices/list-artificial-intelligence-enabled-medical-devices).
+  1,614 authorizations on the version dated 4 September 2026 (counted 12
+  October 2026); 335 decisions in 2025, a record year; about three quarters
+  in radiology. The FDA says the list is not complete, so re-count it and
+  give the date when you quote it.
 - [ASTP/ONC, HTI-1 and HTI-5](https://www.healthit.gov/topic/laws-regulation-and-policy/hti-5-proposed-rule-fact-sheet)
 - [HHS, business associate contracts](https://www.hhs.gov/hipaa/for-professionals/covered-entities/sample-business-associate-agreement-provisions/index.html)
 
