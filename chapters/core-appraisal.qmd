@@ -1,12 +1,12 @@
 ---
 title: "Critical appraisal: checking AI tools, their answers, and the evidence about both"
-subtitle: "About 75 minutes"
+subtitle: "About 70 minutes"
 ---
 
 ::: {.callout-tip title="In short"}
-- **The idea.** With web search on, ChatGPT Edu gives you mostly real
-  references, and a minute in PubMed per reference tells you which ones to
-  trust. The same habit works on a vendor's slide: ask where each number came
+- **The idea.** Asked as a clinician, with web search on, a chatbot such as
+  ChatGPT Edu usually gives you real references, and a minute in PubMed per
+  reference tells you which ones to trust. The same habit works on a vendor's slide: ask where each number came
   from, and what kind of study produced it. Cleared by the FDA is not the same
   as tested on patients like yours.
 - **What you do.** Ask ChatGPT Edu, with web search on, for three references
@@ -32,8 +32,8 @@ By the end of this chapter you will be able to:
 4. Sort claims about a clinical AI tool into randomized, observational, and
    vendor or trade-press evidence, and explain why the three tiers disagree in the
    same direction.
-5. Explain why FDA clearance is not evidence of clinical performance, using the
-   published analyses of FDA decision summaries.
+5. Explain why FDA clearance is not evidence of clinical performance, using a
+   published analysis of the devices the FDA has authorized.
 6. Tell a wrong reference from a wrong claim from a wrong attribution, and say
    which of the three a search-first tool actually fixes.
 7. Ask six questions about a tool you have never seen, and say why each one is
@@ -189,32 +189,14 @@ the source. A tool that searches the web can find and repeat a loop like this.
 xkcd 978, *Citogenesis*, by Randall Munroe,
 [CC BY-NC 2.5](https://xkcd.com/license.html).](../images/citogenesis.png){#fig-xkcd-cito .comic fig-alt="xkcd comic in four panels titled Citogenesis: a writer invents a fact and adds it to Wikipedia, a journalist cites Wikipedia, Wikipedia then cites the journalist, and the loop closes with the fact now sourced."}
 
-The third row is the one that matters on the wards, and it fails in fluent
-prose. In one study, 33 physicians across 17 specialties wrote 284 questions and
-graded the answers. The median score was 5.5 out of 6. But 36 answers scored 1
-or 2, meaning mostly or completely wrong [@pmid:37782499].
-In another, oncologists checked chatbot treatment recommendations for breast,
-prostate, and lung cancer against the NCCN guidelines, the standard US cancer
-treatment guidelines. Every output contained at
-least one option that matched a guideline. About a third also contained at least
-one that did not. One in eight recommended a treatment that was not in any
-guideline [@pmid:37615976]. The authors' phrase for the pattern is worth remembering:
-the tool was most likely to *mix incorrect recommendations among correct ones*,
-an error difficult even for experts to detect.
-
-Both studies also found the answers changed with the wording of the question
-and with the model version. That is the "these numbers move" point again, this
-time for answers rather than references.
+The third row is the one that matters on the wards. When 33 physicians graded
+chatbot answers to 284 of their own questions, the median answer was almost
+completely correct, but 36 answers were rated mostly or completely wrong
+[@pmid:37782499].
 
 ### What the published rates look like
 
-Three studies give the range. Across 20 medical questions put to ChatGPT, 41 of 59
-generated references (69%) were fabricated [@pmid:40206627]. In a psychiatry
-test, only 2 of 35 citations were real [@pmid:37499282]. A 2026 comparison of
-five tools used the 2/1/0 scale you will use below. It found zero fabrications
-from OpenEvidence, which searches PubMed directly. The general-purpose models
-ranged from Claude at 78.0% accuracy to Gemini at a 26.2% fabrication rate
-[@pmid:42232526].
+Three studies show how far the rates vary.
 
 | Study | Setting | Result |
 |---|---|---|
@@ -292,19 +274,16 @@ The three tiers disagree in the same direction. Pre/post studies of
 health-system rollouts report large drops in burnout. The randomized trials
 mostly report smaller gains, and the one with a large drop was very small. The
 trials that measured after-hours charting found no change that held up, and
-that is the outcome that justifies the whole product category. In the largest study to date, across five
-academic systems and 8,581 clinicians, total EHR time fell 13.4 minutes per day
-and documentation time 16.0 minutes per day, with 0.49 more visits per week. But
-after-hours EHR time did not change significantly [@pmid:41920565]. You will work
-out why in the exercise, before reading the explanation.
+that is the outcome that justifies the whole product category. In the largest
+study to date, across five academic systems, adopting a scribe was linked to
+modest drops in EHR and documentation time and slightly more visits a week, but
+not to less EHR time after hours [@pmid:41920565]. You will work out why in the
+exercise, before reading the explanation.
 
-This is the third of the course's four recurring lessons (the fourth, *who
-benefits, who bears the risk, who decides*, comes in [the ethics
-chapter](core-ethics-regulation.qmd)): **the published number is the
-optimistic one.** The 0.49 extra visits may also be a small
-example of the second, **efficiency gains get eaten by volume**: time saved
-tends to get filled with more work. [The workforce chapter](enrichment-workforce-economics.qmd)
-explains how that saved time turns into billing.
+The lesson to keep: **the published number is usually the optimistic one.**
+The extra visits may show another: time saved tends to get filled with more
+work. [The workforce chapter](enrichment-workforce-economics.qmd) looks at
+where saved time goes.
 
 ### "But it's FDA-cleared, isn't it fine?"
 
@@ -327,23 +306,15 @@ all. If you remember one sentence from this chapter, remember this one, and the
 paper with it.
 :::
 
-The device boundary, the Predetermined Change Control Plan, and the clinical
-decision support criteria belong to [the ethics chapter](core-ethics-regulation.qmd). The
-FDA's list of AI-enabled devices held 1,614 authorizations when it was updated
-on 4 September 2026, with decisions through June 2026. The FDA says the list is
-not complete, and one product can appear more than once, so quote the count
-with its date.
-
 ### What a trustworthy tool looks like
 
 Everything so far grades evidence that already exists. The tool at lunch is new,
 and there may be no literature yet. You still need something to ask.
 
-The most useful checklist is FUTURE-AI, a consensus of 117 experts from 50
-countries published in the *BMJ* in 2025. It reduces trustworthy clinical AI to
-six principles and 30 practices [@pmid:39909534]. The six principles, and the
-question each one becomes when a vendor is standing in front of you, are in
-@tbl-future-ai.
+The most useful checklist is FUTURE-AI, an international consensus guideline
+published in the *BMJ* in 2025. It reduces trustworthy clinical AI to six
+principles [@pmid:39909534]. The six principles, and the question each one
+becomes when a vendor is standing in front of you, are in @tbl-future-ai.
 
 | Principle | What it means | The question for the vendor |
 |---|---|---|
@@ -360,42 +331,16 @@ Two things to notice. Traceability asks where things came from, and that is what
 this chapter's first half is about. A tool that shows you its sources next to
 its answer has answered it. A tool that writes a reference list has not. And
 none of the six asks whether the tool is accurate on a benchmark, a fixed test
-set used to compare tools. Accuracy is
-necessary, and it appears under robustness. It is not the checklist, because a
-tool can be accurate on the population it was built on and fail every other row.
-
-::: {.callout-note title="You have a right to some of these answers"}
-In the United States, the ONC HTI-1 rule requires decision-support tools inside
-certified EHRs to show the clinician their "source attributes": what the tool was
-trained on, how it was validated, and whether fairness was tested. That is the
-closest thing to a legal right to traceability. It applies to the tool built
-into your EHR, not to the consumer chatbot on your phone. The rule is in force
-as of September 2026. A proposed rule, HTI-5, would remove the source-attribute
-requirement; [the ethics chapter](core-ethics-regulation.qmd) tracks its status.
-:::
+set used to compare tools. Accuracy is necessary, and it appears under
+robustness. It is not the checklist, because a tool can be accurate on the
+population it was built on and fail every other row.
 
 There is a seventh question the six do not ask. It belongs to the patient in
 the room rather than the clinician: does the patient know the visit is being
 recorded, and did they agree? No tier of evidence in Part B answers it, and no
 vendor slide will. Ask it anyway.
 
-### Two findings to keep in your pocket
-
-One is a warning against overconfidence. When 148 final-year students evaluated
-ChatGPT answers to ten clinical vignettes, five of them deliberately wrong, the
-median rate of correct evaluation was 56% [@pmid:39915801]. Students credited
-their case-based and pathology teaching for the errors they caught. Only 5% had
-heard the term "clinical prompt engineering". You are better prepared than that
-group only if you search rather than judge by appearance.
-
-The other is a warning against dismissing these tools altogether. In a randomized trial of 50
-physicians, access to a language model did not significantly improve diagnostic
-reasoning (adjusted difference 2 points, 95% CI −4 to 8). The model alone scored
-16 points higher than physicians using conventional resources (95% CI 2 to 30)
-[@pmid:39466245]. A tool can be capable and still fail to help the person
-holding it. That is an appraisal finding about humans.
-
-## Watch or listen
+## Watch or listen (optional)
 
 **Podcast.** *NEJM AI Grand Rounds*, "The OpenEvidence Episode: Dr. Travis Zack
 on the Future of Clinical Evidence" (May 20, 2026; 66 min).
@@ -405,19 +350,11 @@ Zack is OpenEvidence's chief medical officer, so this is the search-first side
 of @fig-citation-paths described by someone who builds it. Listen for how the
 tool decides what counts as evidence, and for what he says trust depends on. Then
 ask the question this chapter asks of everything: what would have to be true for
-that to hold, and who has checked? Thirty minutes is enough for the exercise; the
-rest is worth hearing when you have time.
+that to hold, and who has checked? The first thirty minutes are enough.
 
 **Video alternative.** "Travis Zack on OpenEvidence and the Future of Medical AI",
 Stanford Department of Medicine, YouTube (July 2026; 44 min).
 <https://www.youtube.com/watch?v=nrfGSE__7po>
-
-**For the second half.** *NEJM AI Grand Rounds*, "What Values are in AI? A
-Conversation with Dr. Zak Kohane" (December 17, 2025; 78 min).
-<https://ai-podcast.nejm.org/e/what-values-are-in-ai-a-conversation-with-dr-zak-kohane/>
-Listen for the remark that ambient documentation spread not because it improves
-accuracy or throughput but because it improves clinician satisfaction. Compare that
-with the evidence tiers in Part B.
 
 ## Do
 
@@ -542,7 +479,7 @@ study's design, not testing its result.
 ### Part B: grading the evidence (20 minutes)
 
 Below are ten claims about ambient AI scribes, with their sources removed. Sort
-each into a tier (randomized trial, large observational, or vendor and trade
+each into a tier (randomized trial, observational, or vendor and trade
 press), rate your confidence from 1 to 5, and give a one-line reason. Then answer
 the two closing questions before you open the solution.
 
@@ -675,7 +612,8 @@ an answer to either.
 - A published classroom framework built around AI citation errors, in biology but
   usable in medicine [@pmid:42200655].
 - The randomized trial of physicians with model access [@pmid:39466245], and the
-  student error-catching study [@pmid:39915801].
+  study of 148 students judging GPT-3.5's answers to ten cases, five of which
+  the model had got wrong [@pmid:39915801].
 - FUTURE-AI in full, with the 30 practices behind the six principles
   [@pmid:39909534]; and TRIPOD-LLM, the reporting guideline a *study* of a
   language model should meet [@pmid:39779929], which is the standard most of
@@ -689,6 +627,15 @@ an answer to either.
 - The first large health-system report on ambient scribes [@doi:10.1056/CAT.23.0404],
   read alongside the five-system study [@pmid:41920565].
 
+**Listen**
+
+- *NEJM AI Grand Rounds*, "What Values are in AI? A Conversation with Dr. Zak
+  Kohane" (17 December 2025; 78 min).
+  <https://ai-podcast.nejm.org/e/what-values-are-in-ai-a-conversation-with-dr-zak-kohane/>
+  Listen for the remark that ambient documentation spread because it improves
+  clinician satisfaction, not accuracy or throughput. Compare that with the
+  evidence tiers in Part B.
+
 **Talks**
 
 - [Grounding AI in real sources](https://talks.seandavis.net/archive/2025-10-07-rag-notebooklm-idpt-8079/)
@@ -697,8 +644,8 @@ an answer to either.
   is [the retrieval chapter](enrichment-rag-notebooklm.qmd)'s reading alternative.
 - [Prompt engineering](https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/):
   ten rules with clinical examples, including the "precise language" rule that the
-  clinician-versus-patient wording effect illustrates. [the prompting lab](enrichment-prompting-lab.qmd) is based on
-  this deck.
+  clinician-versus-patient wording effect illustrates. The [prompting
+  lab](enrichment-prompting-lab.qmd) builds on this deck.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/)
   covers attribution and academic integrity, for the moment you use one of these
   tools in a research project.
