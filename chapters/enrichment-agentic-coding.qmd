@@ -30,8 +30,9 @@ what each one asks of you at signup, are listed in the Do block.
 
 Fourth month of intern year, hepatology service. The second-year resident on
 your team built a web page over a weekend. You paste in five lab values. It
-gives you a MELD-Na score, the number that ranks patients for a liver
-transplant, and tells you whether the patient is above the listing threshold.
+gives you a MELD-Na score, which estimates how likely a patient with liver
+disease is to die in the next three months. It also tells you whether the
+patient has reached the team's threshold for a transplant referral.
 It is bookmarked on every workroom computer. The attending mentioned it on
 rounds as an example of initiative. Everyone uses it, and you have used it
 twice today.
@@ -39,8 +40,8 @@ twice today.
 This morning the transplant coordinator calls about a patient with a
 creatinine of 1.6 who has been on dialysis since Tuesday. The team's number
 for her is 24. The coordinator's number is 32. Eight points is the difference
-between waiting and being listed. The coordinator wants to know where 24 came
-from.
+between waiting and being referred this week. The coordinator wants to know
+where 24 came from.
 
 ::: {.app-mock}
 <div class="bar">⬤ ⬤ ⬤ &nbsp; teamtools.local/meld &nbsp;·&nbsp; MELD-Na quick calc</div>
@@ -51,7 +52,7 @@ from.
 <div class="row flag"><span>Creatinine (mg/dL)</span><span>1.6</span></div>
 <div class="row"><span>Sodium (mmol/L)</span><span>134</span></div>
 <div class="row flag"><span>Dialysis ≥2× this week</span><span>(no field)</span></div>
-<div class="score"><b>24</b><span>MELD-Na · below listing threshold</span></div>
+<div class="score"><b>24</b><span>MELD-Na · below referral threshold</span></div>
 </div>
 <div class="banner">Built with ChatGPT · for team use</div>
 <div class="fine">Illustrative tool for this chapter, drawn in CSS; not a real product. The highlighted rows are where the two numbers part company.</div>
@@ -60,20 +61,20 @@ from.
 Look at the tool before reading on. It has no place to say the patient is on
 dialysis. That is not a bug in the arithmetic. The formula the resident asked
 for was built exactly as described. What the description left out was a rule
-the original paper attached to the formula. When a patient has had dialysis
+the transplant system attached to the formula. When a patient has had dialysis
 twice in the past week, creatinine is set to 4.0 before it enters the
 equation, whatever the lab says. Apply that rule to this patient and the score
 moves from 24 to 32. The coordinator is right. (The tool also accepts a sodium
-of 118 without comment, though the paper limits sodium to 125 at the lowest.
-That rule did not matter for this patient. It will for the next one.)
+of 118 without comment, though the score's rules limit sodium to 125 at the
+lowest. That rule did not matter for this patient. It will for the next one.)
 
 Nobody lied. Nobody was careless in the ordinary sense. The tool worked
 perfectly for the first thirty patients, none of whom were on dialysis. The
 resident asked a language model for a MELD-Na calculator and got one. What
 the resident did not do was ask what the paper says happens at the edges. And
 nobody on the team, including you, checked. The patient does not know the
-project exists. Because of a number from a weekend project, she would have waited
-unlisted.
+project exists. Because of a number from a weekend project, she would have
+waited.
 
 This chapter is about building a tool like that yourself, in about fifteen
 minutes, and then spending twenty finding what is wrong with it. The build is
@@ -413,7 +414,7 @@ CHA₂DS₂-VASc; it is the one the worked example below is written for.
 |---|---|---|---|
 | Medicine, cardiology, neurology | CHA₂DS₂-VASc (stroke risk in atrial fibrillation) | Lip et al., *Chest* 2010 [@pmid:19762550] | Two age bands that cannot both be true at once; the "female sex" point, which some current guidelines no longer score; the annual stroke-risk percentages come from a *different* paper [@pmid:22246443] |
 | Emergency medicine | Wells' criteria for pulmonary embolism | Wells et al., *Thromb Haemost* 2000 [@pmid:10744147] | Half-point items and rounding; a three-tier and a two-tier version with different cutoffs; "PE is the most likely diagnosis" is a judgment, not a finding |
-| Surgery, gastroenterology, transplant | MELD-Na | Kim et al., *NEJM* 2008 [@pmid:18768945]; MELD itself, Kamath et al., *Hepatology* 2001 [@pmid:11172350] | Values below 1.0 are set to 1.0; creatinine capped at 4.0 and set to 4.0 with dialysis; sodium limited to 125–137; the sodium term applies only above a MELD threshold; MELD 3.0 replaced it for listing in 2023 |
+| Surgery, gastroenterology, transplant | MELD-Na | Kim et al., *NEJM* 2008 [@pmid:18768945]; MELD itself, Kamath et al., *Hepatology* 2001 [@pmid:11172350]; the US transplant system's rules for both, set out in Kim et al., *Gastroenterology* 2021 [@pmid:34481845] | Values below 1.0 are set to 1.0; creatinine capped at 4.0 and set to 4.0 with dialysis; the 2008 paper limits sodium to 125–140, the transplant system to 125–137, and adds the sodium term only when MELD is above 11; MELD 3.0 replaced MELD-Na on the national waiting list in 2023 |
 | Critical care, emergency medicine | qSOFA | Seymour et al., *JAMA* 2016 [@pmid:26903335] | The Glasgow Coma Scale cutoff (any score below 15, not a lower threshold); the systolic pressure boundary is ≤100, not <100; what the score is *for* (screening outside the ICU, not diagnosis) |
 | Psychiatry, primary care, pediatrics | PHQ-9 | Kroenke et al., *J Gen Intern Med* 2001 [@pmid:11556941] | Nine items scored 0–3 and the severity bands between them; item 9, on self-harm, needs a response the calculator should not leave to a colour |
 | Radiology | Fleischner 2017 incidental pulmonary nodule follow-up | MacMahon et al., *Radiology* 2017 [@pmid:28240562] | A decision table, not a sum: solid versus subsolid, single versus multiple, size bands, and a risk category; the guideline explicitly excludes several populations, and the tool will not know that unless told |
@@ -496,10 +497,11 @@ has chosen for you.
 **MELD-Na, expected.** The formula will be right. What tends to be missing
 is exactly what the opening scenario depended on. No dialysis field, so
 creatinine is never set to 4.0. Values below 1.0 are not raised to it. No
-limits on sodium, so a sodium of 118 enters the equation as typed. And no
-check that the sodium term applies only above the MELD threshold. Ask the
-page for a patient on dialysis and one with a sodium of 118, then compare to
-MDCalc.
+limits on sodium, so a sodium of 118 enters the equation as typed. No check
+that the sodium term applies only above the MELD threshold. And if it does
+limit sodium, no word on whose limits it uses, the 2008 paper's or the
+transplant system's. Ask the page for a patient on dialysis and one with a
+sodium of 118, then compare to MDCalc.
 
 Your run will differ from these expectations in both directions. Models
 change monthly, and the same prompt produces different code on different
