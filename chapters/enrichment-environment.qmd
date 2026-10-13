@@ -74,11 +74,10 @@ from the company that runs the model. The two figures differ by a factor of
 about two thousand. Neither person has read past the headline. Neither, until
 Friday, have you.
 
-This is the same problem [the appraisal chapter](core-appraisal.qmd) gave you at lunch with a
-vendor: a number that arrives without its method. The difference is that this
-one is about the planet rather than about burnout. That means it comes with
-more feeling and less checking. The question is the appraisal question again:
-*what did they count, and did anyone check?*
+This is a common problem with numbers in medicine: a number that arrives
+without its method. Numbers about the planet are often repeated and rarely
+checked. The question to ask is the same as for any cited number: *what did
+they count, and did anyone check?*
 
 ## Why this matters
 
@@ -130,17 +129,13 @@ the paper gives the per-response figure as a bottle per 10 to 50
 medium-length responses.
 
 **September 2024.** *The Washington Post* worked with the same Riverside
-group to estimate what a 100-word email written by GPT-4 costs. They reported
-519 mL of water and 0.14 kWh of electricity for a typical US data center, with
-a range by location from about 235 mL in Texas to about 1,400 mL in Washington
-state: about a bottle, and about fourteen LED bulbs for an hour. The headline
-was "A bottle of water per email."
-[VERIFY: figures and location assumptions taken from Tom's Hardware and TechRepublic coverage of the Post article; the article itself is paywalled and was not read, 2026-09-08]{.verify}
-Notice what has changed since the preprint: a much larger model, a specific
-task rather than a "simple" question, and a number roughly twenty to fifty
-times larger per interaction, whatever the exact assumptions were. The
-resident's bottle is this headline, with "per email" changed to "per note"
-by a year of repetition.
+group on a new estimate. A 100-word email written by GPT-4, it reported,
+uses 519 mL of water and 0.14 kWh of electricity in a typical US data
+center. The headline was "A bottle of water per email." Notice what has
+changed since the preprint: a much larger model, a specific task rather than
+a "simple" question, and a number roughly twenty to fifty times larger per
+interaction. The resident's bottle is this headline, with "per email"
+changed to "per note" by a year of repetition.
 
 **August 2025.** Google published a technical report on what a median Gemini
 text prompt costs on its own computers: 0.24 Wh of energy, 0.03 grams of
@@ -186,10 +181,9 @@ dispute about facts.
 
 : Four published per-query figures and what each counted. All are real; none can be compared with the others without adjustment. Altman's figure is included because it circulates; his post gives no method. {#tbl-what-counted}
 
-[the appraisal chapter](core-appraisal.qmd) gave you three things that can be wrong with a cited
-claim (@tbl-three-failures): the reference (does the source exist), the attribution (does it say
-what it is quoted as saying), and the claim itself (is it true). Apply the
-three to the bottle. The *reference* is fine: the preprint exists, the
+Three things can be wrong with a cited claim. The reference: does the source
+exist? The attribution: does the source say what it is quoted as saying? And
+the claim itself: is it true? Apply the three to the bottle. The *reference* is fine: the preprint exists, the
 newspaper analysis exists. The *attribution* is where it failed. A bottle per
 20 to 50 questions became a bottle per email, which became a bottle per note,
 and none of those is what the source said. The *claim*, whether AI use is a
@@ -216,23 +210,16 @@ water number does not. Li et al. counted both kinds of water but assumed the
 energy. Nobody in @tbl-what-counted is lying. They are answering different
 questions.
 
-**Which query.** A median prompt, or a long one. A short answer, or a
-100-word email, which the *Post* analysis may have treated as more than one
-request. A plain reply, or a "reasoning" setting, where the model writes out
-a page of working before it answers. An independent test of thirty commercial
-models reported short queries around 0.42 Wh and the highest-energy
-models above 29 Wh for a long prompt, more than 65 times the most efficient
-model on the same task
+**Which query.** A long prompt, a 100-word email, or a "reasoning" setting
+costs far more than a short question. An independent test of thirty
+commercial models found short queries near 0.42 Wh, and the models that used
+the most energy above 29 Wh for a long prompt
 ([Jegham et al., arXiv 2505.09598](https://arxiv.org/abs/2505.09598),
 May 2025).
 
-**Which model, and when.** GPT-3 in 2023 and Gemini in 2025 are not the same
-object. When *MIT Technology Review* had open models (ones anyone can
-download and run) measured on the same hardware, the smallest Llama 3.1
-model used about 114 joules per response
-with overhead, and the largest about 6,706. That is a microwave running for a
-tenth of a second versus eight seconds, a sixtyfold spread from model size
-alone
+**Which model, and when.** On the same hardware, the largest open model that
+*MIT Technology Review* had measured used about sixty times the energy per
+response of the smallest
 ([O'Donnell and Crownhart, 20 May 2025](https://www.technologyreview.com/2025/05/20/1116327/ai-energy-usage-climate-footprint-big-tech/)).
 Google's 33-fold drop in twelve months is the same kind of spread, produced
 by time instead of size. A figure without a model and a date is not a figure.
@@ -255,10 +242,11 @@ right. It is which year and which model it belongs to.
 ### Small per query, large in total
 
 Take the most favorable documented figure and do the arithmetic this chapter
-depends on. Forty students, fifteen queries a week, four weeks: 2,400
-queries. At Google's 0.24 Wh that is 0.58 kWh, a microwave running for half
-an hour. At 0.26 mL it is 624 mL of on-site water, a bottle and a bit, for
-the whole class for the whole month. At 0.03 g CO~2~e a query it is 72 g.
+depends on. Forty-nine students, fifteen queries a week, four weeks: 2,940
+queries. At Google's 0.24 Wh that is about 0.71 kWh, a microwave running for
+about forty minutes. At 0.26 mL it is about 760 mL of on-site water, a bottle
+and a half, for the whole class for the whole month. At 0.03 g CO~2~e a query
+it is about 88 g.
 Compare that with US health care's own measured footprint: 1,692 kg CO~2~e
 per person per year in 2018, the highest of any industrialized nation, with
 388,000 disability-adjusted life-years lost that year to the sector's
@@ -268,34 +256,26 @@ of one percent of one person's share.
 State the limit of that calculation, because you will be tempted to
 stop there. It uses the one per-query carbon figure a vendor has published,
 which is also the most favorable of the energy figures, and it counts on-site
-water only. At the *Post*'s 519 mL the class would have used about 1,250
+water only. At the *Post*'s 519 mL the class would have used about 1,500
 litres. The honest sentence is this: at the best-documented rate, an
 individual's use is negligible, and the published rates differ by about a
 thousandfold.
 
 Then notice that the individual question is not the question. Google's
-energy per prompt fell 33-fold in a year. Google's total emissions, on its
-own reports, were 48 percent above its 2019 level in 2023, 51 percent above
-in 2024, and 81 percent above in 2025, with data-center electricity use up 37
-percent in the last of those years
+energy per prompt fell 33-fold in a year. Its total emissions went the other
+way. On its own reports, they were 48 percent above its 2019 level in 2023,
+51 percent above in 2024, and 81 percent above in 2025
 ([ESG Dive, 2 July 2025](https://www.esgdive.com/news/googles-emissions-rise-despite-data-center-decarbonization-ppas-environmental-report-2025/752236/);
 [ESG Dive, 2 July 2026](https://www.esgdive.com/news/googles-emissions-continue-to-climb-due-to-ai-buildout/824373/)).
+Its data centers' electricity use rose 37 percent in 2025 alone.
 This is the second of the course's four recurring lessons, **efficiency
 gains get eaten by volume**. Economists call it the Jevons effect, after the
 observation in 1865 that more efficient steam engines led Britain to burn more
-coal, not less. When a
-unit of something gets cheaper, people use enough more of it that the total
-rises. Per-query efficiency is real, and growth in use is faster than the saving. The
-US Department of Energy's national laboratory put data centers at 176
-terawatt-hours (TWh, a billion kilowatt-hours) in 2023, 4.4 percent of US
-electricity, and projected 6.7 to 12 percent by 2028
+coal, not less. When a unit of something gets cheaper, people use enough more
+of it that the total rises. Per-query efficiency is real, but use is growing
+faster: a US national laboratory projects data centers rising from 4.4
+percent of US electricity in 2023 to 6.7 to 12 percent by 2028
 ([Berkeley Lab, December 2024](https://newscenter.lbl.gov/2025/01/15/berkeley-lab-report-evaluates-increase-in-electricity-demand-from-data-centers/)).
-The International Energy Agency projects global data-center demand doubling,
-from about 415 TWh in 2024 to about 945 TWh by 2030
-([IEA, *Energy and AI*, April 2025](https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai)).
-Other bodies project higher. The estimates disagree on method and on how
-fast AI is adopted. The right thing to do is quote the range with its date,
-not to average it.
 
 The consequence for the resident is uncomfortable in both directions. Her
 opting out of the scribe changes nothing measurable. And the medical
