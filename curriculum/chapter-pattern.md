@@ -1,29 +1,105 @@
 # Chapter pattern
 
-**Status: shaping decision, 2026-09-06.** The student-facing course is a Quarto book
-in the style of [RBiocBook](https://seandavi.github.io/RBiocBook): self-explaining
-chapters, one per module, with an LLM chat over the sources as tutor and async path.
-The talks at <https://talks.seandavis.net> are linked as resources and used in the
-live demo block; they are not ported. This file is the skeleton every chapter follows.
+**Status: shaping decision, 2026-09-06; top and bottom of the chapter and
+success first revised 2026-10-12 (issue #89).** The student-facing course is a
+Quarto book in the style of [RBiocBook](https://seandavi.github.io/RBiocBook):
+self-explaining chapters, one per module. (An LLM chat tutor over the sources
+was planned in September and dropped in October 2026; the answer keys remain as
+instructor notes.) The talks at <https://talks.seandavis.net> are linked as
+resources; they are not ported. This file is the skeleton every chapter follows.
+
+## Shape of a chapter (2026-10-12)
+
+Make the first phone screen useful. Every chapter opens like this:
+
+```markdown
+---
+title: "...unchanged..."
+subtitle: "About 60 minutes"
+---
+
+::: {.callout-tip title="In short"}
+- **The idea.** One or two plain sentences: the main point, stated as what
+  the student can now do well.
+- **What you do.** One sentence, starting with the task that works.
+- **What you keep.** The thing the student leaves with (a template, a card,
+  a prompt, a plan).
+- **Short on time?** Which two or three sections to read, and which part of
+  the Do to do.
+:::
+
+::: {.callout-note title="What you'll learn"}
+...objectives...
+
+Course competencies: AIM-6 (talking to patients), AIM-4 (ethics and law).
+:::
+
+**What you need.** Your university ChatGPT Edu or Copilot account. Nothing to
+install. Made-up patients only.
+```
+
+- The subtitle is the honest total only, "About N minutes". No competency
+  codes in the subtitle.
+- The AIM codes are the last line of the objectives callout, each with its
+  name from the preface (`index.qmd`, "In short: AIM-1 foundations; ...").
+- The old **Time.** paragraph becomes **What you need.** Keep one sentence of
+  time breakdown only if it helps.
+- **No `## Summary` at the bottom.** Its best lines go into "In short". The
+  chapter ends with "What this changes for you" (the standing question) and
+  "Go deeper".
+- Valuable optional material goes to Go deeper or into one collapsed callout
+  per chapter: `::: {.callout-note collapse="true" title="If you have more
+  time: <topic>"}`.
+- The chapters are a guide, not assignments (said to students on 2026-10-12).
+  A core chapter goes with the Monday talk: read it after the talk, or instead
+  of it.
+
+## Success first (2026-10-12)
+
+The course mantra is *it is your job to learn where AI helps your work, and
+you learn that by trying*. Students arrive wary of chatbots
+(`design-constraints.md`, constraint 5). A student should leave each chapter
+having succeeded with the tool and knowing how to check it, not having watched
+it fail.
+
+- Every Do opens with a task the student can succeed at, on something they
+  care about, and ends with something they keep.
+- Checking is part of the routine, not a hunt: "Ask, then check. Most of a
+  good answer is right; your job is to find out which parts." ChatGPT Edu
+  searches the web, so a step that promises the model will fail may not fail.
+  Never write "the model failing is the expected result"; write "it may get
+  this right; if so, how would you know?"
+- A failure demonstration may stay only after a success, and it is framed as
+  learning which parts to trust.
+- In "Why this matters" and the closing lines, state what the tool does well
+  with the evidence, and do not qualify every success in the next sentence.
+  The rules (patient information, check, you sign) stay. The ethicist still
+  vetoes harm: do not overstate benefits either.
 
 ## Budget
 
-**1–2 hours per chapter**, self-paced. Rough split:
+**Core chapters aim for about 60 minutes; menu chapters for 60 to 75**
+(revised 2026-10-12; the September budget was 1 to 2 hours). Count honestly:
+prose outside Do, Check, and Go deeper at 200 words a minute, plus the time a
+first-time student would really need for the Do, plus 5 to 10 minutes for
+Check and the standing question. If cutting cannot reach the target, the
+subtitle states the true number. Rough split, in reading order:
 
 | Block | Minutes | What |
 |---|---|---|
-| Opening scenario | 5 | A clinical situation an MS4 recognizes, before any term of art is used — see *Opening scenario* |
-| Why this matters | 5 | Two paragraphs: what this changes in residency in three months |
-| The idea | 20–30 | Prose with figures and tables; replaces the didactic block of the live session |
-| Watch or listen | 15–30 | One video or podcast episode — see *Multimedia* |
-| Do | 30–45 | The module's activity, written so one student alone can finish it — see *Specialty choice* |
-| Check | 5–10 | Rubric in the chapter; answer key **not rendered**, held in `_answers/` for the tutor only |
-| Standing question | 5 | *What does this change about how you'll practice?* Written, not optional |
-| Go deeper | — | Papers, talks, blogs, videos; every entry carries the `[VERIFY]` convention from `research/` |
+| In short | 1 | The box at the top: the idea, what you do, what you keep, short on time (see *Shape of a chapter*) |
+| What you'll learn, What you need | 2 | Objectives, with the competencies as the callout's last line; one line on the account and "made-up patients only" |
+| Opening scenario | 3 | A clinical situation an MS4 recognizes, before any term of art is used (see *Opening scenario*) |
+| Why this matters | 3 | What this changes in residency by next July, and what the tool does well, with the evidence |
+| The idea | 15–20 | Prose with figures and tables |
+| Watch or listen | 5–10 | One video or podcast episode, with where to stop (see *Multimedia*) |
+| Do | 20–30 | Opens with a task that works, ends with something kept; one student alone can finish it (see *Specialty choice* and *Success first*) |
+| Check | 5 | Rubric in the chapter; answer key **not rendered**, held in `_answers/` as instructor notes |
+| Standing question | 5 | *What does this change about how you'll practice?* The opening scenario comes back with a better answer |
+| Go deeper | Not counted | Papers, talks, blogs, videos; every entry carries the `[VERIFY]` convention from `research/` |
 
-The live session then runs the same Do with breakouts and the cross-group comparison;
-the chapter is the pre-work and the make-up path. Six chapters at the low end of the
-budget is ~8 h of self-study across four weeks, on top of the weekly resource log.
+No Summary block at the bottom. In fall 2026 the course director's talks are
+the main event in weeks 2 to 4, and each core chapter is their companion.
 
 ## Opening scenario
 
@@ -119,9 +195,9 @@ mechanisms, in order of preference:
    tooling before listing; a fabricated citation in an appraisal chapter is
    disqualifying.
 
-Papers a student finds this way count toward that week's resource log, and the
-Do says so with a link to `course/resource-log.qmd`; the two assignments share
-the work rather than duplicating it.
+Papers a student finds this way can go in question 5 of that week's learning
+journal (`course/learning-journal.qmd`); the Do and the journal share the work
+rather than duplicating it. (Until 2026-10-12 this was the resource log.)
 
 ## Language
 
@@ -146,7 +222,8 @@ warning sign). The three recurring ideas keep their fixed names.
 
 - No PHI, ever; everything uses synthetic data.
 - Free tiers only; no installs; browser-based tools.
-- Each chapter stands alone and tags its `AIM-*` competencies.
+- Each chapter stands alone and tags its `AIM-*` competencies in the
+  objectives callout.
 - Verification flags (`[VERIFY]`, `[UNVERIFIED]`, `[CONFLICTING]`) travel from
   `research/` into chapters; they are not cleaned up until the claim is checked.
 

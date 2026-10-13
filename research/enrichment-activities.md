@@ -1366,15 +1366,18 @@ teaching irony: the regulator's own tool hallucinates.
 [FDA press release](https://www.fda.gov/news-events/press-announcements/fda-expands-artificial-intelligence-capabilities-agentic-ai-deployment) ·
 [Applied Clinical Trials](https://www.appliedclinicaltrialsonline.com/view/fda-elsa-ai-tool-raises-accuracy-and-oversight-concerns)
 
-**510(k) / De Novo criticism.** Wu E, Wu K, Daneshjou R, et al. "How medical AI devices are
-evaluated: limitations and recommendations from an analysis of FDA approvals." *Nature
-Medicine* 2021;27:582–584.
-[link](https://www.nature.com/articles/s41591-021-01312-x). Clinical performance data
-reported for only ~half of approved devices; ~1/4 explicitly had none; of those with data,
-<1/3 gave sex-specific results and ~1/4 age-subgroup results (n=130 decision summaries). The
-2024 follow-up, "Not all AI health tools with regulatory authorization are clinically
-validated" ([link](https://www.nature.com/articles/s41591-024-03203-3)), shows the gap
-persists.
+**510(k) / De Novo criticism.** Windecker D, Baj G, Shiri I, et al. "Generalizability of
+FDA-Approved AI-Enabled Medical Devices for Clinical Use." *JAMA Netw Open*
+2025;8(4):e258052. pmid:40305017. Of 903 AI-enabled devices listed by the FDA as of 31 August
+2024: clinical performance studies reported for 505 (55.9%); 218 (24.1%) explicitly stated
+none was done; among clinical studies, 145 (28.7%) gave sex-specific data and 117 (23.2%)
+addressed age subgroups. Corrected 2026-10-12: these figures were earlier attributed here to
+Wu E, Wu K, Daneshjou R, et al., *Nature Medicine* 2021;27:582-584 (130 decision summaries;
+pmid:33820998; [link](https://www.nature.com/articles/s41591-021-01312-x)), whose PubMed
+record has no abstract, so its own figures were not checked. "Not all AI health tools with
+regulatory authorization are clinically validated" (*Nat Med* 2024, pmid:39187696,
+[link](https://www.nature.com/articles/s41591-024-03203-3)) also has no abstract in PubMed;
+cite it for its title's claim only.
 
 ### 5.2 Liability
 

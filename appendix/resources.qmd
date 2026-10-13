@@ -197,13 +197,13 @@ Use made-up cases only. Never enter patient information into these tools.
   <https://www.openevidence.com>
 - **Learn 80% of NotebookLM in Under 13 Minutes** (Jeff Su, 2024; video;
   13 min). A quick tour of NotebookLM, Google's free tool that answers
-  questions from documents you upload. It pairs with the
-  [NotebookLM chapter](../chapters/enrichment-rag-notebooklm.qmd).
+  questions from documents you upload. It pairs with the chapter
+  [Grounding AI in real sources](../chapters/enrichment-rag-notebooklm.qmd).
   <https://youtu.be/EOmgC3-hznM>
 
 <!--
-How this page was built (2026-10-07, drafted by Claude Code; needs a human
-check and an AI-LEDGER.md row before merge).
+How this page was built (2026-10-07, drafted by Claude Code; see the
+AI-LEDGER.md row of that date).
 
 Source: Google Sheet "Contributed AI Learning Resources" (717 rows). Only
 title, URL, description, rating, and timestamp year were read. Email and name

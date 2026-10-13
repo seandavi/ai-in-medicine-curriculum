@@ -1,42 +1,49 @@
 # Preface {.unnumbered}
 
-This is the student-facing book for a four-week, ungraded elective on AI in
+This is the student-facing book for a four-week, pass/fail elective on AI in
 medicine for fourth-year medical students. Its one idea: **it is your job to
 learn where AI helps your work, and you learn that by trying.** The chapters
-are a framework, not a curriculum that tries to teach everything. Each week has
-one core chapter and a menu to choose from, and most of your learning happens
-when you [use AI to teach yourself](course/learn-with-ai.qmd). Each chapter
-stands alone. Nothing in the book needs an install, a paid account, or a real
-patient.
+are a guide, not assignments. They give you a framework; they do not try to
+teach everything. Each week has one core chapter and a menu to choose from,
+and most of your learning happens when you [use AI to teach
+yourself](course/learn-with-ai.qmd). Each chapter stands alone. Nothing in the
+book needs an install, a paid account, or a real patient.
 
 ## How to read a chapter
 
-Every chapter follows the same structure, and the headings are the same in every
-one:
+Read what helps you with the week's work, and skip what does not. Every
+chapter has the same parts, in the same order:
 
-1. **An opening scenario.** A clinical situation you will recognize, before
-   any jargon. About five minutes.
-2. **Why this matters.** What changes in residency in three months. Five
-   minutes.
-3. **How it works.** The idea, in prose, with figures and tables. Twenty to
-   thirty minutes.
-4. **Watch or listen.** One video or podcast episode, with a note on what to
-   listen for and where you can stop. Fifteen to thirty minutes.
-5. **Do.** The activity, written so you can finish it alone. Wherever it
-   touches the literature, you choose your specialty. Thirty to forty-five
-   minutes.
-6. **Check.** A rubric you score yourself against. Five to ten minutes.
-7. **What this changes for you.** The standing question, *what does this
-   change about how you'll practice?* Written down, not optional, and the
-   scenario from the opening comes back with a better answer.
-8. **Go deeper.** Papers, talks, and videos. Claims nobody has yet checked are
-   flagged `[VERIFY]` and left flagged until someone has.
+1. **In short.** A box at the top: the main idea, what you do, what you keep,
+   and which sections to read if you are short on time. The subtitle under
+   the chapter title gives the honest total time.
+2. **What you'll learn, and what you need.** The objectives, the course
+   competencies the chapter serves, and what you need for the activity.
+   Usually that is only your university account.
+3. **An opening scenario.** A clinical situation you will recognize, before
+   any jargon.
+4. **Why this matters.** What changes for you in residency, which starts
+   next July.
+5. **How it works.** The idea, in prose, with figures and tables.
+6. **Watch or listen.** One video or podcast episode, with a note on what to
+   listen for and where you can stop.
+7. **Do.** The activity, written so you can finish it alone. It starts with a
+   task that works, and it ends with something you keep. Wherever it touches
+   the literature, you choose your specialty.
+8. **Check.** A rubric you score yourself against.
+9. **What this changes for you.** The standing question, *what does this
+   change about how you'll practice?* The scenario from the opening comes back
+   with a better answer.
+10. **Go deeper.** Papers, talks, and videos. Claims nobody has yet checked
+    are flagged `[VERIFY]` and left flagged until someone has.
 
-A chapter's subtitle gives its time budget and the competencies it serves
-(`AIM-1` through `AIM-9` and `AIM-X`; the coverage table below says what each
-one is). The safety rules are short: **use your university account; never put
-real patient information into a course activity; check what matters before you
-rely on it; you sign the note.**
+There is no summary at the bottom; the "In short" box at the top does that
+job. The competencies are named by code, `AIM-1` through `AIM-9` and `AIM-X`;
+the coverage table below says what each one is.
+
+The safety rules are short. **Use your university ChatGPT Edu or Copilot
+account. Never put real patient information into a course activity. Check what
+matters before you rely on it. You sign the note.**
 
 Four ideas recur across the chapters, and each is named the same way wherever
 it appears. **Proxies fail**: almost every AI failure in medicine is a stand-in
@@ -49,9 +56,9 @@ it. A chapter that uses one of these says so.
 
 ## The chapters, week by week
 
-Each week has one **core** chapter and a **menu**. Read the core; choose from
-the menu. The [syllabus](course/syllabus.qmd) gives the live sessions, the
-weekly routine, and the due dates. Each week you also write a short
+Each week has one **core** chapter, which goes with Monday's talk, and a
+**menu** to choose from by interest. The [syllabus](course/syllabus.qmd) gives
+the live sessions, the weekly routine, and the due dates. Each week you also write a short
 [learning journal](course/learning-journal.qmd) entry about what you tried.
 Whoever runs the course reads the [For instructors](appendix/instructors.qmd)
 appendix.
@@ -119,7 +126,7 @@ professional identity, the closing question.
 | [Learning journal](course/learning-journal.qmd) | | ○ | | ○ | | | | | ● | ○ |
 | [Open lab: hear it, draft it, check it](appendix/open-labs.qmd) | ○ | ○ | | ○ | ○ | | | | | ○ |
 
-: Which material serves which competency. ● the main subject: taught, and practised in the Do or Check. ○ taught, but not practised. Judged from what each chapter teaches and checks (reviewed October 2026), not from its subtitle. {#tbl-coverage}
+: Which material serves which competency. ● the main subject: taught, and practised in the Do or Check. ○ taught, but not practised. Judged from what each chapter teaches and checks (reviewed October 2026), not from the codes the chapter lists. {#tbl-coverage}
 
 The four core chapters make AIM-2, AIM-4, AIM-5, and AIM-6 main subjects, and
 the week 1 live talks cover AIM-1. AIM-3, bias and equity, is not in a core
@@ -129,34 +136,10 @@ of any chapter; the foundations chapter covers training and test sets, area
 under the curve, and dataset shift along the way. Every Check is scored by you
 against a rubric, so "practised" here means self-assessed, not graded.
 
-## The tutor and the answer keys
-
-A chat tutor over these chapters is planned. When it ships, it will answer
-questions from the rendered text and the sources it cites, and it will hold
-the answer keys for each chapter's Check. The answer keys are written by the
-same process as the chapters and are never published; the tutor uses them to
-grade your reasoning, not to give you the answer. Until it ships, the Check
-rubrics in each chapter are the whole of what is available, and they are
-written to be scored alone.
-
 ## How this book was made
 
-**This book was built with AI.** The author designed the course and the
-chapter pattern, wrote the first chapter, and then had ten AI agents draft
-the remaining chapters in parallel from the module plans, each with citations
-checked against PubMed, an answer key, and a review as six invented readers.
-The author read the result, and the chapters then went through a
-plain-language pass, a second six-persona review, a cross-reference pass,
-and a pass replacing metaphor with direct statement, each also run by AI
-agents under the author's direction. In October, once the course's dates and
-format were fixed, the syllabus, new pages, and appendices were added the same
-way. The author edited and committed all of it. The full account, including what the AI did
-and what a person checked, is in the appendix
-[How this book was made](appendix/about.qmd) and the
-[AI ledger](appendix/ai-ledger.qmd). The course asks you to disclose and
-verify; this is the course doing the same.
-
-The design behind the book, competencies, constraints, and schedule, is in
-the `curriculum/` directory of the
-[repository](https://github.com/seandavi/ai-in-medicine-curriculum)
-(private for now; it will be made public).
+This book was built with AI: AI agents drafted most of the text under the
+author's direction, and the author decides what is published. The appendix
+[How this book was made](appendix/about.qmd) and the [AI
+ledger](appendix/ai-ledger.qmd) say what the AI did and what a person checked,
+because the course asks you to disclose and verify, and the book does the same.
