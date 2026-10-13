@@ -140,9 +140,9 @@ not yet been through the six-reader review. The ledger marks them as awaiting
 the author's review.
 
 On 12 October 2026, the first day of the course, seven AI agents reviewed the
-whole book, the course pages, and that day's session against the decisions
-made that day. The fixes are being made in batches, each before the week of
-the course it affects.
+whole book, the course pages, and the transcript of that day's session. The
+author made decisions from that review the same day. The fixes are being made
+in batches, each before the week of the course it affects.
 
 Two further checks run on every chapter:
 
