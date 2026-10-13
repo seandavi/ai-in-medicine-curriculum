@@ -81,17 +81,22 @@ now and do Part A of the [Do](#do).
 
 ## Why this matters
 
-Within three months you will be Sam. You will have a case, a phone, and a
-minute, and what you type will change what comes back. In one study of 148 final-year medical students, only 5 percent had
-heard the phrase "clinical prompt engineering". The same students were shown
-chatbot answers to ten written cases, and five of the answers were deliberately
-wrong. The median student caught the wrong ones 56 percent of the time
-[@pmid:39915801].
+By next July you will be Sam. You will have a case, a phone, and a minute,
+and what you type will change what comes back.
 
 Asking well takes a few minutes to learn, and you will use it every day. It
 gets you answers organised the way you think on rounds, that show their
-reasoning, and that say what they are missing. Checking is one step in that
-routine, not a reason to avoid the tool.
+reasoning, and that say what they are missing. Used this way, the tool helps.
+In a randomized trial of 92 physicians working through management cases,
+those given GPT-4 scored higher than those with the usual resources alone
+[@pmid:39910272]. Checking is one step in that routine, not a reason to avoid
+the tool.
+
+Few students are taught this. In a study of 148 final-year medical students,
+only 5 percent had heard the phrase "clinical prompt engineering". The
+students judged GPT-3.5's answers to ten written cases, five of which the
+model had got wrong. On a typical answer, only 56 percent of the students
+judged correctly whether it was right [@pmid:39915801].
 
 ## How it works
 
@@ -121,13 +126,14 @@ is that asking them to name the gap instead is the most useful single line a
 clinician can add to a prompt. You will test that claim yourself in the Do.
 
 ::: {.callout-tip title="If English is not your first language"}
-[The critical appraisal chapter](core-appraisal.qmd) reports a finding that
-also applies here. The same tool made up references ten times more often when a
-question was phrased the way a patient talks than the way a clinician writes
-[@pmid:42232526]. Linguists call this **register**: the way a particular group
-of people talks. It is a property of the words, not of the credentials of the
-person typing. The Context row of @tbl-scaffold is where you control it.
-Write the case the way you would present it on rounds.
+One 2026 study asked chatbots for references on spine surgery in two ways: as
+a spine surgeon writing in clinical language, and as a patient writing in
+everyday words. Asked as a patient, ChatGPT made up references about ten times
+as often [@pmid:42232526]. The study changed who was asking and the wording at
+the same time. It did not test people writing in a second language. So take it
+as a reason for a habit that helps everyone: say who you are, and write the
+case the way you would present it on rounds. The Context row of @tbl-scaffold
+is where you do that.
 :::
 
 ### What structure changes, and what it does not
@@ -465,8 +471,8 @@ If your organisation score rose and your trap score did not, you have seen the
 main point of this chapter yourself. If both rose, write down which sentence
 did it; this chapter's guess is the last one. If the bare answer caught the
 trap and the structured one did not, keep both transcripts. One case is two
-observations, not a study, because the same prompt does not give the same
-answer twice [@pmid:38378899].
+observations, not a study, because the same prompt does not always give the
+same answer [@pmid:38378899].
 
 ## Check
 
@@ -512,11 +518,6 @@ the source you would check it against.
 - The randomized trials of physicians with a model: diagnosis [@pmid:39466245]
   and management [@pmid:39910272]. Read the discussion sections for the
   authors' own account of why the benefit did not appear.
-- A trial in *NEJM AI* randomized 44 physicians who had just finished a
-  20-hour AI-literacy course. When the model's suggestion was wrong, their
-  diagnostic scores fell by about 14 points, so the training did not remove
-  the automation bias [@doi:10.1056/AIoa2501001]
-  [VERIFY: the numbers come from the preprint listing and a search summary; the NEJM AI page blocked the tool on 2026-09-08]{.verify}.
 - A single-centre observational study in which pharmacists ran 50
   internal-medicine cases through ChatGPT and OpenEvidence, with and without a
   prompt template. The template made no significant difference to accuracy and
@@ -536,13 +537,12 @@ the source you would check it against.
   chapter's claim.
 - When 33 physicians across 17 specialties graded chatbot answers to 284 of
   their own questions, the median answer was almost completely correct, but 36
-  answers were mostly or completely wrong, in the same confident prose as the
-  rest [@pmid:37782499].
+  answers were rated mostly or completely wrong [@pmid:37782499].
 - When oncologists checked chatbot cancer-treatment recommendations against
   guidelines, about a third of outputs mixed at least one non-guideline
   recommendation in among correct ones [@pmid:37615976].
-- The student error-catching study behind the 56 percent [@pmid:39915801]
-  (also in [the appraisal chapter](core-appraisal.qmd)), and the published,
+- The study of students judging GPT-3.5's answers, behind the 56 percent
+  [@pmid:39915801], and the published,
   reusable case-based LLM workshop from Harvard [@pmid:42483714]; this
   chapter's Part B is a shorter version of it.
 - A tutorial on prompt engineering written for health professionals, for the
