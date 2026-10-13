@@ -14,7 +14,7 @@ By the end of this chapter you will be able to:
 3. Describe how the wording of a prompt changes the risk of made-up references,
    and say what that means for a clinician who uses the same tool at work and at
    home.
-4. Sort claims about a clinical AI tool into randomized, large observational, and
+4. Sort claims about a clinical AI tool into randomized, observational, and
    vendor or trade-press evidence, and explain why the three tiers disagree in the
    same direction.
 5. Explain why FDA clearance is not evidence of clinical performance, using the
@@ -177,7 +177,7 @@ this. xkcd 978, *Citogenesis*, by Randall Munroe,
 The third row is the one that matters on the wards, and it fails in fluent
 prose. In one study, 33 physicians across 17 specialties wrote 284 questions and
 graded the answers. The median score was 5.5 out of 6. But 36 answers scored 1
-or 2, meaning mostly or completely wrong, with no change in tone [@pmid:37782499].
+or 2, meaning mostly or completely wrong [@pmid:37782499].
 In another, oncologists checked chatbot treatment recommendations for breast,
 prostate, and lung cancer against the NCCN guidelines, the standard US cancer
 treatment guidelines. Every output contained at
@@ -204,31 +204,30 @@ ranged from Claude at 78.0% accuracy to Gemini at a 26.2% fabrication rate
 | Study | Setting | Result |
 |---|---|---|
 | Gravel et al. (2023) | 20 medical questions, ChatGPT | 41 of 59 references fabricated (69%) |
-| McGowan et al. (2023) | Psychiatry, ChatGPT and Bard | 2 of 35 citations real |
+| McGowan et al. (2023) | Psychiatry, ChatGPT | 2 of 35 citations real |
 | McLaughlin et al. (2026) | Spine surgery, five tools | OpenEvidence 0 fabrications; Claude 78.0% accurate; Gemini 26.2% fabricated |
 
 : Published fabrication rates. Each is one snapshot of one tool in one domain. {#tbl-rates}
 
 The same 2026 study contains the finding this chapter depends on most. The
-fabrication rate for ChatGPT rose from 2.1% when the question was asked in a
-clinician's words to 20.0% when it was asked in a patient's words
-[@pmid:42232526]. Same tool, same underlying question, different register.
-Register is the linguist's word for the way a particular group of people talks.
-In this chapter it means one thing: whether the question sounds like a doctor
-or like a patient.
+fabrication rate for ChatGPT rose from 2.1% when it was asked as a spine
+surgeon, in clinical words, to 20.0% when it was asked as a patient, in
+everyday words [@pmid:42232526]. The study changed who was asking and the
+wording together, on ten matching questions. So the finding is about the whole
+prompt: whether it sounds like a doctor or like a patient.
 
 ::: {.callout-important title="The practical consequence"}
 The version of a tool you trust at work may behave differently when you, or your
 patient, ask the same question in everyday words. Testing a tool once, with one
 kind of wording, is not enough.
 
-If English is not your first language, or you write the way you talk rather
-than the way a journal article is written, your prompts may sound like a patient's even when
-you are the clinician. The finding is about the words, not the credentials.
+The study did not test people writing in a second language. The habit that
+follows is the same for everyone: say who you are, and ask the way you would
+present on rounds.
 :::
 
-There is an equity finding in this number that the paper does not name. The
-people least able to check an answer, patients asking in their own words, get
+There is an equity finding in this number, and the authors point to it. The
+people least able to check an answer, patients asking in their own words, got
 the answers most likely to cite something that does not exist.
 
 ::: {.callout-note title="These numbers move"}
@@ -252,8 +251,8 @@ Claims about scribes come in three tiers:
 
 - **Randomized trials.** Clinicians or clinics assigned by chance to the tool or
   to a comparison.
-- **Large observational studies.** Real-world data from many clinicians, without
-  randomization. This includes pre/post designs, which measure the same
+- **Observational studies.** Real-world data from clinicians, large or small,
+  without randomization. This includes pre/post designs, which measure the same
   clinicians before and after they start using the tool. It also includes sites
   that adopt the tool one after another without randomization, and surveys of
   people who chose to use it.
@@ -274,10 +273,11 @@ Same paper, three versions: the institution's press office, a journalist, and a
 professional society. None of them is wrong. Which one would the vendor at lunch
 have put on the slide?
 
-The three tiers disagree in the same direction. Pre/post studies of health-system
-rollouts report large drops in burnout. Randomized trials report smaller effects.
-They also consistently fail to change the one outcome that justifies the whole
-product category: after-hours charting. In the largest study to date, across five
+The three tiers disagree in the same direction. Pre/post studies of
+health-system rollouts report large drops in burnout. The randomized trials
+mostly report smaller gains, and the one with a large drop was very small. The
+trials that measured after-hours charting found no change that held up, and
+that is the outcome that justifies the whole product category. In the largest study to date, across five
 academic systems and 8,581 clinicians, total EHR time fell 13.4 minutes per day
 and documentation time 16.0 minutes per day, with 0.49 more visits per week. But
 after-hours EHR time did not change significantly [@pmid:41920565]. You will work
@@ -482,7 +482,7 @@ part of the exercise.
 | **1, misrepresented** | The reference exists, but the model's description of it is wrong. | Found in PubMed, but it is a different design, population, or conclusion, or the model attributed a finding it does not contain. |
 | **0, fabricated** | The reference does not exist as given. | Not found by title, author plus year, or DOI/PMID after a genuine search. A real DOI pointing at a different paper than the one named scores 0. |
 
-: The 2/1/0 citation scoring scale of McLaughlin et al. (2026). {#tbl-scoring}
+: A 2/1/0 citation scale adapted from McLaughlin et al. (2026). They scored 1 for a real paper with wrong details, such as a wrong PMID; this chapter also scores 1 when the paper does not say what the model claims. {#tbl-scoring}
 
 ::: {.callout-tip title="Three examples, one of each" collapse="true"}
 The clinician prompt was run on anticoagulation in atrial fibrillation with
@@ -579,10 +579,11 @@ the two closing questions before you open the solution.
    minutes per day.
 5. Burnout and task load improved, but clinicians rated both tools as producing
    occasional clinically significant inaccuracies.
-6. Work exhaustion fell by 0.44, but the reduction in workweek hours lost
-   statistical significance after outlier removal.
-7. There was no meaningful difference in after-hours "pajama time" between the
-   tool and usual documentation.
+6. Work exhaustion fell by 0.44, but the reduction in work done outside work
+   hours lost statistical significance after the most extreme values were
+   removed.
+7. After-hours "pajama time" was largely unaffected by either of two scribe
+   tools.
 8. Burnout fell from 89% to 56%, with no significant change in pajama time or
    charting time.
 9. Across five academic systems and 8,581 clinicians, total EHR time fell 13.4
@@ -591,7 +592,7 @@ the two closing questions before you open the solution.
 10. Seventy-nine percent of clinicians offered the tool declined to use it.
 
 ```
-Claim   Tier (RCT / Large obs / Vendor-trade)   Confidence (1–5)   One-line reason
+Claim   Tier (RCT / Obs / Vendor-trade)         Confidence (1 to 5)  One-line reason
   1     ________________________________        ___                ________________
   2     ________________________________        ___                ________________
   3     ________________________________        ___                ________________
@@ -621,9 +622,10 @@ defend the choice.
 **Two mechanisms: selection and Hawthorne.** The pre/post studies measure
 clinicians who *chose* to adopt an optional tool: people already inclined to
 like it, whose way of working it fits. The randomized trials measure clinicians
-who were *assigned* it. The five-system study shows the gap in numbers. Of 8,581
-clinicians offered the tool, 1,809 adopted it, and those adopters are the
-population every earlier pre/post study sampled [@pmid:41920565]. Add that
+who were *assigned* it. The five-system study shows how much choice is
+involved: 1,809 of the 8,581 clinicians it studied adopted the scribe, and at
+four of the five sites adoption was each clinician's own choice
+[@pmid:41920565]. Pre/post studies sample people like those adopters. Add that
 people who know they are in a documentation study document differently, the
 Hawthorne effect, and the direction of the gap is explained without anyone
 having lied.
@@ -639,9 +641,11 @@ reply time but significant reductions in task load and work exhaustion
 Treating them as the same is how a real benefit gets oversold into a false one.
 
 **Claim 10** is a number from journalism about a peer-reviewed study, not from the
-paper's own results. You will meet this category constantly. It is neither
-peer-reviewed evidence nor vendor marketing, and it needs its own habit: find the
-paper, and see whether the number is in it.
+paper's own results. The paper reports 1,809 adopters among the 8,581 clinicians
+it studied; it does not say how many were offered the tool and said no. You will
+meet this category constantly. It is neither peer-reviewed evidence nor vendor
+marketing, and it needs its own habit: find the paper, and see whether the
+number is in it.
 
 Two independent checks on the vendor story. The Peterson Health Technology
 Institute, which takes no vendor funding, concluded in 2025 that scribes likely
@@ -652,12 +656,12 @@ lowering system-wide costs
 [2026 report](https://phti.org/administrative-ai-current-use-and-potential-impact/)).
 A UCSF analysis found scribe adopters billed about 1.8 more relative value
 units a week, the billing measure of clinical work, with no rise in claim
-denials [@pmid:41511775]. The university's press release called that a 5.8%
-increase. The study was one health system and adopters chose to adopt, so the
-authors call for a randomized test.
+denials [@pmid:41511775]. The study was one health system and adopters chose
+to adopt, so the authors call for a randomized test.
 
-The tiers, so you can check your answers: claims 1, 2, 3, 4, and 9 are large
-observational; 5, 6, 7, and 8 are randomized trials; 10 is trade press about a
+The tiers, so you can check your answers: claims 1, 2, 3, 4, and 9 are
+observational (claim 4 is a pilot of 45 physicians); 5, 6, 7, and 8 are
+randomized trials (claim 8 had 23 clinicians); 10 is trade press about a
 peer-reviewed paper. The sources are in the answer key held by the course tutor,
 which will also grade your reasons.
 :::
@@ -692,9 +696,9 @@ an answer to either.
 
 - A general-purpose model writes citations as text; a retrieval-grounded tool
   searches first. The difference is in kind, not in degree.
-- Published fabrication rates run from a quarter to two-thirds for general models
-  and near zero for search-first tools, and they move with the tool and the
-  month.
+- Published fabrication rates for general models run from about 2 percent to
+  over 90 percent, and near zero for search-first tools, and they move with
+  the tool and the month.
 - The same question in a patient's words can produce a tenfold higher fabrication
   rate than in a clinician's.
 - Evidence about a type of tool comes in tiers that disagree in a consistent
