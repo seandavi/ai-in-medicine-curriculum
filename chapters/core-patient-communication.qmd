@@ -85,57 +85,28 @@ You will need this in your first month. A tool will listen to your visits. A
 draft of your portal reply will be written before you open the message. A
 patient will bring you a printout.
 
-Published lists of what physicians should know about AI (called competency
-frameworks) name this skill [@pmid:36731054; @pmid:42120544]. Yet a review of
-the training programs that exist found it covered in about one in five of the
-papers describing them [@pmid:39023999]. One reason is that it cannot be
-taught by lecture. The skill is not knowing what to say. It is saying it to a
-person who is frightened, or skeptical, or already convinced the chatbot was
-right.
+The hard part is not knowing what to say. It is saying it to a person who is
+frightened, or skeptical, or already convinced the chatbot was right.
 
-That makes it a good place to use a chatbot well. It can play the patient,
-point out your jargon, and tell you the order you spoke in. Then you say the
-words to a person, which is what [the Friday small
-group](../course/friday-groups.qmd) is for.
+A chatbot is good practice for that. It can play the patient, point out your
+jargon, and tell you the order you spoke in. Then say the words to a person:
+ask a classmate to play the patient.
 
 ## How it works
 
 ### More empathetic on the page, less persuasive in the room
 
-Ask students what goes wrong when a machine talks to a patient, and the answer
-is coldness. The evidence says otherwise. In 2023 a team took 195 patient
-questions from a public forum where verified physicians answer, and had a
-chatbot answer them too. Clinician raters, not told which answer was which,
-compared the two [@pmid:37115527].
-
 ![Raters who did not know the source preferred the chatbot's answer 78.6 percent of the time.
 Redrawn from the abstract of Ayers et al., *JAMA Internal Medicine* 2023;
 data are not copyrightable, drawing by the course.](../images/ayers-2023-redrawn.svg){#fig-ayers fig-alt="Three pairs of horizontal bars comparing physician and chatbot responses. Rated good or very good quality: physician 22.1 percent, chatbot 78.5 percent. Rated empathetic or very empathetic: physician 4.6 percent, chatbot 45.1 percent. Median length in words: physician 52, chatbot 211."}
 
-As @fig-ayers shows, the chatbot's answers were rated more empathetic nearly
-ten times as often, and were four times longer. A 2025 repeat with 1,454 lay
-participants found the same ordering. The chatbot's answers contained more
-validation, more reassurance, and more non-judgmental language, and read as
-less rushed [@pmid:41359230]. Those are behaviors a person can learn. But this
-is text judged by readers, with no relationship and no follow-up, against
-physicians answering strangers for free.
-
-The second finding favors the person. In a Zurich course, 52 medical students
-watched four short pieces on the same treatment. They came from a patient, a
-clinician, an expert, and ChatGPT, whose text was read aloud by a synthetic
-voice and labeled "general information from the internet." Before and after each one, the students rated their own
-expectation that the treatment would work [@pmid:39177012]. Every version
-raised expectations. The patient's account raised them most, and the chatbot's
-least, even though the students had rated the chatbot text as moderately
-clear, safe, and correctly written. Two limits. The humans appeared on video
-and the machine did not, so the study cannot separate who wrote the words from
-how they were delivered. The internet label may also have lowered trust in the
-chatbot text. And the students rated their own expectations, not a
-patient's.
-
-Put together: a tool can produce text that raters prefer and still fail to
-change what a person does. The machine can draft the handout. You are the
-reason the patient follows it.
+In 2023, clinician raters who did not know the source preferred a chatbot's
+answers to patients' questions over physicians' answers (@fig-ayers)
+[@pmid:37115527]. A 2025 repeat with 1,454 lay readers found the same
+[@pmid:41359230]. But when 52 medical students in Zurich heard one treatment
+explained by a patient, a clinician, an expert, and ChatGPT, the chatbot's
+version raised their expectations of the treatment least [@pmid:39177012]. The
+machine can draft the handout; you are the reason the patient follows it.
 
 ### The portal reply: say a tool helped
 
@@ -208,16 +179,10 @@ declined ambient documentation. If your institution logs consent, log it.
 
 ### The printout: say what is right first
 
-A 2026 study asked five tools matching spine-surgery questions, once in a
-clinician's words and once in a patient's words. The four general-purpose
-tools did worse on the patient version. The share of ChatGPT's references that
-were made up rose from 2.1 percent to 20.0 percent [@pmid:42232526]. If
-English is not your first language, or you write the way you talk, your own
-prompts may get worse answers in the same way. When physicians graded chatbot answers to their own
-questions, most were largely right, but one in eight was mostly or completely
-wrong, in the same fluent tone [@pmid:37782499]. A general-purpose chatbot writes
-the most plausible next words; it does not look the answer up. So the printout's
-confidence comes from the writing, not the evidence.
+When physicians graded chatbot answers to their own clinical questions, most
+were largely right, but about one in eight was mostly or completely wrong, in
+the same fluent tone [@pmid:37782499]. The printout sounds sure because of the
+writing, not the evidence, so the job is to find which parts are right.
 
 Telling her that is not the right first step. The order is:
 
@@ -278,12 +243,8 @@ Patients will have read about these.
 <div class="press-clip"><div class="src">Association of Health Care Journalists · blog</div><a class="hl" href="https://healthjournalism.org/blog/2026/02/misuse-of-ai-chatbots-in-health-care-tops-2026-health-tech-hazard-report/">Misuse of AI chatbots in health care tops 2026 Health Tech Hazard Report</a><div class="date">5 February 2026</div></div>
 :::
 
-In 2023 an eating-disorder helpline's chatbot, Tessa, gave callers weight-loss
-advice: harmless for most people, harmful for the people the service existed
-to help. A lawsuit filed in July 2026 alleges that a chatbot reassured a man
-with weeks of dizziness. The complaint says that the next day he was admitted
-to intensive care with a pulmonary embolism. The case has not been decided. The safety organization
-ECRI named chatbot misuse its top health-technology hazard for 2026.
+The lawsuit against OpenAI is a set of allegations; no court had ruled on it as of 12
+October 2026.
 
 ## Watch or listen (optional)
 
@@ -418,7 +379,7 @@ the character in the Part B prompt.
 | Who is responsible (objective 2) | A sentence with a name in it: mine, Dr. Chen's, ours | "The team," "the system," or no sentence |
 | The sentence before the mammogram spine (objective 2) | Responds to the fear before explaining the software | Starts with "the software" |
 | The Part B transcript (objective 3) | Something right named before anything wrong; you asked what sent her; each declined test has a reason | Won the argument; never asked; "we don't need those" |
-| The empathy finding (objective 4) | You can say why text raters prefer can still persuade less, and name one limit of each study | "AI is more empathetic" or "AI is cold" |
+| The empathy finding (objective 4) | You can say why text raters prefer can still persuade less | "AI is more empathetic" or "AI is cold" |
 | Kept sentences (objective 5) | You changed what the chatbot flagged that you agreed with, and the sentences still sound like you | Pasted a rewrite, or nothing kept |
 
 ## What this changes for you
@@ -452,7 +413,9 @@ first thing you say about the pages? If it is a correction, start again.
   [@pmid:41359230]. The repeat also found that participants rated a response
   as more empathetic when told a physician wrote it, whether or not one had.
 - The Zurich course, for the persuasion experiment and for teaching students to
-  judge patient-facing text [@pmid:39177012].
+  judge patient-facing text [@pmid:39177012]. The humans appeared on video and
+  the chatbot's text was read by a synthetic voice, so the study cannot
+  separate the words from the delivery.
 - The two Duke studies on AI-drafted portal messages, the survey
   [@pmid:40067301] and the interviews [@pmid:42412426]; together the best
   current evidence on what patients want to be told and when.
@@ -467,8 +430,10 @@ first thing you say about the pages? If it is a correction, start again.
 - A 2019 nationally representative US survey, before chatbots: two thirds of
   respondents said it was very important to be told when AI played a big role
   in their diagnosis or treatment [@pmid:35507346].
-- The clinician-versus-patient prompt comparison [@pmid:42232526]; the tools
-  were also more likely to cite websites rather than papers.
+- A 2026 study that asked five tools the same spine-surgery questions, once
+  worded for a clinician and once for a patient. The general-purpose tools
+  gave less accurate references for the patient version, with more made up
+  and more websites in place of papers [@pmid:42232526].
 
 **The state laws.** Since January 2025, California has required a disclaimer
 on generative-AI messages about a patient's clinical care unless a licensed
