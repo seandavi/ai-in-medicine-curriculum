@@ -292,26 +292,28 @@ spread in the same way. A data center's cooling comes out of one county's
 supply, and a gas turbine's exhaust settles on one neighborhood. That is why
 this chapter counts as a fairness chapter as well as an environmental one.
 
-Two-thirds of the data centers built or planned in the United States since
-2022 sit in regions already under water stress, meaning short of water. One
-facility in Newton County, Georgia draws about 500,000 gallons a day, roughly
-a tenth of the county's use
-([Ceres, *Drained by Data*](https://www.ceres.org/resources/reports/drained-by-data-the-cumulative-impact-of-data-centers-on-regional-water-stress)).
-In the Memphis area, an AI company ran dozens of gas turbines to power
-clusters of computers for training a model. At its first site, in South
-Memphis, the turbines ran for months before any air permit was issued, in a
-county the American Lung Association had already graded F for ozone. At its
-second site, just across the state line in Southaven, Mississippi, the NAACP
-sued in federal court in April 2026 over 27 turbines running without a Clean
-Air Act permit, half a mile from homes and a mile from an elementary school
+About two-thirds of new data centers built or in development since 2022 are
+in places already under high water stress, meaning short of water, according
+to a Bloomberg News analysis
+([Bloomberg, May 2025](https://www.bloomberg.com/graphics/2025-ai-impacts-data-centers-water-data/)).
+
+In the Memphis area, the AI company xAI has powered its computers with gas
+turbines. At its first site, in South Memphis, turbines ran for about a year
+before the county approved an air permit in July 2025, according to the
+environmental law group that represents local residents
+([SELC, May 2026](https://www.selc.org/news/inside-memphis-fight-against-xai/)).
+Its second site is just across the state line in Southaven, Mississippi.
+There, the state approved an air permit in March 2026, and community groups
+have appealed it. In April 2026 the NAACP sued xAI in federal court,
+alleging that turbines were running without the Clean Air Act permits they
+needed
 ([Earthjustice case page](https://earthjustice.org/case/xai-illegal-gas-power-plant-data-center-colossus)).
-By August 2026 local reporting counted more than 50 turbines running there,
-still without a permit, and the court had not yet ruled
-[VERIFY: turbine count and case status; the injunction hearing was postponed on 21 August 2026 and there was no ruling as of 8 September 2026; the distances are from the complaint as reported, not read by tool]{.verify}
-The residents of those neighborhoods will present to an emergency
-department with asthma exacerbations, and the physician seeing them will
-have no way to link the visit to the turbines. That is environmental exposure
-as a social determinant of health, in exactly the form you were trained to
+The case is in court. As of 12 October 2026 we found no ruling on the
+claims.
+
+If people nearby develop asthma attacks, the emergency physician who sees
+them has no way to link the visit to the turbines. That is environmental
+exposure as a social determinant of health, in the form you were trained to
 recognize and can rarely act on.
 
 One more piece of vocabulary, because it decides what a vendor's number
@@ -331,40 +333,40 @@ Memphis anything.
 A per-query number needs a denominator: something of your own to compare it
 against. Health care is not exempt from the same question. Its footprint is
 measured, large, and yours. The 1,692 kg per person figure above comes with a
-state-by-state analysis. Emissions were not correlated with quality of care,
-which is the authors' argument that the sector could cut them without harming
-care [@pmid:33284703]. A scoping review of the environmental footprint of
+state-by-state analysis. Emissions were not closely correlated with the
+quality of care, which is the authors' argument that the sector could cut
+them without harming care [@pmid:33284703]. A scoping review of the environmental footprint of
 digital health tools found no validated method for assessing one across its
 whole life cycle. Most studies simply estimated the travel that telehealth
 avoided [@pmid:36314391]. The literature on AI's footprint in medicine is
-newer, and so far mostly perspective pieces rather than measurements: an
-*NEJM Catalyst* piece on rolling out AI sustainably and fairly
-[@doi:10.1056/CAT.24.0501], a *Lancet Digital Health* overview of the
-sustainability of large models in care [@pmid:42209329], a *Nature Reviews
-Nephrology* comment on weighing benefit against environmental cost
-[@pmid:41540287], and a *Lancet Global Health* argument that AI ethics
-frameworks have given the environment little attention [@pmid:40580996].
+newer, and so far mostly opinion pieces rather than measurements; four are
+listed in Go deeper.
 
-One measured result is worth more than the perspectives for a purchasing
-committee. A radiology group ran five sizes of two open models over 3,665
-chest radiograph reports and metered the electricity. The 7-billion-parameter
-model (parameters are a measure of model size) that had been further trained
-for the task matched the accuracy of a general-purpose model ten times its
-size. The largest model used more
-than seven times the energy of the smaller version [@pmid:39189909]. The
-lesson is the one @fig-per-query teaches, seen from the buyer's side: which
+For a purchasing committee, one measured result matters more than the
+opinion pieces. A radiology group ran five sizes of two open models over
+3,665 chest radiograph reports and metered the electricity. A
+7-billion-parameter model (parameters are a measure of model size) matched
+the accuracy of a general-purpose model ten times its size. That smaller
+model was Vicuna, a version of Llama 2 further trained to hold general
+conversations, not trained on radiology. The largest general-purpose model
+used more than seven times the energy of its smallest version
+[@pmid:39189909]. The lesson is the one @fig-per-query teaches, seen from the buyer's side: which
 model you run changes the total more than whether you run one at all.
 
 ::: {.callout-important title="The claim not to repeat"}
 You will meet the sentence "autonomous AI could cut health care's emissions
-by 80 percent." It comes from a real, careful study. It compared the
+by 80 percent." It comes from a real, published estimate. It compared the
 greenhouse-gas cost of one autonomous diabetic-retinopathy screening visit
 with one in-person specialist visit, and found the AI visit about 80 percent
-lower [@pmid:35551275]. That is a finding about one screening test replacing
-one kind of visit. It is not a finding about health care, and the paper does
-not claim it is. If you repeat it as a general claim you have made the
-attribution error from @tbl-what-counted, in the optimistic direction. The
-bottle and the 80 percent are the same mistake with opposite politics.
+lower [@pmid:35551275]. Three of its six authors list the company that makes
+the screening device as an affiliation. That does not make it wrong, but it is the same
+kind of source as Google's report: a company estimating the cost of its own
+product. And it is a finding about one screening test replacing one kind of
+visit, not a measurement of health care as a whole. If you repeat it as a
+general claim you have made the attribution error from @tbl-what-counted, in
+the optimistic direction. The bottle and the 80 percent are the same
+mistake: one makes AI look worse than its source says, the other makes it
+look better.
 :::
 
 ## Watch or listen
@@ -560,8 +562,8 @@ this week change whether you use it? If not, what *would*?
   ([arXiv 2311.16863](https://arxiv.org/abs/2311.16863), 2023): the first
   systematic comparison of the cost of running models, task by task, and
   the finding that general-purpose models cost orders of magnitude more per
-  task than small specialized ones. The radiology study [@pmid:39189909] is
-  that finding reproduced on chest radiograph reports.
+  task than small specialized ones. The radiology study [@pmid:39189909]
+  found a similar pattern on chest radiograph reports.
 - US health care's footprint [@pmid:33284703]; the scoping review of
   digital-health footprints [@pmid:36314391]; and a 2026 systematic review
   of "green AI" in health applications, which argues AI can add to the
