@@ -1,39 +1,53 @@
 ---
 title: "How these systems work: from the eGFR on a chemistry panel to the next word"
-subtitle: "AIM-1 · AIM-2 · about 90 minutes"
+subtitle: "About 60 minutes"
 execute:
   echo: false
 ---
 
+::: {.callout-tip title="In short"}
+- **The idea.** Every model you will use, from the eGFR on a chemistry panel
+  to a chatbot, is a formula learned from data. You can now ask any of them
+  what it learned from and what it was tested on, and say why a chatbot
+  sounds just as sure when it is wrong.
+- **What you do.** Ask a chatbot about a scoring system you will use next
+  year, then check which parts of its answer are right.
+- **What you keep.** A checking routine for chatbot answers (the numbers, the
+  source, one link opened), and two questions for any model: what was it
+  trained on, and what was it tested on?
+- **Short on time?** Read "The number nobody measured" and "From tables to
+  words", watch the 8-minute video, and do Part B.
+:::
+
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will be able to:
 
-1. Explain, using eGFR as the worked example, what it means for a formula to be
+1. Say how AI, machine learning, deep learning, and generative AI fit inside
+   each other, with an example of each.
+2. Explain, using eGFR as the worked example, what it means for a formula to be
    *learned from data* rather than worked out from theory, and name its
    predictors, its response, and the population it was learned from.
-2. Tell supervised from unsupervised learning by asking what the training data
+3. Tell supervised from unsupervised learning by asking what the training data
    contains, and classification from regression by asking what kind of answer
    the model gives.
-3. Say why a model's performance on data it has already seen tells you nothing
+4. Say why a model's performance on data it has already seen tells you nothing
    useful, and why separate training and test data is the least you should
    accept.
-4. Describe in plain words what a language model computes at each step, and
-   use that description to explain a made-up citation or a confident wrong
-   answer as a natural result of how the model works, not as a bug.
-5. Ask a chatbot to check its own facts and citations, and say what that
-   check does and does not catch, including why it cannot check facts about
-   your patient.
+5. Describe in plain words what a language model computes at each step. Use
+   that description to explain why a made-up citation reads exactly like a
+   real one.
+6. Ask a chatbot to check its own facts and citations, and say what that
+   check does and does not catch, including why ChatGPT Edu cannot check facts
+   about your patient.
+
+Course competencies: AIM-1 (foundations), AIM-2 (critical appraisal).
 :::
 
-**Time.** About 30 minutes of reading (two of them moving the curve-fitting
-sliders), 27 minutes of watching, 25 minutes of doing, and 6 minutes for the
-check and the closing question. No math and no
-coding are assumed. The only equations in the chapter are one you already use
-and a simpler one you can fit by hand with two sliders.
-You need a browser and your institutional ChatGPT Edu or Microsoft Copilot
-account, or whatever assistant your school provides. Nothing installs, and nothing asks you for a phone number.
-The live session uses a [slide deck](../slides/core-foundations.html) with the
-same material, and some of the figures there are interactive.
+**What you need.** A browser and your university ChatGPT Edu or Copilot
+account. Nothing to install. Made-up patients only. No math or coding is
+assumed: the only equations are one you already use and a simpler one you fit
+by hand with two sliders. Wednesday's talk (14 October, 10 a.m., recorded)
+covers the same material with a [slide deck](../slides/core-foundations.html).
 
 ## The number nobody measured
 
@@ -77,23 +91,38 @@ muscle over a year of on-and-off illness. We will come back to her.
 
 ## Why this matters
 
-In three months you will meet a dozen of these. A sepsis alert that fires
+By next July you will meet a dozen of these. A sepsis alert that fires
 in the EHR. A risk score that decides who gets a phone call after discharge. A
 scribe that drafts your note. A chatbot that answers a dosing question at 2
 a.m. Every one of them is the same kind of object as the eGFR: a formula
-learned from some population, applied to your patient, with failures that
-follow from how it was built. This chapter does not teach you to build these
-things. It teaches you to look at one and predict how it will fail, in the
-thirty seconds before you act on it.
+learned from some population, applied to your patient. This chapter does not
+teach you to build these things. It teaches you to look at one and ask what it
+learned from. Then you know when to trust it and when to check, in the thirty
+seconds before you act on it.
 
-The second half of the chapter does this for the language model in
-particular, because its failures are the strangest and the smoothest. It will
-give you a citation that does not exist, formatted perfectly. It will do so
-for a reason that follows directly from what it computes. Once you can say
-that reason out loud, "it hallucinates" stops being an empty phrase. It becomes a
-prediction about when to check.
+The second half of the chapter does this for the language model. On common
+questions it is usually right, because the most plausible next word after a
+well-documented fact is the fact. When it is wrong, it sounds exactly the
+same, and it can give you a citation that does not exist, formatted
+perfectly. Both follow from what it computes. Once you can say why, "it
+hallucinates" stops being an empty phrase. It becomes a rule for when to
+check.
 
 ## How it works
+
+### Four words, each inside the one before
+
+Four words are often used as if they meant the same thing. Each is one kind
+of the one around it (@fig-circles). **Artificial intelligence** is a computer
+doing a task that seems to need judgment, by any method, even rules written by
+hand. **Machine learning** learns its rules from data. The eGFR equation,
+which a statistician would call a regression, is an example. **Deep learning**
+is machine learning with a **neural network**: many layers of simple units,
+each passing numbers to the next. **Generative AI** is deep learning that
+writes text or makes images. The large language model behind a chatbot is one
+kind. This chapter starts in the second circle and ends in the smallest.
+
+![Four words, each inside the one before. The examples are MYCIN (1970s) for AI, the eGFR equation for machine learning, a chest X-ray reader for deep learning, and a chatbot for generative AI. Drawn for this course.](../images/ai-nested-circles.svg){#fig-circles fig-alt="Four nested circles. The largest is artificial intelligence: a computer doing a task that seems to need judgment, such as MYCIN in the 1970s, whose rules were written by hand. Inside it is machine learning: the rules are learned from data, such as the eGFR equation. Inside that is deep learning: machine learning with many layers, a neural network, such as a model that reads chest X-rays. The smallest is generative AI: deep learning that writes new text or makes images, such as a chatbot."}
 
 ### A formula learned from data
 
@@ -102,9 +131,7 @@ is how it was made. Researchers combined ten studies in which 8,254 people had
 their GFR measured directly with a filtration marker. Each person also had a
 creatinine measured by a standard method, an age, and a sex on record. The
 researchers then fit an equation that predicts the measured GFR from those
-three inputs as closely as possible across all 8,254 people. "Fit" means a
-computer tried numbers in the equation until the predictions were as close to
-the measured values as they could get. They then tested the equation on a
+three inputs as closely as possible across all 8,254 people. They then tested the equation on a
 separate set of 4,050 people from twelve other studies, whose measured GFR the
 equation had never seen [@pmid:34554658].
 
@@ -223,22 +250,22 @@ the best one. Real fitting uses faster methods with the same goal. The real
 eGFR equation has a few more numbers in it, and it was fit to 8,254 people
 whose GFR was measured, not to 40 made-up dots.
 
-@fig-egfr-proxy shows what that model connects. The thing you want to know is
-on the right. The thing the lab can measure is on the left. The equation is
-the bridge, and the bridge was built from a specific set of people.
+@fig-egfr-proxy shows what that model connects. The thing the lab can measure
+is on the left. The thing you want to know is on the right. The equation links
+them, and it was learned from a specific set of people.
 
 A number used in place of the one you want, because that one is hard to get,
-is called a **proxy**. The first of the course's four recurring lessons (the
-fourth, *who benefits, who bears the risk, who decides*, comes in
-[the ethics chapter](core-ethics-regulation.qmd)) is **proxies fail**: the stand-in and the real thing can come apart,
-and they come apart for some patients more than for others. [The bias and
-equity chapter](core-bias-equity.qmd) depends on that lesson. This chapter's
-job is narrower: to show you the bridge at all.
+is called a **proxy**. The eGFR is a proxy for measured GFR. The first of the
+course's four recurring lessons is **proxies fail**: the stand-in and the real
+thing can come apart, and they come apart for some patients more than for
+others. [The bias and equity chapter](core-bias-equity.qmd) builds on that
+lesson. This chapter's job is narrower: to show you that the eGFR is a
+stand-in at all.
 
 ```{mermaid}
 %%| label: fig-egfr-proxy
 %%| fig-alt: "Flowchart. Three inputs the lab has, serum creatinine, age, and sex, feed an equation learned from 8,254 people with measured GFR, which outputs the eGFR on the panel. A dotted arrow shows the eGFR standing in for measured GFR, which is never done in routine care. A grey box, muscle mass, diet, and drugs that block secretion, feeds creatinine without touching measured GFR."
-%%| fig-cap: "What the eGFR equation takes in and what it stands for. The equation was learned from 8,254 people with measured GFR. It is a bridge from what a lab can measure to what a clinician wants to know. Anything that changes creatinine without changing GFR (grey) crosses the bridge unnoticed. Redrawn from the description of the CKD-EPI 2021 development in Inker et al. (2021)."
+%%| fig-cap: "What the eGFR equation takes in and what it stands for. The equation was learned from 8,254 people with measured GFR. It links what a lab can measure to what a clinician wants to know. Anything that changes creatinine without changing GFR (grey) changes the eGFR too, and the equation cannot tell. Redrawn from the description of the CKD-EPI 2021 development in Inker et al. (2021)."
 flowchart LR
   accTitle: What the eGFR equation takes in and what it stands for
   accDescr: Flowchart. Three inputs the lab has, serum creatinine, age, and sex, feed an equation learned from 8,254 people with measured GFR, which outputs the eGFR on the panel. A dotted arrow shows the eGFR standing in for measured GFR, which is never done in routine care. A grey box, muscle mass, diet, and drugs that block secretion, feeds creatinine without touching measured GFR.
@@ -279,30 +306,14 @@ you judge them. A regression is wrong by an amount. A classification is wrong
 by a *kind*, a miss or a false alarm, and those two kinds cost different people
 different things.
 
-**The model is exactly as good as the people it was fit to.** The 8,254 were
-mostly participants in kidney research studies. 31.5 percent of them were
-Black. None were children. None were your patient. For anyone outside that
+**The model is exactly as good as the people it was fit to.** The 8,254 came
+from research studies and clinical populations, and 31.5 percent of them were
+Black. All were adult outpatients without serious other illness; none were
+children [@pmid:34554658]. None were your patient. For anyone outside that
 set, the equation is guessing beyond what it saw. Statisticians call that
 guess an *extrapolation*. The history of the equation is a history of finding
-out where the guess failed.
-
-### The history of one equation is the history of its training set
-
-| Equation | Year | Learned from | Tested on | What broke, and where |
-|---|---|---|---|---|
-| MDRD | 1999 | 1,628 patients with chronic kidney disease, of whom 1,070 were the training sample | The remaining 558 | Fit to people with reduced GFR; gave values that were too low at higher GFR, so healthy people were labeled as diseased [@pmid:10075613; @pmid:19414839] |
-| CKD-EPI | 2009 | 8,254 participants in 10 studies | 3,896 in 16 studies | More accurate at higher GFR, but included a term that adjusted the result for Black race; the 2021 study showed that term overestimated measured GFR in Black adults by a median of 3.7 mL/min/1.73 m² [@pmid:19414839; @pmid:34554658] |
-| CKD-EPI 2021 | 2021 | 8,254 participants in 10 studies, refit without race | 4,050 in 12 studies | Now recommended for all US laboratories; the refit without race still gives values a few mL/min too low in Black adults and a few mL/min too high in non-Black adults, and a cystatin C version is more accurate [@pmid:34554658; @pmid:34563581] |
-
-: Three generations of the eGFR equation, rebuilt from the numbers in the papers. Each one is a formula learned from a population, and each one's known failure is in people outside that population. {#tbl-egfr-history}
-
-Read the last column as a pattern, not as nephrology. Every row says the same
-thing: *the model was fit to these people, and here is what happened to those
-people.* [the bias and equity chapter](core-bias-equity.qmd) takes up why the race term was there in
-the first place and who was harmed by it. For this chapter the point is narrower,
-and it applies to every model. The training population is a property of the
-model, as much as the equation is. You cannot judge the one without knowing
-the other.
+out where the guess failed; the box "If you have more time", later in this
+section, tells it.
 
 ### The loop, in general
 
@@ -351,84 +362,27 @@ model never saw. The 4,050-person validation set in the eGFR paper is that
 second set. When a claim about a model gives you one number and does not say
 which set it came from, you do not yet have a number.
 
-There are two ways to get this wrong, and each has a name. A model that is
-**too simple** cannot capture the real relationship no matter how much data it
-sees: the straight line through a curve. Statisticians call that error *bias*,
-in a technical sense that has nothing to do with the social meaning. A model
-that is **too flexible** learns the random scatter in its particular training
-set along with the real pattern. It fits those cases very closely and the next
-case badly: the wiggle through every point. That error is *variance*. You can
-see both on your own screen, with one slider, in Part A of the Do. The third
-sentence you write there is the one you will apply to every performance claim
-you are ever shown.
+There are two ways to get this wrong. A model that is **too simple** misses
+the real pattern: the straight line through a curve. A model that is **too
+flexible** learns the random scatter in its training cases along with the
+real pattern. It fits those cases closely and the next case badly: the
+wiggle through every point. You will see both with one slider in Part A of
+the Do.
 
 The clinical version of the same failure is **dataset shift**: the patients
-the model meets in real use differ from the patients in its training set, so
-performance measured during development does not hold [@pmid:34260843].
-Here is an example. One EHR vendor built a sepsis model that runs in hundreds
-of US hospitals. One academic center tested it on its own 38,455
+the model meets in real use differ from the patients in its training set.
+Then performance measured during development does not hold [@pmid:34260843].
+Here is an example. One EHR vendor built a sepsis model that was in use at
+hundreds of US hospitals in 2021. One academic center tested it on its own 38,455
 hospitalizations, in a setting the model was not built on. A test
 like that is called *external validation*; here the testers also had no part
 in building the model. The model had an area under the
 curve of 0.63, on a scale where 0.5 is no better than chance and 1.0 is perfect. It
 missed 67 percent of patients with sepsis, and it alerted on 18 percent of all
 admissions [@pmid:34152373]. Nobody had lied about the development
-performance. It simply had not been measured on patients like those.
-
-A separate test set is necessary, but it is not enough. Here is a
-classification example from early in the COVID-19 pandemic, when many groups
-built models to label a chest X-ray as COVID-19 or not COVID-19.
-
-Roberts and colleagues reviewed published machine-learning papers that
-diagnosed COVID-19 from chest X-rays or CT scans. Sixty-two papers went
-through their full review. Sixteen of the 62 took their non-COVID images from
-one public dataset of pneumonia X-rays. Many did not mention that this dataset
-consists of children aged one to five. The COVID-19 images came from adults.
-In the reviewers' words, a model built this way "is likely to overperform as it
-is merely detecting children versus adults" [@doi:10.1038/s42256-021-00307-0].
-They also warned about what they called "Frankenstein datasets": collections
-assembled from other datasets.
-
-DeGrave and colleagues rebuilt models of this kind
-[@doi:10.1038/s42256-021-00338-7]. One of their datasets combined two
-sources. The COVID-19 X-rays came from a public collection on GitHub, many of
-them cropped from figures in published papers. The non-COVID X-rays came from
-one US hospital [@doi:10.1101/2020.09.13.20193565]. On a test set held back from the same
-sources, the models did well. On radiographs from a new hospital system, in the
-authors' words, "half of the model's predictive performance is lost".
-
-@fig-covid-average shows one reason. Each panel is the average of many X-rays
-from one source. The sources differ in places that have nothing to do with
-the disease: how dark the edges of the image are, and the letter marker that shows the
-patient's right or left side.
-
-![Average images from four sources of chest X-rays. Top row, two sources of non-COVID images; bottom row, two sources of COVID-19 images. Each column is one dataset. Look at the boxes, not the lungs. Solid boxes mark side markers that differ between sources. Dashed boxes mark differences in how dark the image edges are. A model can learn these differences instead of the disease. From DeGrave, Janizek and Lee (2020), Figure 3, medRxiv preprint [@doi:10.1101/2020.09.13.20193565], [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); image from [PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC7523163/).](../images/covid-xray-average-images-degrave-2020.jpg){#fig-covid-average fig-alt="Four blurry average chest X-rays in a two-by-two grid, labelled ChestX-ray14 and PadChest on top for COVID-19 negative, and GitHub-COVID and BIMCV-COVID-19+ below for COVID-19 positive. Dashed red boxes outline the dark top corners and side edges of every image, which differ in darkness between sources. Solid red boxes mark a side marker visible in the top-left of PadChest and a faint letter R on the left of BIMCV-COVID-19+."}
-
-The authors then used *explanation methods*, tools that show which parts of an
-image a model relied on. @fig-covid-saliency shows three examples. The models
-often relied on things outside the lungs: the side markers, arrows and text
-added to the image, the edges of the image, the diaphragm, and the outline of
-the heart. In one test, the authors swapped the side markers between a
-COVID-19 X-ray and a non-COVID X-ray, and the model's output shifted. Their
-conclusion was that taking the COVID-19 and non-COVID images from separate
-sources gave the models shortcuts.
-
-![What the model looked at. Left, three chest X-rays. Right, a *saliency map* for each: the pixels that most changed the model's answer, darker red for more influence. Top, a non-COVID X-ray: the model used the lungs (open arrow) but also the side marker in the top corner (closed arrow). Middle, a COVID-19 X-ray: the strongest pixels are in the bottom corners, outside the lungs. Bottom, a COVID-19 X-ray: the only highlighted area is the diaphragm. From DeGrave, Janizek and Lee (2020), Figure 2a, cropped from the full figure, medRxiv preprint [@doi:10.1101/2020.09.13.20193565], [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); image from [PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC7523163/).](../images/covid-xray-saliency-degrave-2020.jpg){#fig-covid-saliency fig-alt="Three chest X-rays on the left, labelled COVID-19 negative, COVID-19 positive, and COVID-19 positive, each beside a speckled red map on the right. Arrows on the maps point to a side marker in the top-right corner of the first image, to the two bottom corners of the second, and to the diaphragm in the third. A colour bar runs from 0th percentile, white, to 99th percentile, dark red."}
-
-This is not the overfitting described above. The researchers did split their
-data into training and test sets. But both sets came from the same mixed
-sources, so the test set had the same flaw as the training set and
-could not catch it. The model scored well by learning what told the sources
-apart, such as a child's chest or a side marker, instead of what told the
-diseases apart. The literature calls this *shortcut learning*. Epidemiologists
-would call the source a *confounder*: a third factor linked both to the images
-and to the label. At other hospitals the shortcut no longer pointed to the
-right answer. That is dataset shift again, hidden inside the test set.
-
-So a test set protects you only if it looks like the patients you will use the
-model on. When you read a claim like this, ask where each class of images came
-from. If the cases and the comparison group came from different places, the
-model may have learned to tell the places apart.
+performance. It simply had not been measured on patients like those. So a
+test set protects you only if it looks like the patients you will use the
+model on.
 
 ::: {.callout-important title="The one sentence"}
 A model's performance on the cases it was built from is usually the optimistic
@@ -439,11 +393,70 @@ are the same set, you have learned nothing yet. If the test set does not look
 like your patients, you have learned less than the number suggests.
 :::
 
+::: {.callout-note collapse="true" title="If you have more time: when a good result did not carry over"}
+**The eGFR equation, three times.** Each version was learned from a
+population, and each one's known failure is in people outside it.
+
+| Equation | Year | Learned from | Tested on | What broke, and where |
+|---|---|---|---|---|
+| MDRD | 1999 | 1,628 patients with chronic kidney disease, of whom 1,070 were the training sample | The remaining 558 | Fit to people with reduced GFR; gave values that were too low at higher GFR, so healthy people were labeled as diseased [@pmid:10075613; @pmid:19414839] |
+| CKD-EPI | 2009 | 8,254 participants in 10 studies | 3,896 in 16 studies | More accurate at higher GFR, but included a term that adjusted the result for Black race. The 2021 study found that the equation with this term overestimated measured GFR in Black adults by a median of 3.7 mL/min/1.73 m²; with the term simply removed, it underestimated by 7.1 [@pmid:19414839; @pmid:34554658] |
+| CKD-EPI 2021 | 2021 | 8,254 participants in 10 studies, refit without race | 4,050 in 12 studies | Now recommended for all US laboratories; the refit without race still gives values a few mL/min too low in Black adults and a few mL/min too high in non-Black adults, and a cystatin C version is more accurate [@pmid:34554658; @pmid:34563581] |
+
+: Three generations of the eGFR equation, rebuilt from the numbers in the papers. {#tbl-egfr-history}
+
+Every row says the same thing: *the model was fit to these people, and here is
+what happened to other people.* The training population is a property of the
+model, as much as the equation is. [The bias and equity
+chapter](core-bias-equity.qmd) takes up why the race term was there and who
+was harmed by it.
+
+**Chest X-rays and COVID-19.** A separate test set is necessary, but it is
+not enough. Early in the pandemic, many groups built models to label a chest
+X-ray as COVID-19 or not. A review of 62 such papers found that 16 took their
+non-COVID images from one public set of pneumonia X-rays from children aged
+one to five. The COVID-19 images came from adults. In the reviewers'
+words, a model built this way "is likely to overperform as it is merely
+detecting children versus adults" [@doi:10.1038/s42256-021-00307-0].
+
+DeGrave and colleagues rebuilt models of this kind, with the COVID-19 and
+non-COVID X-rays from different sources [@doi:10.1038/s42256-021-00338-7].
+On a test set held back from the same sources, the models did well. On
+radiographs from a new hospital system, in the authors' words, "half of the
+model's predictive performance is lost" [@doi:10.1101/2020.09.13.20193565].
+@fig-covid-average shows one reason:
+the sources differ in places that have nothing to do with the disease.
+@fig-covid-saliency shows that the models used those places, such as side
+markers, image edges, and the diaphragm. When the authors swapped the side
+markers between a COVID-19 X-ray and a non-COVID X-ray, the model's output
+shifted.
+
+![Average images from four sources of chest X-rays. Top row, two sources of non-COVID images; bottom row, two sources of COVID-19 images. Look at the boxes, not the lungs. Solid boxes mark side markers that differ between sources. Dashed boxes mark differences in how dark the image edges are. From DeGrave, Janizek and Lee (2020), Figure 3, medRxiv preprint [@doi:10.1101/2020.09.13.20193565], [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); image from [PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC7523163/).](../images/covid-xray-average-images-degrave-2020.jpg){#fig-covid-average fig-alt="Four blurry average chest X-rays in a two-by-two grid, labelled ChestX-ray14 and PadChest on top for COVID-19 negative, and GitHub-COVID and BIMCV-COVID-19+ below for COVID-19 positive. Dashed red boxes outline the dark top corners and side edges of every image, which differ in darkness between sources. Solid red boxes mark a side marker visible in the top-left of PadChest and a faint letter R on the left of BIMCV-COVID-19+."}
+
+![What the model looked at. Left, three chest X-rays. Right, a *saliency map* for each: the pixels that most changed the model's answer, darker red for more influence. Top, a non-COVID X-ray: the model used the lungs (open arrow) but also the side marker in the top corner (closed arrow). Middle, a COVID-19 X-ray: the strongest pixels are in the bottom corners, outside the lungs. Bottom, a COVID-19 X-ray: the only highlighted area is the diaphragm. From DeGrave, Janizek and Lee (2020), Figure 2a, cropped from the full figure, medRxiv preprint [@doi:10.1101/2020.09.13.20193565], [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); image from [PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC7523163/).](../images/covid-xray-saliency-degrave-2020.jpg){#fig-covid-saliency fig-alt="Three chest X-rays on the left, labelled COVID-19 negative, COVID-19 positive, and COVID-19 positive, each beside a speckled red map on the right. Arrows on the maps point to a side marker in the top-right corner of the first image, to the two bottom corners of the second, and to the diaphragm in the third. A colour bar runs from 0th percentile, white, to 99th percentile, dark red."}
+
+The test set came from the same mixed sources as the training set, so it had
+the same flaw and could not catch it. The literature calls this *shortcut
+learning*. An epidemiologist would call the source a *confounder*: a third
+factor linked both to the image and to the label. When you read a claim like
+this, ask where each group of images came from.
+
+**MYCIN and Watson.** MYCIN, a rule-based system for choosing antimicrobials
+built at Stanford in the 1970s, was evaluated blind by eight experts on ten
+meningitis cases. Its acceptability rating, 65 percent, was higher than that
+of any of the five faculty specialists it was compared with [@pmid:480542].
+It was never used in routine patient care [VERIFY: a source that MYCIN never
+entered clinical use; the cited evaluation does not say]{.verify}. IBM Watson
+went from winning *Jeopardy!* in 2011 to a cancer-center collaboration that
+was set aside in 2017 after an audit, without entering clinical use
+[@pmid:30053147]. Neither story argues that today's tools will fail. Both
+show that a striking result is not the same as a tool in use on the ward.
+:::
+
 ### From tables to words
 
 Everything so far had a table: one row per patient, one column per predictor,
 one column of truth. A language model is the same loop with a different table.
-Seeing that is the key point.
 
 Take any sentence from the internet: *the patient was started on empiric*.
 Split it into **tokens**, which are words or pieces of words. "Empiric" might
@@ -463,12 +476,13 @@ The model is then trained to do one thing: given the tokens so far, produce a
 probability for every possible next token. Then one token is picked, at random
 but weighted by those probabilities. It is added to the end, and the process
 runs again. A paragraph of smooth medical prose is a few hundred repetitions
-of *predict the next token, pick one, repeat*. Your phone's keyboard does this
-with a vocabulary of a few thousand words, looking back two or three words.
-These models do it with a vocabulary of roughly a hundred thousand tokens,
-looking back many thousands of tokens, using a function *f* with hundreds of
-billions of numbers in it. The video you will watch shows what that function
-looks like from the inside. What matters here is what it does not contain.
+of *predict the next token, pick one, repeat*. Your phone's keyboard suggests
+the next word the same way, with a small model that looks back only a few
+words. Chatbots do it at a much larger size. In 2026 a typical large model
+works with a vocabulary of about a hundred thousand tokens or more. It looks
+back over many thousands of tokens, and its *f* has billions of numbers in
+it. The exact sizes change with each new model. The video shows what happens inside.
+What matters here is what the process does not contain.
 
 There is a second training stage, and it explains the tone. After the
 next-token training, people are paid to compare pairs of answers and say which
@@ -478,9 +492,7 @@ turns a text-completer into an assistant that answers your question, in
 paragraphs, politely. It also means the model has been trained toward answers
 people *rate well*, which is not the same as answers that are true. In
 practice it tends to reward confidence and completeness, because a cautious,
-incomplete answer loses those comparisons. A general review for clinicians of
-how these chatbots are built, and of the mixed results so far, is a good next
-read [@pmid:37460753].
+incomplete answer loses those comparisons.
 
 Now the main sentence of the chapter:
 
@@ -495,10 +507,8 @@ truth step in it. Today's chatbots can add a check on top of this process if
 you ask for one; [Ask it to check](#ask-it-to-check), below, shows how.
 :::
 
-Here is what that looks like when it reaches you. The exchange below is
-illustrative, made up for this chapter. The scoring system, the point values
-it gives, and the reference are the kind of thing a model produces, not a
-transcript.
+Here is what that looks like when it reaches you, in an exchange made up for
+this chapter.
 
 ::: {.chat}
 <div class="user">What are the exact point values and cutoffs for the HEART score, and what is the original publication?</div>
@@ -511,10 +521,10 @@ and every clause is a plausible continuation. The structure is right. The
 names are real people who have written about this score. The journal exists.
 But is the *original* publication the one named? Are the percentages from that
 paper, or a later one, or nowhere? Do the cutoffs match what MDCalc shows?
-The model did not check any of that, because checking is not a step. You will
-find out in the exercise. The first description of the score is in fact in a
-different journal and year [@pmid:18665203]. That is exactly the kind of
-detail that a smooth continuation gets *almost* right.
+The model did not check any of that, because checking is not a step. In fact,
+the first description of the score is in a different journal and year
+[@pmid:18665203]. That is exactly the kind of detail that a smooth
+continuation gets *almost* right.
 
 ::: {.callout-note title="What this does and does not mean"}
 It does not mean the answer is usually wrong. On common questions these models
@@ -540,80 +550,43 @@ Check each fact and citation in your answer using web search. For each one, give
 
 Three studies say what a check like this does and does not do.
 
-- **Search helps.** One 2026 study asked six chatbot versions for references
-  on ear, nose, and throat topics. The two versions with web search gave more
-  accurate references than the four without it. Even the best got only about
-  half of its references fully right [@pmid:41546380].
-- **A second pass helps.** In another study, a model wrote questions to check
-  its own first draft, answered them separately, and then rewrote the answer.
-  The rewritten answers made fewer false claims [@doi:10.18653/v1/2024.findings-acl.212].
-- **Neither makes it perfect.** In a 2025 study of medical questions, a chatbot
-  with web search still gave about 3 statements in 10 that the source it cited
-  did not support [@pmid:40240349]. A real link is not the same as a link that
-  says what the answer says.
+- **Search helps.** In a 2026 study, six chatbot versions were asked for
+  references on ear, nose, and throat topics. The two with web search did
+  better than the four without. The best scored 51 percent on the study's
+  reference-accuracy rating [@pmid:41546380].
+- **A second pass helps.** A model that wrote questions to check its own
+  draft, answered them, and then rewrote the draft made fewer false claims
+  [@doi:10.18653/v1/2024.findings-acl.212].
+- **Neither makes it perfect.** In a 2025 study of medical questions, a
+  chatbot with web search still made about 3 statements in 10 that its cited
+  source did not support [@pmid:40240349].
 
-There is also a limit no search can fix. In most setups the chatbot cannot see
-the patient's chart. So it cannot check facts about your patient: the dose
-against the patient's weight, the history against the notes. Those are still yours to
-check. A chatbot that checks against the chart is a future capability, not
-today's.
+There is also a limit no search can fix. ChatGPT Edu cannot see the chart;
+some tools built into the electronic health record can. So ChatGPT Edu cannot
+check facts about your patient: the dose against the patient's weight, the
+history against the notes. Those are yours to check.
 
 So let the chatbot check the literature. Then open the link yourself before
 anything goes in a note or an order.
 
-::: {.callout-tip title="Two earlier systems worth thirty seconds"}
-The current systems have a history. **MYCIN**, a rule-based system for choosing
-antimicrobials built at Stanford in the 1970s, was evaluated blind by eight
-infectious-disease experts on ten meningitis cases. It received an
-acceptability rating of 65 percent, higher than any of the five faculty
-specialists it was compared with, and it never failed to cover a treatable
-pathogen [@pmid:480542]. It was never used on a patient. Performing well and
-being adopted are different problems.
-
-**IBM Watson** went from winning *Jeopardy!* in 2011 to a cancer-center
-collaboration that was set aside in 2017 after an audit. The trade press
-reported the cost as 62 million dollars. The system never entered clinical use
-[@pmid:30053147]. A demonstration is not a working tool on the ward. Neither
-story argues that the present tools will fail. Both argue that a
-demonstration, however striking, tells you very little about what happens on
-the ward.
-:::
-
 ## Watch or listen
 
-**Video.** 3Blue1Brown, *But what is a GPT? Visual intro to transformers*
-(Deep Learning, Chapter 5), published 1 April 2024, 27 minutes.
-<https://www.youtube.com/watch?v=yMQPQuz5WpA>. The lesson page at
-<https://www.3blue1brown.com/lessons/gpt> carries the same content under the
-title *Transformers, the tech behind LLMs*, with a transcript. Captions are
-available on YouTube.
+**Video.** 3Blue1Brown, *Large Language Models explained briefly*, published
+20 November 2024, 8 minutes. <https://www.youtube.com/watch?v=LPZh9BOjkQs>.
+Captions are on YouTube, and the transcript is at
+<https://www.3blue1brown.com/lessons/mini-llm>.
 
-It is the one visual explanation of these models worth the time, and it
-assumes no math beyond what is drawn on screen. Watch for two things. The
-moment, early on, where the whole system is shown to produce *a probability
-for every possible next token*, then pick one and repeat. That is the process
-this chapter described in words. The passage on embeddings, where words become
-directions in space and "woman minus man" ends up near "queen minus king". That
-is the "raw material to predictors" box made visible. If you cannot follow the section on attention, skip it. The exercise does
-not need it.
+It shows the process this chapter describes, with no math beyond what is
+drawn on screen. Watch for three things. Early on, the model gives a
+probability for every possible next word, picks one, and repeats. Then it is
+trained on huge amounts of text. Then a second stage, where people rate its
+answers, shapes how it talks to you. A longer video in the same series is in
+Go deeper.
 
 ## Do
 
-::: {.callout-warning title="No patient information, ever"}
-All three parts of this exercise use public or made-up material. Part A runs
-on made-up data in your browser. Parts B and C ask the model about a published
-scoring system, not about a patient. Your university ChatGPT Edu or Copilot
-account, signed in with university credentials, is covered by a business
-associate agreement, the contract that makes the vendor legally responsible
-for protecting patient data. That covers patient care. This exercise is not
-patient care. The question you will be
-tempted to ask about the patient from this morning is one you do not ask. And
-whatever drafts a note, you sign it. What to document when a tool helped is
-[the ethics chapter's](core-ethics-regulation.qmd) question.
-
-What counts as patient information, and why taking out the name is not
-enough: [the patient information page](../course/patient-information.qmd).
-:::
+Made-up patients only. [What counts as patient
+information](../course/patient-information.qmd).
 
 ### Part A: overfitting you can see (5 minutes)
 
@@ -732,12 +705,12 @@ The third sentence is the one you will use again. It is the same question you
 will ask of every performance figure on every vendor slide for the rest of
 your career.
 
-### Part B: produce a hallucination on purpose (15 minutes)
+### Part B: ask, then check (15 minutes)
 
 Pick one scoring system from @tbl-scores in a specialty you have rotated
-through, so that you already know roughly what the right answer is. Each row's
-original publication has been checked in PubMed for this chapter, so you have
-a verified target.
+through, one you expect to use next year. Each row's original publication was
+checked in PubMed for this chapter, so you have something solid to check
+against.
 
 | Specialty | Score | Original publication (verified) |
 |---|---|---|
@@ -752,29 +725,36 @@ a verified target.
 
 : Eight scoring systems with their original publications, each confirmed in PubMed on 2026-09-07. Pick the one you know best. {#tbl-scores}
 
-Open your chatbot in a fresh conversation and ask:
+Open your chatbot in a fresh chat and ask the question the way you would on
+the wards:
 
-> Give me the exact point values and cutoffs of the `<score>`, the outcome
-> each cutoff was validated against, and the full original publication that
-> first described it: first author, journal, year, volume, and pages.
+> I'm a fourth-year medical student. Explain the `<score>`: what it is for,
+> its point values and cutoffs, what each cutoff means for the next step in
+> care, and the original publication that first described it (first author,
+> journal, and year).
 
-Now verify, in this order. Open the score on [MDCalc](https://www.mdcalc.com)
-and compare every point value and cutoff. Then open PubMed, search the first
-author and year the model gave you, and compare against @tbl-scores. Use
-PubMed and not Google Scholar. Scholar's loose matching will show you a
-different real paper for a citation that does not exist, and you will score it
-as found.
+Read the answer the way you would read a resident's sign-out. It will
+probably be clear, and most of it will probably be right. Your job is to find
+out which parts are right before you rely on them. Check in this order, the
+same order you will use at work:
 
-Large current models usually get this right for scores this well known. If
-yours did, ask a second question in the same conversation:
+1. **The numbers.** Open the score on [MDCalc](https://www.mdcalc.com) and
+   compare every point value and cutoff.
+2. **The source.** Open PubMed, search the first author and year the chatbot
+   gave, and compare against @tbl-scores. Use PubMed, not Google Scholar,
+   which can match a citation that does not exist to a different real paper.
+3. **Its links, if it gave any.** ChatGPT Edu often searches the web. Open
+   one link and find the sentence the answer relied on.
 
-> Give me five references, with PubMed IDs, that support `<a claim from the
-> score's original paper>`.
+If everything checked out, write that down: you know this answer is right,
+and you know how you know. Then ask one harder question in the same chat:
+
+> Give me five references, with PubMed IDs, that support `<one claim from
+> the answer>`.
 
 Open each PMID in PubMed and read the title. A wrong PMID usually opens a real
-paper about something else, so a link that works proves nothing. When the
-course tested four models with this question on 3 October 2026, every one of
-them gave at least one wrong PMID.
+paper about something else, so a link that opens proves nothing by itself. It
+may get all five right; reading the five titles is how you would know.
 
 Record:
 
@@ -782,39 +762,26 @@ Record:
 Tool and model version if shown: ____________________________
 Score chosen: ______________________________________________
 
+What it got right: _________________________________________
 Point values and cutoffs: all correct / one wrong / more than one wrong
-  What was wrong, exactly: _________________________________
+  What was wrong, if anything: _____________________________
+Original publication matches the verified original?
+  Y / N / partly (which fields differ): ____________________
+Did it search the web and show links?  Y / N
 
-Original publication as given by the model:
-  ____________________________________________________________
-  Matches the verified original?  Y / N / partly (which fields differ)
+Five references, if you asked:
+  PMIDs whose title matched the claim: ___ of 5
 
-Second question, if you asked it:
-  PMIDs whose title matched the paper described: ___ of 5
-  What the wrong ones opened: ________________________________
-
-How the model produced this, in one sentence, using the words "token"
-or "plausible continuation" and not the word "hallucinate":
+How the model produced this answer, in one sentence, using the
+words "token" or "plausible continuation" and not "hallucinate":
   ____________________________________________________________
 ```
 
-The last line is the one that matters. "It made a mistake" is not an
-explanation. "It predicted the most plausible next tokens after 'the original
-publication was', and a plausible citation looks exactly like a real one" is.
-The model may get everything right. If it does, write that down too, and then
-write the sentence anyway. A model that is right nine times in ten, with no
-change of tone on the tenth, is the more dangerous object. That is why
-unverified output is dangerous rather than merely useless. Then, if you have
-two minutes left, ask the same thing again in plainer words, the way you would
-say it out loud. The answer depends on the wording more than you would expect.
-[the critical appraisal chapter](core-appraisal.qmd) measures by how much.
-
-::: {.callout-tip title="If the model refuses or hedges"}
-Some assistants will now say they cannot guarantee citations, or will offer to
-search the web. A hedge is a design choice added on top of the same process,
-and it is worth noting in your record. A tool tuned to hedge has not checked
-anything. Asking it to check is Part C.
-:::
+The last line matters even if every answer was right. A right answer and a
+wrong one come out of the same process, in the same tone. "It predicted the
+most plausible next tokens after 'the original publication was', and a real
+citation and a made-up one are both plausible" explains both. That is why
+checking stays part of the routine for anything that matters.
 
 ### Part C: ask it to check (5 minutes)
 
@@ -848,11 +815,12 @@ top.
 
 | You can | Meets | Falls short |
 |---|---|---|
-| Name the eGFR model's predictors, response, and training population (objective 1) | Creatinine, age, sex; measured GFR; 8,254 research participants in 10 studies, and you can say why the last one matters for the patient in the clinic | "Creatinine and stuff" or a training population you cannot describe |
-| Sort four models with the two questions in @tbl-two-questions (objective 2): the eGFR; an EHR sepsis alert; a tool that groups tumor expression profiles with no diagnoses attached; a chatbot predicting the next token | Supervised regression; supervised classification; unsupervised; supervised (the next word is the label), and you can say why the last one needs no human labeler | Any row you had to guess |
-| Explain the three sentences from Part A (objective 3) | The third sentence says that training error alone would have picked 11, the most flexible setting, where the training error is zero; that the test error there is off the chart; and that the lowest test error is in the middle, near 3. It also says this is why a performance figure with no test set is not yet a number | The first two sentences only, or a third sentence that restates the training error |
-| Give the one-sentence explanation from Part B (objective 4) | One sentence about plausible next tokens, no "hallucinate", and it explains why the tone did not change when the answer was wrong | "It hallucinated" or "it made a mistake" |
-| Report what the check in Part C did (objective 5) | You say what the check corrected and what it marked as not found; you opened two links and say whether each source supports the claim; and you name something the check cannot catch, such as a real link that does not support the claim, or any fact about a patient, because the chatbot cannot see the chart | "It checked everything", or a record with no link opened |
+| Place four examples in the circles of @fig-circles (objective 1): MYCIN, with rules written by hand; the eGFR equation; a model that reads chest X-rays; a chatbot | AI only; machine learning; deep learning; generative AI. You can say what makes each one a kind of the one around it | Calling all four "AI" with nothing more, or putting the eGFR outside machine learning without a reason |
+| Name the eGFR model's predictors, response, and training population (objective 2) | Creatinine, age, sex; measured GFR; 8,254 adults in 10 studies, and you can say why the last one matters for the patient in the clinic | "Creatinine and stuff" or a training population you cannot describe |
+| Sort four models with the two questions in @tbl-two-questions (objective 3): the eGFR; an EHR sepsis alert; a tool that groups tumor expression profiles with no diagnoses attached; a chatbot predicting the next token | Supervised regression; supervised classification; unsupervised; supervised (the next word is the label), and you can say why the last one needs no human labeler | Any row you had to guess |
+| Explain the three sentences from Part A (objective 4) | The third sentence says that training error alone would have picked 11, the most flexible setting, where the training error is zero; that the test error there is off the chart; and that the lowest test error is in the middle, near 3. It also says this is why a performance figure with no test set is not yet a number | The first two sentences only, or a third sentence that restates the training error |
+| Give your Part B record and its one-sentence explanation (objective 5) | You can say which parts of the answer were right and how you checked each. The sentence is about plausible next tokens, has no "hallucinate", and explains why a right answer and a wrong one sound the same | "It hallucinated", "it made a mistake", or a record with nothing checked |
+| Report what the check in Part C did (objective 6) | You say what the check corrected and what it marked as not found; you opened two links and say whether each source supports the claim; and you name something the check cannot catch, such as a real link that does not support the claim, or any fact about a patient, because ChatGPT Edu cannot see the chart | "It checked everything", or a record with no link opened |
 
 ## What this changes for you
 
@@ -867,50 +835,28 @@ number for a normal amount of muscle. She does not have a normal amount of
 muscle. So the same creatinine probably means a *lower* true GFR than the 57
 the equation returned. Was she among the 8,254? What would you ask for
 instead? What do you now say to the attending about the number on the panel?
-One word is not an answer. And notice that nobody told her a model had a part in
-her care either. Whether that matters, and when, is [the patient-communication
-chapter's](core-patient-communication.qmd) question, not this one's.
+One word is not an answer.
 
-And the second half. The next time a chatbot gives you a citation with a first
-author, a journal, and a year, what is the one sentence you will say to
-yourself before you paste it anywhere? Will you ask it to check, and which
-link will you then open yourself? Which facts in the answer are about your
-patient, so that no chatbot can check them for you?
-
-## Summary
-
-- The eGFR is a model learned from data: creatinine, age, and sex in; a
-  stand-in for measured GFR out; 8,254 research participants as the
-  population it was fit to. Every learned model has those three parts, and you can
-  ask for them.
-- Supervised learning has the answer in the training data; unsupervised does
-  not. Classification gives a category; regression gives a number.
-- Fitting means a computer adjusts the numbers in a formula until its error
-  on the training data is as small as it can get.
-- Performance on the training data describes the fit. It is not evidence.
-  Ask for the test set; if there is none, there is no number yet.
-- A test set protects you only if it looks like your patients. The COVID-19
-  X-ray models scored well on test sets cut from the same flawed sources, and
-  lost about half their performance at other hospitals.
-- Too simple is bias, too flexible is variance, and a different population is
-  dataset shift. All three are failures of the same object.
-- A language model turns text into a table where the predictors are the
-  tokens so far and the truth is the next one. It predicts, picks one, and
-  repeats. Human raters then tune it toward answers people prefer.
-- Nothing in that process checks whether a claim is true. A made-up citation
-  is a plausible continuation, produced in the same tone as a real one.
-- You can ask a chatbot to check its facts and citations with web search. It
-  helps, it is not perfect, and it cannot check facts about your patient.
-  Open the link yourself.
-- The 57 on the panel came from somewhere. So does everything else.
+And the second half. The next time a chatbot gives you a clear, useful answer
+with a citation in it, which parts will you check before you rely on it? Will
+you ask it to check, and which link will you then open yourself? Which facts
+in the answer are about your patient, so that ChatGPT Edu cannot check them
+for you?
 
 ## Go deeper
 
 **Videos and talks**
 
+- 3Blue1Brown, *Transformers, the tech behind LLMs* (Deep Learning, Chapter
+  5), 1 April 2024, 27 minutes. <https://www.youtube.com/watch?v=wjZofJX0v4M>.
+  The longer version of the Watch video, with a transcript at
+  <https://www.3blue1brown.com/lessons/gpt>. Look for the passage on
+  embeddings, where words become directions in space and "woman minus man"
+  ends up near "queen minus king". If you cannot follow the section on
+  attention, skip it.
 - Andrej Karpathy, *Intro to Large Language Models* (November 2023, about one
   hour). <https://www.youtube.com/watch?v=zjkBMFhNj_g>. More advanced than
-  the 3Blue1Brown video: what the two training stages are, why the second one
+  the 3Blue1Brown videos: what the two training stages are, why the second one
   produces an assistant, and a section on prompt injection (tricking a model
   with instructions hidden in the text it reads).
 - 3Blue1Brown, *But what is a neural network?* (Deep Learning, Chapter 1).

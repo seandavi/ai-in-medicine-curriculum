@@ -1,16 +1,20 @@
 # Answer key — core-patient-communication
 
-Not rendered. Fed to the tutor; used by the course director when reviewing
-journals and Friday groups. Revised 2026-10-08 for the trimmed chapter: the old
-Part C (the sentence you need permission to say) is now Part A item 3, Part A
-adds a chatbot review of the student's own sentences, and the live session is
-replaced by the week 3 Friday scenario cards.
+Not rendered. Fed to the tutor; used by the course director when reading
+journals. Revised 2026-10-08 for the trimmed chapter: the old Part C (the
+sentence you need permission to say) is now Part A item 3, and Part A adds a
+chatbot review of the student's own sentences. Revised 2026-10-12: "the
+spine" is now "the three sentences"; Part A has an optional item 4 (the
+AI-safety headline, issue #92); students paste their Keep-it notes into
+journal question 4 and practise out loud with a classmate or at Christina
+Olson's workshop (Monday 26 October). There are no Friday scenario cards and
+no class votes.
 
 ## Part A — model answers
 
-Model answers, not the only answers. The tutor grades the shape (three
-sentences, in order, separate facts, a name in the third) and the two extras,
-not the wording. The student writes these before asking the chatbot anything.
+Model answers, not the only answers. Look for the shape (three sentences, in
+order, separate facts, a name in the third) and the two extras, not the
+wording. The student writes these before asking the chatbot anything.
 
 **1. The phone on the desk.**
 
@@ -26,7 +30,7 @@ Common failures: one sentence covering what it did and what the clinician does
 24 hours"); "nothing leaves the building" without knowing; no offer to turn it
 off; the offer framed as a burden ("but then I'd have to type everything").
 
-**2. The computer found something.** The sentence *before* the spine responds
+**2. The computer found something.** The sentence *before* the three responds
 to the fear: "You've been frightened for two days, and I'm sorry the phone call
 left you with a word and no explanation. Let me tell you exactly what happened,
 and then I'll answer the question you're going to ask." Then:
@@ -50,6 +54,25 @@ probably nothing."
 
 Both sentences fail if either reassures ("but it's very accurate"). The second
 must carry a time.
+
+**4. The headline (optional).** The patient read that an AI system broke out
+of a test (the OpenAI agents and Hugging Face incident, July 2026; see issue
+#92 for dated sources) and asks whether the phone is safe. The answer is about
+this tool, not about AI in general:
+
+> That's a fair thing to ask after a story like that. I can't speak for every
+> AI system, but I can tell you what this one does. It listens to our
+> conversation and writes a first draft of my note. I read that draft, change
+> it, and sign it, so the note is mine, not the phone's. If you'd rather it
+> were off, I'll turn it off now; the visit is the same either way.
+
+What to look for: the worry acknowledged before any explanation; the three
+sentences (what it does, what the clinician does, who is responsible); the
+offer to turn it off, from the refusal table. Common failures: an answer about
+AI in general or the safety debate; "that was a research system, nothing like
+this one" (a claim the student cannot check); "it's completely safe" or "it
+can't do anything like that"; "that's just hype", which dismisses the
+patient.
 
 **The chatbot review.** The prompt asks the tool to flag words, flag claims the
 student could not know, and predict the next question, and not to rewrite. What
@@ -121,22 +144,26 @@ patients'.
 | Stanford drafts: 20% use, no time change, lower task load | Garcia et al., JAMA Netw Open 2024. pmid:38506805 |
 | UCSD randomized rollout: +17.9% reply length, no reply-time change | Tai-Seale et al., JAMA Netw Open 2024. pmid:38619840 |
 | UK GPs Aug 2025: 14% using; 63% seek consent; ≤10% decline; errors 38/35/31% | Blease et al., BMJ Health Care Inform 2026. pmid:42386325 |
-| Clinician 2.1% → patient 20.0% fabrication | McLaughlin et al., Neurosurg Pract 2026. pmid:42232526 |
-| 36 of 284 answers scored 1–2 | Goodman et al., JAMA Netw Open 2023. pmid:37782499 |
-| 21% cover patient communication | Tolentino et al., JMIR Med Educ 2024. pmid:39023999. Confirmed 2026-09-08 against the PMC full text: 4 of 19 program papers (21%) mention "communication of AI results to patients"; the denominator is papers, not the 30 programs. |
+| Patient-worded questions got less accurate references (Go deeper only since 2026-10-12) | McLaughlin et al., Neurosurg Pract 2026. pmid:42232526 |
+| 36 of 284 answers scored 1–2 ("about one in eight") | Goodman et al., JAMA Netw Open 2023. pmid:37782499 |
 | 66% very important to be told (Go deeper) | Khullar et al., JAMA Netw Open 2022. pmid:35507346 (numbers from PMC full text) |
 | Tessa, NEDA, June 2023 | CNN Business 2023-06-01; NPR 2023-06-08 |
-| Winters v. OpenAI, complaint filed July 2026 | Norton Rose Fulbright blog 2026-08-11; Forbes 2026-07-26. Allegations only. |
-| ECRI 2026 top hazard | AHCJ blog 2026-02-05 |
+| Winters v. OpenAI, complaint filed July 2026; clipping only since 2026-10-12, with "no court had ruled as of 12 October 2026" | Norton Rose Fulbright blog 2026-08-11; Forbes 2026-07-26. Allegations only. A web search on 2026-10-12 found no ruling, dismissal, or settlement. |
+| ECRI 2026 top hazard (clipping only) | AHCJ blog 2026-02-05 |
 | CA AB 3030 (Jan 2025); TX SB 1188 (Sept 2025) and HB 149 (Jan 2026); now in Go deeper, with one sentence in the portal section | Checked against statute text on the legislature sites in the 2026-09-08 VERIFY pass (#52) |
 
 ## Instructor prep
 
-The chapter's spoken practice now happens in the week 3 Friday small groups
-(October 30), using the cards in `course/friday-groups.qmd`: the scribe
-question and the caregiver who came prepared rehearse Parts A and B. Run the
-Part B prompt yourself before week 3 in ChatGPT Edu and Copilot. If the persona
-caves on the first exchange, the chapter already tells students to add "be
-harder to persuade"; if it still caves, add that line to the prompt itself.
-The same Part B prompt is the "patient who talks back" open lab; if the class
-votes for it, run it as written, then have students change the patient.
+Week 3 has no Monday talk; Christina Olson's workshop (Monday 26 October,
+10 a.m. to noon) takes its place. Spoken practice is with a classmate at any
+time, or at the workshop if it includes practice. A three-person version of
+the Part B persona and observer questions (patient, clinician, observer),
+ready for the course director to forward to her, is in the description of the
+week 3 pull request; whether she uses it is her decision. The Friday
+30 October groups are students' own clinical stories, not role-play.
+
+Run the Part B prompt yourself before week 3 in ChatGPT Edu and Copilot. If
+the persona caves on the first exchange, the chapter already tells students
+to add "be harder to persuade"; if it still caves, add that line to the prompt
+itself. The same Part B prompt is the "patient who talks back" open lab: run
+it as written, then have students change the patient.

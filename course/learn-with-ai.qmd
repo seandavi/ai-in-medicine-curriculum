@@ -11,6 +11,39 @@ So each week, pick something you want to learn and use AI as your tutor and
 research assistant. The chapters give you a framework. This is where most of
 your learning happens.
 
+## Start here: your first 10 minutes
+
+1. Pick one topic you are studying right now, something you will need on a
+   rotation or in residency.
+2. Open ChatGPT Edu or Copilot, signed in with your university account, and
+   paste this, with your topic and specialty in the brackets (about 5
+   minutes):
+
+   ```
+   Explain [topic] three ways: first as you would to a patient, then to a
+   medical student, then to an attending in [specialty]. After each, ask me
+   one question to check I understood.
+   ```
+
+3. Choose one sentence from the answer that you would repeat on rounds.
+   Check it against a source you trust: a textbook, a guideline, or a paper
+   (about 5 minutes).
+
+Most of a good answer is right. Your job is to find out which parts.
+
+**What a check looks like** (an invented example). You asked about loop
+diuretics. The answer says furosemide blocks the sodium-potassium-chloride
+cotransporter in the thick ascending limb of the loop of Henle. Your
+pharmacology textbook says the same. That sentence checks out. Write the
+source next to it and use it.
+
+**What a mismatch looks like.** Suppose the answer had said furosemide acts in
+the distal convoluted tubule. Your textbook gives that site for thiazides, so
+the answer mixed up two drug classes. Tell the chatbot what your source says,
+and ask why they differ. Then go with the source you can name. Either way, you
+have learned where to trust it; write that in question 2 of your [learning
+journal](learning-journal.qmd).
+
 ## Pick a topic
 
 Choose something tied to your own path. Some starting points:
@@ -35,8 +68,8 @@ A personal ChatGPT account is not covered by the university's agreement. Do
 not use it for university information.
 
 This work is learning, not patient care, so use made-up cases, never real
-patient information. That is the only line; everything else is yours to try.
-See [the patient information page](patient-information.qmd).
+patient information. That rule has no exceptions; everything else is yours to
+try. See [the patient information page](patient-information.qmd).
 
 If you would rather talk than type, ChatGPT Edu has a voice mode where your
 institution turns it on.
@@ -55,13 +88,8 @@ short steps. For each step, say what I should be able to do at the end.
 Ask me two questions first about what I already know.
 ```
 
-### Explain it three ways
-
-```
-Explain [concept] three ways: first as you would to a patient, then to a
-medical student, then to an attending in [specialty]. After each, ask me
-one question to check I understood.
-```
+For a plan that covers all four weeks, see [Plan your four weeks with
+ChatGPT](../chapters/plan-your-learning.qmd).
 
 ### Quiz me, and make me explain
 
@@ -116,18 +144,31 @@ things to remember, two common mistakes, and three questions I should
 still ask an expert.
 ```
 
+## Three habits
+
+The course director's advice for any topic you learn with AI:
+
+- **Try it yourself first, then ask.** Write your own answer or plan, even a
+  rough one, before you ask the chatbot. Then compare the two.
+- **Come back to the topic in a week.** Ask the chatbot to quiz you on last
+  week's topic, and see what you still know.
+- **Write down what you learned without AI.** At the end of a session, close
+  the chat and write a few lines from memory.
+
 ## One check a week
 
-Each week, take **one** thing the AI told you that mattered and check it
-against a source: a paper, a guideline, a textbook, an expert. Note what you
-found in question 2 of your [learning journal](learning-journal.qmd). Sometimes it will be
-right. Sometimes it will be confidently wrong. Both are worth knowing, and
-the habit is the point.
+Each week, take **one** thing the AI told you that mattered and check it, as
+in [Start here](#start-here-your-first-10-minutes): against a paper, a
+guideline, a textbook, or an expert. Note what you found in question 2 of your
+[learning journal](learning-journal.qmd). Usually it will be right; sometimes
+it will be confidently wrong. Both are worth knowing.
 
 ## When you get stuck
 
 - **The answer is too vague.** Say who you are and what you need it for.
-  Ask for an example.
+  Ask for an example. The [prompting
+  lab](../chapters/enrichment-prompting-lab.qmd) shows how to write a prompt
+  that gets a better answer the first time.
 - **It is too long.** Ask for five bullet points, or "answer in three
   sentences".
 - **It sounds sure but you are not.** Ask, "How confident are you, and what
