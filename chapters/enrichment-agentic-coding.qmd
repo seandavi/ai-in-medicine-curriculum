@@ -194,16 +194,22 @@ Each has a matching check in the Do block.
 
 : Three independent failures. A tool can pass two and fail the third. {#tbl-tool-failures}
 
-The first row is where models are weakest and where the evidence is clearest.
-When ChatGPT was asked to perform 48 kinds of medical calculation directly, it
-got one trial in three wrong. Giving the model a purpose-built calculation
-tool to call, instead of doing the arithmetic itself, cut the error rate
-thirteenfold, from 64% to 4.8% [@pmid:40097720]. Read that finding carefully,
-because it says two things. A model *doing* clinical arithmetic in its reply
-is unreliable. A model *writing code* that does the arithmetic is much better.
-That is exactly why the tool you build today will mostly work. But the code
-only contains the rules the model put in it, and the rules it leaves out leave
-no trace.
+The first row is where the evidence is clearest. In late 2023, researchers
+gave ChatGPT 48 kinds of medical calculation, and it got about one answer in
+three wrong, even though it could already write and run its own code
+[@pmid:40097720]. More than half of its mistakes were in the rules: the wrong
+points for an item, or an item missed or made up. On the ten hardest
+calculations, with new test cases and a newer model, the team then tested what
+helps. Letting the model write and run
+code helped only a little: wrong answers fell from about 64 to 54 percent.
+Giving it MDCalc's written instructions helped much more. Giving it
+calculators that people had built and checked, which it could call, cut wrong
+answers to 4.8 percent.
+
+So writing code does not make a model reliable. Rules from a checked source
+do. Your tool will usually do its arithmetic correctly, but its rules are only
+as good as the model's memory of the score, and a rule it leaves out leaves no
+trace. That is why you check it against MDCalc and the paper.
 
 The second row is where non-programmers are weakest. Medical students spent
 three hours building health apps by prompting. Every group produced a working
@@ -474,10 +480,9 @@ complete in time to be recorded. So nothing here is presented as what a
 particular model produced on a particular day. Run the prompt yourself and
 compare.
 
-**CHA₂DS₂-VASc, expected.** The page will almost certainly get the eight
-point values right and add them up correctly. That is the easy part. The
-one-in-three arithmetic failure above is about the model doing sums in prose,
-not code. Look instead at three places. First, the two age boxes. If both
+**CHA₂DS₂-VASc, expected.** The page will usually get the eight point values
+right and add them up correctly. That is the easy part. Look instead at three
+places. First, the two age boxes. If both
 "65–74" and "≥75" can be ticked at once, the page can produce a score of 3
 for age, which no patient has. Second, the stroke-risk percentages beside
 each score. The page will print a column of numbers with a footnote naming
@@ -578,9 +583,8 @@ each one is compared against. One word is not an answer to either.
 - A running tool hides errors a reply does not. The arithmetic is usually
   right. The rules at the edges, and the version of the score, are where a
   generated calculator fails.
-- A model doing clinical arithmetic in its reply is wrong about a third of the
-  time. A model writing code that does it is far better, and still only
-  contains the rules it was told about.
+- Writing code does not make a model reliable at clinical calculation; rules
+  from a checked source do. Check your tool against MDCalc and the paper.
 - Comprehension abdication is the named hazard: if you cannot say what your
   tool does for every input, you cannot say how it fails.
 - Four questions move a tool from study aid toward device: patient data,
@@ -597,8 +601,9 @@ each one is compared against. One word is not an answer to either.
 - VIBE-HI, the governance framework behind @tbl-tiers, with its tiers mapped to
   regulation [@pmid:42564266]; and the laboratory-medicine editorial on the
   illusion of competence [@pmid:42695169].
-- The clinical-calculation study behind the one-in-three figure
-  [@pmid:40097720], and the cardiology group's technical validation of a
+- The clinical-calculation study [@pmid:40097720]: code the model wrote for
+  itself helped a little, and calculators built and checked by people helped
+  most. Also the cardiology group's technical validation of a
   ChatGPT-built calculator against a registry [@pmid:40462782], which shows
   what your Part B could become.
 - Two views of the same practice from inside medicine: an editorial arguing
