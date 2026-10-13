@@ -86,33 +86,33 @@ of the chapter explains both in detail.
 ## Why this matters
 
 In residency you will read less than you do now and rely on summaries more.
-Some of those summaries will come from tools like the one above. A grounded
-tool inside the EHR that answers from your hospital's protocols. A literature
-tool that searches PubMed. A notebook you built from a rotation's reading
-list. The vendors will tell you, correctly, that these tools "cite their
-sources." What they will not say is what "cite" means, step by step. So they
-will not say which errors citing protects you from, and which it does not.
+Tools like this one will write many of them: a notebook built from a
+rotation's reading list, a literature tool that searches PubMed, a tool inside
+the EHR that answers from your hospital's protocols. Used well, they are fast
+and accurate. In one study, four orthopedic specialists rated 50 disability
+cases against a written regulation. With NotebookLM they were right 91% of
+the time, against 68% working by hand, in under a third of the time
+[@pmid:42534267].
 
-When a notebook misreads a paper, the result is a wrong slide. When the grounded
-tool inside the EHR misreads a protocol, the result can harm a patient. The
-clinician who repeated the sentence is responsible for it.
+These tools "cite their sources", and that is a real advance. What citing
+protects you from, and what it does not, follows from how the tool works.
+When a notebook misreads a paper, the result is a wrong slide. When the
+grounded tool inside the EHR misreads a protocol, the result can harm a
+patient. The clinician who repeated the sentence is responsible for it.
 
-The second reason is smaller and closer. The same mechanism that makes a
-grounded tool trustworthy about *where* a sentence came from also explains
-three other things. Why a chatbot has no memory. Why nothing you type teaches
-it anything. And why pasting a patient's note into a consumer tool is a
-question about data storage, not about the model learning. Those are the
-AIM-1 basics most clinicians get wrong, all in the same direction, and one
-hour fixes them.
+The same mechanism also explains three things many clinicians get wrong. Why
+a chatbot seems to remember you. Why nothing you type teaches it anything.
+And why the rule against pasting patient information is about where your text
+is stored, not about the model learning.
 
 ## How it works
 
 ### The model has no memory
 
 Start with something you can see. Open a chatbot and ask it who won the 2020
-World Series, the baseball championship. It answers: the Dodgers. Ask "where was it played?" It answers
-correctly: Arlington, Texas, because of the pandemic. It seems to remember
-the first question.
+World Series, the baseball championship. It answers: the Dodgers. Ask "where
+was it played?" It answers correctly: Arlington, Texas, because of the
+pandemic. It seems to remember the first question.
 
 It does not. Here is what the model actually received on the second turn:
 
@@ -126,42 +126,35 @@ The entire conversation is sent again, every turn. The model then writes the
 next piece of text given all of it. That block of text is the **context
 window**: everything the model can see at the moment it answers. It is
 measured in **tokens**, which are words or pieces of words, and it has a fixed
-size. ([The foundations chapter](core-foundations.qmd) introduced the context
-window as a shared budget; this is the same object, now explained in full.) Today that size ranges from one long book to a small shelf of them,
-depending on the model. When you close the tab, the context is gone. The model is exactly what
+size. When you close the tab, the context is gone. The model is exactly what
 it was before you opened it.
 
-Two things follow, and the rest of the chapter depends on both.
+So a language model does not learn from its users. Nothing you type changes
+the model's **weights**, the billions of numbers set during training that make
+it what it is. What changes between turns is the context, and only the
+context. "It got better as we talked" means "the context got longer."
 
-First, a language model does not learn from its users. Nothing you type
-changes the model's **weights**, the billions of numbers set during training
-that make it what it is. What changes between turns is the context, and only
-the context. "It got better as we talked" means "the context got longer." A
-new conversation starts from zero. Privacy is a separate question. The
-company may *store* what you type, and some free tiers use it to train the
-*next* model, months later. That is a question about how your data is
-handled, not the model remembering you. It is the reason for the
-no-patient-information rule in every chapter of this course.
+Two things can look like learning, and neither is. Some chatbots, ChatGPT
+among them, have a memory setting: they save notes about you and paste them
+into the context of later chats. And the company may *store* what you type,
+and some consumer accounts allow it to be used to train the *next* model,
+months later. Both are questions about how your data is handled, not about
+the model you are talking to changing. That is why the course rule is about
+what you type in, in every account.
 
-Second, the context window is a budget, and the model does not use all of it
-equally. In the study the foundations chapter calls "lost in the middle",
-researchers placed the one relevant document at different positions among
-many others. Accuracy was highest when it sat at the beginning or end of
-the context. It fell when the document was in the middle, in some settings
-below the model's accuracy with no documents at all
-[@doi:10.1162/tacl_a_00638]. A long context window does not mean the model
-reads all of it well. That matters for what comes next, because a retrieval
-tool's whole job is to decide which few passages go into the window.
+The context window has a fixed size, and the model does not read all of a
+long one equally well (Go deeper has the study). A retrieval tool's whole job
+is to choose the few passages that go into it.
 
 ### What "grounded" means, step by step
 
-[The appraisal chapter's](core-appraisal.qmd) figure showed two ways a citation can be produced. A general model
-writes a reference as text. A retrieval tool searches first and writes second
-(see @fig-citation-paths there). The search-first way has
-six steps. Together they are the **retrieval pipeline**, and each step is a
-place where something can go wrong. Google does not publish exactly how
-NotebookLM does each step. The six steps are the general design that every
-tool of this kind follows.
+A general chatbot writes a reference the way it writes everything else: as
+likely-looking text. That is how it can produce a reference that looks right
+and does not exist. A retrieval tool searches first and writes second. The
+search-first way has six steps. Together they are the **retrieval pipeline**,
+and each step is a place where something can go wrong. Google does not
+publish exactly how Gemini Notebook does each step. The six steps are the
+general design that tools of this kind follow.
 
 ```{mermaid}
 %%| label: fig-rag-pipeline
@@ -185,13 +178,10 @@ flowchart LR
   index -.-> retrieve
 ```
 
-**Chunking** cuts the document into passages. A whole paper will not fit in
-the context window next to your question and forty other papers. A typical
-passage is a few hundred to a thousand tokens. One published clinical pipeline
-used 1,024-token chunks and reported 97.5% citation accuracy on landmark
-spine-surgery papers [@pmid:40662770]. A dental-trauma tool built from five
-guideline sources was a knowledge base of exactly 250 chunks
-[@pmid:42546813]. Chunking is simple by design. It cuts on length, not meaning.
+**Chunking** cuts the document into passages of a few hundred words, because
+a whole paper will not fit in the context window next to your question and
+forty other papers. Chunking is simple by design. It cuts on length, not
+meaning.
 
 **Embedding** turns each passage into a list of numbers, called an
 **embedding**. Passages about similar things get similar numbers. "Apixaban
@@ -201,8 +191,7 @@ the method from the word-embeddings talk in Go deeper. You do not need to
 know more than "similar meaning, nearby numbers."
 
 **Indexing** stores those numbers so that, given a new list of numbers, the
-nearest ones can be found in milliseconds. An **index** is a phonebook sorted
-by meaning instead of by surname.
+closest matches can be found in milliseconds.
 
 **Retrieval** turns your question into numbers the same way and returns the
 nearest few passages, usually between three and twenty. **Augmentation**
@@ -603,8 +592,10 @@ do with the two papers that disagree? One word is not an answer to either.
 - The dentistry comparison whose phrase, "avoided fabricated references but
   still generated incorrect interpretations," is this chapter in nine words
   [@pmid:41266194].
-- "Lost in the middle," the experiment on where in the context a document
-  sits [@doi:10.1162/tacl_a_00638]. Also in [the foundations chapter](core-foundations.qmd).
+- "Lost in the middle" [@doi:10.1162/tacl_a_00638]. Researchers moved the one
+  relevant document among many others. Models answered best when it sat at
+  the start or the end of the context, and worse when it was in the middle.
+  A long context window does not mean the model reads all of it well.
 - A two-day workshop for clinicians that limits citation generation to
   NotebookLM and then makes participants check every one. It is honest that
   whether this reduces fabrication was not tested [@pmid:42684317].
@@ -617,7 +608,7 @@ do with the two papers that disagree? One word is not an answer to either.
 - [Word embeddings as the basis for LLMs](https://talks.seandavis.net/archive/2024-11-12-word-embeddings-basis-for-llms/):
   what "similar meaning, nearby numbers" actually means, with an interactive
   embedding projector, for anyone who wants to understand step 2 of the
-  pipeline in more detail. Also in [the foundations chapter](core-foundations.qmd).
+  pipeline in more detail.
 - [Prompt engineering](https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/):
   ten rules with clinical examples, for students whose Step 2 questions came
   back vague. [the prompting lab](enrichment-prompting-lab.qmd) is built on it.
