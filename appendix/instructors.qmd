@@ -21,22 +21,22 @@ the course survivable when a third of the class misses week two.
 |---|---|---|---|
 | `plan-your-learning` | [Plan your four weeks with ChatGPT](../chapters/plan-your-learning.qmd) | 60 | AIM-5, AIM-9, AIM-X |
 | `core-foundations` | [How these systems work](../chapters/core-foundations.qmd) | 60 | AIM-1, AIM-2 |
-| `core-appraisal` | [Critical appraisal](../chapters/core-appraisal.qmd) | 90 | AIM-2, AIM-1, AIM-4, AIM-9 |
-| `core-bias-equity` | [Bias and equity](../chapters/core-bias-equity.qmd) | 90 | AIM-3 |
-| `core-patient-communication` | [Talking to patients about AI](../chapters/core-patient-communication.qmd) | 90 | AIM-6, AIM-4 |
-| `core-ethics-regulation` | [Ethics: what you owe when you sign the note](../chapters/core-ethics-regulation.qmd) | 70 | AIM-4, AIM-X |
+| `core-appraisal` | [Critical appraisal](../chapters/core-appraisal.qmd) | 70 | AIM-2, AIM-1, AIM-4, AIM-9 |
+| `core-bias-equity` | [Bias and equity](../chapters/core-bias-equity.qmd) | 75 | AIM-3 |
+| `core-patient-communication` | [Talking to patients about AI](../chapters/core-patient-communication.qmd) | 60 | AIM-6, AIM-4 |
+| `core-ethics-regulation` | [Ethics: what you owe when you sign the note](../chapters/core-ethics-regulation.qmd) | 60 | AIM-4, AIM-X |
 
-: Core modules. Minutes are the live session, not the chapter. {#tbl-core}
+: Modules named `core-` in the original design. Minutes are the chapter's own stated time. {#tbl-core}
 
 | ID | Chapter | Minutes | Competencies |
 |---|---|---|---|
-| `enrichment-agentic-coding` | [Agentic coding](../chapters/enrichment-agentic-coding.qmd) | 75 | AIM-5, AIM-2, AIM-4 |
-| `enrichment-prompting-lab` | [Prompting lab](../chapters/enrichment-prompting-lab.qmd) | 75 | AIM-5, AIM-2 |
-| `enrichment-workforce-economics` | [Will AI take your job?](../chapters/enrichment-workforce-economics.qmd) | 90 | AIM-7, AIM-2, AIM-X |
+| `enrichment-agentic-coding` | [Agentic coding](../chapters/enrichment-agentic-coding.qmd) | 85 | AIM-5, AIM-2, AIM-4 |
+| `enrichment-prompting-lab` | [Prompting lab](../chapters/enrichment-prompting-lab.qmd) | 60 | AIM-5, AIM-2 |
+| `enrichment-workforce-economics` | [Will AI take your job?](../chapters/enrichment-workforce-economics.qmd) | 60 | AIM-7, AIM-2, AIM-X |
 | `enrichment-environment` | [What AI costs the planet](../chapters/enrichment-environment.qmd) | 60 | AIM-3, AIM-2, AIM-7 |
-| `enrichment-rag-notebooklm` | [Grounding AI in real sources](../chapters/enrichment-rag-notebooklm.qmd) | 60 | AIM-1, AIM-2, AIM-9 |
+| `enrichment-rag-notebooklm` | [Grounding AI in real sources](../chapters/enrichment-rag-notebooklm.qmd) | 70 | AIM-1, AIM-2, AIM-9 |
 
-: Enrichment modules. {#tbl-enrichment}
+: Modules named `enrichment-` in the original design. Minutes are the chapter's own stated time. {#tbl-enrichment}
 
 Eleven modules. Each week uses one as its core chapter and offers others as a
 menu, so the surplus is deliberate. Swap by cohort interest.
