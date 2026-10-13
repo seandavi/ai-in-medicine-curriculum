@@ -70,7 +70,7 @@ make a model reliable (pmid:40097720, PMC11914283, read 2026-10-12):
   one-in-three figure and the 64 percent figure come from different test sets
   and different models.
 
-## Part C (optional) — where it sits
+## Part C (optional): where it sits
 
 Expected elements:
 
