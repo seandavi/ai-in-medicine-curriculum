@@ -1,6 +1,6 @@
 # Answer key: core-ethics-regulation
 
-Not rendered. Fed to the tutor; used by the instructor in the live session.
+Not rendered. Fed to the tutor; used by the instructor.
 The chapter was rebalanced in October 2026 from liability to ethics ("Ethics:
 what you owe when you sign the note"). The Do starts with a task that works
 (drafting a note), asks for the student's own plan before the draft's, and
@@ -146,7 +146,9 @@ The chapter now asks three questions.
 
 The fourth sentence (the part of clinical judgment the student will not hand
 over to a tool) is not graded. A student who can say why has done what the
-course hopes for.
+course hopes for. Since October 2026 the chapter points this sentence to the
+week 4 "what you will keep" piece (one place AI does not belong in the
+student's work, and why); a student may reuse it there.
 
 ## The fourth recurring lesson (for the tutor)
 
@@ -196,10 +198,29 @@ Kept for students who do the optional liability section.
   caught the apixaban error. The best ones name the plan ("read the plan
   against what the patient said, not against the draft"). "Read it
   carefully" falls short.
+- **Whether review is enough (objective 4, added October 2026).** For
+  Armitage: the clinician was in the room, so the draft's source is their own
+  visit and review can catch errors (pmid:40717487). Against: editing varies
+  widely (1.9% to 69.3% of words changed; 14.9% of notes unedited;
+  pmid:41996389), and edited replies stayed closer to GPT-4 drafts than to
+  the physicians' own (pmid:38664108). A passing answer adds the student's own
+  view, for example "review is a duty, not a guarantee; I write my plan
+  first". "Review fixes it" or "AI is dangerous" with no evidence falls short.
+  Give credit for noting that 94.7% of reviewed notes had no significant
+  error (pmid:41996389): the danger is the rare error that reads well.
+- **Who benefits, bears the risk, decides (objective 6, added October
+  2026).** Same as the third "What this changes" answer below: benefited, the
+  intern and the clinic; bore the risk, Mr. Alvarez; decided, the health
+  system (bought it), the clinician (turned it on), and he was told by a sign.
+  Plus one thing owed in return: a real choice, a careful review, or an honest
+  answer.
 - The "box for the original note" row was removed in October 2026 with the
   2x2's move to Go deeper.
 
-## Jabbour (in the main text, under "Does review fix it?"; not a Check row)
+## Jabbour (Go deeper, "Do explanations help?"; not a Check row)
+
+Moved from the main text to Go deeper in October 2026, because it is about
+diagnosis, not notes. The main text keeps a two-sentence pointer.
 
 The chapter is careful about scope: the study is about diagnosis, not
 documentation, and the explanations were image-based. A student who says
@@ -214,15 +235,16 @@ So explanations did not reliably protect clinicians from a biased model
 
 ## Optional: the regulatory detail and "has it changed?"
 
-Everything dated here is the state on 2026-09-07. These answers move;
-re-check before each cohort and update this file.
+Everything dated here was re-checked on 2026-10-12 (first written
+2026-09-07). These answers move; re-check on 2 November 2026, before the
+week 4 talk, and before each cohort, and update this file.
 
-| Q | Answer as of 2026-09-07 | Primary source | Notes for the tutor |
+| Q | Answer as of 2026-10-12 | Primary source | Notes for the tutor |
 |---|---|---|---|
-| 1 | FDA CDS guidance issued **29 January 2026**, superseding the **6 January 2026** version, which superseded September 2022. Four criteria unchanged; enforcement discretion for a single clinically appropriate recommendation; time-critical use fails criterion 4; automation bias named. | fda.gov CDS guidance page; PDF cover page | A student who reports "January 6" has read a secondary summary. Both dates are correct in sequence; the point is that the document date on the PDF is the 29th. |
-| 2 | **Not finalized.** HTI-5 proposed rule; comment period closed 27 Feb 2026; would remove DSI "model card" source attributes. HTI-1 remains in force. | healthit.gov HTI-5 fact sheet; Federal Register | If a student finds a final rule, the chapter's HTI-1 callout needs updating and the appraisal chapter's with it. |
-| 3 | **No guidance.** Discussion paper "Considerations for the Regulation of Generative AI-Enabled Medical Devices," 18 Aug 2026, comments due 19 Oct 2026 (docket FDA-2026-N-7874). Lifecycle-management guidance (Jan 2025 draft) still draft. | fda.gov | A discussion paper is not guidance. |
-| 4 | **None found** as of 2026-09-07. Consumer-chatbot suits (Character.AI settlements Jan 2026; *Raine v. OpenAI* 2025; *Winters v. OpenAI* ~July 2026, alleging delayed care before a pulmonary embolism) are product/negligence claims against AI companies, not clinical-AI malpractice verdicts. | Legal press; dockets | If a student finds a verdict, that is the most important thing anyone brings back all course; the chapter's "no verdict" sentence (under "What the law adds") needs updating. |
+| 1 | FDA CDS guidance issued **29 January 2026** (unchanged at 2026-10-12), superseding the **6 January 2026** version, which superseded September 2022. Four criteria unchanged; enforcement discretion for a single clinically appropriate recommendation; time-critical use fails criterion 4; automation bias named. | fda.gov CDS guidance page; PDF cover page | A student who reports "January 6" has read a secondary summary. Both dates are correct in sequence; the point is that the document date on the PDF is the 29th. |
+| 2 | **Not finalized** as of 2026-10-12 (healthit.gov HTI-5 page last updated 31 Mar 2026; no final rule found in searches; the 2026 Unified Agenda had targeted August 2026). HTI-5 proposed rule released 22 Dec 2025, Federal Register 29 Dec 2025 (the chapter had said January 2026); comment period closed 27 Feb 2026; would remove DSI "model card" source attributes. HTI-1 remains in force. | healthit.gov HTI-5 fact sheet; Federal Register | If a student finds a final rule, the chapter's HTI-1 callout needs updating and the appraisal chapter's with it. |
+| 3 | **No guidance.** Discussion paper "Considerations for the Regulation of Generative AI-Enabled Medical Devices," 18 Aug 2026, comments due 19 Oct 2026 (docket FDA-2026-N-7874; confirmed 2026-10-12). Lifecycle-management guidance (Jan 2025 draft) still draft. | fda.gov | A discussion paper is not guidance. |
+| 4 | **None found** as of 2026-10-12 (Medscape, January 2026, reported no AI-centred malpractice verdict; nothing later found). Consumer-chatbot suits (Character.AI settlements Jan 2026; *Raine v. OpenAI* 2025; *Winters v. OpenAI* ~July 2026, alleging delayed care before a pulmonary embolism) are product/negligence claims against AI companies, not clinical-AI malpractice verdicts. | Legal press; dockets | If a student finds a verdict, that is the most important thing anyone brings back all course; the chapter's "no verdict" sentence (under "What the law adds") needs updating. |
 | 5 | Institution-specific. | Institutional policy | Accept "asked X, who said none exists" as a valid answer with a name and date. |
 
 Questions dropped from the student list in the October 2026 revision, kept
@@ -234,6 +256,8 @@ here for the instructor:
   (Regulation of 8 July 2026, in force 27 July 2026). Two law-firm summaries
   gave different OJ publication dates (24 vs 29 July 2026); three same-day
   reports (lawandtechnology.eu, nicfab.eu, EU Law Live) say 24 July.
+  On 2026-10-12, law-firm and news summaries (Cuatrecasas, Mondaq, Cooley)
+  agree on 24 July publication and the 2 Dec 2027 / 2 Aug 2028 dates.
   [VERIFY: EUR-Lex blocked the tool on 2026-09-08; open the ELI page once]
 - **Sharp and Sutter scribe cases.** Sharp HealthCare (Saucedo; filed ~Dec
   2025, Abridge tool, alleged auto-inserted consent attestation); Sutter
@@ -247,6 +271,31 @@ here for the instructor:
   39830818); a 2025 final exists as a NAM publication (confirmed by JAMIA
   commentary PMID 39658328 and later commentaries) but its URL could not be
   confirmed by the course.
+- **State AI-disclosure laws (main text, under "Telling him a tool drafted
+  it", added 2026-10-12).** California AB 3030 (Chapter 848, Statutes of
+  2024; Health and Safety Code 1339.75; in force 1 January 2025): a health
+  facility, clinic, physician's office, or group practice that uses
+  generative AI to write patient communications about clinical information
+  must add a disclaimer and instructions for reaching a human; communications
+  read and reviewed by a licensed or certified provider are exempt. Read from
+  the CalMatters Digital Democracy bill summary and law-firm alerts; the
+  statute's text on leginfo returned 403 to the tool. Colorado's AI Act (SB
+  24-205) was delayed to 30 June 2026 by SB 25B-004; policy trackers report
+  it was repealed and replaced by SB 26-189 (signed 14 May 2026, effective 1
+  January 2027), not confirmed against the enrolled bill. The chapter's
+  sentence stays marked VERIFY until a person reads both texts.
+- **Insurer callout (Go deeper).** The earlier version said The Doctors
+  Company has no AI exclusion, would defend and pay covered claims, and that
+  insurers advise telling them before adopting a tool. The Medical Economics
+  page (9 October 2025, a short video summary with Deepika Srivastava, COO)
+  says none of that when read on 2026-10-12; it says insurers can be
+  "trusted guides" and to judge each tool's training data and accuracy over
+  time. The callout now says only that. If the video itself makes the
+  stronger claims, a person can restore them with a timestamp.
+- **FDA AI-enabled device list.** 1,614 rows on the page dated 4 September
+  2026, counted by script on 2026-10-12; 335 in 2025, 181 in 2026 to 29 June;
+  1,230 (76%) with radiology as lead panel. The old URL redirects to
+  /medical-devices/artificial-intelligence-enabled-medical-devices/list-artificial-intelligence-enabled-medical-devices.
 - **Chatbot incidents since Tessa (2023).** None confirmed by the course.
   Candidates: *Winters v. OpenAI* (2026, allegation); Whisper transcription
   hallucinations (AP, Oct 2024, not patient-facing).
@@ -254,7 +303,13 @@ here for the instructor:
 **Sepsis alert (if a student asks).** Fails criterion 1 (analyzes monitor
 signals) and criterion 4 (time-critical). It is a device. Clearance tells you
 the manufacturer satisfied FDA, not that the alert was validated on your
-unit's population (Wu 2021; Chouffani El Fassi 2024).
+unit's population. Windecker et al. 2025 (pmid:40305017): of 903 devices
+authorized to August 2024, a clinical performance study was reported for 505
+(55.9%); 218 (24.1%) stated none. Chouffani El Fassi et al. 2024
+(pmid:39187696, no PubMed abstract): 226 of 521 authorizations (43%) lacked
+published clinical validation, per coverage of the paper. The chapter used
+to cite Wu 2021 (pmid:33820998) for the 'about half' figure; that was the
+wrong paper.
 
 ## Instructor prep
 
@@ -266,3 +321,7 @@ unit's population (Wu 2021; Chouffani El Fassi 2024).
   students will ask in Part B ("Do I have to say yes?").
 - Open the FDA CDS page and the HTI-5 fact sheet the morning of the session.
   If either has moved, say so in the first five minutes.
+- On 2 November 2026, re-check and re-date in the chapter: FDA CDS guidance
+  date, HTI-5 status, the EU AI Act dates, the FDA device count, the
+  no-verdict sentence, the generative-AI discussion paper (comments closed
+  19 October), and the state-law sentence (AB 3030 text; Colorado).

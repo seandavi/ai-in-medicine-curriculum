@@ -1,7 +1,20 @@
 ---
 title: "Ethics: what you owe when you sign the note"
-subtitle: "AIM-4 · AIM-X · about 70 minutes"
+subtitle: "About 60 minutes"
 ---
+
+::: {.callout-tip title="In short"}
+- **The idea.** A scribe or drafting tool can write most of a good note and
+  save you time. When you sign, every sentence becomes yours. So you decide
+  the plan yourself, and you check the draft against what the patient said.
+- **What you do.** Draft a clinic note from a made-up visit with ChatGPT Edu,
+  improve the prompt once, then decide line by line what you would sign.
+- **What you keep.** A drafting prompt you would use again, a one-sentence
+  rule for reading a drafted note, and what you would say to a patient who
+  asks "Do I have to say yes?"
+- **Short on time?** Read the opening scenario, "A note is a promise", and
+  "Does review fix it?". Then do Part A of the Do.
+:::
 
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will have:
@@ -17,13 +30,15 @@ By the end of this chapter you will have:
    practised answering "Do I have to say yes?"
 6. Named who benefits from a scribe, who bears the risk, and who decides: the
    course's fourth recurring lesson.
+
+Course competencies: AIM-4 (ethics, law, and regulation), AIM-X
+(professional identity, the closing question).
 :::
 
-**Time.** About 20 to 25 minutes of reading, about 45 minutes of doing, and
-five minutes of writing at the end: about 70 minutes. The podcast and everything in
-Go deeper are optional. Use the chatbot account your school provides (at CU
-Anschutz, ChatGPT Edu or Microsoft Copilot); any free chatbot also works,
-because everything you type here is made up. There is nothing to install.
+**What you need.** Your university ChatGPT Edu or Copilot account. Nothing to
+install. Made-up patients only. The time counts about 15 minutes of reading
+and about 40 of doing; the podcast and everything in Go deeper are optional
+and not counted.
 
 ## The sentence you did not write
 
@@ -47,12 +62,13 @@ fourteen notes to sign, and this one reads well.
 
 Read the highlighted sentence. This is the kind of error the published studies
 of these tools describe. It is not a slip in the transcript. It is a fluent,
-believable sentence that says the opposite of what the patient said. In a
-pilot at one academic health system, physicians reviewed 356 scribe-drafted
-notes. 18% contained an omission, 11.5% contained a made-up statement, and
-5.3% contained an error rated as a serious risk if not corrected. Across the
-notes the vendor tracked, 14.9% were left with no edits at all
-[@pmid:41996389].
+believable sentence that says the opposite of what the patient said. Errors
+like this are uncommon, which makes them easy to miss. In a pilot at one
+academic health system, physicians reviewed 356 scribe-drafted notes. Most,
+94.7%, had no significant error. But 18% left something out, 11.5% contained
+a made-up statement, and 5.3% had an error rated as a serious risk if not
+corrected. Across the notes the vendor tracked, 14.9% were left with no edits
+at all [@pmid:41996389].
 
 Three weeks later Mr. Alvarez is admitted with a stroke. The admitting team
 reads your note and believes he was taking his apixaban. The waiting room had
@@ -74,11 +90,16 @@ systemwide rollout of the Abridge scribe in February 2026 ([press
 release](https://www.businesswire.com/news/home/20260224659841/en/UCHealth-Partners-With-Abridge-to-Deploy-Enterprise-Grade-AI-Systemwide-Enhancing-Patient-and-Provider-Experience)).
 
 **It is your job to learn where these tools help your work, and you learn
-that by trying.** A scribe can save you some time, and the trials below
-suggest it does, modestly. It is also the clearest case where your signature goes on
-words a tool produced.
+that by trying.** Scribes help. In randomized trials, scribes lowered
+clinicians' exhaustion or burnout scores, and some cut the time spent on
+notes [@pmid:41625485; @pmid:41497288; @pmid:41729180]. In one of those
+trials, note time fell with no loss in note quality, diagnosis coding, or
+billing compliance [@pmid:41625485]. Most drafts are accurate, too: in the
+pilot above, 94.7% of notes had no significant error [@pmid:41996389]. Used
+well, a scribe saves you time and makes the work less draining.
 
-Most writing about this asks what you *risk*. This chapter asks what you
+A scribe is also the clearest case where your signature goes on words a tool
+produced. Most writing about this asks what you *risk*. This chapter asks what you
 *owe*: to the patient, to the next clinician, and to yourself. The two
 questions are easy to confuse. A review
 of 34 papers on digital health found that moral responsibility "is often
@@ -107,8 +128,10 @@ what usually appears in a note like this one. For Mr. Alvarez, the transcript
 could have been perfect and the summary could still say what is usual: that
 he continues apixaban. So read the draft against what the patient *said*, not
 against what sounds like a normal note. The [scribe open
-lab](../appendix/open-labs.qmd#hear-it-draft-it-check-it-a-scribe-from-the-inside)
-lets you watch each step make its own kind of error.
+lab](../appendix/open-labs.qmd) lets you watch each step make its own kind
+of error. Errors may also fall more often on some patients than others, such
+as people who speak through an interpreter. The evidence is in [Go
+deeper](#who-the-tool-fails).
 
 ### A note is a promise
 
@@ -117,20 +140,16 @@ I decided*. Both are made to people who will read it later.
 
 **The next clinician.** The admitting team met your note before they met Mr.
 Alvarez. Words in a note change how the next reader treats the patient. In a
-randomized study, 413 medical students and residents
-at one US academic center read a note about the same made-up patient, a
-28-year-old man with sickle cell disease. Half read it in neutral language
-and half in stigmatizing language. Those who read the stigmatizing version
-had more negative attitudes toward him. Residents who read it chose less
-aggressive treatment for his pain [@pmid:29374357]. That study was about
-tone. A false fact about a blood thinner is a more direct risk.
+randomized study, residents who read a stigmatizing note about a man with
+sickle cell disease chose less aggressive treatment for his pain
+[@pmid:29374357]. A false fact about a blood thinner is a more direct risk.
 
 **The patient.** Many patients can now read their own notes in the patient
-portal. One recent paper lists four jobs a note does: helping you reason,
-telling other clinicians what happened, meeting billing and legal
-requirements, and explaining care to a patient who reads it
-[@pmid:42258767]. Mr. Alvarez could read tonight that he "continues apixaban
-without bleeding complications", and wonder whether he should restart it.
+portal. One recent paper lists four jobs a note does [@pmid:42258767]. It
+helps you reason, tells other clinicians what happened, and meets billing and
+legal requirements. It also explains care to a patient who reads it. Mr.
+Alvarez could read tonight that he "continues apixaban without bleeding
+complications", and wonder whether he should restart it.
 
 **What the scribe actually writes.** A scribe is not a fast typist. One
 group of physicians argues that in the assessment and plan, ambient scribes "do not transcribe clinical reasoning but
@@ -145,18 +164,32 @@ stand behind. If you find an error after signing, add an addendum; do not
 quietly edit the signed note. If the error may have harmed him, you also owe
 him an honest explanation, through your institution's disclosure process.
 
+**The attestation line.** Many systems add a line to a drafted note saying it
+was drafted with ambient documentation and reviewed by you. If yours does,
+read what it says. It is an **attestation**, a statement in your name that
+something is true. If your institution's policy calls for such a line and the
+system does not add it, add it yourself.
+
 **Telling him a tool drafted it.** Should you tell a patient that AI drafted
 a note or message? Honesty may cost some trust. In two preregistered
-experiments, 2,280 participants rated identical advice in made-up scenarios
-as less reliable and less empathetic when it was labeled as from AI, or from
-a physician with AI, and were less willing to follow it [@pmid:39054373]. The
-American Medical Association's November 2024 policy says AI may not generate
-records or communications for a physician without that physician's "consent
-and final review", and that AI use in patient-facing content "should be
-disclosed or otherwise noted within the content" ([AMA, November
+experiments, 2,280 people read identical medical advice in made-up scenarios.
+When the advice was labeled as from AI, or from a physician with AI, they
+rated it less reliable and less empathetic. They were also less willing to
+follow it [@pmid:39054373]. The American Medical Association's November 2024
+policy says AI may not generate records or communications for a physician
+without that physician's "consent and final review". It also says AI use in
+patient-facing content "should be disclosed or otherwise noted within the
+content" ([AMA, November
 2024](https://www.ama-assn.org/system/files/ama-ai-principles.pdf)).
+
+Some states have their own rules. California, for example, requires a
+hospital, clinic, or physician's office that uses generative AI to write a
+patient message about clinical information to say so. The message must also
+tell the patient how to reach a person. The rule does not apply if a licensed clinician read and reviewed the
+message first (AB 3030, in force since January 2025)
+[VERIFY: AB 3030 wording from the bill summary, not the statute's current text; Colorado's AI Act status unconfirmed; checked 12 October 2026]{.verify}.
 How to say it is in [the patient communication
-chapter](core-patient-communication.qmd#the-portal-reply-say-a-tool-helped).
+chapter](core-patient-communication.qmd).
 
 ### Does review fix it?
 
@@ -169,7 +202,7 @@ documentation, these concerns "either do not arise or are easily mitigated"
 by the clinician reviewing, editing, and approving the draft. His reason: the
 source is the clinician's own visit [@pmid:40717487].
 
-Armitage's argument assumes that review happens, and that it works. Three
+Armitage's argument assumes that review happens, and that it works. Two
 pieces of evidence test that.
 
 **Review is uneven.** Besides the unedited notes in the pilot from the
@@ -180,32 +213,16 @@ changed ranged from 1.9% to 69.3% [@pmid:41996389].
 hospital, six radiation oncologists answered made-up messages from patients
 with cancer. They answered first on their own, then by editing a draft
 written by GPT-4. The edited replies were closer in content to the drafts than to the physicians' own
-replies. The authors read this as anchoring (sticking close to the first answer you
-see) and automation bias: the
-physicians might be adopting the draft's assessment, not just its wording
-[@pmid:38664108]. **Automation bias** is the habit of trusting a machine's
-suggestion more than it deserves.
+replies. The authors read this as anchoring, meaning sticking close to the
+first answer you see, and as automation bias. The physicians might be
+adopting the draft's assessment, not just its wording [@pmid:38664108]. **Automation bias** is the habit of trusting a machine's
+suggestion more than it deserves. A systematic review found that it grows
+with heavy workload and time pressure [@pmid:21685142]. Fourteen notes at
+6:40 p.m. is both.
 
-**Explanations did not reliably protect clinicians from a biased model.**
-This study is about diagnosis, not notes, but it tests a safeguard
-institutions often offer. ([The bias and equity
-chapter](core-bias-equity.qmd) uses the same study.) Jabbour and colleagues
-gave 457 hospitalists, nurse practitioners, and physician assistants written
-cases of acute respiratory failure. Baseline diagnostic accuracy was 73.0%. A
-standard AI model raised accuracy by 2.9 points; with an image-based
-explanation of its reasoning, by 4.4 points. A *systematically biased* model
-lowered accuracy by 11.3 points. Adding explanations to the biased model
-recovered 2.3 points. The confidence interval for that difference crossed
-zero, so the true recovery may be nothing [@pmid:38112814].
-
-![The Jabbour finding, redrawn from the paper's own numbers. Explanations
-helped a little when the model was right and did not significantly help when
-the model was wrong. Data from Jabbour et al., *JAMA* 2023;330:2275–2284;
-figure drawn for this chapter.](../images/jabbour-2023-explanations.svg){#fig-jabbour fig-alt="Bar chart of change in clinician diagnostic accuracy in percentage points from a 73.0% baseline. Standard AI model without explanation plus 2.9; with explanation plus 4.4; biased model without explanation minus 11.3; biased model with explanation minus 9.1. Whiskers show 95% confidence intervals; the two biased-model intervals overlap."}
-
-In this study, image-based explanations did not reliably reduce automation
-bias. Automation bias is a property of tired people under time pressure,
-which is what you will be at 6:40 p.m.
+Some institutions offer another safeguard: showing the model's reasoning. In
+one large study of diagnosis, that did not reliably protect clinicians from a
+biased model. The details are in [Go deeper](#do-explanations-help).
 
 So review is a duty, not a guarantee. One habit may help: decide the plan
 yourself before you read the draft's. McGaughey and colleagues propose that
@@ -243,7 +260,7 @@ Mr. Alvarez had a sign, a sentence at check-in, and then his own doctor
 starting the visit with the phone already on the desk. Could he comfortably
 have said no? What would have made that easier? How to have that conversation
 is in [the patient communication
-chapter](core-patient-communication.qmd#the-phone-on-the-desk-what-the-patient-can-refuse).
+chapter](core-patient-communication.qmd).
 
 Your health system also has its own rules on AI use, for example whether a
 patient can refuse an AI tool or a recording. The health system sets these
@@ -252,69 +269,31 @@ and UCHealth have some different rules, so check each one when you move
 between them. The rules also change. Know the current rules where you work,
 and follow them.
 
-### Who the tool fails
-
-A scribe does not fail everyone equally. The research is thin, but the results
-agree.
-
-- **Race.** In a 2020 study of five commercial speech recognition systems,
-  the average word error rate was 0.35 for Black speakers and 0.19 for White
-  speakers. That is roughly one word in three wrong, against one in five
-  [@pmid:32205437]. These were general speech recognition systems tested on
-  recorded interviews, not medical scribes, and they predate current tools.
-- **Language.** In simulated English and Spanish clinic visits, ambient
-  scribes carried interpreters' errors into the clinical note
-  [@pmid:42520279].
-- **Speech.** In a UK simulation with one scribe, summaries were broadly
-  stable across most accents. Word recognition fell markedly for one kind of
-  speech impairment (phonological impairment) [@pmid:42031419].
-
-The research for this chapter found no study of real-world scribe error
-rates by patient race, language, or disability. So the honest statement is
-narrow: the patients most likely to be misrecorded are probably not random.
-Had Mr. Alvarez spoken through an interpreter, the draft might have been more
-likely to be wrong, and he less able to read and correct it. [The bias and
-equity chapter](core-bias-equity.qmd) explains why harms like this follow
-existing inequity.
-
 ### Your relief, his risk
 
-The benefit to clinicians has been tested in randomized trials.
-
-- In a trial of 66 practitioners in clinics in two states, an ambient
-  scribe reduced work exhaustion and interpersonal disengagement. The increase in
-  professional fulfillment was not significant. Time on notes fell by 0.36
-  hours a day [@pmid:41625485].
-- In a trial of 238 outpatient physicians, one of two scribes cut time in
-  notes by 9.5%, and the other did not. Burnout scores suggested improvement
-  with both, as secondary outcomes that need confirmation. Clinicians said
-  clinically significant errors happened "occasionally" [@pmid:41497288].
-- In a trial of 160 volunteer outpatient clinicians at one academic center,
-  both products tested reduced burnout scores. After-hours time in the record
-  was largely unchanged [@pmid:41729180].
-
-The benefit to patients is less clear. In one primary care study, patients
-who knew about the scribe said the physician seemed more focused on them. But
-in a masked comparison of 304 patients' visits with and without the
-scribe, ratings of the patient-physician relationship did not differ
-[@pmid:38834180]. In a pilot of 31 physicians, compared with 125 control
-physicians across 31,917 patient surveys, ratings of communication and
-satisfaction did not change significantly [@pmid:42334196].
-
-So the clinician's relief is measured, and the patient's experience of the
-visit has not been shown to change in either direction. When the draft is
-wrong, the wrong fact sits in *his* record.
+The clinician's relief has been measured in randomized trials, described
+under Why this matters. Studies comparing visits with and without a scribe
+have found no clear change, better or worse, in how patients rate the visit
+[@pmid:38834180; @pmid:42334196]. When the draft is wrong, the wrong fact
+sits in *his* record.
 
 A made-up case: a scribe saves each clinician about 15 minutes a day, and
-the clinic fills that time with one more visit; who gained? [The workforce
-chapter](enrichment-workforce-economics.qmd#the-economics-the-debate-leaves-out)
-shows this volume lesson in real billing data; here it is a question of
-fairness.
+the clinic fills that time with one more visit. Who gained? [The workforce
+chapter](enrichment-workforce-economics.qmd) shows this pattern in real
+billing data; here it is a question of fairness.
 
 ::: {.callout-important title="The fourth recurring lesson: who benefits, who bears the risk, who decides"}
-The course's first three recurring lessons are **proxies fail**,
-**efficiency gains get eaten by volume**, and **the published number is the
-optimistic one**. This chapter explains the fourth. For any AI tool, ask:
+The course has four recurring lessons. The first three are:
+
+- **Proxies fail.** A proxy is a stand-in: something easy to measure, used in
+  place of what you care about, such as health care cost in place of
+  illness. A tool built on a stand-in goes wrong where the two differ.
+- **Efficiency gains get eaten by volume.** Time a tool saves is often filled
+  with more work.
+- **The published number is the optimistic one.** Results in everyday use
+  are usually worse than in the first paper.
+
+This chapter explains the fourth. For any AI tool, ask:
 
 1. **Who benefits?** For a scribe: the clinician, who is less exhausted, and
    the health system, which may bill more fully [@pmid:42745555]. Possibly
@@ -362,8 +341,8 @@ deeper](#liability-in-more-detail-optional).
 physician in your position would have done. They do not measure the AI
 against anything [@pmid:31584609; @pmid:38231630]. The same rule applied to
 a note drafted by a human scribe or a resident. As far as this
-course could find, no US malpractice claim involving a clinical AI tool had
-reached a verdict by September 2026.
+course could find in a search on 12 October 2026, no US malpractice claim
+involving a clinical AI tool had reached a verdict.
 
 **Recording law.** Several states, California among them, require every
 party's consent to record a conversation. Lawsuits in California allege that
@@ -387,11 +366,6 @@ Anschutz and Denver campuses. CU Boulder and personal accounts are not.
 Check your own institution's policy, and ask whether your clinic's scribe
 runs under one.
 
-**The FDA.** A scribe that records and summarizes, without recommending, is
-probably outside the US Food and Drug Administration's review of
-decision-support software. Check FDA's current position before you rely on
-that. If so, your review is the check.
-
 ## Watch or listen (optional)
 
 **Podcast.** *Stanford Legal*, "Exploring AI in Healthcare: Legal, Regulatory,
@@ -407,11 +381,10 @@ found no dated episode on the ethics of scribes.
 
 ## Do
 
-Use made-up material only. Mr. Alvarez and his visit are invented. What counts as
-patient information, and why taking out the name is not enough: [the patient
-information page](../course/patient-information.qmd).
+Mr. Alvarez and his visit are invented. Made-up patients only. [What counts
+as patient information](../course/patient-information.qmd).
 
-### Part A: draft the note, then decide what you would sign (about 30 minutes)
+### Part A: draft the note, then decide what you would sign (about 25 minutes)
 
 Here is the conversation from the opening scenario. C is the clinician, P is
 Mr. Alvarez.
@@ -451,7 +424,8 @@ You are an ambient documentation tool in an outpatient clinic.
 Write a SOAP progress note from this visit transcript.
 ```
 
-Read it once, the way you would at 6:40 p.m.
+Read it once, the way you would at 6:40 p.m. Ask, then check: most of a good
+draft is right, and your job is to find out which parts.
 
 **3. Ask for a better draft (5 minutes).** Start a new chat, paste the
 conversation again, and try this:
@@ -468,7 +442,7 @@ in the transcript. If the plan for a problem was not stated, write
 The second prompt asks the tool to show you where to look. Its lists can
 still be wrong, so you still read the whole note.
 
-**4. Decide what you would sign (15 to 18 minutes).** Take the better draft. Read
+**4. Decide what you would sign (about 12 minutes).** Take the better draft. Read
 it sentence by sentence against the conversation and mark each sentence:
 *said*, *not said*, or *changed*. Then list anything said that the note left
 out. Look hardest at three things: the apixaban, the naproxen, and the plan
@@ -494,7 +468,7 @@ My rule for reading a drafted note, in one sentence:
 __________________________________________________________________
 ```
 
-### Part B: explain it to the patient (about 12 minutes)
+### Part B: explain it to the patient (about 10 minutes)
 
 Mr. Alvarez saw the sign in the waiting room. Practise the conversation. Use
 this prompt:
@@ -540,6 +514,8 @@ __________________________________________________________________
 | What you would tell the patient | Two or three plain sentences, including who answers for the note, an honest answer to "Do I have to say yes?", and honesty about what you do not know | Jargon, or a promise you cannot keep |
 | What you owed, and to whom | One specific sentence each for the patient, the next clinician, and yourself | "Be careful", or only what you risk legally |
 | Your reading rule | One sentence that would have caught the apixaban error in the original draft | "Read it carefully" |
+| Whether review is enough (objective 4) | One sentence for Armitage's case (the clinician was in the room), one for the evidence against (editing is uneven; drafts pull decisions toward them), and your own view | "Review fixes it" or "AI is dangerous", with no evidence |
+| Who benefits, who bears the risk, who decides (objective 6) | A named party for each question about Mr. Alvarez's scribe, and one thing owed to him in return: a real choice, a careful review, or an honest answer | "Everyone benefits", or one party for all three |
 
 ## What this changes for you
 
@@ -553,23 +529,61 @@ decided it would be in the room?
 Then write a fourth sentence, on the part of clinical judgment you will not
 hand over to a tool. Date all four and keep them.
 
-## Summary
-
-- A signed note promises the patient and the next clinician: this is what
-  happened, and this is what I decided.
-- In the plan, a scribe writes reasoning nobody did. Decide the plan yourself
-  before you read the draft's.
-- Review is a duty, not a guarantee. Editing is uneven, and drafts pull
-  decisions toward them.
-- Consent is a real choice only if saying no is easy.
-- The tool probably fails some patients more than others; the research is
-  thin.
-- The fourth recurring lesson: who benefits, who bears the risk, who decides.
-  For a scribe, the relief is the clinician's and the risk is the patient's.
-- The law makes the signer answer for the note. It is the least you owe, not
-  all of it.
+That fourth sentence is a ready start for your week 4 piece, "what you will
+keep" (see the [learning journal](../course/learning-journal.qmd)). The
+piece asks for one place you decided AI does not belong in your work, and
+why.
 
 ## Go deeper
+
+Everything from here to the end of the chapter is optional and is not
+counted in the chapter's time.
+
+### Who the tool fails
+
+A scribe does not fail everyone equally. The research is thin, but the results
+agree.
+
+- **Race.** In a 2020 study of five commercial speech recognition systems,
+  the average word error rate was 0.35 for Black speakers and 0.19 for White
+  speakers. That is roughly one word in three wrong, against one in five
+  [@pmid:32205437]. These were general speech recognition systems tested on
+  recorded interviews, not medical scribes, and they predate current tools.
+- **Language.** In simulated English and Spanish clinic visits, ambient
+  scribes carried interpreters' errors into the clinical note
+  [@pmid:42520279].
+- **Speech.** In a UK simulation with one scribe, summaries were broadly
+  stable across most accents. Word recognition fell markedly for one kind of
+  speech impairment (phonological impairment) [@pmid:42031419].
+
+The research for this chapter found no study of real-world scribe error
+rates by patient race, language, or disability. So the honest statement is
+narrow: the patients most likely to be misrecorded are probably not random.
+Had Mr. Alvarez spoken through an interpreter, the draft might have been more
+likely to be wrong, and he less able to read and correct it. [The bias and
+equity chapter](core-bias-equity.qmd) explains why harms like this follow
+existing inequity.
+
+### Do explanations help?
+
+This study is about diagnosis, not notes, but it tests a safeguard
+institutions often offer: showing the model's reasoning. Jabbour and
+colleagues gave 457 hospitalists, nurse practitioners, and physician
+assistants written cases of acute respiratory failure. Baseline diagnostic
+accuracy was 73.0%. A standard AI model raised accuracy by 2.9 points; with an
+image-based explanation of its reasoning, by 4.4 points. A *systematically
+biased* model lowered accuracy by 11.3 points. Adding explanations to the
+biased model recovered 2.3 points. The confidence interval for that
+difference crossed zero, so the true recovery may be nothing
+[@pmid:38112814].
+
+![The Jabbour finding, redrawn from the paper's own numbers. Explanations
+helped a little when the model was right and did not significantly help when
+the model was wrong. Data from Jabbour et al., *JAMA* 2023;330:2275–2284;
+figure drawn for this chapter.](../images/jabbour-2023-explanations.svg){#fig-jabbour fig-alt="Bar chart of change in clinician diagnostic accuracy in percentage points from a 73.0% baseline. Standard AI model without explanation plus 2.9; with explanation plus 4.4; biased model without explanation minus 11.3; biased model with explanation minus 9.1. Whiskers show 95% confidence intervals; the two biased-model intervals overlap."}
+
+In this study, image-based explanations did not reliably reduce automation
+bias.
 
 ### Liability in more detail (optional)
 
@@ -633,16 +647,13 @@ contradicted, and you signed it. Which box is that?
 A defense that says "the tool showed its reasoning, so the physician should
 have caught it" must answer the Jabbour evidence in @fig-jabbour.
 
-**Attestation.** Where your institution's policy calls for it, record that
-the note was drafted with ambient documentation and reviewed by you. Many
-systems add that line automatically. If yours does, know what it says. It is
-an **attestation**, a statement in your name that something is true.
-
 **Cleared is not validated.** FDA clearance means the manufacturer convinced
 FDA the device is about as safe and effective as something already on the
-market. Of 130 FDA decision summaries for AI devices, about half reported any
-clinical performance data [@pmid:33820998], and a 2024 follow-up found the
-gap persists [@pmid:39187696].
+market. An analysis of the 903 AI-enabled devices the FDA had authorized by
+August 2024 found a clinical performance study reported for about half of
+them [@pmid:40305017]. An earlier analysis, published in 2024, reached the
+same conclusion: not every authorized AI tool has been clinically validated
+[@pmid:39187696].
 
 ### Papers
 
@@ -672,8 +683,8 @@ gap persists [@pmid:39187696].
 
 ### The regulatory detail (optional)
 
-About 15 minutes. Everything here was current in early September 2026, and
-much of it will change.
+About 15 minutes. Everything here was checked on 12 October 2026, and much
+of it will change.
 
 **Where a tool becomes a medical device.** Software that gives clinicians
 recommendations is either a medical device, regulated by FDA, or it is not.
@@ -760,18 +771,18 @@ the plan do not trigger a new review
 The question to ask any vendor: if the model on my unit today is not the
 model that was cleared, what did clearance tell me?
 
-::: {.callout-note title="Your right to see inside the EHR's tools: status as of September 2026"}
-[The appraisal chapter](core-appraisal.qmd) said you have something close to
-a legal right to see how a decision-support tool inside your EHR was built and
-tested. The federal HTI-1 rule (2024) requires certified EHRs to show "source
-attributes" for predictive decision-support tools: what they were trained on,
-how they were validated, whether fairness was tested. **It is in force.**
-Developers began collecting a year of real-world performance data in January
-2026. But in January 2026 the same office proposed a rule to loosen this,
-called HTI-5. It would remove the "model card" source-attribute requirements
-entirely. The stated reason is that clinicians rarely opened them. The comment
-period closed on 27 February 2026. As of this writing, HTI-5 has not been
-finalized ([ASTP/ONC, HTI-5 proposed
+::: {.callout-note title="Your right to see inside the EHR's tools: status as of 12 October 2026"}
+You may read that you have something close to a legal right to see how a
+decision-support tool inside your EHR was built and tested. The federal
+HTI-1 rule (2024) requires certified EHRs to show "source attributes" for
+predictive decision-support tools: what they were trained on, how they were
+validated, whether fairness was tested. **It is in force.** Developers began
+collecting a year of real-world performance data in January 2026. But the
+same office has proposed a rule to loosen this, called HTI-5, published in
+the Federal Register on 29 December 2025. It would remove the "model card"
+source-attribute requirements entirely. The stated reason is that clinicians
+rarely opened them. The comment period closed on 27 February 2026. As of 12
+October 2026 we found no final HTI-5 rule ([ASTP/ONC, HTI-5 proposed
 rule](https://www.healthit.gov/topic/laws-regulation-and-policy/hti-5-proposed-rule-fact-sheet)).
 So the right exists today and may not next year.
 :::
@@ -785,23 +796,19 @@ December 2027 for standalone high-risk systems, and to August 2028 for AI
 built into regulated products, which is where medical devices sit
 ([Regulation (EU) 2026/1744; see the Orrick summary, July
 2026](https://www.orrick.com/en/Insights/2026/07/EU-AI-Act-Update-Digital-Omnibus-Finalizes-8-Compliance-Changes)).
-Over the same period, the United States withdrew its 2023 executive order on
+The new dates are 2 December 2027 and 2 August 2028 (checked 12 October
+2026). Over the same period, the United States withdrew its 2023 executive order on
 AI safety, loosened rules at both FDA and ONC, and tried, so far without a
 statute, to override state AI laws.
 
 ::: {.callout-note title="Your insurer, briefly"}
-Malpractice insurers have not written AI out of their policies. The chief
-operating officer of The Doctors Company told Medical Economics in 2025 that
-the carrier has no AI exclusion, and that it would defend a physician and pay a
-covered claim when AI played a role
-([interview](https://www.medicaleconomics.com/view/ai-on-trial-how-malpractice-insurers-can-help-physicians-navigate-new-risks)).
-The carrier reprinted the interview in its own newsletter. Across the wider
-market, insurers decide case by case, and they advise physicians to tell
-their insurer before adopting a clinical AI tool
-[VERIFY: quote against the Medical Economics interview; the carrier's site links it but does not repeat the wording; checked 2026-09-08]{.verify}.
-For a resident, the coverage that matters first is your institution's.
-Someone in the GME office can tell you what it says. Ask in orientation, not
-after.
+For a resident, the malpractice coverage that matters first is your
+institution's. Someone in the GME office can tell you what it says about AI
+tools. Ask in orientation, not after. One malpractice carrier, The Doctors Company,
+has advised physicians to judge each AI tool on its own. Its chief operating
+officer named two things to ask: what data the tool was trained on, and
+whether its accuracy holds up over time ([Medical Economics, 9 October
+2025](https://www.medicaleconomics.com/view/ai-on-trial-how-malpractice-insurers-can-help-physicians-navigate-new-risks)).
 :::
 
 **Optional exercise: has it changed? (about 15 minutes).** Pick one question.
@@ -828,10 +835,11 @@ document itself.
 Check the date on each before quoting it.
 
 - [FDA, Clinical Decision Support Software](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software)
-- [FDA, AI-enabled medical devices list](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices).
-  1,614 authorizations at the 4 September 2026 update; 335 decisions in 2025, a
-  record year; about three quarters in radiology. The FDA says the list is not
-  complete, so re-count from its CSV and give the date when you quote it.
+- [FDA, AI-enabled medical devices list](https://www.fda.gov/medical-devices/artificial-intelligence-enabled-medical-devices/list-artificial-intelligence-enabled-medical-devices).
+  1,614 authorizations on the version dated 4 September 2026 (counted 12
+  October 2026); 335 decisions in 2025, a record year; about three quarters
+  in radiology. The FDA says the list is not complete, so re-count it and
+  give the date when you quote it.
 - [ASTP/ONC, HTI-1 and HTI-5](https://www.healthit.gov/topic/laws-regulation-and-policy/hti-5-proposed-rule-fact-sheet)
 - [HHS, business associate contracts](https://www.hhs.gov/hipaa/for-professionals/covered-entities/sample-business-associate-agreement-provisions/index.html)
 
