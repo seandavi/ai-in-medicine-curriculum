@@ -270,37 +270,23 @@ class, with the mistakes left in.
 
 ## Do
 
-::: {.callout-warning title="Invented numbers only"}
-Every value you type into the tool today is one you made up. No patient from a
-rotation, however de-identified you think it is; no classmate; no family
-member. Consumer tools carry no business associate agreement, and your
-university account's agreement covers patient care, not testing a tool you
-built in an hour. If a test case needs a sodium of 118, invent a
-patient with a sodium of 118.
-:::
+**Made-up patients only.** [What counts as patient
+information](../course/patient-information.qmd). Every number you type is one
+you invented: if a test case needs a sodium of 118, invent a patient with a
+sodium of 118. Put nothing in your page worth stealing: no passwords, no
+names, no real data.
 
-::: {.callout-tip title="Which tool, and what it asks of you"}
-**ChatGPT Edu (your institutional account).** Ask for the page and it should
-open in the *canvas* side panel, with a preview button that runs it. This is
-the expected route. If canvas does not appear, your workspace administrator may
-have turned off canvas code execution; use the fallback below.
-[VERIFY: log in to the institutional ChatGPT Edu workspace and run the starter prompt the week before the cohort; OpenAI's admin documentation confirms canvas code execution is a workspace setting, checked 2026-09-08]{.verify}
+::: {.callout-tip title="Which tool"}
+**ChatGPT Edu (your university account).** Ask for the page and it should
+open in the *canvas* side panel, which shows the page you built, running,
+with a preview button. If canvas does not appear, your workspace may have
+canvas code turned off; use the fallback below.^[[VERIFY: run the starter prompt in the CU ChatGPT Edu workspace with a university login and confirm the canvas preview appears; OpenAI's admin documentation says canvas code execution is a workspace setting, checked 2026-09-08]{.verify}]
 
-**Fallback that works with any chatbot, including Microsoft Copilot.** Ask for "a single
-HTML file". Copy the whole code block into a plain text editor (Notepad, or
-TextEdit in plain-text mode). Save it as `calc.html` and double-click it. Your
-browser opens it. Nothing is installed. You have made a file, which is what
-the agent would have done for you.
-
-**Claude.ai** free tier builds and hosts the page as what it calls an
-*artifact*, a page with a shareable link, which is convenient for the live
-session. Signup requires a phone number. If you would rather not give one, you
-lose nothing by using the options above. **Google AI Studio** needs a Google
-account and no phone; it is the second alternative.
-
-Free tiers may use your prompts for training. That is fine for invented
-numbers and a prompt about a public scoring system. It would not be fine for
-anything else.
+**Fallback, which also works in Copilot.** Ask for "a single HTML file". Copy
+the whole code block into a plain text editor (Notepad, or TextEdit in
+plain-text mode). Save it as `calc.html` and double-click it. Your browser
+opens it. Nothing is installed. You have made a file, which is what an agent
+would have done for you.
 :::
 
 ### Part A: build it (20 minutes) {#build-it}
@@ -336,7 +322,7 @@ prompts. If English is not your first language, that is the point.
 > decision-making." In a footnote, cite the original publication for the
 > score and say exactly which version of the score you implemented, so I can
 > independently verify every rule against MDCalc and the paper before I trust
-> the output.
+> the output. Open it in canvas so I can preview it.
 
 **Step 3. Ask for two changes.** Whatever comes back, ask for two changes, one
 at a time. Watch what the model does to the rest of the page each time:
@@ -350,22 +336,25 @@ The second request is really a check, phrased as a feature. Read the answer.
 You now have a working tool. It took about ten minutes, and it probably looks
 better than the resident's. Do not share it yet.
 
-### Part B: break it (15 minutes)
+### Part B: break it (30 minutes)
 
 Open MDCalc and the original paper from @tbl-menu side by side with your tool.
 Run three invented cases through all three sources and record the results in
 the template below.
 
 **Case 1, ordinary.** A patient clearly inside the population the score was
-made for, with nothing unusual. All three should agree. If they do not, you
-have found a rule error and can stop here, because you have already met the
-objective. Note it and continue anyway.
+made for, with nothing unusual. All three should agree, and usually will. If
+they do not, you have found a rule error. Note it and continue.
 
 **Case 2, the edge.** Take the edges column for your score and build a patient
-whose values fall on one of them: a dialysis patient for MELD-Na, a sodium of 118, a
-Glasgow score of 14 for qSOFA, a 6 mm subsolid nodule in a patient under 35 for
-Fleischner, a 74-year-old and a 75-year-old for CHA₂DS₂-VASc. Compare the
-three sources.
+whose values fall on one of them. For example:
+
+- MELD-Na: a patient on dialysis, or a sodium of 118
+- qSOFA: a Glasgow score of 14
+- Fleischner: a 6 mm subsolid nodule in a patient under 35
+- CHA₂DS₂-VASc: a 74-year-old, then a 75-year-old
+
+Compare the three sources.
 
 **Case 3, the nonsense.** Give the tool something no patient has. Both age
 bands ticked. A negative creatinine. Every box checked and then every box
@@ -375,11 +364,8 @@ anything, what it will do, and whether what it does is safe or silent.
 
 ::: {.callout-tip title="Worked example: what to expect, and what to look for" collapse="true"}
 **Expected behaviour, not a recorded run.** The two examples below are built
-from the failure patterns in @tbl-menu and the published evidence above. A
-live run of the starter prompt was attempted for this chapter and did not
-complete in time to be recorded. So nothing here is presented as what a
-particular model produced on a particular day. Run the prompt yourself and
-compare.
+from the failure patterns in @tbl-menu, not from what a particular model
+produced on a particular day. Run the prompt yourself and compare.
 
 **CHA₂DS₂-VASc, expected.** The page will usually get the eight point values
 right and add them up correctly. That is the easy part. Look instead at three
@@ -409,8 +395,9 @@ days. The pattern is what to look for. The arithmetic is usually right; the
 rules at the edges are where to read.
 :::
 
-**Record it.** Copy this into a document. It is what you bring to the live
-session.
+**Record it.** Copy this into a document. It also answers question 2 of your
+[learning journal](../course/learning-journal.qmd): one time you checked the
+AI, how, and what you found.
 
 ```
 Tool used: ___________________   Model version if shown: ____________
@@ -421,7 +408,7 @@ Case            Inputs (invented)         My tool   MDCalc   Paper    Agree?
 2 edge          _______________________   _____     _____    _____    Y / N
 3 nonsense      _______________________   _____     _____    _____    Y / N
 
-Discrepancy or edge failure found (at least one; "none" needs a reason):
+Difference or edge failure found ("none" needs the edges you tried):
 ________________________________________________________________________
 Which of the three failures in the table is it: rule / edge / version?
 ________________________________________________________________________
@@ -429,11 +416,14 @@ The one change I would make before letting anyone else use it:
 ________________________________________________________________________
 ```
 
-"None found" is an acceptable answer only with a sentence saying which edges
-you tried. A tool that survived three cases is not validated. It is three
-cases old.
+"None found" is a good result, if you can say which edges you tried. It is
+still not validation: the tool has been tested on three cases.
 
-### Part C: explain it, then place it (8 minutes)
+**The one sentence.** Write the sentence you would say to a co-intern who
+shows you a calculator they built last night. It should contain a verb that
+means *compare against something outside the tool*.
+
+### Part C (optional): explain it, then place it (10 minutes)
 
 **The comprehension test.** In four sentences, without opening the code, write
 what your tool does for: an ordinary patient, the edge case, the nonsense
@@ -446,10 +436,6 @@ something a team could rely on? Say why, using the word "banner". Then answer
 the four questions from "Four questions before anyone else uses it" for your
 tool, and name what would have to change before anyone else used it.
 
-**The one sentence.** Write the sentence you would say to a co-intern who
-shows you a calculator they built last night. It should contain a verb that
-means *compare against something outside the tool*.
-
 ## Check
 
 Score yourself against this before moving on.
@@ -458,10 +444,10 @@ Score yourself against this before moving on.
 |---|---|---|
 | The chatbot-versus-agent distinction (objective 1) | You can say what the loop adds (acts on real files, observes, repeats, inside permissions) and why a running tool hides errors a reply does not | "An agent is a smarter chatbot" |
 | A working tool (objective 2) | Runs in a browser, shows inputs and total, carries the banner, cites the paper and names the version | Runs, but the banner or citation is missing, or the version is unstated |
-| Three recorded cases (objective 3) | Each compared against MDCalc *and* the original paper; at least one discrepancy or edge failure named, and sorted as rule, edge, or version | "It matched MDCalc" with no edge case tried |
-| The comprehension test (objective 3) | Four sentences, including the blank form, written before opening the code | The fourth sentence is missing or copied from the model |
-| Where it sits (objective 4) | Says why it is a study aid now, answers the four questions for your tool, and names what would have to change before anyone else used it | "It's not a device because it's just a prototype" |
+| Three recorded cases (objective 3) | Each compared against MDCalc *and* the original paper; any difference named and sorted as rule, edge, or version, or, if all agree, the edges you tried listed | "It matched MDCalc" with no edge case tried |
 | The one sentence | Contains a verb meaning *compare against an outside source* | "Be careful with it" |
+| The comprehension test (Part C, optional) | Four sentences, including the blank form, written before opening the code | The fourth sentence is missing or copied from the model |
+| Where it sits (Part C, optional; objective 4) | Says why it is a study aid now, answers the four questions for your tool, and names what would have to change before anyone else used it | "It's not a device because it's just a prototype" |
 
 ## What this changes for you
 
