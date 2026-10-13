@@ -129,25 +129,7 @@ stop growing, and 40.3 percent larger if they keep growing [@pmid:39952776].
 Attrition, the rate at which working radiologists leave clinical practice,
 more than doubled between 2014 and 2022, from 1.1 to 2.5 percent a year. The
 authors treat that as one cause of a *shortage*, not a surplus
-[@pmid:41031940]. Doximity's 2026 pay survey put average diagnostic radiology
-pay at $609,684 for 2025, up 6.6 percent in a year when physician pay overall
-rose about 2 percent.[^dox]
-
-[^dox]: Doximity, *2026 Physician Compensation Report*, covering 2025;
-    <https://www.doximity.com/reports/physician-compensation-report/2026>.
-    The module this chapter is built from quotes the prior year's figure,
-    $571,749, up 7.5 percent. The two are different survey years, not
-    competing estimates. Quote one, with its year.
-
-::: {.callout-note title="The subspecialty exception"}
-One number keeps this from being reassurance about every part of radiology. Count the radiologists
-who bill at least half their work for children. That pediatric radiology
-workforce shrank from 2,190 in 2016 to 2,032 in 2023, from 6.4 to 4.6 percent
-of all radiologists, while demand for imaging rose [@pmid:40923948]. That is
-not automation. It is the job market of one subspecialty moving on its own,
-apart from its parent specialty. A student choosing a fellowship is making a
-more specific decision than the overall numbers describe.
-:::
+[@pmid:41031940].
 
 In May 2025 Hinton told the *New York Times* that he had spoken too broadly in
 2016. He said he had meant image analysis rather than the whole job. He now
@@ -161,14 +143,12 @@ new, and as it reads now.
     because the original is paywalled.
 
 ::: {.press-clips}
-<div class="press-clip"><div class="src">The New Yorker · magazine</div><a class="hl" href="https://www.newyorker.com/magazine/2017/04/03/ai-versus-md">A.I. Versus M.D.: What happens when diagnosis is automated?</a><div class="date">Siddhartha Mukherjee · 3 April 2017</div></div>
 <div class="press-clip"><div class="src">The New Republic · essay</div><a class="hl" href="https://newrepublic.com/article/187203/ai-radiology-geoffrey-hinton-nobel-prediction">The "Godfather of AI" Predicted I Wouldn't Have a Job. He Was Wrong.</a><div class="date">Arjun Byju, radiology resident · 25 October 2024</div></div>
 <div class="press-clip"><div class="src">The New York Times · technology</div><a class="hl" href="https://www.nytimes.com/2025/05/14/technology/ai-jobs-radiologists-mayo-clinic.html">Your A.I. Radiologist Will Not Be With You Soon</a><div class="date">Steve Lohr · 14 May 2025</div></div>
 <div class="press-clip"><div class="src">Radiology Business · trade press</div><a class="hl" href="https://radiologybusiness.com/topics/healthcare-management/healthcare-staffing/match-day-2026-radiology-programs-offer-more-positions-ever-applicant-pool-declines">Match Day 2026: Radiology programs offer more positions than ever, but applicant pool declines</a><div class="date">March 2026</div></div>
-<div class="press-clip"><div class="src">Fortune · business</div><a class="hl" href="https://fortune.com/article/ai-godfather-radiologists-obsolete-salaries-up-to-571k-demand-growing/">A decade after the 'Godfather of AI' said radiologists were obsolete, their salaries are up to $571K and demand is growing fast</a><div class="date">2026</div></div>
 :::
 
-Read the fourth clipping twice. "More positions than ever" and "applicant
+Read the third clipping twice. "More positions than ever" and "applicant
 pool declines" are in the same headline. The headline does not prove why the
 pool shrank. But if students are hearing the prediction and acting on it, even
 as the job market moves the other way, that is a harm the prediction did, and
@@ -213,22 +193,7 @@ them on one dataset. Deep-learning models for pneumonia on chest x-rays were
 trained at one hospital system and tested at another. Performance dropped.
 The models could also tell which hospital an image came from with better than
 99.9 percent accuracy. They had learned the scanner as much as the disease
-[@pmid:30399157]. Radiology also has most of the FDA-authorized devices. Of 903
-AI-enabled devices the FDA had authorized by August 2024, 692 (76.6 percent)
-were radiology devices. Clinical performance studies were reported for only
-55.9 percent of all devices, and 2.4 percent were randomized [@pmid:40305017].
-Hundreds of FDA-cleared tools, and so far no measured loss of radiologist
-jobs. The most widely read
-explanation of why is Deena Mousa's essay "AI isn't replacing radiologists"
-(October 2025). She also reports that 38 percent of models cleared in 2024
-that disclosed their test sites used data from a single hospital. That figure
-is her reading of the same JAMA Network Open analysis; it is not in the
-paper's main text
-[VERIFY: not in the main text of pmid:40305017, checked 2026-09-08; the site counts would be in Supplement 1, which a person should open]{.verify}.[^mousa]
-
-[^mousa]: Deena Mousa, "AI isn't replacing radiologists," *Understanding AI*,
-    1 October 2025, <https://www.understandingai.org/p/ai-isnt-replacing-radiologists>.
-    The best single reading if you want the whole argument in one sitting.
+[@pmid:30399157].
 
 **3. Liability: who signs, and who is blamed when it is wrong?** Someone signs
 the read. Malpractice law judges the physician, not the model. The joint
@@ -279,17 +244,6 @@ Most physician jobs do not break neatly into tasks. The specialties that look mo
 ones whose pattern-recognition work is easiest to see, not the ones where it
 is the largest share of the work.
 
-::: {.callout-important title="A concrete case where the habit gets the wrong answer"}
-Ask your chatbot, "Will AI replace radiologists?" You will get a fluent,
-balanced answer that mentions image analysis, daily work, and the parts of the job that need a person.
-Now ask it what fraction of a radiologist's day is spent interpreting images,
-with a source. Most models give a number without a source, or a source that
-does not contain the number. The 2012 stopwatch study above is one paper with
-fourteen radiologists. A model that has not read it is guessing, and a
-confident-sounding guess is the whole failure this chapter is about. You will
-do this properly in the Do block.
-:::
-
 ### The precedent: mammography CAD
 
 The closest earlier example went further than most students expect.
@@ -335,19 +289,16 @@ Everything so far points toward optimism about physician jobs. This section
 complicates that, because "your job survives" and "the system gets better or
 cheaper" are different claims.
 
-**Within the organization.** [the critical appraisal chapter](core-appraisal.qmd) follows ambient
-scribes (software that listens to a visit and drafts the note) through their
-levels of evidence. The five-system study of 8,581 clinicians found that
-scribe users spent 13.4 fewer minutes a day in the EHR and 16.0 fewer on
-documentation. They delivered 0.49 more visits per week. After-hours EHR time
-did not change significantly [@pmid:41920565]. At UCSF, across 1,565
-physicians and about 1.2 million outpatient visits, scribe users billed 1.81
-more relative value units per week, a 5.8 percent increase. (RVUs are the
-units Medicare uses to price physician work.) They saw 0.80 more patients per
-week and had no rise in claim denials [@pmid:41511775]. Time saved became
-visits and RVUs. That is real, and it is what a hospital's finance office
-wants. It is not cost reduction. It is the same recurring lesson, efficiency
-gains eaten by volume, seen on a billing statement.
+**Within the organization.** Ambient scribes are software that listens to a
+visit and drafts the note. At UCSF, a study followed 1,565 physicians and
+about 1.2 million outpatient visits. Physicians who adopted a scribe billed
+1.81 more relative value units (RVUs, the units Medicare uses to price
+physician work) per week than those who did not. They saw 0.80 more patients
+per week, with no rise in claim denials [@pmid:41511775]. This is an
+association, not proof that the scribe caused the change; early adopters may
+differ from other physicians. More billing is what a hospital's finance
+office hopes for, and it is not cost reduction. It fits the same recurring
+lesson: efficiency gains get eaten by volume.
 
 **Across the system.** The Peterson Health Technology Institute takes no
 vendor money. In March 2025 it concluded that scribes probably reduce burnout
@@ -358,11 +309,7 @@ system-wide costs, and possibly raising them.[^phti] The pattern it names is
 insurer's approval needed before a treatment) and to code visits at higher
 levels. Payers use AI to process more denials and to "downcode" claims
 automatically, paying at a lower level than billed. The number of
-requests and denials rises, and no clinical question is settled any faster. PHTI's
-April 2026 report also records a health system where Level 5 visit coding
-(the highest billing level for an office visit) rose 5 percent after scribes
-arrived, worth over $1,000 per provider per month. That is the UCSF finding
-seen from the payer's side.
+requests and denials rises, and no clinical question is settled any faster.
 
 [^phti]: Peterson Health Technology Institute, *Adoption of AI in Healthcare
     Delivery Systems: Early Applications and Impacts* (March 2025) and
@@ -372,19 +319,6 @@ seen from the payer's side.
     coding example (a 5% rise in Level 5 and 7% in Level 4 established-patient
     encounters after scribe deployment) are in the report PDF,
     <https://www.phti.org/wp-content/uploads/2026/04/PHTI-Administrative-AI-Current-Use-and-Potential-Impact.pdf>.
-
-**One number to refuse to simplify.** You will hear that "25 percent of health
-care spending is administrative." That sentence blends three studies with
-three different denominators, that is, three different answers to "percent of
-what?" Shrank and colleagues estimated total *waste* at $760 to $935 billion,
-about 25 percent of spending. Administrative complexity is one of six
-categories of that waste [@pmid:31589283]. Himmelstein and colleagues found
-administration to be 25.3 percent of *hospital* spending, the highest of eight
-countries [@pmid:25201663]. Woolhandler and colleagues put administration at
-$294.3 billion in 1999, 31.0 percent of spending *after exclusions*, using
-the broadest definition in the literature [@pmid:12930930]. Three numbers,
-three denominators. The habit of asking "percent of what?" will outlast all
-three figures.
 
 ### The most useful single fact: the BLS contradiction
 
@@ -451,8 +385,8 @@ also for every place where the obstacle he describes is one of the four
 questions rather than model performance. Twenty minutes is enough for the
 exercise. The rest is worth hearing when you have time.
 
-If you would rather read than watch, Mousa's essay in the footnote above
-covers the same material in about the same time.
+If you would rather read than watch, Deena Mousa's essay, listed under Go
+deeper, covers the same material in about the same time.
 
 ## Do
 
@@ -611,7 +545,68 @@ Your forecast, and what would change it, can go into your week 4 piece,
 
 ## Go deeper
 
-**Papers**
+### More numbers behind the story
+
+Optional. These were in the main text and were moved here to keep it short.
+
+**Radiology pay.** Doximity's 2026 pay survey put average diagnostic
+radiology pay at $609,684 for 2025, up 6.6 percent in a year when physician
+pay overall rose about 2 percent ([Doximity, *2026 Physician Compensation
+Report*](https://www.doximity.com/reports/physician-compensation-report/2026)).
+The previous year's report gave $571,749, up 7.5 percent. These are
+different survey years, not competing estimates, so quote one with its year.
+
+**The subspecialty exception.** Count the radiologists who bill at least half
+their work for children. That pediatric radiology workforce shrank from 2,190
+in 2016 to 2,032 in 2023, from 6.4 to 4.6 percent of all radiologists, while
+demand for imaging rose [@pmid:40923948]. That is not automation. It is the
+job market of one subspecialty moving on its own, apart from its parent
+specialty. A student choosing a fellowship is making a more specific
+decision than the overall numbers describe.
+
+**FDA devices.** Radiology has most of the FDA-authorized AI devices. An
+analysis of the 903 AI-enabled devices the FDA had authorized by August 2024
+found that 692 (76.6 percent) were radiology devices. It found a clinical
+performance study reported for about half of all 903 [@pmid:40305017]. There
+are hundreds of cleared radiology tools, and so far no measured loss of
+radiologist jobs. The most widely read explanation of why is Deena Mousa's
+essay ["AI isn't replacing radiologists"](https://www.understandingai.org/p/ai-isnt-replacing-radiologists)
+(*Understanding AI*, 1 October 2025). She also reports that 38 percent of
+models cleared in 2024 that disclosed their test sites used data from a
+single hospital. That figure is her reading of the same analysis; it is not
+in the paper's main text
+[VERIFY: not in the main text of pmid:40305017, checked 2026-09-08; the site counts would be in Supplement 1, which a person should open]{.verify}.
+
+**Scribes across five health systems.** A study of 8,581 clinicians at five
+academic health systems, 1,809 of whom adopted a scribe, found that adoption
+was associated with modestly less time in the EHR and on documentation, and
+slightly more visits each week [@pmid:41920565]. The Peterson Health
+Technology Institute's April 2026 report also records a health system where
+Level 5 visit coding (the highest billing level for an office visit) rose 5
+percent after scribes arrived, worth over $1,000 per provider per month.
+That is the UCSF finding seen from the payer's side.
+
+**Percent of what?** You will hear that "25 percent of health care spending
+is administrative." That sentence blends three studies with three different
+denominators, that is, three different answers to "percent of what?" Shrank
+and colleagues estimated total *waste* at $760 to $935 billion, about 25
+percent of spending. Administrative complexity is one of six categories of
+that waste [@pmid:31589283]. Himmelstein and colleagues found administration
+to be 25.3 percent of *hospital* spending, the highest of eight countries
+[@pmid:25201663]. Woolhandler and colleagues put administration at $294.3
+billion in 1999, 31.0 percent of spending *after exclusions*, using the
+broadest definition in the literature [@pmid:12930930]. Asking "percent of
+what?" will stay useful after all three figures are out of date. Test
+yourself: can you name the three denominators?
+
+**More coverage of the prediction.**
+
+::: {.press-clips}
+<div class="press-clip"><div class="src">The New Yorker · magazine</div><a class="hl" href="https://www.newyorker.com/magazine/2017/04/03/ai-versus-md">A.I. Versus M.D.: What happens when diagnosis is automated?</a><div class="date">Siddhartha Mukherjee · 3 April 2017</div></div>
+<div class="press-clip"><div class="src">Fortune · business</div><a class="hl" href="https://fortune.com/article/ai-godfather-radiologists-obsolete-salaries-up-to-571k-demand-growing/">A decade after the 'Godfather of AI' said radiologists were obsolete, their salaries are up to $571K and demand is growing fast</a><div class="date">2026</div></div>
+:::
+
+### Papers
 
 - The time-and-motion study behind the 36 percent [@pmid:23763878], and the
   editorial that gave the field its slogan [@pmid:33937794].
@@ -630,7 +625,7 @@ Your forecast, and what would change it, can go into your week 4 piece,
 - The three administrative-cost papers [@pmid:31589283; @pmid:25201663;
   @pmid:12930930], for the denominators.
 
-**Readings and talks**
+### Readings and talks
 
 - Deena Mousa, ["AI isn't replacing radiologists"](https://www.understandingai.org/p/ai-isnt-replacing-radiologists)
   (October 2025). The four questions in this chapter are a short version of
