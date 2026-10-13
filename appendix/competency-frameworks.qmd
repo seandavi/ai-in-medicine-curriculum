@@ -140,8 +140,8 @@ course does the same.
 ## How this course uses them
 
 The course's own list of ten competencies, numbered AIM-1 to AIM-9 plus AIM-X,
-was built from the frameworks above. Each chapter's subtitle names the ones it
-serves, and the [coverage table](../index.qmd#competency-coverage) in the
+was built from the frameworks above. Each chapter's objectives box names the
+ones it serves, and the [coverage table](../index.qmd#competency-coverage) in the
 preface shows which chapters teach which. The numbers stay fixed so the course
 can be compared with the AAMC set when it is published.
 
@@ -158,7 +158,7 @@ can be compared with the AAMC set when it is published.
 | AIM-9 | Research and scholarship (optional) | Hunt, research and innovation; Lee 6 |
 | AIM-X | Professional identity and keeping up | Russell 6 |
 
-: The course's competencies and where each comes from. AIM-1 to AIM-6 are the core; AIM-7 to AIM-9 are optional extensions; AIM-X runs through every week. {#tbl-aim-crosswalk}
+: The course's competencies and where each comes from. AIM-1 to AIM-6 are the core of the design; AIM-7 to AIM-9 are optional extensions; AIM-X runs through every week. In fall 2026, AIM-3 is taught in a menu chapter, not a core one (see the preface). {#tbl-aim-crosswalk}
 
 Talking with patients about AI is the area this course weights most
 differently from the frameworks. Of the five in @tbl-frameworks, only Singla
