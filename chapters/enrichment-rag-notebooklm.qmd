@@ -1,6 +1,6 @@
 ---
 title: "Grounding AI in real sources: what a retrieval tool fixes, and what it cannot"
-subtitle: "About 75 minutes"
+subtitle: "About 70 minutes"
 ---
 
 ::: {.callout-tip title="In short"}
@@ -42,7 +42,7 @@ Course competencies: AIM-1 (foundations), AIM-2 (critical appraisal), AIM-9
 **What you need.** A Google account for Gemini Notebook (a personal Gmail
 account works; see "Getting in" in the Do), and your university ChatGPT Edu or
 Copilot account in a second tab. Nothing to install. Made-up patients only.
-The time is about 20 minutes of reading, 7 of video, 35 to 40 of doing, and
+The time is about 15 minutes of reading, 7 of video, 35 to 40 of doing, and
 10 for the check and the closing question.
 
 ## Journal club is Thursday
