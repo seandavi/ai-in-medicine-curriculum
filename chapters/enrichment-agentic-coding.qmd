@@ -5,9 +5,9 @@ subtitle: "About 85 minutes"
 
 ::: {.callout-tip title="In short"}
 - **The idea.** A chatbot can now build a working clinical calculator from a
-  plain request in about ten minutes. The skill that matters is checking it:
-  its rules, its edge cases, and which version of the score it uses, against
-  the original paper and MDCalc.
+  plain request in about ten minutes. The arithmetic is usually right. The
+  skill that matters is checking the rest: its rules, its edge cases, and
+  which version of the score it uses, against the original paper and MDCalc.
 - **What you do.** Build a calculator for a score from your specialty, then
   run three made-up patients through it, MDCalc, and the paper.
 - **What you keep.** Your tool, and a table of three checked cases with the
@@ -460,25 +460,6 @@ tool you build yourself, or are handed by a colleague. Name the three cases
 you will run through it before it touches a decision, and the outside source
 each one is compared against. One word is not an answer to either.
 
-## Summary
-
-- A chatbot writes; an agent acts, observes, and repeats inside permissions you
-  set. The tools you used today are the smallest version of that loop. The
-  full ones need an install this chapter avoids on purpose.
-- A running tool hides errors a reply does not. The arithmetic is usually
-  right. The rules at the edges, and the version of the score, are where a
-  generated calculator fails.
-- Writing code does not make a model reliable at clinical calculation; rules
-  from a checked source do. Check your tool against MDCalc and the paper.
-- Comprehension abdication is the named hazard: if you cannot say what your
-  tool does for every input, you cannot say how it fails.
-- Four questions move a tool from study aid toward device: patient data,
-  closeness to a decision, who uses it, how many patients. The tool need not
-  change for the answers to.
-- Every number you type is one you invented. Nothing worth stealing goes into
-  a page you will not security-review. The banner goes in the prompt.
-- The coordinator was right, and the team's spreadsheet was three cases old.
-
 ## Go deeper
 
 **Papers**
@@ -517,11 +498,8 @@ each one is compared against. One word is not an answer to either.
 
 **If you want to go further**
 
-- The full agents, Claude Code, Codex, Gemini CLI, and GitHub Copilot
-  in an editor, need a local install, a terminal, and in most cases a paid
-  plan; new signups for the student Copilot plan have been paused since April
-  2026 with no announced end date, though Copilot Free still accepts signups
-  [VERIFY: pause still in force? checked 2026-09-08 on the GitHub changelog and community FAQ]{.verify}. Try
+- The full agents (Claude Code, Codex, Gemini CLI, and GitHub Copilot in an
+  editor) need a local install and a terminal, and most need a paid plan. Try
   one after the course, on a project with nothing in it worth stealing.
 - Google Colab runs Python notebooks in a browser with a Google account and no
   install. Its built-in agent can run a whole data analysis, start to finish,
