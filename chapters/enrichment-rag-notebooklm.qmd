@@ -1,7 +1,22 @@
 ---
 title: "Grounding AI in real sources: what a retrieval tool fixes, and what it cannot"
-subtitle: "AIM-1 · AIM-2 · AIM-9 · about one hour"
+subtitle: "About 75 minutes"
 ---
+
+::: {.callout-tip title="In short"}
+- **The idea.** A tool that answers only from documents you give it almost
+  never invents a reference, because every citation points at a passage it
+  was handed. You can now use one to read a set of papers fast, and check any
+  sentence from it in about a minute.
+- **What you do.** Load four papers into Gemini Notebook (formerly
+  NotebookLM), ask for a one-page journal-club brief, and check three of its
+  sentences against their sources.
+- **What you keep.** The checked and corrected brief, and the one-minute
+  check: click the citation, read a line above and below, and ask whether the
+  sentence is narrower or broader than the passage.
+- **Short on time?** Read "Journal club is Thursday", "What 'grounded' means,
+  step by step", and "The failure grounding does not fix". Do Steps 1 and 2.
+:::
 
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will be able to:
@@ -11,24 +26,24 @@ By the end of this chapter you will be able to:
 2. State plainly that a language model does not learn from you, and say what
    does change between one turn and the next.
 3. Describe the six retrieval steps in order: chunk, embed, index, retrieve,
-   augment, generate. Say what chunking does to a results table.
+   augment, generate.
 4. Explain why a tool that answers from your sources invents citations far less
    often than a general chatbot, and why that comes from how it is built rather
    than from care.
 5. Catch the error that grounding does not fix: a real, correctly linked source
    that the summary has misread or stretched too far.
-6. Build a notebook from sources you chose, and say when that is and is not a
-   literature search.
+6. Build a notebook from sources you chose, use it to write a brief you have
+   checked, and say when that is and is not a literature search.
+
+Course competencies: AIM-1 (foundations), AIM-2 (critical appraisal), AIM-9
+(research and scholarship).
 :::
 
-**Time.** About 20 minutes of reading, 7 minutes of video, 30 minutes of doing.
-You need a Google account for NotebookLM. A personal account is fine; see the
-access note in the Do block. You also need one general chatbot in a second tab,
-such as your institutional ChatGPT Edu or Microsoft Copilot. Nothing installs.
-NotebookLM's free tier allows 50 sources per notebook and 50 chat questions a
-day, according to Google's own help page (checked September 2026).
-That is more than this chapter needs, but do not spend the day's questions in
-the first ten minutes.
+**What you need.** A Google account for Gemini Notebook (a personal Gmail
+account works; see "Getting in" in the Do), and your university ChatGPT Edu or
+Copilot account in a second tab. Nothing to install. Made-up patients only.
+The time is about 25 minutes of reading, 7 of video, 35 of doing, and 10 for
+the check and the closing question.
 
 ## Journal club is Thursday
 
@@ -38,24 +53,30 @@ The topic is whether AI tools that answer from a set of documents are ready
 for the clinic, and she knows you have opinions. It is Monday. You have five
 PDFs, two call shifts, and a personal statement to finish.
 
-A co-intern says: put them all into NotebookLM and ask it your questions. You
-do. Ten seconds later you have this.
+A co-intern says: put them all into Gemini Notebook and ask it your questions.
+(Google renamed NotebookLM to Gemini Notebook on
+[16 July 2026](https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/).
+Papers and colleagues still use the old name.) A tool like this answers only
+from the documents you give it. Ask it about the guideline paper and you get
+something like this.
 
 ::: {.grounded-answer}
 <div class="q">Did adding retrieval improve the accuracy of the language models on the guideline questions, and did it work for all the models?</div>
 <div class="a">Adding guideline retrieval improved accuracy across all models, with a pooled gain of +0.64 points (95% CI 0.47–0.80) on the automated judge.<a class="cite" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13465324/">1</a> The benefit was largest for weaker models, with Mistral, Qwen3, and GPT-OSS showing gains of +0.72 to +0.94 points, but modest or absent for already-strong models like DeepSeek and GPT-5.<a class="cite" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13465324/">1</a> Additionally, hallucination rates plummeted from 42% to 4% consistently across all base models when retrieval was enabled.<a class="cite" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13465324/">1</a></div>
-<div class="srcs">1 · Vollmer et al., <i>Diagnostics</i> 2026 · Results, Table 6. Real output of a summarizing tool that answers only from the source it was given, run on 2026-09-07; where it came from is recorded in the "One real specimen" section below.</div>
+<div class="srcs">1 · Vollmer et al., <i>Diagnostics</i> 2026 · Results, Table 6. Illustrative: not Gemini Notebook output. A different tool that also answers only from the source it is given (Claude, reading the paper's web page) wrote this on 2026-09-07; the callout "Where the opening answer came from" below has the details.</div>
 :::
 
 Every number in that answer is real. Every little blue "1" links to a passage
-that exists. The first sentence is going on your slide. And the first sentence
-is not what the paper says.
+that exists. The first sentence is going on your slide. But the first
+sentence is broader than the paper. The paper says the gain was statistically
+significant in three models and only "directional" in the two strongest: a
+trend that could be chance.
 
-This chapter is about why the numbers are real, why the sentence is not, and
-how to tell in under a minute. [the appraisal chapter](core-appraisal.qmd) showed you that a general
-chatbot invents references and a retrieval tool does not. This chapter looks
-more closely at how the tool works. How it works is what tells you which
-mistakes are still possible after the references are fixed.
+This chapter is about why the numbers are real, why the sentence drifted, and
+how to tell in about a minute. A general chatbot can invent a reference that
+does not exist; a retrieval tool almost never does. How the tool works is
+what tells you which mistakes are still possible after the references are
+fixed.
 
 Two words first, because vendors use both. A **grounded** tool is one that
 answers from documents it was given and points back to them. **Retrieval** is
@@ -400,35 +421,34 @@ conversation as raw text. About fifteen minutes.
 
 ## Do
 
-::: {.callout-warning title="No patient information, ever"}
-Sources for this exercise are published papers, guidelines, or things you
-wrote yourself. Not a de-identified case you typed up. Not a screenshot of a
-note. Not your classmate's data. A consumer Google account carries no
-business associate agreement, the contract that makes a vendor legally
-responsible for protecting patient data. The course rule holds in every
-account, institutional or personal. The
-rule is strict on purpose. The unusual cases are where people get it wrong.
-
-What counts as patient information, and why taking out the name is not
-enough: [the patient information page](../course/patient-information.qmd).
-:::
+Made-up patients only. [What counts as patient information](../course/patient-information.qmd).
+Your sources here are published papers, so nothing about a patient goes in.
 
 ::: {.callout-tip title="Getting in"}
-NotebookLM is free with any Google account and runs in the browser. A
-personal Gmail account works and asks for nothing beyond what you already gave
-Google. Making a *new* Google account may ask for a phone number; if you will
-not give one, use the no-Google path below. If you sign in with your school Google account and NotebookLM is
-missing or refuses to load, your school's administrator has turned it off for
-your part of the organization. They can do that. Do not spend time on it;
-switch to a personal account. Google's own help page confirms that most work
-and school accounts have access and that administrators control it
-[VERIFY: sign in with a school Google account the week before the cohort and confirm NotebookLM loads; this cannot be checked remotely]{.verify}.
+Gemini Notebook runs in the browser at
+[notebook.google](https://notebook.google/); the old NotebookLM address
+redirects there. It is free with a Google account, and a personal Gmail
+account works. Making a *new*
+Google account may ask for a phone number; if you will not give one, use the
+no-Google path below. If you sign in with a school Google account and the
+tool is missing or will not load, your school has turned it off. Do not spend
+time on it; switch to a personal account
+[VERIFY: nobody has yet run this Do in Gemini Notebook with a CU account; confirm it loads before students try]{.verify}.
 
-If you have no Google account and will not make one: your institutional
-ChatGPT Edu or Copilot lets you attach files and say "answer only from the
-attached documents." That gives you the same *exercise* with a weaker
-*guarantee*. A general chatbot told to stay inside its sources will still use
-its training data at times. Note in your write-up which tool you used.
+**Limits.** Google's
+[plans page](https://support.google.com/notebooklm/answer/16213268) lists
+50 sources per notebook on the free plan (checked 12 October 2026). Since
+2 September 2026, use on personal accounts has a limit based on how much
+computing your requests take, and it
+[refreshes every five hours](https://blog.google/innovation-and-ai/products/gemini-notebook/new-flexible-usage-limits/).
+This chapter needs far less than that.
+
+If you have no Google account and will not make one: your university ChatGPT
+Edu or Copilot lets you attach files and say "answer only from the attached
+documents." That gives you the same *exercise* with a weaker *guarantee*. A
+general chatbot told to stay inside its sources will still use its training
+data at times. Say which tool you used in question 2 of your
+[journal](../course/learning-journal.qmd).
 :::
 
 ### Step 1: choose your sources (10 minutes)
@@ -566,28 +586,6 @@ to Monday. The five PDFs are in the notebook, the first sentence of its answer
 is on your draft slide, and journal club is Thursday. What do you change on
 the slide? What do you say when the chief asks how you prepared? What do you
 do with the two papers that disagree? One word is not an answer to either.
-
-## Summary
-
-- A chatbot has no memory. The conversation is re-sent every turn inside a
-  fixed context window, and a new chat starts from zero.
-- A model does not learn from you. The context changes; the model does not.
-  Where your text is *stored* is a separate question, and the reason for the
-  no-patient-information rule.
-- Grounding is six steps: chunk, embed, index, retrieve, augment, generate.
-  The model is given passages and asked to paraphrase them.
-- Chunking cuts on length, not meaning. A table split across two chunks is
-  two real citations and no table.
-- Grounded tools fabricate far less because a citation is a pointer to a
-  passage in the window. That comes from how the tool is built, not from care,
-  which is why it holds for tools that do not exist yet.
-- Grounding does not fix reading. A real, linked source can be misread, and
-  the usual direction is broader than the paper. Click, read a line above and
-  below, ask narrower or broader.
-- A notebook answers from what you gave it. It is a way to read a defined set
-  of documents, not a way to find out what the literature says.
-- Thursday's slide: the number stays, the sentence changes, and the two
-  papers that disagree get their own line each.
 
 ## Go deeper
 
