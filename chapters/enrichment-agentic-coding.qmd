@@ -12,8 +12,8 @@ subtitle: "About 85 minutes"
   run three made-up patients through it, MDCalc, and the paper.
 - **What you keep.** Your tool, and a table of three checked cases with the
   one change you would make before anyone else used it.
-- **Short on time?** Do Parts A and B of the Do first (about 50 minutes).
-  Then read "Three ways the tool you just built is wrong".
+- **Short on time?** Do Parts A and B of the Do first (about an hour).
+  Then read "Three ways the tool you just built can be wrong".
 :::
 
 ::: {.callout-note title="What you'll learn"}
@@ -35,7 +35,8 @@ Course competencies: AIM-5 (clinical use), AIM-2 (critical appraisal), AIM-4
 
 **What you need.** Your university ChatGPT Edu or Copilot account, and one
 tab open on MDCalc, the free calculator website most residents use. Nothing to
-install. Made-up patients only. The video is optional.
+install. Made-up patients only. The Do takes about an hour; the video is
+optional.
 
 **Build first if you like.** The Do works without the reading. Go to [Part A
 of the Do](#build-it), build your tool, then come back and read while you
@@ -86,7 +87,7 @@ lowest. That rule did not matter for this patient. It will for the next one.)
 Nobody lied. Nobody was careless in the ordinary sense. The tool worked
 perfectly for the first thirty patients, none of whom were on dialysis. The
 resident asked a language model for a MELD-Na calculator and got one. What
-the resident did not do was ask what the paper says happens at the edges. And
+the resident did not do was ask what the score's rules say happens at the edges. And
 nobody on the team, including you, checked. The patient does not know the
 project exists. Because of a number from a weekend project, she would have
 waited.
@@ -166,14 +167,14 @@ is fast, fluent, and willing, and it needs clear instructions and review.
 Review its work the way a senior reviews a junior's. Do not trust the
 confident tone; check the parts that would hurt someone if wrong.
 
-### Three ways the tool you just built is wrong
+### Three ways the tool you just built can be wrong
 
 A generated calculator can fail in three ways, and each can happen on its own.
 Each has a matching check in the Do block.
 
 | Failure | What it looks like | How you catch it |
 |---|---|---|
-| **The rule** | A point value, cutoff, or coefficient is wrong, or a rule from the original paper is missing (the dialysis rule; the sodium limits; whether a score is only applied above a threshold) | Compare every rule to the original publication, not to your memory of it |
+| **The rule** | A point value, cutoff, or coefficient is wrong, or a rule that comes with the score is missing (the dialysis rule; the sodium limits; whether a score is only applied above a threshold) | Compare every rule to the original publication, not to your memory of it |
 | **The edge** | The tool does something the builder never imagined, for inputs the builder never tried: nothing checked, two boxes checked that cannot both be true, a value outside the range the score was built on | Try the inputs the builder did not: empty, contradictory, extreme |
 | **The version** | The score has more than one published form, and the tool does not say which one it uses (Wells' criteria exist in a three-tier and a two-tier form; the transplant system replaced MELD-Na with MELD 3.0 in 2023) | Ask which version, and check that against what your team, and MDCalc, actually use |
 
@@ -186,10 +187,9 @@ three wrong, even though it could already write and run its own code
 points for an item, or an item missed or made up. On the ten hardest
 calculations, with new test cases and a newer model, the team then tested what
 helps. Letting the model write and run code helped only a little: wrong
-answers fell from about 64 to 54 percent.
-Giving it MDCalc's written instructions helped much more. Giving it
-calculators that people had built and checked, which it could call, cut wrong
-answers to 4.8 percent.
+answers fell from about 64 to 54 percent. Giving it MDCalc's written
+instructions helped much more. Giving it calculators that people had built
+and checked, which it could call, cut wrong answers to 4.8 percent.
 
 So writing code does not make a model reliable. Rules from a checked source
 do. Your tool will usually do its arithmetic correctly, but its rules are only
@@ -292,7 +292,7 @@ would have done for you.
 ### Part A: build it (20 minutes) {#build-it}
 
 **Step 1. Pick a score.** Choose the one closest to your specialty from
-@tbl-menu. Each has a single original publication you will check against, and
+@tbl-menu. Each has an original publication you will check against, and
 each has at least one edge the model tends to miss. If none fits, use
 CHA₂DS₂-VASc; it is the one the worked example below is written for.
 
