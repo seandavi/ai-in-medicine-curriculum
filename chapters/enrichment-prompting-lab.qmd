@@ -210,16 +210,18 @@ Chen led two of the first randomized trials of physicians using a chatbot
 
 ## Do
 
-Use your university ChatGPT Edu or Copilot account, and made-up material only.
-Sam's question at 2:40 a.m. was about a real patient, typed into a phone; in
-this course, do not do that, even with the name taken out. See [the patient
-information page](../course/patient-information.qmd).
+Made-up patients only. [What counts as patient information](../course/patient-information.qmd).
+
+Run every prompt in this Do in a **Temporary Chat, or a chat outside your
+course project**. ChatGPT can remember earlier chats and read what is in a
+project. A fresh chat keeps each comparison fair.
 
 ### Part A: build a prompt that works (about 20 minutes)
 
 Pick something you will need in the next month: a topic you will present on
 rounds, a condition you want to explain to patients, or a question you expect
-at interviews. Fill in the brackets and run this in a new conversation.
+at interviews. Fill in the brackets and run this in a Temporary Chat, or a
+chat outside your course project.
 
 ```
 You are helping a fourth-year medical student going into [specialty].
@@ -233,7 +235,8 @@ Where you are unsure, or where guidelines differ or have changed
 recently, say so instead of picking one.
 ```
 
-Then change one part at a time, each in a new conversation, and compare:
+Then change one part at a time, each in a new Temporary Chat, or a new chat
+outside your course project, and compare:
 
 1. Change the **context**: make the audience patients, or an attending.
 2. Change the **format**: a table, one paragraph, or three slides.
@@ -242,11 +245,11 @@ Then change one part at a time, each in a new conversation, and compare:
 Write one line for each change: what it did. Keep the version you liked best.
 That is the start of your template.
 
-### Part B: one case, two prompts (about 30 minutes)
+### Part B: one case, two prompts (about 20 minutes)
 
-You will run one made-up case twice, score both answers, and check the one
-claim the plan depends on. Use the same chatbot for both runs, in two separate
-conversations, so the second run cannot see the first.
+You will run one made-up case twice and score both answers. Use the same
+chatbot for both runs, each in its own Temporary Chat, or a chat outside your
+course project, so the second run cannot see the first.
 
 #### Step 1. Pick a case (2 minutes)
 
@@ -301,7 +304,8 @@ Vital signs and neurological examination are normal.
 
 #### Step 2. The bare prompt (3 minutes)
 
-Paste the case into a new conversation with nothing but this in front of it:
+Paste the case into a Temporary Chat, or a chat outside your course project,
+with nothing but this in front of it:
 
 > What's the diagnosis and what should I do?
 
@@ -311,7 +315,8 @@ questions are the answer; copy them and score them like any other reply.
 
 #### Step 3. The structured prompt (5 minutes)
 
-Open a second, new conversation. Here is the five-part template from
+Open a second Temporary Chat, or another new chat outside your project. Here
+is the five-part template from
 @tbl-scaffold; fill in the case where marked.
 
 > You are assisting a physician preparing to present this case at morning
@@ -396,7 +401,23 @@ rounds; a statement of what information is missing.
 
 : Scoring correctness on the trap. The scale has only three steps on purpose; arguing with yourself about a borderline case is part of the exercise. {#tbl-trap-score}
 
-#### Step 5. Check the claim the plan depends on (10 minutes)
+Write the scores in your document:
+
+```
+Tool: ______________   Case: A / B / C / D
+                         Bare    Structured
+Organisation (0 to 5)    ___     ___
+Trap (2/1/0)             ___     ___
+```
+
+If your organisation score rose and your trap score did not, you have seen the
+main point of this chapter yourself. If both rose, write down which sentence
+did it; this chapter's guess is the last one. If the bare answer caught the
+trap and the structured one did not, keep both transcripts. One case is two
+observations, not a study, because the same prompt does not always give the
+same answer [@pmid:38378899].
+
+#### Step 5, if you have time. Check the claim the plan depends on (10 minutes)
 
 Take the better of your two answers and find the one claim its plan depends
 on: a threshold, a first-line drug, a "rules out", an interaction, a dose.
@@ -414,14 +435,16 @@ Record it as *supported*, *contradicted*, or *not addressed*, with the source.
 "Not addressed" is a real result. A claim the sources do not make is a claim
 you should not be repeating either. Another chatbot is not a source.
 
+No time now? Do this check later in the week, on an answer from your own
+work, and write it up in question 2 of your journal.
+
 ### What you keep (5 minutes)
 
-Fill this in and paste it into this week's [learning
-journal](../course/learning-journal.qmd). The top half is a template you can
-reuse on any task.
+**Your template.** Write out the version from Part A you will use again, in
+this shape. Keep it in your "AI in Medicine" project, in a chat or a file
+there, so you can copy it next time.
 
 ```
-MY PROMPT TEMPLATE (the version from Part A I will use again)
 Role:      __________________________________________________
 Context:   __________________________________________________
 Task:      __________________________________________________
@@ -429,27 +452,12 @@ Format:    __________________________________________________
 Missing:   Where the case lacks information you would need,
            say what is missing instead of assuming it.
            (or your Part A last line)
-
-ONE CASE, TWO PROMPTS (Part B)
-Tool: ____________________   Model version if shown: ____________
-Case:  A / B / C / D
-                       Bare     Structured
-Organisation (0–5)     ___      ___
-Trap (2/1/0)           ___      ___
-
-The claim the plan depends on: __________________________________
-  Source: ______________________   Supported / Contradicted / Not addressed
-
-In one sentence: what did structure change, and what did it not change?
-______________________________________________________________________
 ```
 
-If your organisation score rose and your trap score did not, you have seen the
-main point of this chapter yourself. If both rose, write down which sentence
-did it; this chapter's guess is the last one. If the bare answer caught the
-trap and the structured one did not, keep both transcripts. One case is two
-observations, not a study, because the same prompt does not always give the
-same answer [@pmid:38378899].
+**Your finding.** One sentence: what did structure change, and what did it
+not change? Put it in question 2 of this week's [learning
+journal](../course/learning-journal.qmd), with the claim you checked, the
+source, and what you found.
 
 ## Check
 
@@ -460,7 +468,7 @@ Score yourself against this before moving on.
 | A kept template (objective 1) | All five parts of @tbl-scaffold, and you can say which line is the fifth and what it is for | Four parts, or the fifth is "be accurate" |
 | Parts changed one at a time (objective 2) | One line each on what changing the context, the format, and the last line did | One run, no changes |
 | Two scored answers (objective 3) | Organisation and trap scored separately, the kind of trap named, and a one-sentence finding that names what changed and what did not | One overall impression of which answer was "better" |
-| One checked claim (objective 4) | A named calculator, guideline, or label, and a verdict | "It matched what I remembered", or a second chatbot |
+| One checked claim (objective 4), here or on your own work | A named calculator, guideline, or label, and a verdict | "It matched what I remembered", or a second chatbot |
 
 ## What this changes for you
 
