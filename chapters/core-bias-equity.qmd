@@ -1,7 +1,23 @@
 ---
 title: "Bias and equity: the proxy problem"
-subtitle: "AIM-3 · about 90 minutes"
+subtitle: "About 70 minutes"
 ---
+
+::: {.callout-tip title="In short"}
+- **The idea.** Many algorithms measure something easy in place of the thing
+  that matters, and the stand-in can work worse for some groups of patients.
+  You can now ask of any tool, "What does it measure, and what is that
+  standing in for?", and say whether you could catch a failure at the bedside.
+- **What you do.** Ask ChatGPT Edu for three algorithms in your specialty
+  where what is measured differs from what matters, then confirm one paper in
+  PubMed.
+- **What you keep.** One row for your specialty: what mattered, what stood in
+  for it, who was harmed, and whether the fix is in use. And the one question
+  you will ask about every new algorithm.
+- **Short on time?** Read "The number on the monitor", "Case two: cost
+  standing in for need", and "The study that complicates the bedside answer".
+  Do Part B.
+:::
 
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will be able to:
@@ -11,22 +27,23 @@ By the end of this chapter you will be able to:
    matters.
 2. Explain the Obermeyer study step by step: what the model was built to
    predict, the harm that caused, and the fix, including how big the fix was.
-3. For a case you choose, name the stand-in or the data gap, the group harmed
-   and the decision that went differently for them, the fix that followed,
-   and whether that fix is in use today. "Still draft" or "still contested"
-   can be the honest answer.
+3. For a case in your specialty, name the stand-in or the data gap, the group
+   harmed and the decision that went differently for them, the fix that
+   followed, and whether that fix is in use today. "Still draft" or "still
+   contested" can be the honest answer.
 4. Tell apart two kinds of harm (allocation and representation) and two kinds
    of bias (statistical and social).
 5. Say what a clinician can and cannot catch at the bedside without seeing
    inside a model. Cite the evidence that clinicians do not reliably catch a
    biased model, even when the model explains itself.
+
+Course competency: AIM-3 (bias and equity).
 :::
 
-**Time.** About 25 minutes of reading, 25 minutes of listening, 35 minutes of
-doing, and 5 minutes to write your answer to the closing question. You need
-a PubMed tab. A chatbot is optional and used for one step you can skip. If you
-do use one, your institutional ChatGPT Edu or Copilot account is enough.
-Nothing installs, and nothing here touches a patient's data.
+**What you need.** Your university ChatGPT Edu or Copilot account, and a
+PubMed tab. Nothing to install. Made-up patients only. The time is about 20
+minutes of reading, 40 of doing, and 10 for the check and the closing
+question. The podcast is an extra 25 minutes if you want it.
 
 ## The number on the monitor
 
@@ -406,15 +423,7 @@ kinds of bias, sorted by where they come from, which you may want for Part B.
 
 ## Do
 
-::: {.callout-warning title="No patient information, ever"}
-Every step below works from published papers and from an algorithm described
-in this chapter. Do not test any of it on a patient from your sub-internship,
-a classmate, or yourself. If you use a chatbot in the optional step, you are
-asking it about a published paper, not about a person.
-
-What counts as patient information, and why taking out the name is not
-enough: [the patient information page](../course/patient-information.qmd).
-:::
+Made-up patients only. [What counts as patient information](../course/patient-information.qmd).
 
 ### Part A: the worksheet, on the case you already know (15 minutes)
 
@@ -566,29 +575,6 @@ Second, you will use a clinical algorithm in your first month of residency
 that nobody in this course has heard of. What is the one question you will
 ask about it? Write your phrasing, not the chapter's. The live session
 collects these in chat, and they are worth more than the table.
-
-## Summary
-
-- A proxy is a measurable stand-in for something that cannot be measured.
-  Every well-known case of algorithmic harm in medicine is a proxy that
-  followed inequity: light for oxygen, cost for need, race for unmeasured
-  exposure.
-- The proxies were reasonable when chosen. That is why "don't be biased" is
-  not a strategy and "what does this actually measure" is.
-- Obermeyer: predict cost, get accuracy; use it for need, get a factor of
-  2.6 in who was enrolled. The fix meant changing the target, not the
-  model.
-- Statistical bias is error against the target; social bias is the wrong
-  target. Allocation harms move resources; representation harms need no
-  decision at all.
-- Finding is fast and fixing is slow. The oximeter guidance is draft;
-  race-neutral spirometry is recommended and contested.
-- A clinician at the bedside can catch the oximeter and misses the risk
-  score, and a biased
-  model with explanations still lowered clinicians' accuracy by nine points.
-  Alertness and auditing are both needed.
-- The patient in bed 14 did not know the device was calibrated on people who
-  did not look like him. Decide what you would tell him.
 
 ## Go deeper
 
