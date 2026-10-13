@@ -423,7 +423,8 @@ DeGrave and colleagues rebuilt models of this kind, with the COVID-19 and
 non-COVID X-rays from different sources [@doi:10.1038/s42256-021-00338-7].
 On a test set held back from the same sources, the models did well. On
 radiographs from a new hospital system, in the authors' words, "half of the
-model's predictive performance is lost". @fig-covid-average shows one reason:
+model's predictive performance is lost" [@doi:10.1101/2020.09.13.20193565].
+@fig-covid-average shows one reason:
 the sources differ in places that have nothing to do with the disease.
 @fig-covid-saliency shows that the models used those places, such as side
 markers, image edges, and the diaphragm. When the authors swapped the side
