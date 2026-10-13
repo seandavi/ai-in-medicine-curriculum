@@ -99,8 +99,8 @@ journals and residency programs now expect.
 
 **Optional: keep an AI-use ledger.** When you use AI to make something, such
 as slides for your week 4 talk, keep a ledger as you go. A ledger is a running
-list, one line per step, of what you did and what the AI did. Any chatbot
-works, including a free one, and nothing in it should be about a real patient.
+list, one line per step, of what you did and what the AI did. Use your
+university ChatGPT Edu or Copilot account, and keep real patients out of it.
 At the start of the chat, type:
 
 ```
