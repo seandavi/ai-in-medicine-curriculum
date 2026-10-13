@@ -103,9 +103,9 @@ data are not copyrightable, drawing by the course.](../images/ayers-2023-redrawn
 In 2023, clinician raters who did not know the source preferred a chatbot's
 answers to patients' questions over physicians' answers (@fig-ayers)
 [@pmid:37115527]. A 2025 repeat with 1,454 lay readers found the same
-[@pmid:41359230]. But when 52 medical students in Zurich heard one treatment
-explained by a patient, a clinician, an expert, and ChatGPT, the chatbot's
-version raised their expectations of the treatment least [@pmid:39177012]. The
+[@pmid:41359230]. But when 52 medical students in Zurich watched a patient, a
+clinician, an expert, and ChatGPT explain the same treatment, the chatbot's
+version raised their expectations of it least [@pmid:39177012]. The
 machine can draft the handout; you are the reason the patient follows it.
 
 ### The portal reply: say a tool helped
@@ -184,7 +184,8 @@ were largely right, but about one in eight was mostly or completely wrong, in
 the same fluent tone [@pmid:37782499]. The printout sounds sure because of the
 writing, not the evidence, so the job is to find which parts are right.
 
-Telling her that is not the right first step. The order is:
+Telling her the printout is unreliable is not the right first step. The order
+is:
 
 **Say what is right first.** "Ferritin and thyroid function are the next two
 tests I was going to order. The sleep questions are good ones." This is not a
@@ -228,10 +229,7 @@ sign; the note is mine. And the printout: the tool made a list; I am reading
 it with you; the plan is ours.
 
 When you do not know how a tool works, say so. "I don't know how that system
-works, and here is how I'll find out" is a correct, professional answer. The
-patient who asked about the recording does not need the retention policy in
-the next ninety seconds. She needs to know you will get it, and that the visit
-will not wait on it.
+works, and here is how I'll find out" is a correct, professional answer.
 
 ### Where it has already gone wrong
 
@@ -274,8 +272,8 @@ Write each of these yourself first, in words you would actually say. Each
 should take under a minute aloud.
 
 1. **The phone on the desk.** The patient from the opening asks whether it is
-   recording. Write the three sentences. Add one on what she can refuse, and one
-   on what you do not know and how you will find out.
+   recording. Write the three sentences. Add one sentence on what she can
+   refuse, and one on what you do not know and how you will find out.
 2. **The computer found something.** A screening mammogram was read with
    computer-aided detection, software that marks regions for the radiologist
    to look at. It flagged a region, the radiologist agreed, and more pictures
