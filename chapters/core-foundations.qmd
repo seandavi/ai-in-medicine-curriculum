@@ -279,9 +279,10 @@ you judge them. A regression is wrong by an amount. A classification is wrong
 by a *kind*, a miss or a false alarm, and those two kinds cost different people
 different things.
 
-**The model is exactly as good as the people it was fit to.** The 8,254 were
-mostly participants in kidney research studies. 31.5 percent of them were
-Black. None were children. None were your patient. For anyone outside that
+**The model is exactly as good as the people it was fit to.** The 8,254 came
+from research studies and clinical populations, and 31.5 percent of them were
+Black. All were adult outpatients without serious other illness; none were
+children [@pmid:34554658]. None were your patient. For anyone outside that
 set, the equation is guessing beyond what it saw. Statisticians call that
 guess an *extrapolation*. The history of the equation is a history of finding
 out where the guess failed.
@@ -291,7 +292,7 @@ out where the guess failed.
 | Equation | Year | Learned from | Tested on | What broke, and where |
 |---|---|---|---|---|
 | MDRD | 1999 | 1,628 patients with chronic kidney disease, of whom 1,070 were the training sample | The remaining 558 | Fit to people with reduced GFR; gave values that were too low at higher GFR, so healthy people were labeled as diseased [@pmid:10075613; @pmid:19414839] |
-| CKD-EPI | 2009 | 8,254 participants in 10 studies | 3,896 in 16 studies | More accurate at higher GFR, but included a term that adjusted the result for Black race; the 2021 study showed that term overestimated measured GFR in Black adults by a median of 3.7 mL/min/1.73 m² [@pmid:19414839; @pmid:34554658] |
+| CKD-EPI | 2009 | 8,254 participants in 10 studies | 3,896 in 16 studies | More accurate at higher GFR, but included a term that adjusted the result for Black race. The 2021 study found that the equation with this term overestimated measured GFR in Black adults by a median of 3.7 mL/min/1.73 m²; with the term simply removed, it underestimated by 7.1 [@pmid:19414839; @pmid:34554658] |
 | CKD-EPI 2021 | 2021 | 8,254 participants in 10 studies, refit without race | 4,050 in 12 studies | Now recommended for all US laboratories; the refit without race still gives values a few mL/min too low in Black adults and a few mL/min too high in non-Black adults, and a cystatin C version is more accurate [@pmid:34554658; @pmid:34563581] |
 
 : Three generations of the eGFR equation, rebuilt from the numbers in the papers. Each one is a formula learned from a population, and each one's known failure is in people outside that population. {#tbl-egfr-history}
@@ -365,8 +366,8 @@ you are ever shown.
 The clinical version of the same failure is **dataset shift**: the patients
 the model meets in real use differ from the patients in its training set, so
 performance measured during development does not hold [@pmid:34260843].
-Here is an example. One EHR vendor built a sepsis model that runs in hundreds
-of US hospitals. One academic center tested it on its own 38,455
+Here is an example. One EHR vendor built a sepsis model that was in use at
+hundreds of US hospitals in 2021. One academic center tested it on its own 38,455
 hospitalizations, in a setting the model was not built on. A test
 like that is called *external validation*; here the testers also had no part
 in building the model. The model had an area under the
@@ -463,12 +464,13 @@ The model is then trained to do one thing: given the tokens so far, produce a
 probability for every possible next token. Then one token is picked, at random
 but weighted by those probabilities. It is added to the end, and the process
 runs again. A paragraph of smooth medical prose is a few hundred repetitions
-of *predict the next token, pick one, repeat*. Your phone's keyboard does this
-with a vocabulary of a few thousand words, looking back two or three words.
-These models do it with a vocabulary of roughly a hundred thousand tokens,
-looking back many thousands of tokens, using a function *f* with hundreds of
-billions of numbers in it. The video you will watch shows what that function
-looks like from the inside. What matters here is what it does not contain.
+of *predict the next token, pick one, repeat*. Your phone's keyboard suggests
+the next word the same way, with a small model that looks back only a few
+words. Chatbots do it at a much larger size. In 2026 a typical large model
+works with a vocabulary of about a hundred thousand tokens or more, looks back
+over many thousands of tokens, and has billions of numbers in its *f*. The
+exact sizes change with each new model. The video shows what happens inside.
+What matters here is what the process does not contain.
 
 There is a second training stage, and it explains the tone. After the
 next-token training, people are paid to compare pairs of answers and say which
@@ -542,8 +544,8 @@ Three studies say what a check like this does and does not do.
 
 - **Search helps.** One 2026 study asked six chatbot versions for references
   on ear, nose, and throat topics. The two versions with web search gave more
-  accurate references than the four without it. Even the best got only about
-  half of its references fully right [@pmid:41546380].
+  accurate references than the four without it. The best scored 51 percent
+  on the study's reference-accuracy rating [@pmid:41546380].
 - **A second pass helps.** In another study, a model wrote questions to check
   its own first draft, answered them separately, and then rewrote the answer.
   The rewritten answers made fewer false claims [@doi:10.18653/v1/2024.findings-acl.212].
@@ -552,11 +554,10 @@ Three studies say what a check like this does and does not do.
   did not support [@pmid:40240349]. A real link is not the same as a link that
   says what the answer says.
 
-There is also a limit no search can fix. In most setups the chatbot cannot see
-the patient's chart. So it cannot check facts about your patient: the dose
-against the patient's weight, the history against the notes. Those are still yours to
-check. A chatbot that checks against the chart is a future capability, not
-today's.
+There is also a limit no search can fix. ChatGPT Edu cannot see the chart;
+some tools built into the electronic health record can. So ChatGPT Edu cannot
+check facts about your patient: the dose against the patient's weight, the
+history against the notes. Those are yours to check.
 
 So let the chatbot check the literature. Then open the link yourself before
 anything goes in a note or an order.
@@ -875,7 +876,7 @@ And the second half. The next time a chatbot gives you a citation with a first
 author, a journal, and a year, what is the one sentence you will say to
 yourself before you paste it anywhere? Will you ask it to check, and which
 link will you then open yourself? Which facts in the answer are about your
-patient, so that no chatbot can check them for you?
+patient, so that ChatGPT Edu cannot check them for you?
 
 ## Summary
 
