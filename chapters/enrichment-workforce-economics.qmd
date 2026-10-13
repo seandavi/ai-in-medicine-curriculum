@@ -581,9 +581,9 @@ single hospital. That figure is her reading of the same analysis; it is not
 in the paper's main text
 [VERIFY: not in the main text of pmid:40305017, checked 2026-09-08; the site counts would be in Supplement 1, which a person should open]{.verify}.
 
-**Scribes across five health systems.** A study of 8,581 clinicians at five
-academic health systems, 1,809 of whom adopted a scribe, found that adoption
-was associated with modestly less time in the EHR and on documentation, and
+**Scribes across five health systems.** A study followed 8,581 clinicians at
+five academic health systems, 1,809 of whom adopted a scribe. Adoption was
+associated with modestly less time in the EHR and on documentation, and
 slightly more visits each week [@pmid:41920565]. The Peterson Health
 Technology Institute's April 2026 report also records a health system where
 Level 5 visit coding (the highest billing level for an office visit) rose 5

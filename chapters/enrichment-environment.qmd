@@ -212,8 +212,8 @@ questions.
 
 **Which query.** A long prompt, a 100-word email, or a "reasoning" setting
 costs far more than a short question. An independent test of thirty
-commercial models found short queries near 0.42 Wh, and the models that used
-the most energy above 29 Wh for a long prompt
+commercial models found short queries near 0.42 Wh. The models that used the
+most energy went above 29 Wh for a long prompt
 ([Jegham et al., arXiv 2505.09598](https://arxiv.org/abs/2505.09598),
 May 2025).
 
@@ -273,8 +273,8 @@ gains get eaten by volume**. Economists call it the Jevons effect, after the
 observation in 1865 that more efficient steam engines led Britain to burn more
 coal, not less. When a unit of something gets cheaper, people use enough more
 of it that the total rises. Per-query efficiency is real, but use is growing
-faster: a US national laboratory projects data centers rising from 4.4
-percent of US electricity in 2023 to 6.7 to 12 percent by 2028
+faster. A US national laboratory projects that data centers will rise from
+4.4 percent of US electricity in 2023 to 6.7 to 12 percent by 2028
 ([Berkeley Lab, December 2024](https://newscenter.lbl.gov/2025/01/15/berkeley-lab-report-evaluates-increase-in-electricity-demand-from-data-centers/)).
 
 The consequence for the resident is uncomfortable in both directions. Her
@@ -299,8 +299,8 @@ to a Bloomberg News analysis
 
 In the Memphis area, the AI company xAI has powered its computers with gas
 turbines. At its first site, in South Memphis, turbines ran for about a year
-before the county approved an air permit in July 2025, according to the
-environmental law group that represents local residents
+before the county approved an air permit in July 2025. That timeline comes
+from the environmental law group that represents local residents
 ([SELC, May 2026](https://www.selc.org/news/inside-memphis-fight-against-xai/)).
 Its second site is just across the state line in Southaven, Mississippi.
 There, the state approved an air permit in March 2026, and community groups

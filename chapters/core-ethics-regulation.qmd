@@ -804,10 +804,10 @@ statute, to override state AI laws.
 ::: {.callout-note title="Your insurer, briefly"}
 For a resident, the malpractice coverage that matters first is your
 institution's. Someone in the GME office can tell you what it says about AI
-tools. Ask in orientation, not after. The chief operating officer of one
-malpractice carrier, The Doctors Company, has advised physicians to judge
-each AI tool on its own: what data it was trained on, and whether its
-accuracy holds up over time ([Medical Economics, 9 October
+tools. Ask in orientation, not after. One malpractice carrier, The Doctors Company,
+has advised physicians to judge each AI tool on its own. Its chief operating
+officer named two things to ask: what data the tool was trained on, and
+whether its accuracy holds up over time ([Medical Economics, 9 October
 2025](https://www.medicaleconomics.com/view/ai-on-trial-how-malpractice-insurers-can-help-physicians-navigate-new-risks)).
 :::
 
