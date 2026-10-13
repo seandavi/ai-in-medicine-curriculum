@@ -15,7 +15,7 @@ subtitle: "About 75 minutes"
 - **What you keep.** A routine for checking any reference in a few minutes,
   and six questions to ask about any AI tool before your program buys it.
 - **Short on time?** Read "Three things that can be wrong" and "But it's
-  FDA-cleared, isn't it fine?", then do Part A (20 minutes).
+  FDA-cleared, isn't it fine?", then do Part A (25 minutes).
 :::
 
 ::: {.callout-note title="What you'll learn"}
@@ -92,22 +92,17 @@ to do: write its own references, and get sold to your department over lunch.
 
 ## Why this matters
 
-![Every tool in this chapter arrives through a screen like these, between a
-patient and a decision. Cardiologist Juan Manuel Romero in a telemedicine
-consultation, Ciudad Obregón, Mexico. Photo: Intel Free Press,
-[CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0), via
-[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Telemedicine_Consult.jpg).](../images/telemedicine-consult.jpg){#fig-screens fig-alt="A physician in a white coat seen from behind, facing four monitors showing an ECG, an echocardiogram, and a video call with two people."}
+You will use AI tools to find evidence within the year, and most of what a
+good one gives you will be right. In a 2026 study, ChatGPT with web search,
+asked as a clinician, made up about 2 in 100 of its references. Its commonest
+error was a real paper with a wrong PMID or DOI [@pmid:42232526]. A check in
+PubMed takes about a minute a reference and tells you which ones to trust.
 
-You will meet the reference problem within the year. Someone on your team will
-hand you a tool that produces citations, or you will open one yourself at 2 a.m.
-to answer a management question. Whether the reference exists is a separate
-question from whether it looks right. Checking takes twenty minutes.
-
-Your program will meet the vendor problem, and increasingly so will you.
-Residents sit on the committees that pilot these tools. The vendor's slide, the
-health system's press release, and the randomized trial will say three different
-things about the same product. Deciding which to believe is a skill you will
-still need in fifteen years, when every product named in this chapter is gone.
+Your program will meet the vendor problem, and so will you. Residents sit on
+the committees that pilot these tools. The vendor's slide, the health system's
+press release, and the randomized trial will say different things about the
+same product. Deciding which to believe is a skill you will still need in
+fifteen years, when every product named in this chapter is gone.
 
 ## How it works
 
@@ -119,10 +114,9 @@ model claims? The second is checking what the literature says about a *type* of
 tool: does the scribe on the lunch slide actually give you your evenings back?
 
 Most people arrive assuming the first skill is the hard one and the second is
-someone else's job. This chapter reverses that. Checking five references takes
-twenty minutes and a PubMed tab. The answer is clear and often surprising.
-Weighing a finding that most clinicians declined a tool against a health
-system's press release takes judgment.
+someone else's job. This chapter reverses that. Checking three references takes
+about ten minutes and a PubMed tab, and the answer is clear. Weighing a large
+study against a health system's press release takes judgment.
 
 The two halves connect through the question from the lunch room, asked twice. In
 the first half, you are the one who checks. In the second, you grade how well
@@ -130,38 +124,39 @@ other people checked.
 
 ### Where a citation comes from
 
-A general-purpose language model produces a citation the same way it produces any
-other text: by writing the most likely next words, one token at a time. A token
-is a word or piece of a word. The model is doing, at enormous scale, what your
-phone's keyboard does when it suggests the next word. A well-formed author list,
-a real journal name, and a DOI in the right format are what likely next words
-look like. The model is not looking in a database and failing. It never had one.
+A language model that answers without searching produces a citation the same
+way it produces any other text: by writing the most likely next words, one
+token at a time. A token is a word or piece of a word. The model is doing, at
+enormous scale, what your phone's keyboard does when it suggests the next
+word. A well-formed author list, a real journal name, and a DOI in the right
+format are what likely next words look like. The model is not looking in a
+database and failing. It never had one.
 
 ![What is inside. The mechanism really is closer to this than to a librarian.
 xkcd 1838, *Machine Learning*, by Randall Munroe,
 [CC BY-NC 2.5](https://xkcd.com/license.html).](../images/machine_learning.png){#fig-xkcd-ml .comic fig-alt="xkcd comic. One figure asks how a machine learning system works; the other explains you pour data into a big pile of linear algebra and collect the answers on the other side, and if they are wrong you stir the pile until they look right."}
 
-A retrieval-grounded tool does this the other way round. "Retrieval-grounded"
-is the term you will meet in the literature. It means the tool searches a
-database of real documents first, then writes text about what it found. This
-chapter also calls it a search-first tool. Several products now work this way,
-and [the retrieval chapter](enrichment-rag-notebooklm.qmd) shows how to tell whether a given
-tool really does. @fig-citation-paths shows the two paths.
+A **search-first** tool does this the other way round. It searches a database
+of real documents first, then writes about what it found. ChatGPT Edu and
+Copilot work this way when they search the web, and the answer then shows its
+sources. Some medical products, such as OpenEvidence, always search first.
+[The retrieval chapter](enrichment-rag-notebooklm.qmd) shows how to tell whether
+a given tool really does. @fig-citation-paths shows the two paths.
 
 ```{mermaid}
 %%| label: fig-citation-paths
 %%| fig-cap: "Two ways a tool arrives at a citation. On the left, the citation is generated as text; whether it exists is a matter of chance. On the right, the citation is retrieved from an index before any text is written."
-%%| fig-alt: "Two flowcharts side by side. General-purpose model: your question leads to generate answer text, then generate citation text, then something that looks like a reference. Retrieval-grounded tool: your question leads to search PubMed or an index, then real papers, then generate an answer about those papers, then cites what it found."
+%%| fig-alt: "Two flowcharts side by side. Answering without search: your question leads to generate answer text, then generate citation text, then something that looks like a reference. Search-first tool: your question leads to search PubMed or an index, then real papers, then generate an answer about those papers, then cites what it found."
 flowchart LR
   accTitle: Two ways a tool arrives at a citation
-  accDescr: Two flowcharts side by side. General-purpose model, your question leads to generate answer text, then generate citation text, then something that looks like a reference. Retrieval-grounded tool, your question leads to search PubMed or an index, then real papers, then generate an answer about those papers, then cites what it found.
-  subgraph G["General-purpose model"]
+  accDescr: Two flowcharts side by side. Answering without search, your question leads to generate answer text, then generate citation text, then something that looks like a reference. Search-first tool, your question leads to search PubMed or an index, then real papers, then generate an answer about those papers, then cites what it found.
+  subgraph G["Answering without search"]
     direction TB
     q1[Your question] --> gen1[Generate answer text]
     gen1 --> cite1[Generate citation text]
     cite1 --> out1[Looks like a reference]
   end
-  subgraph R["Retrieval-grounded tool"]
+  subgraph R["Search-first tool"]
     direction TB
     q2[Your question] --> search[Search PubMed or an index]
     search --> docs[Real papers]
@@ -172,7 +167,8 @@ flowchart LR
 
 This is why a search-first tool's rate of made-up references is different in
 kind, not just a bit lower. It can still misread a paper it found. It cannot
-invent one it did not find.
+invent one it did not find. A chatbot that searches only some of the time can
+mix the two paths in one answer, which is why you still check.
 
 ### Three things that can be wrong
 
@@ -189,8 +185,8 @@ and each can fail on its own:
 
 ![The attribution failure, before language models existed. A claim gets a
 citation, the citation gets cited, and the loop closes without anyone checking
-the source. Retrieval-grounded tools trained on the web inherit every loop like
-this. xkcd 978, *Citogenesis*, by Randall Munroe,
+the source. A tool that searches the web can find and repeat a loop like this.
+xkcd 978, *Citogenesis*, by Randall Munroe,
 [CC BY-NC 2.5](https://xkcd.com/license.html).](../images/citogenesis.png){#fig-xkcd-cito .comic fig-alt="xkcd comic in four panels titled Citogenesis: a writer invents a fact and adds it to Wikipedia, a journalist cites Wikipedia, Wikipedia then cites the journalist, and the loop closes with the fact now sourced."}
 
 The third row is the one that matters on the wards, and it fails in fluent
@@ -434,51 +430,31 @@ will find you a *different* paper for a made-up citation, and you will score it
 as real.
 :::
 
-### Part A: the fabrication hunt (25 minutes)
+### Part A: ask, then check (about 25 minutes)
 
-**Step 1. Pick a question in your specialty.** You want a management question with
-a real literature and real controversy. If you cannot think of one, find one:
+**Step 1. Pick a question in your specialty (2 minutes).** You want a
+management question with a real literature. If you have no specialty yet, use
+anticoagulant choice in atrial fibrillation with stage 4 chronic kidney
+disease.
 
-```
-("large language model" OR "artificial intelligence") AND <your specialty>
-AND (validation OR "external validation")
-```
+**Step 2. Ask, with web search on (3 minutes).** Use ChatGPT Edu, in a
+Temporary Chat or a chat outside your course project. If you see a web search
+option beside the message box, turn it on; the prompt also asks for a search.
+The DOI is the publisher's permanent link for a paper, and the PMID is its
+PubMed ID number.
 
-Filter PubMed to the last three years, read three abstracts, and take the clinical
-question one of them is about. If you have no specialty yet, use anticoagulant
-choice in atrial fibrillation with stage 4 chronic kidney disease; it works
-reliably.
+> I am a physician managing `<your clinical question>`. Search the web and
+> PubMed, summarize the current evidence in five sentences, and give me three
+> references from the peer-reviewed literature with authors, journal, year,
+> and DOI or PMID. Show the source you used for each.
 
-**Step 2. Ask twice.** Run both prompts below in the same tool, in two separate
-conversations, with your question substituted in. The first is worded as a
-clinician would ask it. The second is worded as a patient would. Both ask for a
-DOI or PMID: the DOI is the publisher's permanent link for a paper, and the
-PMID is its PubMed ID number.
+**Step 3. Check each reference (10 minutes).** Search PubMed by title first,
+then by first author plus year, then by DOI or PMID. Title first, because a
+real paper with a wrong PMID or DOI is a common error. Give each reference one
+score from @tbl-scoring, and note whether the answer showed a source for it.
 
-Asked as a clinician:
-
-> I am a physician managing `<your clinical question>`. Summarize the current
-> evidence and give me five references from the peer-reviewed literature with
-> authors, journal, year, and DOI or PMID.
-
-Asked as a patient:
-
-> I have `<the condition, in plain words>` and my doctor mentioned
-> `<the treatment>`. Can you explain what the research says, and give me five
-> references from medical journals with authors, journal, year, and DOI or PMID so
-> I can look them up myself?
-
-If you have a verified OpenEvidence account, run the clinician prompt there as
-well, on a third row. Verification asks for a clinician credential or, for US
-medical students, proof of enrollment such as a student ID. Students outside
-the United States, or who prefer not to upload a document, can skip this row;
-it is optional for that reason.
-[VERIFY: student verification wording on the OpenEvidence signup form; checked 2026-09-08 against OpenEvidence's 2024 announcement and two library guides, not the live form]{.verify}
-
-**Step 3. Score every reference.** Search PubMed by title, then by first author
-plus year, then by DOI or PMID. Give each reference one score from @tbl-scoring.
-The scale is deliberately coarse. Arguing with yourself about borderline cases is
-part of the exercise.
+Expect most of them to check out. That is the routine working: ask, then
+check. Most of a good answer is right; your job is to find out which parts.
 
 | Score | Meaning | How you decide |
 |---|---|---|
@@ -492,10 +468,9 @@ part of the exercise.
 The clinician prompt was run on anticoagulation in atrial fibrillation with
 stage 4 chronic kidney disease, in a general-purpose model without search
 (Claude, 2026-09-07), and every reference was checked in PubMed. All five were
-real. That is not the result you should expect. It is the "these numbers move"
-callout happening in front of you. The three examples below show what each
-score looks like when it does happen. The first is from that run. The second and
-third are made up to show the pattern, and are labeled as such.
+real, even without search. Expect most of yours to be real too. The three
+examples below show what each score looks like. The first is from that run.
+The second and third are made up to show the pattern, and are labeled as such.
 
 **Score 2, accurate.** *Stanifer JW et al. Apixaban versus warfarin in patients
 with atrial fibrillation and advanced chronic kidney disease. Circulation
@@ -523,28 +498,34 @@ different paper or to nothing. Score 0. What reveals it is not any single featur
 It is that no feature can be *found*.
 :::
 
-**Step 4. Record it.** Copy this into a document. It is what you will grade
-yourself on in the Check block.
+**Step 4. The contrast (8 minutes).** Open another Temporary Chat, or another
+new chat outside your project. Ask the same question the way a patient would,
+without asking it to search:
+
+> I have `<the condition, in plain words>` and my doctor mentioned
+> `<the treatment>`. Can you explain what the research says, and give me three
+> references from medical journals with authors, journal, year, and DOI or PMID
+> so I can look them up myself?
+
+Check these three the same way. It may get them right too; if so, how would
+you know? Look at whether each answer showed its sources. A reference with a
+source you can open is one the tool found. A reference with no source shown may
+have been written as text, so check those first.
+
+**Step 5. Record it (2 minutes).** Copy this into your document.
 
 ```
 Tool: ____________________   Model version if shown: ____________
 Clinical question: ______________________________________________
 
-Asked as    Ref  Title as given by the model           In PubMed?  Score
-Clinician    1   ____________________________________   Y / N      ___
-Clinician    2   ____________________________________   Y / N      ___
-Clinician    3   ____________________________________   Y / N      ___
-Clinician    4   ____________________________________   Y / N      ___
-Clinician    5   ____________________________________   Y / N      ___
-Patient      1   ____________________________________   Y / N      ___
-Patient      2   ____________________________________   Y / N      ___
-Patient      3   ____________________________________   Y / N      ___
-Patient      4   ____________________________________   Y / N      ___
-Patient      5   ____________________________________   Y / N      ___
-OpenEvidence (optional):  ___ ___ ___ ___ ___
-
-Asked as a clinician: 0s ___  1s ___  2s ___
-Asked as a patient:   0s ___  1s ___  2s ___
+Asked as   Ref  Title as given by the model    Did it show  In PubMed?  Score
+                                               sources?
+Clinician   1   ____________________________   Y / N        Y / N       ___
+Clinician   2   ____________________________   Y / N        Y / N       ___
+Clinician   3   ____________________________   Y / N        Y / N       ___
+Patient     1   ____________________________   Y / N        Y / N       ___
+Patient     2   ____________________________   Y / N        Y / N       ___
+Patient     3   ____________________________   Y / N        Y / N       ___
 
 For any reference scored 1: in one sentence, what did the model claim the
 paper showed, and what does it actually show?
@@ -553,18 +534,10 @@ For any reference scored 0: what about it looked credible? Name the specific
 feature: plausible author, real journal, plausible year, well-formed DOI.
 ```
 
-The two free-text answers matter more than the counts. Being able to say *why* a
-made-up citation looked credible is a skill you can use on the next tool.
-"Three of five were fake" is a number that will be out of date next year.
-
-::: {.callout-note title="Ten references is not a study"}
-You have ten observations. That is nowhere near enough to detect a 2.1% versus
-20.0% difference. You are reproducing the *design* of McLaughlin et al., not the
-result. If your split goes the same direction, it is consistent and underpowered.
-If it goes the other way, that is the better lesson. One small replication does
-not overturn a published finding, and one published finding does not settle a
-question whose answer keeps changing.
-:::
+If every reference scored 2, write down how you know, in one line: which
+search found each one. That line is the routine you keep. Six references are
+far too few to repeat the 2.1 versus 20.0 percent finding; you are trying the
+study's design, not testing its result.
 
 ### Part B: grading the evidence (20 minutes)
 
@@ -675,9 +648,9 @@ Score yourself against this before moving on.
 
 | You have | Meets | Falls short |
 |---|---|---|
-| Ten scored references | Every score is backed by a PubMed search, not a judgment of plausibility | "Looked real" or "looked fake" without a search |
-| A reason a fabricated reference looked credible | Names a specific feature | "It just seemed legit" |
-| A reason a misrepresented reference was wrong | States what the model claimed and what the paper shows | Restates the model's summary |
+| Six scored references | Every score is backed by a PubMed search, not a judgment of plausibility, and you noted whether each answer showed its sources | "Looked real" or "looked fake" without a search |
+| A reason a fabricated reference looked credible, if you found one | Names a specific feature | "It just seemed legit" |
+| A reason a misrepresented reference was wrong, if you found one | States what the model claimed and what the paper shows | Restates the model's summary |
 | Ten tiered claims | Each tier has a one-line reason; claim 10 is defended either way | Tiers assigned without reasons |
 | Two mechanisms | Selection and observation effects, or equivalents, in your own words | "The pre/post studies were biased" |
 | The one sentence | You can say "cleared is not validated" and name the paper | Only the slogan |
