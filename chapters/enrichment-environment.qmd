@@ -39,7 +39,7 @@ AIM-7 (workflow and systems).
 
 **What you need.** Your university ChatGPT Edu or Copilot account, a
 browser, and a calculator. Nothing to install. Nothing in this chapter
-involves a patient. The time counts about 15 minutes of reading, the
+involves a patient. The time counts about 18 minutes of reading, the
 11-minute talk, and about 25 minutes of doing; Part B and Go deeper are
 optional.
 
@@ -183,8 +183,8 @@ dispute about facts.
 
 Three things can be wrong with a cited claim. The reference: does the source
 exist? The attribution: does the source say what it is quoted as saying? And
-the claim itself: is it true? Apply the three to the bottle. The *reference* is fine: the preprint exists, the
-newspaper analysis exists. The *attribution* is where it failed. A bottle per
+the claim itself: is it true? Apply the three to the bottle. The *reference*
+is fine: the preprint exists, the newspaper analysis exists. The *attribution* is where it failed. A bottle per
 20 to 50 questions became a bottle per email, which became a bottle per note,
 and none of those is what the source said. The *claim*, whether AI use is a
 meaningful water cost, is a different question from either. It is the one no
@@ -335,8 +335,8 @@ against. Health care is not exempt from the same question. Its footprint is
 measured, large, and yours. The 1,692 kg per person figure above comes with a
 state-by-state analysis. Emissions were not closely correlated with the
 quality of care, which is the authors' argument that the sector could cut
-them without harming care [@pmid:33284703]. A scoping review of the environmental footprint of
-digital health tools found no validated method for assessing one across its
+them without harming care [@pmid:33284703]. A scoping review of the
+environmental footprint of digital health tools found no validated method for assessing one across its
 whole life cycle. Most studies simply estimated the travel that telehealth
 avoided [@pmid:36314391]. The literature on AI's footprint in medicine is
 newer, and so far mostly opinion pieces rather than measurements; four are
@@ -350,8 +350,9 @@ the accuracy of a general-purpose model ten times its size. That smaller
 model was Vicuna, a version of Llama 2 further trained to hold general
 conversations, not trained on radiology. The largest general-purpose model
 used more than seven times the energy of its smallest version
-[@pmid:39189909]. The lesson is the one @fig-per-query teaches, seen from the buyer's side: which
-model you run changes the total more than whether you run one at all.
+[@pmid:39189909]. The lesson is the one @fig-per-query teaches, seen from
+the buyer's side: which model you run changes the total more than whether
+you run one at all.
 
 ::: {.callout-important title="The claim not to repeat"}
 You will meet the sentence "autonomous AI could cut health care's emissions
@@ -359,8 +360,8 @@ by 80 percent." It comes from a real, published estimate. It compared the
 greenhouse-gas cost of one autonomous diabetic-retinopathy screening visit
 with one in-person specialist visit, and found the AI visit about 80 percent
 lower [@pmid:35551275]. Three of its six authors list the company that makes
-the screening device as an affiliation. That does not make it wrong, but it is the same
-kind of source as Google's report: a company estimating the cost of its own
+the screening device as an affiliation. That does not make it wrong, but it
+is the same kind of source as Google's report: a company estimating the cost of its own
 product. And it is a finding about one screening test replacing one kind of
 visit, not a measurement of health care as a whole. If you repeat it as a
 general claim you have made the attribution error from @tbl-what-counted, in
