@@ -1,9 +1,23 @@
 ---
 title: "How these systems work: from the eGFR on a chemistry panel to the next word"
-subtitle: "AIM-1 · AIM-2 · about 90 minutes"
+subtitle: "About 60 minutes"
 execute:
   echo: false
 ---
+
+::: {.callout-tip title="In short"}
+- **The idea.** Every model you will use, from the eGFR on a chemistry panel
+  to a chatbot, is a formula learned from data. You can now ask any of them
+  what it learned from and what it was tested on, and say why a chatbot
+  sounds just as sure when it is wrong.
+- **What you do.** Ask a chatbot about a scoring system you will use next
+  year, then check which parts of its answer are right.
+- **What you keep.** A checking routine for chatbot answers (the numbers, the
+  source, one link opened), and two questions for any model: what was it
+  trained on, and what was it tested on?
+- **Short on time?** Read "The number nobody measured" and "From tables to
+  words", watch the 8-minute video, and do Part B.
+:::
 
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will be able to:
@@ -25,17 +39,15 @@ By the end of this chapter you will be able to:
 6. Ask a chatbot to check its own facts and citations, and say what that
    check does and does not catch, including why ChatGPT Edu cannot check facts
    about your patient.
+
+Course competencies: AIM-1 (foundations), AIM-2 (critical appraisal).
 :::
 
-**Time.** About 30 minutes of reading (two of them moving the curve-fitting
-sliders), 27 minutes of watching, 25 minutes of doing, and 6 minutes for the
-check and the closing question. No math and no
-coding are assumed. The only equations in the chapter are one you already use
-and a simpler one you can fit by hand with two sliders.
-You need a browser and your institutional ChatGPT Edu or Microsoft Copilot
-account, or whatever assistant your school provides. Nothing installs, and nothing asks you for a phone number.
-The live session uses a [slide deck](../slides/core-foundations.html) with the
-same material, and some of the figures there are interactive.
+**What you need.** A browser and your university ChatGPT Edu or Copilot
+account. Nothing to install. Made-up patients only. No math or coding is
+assumed: the only equations are one you already use and a simpler one you fit
+by hand with two sliders. Wednesday's talk (14 October, 10 a.m., recorded)
+covers the same material with a [slide deck](../slides/core-foundations.html).
 
 ## The number nobody measured
 
@@ -79,21 +91,22 @@ muscle over a year of on-and-off illness. We will come back to her.
 
 ## Why this matters
 
-In three months you will meet a dozen of these. A sepsis alert that fires
+By next July you will meet a dozen of these. A sepsis alert that fires
 in the EHR. A risk score that decides who gets a phone call after discharge. A
 scribe that drafts your note. A chatbot that answers a dosing question at 2
 a.m. Every one of them is the same kind of object as the eGFR: a formula
-learned from some population, applied to your patient, with failures that
-follow from how it was built. This chapter does not teach you to build these
-things. It teaches you to look at one and predict how it will fail, in the
-thirty seconds before you act on it.
+learned from some population, applied to your patient. This chapter does not
+teach you to build these things. It teaches you to look at one and ask what it
+learned from. Then you know when to trust it and when to check, in the thirty
+seconds before you act on it.
 
-The second half of the chapter does this for the language model in
-particular, because its failures are the strangest and the smoothest. It will
-give you a citation that does not exist, formatted perfectly. It will do so
-for a reason that follows directly from what it computes. Once you can say
-that reason out loud, "it hallucinates" stops being an empty phrase. It becomes a
-prediction about when to check.
+The second half of the chapter does this for the language model. On common
+questions it is usually right, because the most plausible next word after a
+well-documented fact is the fact. When it is wrong, it sounds exactly the
+same, and it can give you a citation that does not exist, formatted
+perfectly. Both follow from what it computes. Once you can say why, "it
+hallucinates" stops being an empty phrase. It becomes a rule for when to
+check.
 
 ## How it works
 
@@ -118,9 +131,7 @@ is how it was made. Researchers combined ten studies in which 8,254 people had
 their GFR measured directly with a filtration marker. Each person also had a
 creatinine measured by a standard method, an age, and a sex on record. The
 researchers then fit an equation that predicts the measured GFR from those
-three inputs as closely as possible across all 8,254 people. "Fit" means a
-computer tried numbers in the equation until the predictions were as close to
-the measured values as they could get. They then tested the equation on a
+three inputs as closely as possible across all 8,254 people. They then tested the equation on a
 separate set of 4,050 people from twelve other studies, whose measured GFR the
 equation had never seen [@pmid:34554658].
 
@@ -239,22 +250,22 @@ the best one. Real fitting uses faster methods with the same goal. The real
 eGFR equation has a few more numbers in it, and it was fit to 8,254 people
 whose GFR was measured, not to 40 made-up dots.
 
-@fig-egfr-proxy shows what that model connects. The thing you want to know is
-on the right. The thing the lab can measure is on the left. The equation is
-the bridge, and the bridge was built from a specific set of people.
+@fig-egfr-proxy shows what that model connects. The thing the lab can measure
+is on the left. The thing you want to know is on the right. The equation links
+them, and it was learned from a specific set of people.
 
 A number used in place of the one you want, because that one is hard to get,
-is called a **proxy**. The first of the course's four recurring lessons (the
-fourth, *who benefits, who bears the risk, who decides*, comes in
-[the ethics chapter](core-ethics-regulation.qmd)) is **proxies fail**: the stand-in and the real thing can come apart,
-and they come apart for some patients more than for others. [The bias and
-equity chapter](core-bias-equity.qmd) depends on that lesson. This chapter's
-job is narrower: to show you the bridge at all.
+is called a **proxy**. The eGFR is a proxy for measured GFR. The first of the
+course's four recurring lessons is **proxies fail**: the stand-in and the real
+thing can come apart, and they come apart for some patients more than for
+others. [The bias and equity chapter](core-bias-equity.qmd) builds on that
+lesson. This chapter's job is narrower: to show you that the eGFR is a
+stand-in at all.
 
 ```{mermaid}
 %%| label: fig-egfr-proxy
 %%| fig-alt: "Flowchart. Three inputs the lab has, serum creatinine, age, and sex, feed an equation learned from 8,254 people with measured GFR, which outputs the eGFR on the panel. A dotted arrow shows the eGFR standing in for measured GFR, which is never done in routine care. A grey box, muscle mass, diet, and drugs that block secretion, feeds creatinine without touching measured GFR."
-%%| fig-cap: "What the eGFR equation takes in and what it stands for. The equation was learned from 8,254 people with measured GFR. It is a bridge from what a lab can measure to what a clinician wants to know. Anything that changes creatinine without changing GFR (grey) crosses the bridge unnoticed. Redrawn from the description of the CKD-EPI 2021 development in Inker et al. (2021)."
+%%| fig-cap: "What the eGFR equation takes in and what it stands for. The equation was learned from 8,254 people with measured GFR. It links what a lab can measure to what a clinician wants to know. Anything that changes creatinine without changing GFR (grey) changes the eGFR too, and the equation cannot tell. Redrawn from the description of the CKD-EPI 2021 development in Inker et al. (2021)."
 flowchart LR
   accTitle: What the eGFR equation takes in and what it stands for
   accDescr: Flowchart. Three inputs the lab has, serum creatinine, age, and sex, feed an equation learned from 8,254 people with measured GFR, which outputs the eGFR on the panel. A dotted arrow shows the eGFR standing in for measured GFR, which is never done in routine care. A grey box, muscle mass, diet, and drugs that block secretion, feeds creatinine without touching measured GFR.
@@ -354,13 +365,13 @@ which set it came from, you do not yet have a number.
 There are two ways to get this wrong. A model that is **too simple** misses
 the real pattern: the straight line through a curve. A model that is **too
 flexible** learns the random scatter in its training cases along with the
-real pattern, so it fits those cases closely and the next case badly: the
+real pattern. It fits those cases closely and the next case badly: the
 wiggle through every point. You will see both with one slider in Part A of
 the Do.
 
 The clinical version of the same failure is **dataset shift**: the patients
-the model meets in real use differ from the patients in its training set, so
-performance measured during development does not hold [@pmid:34260843].
+the model meets in real use differ from the patients in its training set.
+Then performance measured during development does not hold [@pmid:34260843].
 Here is an example. One EHR vendor built a sepsis model that was in use at
 hundreds of US hospitals in 2021. One academic center tested it on its own 38,455
 hospitalizations, in a setting the model was not built on. A test
@@ -404,7 +415,7 @@ was harmed by it.
 not enough. Early in the pandemic, many groups built models to label a chest
 X-ray as COVID-19 or not. A review of 62 such papers found that 16 took their
 non-COVID images from one public set of pneumonia X-rays from children aged
-one to five, while the COVID-19 images came from adults. In the reviewers'
+one to five. The COVID-19 images came from adults. In the reviewers'
 words, a model built this way "is likely to overperform as it is merely
 detecting children versus adults" [@doi:10.1038/s42256-021-00307-0].
 
@@ -445,7 +456,6 @@ show that a striking result is not the same as a tool in use on the ward.
 
 Everything so far had a table: one row per patient, one column per predictor,
 one column of truth. A language model is the same loop with a different table.
-Seeing that is the key point.
 
 Take any sentence from the internet: *the patient was started on empiric*.
 Split it into **tokens**, which are words or pieces of words. "Empiric" might
@@ -468,9 +478,9 @@ runs again. A paragraph of smooth medical prose is a few hundred repetitions
 of *predict the next token, pick one, repeat*. Your phone's keyboard suggests
 the next word the same way, with a small model that looks back only a few
 words. Chatbots do it at a much larger size. In 2026 a typical large model
-works with a vocabulary of about a hundred thousand tokens or more, looks back
-over many thousands of tokens, and has billions of numbers in its *f*. The
-exact sizes change with each new model. The video shows what happens inside.
+works with a vocabulary of about a hundred thousand tokens or more. It looks
+back over many thousands of tokens, and its *f* has billions of numbers in
+it. The exact sizes change with each new model. The video shows what happens inside.
 What matters here is what the process does not contain.
 
 There is a second training stage, and it explains the tone. After the
@@ -481,9 +491,7 @@ turns a text-completer into an assistant that answers your question, in
 paragraphs, politely. It also means the model has been trained toward answers
 people *rate well*, which is not the same as answers that are true. In
 practice it tends to reward confidence and completeness, because a cautious,
-incomplete answer loses those comparisons. A general review for clinicians of
-how these chatbots are built, and of the mixed results so far, is a good next
-read [@pmid:37460753].
+incomplete answer loses those comparisons.
 
 Now the main sentence of the chapter:
 
@@ -498,10 +506,8 @@ truth step in it. Today's chatbots can add a check on top of this process if
 you ask for one; [Ask it to check](#ask-it-to-check), below, shows how.
 :::
 
-Here is what that looks like when it reaches you. The exchange below is
-illustrative, made up for this chapter. The scoring system, the point values
-it gives, and the reference are the kind of thing a model produces, not a
-transcript.
+Here is what that looks like when it reaches you, in an exchange made up for
+this chapter.
 
 ::: {.chat}
 <div class="user">What are the exact point values and cutoffs for the HEART score, and what is the original publication?</div>
@@ -514,10 +520,10 @@ and every clause is a plausible continuation. The structure is right. The
 names are real people who have written about this score. The journal exists.
 But is the *original* publication the one named? Are the percentages from that
 paper, or a later one, or nowhere? Do the cutoffs match what MDCalc shows?
-The model did not check any of that, because checking is not a step. You will
-find out in the exercise. The first description of the score is in fact in a
-different journal and year [@pmid:18665203]. That is exactly the kind of
-detail that a smooth continuation gets *almost* right.
+The model did not check any of that, because checking is not a step. In fact,
+the first description of the score is in a different journal and year
+[@pmid:18665203]. That is exactly the kind of detail that a smooth
+continuation gets *almost* right.
 
 ::: {.callout-note title="What this does and does not mean"}
 It does not mean the answer is usually wrong. On common questions these models
@@ -543,17 +549,16 @@ Check each fact and citation in your answer using web search. For each one, give
 
 Three studies say what a check like this does and does not do.
 
-- **Search helps.** One 2026 study asked six chatbot versions for references
-  on ear, nose, and throat topics. The two versions with web search gave more
-  accurate references than the four without it. The best scored 51 percent
-  on the study's reference-accuracy rating [@pmid:41546380].
-- **A second pass helps.** In another study, a model wrote questions to check
-  its own first draft, answered them separately, and then rewrote the answer.
-  The rewritten answers made fewer false claims [@doi:10.18653/v1/2024.findings-acl.212].
-- **Neither makes it perfect.** In a 2025 study of medical questions, a chatbot
-  with web search still gave about 3 statements in 10 that the source it cited
-  did not support [@pmid:40240349]. A real link is not the same as a link that
-  says what the answer says.
+- **Search helps.** In a 2026 study, six chatbot versions were asked for
+  references on ear, nose, and throat topics. The two with web search did
+  better than the four without. The best scored 51 percent on the study's
+  reference-accuracy rating [@pmid:41546380].
+- **A second pass helps.** A model that wrote questions to check its own
+  draft, answered them, and then rewrote the draft made fewer false claims
+  [@doi:10.18653/v1/2024.findings-acl.212].
+- **Neither makes it perfect.** In a 2025 study of medical questions, a
+  chatbot with web search still made about 3 statements in 10 that its cited
+  source did not support [@pmid:40240349].
 
 There is also a limit no search can fix. ChatGPT Edu cannot see the chart;
 some tools built into the electronic health record can. So ChatGPT Edu cannot
@@ -579,21 +584,8 @@ Go deeper.
 
 ## Do
 
-::: {.callout-warning title="No patient information, ever"}
-All three parts of this exercise use public or made-up material. Part A runs
-on made-up data in your browser. Parts B and C ask the model about a published
-scoring system, not about a patient. Your university ChatGPT Edu or Copilot
-account, signed in with university credentials, is covered by a business
-associate agreement, the contract that makes the vendor legally responsible
-for protecting patient data. That covers patient care. This exercise is not
-patient care. The question you will be
-tempted to ask about the patient from this morning is one you do not ask. And
-whatever drafts a note, you sign it. What to document when a tool helped is
-[the ethics chapter's](core-ethics-regulation.qmd) question.
-
-What counts as patient information, and why taking out the name is not
-enough: [the patient information page](../course/patient-information.qmd).
-:::
+Made-up patients only. [What counts as patient
+information](../course/patient-information.qmd).
 
 ### Part A: overfitting you can see (5 minutes)
 
@@ -823,11 +815,11 @@ top.
 | You can | Meets | Falls short |
 |---|---|---|
 | Place four examples in the circles of @fig-circles (objective 1): MYCIN, with rules written by hand; the eGFR equation; a model that reads chest X-rays; a chatbot | AI only; machine learning; deep learning; generative AI. You can say what makes each one a kind of the one around it | Calling all four "AI" with nothing more, or putting the eGFR outside machine learning without a reason |
-| Name the eGFR model's predictors, response, and training population (objective 2) | Creatinine, age, sex; measured GFR; 8,254 research participants in 10 studies, and you can say why the last one matters for the patient in the clinic | "Creatinine and stuff" or a training population you cannot describe |
+| Name the eGFR model's predictors, response, and training population (objective 2) | Creatinine, age, sex; measured GFR; 8,254 adults in 10 studies, and you can say why the last one matters for the patient in the clinic | "Creatinine and stuff" or a training population you cannot describe |
 | Sort four models with the two questions in @tbl-two-questions (objective 3): the eGFR; an EHR sepsis alert; a tool that groups tumor expression profiles with no diagnoses attached; a chatbot predicting the next token | Supervised regression; supervised classification; unsupervised; supervised (the next word is the label), and you can say why the last one needs no human labeler | Any row you had to guess |
 | Explain the three sentences from Part A (objective 4) | The third sentence says that training error alone would have picked 11, the most flexible setting, where the training error is zero; that the test error there is off the chart; and that the lowest test error is in the middle, near 3. It also says this is why a performance figure with no test set is not yet a number | The first two sentences only, or a third sentence that restates the training error |
 | Give your Part B record and its one-sentence explanation (objective 5) | You can say which parts of the answer were right and how you checked each. The sentence is about plausible next tokens, has no "hallucinate", and explains why a right answer and a wrong one sound the same | "It hallucinated", "it made a mistake", or a record with nothing checked |
-| Report what the check in Part C did (objective 6) | You say what the check corrected and what it marked as not found; you opened two links and say whether each source supports the claim; and you name something the check cannot catch, such as a real link that does not support the claim, or any fact about a patient, because the chatbot cannot see the chart | "It checked everything", or a record with no link opened |
+| Report what the check in Part C did (objective 6) | You say what the check corrected and what it marked as not found; you opened two links and say whether each source supports the claim; and you name something the check cannot catch, such as a real link that does not support the claim, or any fact about a patient, because ChatGPT Edu cannot see the chart | "It checked everything", or a record with no link opened |
 
 ## What this changes for you
 
@@ -842,42 +834,13 @@ number for a normal amount of muscle. She does not have a normal amount of
 muscle. So the same creatinine probably means a *lower* true GFR than the 57
 the equation returned. Was she among the 8,254? What would you ask for
 instead? What do you now say to the attending about the number on the panel?
-One word is not an answer. And notice that nobody told her a model had a part in
-her care either. Whether that matters, and when, is [the patient-communication
-chapter's](core-patient-communication.qmd) question, not this one's.
+One word is not an answer.
 
-And the second half. The next time a chatbot gives you a citation with a first
-author, a journal, and a year, what is the one sentence you will say to
-yourself before you paste it anywhere? Will you ask it to check, and which
-link will you then open yourself? Which facts in the answer are about your
-patient, so that ChatGPT Edu cannot check them for you?
-
-## Summary
-
-- The eGFR is a model learned from data: creatinine, age, and sex in; a
-  stand-in for measured GFR out; 8,254 research participants as the
-  population it was fit to. Every learned model has those three parts, and you can
-  ask for them.
-- Supervised learning has the answer in the training data; unsupervised does
-  not. Classification gives a category; regression gives a number.
-- Fitting means a computer adjusts the numbers in a formula until its error
-  on the training data is as small as it can get.
-- Performance on the training data describes the fit. It is not evidence.
-  Ask for the test set; if there is none, there is no number yet.
-- A test set protects you only if it looks like your patients. The COVID-19
-  X-ray models scored well on test sets cut from the same flawed sources, and
-  lost about half their performance at other hospitals.
-- Too simple is bias, too flexible is variance, and a different population is
-  dataset shift. All three are failures of the same object.
-- A language model turns text into a table where the predictors are the
-  tokens so far and the truth is the next one. It predicts, picks one, and
-  repeats. Human raters then tune it toward answers people prefer.
-- Nothing in that process checks whether a claim is true. A made-up citation
-  is a plausible continuation, produced in the same tone as a real one.
-- You can ask a chatbot to check its facts and citations with web search. It
-  helps, it is not perfect, and it cannot check facts about your patient.
-  Open the link yourself.
-- The 57 on the panel came from somewhere. So does everything else.
+And the second half. The next time a chatbot gives you a clear, useful answer
+with a citation in it, which parts will you check before you rely on it? Will
+you ask it to check, and which link will you then open yourself? Which facts
+in the answer are about your patient, so that ChatGPT Edu cannot check them
+for you?
 
 ## Go deeper
 
