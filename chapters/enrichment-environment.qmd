@@ -1,7 +1,20 @@
 ---
 title: "What AI costs the planet: the number everyone quotes"
-subtitle: "AIM-3 · AIM-2 · AIM-7 · about one hour"
+subtitle: "About 60 minutes"
 ---
+
+::: {.callout-tip title="In short"}
+- **The idea.** "A bottle of water per email" and "five drops per prompt" are
+  both real figures. They differ about two-thousandfold because they counted
+  different things. You can trace a figure to its source and say what it
+  counted.
+- **What you do.** Ask ChatGPT Edu to find the sources behind the two
+  figures and say what each counted, then open one source and check it.
+- **What you keep.** One sentence each for the resident and the medical
+  director, and one question for a vendor that has a checkable answer.
+- **Short on time?** Read "Where the bottle came from" and "What each of
+  them counted". Do Part A.
+:::
 
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will be able to:
@@ -19,12 +32,16 @@ By the end of this chapter you will be able to:
    up the total.
 5. Ask a vendor one question about their environmental figure that has a
    checkable answer.
+
+Course competencies: AIM-3 (bias and equity), AIM-2 (critical appraisal),
+AIM-7 (workflow and systems).
 :::
 
-**Time.** About 20 minutes of reading, 11 minutes of watching, 25 minutes of
-doing. You need a browser, a calculator, and one general-purpose chatbot. Your
-institutional ChatGPT Edu or Microsoft Copilot account is enough. Nothing
-installs, and nothing in this chapter involves a patient's information.
+**What you need.** Your university ChatGPT Edu or Copilot account, a
+browser, and a calculator. Nothing to install. Nothing in this chapter
+involves a patient. The time counts about 15 minutes of reading, the
+11-minute talk, and about 25 minutes of doing; Part B and Go deeper are
+optional.
 
 ## Morning huddle
 
@@ -547,31 +564,6 @@ at every point on @fig-per-query? Then the harder one. The scribe will be
 recording your patients either way. Whether they are told belongs to [the
 patient-communication chapter](core-patient-communication.qmd), not to a water figure. Does what you learned
 this week change whether you use it? If not, what *would*?
-
-## Summary
-
-- The bottle and the five drops are both real. They come from 2023–2024 and
-  2025, for different models, per different units, counting different water.
-  The gap between them is about what was counted, not about who is lying.
-- Three choices move a per-query figure a hundredfold: what you count,
-  which query, which model and when. A figure without a model and a date is
-  not a figure.
-- The reference was fine; the attribution failed. A bottle per 20 to 50
-  questions became a bottle per email, which became a bottle per note.
-- At the best-documented rate, an individual's use is negligible against
-  health care's own 1,692 kg per person per year. The published rates differ
-  by about a thousandfold, and the honest sentence says both.
-- Per-query cost fell 33-fold in a year while the same company's total
-  emissions rose to 81 percent above its 2019 level. That is the Jevons
-  effect, and the people who live next to the data centers and turbines were
-  not asked.
-- Location-based and market-based accounting are both accepted and give
-  different answers. Ask which one you are being shown.
-- The "80 percent" claim is about one screening test, not about health care.
-  The bottle and the 80 percent are the same error in opposite directions.
-- Which model a vendor runs changes the total more than whether you send
-  the prompt. Take the question to the people who buy the tool, and include
-  the date with it.
 
 ## Go deeper
 
