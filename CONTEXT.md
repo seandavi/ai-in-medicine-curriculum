@@ -12,13 +12,40 @@ fast. Check it before acting on it.
 
 **IDPT 8079: The Frontier of AI & Medicine.** A fourth-year selective at the
 University of Colorado Anschutz School of Medicine. 49 MS4s enrolled for fall 2026
-(Canvas, 2026-10-07), Zoom-only, ungraded.
+(Canvas, 2026-10-07), Zoom-only, pass/fail (the book said "ungraded" until
+2026-10-12).
 This repo is the redesign; the course has run in prior years, and the AY 25-26
 evaluation data exists (see *Evaluation* below).
 
 **Fall 2026 offering: October 12 to November 6, 2026** (Canvas course IDPT 8079
 A39F, unpublished as of 2026-10-07; its modules and assignments are still the 2025
 copy). The student-facing week-by-week plan is in `course/syllabus.qmd`.
+
+## Decisions of 2026-10-12
+
+Made by the author on the first day of the course, after a whole-book review
+by AI agents and that day's session. Applied to the book in batches, one per
+week.
+
+- **Grading: pass/fail.** Journals are complete or incomplete; a few days
+  late is fine; the course director reads them and they are not shared
+  unless the student chooses.
+- **Attendance: about 3 hours a week of sessions plus the Friday group.**
+  Sessions live or recorded, chosen by interest. Friday is expected (was
+  best effort, 2026-10-10). No separate guest-talk quota; guest talks count
+  toward the 3 hours.
+- **Friday October 30 stays "bring your clinical stories"**, with no
+  scenario cards.
+- **Week 4 piece:** missing the Friday November 6 group is fine; submitting
+  the piece is enough.
+- **Chapters are a guide, not assignments** (said to students: "these are
+  not assignments, they're suggestions"). Issue #89.
+- **Chapter shape:** an "In short" box at the top, no Summary at the bottom,
+  and success first in every Do (`curriculum/chapter-pattern.md`).
+- **Canvas:** the book is unhidden week by week, each week's chapters once
+  their fixes are done; it stays online at aim.seandavis.net meanwhile.
+- **Patient information rule unchanged:** made-up patients only in course
+  activities, in any account, including ChatGPT Edu.
 
 ## Delivery, fall 2026 (decided 2026-10-07)
 
@@ -27,14 +54,14 @@ mantra: *it is your job to learn where AI helps your work, and you learn that by
 trying.* Each week has one core chapter plus a menu (week 1 foundations, with no
 menu; week 2 prompting lab; week 3 patient communication; week 4 ethics). "Students aim for
 5 to 10 hours a week of AI-related learning, 2 to 4 with the book" was the
-first budget; with two talks a week it is restated as about 8 to 10 hours
-(see the syllabus table). The main hands-on activity is "Learn it with AI" (`course/learn-with-ai.qmd`). The resource log is
+first budget; with two talks a week it is restated as about 7.5 to 9.5
+hours (see the syllabus table; corrected 2026-10-12 from "8 to 10"). The main hands-on activity is "Learn it with AI" (`course/learn-with-ai.qmd`). The resource log is
 replaced by a learning journal of five open questions (decided 2026-10-12:
 what I chose to learn; how AI helped or got in the way, with one check; what
 surprised me; what changed for me; what I used and whether it was worth it).
 Question 5 absorbs the resource log's surviving piece: about three resources
 a week, at least one found by the student, with links and a recommend-or-not
-line, meant to be low-key (2026-10-09 meeting; three a week decided
+line, meant to be quick (2026-10-09 meeting; three a week decided
 2026-10-10). Its answers double as weekly course feedback. Friday groups are open,
 student-led discussion (`course/friday-groups.qmd`; scenario cards removed
 2026-10-12, ideas kept in issue #95). The Monday hour includes "How
@@ -77,18 +104,20 @@ longer published. Week 1 has one chapter, How these systems work
   - Thursday, 11 to 11:45 a.m., live, not recorded: office hours, drop in
     (no signup; decided 2026-10-09). Learning journal due
     Thursday night.
-  - Friday, 60 min: small group, best effort (decided 2026-10-10), one of four slots (10 a.m., 11 a.m., 1 p.m.,
+  - Friday, 60 min: small group, expected (decided 2026-10-12; best effort
+    from 2026-10-10), one of four slots (10 a.m., 11 a.m., 1 p.m.,
     2 p.m.; up to 15 students each for 49 enrolled; decided 2026-10-09). Whether to use
     breakout rooms is undecided; the book does not mention them.
-    Friday October 30 is "bring your clinical stories" (2026-10-09 meeting):
-    students bring situations where AI helped or hurt and lead the talk;
-    Christina Olson joins two slots, Matt Zuckerman one afternoon slot.
-    Which slots is not yet decided.
-  - Guest talks: attend or watch one a week (was two, cut so the week still
-    adds up; see the syllabus table).
-  - Attendance (decided 2026-10-10): aim for about 3 hours a week of sessions,
-    live or recorded, chosen by interest, in every week including week 1; Friday
-    groups best effort and not counted; register absences per SOM protocols.
+    Friday October 30 is "bring your clinical stories" (2026-10-09 meeting;
+    kept 2026-10-12 without scenario cards): students bring situations where
+    AI helped or hurt and lead the talk; Christina Olson joins two slots,
+    Matt Zuckerman one afternoon slot. Which slots is not yet decided.
+  - Guest talks: no separate quota (decided 2026-10-12); they count toward
+    the 3 hours. Earlier: two a week, then one (2026-10-08 to 10-12).
+  - Attendance (decided 2026-10-10, revised 2026-10-12): aim for about 3 hours
+    a week of sessions, live or recorded, chosen by interest, in every week
+    including week 1, plus the Friday group, which is expected; register
+    absences per SOM protocols.
     Matt agreed in the 2026-10-09 meeting that 6 to 7 lecture hours a week is too
     much; neither co-director commented on the 3-hour figure.
   - Watch and do (decided 2026-10-10): optional hands-on session, Wednesdays
@@ -202,8 +231,8 @@ questions in weeks 2 to 4, from a signup sheet (Google Sheet
 "ai-in-medicine-lecturer-signup": Monday to Thursday, 9, 10, 11 and 1, Oct 19 to
 Nov 6, 48 slots). The cap guarded against the course turning back into lectures.
 Since 2026-10-08 the director's own talks are the main event by choice, so the
-cap's worry now applies to guests only: students are asked to attend or watch
-one guest talk a week, not two. Confirmed as of
+cap's worry now applies to guests only. Since 2026-10-12 there is no guest-talk
+quota: guest talks count toward students' 3 hours of sessions. Confirmed as of
 2026-10-07: Mike Rosenberg (cardiology, Thu Oct 29, 1 pm), Elizabeth Kudron
 (pediatrics, Mon Nov 2, 11 am), Sorabh Singhal (psychiatry, Mon Nov 2, 1 pm).
 
@@ -228,9 +257,10 @@ Candidate matches by module:
 | `enrichment-workforce-economics` | What AI is doing to a specific specialty's job market | Medical oncology; radiology |
 | Platform / infrastructure | The UCHealth AI platform and Snowflake environment | UCHealth AI platform co-director |
 
-**Invitation should specify:** date and time, a 20-minute slot inside a 90-minute
-session (never a 50-minute lecture), the competency the session serves, Zoom-only,
-~40 MS4s, ungraded; and the actual ask: *bring one thing you deployed and one thing
+**Invitation should specify:** date and time, the length (the original design
+said a 20-minute slot inside a 90-minute session; fall 2026 guests give 45 to
+50 minutes), the competency the session serves, Zoom-only, the cohort size (49
+in fall 2026), pass/fail; and the actual ask: *bring one thing you deployed and one thing
 that went wrong.* Sending them as one batch with the Dean's co-signature converts
 maybes to yeses; sending them ad hoc does not.
 

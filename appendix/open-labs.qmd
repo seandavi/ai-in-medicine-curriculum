@@ -16,9 +16,9 @@ are public if you want more ideas.
 
 **How they run.** You do them on your own, at any time, from this page. Every
 lab is self-contained: it says what you need, it uses free or university tools
-in a browser, and it uses made-up material only. A lab can also become a
-Wednesday talk topic, which the class votes on (see the
-[syllabus](../course/syllabus.qmd)).
+in a browser, and it uses made-up material only. Some labs may also run at
+Watch and do, the optional hands-on session on Wednesdays, 2 to 3:30 p.m.
+Mountain time (see the [syllabus](../course/syllabus.qmd)).
 
 ::: {.callout-warning title="No patient information, ever"}
 Every lab uses invented patients, public documents, or your own made-up
@@ -42,37 +42,38 @@ enough: [the patient information page](../course/patient-information.qmd).
 | [The patient who talks back](#the-patient-who-talks-back) | practised a hard conversation with a chatbot playing the patient | 45 min | Ready, in [talking to patients](../chapters/core-patient-communication.qmd#part-b-practice-patient) |
 | [Deep research, checked](#deep-research-checked) | checked every citation in a chatbot's "deep research" report | 45 min | Idea |
 | [Teach a machine in ten minutes](#teach-a-machine-in-ten-minutes) | trained an image classifier in your browser and watched it fail on new pictures | 30 min | Idea |
+| [A handout your patient can read](#a-handout-your-patient-can-read) | made a patient handout plainer, translated it, and checked what changed | 45 min | Idea |
 | [Write your own board question](#write-your-own-board-question) | written exam-style questions with a chatbot and checked the answer and every wrong option | 45 min | Idea |
 | [Build the tool you wish existed](#build-the-tool-you-wish-existed) | described a small tool you would use in clinic and had an AI build a working version | 60 min | Idea |
 | [Ask questions of a dataset](#ask-questions-of-a-dataset) | analysed a public health dataset by asking questions in plain English | 45 min | Idea |
-| [A handout your patient can read](#a-handout-your-patient-can-read) | made a patient handout plainer, translated it, and checked what changed | 45 min | Idea |
 
 "Ready" labs are written out in full. "Idea" labs are a short description for
 now; the ones students ask for get written out first.
 
-**Have an idea for a lab?** Post it in the course channel or send it to the
-course director. Good ideas get added here, and you may get to run it.
+**Have an idea for a lab?** Post it in the General Questions discussion in
+Canvas, or send it to the course director. Good ideas get added here, and you may get to run it.
 
 ## Hear it, draft it, check it: a scribe from the inside
 
 You will play a clinic visit, turn it into a transcript, have a chatbot draft
 the note, and then check the note the way you would at 6:40 p.m. with fourteen
-notes to sign. The point is to see the two kinds of error from [the ethics
-chapter](../chapters/core-ethics-regulation.qmd): words *misheard* when speech
-becomes text, and sentences *never said* when a model writes the note.
+notes to sign.
+
+An ambient scribe works in two steps, and each step makes its own kind of
+error. First, speech recognition turns the conversation into a transcript.
+Its errors are words *misheard*: one drug name heard as another, or a "no"
+dropped. Then a language model writes the note from the transcript. Its
+errors are sentences *never said*: fluent lines that read like a normal note
+but are not in the visit. This lab shows you both. [The ethics
+chapter](../chapters/core-ethics-regulation.qmd) covers who answers for them.
 
 **Time.** About 60 minutes. **You need** your university Microsoft 365 login
 (for Word for the web) and your university ChatGPT Edu or Copilot login. The
 visit is invented. Nothing installs.
 
-::: {.callout-warning title="No patient information, ever"}
-The visit below is fiction, written for this lab. Do not replace it with a
-visit you saw on a rotation, and do not record a real patient. Your university
-accounts are covered for patient care, and this is coursework.
-
-What counts as patient information, and why taking out the name is not
-enough: [the patient information page](../course/patient-information.qmd).
-:::
+Made-up patients only: the visit below is fiction, so do not swap in a visit
+you saw on a rotation, and do not record a real patient. [What counts as
+patient information](../course/patient-information.qmd).
 
 ### The visit
 
@@ -160,18 +161,20 @@ Write one sentence: the rule you will use to read a scribe's draft before you
 sign it. Bring it to your Friday group and compare.
 
 ::: {.self-check}
-In Mr. Alvarez's case, the note said he "continues apixaban" after he said he
-had stopped it. Which step most likely produced that sentence?
+Your transcript has Mrs. Park's words right: she stopped the atorvastatin a
+month ago. The note says she "continues atorvastatin". Which step most likely
+produced that sentence?
 
 - Record
 - Transcribe
 - [Summarize]{.correct}
 
 ::: {.explain}
-It is a fluent sentence that says what is usual for a patient with atrial
-fibrillation. A transcription error tends to look like a wrong word. A
-sentence that sounds exactly like a normal note, and is false, is the
-summarizing step's kind of error.
+The transcript was right, so the error came after it. "Continues
+atorvastatin" is a fluent sentence that says what is usual for a patient like
+her. A transcription error tends to look like a wrong word. A sentence that
+sounds exactly like a normal note, and is false, is the summarizing step's
+kind of error.
 :::
 :::
 

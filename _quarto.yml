@@ -76,7 +76,10 @@ book:
     - appendix/instructors.qmd
   search: true
   page-navigation: true
-  repo-url: https://github.com/seandavi/ai-in-medicine-curriculum
+  # No repo-url while the repository is private: the GitHub link it adds to
+  # every page returns 404 for students (removed 2026-10-12). Put back
+  # `repo-url: https://github.com/seandavi/ai-in-medicine-curriculum` when the
+  # repository is made public.
 
 bibliography:
   - references.bib
