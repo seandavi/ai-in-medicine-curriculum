@@ -9,15 +9,15 @@ use should do the same.
 
 ## What this is
 
-A four-week, ungraded elective on AI in medicine for fourth-year medical
+A four-week, pass/fail elective on AI in medicine for fourth-year medical
 students at the University of Colorado School of Medicine (IDPT 8079; 49
 students in fall 2026), delivered over Zoom. The course director teaches it
-live in two recorded talks a week, and the book goes with the talks: ten
+live in two recorded talks a week, and the book goes with the talks: eleven
 chapters, each standing alone, read on your own time. The other live hours are
 for office hours, guest talks, and small groups.
 It is built with [Quarto](https://quarto.org/). The source is in a GitHub
-repository, [seandavi/ai-in-medicine-curriculum](https://github.com/seandavi/ai-in-medicine-curriculum),
-which is private for now and will be made public.
+repository, seandavi/ai-in-medicine-curriculum, which is private for now and
+will be made public.
 
 ## How it was made
 
@@ -25,7 +25,7 @@ The design was done in the repository, and every step left a file
 or a GitHub issue behind. In outline, it went in four phases.
 
 **Design before drafting (August to early September 2026).** The fixed facts
-came first: four weeks, Zoom only, ungraded, no installs, free tools only. Then
+came first: four weeks, Zoom only, pass/fail, no installs, free tools only. Then
 a review of eleven published competency frameworks, from which the course's
 own competency list (`AIM-1` to `AIM-9` and `AIM-X`) was built. The
 frameworks students most need are summarised in [What the field
@@ -53,8 +53,8 @@ enrolment were fixed, the course director chose the format: week 1 taught
 live, guest talks in weeks 2 to 4, Friday small groups, and open labs. The
 book followed. The syllabus was rewritten. A page on patient information was
 added, after the institution confirmed which AI accounts are covered for
-patient care. Added at the same time: an appendix of open labs students vote
-on, starter resources picked from more than 650 links students submitted in
+patient care. Added at the same time: an appendix of open labs, starter
+resources picked from more than 650 links students submitted in
 earlier years, a section on how ambient scribes work, and a new visual design
 with clickable self-checks. Research notes compared the book with Stanford's
 AI-in-education materials, with published surveys of what medical students
@@ -69,8 +69,8 @@ course was refocused on skill and confidence: one core chapter a week plus a
 menu, a weekly routine, and most of each week spent using AI to learn
 something the student cares about. The chapters are being revisited one at a
 time to match. Then, on October 8, the course director chose to teach more
-live. Weeks 2 to 4 now have two recorded talks a week in place of the voted
-open lab, and each core chapter goes with its talk.
+live. Weeks 2 to 4 now have two recorded talks a week in place of the weekly
+open lab first planned, and each core chapter goes with its talk.
 
 ## What the ledger shows
 
@@ -139,6 +139,11 @@ and starter resources appendices, and the new section on ambient scribes) have
 not yet been through the six-reader review. The ledger marks them as awaiting
 the author's review.
 
+On 12 October 2026, the first day of the course, seven AI agents reviewed the
+whole book, the course pages, and that day's session against the decisions
+made that day. The fixes are being made in batches, each before the week of
+the course it affects.
+
 Two further checks run on every chapter:
 
 - **Citations resolve or the build fails.** Every reference is written as a
@@ -156,9 +161,10 @@ Two further checks run on every chapter:
   still open across the book are listed in one GitHub issue, grouped by how much
   a mistake would matter.
 
-Answer keys are kept in `_answers/`, are never rendered, and are held for the chat
-tutor. They were drafted by the same agents as the chapters, and the ledger says
-where an expected result is a prediction rather than a recorded run.
+Answer keys are kept in `_answers/` and are never rendered. They are notes for
+instructors; nothing grades students with them. They were drafted by the same
+agents as the chapters, and the ledger says where an expected result is a
+prediction rather than a recorded run.
 
 ## On the use of AI
 
