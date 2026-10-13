@@ -382,11 +382,10 @@ found no dated episode on the ethics of scribes.
 
 ## Do
 
-Use made-up material only. Mr. Alvarez and his visit are invented. What counts as
-patient information, and why taking out the name is not enough: [the patient
-information page](../course/patient-information.qmd).
+Mr. Alvarez and his visit are invented. Made-up patients only. [What counts
+as patient information](../course/patient-information.qmd).
 
-### Part A: draft the note, then decide what you would sign (about 30 minutes)
+### Part A: draft the note, then decide what you would sign (about 25 minutes)
 
 Here is the conversation from the opening scenario. C is the clinician, P is
 Mr. Alvarez.
@@ -444,7 +443,7 @@ in the transcript. If the plan for a problem was not stated, write
 The second prompt asks the tool to show you where to look. Its lists can
 still be wrong, so you still read the whole note.
 
-**4. Decide what you would sign (15 to 18 minutes).** Take the better draft. Read
+**4. Decide what you would sign (about 12 minutes).** Take the better draft. Read
 it sentence by sentence against the conversation and mark each sentence:
 *said*, *not said*, or *changed*. Then list anything said that the note left
 out. Look hardest at three things: the apixaban, the naproxen, and the plan
@@ -470,7 +469,7 @@ My rule for reading a drafted note, in one sentence:
 __________________________________________________________________
 ```
 
-### Part B: explain it to the patient (about 12 minutes)
+### Part B: explain it to the patient (about 10 minutes)
 
 Mr. Alvarez saw the sign in the waiting room. Practise the conversation. Use
 this prompt:
@@ -516,6 +515,8 @@ __________________________________________________________________
 | What you would tell the patient | Two or three plain sentences, including who answers for the note, an honest answer to "Do I have to say yes?", and honesty about what you do not know | Jargon, or a promise you cannot keep |
 | What you owed, and to whom | One specific sentence each for the patient, the next clinician, and yourself | "Be careful", or only what you risk legally |
 | Your reading rule | One sentence that would have caught the apixaban error in the original draft | "Read it carefully" |
+| Whether review is enough (objective 4) | One sentence for Armitage's case (the clinician was in the room), one for the evidence against (editing is uneven; drafts pull decisions toward them), and your own view | "Review fixes it" or "AI is dangerous", with no evidence |
+| Who benefits, who bears the risk, who decides (objective 6) | A named party for each question about Mr. Alvarez's scribe, and one thing owed to him in return: a real choice, a careful review, or an honest answer | "Everyone benefits", or one party for all three |
 
 ## What this changes for you
 
