@@ -712,12 +712,12 @@ The third sentence is the one you will use again. It is the same question you
 will ask of every performance figure on every vendor slide for the rest of
 your career.
 
-### Part B: produce a hallucination on purpose (15 minutes)
+### Part B: ask, then check (15 minutes)
 
 Pick one scoring system from @tbl-scores in a specialty you have rotated
-through, so that you already know roughly what the right answer is. Each row's
-original publication has been checked in PubMed for this chapter, so you have
-a verified target.
+through, one you expect to use next year. Each row's original publication was
+checked in PubMed for this chapter, so you have something solid to check
+against.
 
 | Specialty | Score | Original publication (verified) |
 |---|---|---|
@@ -732,29 +732,36 @@ a verified target.
 
 : Eight scoring systems with their original publications, each confirmed in PubMed on 2026-09-07. Pick the one you know best. {#tbl-scores}
 
-Open your chatbot in a fresh conversation and ask:
+Open your chatbot in a fresh chat and ask the question the way you would on
+the wards:
 
-> Give me the exact point values and cutoffs of the `<score>`, the outcome
-> each cutoff was validated against, and the full original publication that
-> first described it: first author, journal, year, volume, and pages.
+> I'm a fourth-year medical student. Explain the `<score>`: what it is for,
+> its point values and cutoffs, what each cutoff means for the next step in
+> care, and the original publication that first described it (first author,
+> journal, and year).
 
-Now verify, in this order. Open the score on [MDCalc](https://www.mdcalc.com)
-and compare every point value and cutoff. Then open PubMed, search the first
-author and year the model gave you, and compare against @tbl-scores. Use
-PubMed and not Google Scholar. Scholar's loose matching will show you a
-different real paper for a citation that does not exist, and you will score it
-as found.
+Read the answer the way you would read a resident's sign-out. It will
+probably be clear, and most of it will probably be right. Your job is to find
+out which parts are right before you rely on them. Check in this order, the
+same order you will use at work:
 
-Large current models usually get this right for scores this well known. If
-yours did, ask a second question in the same conversation:
+1. **The numbers.** Open the score on [MDCalc](https://www.mdcalc.com) and
+   compare every point value and cutoff.
+2. **The source.** Open PubMed, search the first author and year the chatbot
+   gave, and compare against @tbl-scores. Use PubMed, not Google Scholar,
+   which can match a citation that does not exist to a different real paper.
+3. **Its links, if it gave any.** ChatGPT Edu often searches the web. Open
+   one link and find the sentence the answer relied on.
 
-> Give me five references, with PubMed IDs, that support `<a claim from the
-> score's original paper>`.
+If everything checked out, write that down: you know this answer is right,
+and you know how you know. Then ask one harder question in the same chat:
+
+> Give me five references, with PubMed IDs, that support `<one claim from
+> the answer>`.
 
 Open each PMID in PubMed and read the title. A wrong PMID usually opens a real
-paper about something else, so a link that works proves nothing. When the
-course tested four models with this question on 3 October 2026, every one of
-them gave at least one wrong PMID.
+paper about something else, so a link that opens proves nothing by itself. It
+may get all five right; reading the five titles is how you would know.
 
 Record:
 
@@ -762,39 +769,26 @@ Record:
 Tool and model version if shown: ____________________________
 Score chosen: ______________________________________________
 
+What it got right: _________________________________________
 Point values and cutoffs: all correct / one wrong / more than one wrong
-  What was wrong, exactly: _________________________________
+  What was wrong, if anything: _____________________________
+Original publication matches the verified original?
+  Y / N / partly (which fields differ): ____________________
+Did it search the web and show links?  Y / N
 
-Original publication as given by the model:
-  ____________________________________________________________
-  Matches the verified original?  Y / N / partly (which fields differ)
+Five references, if you asked:
+  PMIDs whose title matched the claim: ___ of 5
 
-Second question, if you asked it:
-  PMIDs whose title matched the paper described: ___ of 5
-  What the wrong ones opened: ________________________________
-
-How the model produced this, in one sentence, using the words "token"
-or "plausible continuation" and not the word "hallucinate":
+How the model produced this answer, in one sentence, using the
+words "token" or "plausible continuation" and not "hallucinate":
   ____________________________________________________________
 ```
 
-The last line is the one that matters. "It made a mistake" is not an
-explanation. "It predicted the most plausible next tokens after 'the original
-publication was', and a plausible citation looks exactly like a real one" is.
-The model may get everything right. If it does, write that down too, and then
-write the sentence anyway. A model that is right nine times in ten, with no
-change of tone on the tenth, is the more dangerous object. That is why
-unverified output is dangerous rather than merely useless. Then, if you have
-two minutes left, ask the same thing again in plainer words, the way you would
-say it out loud. The answer depends on the wording more than you would expect.
-[the critical appraisal chapter](core-appraisal.qmd) measures by how much.
-
-::: {.callout-tip title="If the model refuses or hedges"}
-Some assistants will now say they cannot guarantee citations, or will offer to
-search the web. A hedge is a design choice added on top of the same process,
-and it is worth noting in your record. A tool tuned to hedge has not checked
-anything. Asking it to check is Part C.
-:::
+The last line matters even if every answer was right. A right answer and a
+wrong one come out of the same process, in the same tone. "It predicted the
+most plausible next tokens after 'the original publication was', and a real
+citation and a made-up one are both plausible" explains both. That is why
+checking stays part of the routine for anything that matters.
 
 ### Part C: ask it to check (5 minutes)
 
@@ -832,7 +826,7 @@ top.
 | Name the eGFR model's predictors, response, and training population (objective 2) | Creatinine, age, sex; measured GFR; 8,254 research participants in 10 studies, and you can say why the last one matters for the patient in the clinic | "Creatinine and stuff" or a training population you cannot describe |
 | Sort four models with the two questions in @tbl-two-questions (objective 3): the eGFR; an EHR sepsis alert; a tool that groups tumor expression profiles with no diagnoses attached; a chatbot predicting the next token | Supervised regression; supervised classification; unsupervised; supervised (the next word is the label), and you can say why the last one needs no human labeler | Any row you had to guess |
 | Explain the three sentences from Part A (objective 4) | The third sentence says that training error alone would have picked 11, the most flexible setting, where the training error is zero; that the test error there is off the chart; and that the lowest test error is in the middle, near 3. It also says this is why a performance figure with no test set is not yet a number | The first two sentences only, or a third sentence that restates the training error |
-| Give the one-sentence explanation from Part B (objective 5) | One sentence about plausible next tokens, no "hallucinate", and it explains why the tone did not change when the answer was wrong | "It hallucinated" or "it made a mistake" |
+| Give your Part B record and its one-sentence explanation (objective 5) | You can say which parts of the answer were right and how you checked each. The sentence is about plausible next tokens, has no "hallucinate", and explains why a right answer and a wrong one sound the same | "It hallucinated", "it made a mistake", or a record with nothing checked |
 | Report what the check in Part C did (objective 6) | You say what the check corrected and what it marked as not found; you opened two links and say whether each source supports the claim; and you name something the check cannot catch, such as a real link that does not support the claim, or any fact about a patient, because the chatbot cannot see the chart | "It checked everything", or a record with no link opened |
 
 ## What this changes for you
