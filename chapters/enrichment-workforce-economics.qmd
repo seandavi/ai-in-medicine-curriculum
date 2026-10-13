@@ -164,9 +164,10 @@ question you can ask about any specialty. The worksheets later in the chapter ca
 
 **1. Task decomposition: does the job break into tasks a machine can be tested
 on?** A job can be automated only as far as it breaks into tasks a machine can
-be measured on. In 2012, observers followed fourteen staff radiologists through
-their workdays at three hospitals with a stopwatch. They found that 36.4
-percent of the radiologists' time went to interpreting images [@pmid:23763878].
+be measured on. In 2012, one trained observer followed fourteen staff
+radiologists through their workdays at three hospitals, timing each
+activity. The radiologists spent 36.4 percent of their time interpreting
+images [@pmid:23763878].
 The rest went to protocolling requests (deciding how each scan should be
 done), supervising studies, procedures, talking with other physicians, and
 direct patient care (@fig-workday). A tool that read every image perfectly
