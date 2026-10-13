@@ -91,39 +91,22 @@ nobody on the team, including you, checked. The patient does not know the
 project exists. Because of a number from a weekend project, she would have
 waited.
 
-This chapter is about building a tool like that yourself, in about fifteen
-minutes, and then spending twenty finding what is wrong with it. The build is
-the easy part now. The checking is the skill.
+This chapter is about building a tool like that yourself, in about ten
+minutes, and then spending half an hour checking it. The build is the easy
+part now. The checking is the skill.
 
 ## Why this matters
 
 You will see a tool like the resident's within the year. They are cheap to
-make, and every team has someone who makes them. Some are spreadsheets. Some
-are web pages. More and more, they are built by describing what you want to a
-model and accepting what comes back. The person who built it is usually proud
-of it. The attending is usually pleased. Nobody has been asked to check it,
-because checking a colleague's tool is not a job anyone is assigned.
+make, and every team has someone who makes them. More and more, they are
+built by describing what you want to a model and accepting what comes back.
+That part now works: in a three-hour workshop, all three groups of medical
+students built a working health app by prompting [@pmid:42394077]. The person
+who built it is usually proud of it. The attending is usually pleased. Nobody
+has been asked to check it, because checking a colleague's tool is not a job
+anyone is assigned.
 
-Unchecked tools that a whole team relies on have a history older than
-language models. In October 2020, Public Health England's official figures
-missed nearly 16,000 positive COVID-19 results over a week. Days later, only
-half of those patients had been contacted for tracing [@pmid:33023893]. The
-reported cause, in the clippings below, was that results were being collected
-in an Excel file format with a row limit. Rows past the limit were silently
-dropped. The spreadsheet did not crash. It did what it was told.
-
-::: {.press-clips}
-<div class="press-clip"><div class="src">BBC News · technology</div><a class="hl" href="https://www.bbc.com/news/technology-54423988">Excel: Why using Microsoft's tool caused Covid-19 results to be lost</a><div class="date">5 October 2020</div></div>
-<div class="press-clip"><div class="src">The Guardian · politics</div><a class="hl" href="https://www.theguardian.com/politics/2020/oct/05/how-excel-may-have-caused-loss-of-16000-covid-tests-in-england">Covid: how Excel may have caused loss of 16,000 test results in England</a><div class="date">5 October 2020</div></div>
-<div class="press-clip"><div class="src">Slate · technology</div><a class="hl" href="https://slate.com/technology/2020/10/u-k-covid-19-spike-caused-by-microsoft-excel-error.html">An Outdated Version of Excel Led the U.K. to Undercount COVID-19 Cases</a><div class="date">7 October 2020</div></div>
-:::
-
-A quieter version appears in the research literature. Roughly one in five
-genomics papers with gene lists in Excel contained gene names that the
-spreadsheet had silently turned into dates [@pmid:27552985]. The tool was
-fine. The tool was not checked against what it was being used for.
-
-In three months you will be the intern with the bookmark, or the intern who
+In intern year you will be the intern with the bookmark, or the intern who
 built it. Either way the skill you need is the same. Take a tool that seems to
 work, decide what it would take to trust it, and go and look.
 
@@ -173,29 +156,15 @@ The point is what changes when the output is something that *runs*. A wrong
 sentence in a chatbot reply sits there until you read it. A wrong rule in a
 calculator does its work silently, on every patient, until somebody compares
 its answer to another source. The error comes from the same place as in
-[the critical appraisal chapter](core-appraisal.qmd): the model produces a plausible next piece of text,
-not a looked-up fact. But now the error has a place to hide.
+[the critical appraisal chapter](core-appraisal.qmd): the model writes
+plausible text, here plausible code, unless it is given a source to check
+against. But now the error sits inside a tool that runs on every patient,
+where nobody reads it.
 
-### Two names for the same thing
-
-In February 2025 Andrej Karpathy, a founding member of OpenAI, invented the
-phrase "vibe coding". It means describing what you want, accepting what the
-model produces, and never reading the code. Collins Dictionary named it word
-of the year for 2025. A year later Karpathy wrote that the phrase was out of
-date and, as widely reported, proposed "agentic engineering" instead:
-directing and reviewing an agent's work rather than accepting it
-[VERIFY: wording of Karpathy's 4 Feb 2026 post; the post exists but its full text could not be read on 2026-09-08, and the "agentic engineering" phrasing is from trade coverage]{.verify}.
-
-Both terms will be gone before you finish residency. The shift between them is
-the part that lasts. The first name treats your judgment as something you set
-aside. The second treats it as the scarce input. You are about to do the first
-for fifteen minutes so that you can practise the second for twenty.
-
-The most useful way to think of the model, borrowed from the author's talks on
-the subject, is as a capable but junior colleague: fast, fluent, willing, and
-in need of clear instructions and review. You review its work the way a senior
-reviews a junior's. You do not trust the confident tone. You check the parts
-that would hurt someone if wrong.
+A useful way to think of the model is as a capable but junior colleague. It
+is fast, fluent, and willing, and it needs clear instructions and review.
+Review its work the way a senior reviews a junior's. Do not trust the
+confident tone; check the parts that would hurt someone if wrong.
 
 ### Three ways the tool you just built is wrong
 
@@ -216,8 +185,8 @@ three wrong, even though it could already write and run its own code
 [@pmid:40097720]. More than half of its mistakes were in the rules: the wrong
 points for an item, or an item missed or made up. On the ten hardest
 calculations, with new test cases and a newer model, the team then tested what
-helps. Letting the model write and run
-code helped only a little: wrong answers fell from about 64 to 54 percent.
+helps. Letting the model write and run code helped only a little: wrong
+answers fell from about 64 to 54 percent.
 Giving it MDCalc's written instructions helped much more. Giving it
 calculators that people had built and checked, which it could call, cut wrong
 answers to 4.8 percent.
@@ -227,12 +196,11 @@ do. Your tool will usually do its arithmetic correctly, but its rules are only
 as good as the model's memory of the score, and a rule it leaves out leaves no
 trace. That is why you check it against MDCalc and the paper.
 
-The second row is where non-programmers are weakest. Medical students spent
-three hours building health apps by prompting. All three groups produced a
-working prototype, and none added any protection for the data the app
-collected. The authors concluded that easier building has to come with
-training in data security [@pmid:42394077]. An editorial in the
-laboratory medicine literature gives the pattern a name you will recognise
+The second row is where non-programmers are weakest: they test the cases they
+thought of. The medical students whose apps all worked added no protection for
+the data the apps collected, and the authors concluded that easier building
+has to come with training in data security [@pmid:42394077]. An editorial in
+the laboratory medicine literature gives the pattern a name you will recognise
 from the wards, the illusion of competence. Code that is correctly written and
 looks professional is most convincing to the people least able to find its
 flaws. There is a real difference between code that runs and code that is
@@ -261,127 +229,44 @@ set of cases, and a written result.
 The resident's tool in the workroom had none of those. Yours, in half an hour,
 will have a small version of all three.
 
-### The named hazard
+### Four questions before anyone else uses it
 
-A 2026 framework for governing clinician-built software, VIBE-HI, names one
-hazard as the most important and gives it a name: **comprehension abdication**. It
-means handing your understanding over to the system that generated the code.
-If you cannot say in plain language what your tool does for every input, you
-cannot predict how it fails, and you cannot safely change it [@pmid:42564266].
-The framework sorts tools into four risk levels, or tiers, using four
-questions. @tbl-tiers redraws them from the paper's description.
-
-| The question | Pushes the tier up when |
-|---|---|
-| Does it touch identifiable patient data? | Real names, medical record numbers, or anything that could be traced back to a person |
-| How close is it to a clinical decision? | Its output changes what is done to a patient, rather than what a student studies |
-| Who uses it, and how much do they understand it? | People other than the builder, who did not see it made |
-| How many patients does it reach? | A team, a service, a hospital |
-
-: The four criteria VIBE-HI uses to place a tool on its green-to-red scale, in plain words. The tier is set by the worst answer, not the average. The tiers themselves correspond to regulatory obligations [the ethics chapter](core-ethics-regulation.qmd) covers. {#tbl-tiers}
-
-Run the resident's tool through the four questions. It handles pasted labs,
-so the first answer depends on what people paste, which nobody controls. Its
-output is a listing decision. It is used by a whole team, most of whom never
-saw it built. It reaches every patient on the service. A study aid for one
-person answers all four questions the other way. The tool did not change
-between those two descriptions. Its use did.
-
-![Which is why, for anything that matters, the last panel is the correct
-answer more often than engineers like. xkcd 2030, *Voting Software*, by
-Randall Munroe, [CC BY-NC 2.5](https://xkcd.com/license.html); the
-non-commercial condition still applies to the image if you reuse this
-chapter.](../images/voting_software.png){#fig-xkcd-voting .comic fig-alt="xkcd comic in three panels. In the first two, an aircraft engineer and an elevator engineer are asked whether their systems are safe and say yes, with caveats. In the third, a software engineer asked about voting software says nobody should use it for anything important, and the questioner asks whether they should just use paper."}
+A 2026 framework for software that clinicians build this way names the main
+hazard *comprehension abdication* [@pmid:42564266]. It means handing your
+understanding over to the tool that wrote the code, so that you cannot say
+what it does for every input. The framework rates a tool's risk with four
+questions: does it touch patient data, does its output inform a treatment
+decision, can the person using it check the output, and does it reach one
+person or a whole institution?
 
 ### Where a toy becomes a device
 
-In the United States, the FDA decides whether software like this counts as a
-medical device. For tools like this one, the decision depends on the FDA's
-criteria for *non-device clinical decision support*, the category of software
-that advises clinicians without being regulated as a device. The criterion
-that matters for a calculator is whether the clinician can independently
-review the basis for the recommendation. A tool that shows the score, the
-inputs, the rule it applied, and where the rule came from is one a clinician
-can check. A bare number is not. A personal study aid that a student uses to
-practise scores is not a device. The same page, bookmarked on the workroom
-computers and used to decide who gets listed, is a different question. The
-answer depends on what it shows and who relies on it. The FDA reissued its
-decision-support guidance on 29 January 2026, replacing a version dated 6
-January. What the revision changed, and the rest of the regulation, belong to
-[the ethics chapter](core-ethics-regulation.qmd).
+**Toy, not device.** Your tool carries a banner saying so, written into the
+prompt before the tool exists. If a page like this is ever used for real care,
+it may count as a regulated medical device, which [the ethics
+chapter](core-ethics-regulation.qmd) covers. Either way, a score in your note
+is yours: record where it came from, and make that the paper or MDCalc.
 
-For this chapter, the working rule is simpler than the regulation. **Toy, not
-device.** Your tool carries a banner saying so, in the prompt, before it
-exists. That is not done for show. It is the professional habit of
-labelling AI-assisted work, rehearsed on something harmless.
-
-::: {.callout-note title="Who signs"}
-The course's standing rule, *you sign the note*, covers a number you copied
-from a calculator. When the team's number is wrong, the person accountable is the clinician who
-acted on it, not the resident who built the page. Regulation may one day
-hold the builder responsible; the chart holds you responsible now. The practical consequence for
-a note: record the score and the source you took it from. Make the source one
-that has been checked by someone other than a colleague. Today that means the
-original publication or an established calculator such as MDCalc. If a team
-tool has been validated locally, your institution's policy will say so, and
-[the ethics chapter](core-ethics-regulation.qmd) covers what to document when it has.
-:::
-
-### Patient information, once more
-
-At CU Anschutz, ChatGPT Edu is covered by a business associate agreement when
-you sign in with university credentials. A business associate agreement is
-the contract that makes a vendor legally responsible for protecting patient
-data. It covers patient care, not a tool you built this afternoon. Without
-one, as with a personal account, pasting a real patient's
-information into the tool can be an unauthorized disclosure, whatever you
-intended. Lab values alone may not identify anyone, but you are not the person
-who decides that; see [what counts as patient
-information](../course/patient-information.qmd). Consumer and free
-tiers never have one, and free tiers may use what you type to train the next
-model.
-
-The rule for today, and for every tool you build until someone with authority
-tells you otherwise: **every number you type is one you invented.** Not a
-de-identified real patient, not a classmate, not yourself. Invented. The habit
-you are rehearsing, a chat window with a patient's labs in it, is exactly how
-patient data leaks when the same window is reused for real work.
-
-::: {.callout-important title="Nothing worth stealing"}
-Around 40% of programs generated by an early coding assistant in
-security-relevant scenarios contained a vulnerability [@doi:10.1109/SP46214.2022.9833571].
-In a controlled study, people with an AI assistant wrote less secure code
-and were more confident that it was secure [@doi:10.1145/3576915.3623157].
-Both studies predate current models and the numbers will have changed. The
-direction is what matters. You are not going to security-review a page you
-built in fifteen minutes. So the rule is not "make it secure"; it is *put
-nothing in it worth stealing.* No passwords, no identifiers, no real data.
-:::
-
-## Watch or listen
+## Watch or listen (optional)
 
 **Video.** Andrej Karpathy, *Software Is Changing (Again)*, keynote at Y
 Combinator's AI Startup School, San Francisco, 17 June 2025 (published 19 June
-2025; 39 min). <https://www.youtube.com/watch?v=LCEmiRjPEtQ>. Also on the Y
-Combinator podcast feed if you prefer audio. YouTube's captions are automatic
-and adequate.
+2025; 39 min). <https://www.youtube.com/watch?v=LCEmiRjPEtQ>. YouTube's
+captions are automatic and adequate.
 
-Fifteen minutes is enough. Skip the opening on "Software 3.0" if you are short
-of time and go to the middle third. There he describes *partial autonomy*
-apps and the *autonomy slider*. The idea is that the useful question about an
-AI tool is not whether it is autonomous, but how much freedom you have given
-it for this task, and how fast you can check what it did. Listen for the
-phrase about keeping the AI "on a leash." Then ask, for the tool you are about
-to build, where the slider is set and who is holding the leash. The person
-who invented "vibe coding" is also the person telling you to verify.
+Fifteen minutes is enough: skip the opening on "Software 3.0" and go to the
+middle third. There he describes *partial autonomy* apps and the *autonomy
+slider*. The useful question about an AI tool is not whether it is
+autonomous. It is how much freedom you have given it for this task, and how
+fast you can check what it did. For the tool you are about to build, ask
+where that setting is, and who checks the result.
 
-**Instead, or as well.** The author's own slides: [From Chatbots to Coding
-Agents](https://talks.seandavis.net/2026-06-18-cshl/) (June 2026) goes
-through the plan-act-observe loop in @fig-chatbot-agent with live examples.
-The recording of the [October 2025 live vibe-coding
-session](https://talks.seandavis.net/2025-10-17-idpt-vibe-coding/) from this
-course's predecessor shows a calculator being built in front of a class, with
-the mistakes left in.
+**Instead, or as well.** The author's slides, [From Chatbots to Coding
+Agents](https://talks.seandavis.net/2026-06-18-cshl/) (June 2026), go through
+the plan-act-observe loop in @fig-chatbot-agent with examples. A [recording
+from October 2025](https://talks.seandavis.net/2025-10-17-idpt-vibe-coding/),
+from this course's predecessor, shows a calculator being built in front of a
+class, with the mistakes left in.
 
 ## Do
 
@@ -556,12 +441,10 @@ case, and a blank form. If you cannot write the fourth sentence, ask the model
 "what does the page show when nothing is entered, and why?". Read the answer
 against the page, and then write it. This is the test the resident never took.
 
-**The device paragraph.** One paragraph answering three questions. Is your
-tool, as it is, a medical device? (No; say why, using the phrase "study aid"
-and the word "banner".) What would have to change for that answer to change?
-(Name at least two of the four questions in @tbl-tiers.) And if your tool
-showed only a bare score, with no inputs, rule, or citation visible, which
-non-device criterion would it fail?
+**Where it sits.** One paragraph. Is your tool, as it is, a study aid or
+something a team could rely on? Say why, using the word "banner". Then answer
+the four questions from "Four questions before anyone else uses it" for your
+tool, and name what would have to change before anyone else used it.
 
 **The one sentence.** Write the sentence you would say to a co-intern who
 shows you a calculator they built last night. It should contain a verb that
@@ -577,8 +460,7 @@ Score yourself against this before moving on.
 | A working tool (objective 2) | Runs in a browser, shows inputs and total, carries the banner, cites the paper and names the version | Runs, but the banner or citation is missing, or the version is unstated |
 | Three recorded cases (objective 3) | Each compared against MDCalc *and* the original paper; at least one discrepancy or edge failure named, and sorted as rule, edge, or version | "It matched MDCalc" with no edge case tried |
 | The comprehension test (objective 3) | Four sentences, including the blank form, written before opening the code | The fourth sentence is missing or copied from the model |
-| The device paragraph (objective 4) | Says why it is a study aid now, names two of the four questions that would change that, and names the criterion a bare score fails | "It's not a device because it's just a prototype" |
-| The PHI rule (objective 5) | You can say what a business associate agreement is, that your university-login ChatGPT Edu account has one and a personal account does not, and why invented numbers are the rule | "Don't put patient data in ChatGPT" without the reason |
+| Where it sits (objective 4) | Says why it is a study aid now, answers the four questions for your tool, and names what would have to change before anyone else used it | "It's not a device because it's just a prototype" |
 | The one sentence | Contains a verb meaning *compare against an outside source* | "Be careful with it" |
 
 ## What this changes for you
@@ -615,9 +497,10 @@ each one is compared against. One word is not an answer to either.
 
 **Papers**
 
-- VIBE-HI, the governance framework behind @tbl-tiers, with its tiers mapped to
-  regulation [@pmid:42564266]; and the laboratory-medicine editorial on the
-  illusion of competence [@pmid:42695169].
+- VIBE-HI, the governance framework behind the four questions, with its four
+  risk tiers mapped to regulation [@pmid:42564266]; and the
+  laboratory-medicine editorial on the illusion of competence
+  [@pmid:42695169].
 - The clinical-calculation study [@pmid:40097720]: code the model wrote for
   itself helped a little, and calculators built and checked by people helped
   most. Also the cardiology group's technical validation of a
@@ -631,8 +514,13 @@ each one is compared against. One word is not an answer to either.
   compared against control sites, with mixed and inconsistent effects on exam
   performance [@doi:10.3390/ai7060223]. Building fast is not the same as
   building something that works.
-- The security studies quoted above [@doi:10.1109/SP46214.2022.9833571;
-  @doi:10.1145/3576915.3623157], for the numbers and their dates.
+- Two studies of code written with AI help, both from before current models.
+  About 40 percent of programs from an early coding assistant, in
+  security-relevant scenarios, had a vulnerability
+  [@doi:10.1109/SP46214.2022.9833571]. People using an assistant wrote less
+  secure code and were more confident that it was secure
+  [@doi:10.1145/3576915.3623157]. Hence the rule in the Do: put nothing in
+  your page worth stealing.
 
 **Talks**
 
