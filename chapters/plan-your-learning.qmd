@@ -1,6 +1,6 @@
 ---
 title: "Plan your four weeks with ChatGPT: research first, then decide"
-subtitle: "About one hour"
+subtitle: "About 60 minutes"
 ---
 
 ::: {.callout-tip title="In short"}
