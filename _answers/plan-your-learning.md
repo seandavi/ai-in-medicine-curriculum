@@ -1,6 +1,7 @@
 # Answer key: Plan your four weeks with ChatGPT
 
-For the tutor and instructors only. Never rendered.
+Not rendered. Instructor notes for the course director (the Thursday session,
+office hours).
 
 There is no single right plan. The plan is the student's own, so the key
 describes what a good one looks like and how to respond to a weak one.
