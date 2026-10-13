@@ -1,7 +1,22 @@
 ---
 title: "Prompting lab: getting good answers, and knowing their limits"
-subtitle: "AIM-5 · AIM-2 · about 75 minutes"
+subtitle: "About 60 minutes"
 ---
+
+::: {.callout-tip title="In short"}
+- **The idea.** A few extra sentences in your prompt (who it is for, the
+  case, the task, the format, and "say what is missing") get you an answer
+  organised the way you think on rounds. That answer is faster to read and
+  easier to check. It is not always right, so you check the one claim the
+  plan depends on.
+- **What you do.** Build a prompt for a task you need this month and keep the
+  version that works. Then run one made-up case twice, bare and structured,
+  and score both.
+- **What you keep.** A five-part prompt template, saved in your "AI in
+  Medicine" project, and one sentence for question 2 of your learning journal.
+- **Short on time?** Read "Night float" and "The five-part prompt", then do
+  Part A (20 minutes). Part B can wait for later in the week.
+:::
 
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will have:
@@ -12,14 +27,15 @@ By the end of this chapter you will have:
    the structure improved and what it did not.
 4. Checked the one claim a plan depends on against a calculator, a guideline,
    or a drug label.
-5. Said what two randomized trials show about physicians who use a language
-   model.
+
+Course competencies: AIM-5 (clinical use), AIM-2 (critical appraisal).
 :::
 
-**Time.** About 75 minutes: 20 of reading and 55 of doing. The podcast is
-optional. Use your university ChatGPT Edu or Microsoft Copilot account; any
-free chatbot also works. There is nothing to install. Open a blank document
-before you start, for the template and the record you keep at the end.
+**What you need.** Your university ChatGPT Edu or Copilot account. Nothing to
+install. Made-up patients only. A blank document for notes. This chapter goes
+with Monday's talk, "Getting good answers": read it after the talk, or instead
+of it. The template you build here is the one to use for [Learn it with
+AI](../course/learn-with-ai.qmd) this week.
 
 ## Night float, 2:40 a.m.
 
@@ -72,8 +88,9 @@ in Sam's prompt, and the check that catches the error.
 
 The skill has a name: **prompting**, writing what you type to a language model
 so that what comes back is more useful. A **language model** is the program
-behind ChatGPT, Copilot, Claude, and Gemini. It produces text one word-piece (a word or
-part of a word) at a time, and the words you give it are the only thing it knows about your case.
+behind ChatGPT, Copilot, Claude, and Gemini. It writes text one word-piece (a
+word or part of a word) at a time. The words you give it are the only thing it
+knows about your case.
 
 **It is your job to learn where these tools help your work, and you learn that
 by trying.** If you would rather try first and read after, open your chatbot
@@ -81,17 +98,22 @@ now and do Part A of the [Do](#do).
 
 ## Why this matters
 
-Within three months you will be Sam. You will have a case, a phone, and a
-minute, and what you type will change what comes back. In one study of 148 final-year medical students, only 5 percent had
-heard the phrase "clinical prompt engineering". The same students were shown
-chatbot answers to ten written cases, and five of the answers were deliberately
-wrong. The median student caught the wrong ones 56 percent of the time
-[@pmid:39915801].
+By next July you will be Sam. You will have a case, a phone, and a minute,
+and what you type will change what comes back.
 
 Asking well takes a few minutes to learn, and you will use it every day. It
 gets you answers organised the way you think on rounds, that show their
-reasoning, and that say what they are missing. Checking is one step in that
-routine, not a reason to avoid the tool.
+reasoning, and that say what they are missing. Used this way, the tool helps.
+In a randomized trial of 92 physicians working through management cases,
+those given GPT-4 scored higher than those with the usual resources alone
+[@pmid:39910272]. Checking is one step in that routine, not a reason to avoid
+the tool.
+
+The skill is new to most students. In a study of 148 final-year medical
+students, only 5 percent had heard the phrase "clinical prompt engineering".
+The students judged GPT-3.5's answers to ten written cases, five of which the
+model had got wrong. On a typical answer, only 56 percent of the students
+judged correctly whether it was right [@pmid:39915801].
 
 ## How it works
 
@@ -109,25 +131,20 @@ Learn the parts, not fixed wording.
 
 : The five-part prompt. The last row is the one this chapter thinks most prompts leave out. {#tbl-scaffold}
 
-The first four rows come from a deck of ten prompting rules this course uses
-(see [Watch or listen](#watch-or-listen-optional)). Most of the other rules
-make Task and Format more precise: refine over several tries, break a big
-question into smaller ones, and show one or two examples of what you want.
-None of the ten is the fifth row. Models tend to produce a
-complete-looking answer from incomplete information. One likely reason is that
-complete-looking answers are what most of the text they learned from looks
-like. This chapter's claim
-is that asking them to name the gap instead is the most useful single line a
-clinician can add to a prompt. You will test that claim yourself in the Do.
+The first four rows are standard prompting advice. The fifth is this
+chapter's addition: models tend to fill a gap with a complete-looking answer,
+and asking them to name the gap instead is the most useful single line a
+clinician can add, a claim you will test yourself in the Do.
 
 ::: {.callout-tip title="If English is not your first language"}
-[The critical appraisal chapter](core-appraisal.qmd) reports a finding that
-also applies here. The same tool made up references ten times more often when a
-question was phrased the way a patient talks than the way a clinician writes
-[@pmid:42232526]. Linguists call this **register**: the way a particular group
-of people talks. It is a property of the words, not of the credentials of the
-person typing. The Context row of @tbl-scaffold is where you control it.
-Write the case the way you would present it on rounds.
+One 2026 study asked chatbots for references on spine surgery in two ways: as
+a spine surgeon writing in clinical language, and as a patient writing in
+everyday words. Asked as a patient, ChatGPT made up references about ten times
+as often [@pmid:42232526]. The study changed who was asking and the wording at
+the same time. It did not test people writing in a second language. So take it
+as a reason for a habit that helps everyone: say who you are, and write the
+case the way you would present it on rounds. The Context row of @tbl-scaffold
+is where you do that.
 :::
 
 ### What structure changes, and what it does not
@@ -146,24 +163,10 @@ the case contains. A prompt cannot supply the piece of history you left out.
 What a structured prompt *can* do is make the model show its reasoning, so
 that you can check it. When a Stanford study prompted GPT-4 to imitate styles
 of clinical reasoning, diagnostic accuracy did not change, but the reasoning
-became something a physician could read and judge [@pmid:38267608]. Studies
-that tested prompt templates directly are in Go deeper. Prompt effects on accuracy are real, but they differ from model to model and
-they are unstable. Better organisation is the effect that is reliable.
-
-```{mermaid}
-%%| label: fig-what-structure-changes
-%%| fig-cap: "What each element of a structured prompt changes. Four of the five act on organisation. The fifth, asking the model to name what is missing, is the only one that acts on the gap between the case and the answer. Context can also affect correctness through how the question is worded (see the callout above)."
-flowchart LR
-  accTitle: What each element of a structured prompt changes
-  accDescr: Role, Context, Task, and Format each point to one box, how the answer is organised. Uncertainty, meaning say what is missing, points to a separate box, whether the answer admits what it does not know. A dotted arrow runs from the organisation box to a box for whether the answer is correct, and its label says it does not touch correctness. A second dotted arrow runs from the admits-what-it-does-not-know box to that same correctness box, and its label says it helps you check.
-  R[Role] --> O[How the answer is organised]
-  C[Context] --> O
-  T[Task] --> O
-  F[Format] --> O
-  U[Uncertainty:<br/>say what is missing] --> G[Whether the answer<br/>admits what it does not know]
-  O -.->|does not touch| K[Whether the answer is correct]
-  G -.->|helps you check| K
-```
+became something a physician could read and judge [@pmid:38267608]. Prompt
+effects on accuracy are real, but they differ from model to model and they are
+unstable (studies in Go deeper). Better organisation is the effect that is
+reliable.
 
 ### The error in Sam's answer
 
@@ -175,8 +178,11 @@ low-probability group [@pmid:11453709]. Sam's patient has had surgery in the
 last four weeks, has a heart rate over 100, and has a swollen calf. On the
 Wells score, which MDCalc will calculate for you, she is not low probability.
 The right next step is imaging, not a D-dimer, because a positive D-dimer would
-only delay the scan. Both answers got this wrong. Only one of them put it in a
-column headed "Next step" beside a column of supporting findings.
+only delay the scan. Newer pathways, such as a two-level Wells score ("PE
+likely" or "PE unlikely") or a D-dimer cutoff that rises with age, do not
+change this for Sam: she scores "PE likely", and she is under 50. Both answers
+got this wrong. Only one of them put it in a column headed "Next step" beside
+a column of supporting findings.
 
 That is why the neat answer needs more care, not less. **Automation bias** is
 trusting a machine's suggestion more than it deserves, and even more when the
@@ -195,48 +201,28 @@ missing, then check the one claim the plan depends on before anything goes out
 with your name on it.
 :::
 
-### What the trials show about physicians using the tool
-
-How you use the answer matters too, not only how you ask. In a randomized
-trial of 50 physicians working through written cases, those given a language
-model scored no better than those without it. The model on its own, in an
-exploratory comparison, scored 16 points higher [@pmid:39466245]
-(@fig-goh-estimates). In a second trial by the same group, on management, 92
-physicians with the model scored 6.5 points higher than those without (95
-percent CI 2.7 to 10.2). The model alone scored about the same as them (no
-significant difference), and the physicians with the model also took about two
-minutes longer per case [@pmid:39910272].
-
-![Two estimates from the same randomized trial. Physicians with the model did
-no better than physicians without it; the model alone did. Redrawn for this
-chapter from the estimates reported in Goh et al., *JAMA Network Open* 2024
-[@pmid:39466245]; the data are the paper's, the drawing is this course's.](../images/goh-2024-redrawn.png){#fig-goh-estimates fig-alt="Dot-and-interval chart with two rows. Top row: physician plus LLM versus conventional resources, plus 2 percentage points, 95 percent confidence interval minus 4 to plus 8, crossing zero. Bottom row: LLM alone versus conventional resources, plus 16 points, interval 2 to 30, not crossing zero."}
-
 ## Watch or listen (optional)
-
-**The source deck.** [Prompt engineering](https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/),
-about fifteen slides, ten rules with clinical examples. Ten minutes. It is
-where the Role, Context, Task, and Format rows of @tbl-scaffold come from.
-Notice that none of the ten slides is the Uncertainty row.
 
 **Podcast.** *NEJM AI Grand Rounds*, "Medicine, Machines, and Magic: Dr.
 Jonathan Chen on Medical AI" (15 October 2025; 48 min).
 <https://ai-podcast.nejm.org/e/medicine-machines-and-magic-dr-jonathan-chen-on-medical-ai/>
-Chen is an author of both trials above, and senior author of the first. The first
-twenty minutes are enough.
+Chen is an author of both randomized trials in Go deeper, and senior author
+of the first. The first twenty minutes are enough.
 
 ## Do
 
-Use your university ChatGPT Edu or Copilot account, and made-up material only.
-Sam's question at 2:40 a.m. was about a real patient, typed into a phone; in
-this course, do not do that, even with the name taken out. See [the patient
-information page](../course/patient-information.qmd).
+Made-up patients only. [What counts as patient information](../course/patient-information.qmd).
+
+Run every prompt in this Do in a **Temporary Chat, or a chat outside your
+course project**. ChatGPT can remember earlier chats and read what is in a
+project. A fresh chat keeps each comparison fair.
 
 ### Part A: build a prompt that works (about 20 minutes)
 
 Pick something you will need in the next month: a topic you will present on
 rounds, a condition you want to explain to patients, or a question you expect
-at interviews. Fill in the brackets and run this in a new conversation.
+at interviews. Fill in the brackets and run this in a Temporary Chat, or a
+chat outside your course project.
 
 ```
 You are helping a fourth-year medical student going into [specialty].
@@ -250,7 +236,8 @@ Where you are unsure, or where guidelines differ or have changed
 recently, say so instead of picking one.
 ```
 
-Then change one part at a time, each in a new conversation, and compare:
+Then change one part at a time, each in a new Temporary Chat, or a new chat
+outside your course project, and compare:
 
 1. Change the **context**: make the audience patients, or an attending.
 2. Change the **format**: a table, one paragraph, or three slides.
@@ -259,11 +246,11 @@ Then change one part at a time, each in a new conversation, and compare:
 Write one line for each change: what it did. Keep the version you liked best.
 That is the start of your template.
 
-### Part B: one case, two prompts (about 30 minutes)
+### Part B: one case, two prompts (about 20 minutes)
 
-You will run one made-up case twice, score both answers, and check the one
-claim the plan depends on. Use the same chatbot for both runs, in two separate
-conversations, so the second run cannot see the first.
+You will run one made-up case twice and score both answers. Use the same
+chatbot for both runs, each in its own Temporary Chat, or a chat outside your
+course project, so the second run cannot see the first.
 
 #### Step 1. Pick a case (2 minutes)
 
@@ -318,7 +305,8 @@ Vital signs and neurological examination are normal.
 
 #### Step 2. The bare prompt (3 minutes)
 
-Paste the case into a new conversation with nothing but this in front of it:
+Paste the case into a Temporary Chat, or a chat outside your course project,
+with nothing but this in front of it:
 
 > What's the diagnosis and what should I do?
 
@@ -328,7 +316,8 @@ questions are the answer; copy them and score them like any other reply.
 
 #### Step 3. The structured prompt (5 minutes)
 
-Open a second, new conversation. Here is the five-part template from
+Open a second Temporary Chat, or another new chat outside your project. Here
+is the five-part template from
 @tbl-scaffold; fill in the case where marked.
 
 > You are assisting a physician preparing to present this case at morning
@@ -413,7 +402,23 @@ rounds; a statement of what information is missing.
 
 : Scoring correctness on the trap. The scale has only three steps on purpose; arguing with yourself about a borderline case is part of the exercise. {#tbl-trap-score}
 
-#### Step 5. Check the claim the plan depends on (10 minutes)
+Write the scores in your document:
+
+```
+Tool: ______________   Case: A / B / C / D
+                         Bare    Structured
+Organisation (0 to 5)    ___     ___
+Trap (2/1/0)             ___     ___
+```
+
+If your organisation score rose and your trap score did not, you have seen the
+main point of this chapter yourself. If both rose, write down which sentence
+did it; this chapter's guess is the last one. If the bare answer caught the
+trap and the structured one did not, keep both transcripts. One case is two
+observations, not a study, because the same prompt does not always give the
+same answer [@pmid:38378899].
+
+#### Step 5, if you have time. Check the claim the plan depends on (10 minutes)
 
 Take the better of your two answers and find the one claim its plan depends
 on: a threshold, a first-line drug, a "rules out", an interaction, a dose.
@@ -431,14 +436,16 @@ Record it as *supported*, *contradicted*, or *not addressed*, with the source.
 "Not addressed" is a real result. A claim the sources do not make is a claim
 you should not be repeating either. Another chatbot is not a source.
 
+No time now? Do this check later in the week, on an answer from your own
+work, and write it up in question 2 of your journal.
+
 ### What you keep (5 minutes)
 
-Fill this in and paste it into this week's [learning
-journal](../course/learning-journal.qmd). The top half is a template you can
-reuse on any task.
+**Your template.** Write out the version from Part A you will use again, in
+this shape. Keep it in your "AI in Medicine" project, in a chat or a file
+there, so you can copy it next time.
 
 ```
-MY PROMPT TEMPLATE (the version from Part A I will use again)
 Role:      __________________________________________________
 Context:   __________________________________________________
 Task:      __________________________________________________
@@ -446,27 +453,12 @@ Format:    __________________________________________________
 Missing:   Where the case lacks information you would need,
            say what is missing instead of assuming it.
            (or your Part A last line)
-
-ONE CASE, TWO PROMPTS (Part B)
-Tool: ____________________   Model version if shown: ____________
-Case:  A / B / C / D
-                       Bare     Structured
-Organisation (0–5)     ___      ___
-Trap (2/1/0)           ___      ___
-
-The claim the plan depends on: __________________________________
-  Source: ______________________   Supported / Contradicted / Not addressed
-
-In one sentence: what did structure change, and what did it not change?
-______________________________________________________________________
 ```
 
-If your organisation score rose and your trap score did not, you have seen the
-main point of this chapter yourself. If both rose, write down which sentence
-did it; this chapter's guess is the last one. If the bare answer caught the
-trap and the structured one did not, keep both transcripts. One case is two
-observations, not a study, because the same prompt does not give the same
-answer twice [@pmid:38378899].
+**Your finding.** One sentence: what did structure change, and what did it
+not change? Put it in question 2 of this week's [learning
+journal](../course/learning-journal.qmd), with the claim you checked, the
+source, and what you found.
 
 ## Check
 
@@ -477,8 +469,7 @@ Score yourself against this before moving on.
 | A kept template (objective 1) | All five parts of @tbl-scaffold, and you can say which line is the fifth and what it is for | Four parts, or the fifth is "be accurate" |
 | Parts changed one at a time (objective 2) | One line each on what changing the context, the format, and the last line did | One run, no changes |
 | Two scored answers (objective 3) | Organisation and trap scored separately, the kind of trap named, and a one-sentence finding that names what changed and what did not | One overall impression of which answer was "better" |
-| One checked claim (objective 4) | A named calculator, guideline, or label, and a verdict | "It matched what I remembered", or a second chatbot |
-| The two trials (objective 5) | The direction of both trials, the model-alone result, and what that implies about where the weak point is | "Studies show AI helps doctors" or "studies show it doesn't" |
+| One checked claim (objective 4), here or on your own work | A named calculator, guideline, or label, and a verdict | "It matched what I remembered", or a second chatbot |
 
 ## What this changes for you
 
@@ -495,28 +486,28 @@ Second, name one task in your own work next week where you will use the
 template you kept. Then name the one claim in that task you would check, and
 the source you would check it against.
 
-## Summary
-
-- A five-part prompt (role, context, task, format, and "say what is missing")
-  reliably gets you a better-organised answer. Keep one as a template.
-- Structure does not reliably make the answer correct. Check the one claim the
-  plan depends on against a calculator, a guideline, or a label.
-- Write the case the way you would present it on rounds.
-- In two randomized trials, physicians with a model did not beat the model
-  alone. How you use the answer is part of the skill.
-
 ## Go deeper
+
+**What the trials show about physicians using the tool**
+
+How you use the answer matters too, not only how you ask. In a randomized
+trial of 50 physicians working through written cases, those given a language
+model scored no better than those without it. The model on its own, in an
+exploratory comparison, scored 16 points higher [@pmid:39466245]
+(@fig-goh-estimates). In a second trial by the same group, on management, 92
+physicians with the model scored 6.5 points higher than those without (95
+percent CI 2.7 to 10.2). The model alone scored about the same as them (no
+significant difference), and the physicians with the model also took about two
+minutes longer per case [@pmid:39910272]. Read the discussion sections for
+the authors' own account of why the first trial showed no benefit.
+
+![Two estimates from the same randomized trial. Physicians with the model did
+no better than physicians without it; the model alone did. Redrawn for this
+chapter from the estimates reported in Goh et al., *JAMA Network Open* 2024
+[@pmid:39466245]; the data are the paper's, the drawing is this course's.](../images/goh-2024-redrawn.png){#fig-goh-estimates fig-alt="Dot-and-interval chart with two rows. Top row: physician plus LLM versus conventional resources, plus 2 percentage points, 95 percent confidence interval minus 4 to plus 8, crossing zero. Bottom row: LLM alone versus conventional resources, plus 16 points, interval 2 to 30, not crossing zero."}
 
 **Papers**
 
-- The randomized trials of physicians with a model: diagnosis [@pmid:39466245]
-  and management [@pmid:39910272]. Read the discussion sections for the
-  authors' own account of why the benefit did not appear.
-- A trial in *NEJM AI* randomized 44 physicians who had just finished a
-  20-hour AI-literacy course. When the model's suggestion was wrong, their
-  diagnostic scores fell by about 14 points, so the training did not remove
-  the automation bias [@doi:10.1056/AIoa2501001]
-  [VERIFY: the numbers come from the preprint listing and a search summary; the NEJM AI page blocked the tool on 2026-09-08]{.verify}.
 - A single-centre observational study in which pharmacists ran 50
   internal-medicine cases through ChatGPT and OpenEvidence, with and without a
   prompt template. The template made no significant difference to accuracy and
@@ -536,13 +527,12 @@ the source you would check it against.
   chapter's claim.
 - When 33 physicians across 17 specialties graded chatbot answers to 284 of
   their own questions, the median answer was almost completely correct, but 36
-  answers were mostly or completely wrong, in the same confident prose as the
-  rest [@pmid:37782499].
+  answers were rated mostly or completely wrong [@pmid:37782499].
 - When oncologists checked chatbot cancer-treatment recommendations against
   guidelines, about a third of outputs mixed at least one non-guideline
   recommendation in among correct ones [@pmid:37615976].
-- The student error-catching study behind the 56 percent [@pmid:39915801]
-  (also in [the appraisal chapter](core-appraisal.qmd)), and the published,
+- The study of students judging GPT-3.5's answers, behind the 56 percent
+  [@pmid:39915801], and the published,
   reusable case-based LLM workshop from Harvard [@pmid:42483714]; this
   chapter's Part B is a shorter version of it.
 - A tutorial on prompt engineering written for health professionals, for the
@@ -558,6 +548,9 @@ the source you would check it against.
 
 **Talks**
 
+- [Prompt engineering](https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/),
+  ten rules with clinical examples, about fifteen slides. The Role, Context,
+  Task, and Format rows of @tbl-scaffold come from it.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/),
   for the attribution question that arises the first time a chatbot's table
-  ends up in something you hand in.
+  ends up in a presentation or a paper.
