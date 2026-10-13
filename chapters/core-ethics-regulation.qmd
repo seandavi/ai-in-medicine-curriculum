@@ -184,10 +184,10 @@ content" ([AMA, November
 
 Some states have their own rules. California, for example, requires a
 hospital, clinic, or physician's office that uses generative AI to write a
-patient message about clinical information to say so. The message must also tell the patient how to reach a
-person. The rule does not apply if a licensed clinician read and reviewed the
+patient message about clinical information to say so. The message must also
+tell the patient how to reach a person. The rule does not apply if a licensed clinician read and reviewed the
 message first (AB 3030, in force since January 2025)
-[VERIFY: AB 3030 summarized from the legislature's bill summary and law-firm alerts, not the statute's current text; other states' laws change often, and Colorado's AI Act (SB 24-205) was reported repealed and replaced by SB 26-189, effective 1 January 2027, by policy trackers only; checked 12 October 2026]{.verify}.
+[VERIFY: AB 3030 wording from the bill summary, not the statute's current text; Colorado's AI Act status unconfirmed; checked 12 October 2026]{.verify}.
 How to say it is in [the patient communication
 chapter](core-patient-communication.qmd).
 
@@ -213,10 +213,9 @@ changed ranged from 1.9% to 69.3% [@pmid:41996389].
 hospital, six radiation oncologists answered made-up messages from patients
 with cancer. They answered first on their own, then by editing a draft
 written by GPT-4. The edited replies were closer in content to the drafts than to the physicians' own
-replies. The authors read this as anchoring (sticking close to the first answer you
-see) and automation bias: the
-physicians might be adopting the draft's assessment, not just its wording
-[@pmid:38664108]. **Automation bias** is the habit of trusting a machine's
+replies. The authors read this as anchoring, meaning sticking close to the
+first answer you see, and as automation bias. The physicians might be
+adopting the draft's assessment, not just its wording [@pmid:38664108]. **Automation bias** is the habit of trusting a machine's
 suggestion more than it deserves. A systematic review found that it grows
 with heavy workload and time pressure [@pmid:21685142]. Fourteen notes at
 6:40 p.m. is both.
