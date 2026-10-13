@@ -34,7 +34,7 @@ Use the Check table in the chapter. In practice, look for:
   of the course, and journal question 1 asks how the week's topic connects to
   the week 1 goals. The step 4 prompt also asks which goals the course does
   not cover; those are natural topics.
-- **A plan that fits.** About 8 to 10 hours a week. Twenty chapters and five
+- **A plan that fits.** About 7.5 to 9.5 hours a week, the syllabus figure. Twenty chapters and five
   projects is not a plan.
 - **A way to change it.** The student knows they will revisit it each week.
 

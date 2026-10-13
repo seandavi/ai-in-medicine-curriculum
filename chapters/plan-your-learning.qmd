@@ -213,8 +213,9 @@ Turn my goals into a plan for the four weeks, using
 what my course offers (below). For each week, list
 the talks, chapters, or labs I will use, one topic I
 will learn with AI (2 to 4 hours, on my own), and how
-I will know it worked. Keep it to about 8 to 10 hours
-a week, including sessions. Leave room to change it.
+I will know it worked. Keep it to about 7.5 to 9.5
+hours a week, including sessions. Leave room to
+change it.
 Then tell me which of my goals the course does not
 cover, so I can learn them with AI.
 
@@ -235,7 +236,8 @@ Week 4: Ethics: what you owe when you sign a note
   drafted by AI. Also: Will AI take your job?; What AI
   costs the planet.
 Every week: talks, guest talks from clinicians in
-  several specialties, and a weekly learning journal.
+  several specialties, a Friday small group, and a
+  weekly learning journal.
 Every week, on my own: Learn it with AI, 2 to 4 hours
   using AI to teach myself a topic I choose. This is
   the main hands-on work of the course.
@@ -261,7 +263,7 @@ markdown template.
 
 It must include these five course questions:
 1. What I chose to learn, and why
-2. How AI helped, and where it got in the way
+2. How AI helped, and where it did not
    (including one time I felt I needed to check
    the AI: how I checked, and what I found)
 3. What surprised me
@@ -321,7 +323,7 @@ Look at your plan and ask:
 | You are in it | It mentions your specialty, how you learn, or what worries you, not only the course's topics |
 | You checked something | You opened two sources and know whether they said what ChatGPT said |
 | You learn with AI each week | Each week names one topic you will learn with AI, and why you chose it |
-| It fits | About 8 to 10 hours a week, with room to change |
+| It fits | About 7.5 to 9.5 hours a week, as the syllabus says, with room to change |
 | It can change | You know when you will look at it again, and how |
 
 : What a good plan looks like. {#tbl-check}
