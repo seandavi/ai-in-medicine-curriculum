@@ -1,6 +1,6 @@
 # Answer key: core-appraisal
 
-Not rendered. For the course director and for the tutor if one is built.
+Not rendered. Instructor notes for the course director.
 Revised 2026-10-12: Part A is now success first (ChatGPT Edu with web search,
 three references, then a patient-worded contrast, three more), with a "Did it
 show sources?" column; the OpenEvidence row is gone; the tier is

@@ -1,7 +1,7 @@
 # Answer key: enrichment-prompting-lab
 
-Not rendered. For the course director (Monday's talk, office hours) and for
-the tutor if one is built. Revised 2026-10-08 for the week 2 core version of
+Not rendered. Instructor notes for the course director (Monday's talk, office
+hours). Revised 2026-10-08 for the week 2 core version of
 the chapter ("Prompting lab: getting good answers, and knowing their limits"):
 Part A (build a prompt that works) is new, Part B checks one claim instead of
 two, and reference scoring was dropped from the Do. Revised 2026-10-12: every
