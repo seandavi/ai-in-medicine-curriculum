@@ -1,19 +1,34 @@
 ---
 title: "Critical appraisal: checking AI tools, their answers, and the evidence about both"
-subtitle: "AIM-2 · AIM-1 · AIM-4 · AIM-9 · about two hours"
+subtitle: "About 75 minutes"
 ---
+
+::: {.callout-tip title="In short"}
+- **The idea.** With web search on, ChatGPT Edu gives you mostly real
+  references, and a minute in PubMed per reference tells you which ones to
+  trust. The same habit works on a vendor's slide: ask where each number came
+  from, and what kind of study produced it. Cleared by the FDA is not the same
+  as tested on patients like yours.
+- **What you do.** Ask ChatGPT Edu, with web search on, for three references
+  on a question in your specialty and check each one in PubMed. Then sort ten
+  claims about AI scribes by the kind of study behind them.
+- **What you keep.** A routine for checking any reference in a few minutes,
+  and six questions to ask about any AI tool before your program buys it.
+- **Short on time?** Read "Three things that can be wrong" and "But it's
+  FDA-cleared, isn't it fine?", then do Part A (20 minutes).
+:::
 
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will be able to:
 
-1. Check an AI-generated citation against PubMed and score it on a published
-   accuracy scale, instead of judging by whether it looks real.
+1. Ask a chatbot with web search for references, check each one against
+   PubMed, and score it on a simple accuracy scale, instead of judging by
+   whether it looks real.
 2. Explain why made-up references follow from how these systems write text,
    and why a tool that searches real papers first is a different kind of tool,
    not just a better one.
-3. Describe how the wording of a prompt changes the risk of made-up references,
-   and say what that means for a clinician who uses the same tool at work and at
-   home.
+3. Describe how the wording of a prompt changed the rate of made-up references
+   in one study, and why one test with one kind of wording is not enough.
 4. Sort claims about a clinical AI tool into randomized, observational, and
    vendor or trade-press evidence, and explain why the three tiers disagree in the
    same direction.
@@ -23,12 +38,16 @@ By the end of this chapter you will be able to:
    which of the three a search-first tool actually fixes.
 7. Ask six questions about a tool you have never seen, and say why each one is
    the question to ask.
+
+Course competencies: AIM-2 (critical appraisal), AIM-1 (foundations), AIM-4
+(ethics, law, and regulation), AIM-9 (research and scholarship).
 :::
 
-**Time.** About 35 minutes of reading, 30 minutes of listening, 45 minutes of
-doing. You need one general-purpose chatbot and a PubMed tab. Your institutional
-ChatGPT Edu or Microsoft Copilot account is enough, and neither asks you for
-anything at signup. A personal free-tier account works too. Nothing installs.
+**What you need.** Your university ChatGPT Edu or Copilot account, and a
+PubMed tab. Nothing to install. Made-up patients only. Your Edu account is
+created after a short training course in Canvas. Until then, use Copilot with
+your university login, not a personal account. This is a menu chapter: read
+it if critical appraisal interests you.
 
 ## Lunch with a vendor
 
@@ -406,22 +425,7 @@ with the evidence tiers in Part B.
 
 ## Do
 
-::: {.callout-warning title="No patient information, ever"}
-Every question in this exercise is a general question about management, not a
-question about a patient. Consumer tools have no business associate agreement.
-That is the contract that makes a vendor legally responsible for protecting
-patient data. Free tiers may also use what you type to train the next model.
-You will be tempted to test the tool on something from your sub-internship. Do
-not.
-
-The harder case you will meet in month one: a tool your hospital licenses and
-runs inside the EHR is a different question. Ask whether a business associate
-agreement exists, and what your institution's policy says about documenting that
-you used it. [the ethics chapter](core-ethics-regulation.qmd) covers that.
-
-What counts as patient information, and why taking out the name is not
-enough: [the patient information page](../course/patient-information.qmd).
-:::
+Made-up patients only. [What counts as patient information](../course/patient-information.qmd).
 
 ::: {.callout-tip title="PubMed is the verification tool"}
 Use PubMed and nothing else. The exercise depends on searching an index that
@@ -662,8 +666,7 @@ to adopt, so the authors call for a randomized test.
 The tiers, so you can check your answers: claims 1, 2, 3, 4, and 9 are
 observational (claim 4 is a pilot of 45 physicians); 5, 6, 7, and 8 are
 randomized trials (claim 8 had 23 clinicians); 10 is trade press about a
-peer-reviewed paper. The sources are in the answer key held by the course tutor,
-which will also grade your reasons.
+peer-reviewed paper.
 :::
 
 ## Check
@@ -691,24 +694,6 @@ Second, go back to the lunch room: the chief resident is still waiting. What do
 you say about the 40 percent, and which one of the questions in @tbl-future-ai,
 or the seventh about the patient, do you ask the vendor first? One word is not
 an answer to either.
-
-## Summary
-
-- A general-purpose model writes citations as text; a retrieval-grounded tool
-  searches first. The difference is in kind, not in degree.
-- Published fabrication rates for general models run from about 2 percent to
-  over 90 percent, and near zero for search-first tools, and they move with
-  the tool and the month.
-- The same question in a patient's words can produce a tenfold higher fabrication
-  rate than in a clinician's.
-- Evidence about a type of tool comes in tiers that disagree in a consistent
-  direction; selection and observation effects explain most of the gap.
-- The reference, the attribution, and the claim fail independently. Search
-  fixes the first, helps the second, and does nothing for the third.
-- Less burden and more free hours are different outcomes.
-- Cleared is not validated.
-- A tool with no literature yet still has six questions to answer, and a
-  seventh that belongs to the patient. Ask them at the next vendor lunch.
 
 ## Go deeper
 
