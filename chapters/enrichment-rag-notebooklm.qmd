@@ -4,9 +4,9 @@ subtitle: "About 75 minutes"
 ---
 
 ::: {.callout-tip title="In short"}
-- **The idea.** A tool that answers only from documents you give it almost
-  never invents a reference, because every citation points at a passage it
-  was handed. You can now use one to read a set of papers fast, and check any
+- **The idea.** A tool that answers only from documents you give it rarely
+  invents a reference, because every citation points at a passage it was
+  handed. You can now use one to read a set of papers fast, and check any
   sentence from it in about a minute.
 - **What you do.** Load four papers into Gemini Notebook (formerly
   NotebookLM), ask for a one-page journal-club brief, and check three of its
@@ -86,7 +86,8 @@ rotation's reading list, a literature tool that searches PubMed, a tool inside
 the EHR that answers from your hospital's protocols. Used well, they are fast
 and accurate. In one study, four orthopedic specialists rated 50 disability
 cases against a written regulation. With NotebookLM they were right 91% of
-the time, against 68% working by hand, in under a third of the time
+the time, against 68% working by hand, and finished each case more than three
+times faster
 [@pmid:42534267].
 
 These tools "cite their sources", and that is a real advance. What citing
@@ -209,9 +210,10 @@ guideline. **Hallucination**, the field's word for made-up content stated as
 fact, fell from 42% to 4%. Citations that pointed at a real retrieved passage
 rose from none to between 51% and 89%, depending on the model.
 
-![What retrieval changes, and by how much. The guideline study compared six
-models; this figure shows the five that were each run with and without
-retrieval of the guideline, on 50 questions. Redrawn from the reported
+![What retrieval changes, and by how much. The guideline study first compared
+six systems. The numbers here come from its second test: five base models,
+each run with and without retrieval of the guideline, on the same 50
+questions. Redrawn from the reported
 figures in Vollmer et al., *Diagnostics* 2026 (open access,
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)). The bar for
 citations that point at a real passage shows the range across models.](../images/retrieval-hallucination-vollmer-2026.svg){#fig-vollmer fig-alt="Bar chart with two pairs of bars. Content-level hallucination: 42 percent without retrieval, 4 percent with retrieval. Citations grounded in a retrieved passage: 0 percent without retrieval, 51 to 89 percent with retrieval."}
@@ -462,10 +464,11 @@ the passage is real but the sentence is broader, narrower, or different.
 **0** if the cited passage does not exist, or is about something other than
 what the sentence says.
 
-Then correct one sentence so that it says what its passage says. If all three
-scored 2, that is a real result: you have checked the sentences you will
-repeat. Note what made you trust them. Copy the corrected brief into a
-document you keep. That page is what you take to journal club.
+Then correct a sentence that scored 1 or 0, so that it says what its passage
+says. If all three scored 2, that is a real result too: you have checked the
+sentences you will repeat, so note what made you trust them. Copy the
+corrected brief into a document you keep. That page is what you take to
+journal club.
 
 ### Step 3: ask what the sources disagree about (5 minutes)
 
