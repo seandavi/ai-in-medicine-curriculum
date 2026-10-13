@@ -1,7 +1,20 @@
 ---
 title: "Plan your four weeks with ChatGPT: research first, then decide"
-subtitle: "AIM-5 · AIM-9 · AIM-X · about one hour"
+subtitle: "About one hour"
 ---
+
+::: {.callout-tip title="In short"}
+- **The idea.** Before you decide what to learn, ask ChatGPT what the field
+  expects, with sources. Then add what only you know: your specialty, how you
+  learn, and what worries you.
+- **What you do.** Ask ChatGPT to research what doctors in training should
+  know about AI, open two of its sources, let it interview you, and build
+  your plan.
+- **What you keep.** A plan for the four weeks, with one topic a week to
+  learn with AI, and a journal template.
+- **Short on time?** Read "The list you cannot finish", then do the setup and
+  steps 1, 3 and 4. That is the Thursday session.
+:::
 
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will have:
@@ -11,17 +24,21 @@ By the end of this chapter you will have:
 2. Asked ChatGPT to research what medical educators think doctors in training
    should know about AI, and checked two of its sources yourself.
 3. Worked with ChatGPT to turn that research, and your own goals and
-   background, into a plan for the four weeks.
+   background, into a plan for the four weeks, with one topic a week to learn
+   with AI.
 4. Saved the plan in a form you will use: a document, a spreadsheet, or
    slides, plus your journal template.
 5. Decided whether to share your plan with your classmates.
 6. Learned how to come back to the plan each week and change it.
+
+Course competencies: AIM-5 (clinical use), AIM-9 (research and scholarship),
+AIM-X (professional identity).
 :::
 
-**Time.** About 10 minutes of reading, 10 minutes of setup, and 40 minutes of
-doing. The training video is optional. This chapter is the Thursday hands-on
-session in week 1; if you miss the session, do it on your own. It is about
-you and your learning, so nothing in it involves a patient.
+**What you need.** A laptop and your university ChatGPT Edu or Copilot
+account. Nothing to install. Nothing in this chapter involves a patient. This
+chapter is the Thursday 15 October hands-on session; if you miss the session,
+do it on your own.
 
 ## The list you cannot finish
 
@@ -68,11 +85,11 @@ ChatGPT can search the web while it answers. When it does, it shows links to
 the pages it used. It usually searches on its own when a question needs
 current information; if an answer has no links, ask it to search.
 
-Links are not proof. A chatbot can attach a real link to a claim the page does
-not make, or describe a page that does not exist. So you open a few of its
-sources and read what they actually say. The [foundations
-chapter](core-foundations.qmd) explains why this happens; here you only need
-the habit.
+Ask, then check. Most of the links will be real and on topic, but a link is
+not proof. A chatbot can attach a real link to a claim the page does not make.
+So you open two of its sources and read what they actually say. The
+[foundations chapter](core-foundations.qmd) explains why this happens; here
+you only need the habit.
 
 ### You decide
 
@@ -97,29 +114,6 @@ expected, or a chapter will turn out to matter less. When that happens, bring
 the plan back to ChatGPT and change it. Each week's [learning
 journal](../course/learning-journal.qmd) asks what you chose to learn and why,
 so the plan and the journal work together.
-
-## Watch or try
-
-OpenAI's training site has a guided practice, [Plan something from start to
-finish](https://learn.chatgpt.com/training/hands-on/work) (about 20 to 25
-minutes). It runs in your browser with sample data, so you do not need an
-account. You plan a team dinner in six steps. This chapter's Do uses the same
-six steps for your four weeks:
-
-| Step in the practice | What you do in this chapter |
-|---|---|
-| Prepare: gather your sources | Ask ChatGPT to research what doctors in training should know about AI |
-| Summarize | Group the research into themes and match them to the course |
-| Decide | Let ChatGPT interview you, then choose your goals |
-| Create | Make your plan and your journal template |
-| Share | Share a goal or your plan, if you want to |
-| Follow through | Come back to the plan each week and change it |
-
-: The six steps of the training practice, and what each one becomes here. {#tbl-steps}
-
-The practice uses **ChatGPT Work**, which can connect to email and files.
-Your university account may not have Work turned on. Everything in this
-chapter's Do works in an ordinary chat, so you do not need it.
 
 ## Set up ChatGPT
 
@@ -356,6 +350,13 @@ page](../course/patient-information.qmd).
 
 ## Go deeper
 
+- OpenAI, [Plan something from start to
+  finish](https://learn.chatgpt.com/training/hands-on/work) (about 20 to 25
+  minutes): a guided practice that runs in your browser with sample data, so
+  you do not need an account. You plan a team dinner in the same six steps
+  this chapter uses: prepare, summarize, decide, create, share, follow
+  through. It uses ChatGPT Work, which your account may not have; this
+  chapter's Do works in an ordinary chat.
 - OpenAI, [ChatGPT Training](https://learn.chatgpt.com/training): short
   walkthroughs on projects, documents and slides, and voice. Several use
   ChatGPT Work, which your account may not have.
