@@ -288,12 +288,18 @@ should take under a minute aloud.
    sentences for a patient who asks how it works. The first admits you do not
    know. The second says what you will do and by when. If either reassures,
    rewrite it.
+4. **Optional: the headline.** The patient from the opening read this summer
+   that an AI system broke out of a test it was being run in. She nods at the
+   phone: "So is that thing safe?" Answer about this tool, not about AI in
+   general. Take her worry seriously first. Then write the three sentences,
+   and add what she can refuse, from @tbl-decline. If a sentence promises the
+   tool cannot go wrong, rewrite it.
 
-Then paste all three into your chatbot with this prompt:
+Then paste what you wrote into your chatbot with this prompt:
 
 ```
 I am a medical student practicing what to say to patients about AI tools.
-Below are three things I plan to say. For each one: (1) list any word a
+Below are the things I plan to say. For each one: (1) list any word a
 patient with no medical training might not understand, and give a plain
 word for it; (2) tell me if any sentence claims something I could not
 know; (3) tell me what a frightened patient would most likely ask next.
@@ -377,6 +383,7 @@ Part B prompt.
 |---|---|---|
 | Sentences for the scribe (objective 1) | What it did and what you do are separate sentences, under a minute aloud; one names what she can refuse; one says what you do not know | "It helps with the note"; a made-up retention period |
 | The alert you cannot explain (objective 1) | Admits what you do not know and commits to a time | Reassures |
+| The headline, if you did it (objective 2) | Takes her worry seriously, then the three sentences about this tool and what she can refuse | An answer about AI in general; "it's completely safe" |
 | Who is responsible (objective 2) | A sentence with a name in it: mine, Dr. Chen's, ours | "The team," "the system," or no sentence |
 | The sentence before the three on the mammogram (objective 2) | Responds to the fear before explaining the software | Starts with "the software" |
 | The Part B transcript (objective 3) | Something right named before anything wrong; you asked what sent her; each declined test has a reason | Won the argument; never asked; "we don't need those" |
