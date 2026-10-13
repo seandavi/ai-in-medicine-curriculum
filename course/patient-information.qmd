@@ -23,7 +23,8 @@ The rest of this page explains why, and what to do instead.
 
 ## What the law protects
 
-**HIPAA** is the federal health privacy law. It applies to **covered
+**HIPAA** is the US federal health privacy law. This page describes the
+federal law; your state's laws can add to it. HIPAA applies to **covered
 entities**: health plans, and health care providers that send claims and other standard
 transactions electronically, which includes your hospital. It also applies to their **workforce**. The
 regulation defines workforce as employees, volunteers, *and trainees* whose
@@ -218,7 +219,7 @@ ChatGPT. You open the app on your phone. It is signed in to your personal
 account. Is that covered by the university's business associate agreement?
 
 - Yes, ChatGPT is covered at CU Anschutz
-- [No, only the university-login ChatGPT Edu account is covered]{.correct}
+- [No, only the university-login accounts (ChatGPT Edu or Copilot) are covered]{.correct}
 
 ::: {.explain}
 The agreement is with the university's account, not with the product. The
