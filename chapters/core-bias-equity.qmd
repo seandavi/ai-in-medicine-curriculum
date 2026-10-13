@@ -93,14 +93,14 @@ requires the same licence), via
 The reading, 97 percent, is exactly the kind of number this chapter is
 about.](../images/pulse-oximeter-benin.jpg){#fig-oximeter fig-alt="A fingertip pulse oximeter clipped to the index finger of a dark-skinned hand, displaying an oxygen saturation of 97 and a pulse of 92, resting on a clinic desk with paperwork behind it."}
 
-In your first month of residency you will act on the output of at least a
-dozen algorithms. Nobody will call them algorithms. The pulse oximeter, the
-estimated kidney function on the lab report, the sepsis alert, the risk score
-that decides who gets a care coordinator, the reference range on a spirometry
-printout. Most of them work. Several are known to work worse for some of your
-patients than for others. The ones that fail do so in the same way, for the
-same reason. Learning that one reason is faster than learning the list, and
-it also applies to tools that do not have a paper written about them yet.
+In your first month of residency you will act on the output of many
+algorithms. Nobody will call them algorithms. They include the pulse
+oximeter, the estimated kidney function on the lab report, the sepsis alert,
+the risk score that decides who gets a care coordinator, and the reference
+range on a spirometry printout. Most of them work. Several are known to work
+worse for some of your patients than for others. The ones that fail mostly
+fail in the same way, for the same reason. Learning that one reason is faster
+than learning the list. It also applies to tools nobody has studied yet.
 
 The second reason is about you. The evidence in this chapter says a clinician
 at the bedside can catch some of these failures and cannot catch others.
@@ -294,22 +294,22 @@ decision, its consequence, and its fix. Whether the harm occurred is not in
 question in any case here; it is documented. The work is in the mechanism.
 :::
 
-@tbl-proxies lists the cases this chapter draws on, in the four columns the
-Do block will ask you to fill in for a case of your own. The fourth column is
-the one to read slowly. "Identified" and "fixed" are different claims, and
-the second needs its own checking.
+@tbl-proxies lists the cases this chapter draws on, in the four columns your
+own row will use in Part B of the Do. The fourth column is the one to read
+slowly. "Identified" and "fixed" are different claims, and the second needs
+its own checking.
 
-| Case | What mattered, and what stood in for it | Who was harmed, through what decision | Fix, and status as of September 2026 |
+| Case | What mattered, and what stood in for it | Who was harmed, through what decision | Fix, and its status |
 |---|---|---|---|
-| Pulse oximetry | Arterial oxygen saturation; light absorbance calibrated on light skin | Black, Hispanic, and Asian patients; oxygen and COVID-19 therapies delayed or never triggered [@pmid:33326721; @pmid:35639368] | FDA draft guidance, January 2025. **Still draft.** [@pmid:40042945] |
-| Care management risk score | Health need; predicted health care cost | Black patients; left out of care coordination. The fixed version enrolled 2.6 times as many [@pmid:31649194] | What the model predicts was changed by the authors and, the paper says, by the vendor. Status of the industry's other scores: not known. |
-| Kidney function (eGFR) | True kidney filtration; a creatinine formula with a race multiplier | Black patients; later CKD staging, later transplant referral [@pmid:32853499] | NKF-ASN Task Force recommended the race-free 2021 equation for all US laboratories [@pmid:34563581]. In a College of American Pathologists survey of 3,542 US laboratories, 65.8% had adopted the race-free creatinine equation by March 2023, up from 30.3% a year earlier [@pmid:37559439; @pmid:36413243]. No later national count was found. |
-| Spirometry | Lung function compared with what is expected; an expected value that was adjusted by race | Black patients; reduced lung function counted as normal, with consequences for disability benefits and transplant priority [@pmid:36383197] | ATS recommended race-neutral equations in April 2023 [@pmid:36973004]. **Actively contested.** Modeling across 249 million Americans estimates 12.5 million reclassified, with nonobstructive impairment rising 141% among Black and falling 69% among White persons, and disability payments shifting by over a billion dollars a year [@pmid:38767252]. Reports from single health systems that made the switch are being published [@pmid:40712949]. |
+| Pulse oximetry | Arterial oxygen saturation; light absorbance, calibrated mostly on light skin | Black, Hispanic, and Asian patients; oxygen and COVID-19 treatments delayed or never started [@pmid:33326721; @pmid:35639368] | FDA draft guidance, January 2025. **Still draft** as of 12 October 2026 [@pmid:40042945] |
+| Care management risk score | Health need; predicted health care cost | Black patients; left out of care coordination [@pmid:31649194] | The authors changed what the model predicts. The paper says the manufacturer confirmed the finding and began working on a fix with them. Other companies' scores: not known. |
+| Kidney function (eGFR) | True kidney filtration; a creatinine formula with a race multiplier | Black patients; later CKD staging and later transplant referral [@pmid:32853499] | A national task force recommended the race-free 2021 equation for all US laboratories [@pmid:34563581]. About two-thirds of US laboratories surveyed had adopted it by March 2023 [@pmid:37559439]. No later national count was found. |
+| Spirometry | Lung function compared with what is expected; an expected value adjusted by race | Black patients; reduced lung function counted as normal, with effects on disability benefits and transplant priority [@pmid:36973004; @pmid:38767252] | Race-neutral equations were published in 2022 [@pmid:36383197] and recommended by the American Thoracic Society in 2023 [@pmid:36973004]. **Contested**: modeling estimates the switch would reclassify 12.5 million Americans, helping some and costing others [@pmid:38767252]. |
 | Dermatology image AI | Disease across all skin tones; training images mostly of light skin | Patients with dark skin; missed or misclassified lesions [@pmid:35960806; @pmid:30073260] | Image sets covering all skin tones published; retraining on them closed the gap in one study [@pmid:35960806]. No regulatory requirement for skin-tone reporting. |
-| Chest radiograph AI | Disease on the image; labels pulled from the text of old radiology reports | Female, Black, Hispanic, low-income, and uninsured patients, worst for patients in more than one of these groups; findings called normal [@pmid:34893776] | Documented; no fix adopted at scale. The question is who wrote the labels the model learned from. |
-| Large language models | Real physiology; text that repeats race-based medicine | Black patients in particular; debunked claims about kidney function, lung capacity, and pain repeated in clinical answers [@pmid:37864012; @pmid:38123252] | Vendors update models without clear version notes. Re-test with each release. |
+| Chest radiograph AI | Disease on the image; labels pulled from the text of old radiology reports | Female, Black, Hispanic, and low-income patients, worst for patients in more than one of these groups; findings called normal [@pmid:34893776] | Documented; no fix adopted at scale. The question is who wrote the labels the model learned from. |
+| Large language models | Real physiology; text that repeats race-based medicine | Black patients in particular; debunked claims about kidney function, lung capacity, and pain repeated in clinical answers [@pmid:37864012; @pmid:38123252] | Models change without clear version notes. Re-test with each release. |
 
-: The proxy table. The Do block asks you to add a row. {#tbl-proxies}
+: The proxy table. Statuses checked in September 2026, and the oximeter guidance again in October. In Part B you add a row. {#tbl-proxies}
 
 Three things to notice across the rows rather than in any one of them.
 
@@ -322,14 +322,12 @@ biased" is not a strategy you can use, and asking what the model actually
 predicts is.
 
 **Fixing is slower and messier than finding.** Obermeyer is seven years old.
-The oximeter guidance is still draft. Race-neutral spirometry is recommended
-and contested at once, and the disagreement is not simple. The same
-equation change that raises Black patients' disability eligibility lowers
-White patients'. The 2024 modeling found the two equations predicted
-respiratory outcomes about equally well, so the choice between them is not
-settled by accuracy [@pmid:38767252]. A student who writes "we could not
-determine the adoption status" in the exercise has answered correctly, and
-this chapter will say so again in the rubric.
+The oximeter guidance is still a draft. Race-neutral spirometry is recommended
+and contested at once. The same equation change that raises Black patients'
+disability eligibility lowers White patients'. The two equations predicted
+respiratory outcomes about equally well, so accuracy does not settle the
+choice [@pmid:38767252]. "Could not determine the status" is a correct answer
+in the exercise.
 
 **The bedside answers differ sharply by case, and that is the finding.**
 Oximetry has a real bedside sign. Anyone who read the equation could have
@@ -340,15 +338,13 @@ score are close to undetectable from a single encounter.
 ### The study that complicates the bedside answer
 
 It would be comfortable to leave this chapter believing that a careful
-clinician catches these. The best evidence says otherwise. ([The ethics
-chapter](core-ethics-regulation.qmd) draws the same numbers as a
-figure and asks whether a clinician's review is enough.)
+clinician catches these. The best evidence says otherwise.
 
-In a randomized study, Jabbour and colleagues showed 457 hospitalist
-physicians, nurse practitioners, and physician assistants a series of
+Jabbour and colleagues ran a randomized study with 457 hospitalist physicians,
+nurse practitioners, and physician assistants [@pmid:38112814]. Each read
 written cases of patients with acute respiratory failure, with chest
-radiographs, and asked them to diagnose pneumonia, heart failure, or COPD
-[@pmid:38112814]. Baseline accuracy was 73.0 percent. A standard AI model
+radiographs. Each then judged whether the cause was pneumonia, heart failure,
+or COPD. Baseline accuracy was 73.0 percent. A standard AI model
 raised it by 2.9 points, and by 4.4 points when the model also showed an
 explanation: a heat map showing where on the radiograph it was looking. A
 *deliberately biased* model, one built to be wrong in a consistent direction,
@@ -379,16 +375,10 @@ made before any data are used, determines more about bias than anything
 done afterward. That is the proxy problem in the words of the person who
 documented it. Listen also for the second half of his title. He describes
 work where an algorithm, trained to predict the right target, *reduced* a disparity
-that clinicians had been producing. Twenty-five minutes covers the first
-argument; the rest is worth hearing if you have the time. The episode is on Apple Podcasts,
-Spotify, and YouTube if the NEJM player does not load.
-
-**If you would rather read.** The fairness deck at
-<https://talks.seandavis.net/archive/2024-11-05-ml-fairness/> is the seminar
-this chapter was adapted from. It opens with two thought experiments, an
-image search and a loan officer, that make the social-versus-statistical
-distinction clear without any medicine at all. It also carries a list of the
-kinds of bias, sorted by where they come from, which you may want for Part B.
+that clinicians had been producing. The first 25 minutes cover the first
+argument, and the rest is worth hearing if you have the time. The podcast is
+optional and not counted in the chapter's time. The episode is on Apple
+Podcasts, Spotify, and YouTube if the NEJM player does not load.
 
 ## Do
 
