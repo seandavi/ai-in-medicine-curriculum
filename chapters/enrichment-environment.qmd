@@ -393,55 +393,51 @@ skip step 1 of Part A; the point of step 1 is to guess before you know.
 
 ## Do
 
-::: {.callout-warning title="No patient information, ever"}
-Nothing in this exercise involves a patient. You will ask a chatbot about
-itself and read public documents. Your university chatbot account is covered
-for patient care when you sign in with university credentials, but this
-exercise is not patient care; [the ethics chapter](core-ethics-regulation.qmd) takes that up. If a question about the scribe's water
-use ever tempts you to paste in a note to "see what it costs," stop.
+Made-up patients only. [What counts as patient
+information](../course/patient-information.qmd).
 
-What counts as patient information, and why taking out the name is not
-enough: [the patient information page](../course/patient-information.qmd).
-:::
+### Part A: trace the bottle with ChatGPT (20 minutes)
 
-### Part A: trace the bottle (15 minutes)
+**Step 1. Guess.** Before opening anything, write down your own guess for
+the water one chatbot question uses, in millilitres.
 
-**Step 1. Guess, then ask.** Before opening anything, write down your own
-estimate of the water one chatbot question uses, in millilitres. Then ask
-your chatbot, in a fresh conversation:
+**Step 2. Ask.** In ChatGPT Edu (Copilot also works), paste this:
 
-> How much water does one ChatGPT query use? Give me the number, the unit it
-> is per, the model and year it applies to, and the primary source with a
-> link.
+```
+Two figures circulate for the water a chatbot uses: "a bottle of water
+per email" and "about five drops per prompt". Find the original source
+of each, and the 2023 UC Riverside preprint "Making AI Less Thirsty".
+For each of the three sources, give the date, the model, the unit (per
+what), which water was counted (on-site cooling only, or power-plant
+water too), the number, and a link.
+```
 
-Record exactly what it says. You are not trusting it; you are recording
-what it said so you can check it. Note whether it gave a source at all, and whether the source is
-one of the four in @tbl-what-counted. The answer will change with the
-wording, the day, and the tool. That is itself a finding. If a classmate got
-a different number, compare the two before you compare either to the sources.
-
-**Step 2. Open the sources.** Three tabs, all free:
-
-- The preprint, first version:
-  [arxiv.org/abs/2304.03271v1](https://arxiv.org/abs/2304.03271v1). Open the
-  PDF and search for "500ml".
-- Google's report: [arxiv.org/abs/2508.15734](https://arxiv.org/abs/2508.15734).
-  Read the abstract, then search for "water" and find the sentence that says
-  what the water figure includes.
-- The *Post* analysis, or if it is paywalled for you, the *TechRepublic*
-  summary of it: [techrepublic.com](https://www.techrepublic.com/article/generative-ai-data-center-water-use/).
-
-For each, fill one row:
+It will probably find most of this. Copy its answers into the table.
 
 ```
 Source        Date     Model     Unit ("per ___")     Water counted        Number
 Preprint      ______   ______    ________________     _______________      ______
 Post          ______   ______    ________________     _______________      ______
 Google        ______   ______    ________________     _______________      ______
-Chatbot said  ______   ______    ________________     _______________      ______
 ```
 
-**Step 3. Make them comparable.** Convert each to millilitres per single
+**Step 3. Check one row.** Ask, then check: most of a good answer is right,
+and your job is to find out which parts. Open one source yourself, from the
+chatbot's link or from these:
+
+- The preprint, first version:
+  [arxiv.org/abs/2304.03271v1](https://arxiv.org/abs/2304.03271v1). Open the
+  PDF and search for "500ml".
+- Google's report: [arxiv.org/abs/2508.15734](https://arxiv.org/abs/2508.15734).
+  Search for "water" and find the sentence that says what the water figure
+  includes.
+- The *Post* analysis, or if it is paywalled for you, the *TechRepublic*
+  summary of it: [techrepublic.com](https://www.techrepublic.com/article/generative-ai-data-center-water-use/).
+
+Mark each cell in that row as confirmed or corrected. It may get every cell
+right. If so, you know because you read the source yourself.
+
+**Step 4. Make them comparable.** Convert each to millilitres per single
 question. The preprint gives a bottle per 20 to 50 questions; divide. The
 *Post* gives one email; decide, and say, whether you treat that as one
 question. Google gives one prompt. Then compute the ratio of the largest to
@@ -456,12 +452,12 @@ Ratio, largest/smallest: ______
 The single choice that explains most of the ratio is: ________________
 ```
 
-**Step 4. The verdict, in one sentence each.** Write what you will say to
+**Step 5. The verdict, in one sentence each.** Write what you will say to
 the resident and what you will say to the medical director. Each sentence
 must name the source's date, model, and what it counted. "It's complicated"
 is not a sentence.
 
-### Part B: your specialty's denominator (10 minutes)
+### Part B (optional): your specialty's denominator (10 minutes)
 
 The per-query number means nothing without something of yours to put it
 against. Find your own specialty's measured footprint. In PubMed:
@@ -477,8 +473,7 @@ MRI, per laparoscopic cholecystectomy, per dialysis session, per
 telepsychiatry visit. Anesthesia, surgery, radiology, nephrology, and
 ophthalmology all have papers on this. If your specialty does not yet, use
 Eckelman's 1,692 kg per person per year [@pmid:33284703] and divide by a
-plausible number of encounters. This paper also can be the check in question 2 of this
-week's [learning journal](../course/learning-journal.qmd).
+plausible number of encounters.
 
 ```
 Paper: __________________________________   PMID: ____________
@@ -503,8 +498,8 @@ never yours to answer alone.
 **The vendor question.** Nobody has published a measured figure for an
 ambient scribe. The way to get one is to ask. Write one question you would
 put to the scribe vendor at the next contract review, one that has a
-checkable answer. The three that matter most. Does the reported footprint use location-based or
-market-based accounting? Where is inference physically hosted, and how
+checkable answer. The three that matter most are these. Does the reported
+footprint use location-based or market-based accounting? Where is inference physically hosted, and how
 carbon-heavy and water-short is the grid there? (Inference is the running of
 a trained model to answer requests, as opposed to training it.) Does the
 per-note figure include the training cost spread across queries, idle
@@ -516,9 +511,11 @@ and one thing you considered changing and decided was not worth it, with
 the reason. A student who writes "I will keep using a model for literature
 search because my footprint is negligible against the clinical benefit, and
 the decision that matters is purchasing, not my own use" has done the
-reasoning this
-chapter asks for. So has the one who writes the opposite, if the reason is
-as specific.
+reasoning this chapter asks for. So has the one who writes the opposite, if
+the reason is as specific.
+
+Your rule and your non-change can go straight into your week 4 piece, "what
+you will keep" (see the [learning journal](../course/learning-journal.qmd)).
 
 ## Check
 
@@ -526,11 +523,11 @@ Score yourself before moving on.
 
 | You have | Meets | Falls short |
 |---|---|---|
-| A traced chain (Part A) | Each of the three sources has a date, a model, a unit, and a statement of which water was counted, all read from the source, not the headline | "The Post said a bottle" |
+| A traced chain (Part A) | Three rows, each with a date, a model, a unit, and which water was counted, and one row you checked against the source itself | "The Post said a bottle", or rows copied without opening any source |
 | A ratio and its explanation (Part A) | The ratio is computed, and the single choice that explains most of it is named | "They just disagree" |
 | Two verdict sentences (Part A) | Each names a date, a model, and what was counted; each could be said aloud at huddle | "It depends" |
 | Three choices (objective 2) | On-site versus total water; which query; which model and year, or equivalents, in your own words | Fewer than three, or "methodology" |
-| A denominator (Part B) | A real paper, a real unit, an arithmetic comparison, and a sentence that says what it settles and what it does not | A comparison with no source, or one that concludes "so it doesn't matter" |
+| A denominator (optional Part B) | A real paper, a real unit, an arithmetic comparison, and a sentence that says what it settles and what it does not | A comparison with no source, or one that concludes "so it doesn't matter" |
 | The Jevons sentence (objective 4) | You can say how per-query cost fell and total rose in the same year, with a source and date, and name who lives near the data centers that make up the total | "Efficiency is improving" |
 | The vendor question (Part C) | Has a checkable answer; you can say what a bad answer would look like | "Is it sustainable?" |
 | The rule and the non-change (Part C) | Both are specific and the reason is the arithmetic, not the mood | A rule with no reason, or no non-change |
