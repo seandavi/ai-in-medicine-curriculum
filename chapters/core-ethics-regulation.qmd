@@ -1,7 +1,20 @@
 ---
 title: "Ethics: what you owe when you sign the note"
-subtitle: "AIM-4 · AIM-X · about 70 minutes"
+subtitle: "About 60 minutes"
 ---
+
+::: {.callout-tip title="In short"}
+- **The idea.** A scribe or drafting tool can write most of a good note and
+  save you time. When you sign, every sentence becomes yours. So you decide
+  the plan yourself, and you check the draft against what the patient said.
+- **What you do.** Draft a clinic note from a made-up visit with ChatGPT Edu,
+  improve the prompt once, then decide line by line what you would sign.
+- **What you keep.** A drafting prompt you would use again, a one-sentence
+  rule for reading a drafted note, and what you would say to a patient who
+  asks "Do I have to say yes?"
+- **Short on time?** Read the opening scenario, "A note is a promise", and
+  "Does review fix it?". Then do Part A of the Do.
+:::
 
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will have:
@@ -17,13 +30,15 @@ By the end of this chapter you will have:
    practised answering "Do I have to say yes?"
 6. Named who benefits from a scribe, who bears the risk, and who decides: the
    course's fourth recurring lesson.
+
+Course competencies: AIM-4 (ethics, law, and regulation), AIM-X
+(professional identity, the closing question).
 :::
 
-**Time.** About 20 to 25 minutes of reading, about 45 minutes of doing, and
-five minutes of writing at the end: about 70 minutes. The podcast and everything in
-Go deeper are optional. Use the chatbot account your school provides (at CU
-Anschutz, ChatGPT Edu or Microsoft Copilot); any free chatbot also works,
-because everything you type here is made up. There is nothing to install.
+**What you need.** Your university ChatGPT Edu or Copilot account. Nothing to
+install. Made-up patients only. The time counts about 15 minutes of reading
+and about 40 of doing; the podcast and everything in Go deeper are optional
+and not counted.
 
 ## The sentence you did not write
 
@@ -553,23 +568,15 @@ decided it would be in the room?
 Then write a fourth sentence, on the part of clinical judgment you will not
 hand over to a tool. Date all four and keep them.
 
-## Summary
-
-- A signed note promises the patient and the next clinician: this is what
-  happened, and this is what I decided.
-- In the plan, a scribe writes reasoning nobody did. Decide the plan yourself
-  before you read the draft's.
-- Review is a duty, not a guarantee. Editing is uneven, and drafts pull
-  decisions toward them.
-- Consent is a real choice only if saying no is easy.
-- The tool probably fails some patients more than others; the research is
-  thin.
-- The fourth recurring lesson: who benefits, who bears the risk, who decides.
-  For a scribe, the relief is the clinician's and the risk is the patient's.
-- The law makes the signer answer for the note. It is the least you owe, not
-  all of it.
+That fourth sentence is a ready start for your week 4 piece, "what you will
+keep" (see the [learning journal](../course/learning-journal.qmd)). The
+piece asks for one place you decided AI does not belong in your work, and
+why.
 
 ## Go deeper
+
+Everything from here to the end of the chapter is optional and is not
+counted in the chapter's time.
 
 ### Liability in more detail (optional)
 
