@@ -198,16 +198,16 @@ clinician who wins the argument about the ANA and never asks has lost her
 trust.
 
 **Then the parts that are wrong, with a reason each.** "The cortisol, the Lyme
-test, and the heavy metals are tests for things your story doesn't point to,
-and a positive would more likely be a false one that leads to more testing.
-And I'd hold off on the iron until we've measured it. If your ferritin is
+test, and the heavy metals test for things your story doesn't point to. A
+positive result would more likely be a false one, and it would lead to more
+testing. And I'd hold off on the iron until we've measured it. If your ferritin is
 normal, iron does nothing except upset your stomach, and if it's high we need
 to know that too."
 
-### The three-sentence spine
+### The three sentences
 
-Most conversations about a tool fit three sentences in a fixed order. This
-chapter calls that shape the spine. Learn the shape, not the wording.
+Most conversations about a tool fit three sentences in a fixed order. Learn
+the order, not the wording.
 
 ::: {.callout-tip title="What it did. What a person did. Who is responsible."}
 **What it did.** "The software marked an area on your mammogram for a closer look."
@@ -275,14 +275,15 @@ Write each of these yourself first, in words you would actually say. Each
 should take under a minute aloud.
 
 1. **The phone on the desk.** The patient from the opening asks whether it is
-   recording. Write the spine. Add one sentence on what she can refuse, and one
+   recording. Write the three sentences. Add one on what she can refuse, and one
    on what you do not know and how you will find out.
 2. **The computer found something.** A screening mammogram was read with
    computer-aided detection, software that marks regions for the radiologist
    to look at. It flagged a region, the radiologist agreed, and more pictures
    are recommended. A scheduler told the patient "the computer found
    something." She is 47, has not slept in two days, and will ask whether she
-   has cancer. Write the spine, and the sentence that comes *before* it.
+   has cancer. Write the three sentences, and the one that comes *before*
+   them.
 3. **The alert you cannot explain.** Pick a tool you have seen in a hospital
    and could not explain, such as a sepsis alert or a risk score. Write two
    sentences for a patient who asks how it works. The first admits you do not
@@ -336,12 +337,11 @@ paste this:
 > leave you with one concrete next step? Then tell me the single moment you
 > were most likely to stop listening.
 
-Typing is the default. If you want to practice out loud, run the same
-role-play in your chatbot's voice mode, if your account has one (ChatGPT Edu
-calls it "Start Voice"). Say STOP when you are done, then type the observer
-prompt in the same conversation; if the chatbot has no transcript to score,
-ask it for one, or note the exchanges yourself as you go. The patient is still
-made up, out loud as on the page.
+Typing is the default. To practice out loud, run the same role-play in your
+chatbot's voice mode, if your account has one. ChatGPT Edu calls it "Start
+Voice". Say STOP when you are done, then type the observer prompt in the same
+conversation. If the chatbot has no transcript to score, ask it for one, or
+note the exchanges yourself as you go. The patient is still made up.
 
 Two warnings. A chatbot playing a patient is more agreeable than a patient; if
 it gave in on the first exchange, start again with "be harder to persuade"
@@ -377,7 +377,7 @@ the character in the Part B prompt.
 | Sentences for the scribe (objective 1) | What it did and what you do are separate sentences, under a minute aloud; one names what she can refuse; one says what you do not know | "It helps with the note"; a made-up retention period |
 | The alert you cannot explain (objective 1) | Admits what you do not know and commits to a time | Reassures |
 | Who is responsible (objective 2) | A sentence with a name in it: mine, Dr. Chen's, ours | "The team," "the system," or no sentence |
-| The sentence before the mammogram spine (objective 2) | Responds to the fear before explaining the software | Starts with "the software" |
+| The sentence before the three on the mammogram (objective 2) | Responds to the fear before explaining the software | Starts with "the software" |
 | The Part B transcript (objective 3) | Something right named before anything wrong; you asked what sent her; each declined test has a reason | Won the argument; never asked; "we don't need those" |
 | The empathy finding (objective 4) | You can say why text raters prefer can still persuade less | "AI is more empathetic" or "AI is cold" |
 | Kept sentences (objective 5) | You changed what the chatbot flagged that you agreed with, and the sentences still sound like you | Pasted a rewrite, or nothing kept |
