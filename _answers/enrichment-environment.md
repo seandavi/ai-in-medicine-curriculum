@@ -1,8 +1,17 @@
 # Answer key — enrichment-environment
 
-Not rendered. Fed to the tutor; used by the instructor in the live session.
+Not rendered. Fed to the tutor; used by the instructor.
 
 ## Part A — the traced chain
+
+Rewritten in October 2026 to put success first. The student asks ChatGPT
+Edu (or Copilot) to find the sources behind "a bottle per email" and "five
+drops per prompt" plus the 2023 preprint, and to say for each what was
+counted; the student then opens one source and marks that row confirmed or
+corrected. Grade: three rows filled and one row checked against the source
+meets, whether the chatbot was right or not. Rows copied with no source
+opened falls short. The reference rows below are what a fully correct
+answer contains.
 
 | Row | Date | Model | Unit | Water counted | Number |
 |---|---|---|---|---|---|
@@ -40,12 +49,17 @@ rubric.
   aggregate is a different question, and it is about where the data center
   is, not about who opts out."
 
-**What the chatbot typically says (run 2026-09-07, Claude, no retrieval).**
-Expect either the bottle-per-email or "about 0.3 mL" with a vague source.
-Both are attribution failures of the kind the chapter teaches if given
-without model, date, and scope. Re-run before each cohort.
+**What the chatbot typically says.** The prediction written on 2026-09-07
+came from Claude with no retrieval (web search off), against the old prompt
+("How much water does one ChatGPT query use?"): either the bottle per email
+or "about 0.3 mL" with a vague source. ChatGPT Edu searches the web, so
+with the new prompt expect it to find the preprint, the Post analysis and
+Google's report, often with the right numbers, and sometimes to miss the
+on-site-only scope of Google's figure. That scope is the cell most worth
+checking. The author has not yet run the new prompt in Edu; re-run it
+before week 4 and replace this paragraph with what it returned.
 
-## Part B — denominators
+## Part B — denominators (optional since October 2026)
 
 Any real paper with a per-unit number passes. Useful anchors if a student
 is stuck (all verified in PubMed this session unless flagged):
@@ -70,6 +84,11 @@ is stuck (all verified in PubMed this session unless flagged):
   CT); nephrology, Adv Ther 2024, pmid:39541083 (3.5 to 43.9 kg per dialysis
   session by modality); ophthalmology, Ophthalmologica 2026, pmid:42671945
   (14.1 kg per cataract procedure).
+
+**Class arithmetic in the chapter (49 students, from October 2026).** 49 x 15
+queries x 4 weeks = 2,940 queries. At 0.24 Wh: 705.6 Wh, about 0.71 kWh
+(about 40 minutes of a 1 kW microwave). At 0.26 mL: 764 mL. At 0.03 g:
+88 g, about 0.005% of 1,692 kg. At the Post's 519 mL: about 1,526 litres.
 
 **Arithmetic check.** At Google's 0.03 g per prompt, 1 kg CO2e ≈ 33,000
 prompts. At 29 Wh × 0.125 g/Wh ≈ 3.6 g per prompt, 1 kg ≈ 280 prompts. Both
@@ -103,10 +122,34 @@ reason is arithmetic from Parts A–B rather than mood.
   notice of intent to sue on 17 June 2025; the county permitted 15 turbines on
   2 July 2025 and the groups appealed on 16 July 2025 (SELC timeline, checked
   2026-09-08). Colossus
-  2's turbines sit across the line in Southaven, MS: NAACP v. xAI, N.D.
-  Miss., filed 2026, 27 unpermitted turbines (Earthjustice case page, checked
-  2026-09-08). Counts and permit status change; check the case page before
-  the session.
+  2's turbines sit across the line in Southaven, MS. Rechecked 2026-10-12
+  (SELC timeline dated 8 May 2026; CourtListener docket): MDEQ approved a
+  permit on 10 March 2026 (reported as 41 turbines; some outlets say 27);
+  SELC appealed for the NAACP and others on 9 April 2026; NAACP v. X.AI Corp.,
+  N.D. Miss. 3:26-cv-00074, filed 14 April 2026, before Judge Debra M. Brown;
+  preliminary-injunction motion filed 6 May 2026. As of 5 October 2026 the
+  docket shows the United States appealing (Fifth Circuit 26-60806) and
+  seeking a stay of all proceedings; no ruling on the NAACP's claims. The
+  chapter now gives no turbine count and says only "no ruling as of 12
+  October 2026". Check the docket before the session.
+- Water stress: the chapter used to cite Ceres, *Drained by Data*, for
+  "two-thirds" and a Newton County, Georgia figure; that page has neither.
+  "About two-thirds of new data centers built or in development since 2022
+  are in places already gripped by high levels of water stress" is a
+  Bloomberg News analysis (Nicoletti, Ma, Bass, May 2025), read through
+  Sherwood News (8 May 2025), KUNC (2 June 2025) and DatacenterDynamics,
+  because the Bloomberg page is paywalled. The Newton County figure (about a
+  tenth of county water, attributed to the county water authority director in
+  the New York Times, 14 July 2025) was cut: the Times article could not be
+  opened, and a later local report (seen only in a search summary, not
+  opened) gives about 2 percent.
+- Wolf et al. 2022 (pmid:35551275), the "80 percent" paper: an estimate for
+  IDx-DR (Digital Diagnostics); three of six authors (Abramoff, Tava,
+  Clarida) list Digital Diagnostics as an affiliation. It is a modelled
+  marginal estimate, not a measurement.
+- Doo et al. 2024 (pmid:39189909): Vicuna 1.5 is a Llama 2 model fine-tuned
+  on general conversations; the paper calls it "a specialized fine-tuned
+  model", but it was not trained for radiology.
 
 ## Instructor prep
 
