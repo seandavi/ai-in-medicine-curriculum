@@ -196,7 +196,8 @@ Use made-up cases only. Never enter patient information into these tools.
   yourself before you trust the answer. Sign-up rules may change.
   <https://www.openevidence.com>
 - **Learn 80% of NotebookLM in Under 13 Minutes** (Jeff Su, 2024; video;
-  13 min). A quick tour of NotebookLM, Google's free tool that answers
+  13 min). A quick tour of NotebookLM (renamed Gemini Notebook in July 2026),
+  Google's free tool that answers
   questions from documents you upload. It pairs with the chapter
   [Grounding AI in real sources](../chapters/enrichment-rag-notebooklm.qmd).
   <https://youtu.be/EOmgC3-hznM>
