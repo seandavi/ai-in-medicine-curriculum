@@ -74,13 +74,12 @@ more about deep learning than anyone at the table. The question is what
 happened next. Does the way the prediction failed tell you anything about the
 job you are about to spend a decade training for? Not going into radiology?
 The same uncle has a version of the question for every specialty, and so does
-every chatbot. This chapter is about how to answer it with something better
-than a feeling.
+every chatbot. This chapter is about how to answer it with evidence.
 
 ## Why this matters
 
-You are making a thirty-year decision with a spreadsheet and a feeling. Nobody
-can tell you how your specialty will look in 2056. But the most confident,
+You are choosing a specialty for the next thirty years, mostly on instinct
+and advice. Nobody can tell you how your specialty will look in 2056. But the most confident,
 most credentialed prediction that a medical job would disappear has now had
 its full time to come true. It failed in a specific way that you can learn from. A forecast
 that has failed is more useful than one that has not been tested yet. You can
@@ -159,8 +158,7 @@ new, and as it reads now.
 [^hinton]: Steve Lohr, "Your A.I. Radiologist Will Not Be With You Soon,"
     *New York Times*, 14 May 2025. The direct quotation is as reported by
     [AuntMinnie](https://www.auntminnie.com/imaging-informatics/artificial-intelligence/article/15746014/hinton-acknowledges-mistake-in-predicting-ai-replacement-of-radiologists),
-    because the original is paywalled. The module this chapter is built from
-    dated the interview May 2026; the correct date is May 2025.
+    because the original is paywalled.
 
 ::: {.press-clips}
 <div class="press-clip"><div class="src">The New Yorker · magazine</div><a class="hl" href="https://www.newyorker.com/magazine/2017/04/03/ai-versus-md">A.I. Versus M.D.: What happens when diagnosis is automated?</a><div class="date">Siddhartha Mukherjee · 3 April 2017</div></div>
@@ -277,9 +275,7 @@ flowchart TD
     Q4 -- Yes --> R[Fewer people do this task]
 ```
 
-Groups working through this usually settle on the first question without
-being told to. That is worth noticing. Most physician jobs do not break neatly
-into tasks. The specialties that look most automatable from outside are the
+Most physician jobs do not break neatly into tasks. The specialties that look most automatable from outside are the
 ones whose pattern-recognition work is easiest to see, not the ones where it
 is the largest share of the work.
 
@@ -331,7 +327,7 @@ wrong in a systematic way makes the human worse rather than being corrected by
 them. The defence is the same in both places: find out how often the tool is
 wrong before you decide how much to trust it.
 
-Adoption and outcomes are separate questions. Objective 3 is that sentence.
+Adoption and outcomes are separate questions.
 
 ### The economics the debate leaves out
 
@@ -419,7 +415,7 @@ Projected employment change, 2025 to 2035, for three health-information occupati
 | Medical records specialists | 200,700 | +8% | Aging population, chronic disease, more coding for reimbursement; AI coding tools "may affect" demand |
 | Health information technologists and medical registrars | 42,000 | +16% | Growing volume of electronic health information needing analysis and registry maintenance |
 
-: The three projections, with the reason BLS gives for each. Read from the *Occupational Outlook Handbook* on 2026-09-07: [transcriptionists](https://www.bls.gov/ooh/healthcare/medical-transcriptionists.htm), [records specialists](https://www.bls.gov/ooh/healthcare/medical-records-and-health-information-technicians.htm), [health information technologists](https://www.bls.gov/ooh/healthcare/health-information-technologists-and-medical-registrars.htm). BLS revises these every two years. The module this chapter is built from carried the 2024–34 figures (−5, +7, +15 percent) as unverified, and the 2025–35 revision replaced them while this chapter was being written. {#tbl-bls}
+: The three projections, with the reason BLS gives for each. Read from the *Occupational Outlook Handbook* on 2026-09-07: [transcriptionists](https://www.bls.gov/ooh/healthcare/medical-transcriptionists.htm), [records specialists](https://www.bls.gov/ooh/healthcare/medical-records-and-health-information-technicians.htm), [health information technologists](https://www.bls.gov/ooh/healthcare/health-information-technologists-and-medical-registrars.htm). BLS revises these every two years. {#tbl-bls}
 
 What separates them is the same four questions, applied to non-physician
 work. Transcription is a single task a machine can be tested on. It works
@@ -552,11 +548,9 @@ later.
 say is missing? Then reread it as the radiology resident in the second press
 clipping. Change the number if either of them convinced you, and say which.
 
-### Part C: close a flag yourself (10 minutes)
+### Part C: check the numbers yourself (10 minutes)
 
-The module this chapter was built from carried the BLS projections marked
-"unverified," because the government site blocked the automated download. You
-are going to do what the software could not.
+The BLS projections change every two years. Read them from the source.
 
 **Step 1.** Open the three BLS pages linked under @tbl-bls in your browser.
 For each, find the "Job Outlook" section and record:
