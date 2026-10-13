@@ -1,7 +1,20 @@
 ---
 title: "Agentic coding: build a clinical tool in an hour, then find what is wrong with it"
-subtitle: "AIM-5 · AIM-2 · AIM-4 · about 75 minutes"
+subtitle: "About 85 minutes"
 ---
+
+::: {.callout-tip title="In short"}
+- **The idea.** A chatbot can now build a working clinical calculator from a
+  plain request in about ten minutes. The skill that matters is checking it:
+  its rules, its edge cases, and which version of the score it uses, against
+  the original paper and MDCalc.
+- **What you do.** Build a calculator for a score from your specialty, then
+  run three made-up patients through it, MDCalc, and the paper.
+- **What you keep.** Your tool, and a table of three checked cases with the
+  one change you would make before anyone else used it.
+- **Short on time?** Do Parts A and B of the Do first (about 50 minutes).
+  Then read "Three ways the tool you just built is wrong".
+:::
 
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will be able to:
@@ -10,21 +23,23 @@ By the end of this chapter you will be able to:
    who is responsible for checking the result.
 2. Build a working single-page clinical calculator from a plain-language
    prompt, in a browser, with no install.
-3. Verify the generated clinical logic against the original publication or
-   MDCalc, and find at least one discrepancy or edge-case failure in the tool
-   you just built.
-4. Explain why that tool is not a medical device, and name what would have to
-   change for it to become one.
-5. State the rule about patient information in consumer and institutional AI
-   tools, and say why it is not a formality.
+3. Check your tool against the original publication and MDCalc on three
+   made-up cases, including an edge case, and say where it agrees and where it
+   does not.
+4. Explain why your tool is a study aid, and name what would have to change
+   before anyone relied on it.
+
+Course competencies: AIM-5 (clinical use), AIM-2 (critical appraisal), AIM-4
+(ethics, law, and regulation).
 :::
 
-**Time.** About 20 minutes of reading, 15 minutes of watching, 35 minutes of
-building and checking, and 5 minutes for the Check. You need your institutional
-ChatGPT Edu account and one tab open on MDCalc, the free calculator website
-most residents use. (ChatGPT's *canvas* is a side panel
-that shows the page you build, running.) Nothing installs. Other tools, and
-what each one asks of you at signup, are listed in the Do block.
+**What you need.** Your university ChatGPT Edu or Copilot account, and one
+tab open on MDCalc, the free calculator website most residents use. Nothing to
+install. Made-up patients only. The video is optional.
+
+**Build first if you like.** The Do works without the reading. Go to [Part A
+of the Do](#build-it), build your tool, then come back and read while you
+check it.
 
 ## The spreadsheet on the shared drive
 
@@ -403,7 +418,7 @@ numbers and a prompt about a public scoring system. It would not be fine for
 anything else.
 :::
 
-### Part A: build it (12 minutes)
+### Part A: build it (20 minutes) {#build-it}
 
 **Step 1. Pick a score.** Choose the one closest to your specialty from
 @tbl-menu. Each has a single original publication you will check against, and
