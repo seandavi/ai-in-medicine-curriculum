@@ -375,7 +375,8 @@ specific the claim is, how confident the tone is, and that the whole argument
 is about image analysis. He is describing a task and forecasting a job. That
 difference is what this chapter is about.
 
-**Then, the other side (watch the first 20 minutes).** "AIMI Grand Rounds:
+**Then, if you have time, the other side (optional; the first 20
+minutes).** "AIMI Grand Rounds:
 Developing Clinically Useful AI for Radiology," Curtis Langlotz, Stanford AIMI,
 YouTube, 30 January 2025, 59 min 37 s.
 <https://www.youtube.com/watch?v=WS9p0wFw7uY>. Langlotz is the radiologist
@@ -391,60 +392,62 @@ deeper, covers the same material in about the same time.
 
 ## Do
 
-::: {.callout-warning title="No patient information, and no classmate's data"}
-Every prompt in this exercise is about a specialty, an occupation, or a
-published number. None is about a patient, a rotation, or a person you know.
-Your institutional chatbot account does not change the no-PHI rule (no
-protected health information, ever). Free tiers may use what you type to
-train the next model. The one thing you will paste is a public government web
-page.
+Made-up patients only. [What counts as patient
+information](../course/patient-information.qmd).
 
-What counts as patient information, and why taking out the name is not
-enough: [the patient information page](../course/patient-information.qmd).
-:::
+### Part A: ask the four questions with ChatGPT (15 minutes)
 
-### Part A: grade the model (10 minutes)
+**Step 1. Ask.** Open ChatGPT Edu (Copilot also works) and paste this,
+with your intended specialty in place of `<specialty>` (or radiology if you
+are undecided):
 
-**Step 1.** Open your chatbot and ask, substituting your intended specialty
-(or radiology if you are undecided):
+```
+I am a fourth-year medical student going into <specialty>. Use these
+four questions to think about how AI may change the job by 2036:
+1. Does the job break into tasks a machine can be tested on? Which ones?
+2. Do tools for those tasks work at hospitals that did not build them?
+3. Who signs the result, and who is liable when it is wrong?
+4. If the task gets cheaper, will more of it be ordered?
+Then search for two or three published studies of how <specialty>
+physicians spend their working day (time-and-motion studies) or of the
+<specialty> workforce. For each, give the authors, journal, year, a link,
+and the number I should look for.
+```
 
-> I am a fourth-year medical student choosing a specialty. Will AI replace
-> `<specialty>` by 2036? Give me your best forecast and your reasoning.
-
-**Step 2.** Grade the answer against the four questions. The question for each
-row is not "did it mention this" but "did it give me something I could check."
+**Step 2. Record what it said.** One line per question, and whether it gave
+you something you can check: a number, a study, a link.
 
 ```
 Tool: ____________________   Specialty: ____________________
 
-Factor              Mentioned?  Gave a checkable number or source?   Note
-Task decomposition    Y / N        Y / N                             ______
-Generalization        Y / N        Y / N                             ______
-Liability/signature   Y / N        Y / N                             ______
-Demand                Y / N        Y / N                             ______
-
-Its forecast in one line: ______________________________________________
-What fraction of the job did it say is automatable? ______  Source? Y / N
+Question          What it said (one line)                Checkable?
+Tasks             ____________________________________   Y / N
+Generalization    ____________________________________   Y / N
+Liability         ____________________________________   Y / N
+Demand            ____________________________________   Y / N
 ```
 
-**Step 3.** Ask one follow-up:
+**Step 3. Check one study.** Ask, then check: most of a good answer is
+right, and your job is to find out which parts. Pick the study the answer
+leans on most. Open the link, or search its title in PubMed. Does the paper
+exist, and does its abstract contain the number the answer gave?
 
-> What fraction of a `<specialty>` physician's working time is spent on the
-> task you think is most automatable? Give me the study you are relying on,
-> with authors, journal, and year.
+```
+The study I checked: ________________________________  PMID: __________
+It exists: Y / N     It contains the number: Y / N
+What I found: _________________________________________________________
+```
 
-Search PubMed for whatever it gives you. If the study exists and contains the
-number, note it. If it does not, you have just seen a confident forecast
-with no evidence behind it. That is the lesson of the 2016 clip at a smaller scale. If you have
-not opened a chatbot in a year, this exercise is for you. It takes ten
-minutes, it needs no skill with prompts, and the model failing is the expected
-result, not your failure.
+It may get this right. If so, you know because you found the number in the
+abstract yourself. If it got the study or the number wrong, tell it what you
+found and ask again. Either way, note which parts of the answer held up.
 
-### Part B: your own forecast (15 minutes)
+### Part B: your own forecast (12 minutes)
 
 **Step 1. Find out how the time is actually spent.** The 36 percent figure for
 radiology came from someone with a stopwatch. Most specialties have such a
-study; the term to search for is "time and motion study." Search PubMed with:
+study. Use the one you checked in Part A if it held up. If not, search
+PubMed with:
 
 ```
 "time and motion studies"[MeSH] AND <your specialty>
@@ -454,8 +457,8 @@ adding `physician` or `resident` if the results are mostly about nurses.
 Read the abstracts of the two most recent studies that observed physicians
 rather than surveying them. Write down how the day divides. If your specialty
 has no such study, say so on the sheet. That absence is itself a finding about
-how well the job is understood. If there is none, use your own sub-internship, labeled
-honestly as one observer's estimate.
+how well the job is understood. In that case, use your own sub-internship,
+labeled honestly as one observer's estimate.
 
 **Step 2. Write three lines.**
 
@@ -479,11 +482,12 @@ overestimate the fraction for their own field when they first write it down.
 That is fine. The point of writing it down is to have a number you can check
 later.
 
-**Step 3. Argue against it.** Reread your line 2 as the uncle at dinner. What would he
-say is missing? Then reread it as the radiology resident in the second press
-clipping. Change the number if either of them convinced you, and say which.
+**Step 3. Argue against it.** Reread your line 2 as the uncle at dinner. What
+would he say is missing? Then reread it as the radiology resident who wrote
+the first press clipping. Change the number if either of them convinced you,
+and say which.
 
-### Part C: check the numbers yourself (10 minutes)
+### Part C: check the numbers yourself (8 minutes)
 
 The BLS projections change every two years. Read them from the source.
 
@@ -514,12 +518,11 @@ list at the top of the chapter.
 | You have | Meets | Falls short |
 |---|---|---|
 | The prediction and its outcome (obj. 1) | You can state the 2016 claim, give two primary numbers from 2026 (positions, fill rate, or workforce projection), and say in one sentence why "early" is the wrong diagnosis | "He was wrong" with no number, or "he was just early" |
-| A graded chatbot answer (obj. 2) | All four rows filled, and you searched PubMed for the study it cited | Rows ticked without checking anything |
+| The four questions for your specialty (obj. 2) | All four rows filled, and one study opened and checked against the number the answer gave | Rows filled without checking anything |
 | Your three-line forecast (obj. 2, 6) | A task, not a job; a fraction with a named source or an honest "my estimate"; a factor with a reason | "Documentation, 50%, probably fine" |
 | The CAD sentence (obj. 3) | "Adoption and outcomes are separate questions," with the biopsy-rate finding attached | Only the slogan |
-| The system-cost sentence (obj. 4) | You can explain in your own words why 5.8 percent more RVUs is not a cost reduction, and what "bot wars" means | "AI saves money" or "AI wastes money" without a mechanism |
+| The system-cost sentence (obj. 4) | You can explain in your own words why 1.81 more RVUs a week is not a cost reduction, and what "bot wars" means | "AI saves money" or "AI wastes money" without a mechanism |
 | Three BLS rows (obj. 5) | Numbers and reasons read from the live pages, and a two-sentence explanation that names two factors | Numbers copied from this chapter |
-| The "percent of what" habit | You can name the three denominators behind "25 percent administrative" | One number, one study |
 
 ## What this changes for you
 
