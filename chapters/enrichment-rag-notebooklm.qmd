@@ -42,8 +42,8 @@ Course competencies: AIM-1 (foundations), AIM-2 (critical appraisal), AIM-9
 **What you need.** A Google account for Gemini Notebook (a personal Gmail
 account works; see "Getting in" in the Do), and your university ChatGPT Edu or
 Copilot account in a second tab. Nothing to install. Made-up patients only.
-The time is about 25 minutes of reading, 7 of video, 35 of doing, and 10 for
-the check and the closing question.
+The time is about 20 minutes of reading, 7 of video, 35 to 40 of doing, and
+10 for the check and the closing question.
 
 ## Journal club is Thursday
 
@@ -73,15 +73,10 @@ significant in three models and only "directional" in the two strongest: a
 trend that could be chance.
 
 This chapter is about why the numbers are real, why the sentence drifted, and
-how to tell in about a minute. A general chatbot can invent a reference that
-does not exist; a retrieval tool almost never does. How the tool works is
-what tells you which mistakes are still possible after the references are
-fixed.
-
-Two words first, because vendors use both. A **grounded** tool is one that
-answers from documents it was given and points back to them. **Retrieval** is
-how it finds the right passages in those documents before it writes. The rest
-of the chapter explains both in detail.
+how to tell in about a minute. Two words first, because vendors use both. A
+**grounded** tool is one that answers from documents it was given and points
+back to them. **Retrieval** is how it finds the right passages in those
+documents before it writes.
 
 ## Why this matters
 
@@ -99,11 +94,6 @@ protects you from, and what it does not, follows from how the tool works.
 When a notebook misreads a paper, the result is a wrong slide. When the
 grounded tool inside the EHR misreads a protocol, the result can harm a
 patient. The clinician who repeated the sentence is responsible for it.
-
-The same mechanism also explains three things many clinicians get wrong. Why
-a chatbot seems to remember you. Why nothing you type teaches it anything.
-And why the rule against pasting patient information is about where your text
-is stored, not about the model learning.
 
 ## How it works
 
@@ -129,18 +119,16 @@ measured in **tokens**, which are words or pieces of words, and it has a fixed
 size. When you close the tab, the context is gone. The model is exactly what
 it was before you opened it.
 
-So a language model does not learn from its users. Nothing you type changes
-the model's **weights**, the billions of numbers set during training that make
-it what it is. What changes between turns is the context, and only the
-context. "It got better as we talked" means "the context got longer."
+So a language model does not learn from you. Nothing you type changes the
+model's **weights**, the billions of numbers set during training that make it
+what it is. What changes between turns is the context. "It got better as we
+talked" means "the context got longer."
 
 Two things can look like learning, and neither is. Some chatbots, ChatGPT
-among them, have a memory setting: they save notes about you and paste them
-into the context of later chats. And the company may *store* what you type,
-and some consumer accounts allow it to be used to train the *next* model,
-months later. Both are questions about how your data is handled, not about
-the model you are talking to changing. That is why the course rule is about
-what you type in, in every account.
+among them, have a memory setting that saves notes about you and pastes them
+into later chats. And the company may *store* what you type; some consumer
+accounts let it train the *next* model, months later. Both are about how your
+data is handled. That is why the course rule is about what you type in.
 
 The context window has a fixed size, and the model does not read all of a
 long one equally well (Go deeper has the study). A retrieval tool's whole job
@@ -186,9 +174,9 @@ meaning.
 **Embedding** turns each passage into a list of numbers, called an
 **embedding**. Passages about similar things get similar numbers. "Apixaban
 reduced major bleeding" and "less hemorrhage with the factor Xa inhibitor"
-get numbers that are close together. "The patient's dog is named Apixaban" does not. This is
-the method from the word-embeddings talk in Go deeper. You do not need to
-know more than "similar meaning, nearby numbers."
+get numbers that are close together. "The patient's dog is named Apixaban"
+does not. You do not need to know more than "similar meaning, nearby
+numbers."
 
 **Indexing** stores those numbers so that, given a new list of numbers, the
 closest matches can be found in milliseconds.
@@ -246,11 +234,8 @@ your sources" is the sentence that tells you the tool is doing what it
 claims. You can try this yourself in Step 4 of the Do.
 
 ::: {.callout-note title="These numbers move"}
-Every rate above is one tool, one field, one month. The study that used the
-2/1/0 scale found the ranking of the general chatbots changed between question
-types [@pmid:42232526]. The overgeneralization study below found *newer*
-models did worse than older ones [@pmid:40309181]. When your own run in the Do
-disagrees with a number here, that is expected. The pipeline in
+Every rate above is one tool, one field, one month. When your own run in the
+Do disagrees with a number here, that is expected. The pipeline in
 @fig-rag-pipeline is the part that lasts.
 :::
 
@@ -295,19 +280,16 @@ not inevitable. It is common.
 **The check.** In a notebook, clicking the citation shows you the passage.
 Here, open the paper and find Table 6. Two of the five confidence intervals
 cross zero, which means the gain for those two models may be nothing. That is
-the whole check, and it takes less time than reading this paragraph. The
-general rule: for any sentence you are going to repeat, click its citation
-and read *one line above and one line below* the highlighted passage. The
+the whole check. Read *one line above and one line below* the passage: the
 line below is where the "however" usually is.
 :::
 
 :::: {.callout-note collapse="true" title="If you have more time: what chunking does to a table"}
-Here is the step most explanations skip, and the one that produces the
-strangest errors. Take a results table in a paper you uploaded. It is a few
-lines of text. If the chunk boundary falls inside it, the tool stores
-something like this. The block below is an illustration built from Table 6
-of the guideline study and the sentence that describes it. The cut and the
-layout are made up; it is not a screenshot of any tool.
+Take a results table in a paper you uploaded. To the tool it is a few lines
+of text. If a chunk boundary falls inside it, the tool stores something like
+the block below. It is built from Table 6 of the guideline study and the
+sentence that describes it. The cut and the layout are made up; it is not a
+screenshot of any tool.
 
 ::: {.chunks}
 <pre class="chunk"><span class="lbl">chunk 7 of 23</span>...
@@ -331,13 +313,11 @@ retrieved, the model sees the headings and the two rows where retrieval
 helped most. It never sees the sentence that qualifies them. Both chunks are
 real. Both citations will resolve. Neither is the table.
 
-Nothing in the basic pipeline knows that a table is a table. Nothing knows
-that a figure legend belongs to a figure, or that "not statistically
-significant" three lines later applies to the number above it. Better tools
-add a page-layout step that tries to keep tables whole. From the outside you
-cannot tell whether yours does, or how well. Rows of a table cut apart, a
-footnote separated from its value, a "however" at the top of the next page:
-these are errors of *reading*, made on a source that is real.
+Nothing in the basic pipeline knows that a table is a table, or that "not
+statistically significant" three lines later applies to the number above it.
+Better tools try to keep tables whole, and from the outside you cannot tell
+how well yours does. These are errors of *reading*, made on a source that is
+real.
 ::::
 
 ### Three more things grounding cannot see
@@ -346,10 +326,9 @@ The pipeline answers from what you gave it. That sets three limits, and no
 citation link will show you any of them.
 
 **The source set.** A confident summary of five weak papers is a confident
-summary of five weak papers, with perfect citations. Grounding moves the
-appraisal problem from the answer to the sources. If you want to trust the
-notebook, you have to trust what you put in it. Judging the papers themselves
-is the subject of [Critical appraisal](core-appraisal.qmd).
+summary of five weak papers, with perfect citations. To trust the notebook,
+you have to trust what you put in it. Judging the papers themselves is the
+subject of [Critical appraisal](core-appraisal.qmd).
 
 **What is missing.** A notebook cannot cite a paper it does not contain. It
 will not tell you that the trial that would change your mind was published
@@ -381,19 +360,16 @@ part of it.
 presented by Marina Danilevsky (23 August 2023; 6 min 36 s).
 <https://www.youtube.com/watch?v=T-D1OfcDW1M>
 
-Six and a half minutes, nothing you need to know first, and a whiteboard
-version of @fig-rag-pipeline. Listen for the story about which planet has the
-most moons. The speaker's confident wrong answer is what happens when the
-model relies on what it learned in training, which was out of date. Her fix,
-going to look it up, is retrieval. Then notice what the video does not say.
-It presents retrieval as the answer to being wrong and out of date. It never
-mentions that the model can retrieve the right passage and misread it. That
-gap is what this chapter covers.
+A whiteboard version of @fig-rag-pipeline, with nothing you need to know
+first. Listen for the story about which planet has the most moons. The
+speaker's confident wrong answer comes from what the model learned in
+training, which was out of date. Her fix, going to look it up, is retrieval.
+Then notice what the video does not say: that the model can retrieve the
+right passage and misread it. That gap is what this chapter covers.
 
 **Reading alternative.** The written article this chapter is built on,
 [Grounding AI in real sources](https://talks.seandavis.net/archive/2025-10-07-rag-notebooklm-idpt-8079/),
-builds up the context window from the World Series example and shows the
-conversation as raw text. About fifteen minutes.
+about fifteen minutes.
 
 ## Do
 
@@ -419,11 +395,11 @@ computing your requests take, and it
 [refreshes every five hours](https://blog.google/innovation-and-ai/products/gemini-notebook/new-flexible-usage-limits/).
 This chapter needs far less than that.
 
-If you have no Google account and will not make one: your university ChatGPT
-Edu or Copilot lets you attach files and say "answer only from the attached
-documents." That gives you the same *exercise* with a weaker *guarantee*. A
-general chatbot told to stay inside its sources will still use its training
-data at times. Say which tool you used in question 2 of your
+No Google account, and you will not make one? Attach the papers in ChatGPT
+Edu or Copilot and say "answer only from the attached documents." That gives
+you the same *exercise* with a weaker *guarantee*, because a general chatbot
+told to stay inside its sources will still use its training at times. Say
+which tool you used in question 2 of your
 [journal](../course/learning-journal.qmd).
 :::
 
@@ -439,18 +415,18 @@ AND <your specialty> AND free full text[filter]
 
 Filter PubMed to the last three years, read three abstracts, and take the
 three to five papers that share a question. "Free full text" matters because
-NotebookLM needs the paper, not the abstract. For each one, open the PMC
-version and paste its URL as a website source. That is faster than downloading
-and uploading the PDF, and it works the same way.
+Gemini Notebook needs the paper, not the abstract. For each one, open the PMC
+version and paste its URL as a website source. That is faster than
+downloading and uploading the PDF, and it works the same way.
 
-If you have no specialty yet, or want a set built to fail in interesting ways,
-use this ready-made set. Every paper is open access on PMC. Every one was
-checked in PubMed on 2026-09-07. And they are, on purpose, about the tool you
-are using:
+If you have no specialty yet, or want a set chosen for this exercise, use this
+ready-made set. Every paper is open access on PMC. Every one was checked in
+PubMed. And they are, on purpose, about the tool you are using; they call it
+by its old name, NotebookLM.
 
 | Paper | What it is | PMC |
 |---|---|---|
-| Vollmer et al., *Diagnostics* 2026 [@pmid:42587692] | Six models, 50 guideline questions, with and without retrieval | [PMC13465324](https://pmc.ncbi.nlm.nih.gov/articles/PMC13465324/) |
+| Vollmer et al., *Diagnostics* 2026 [@pmid:42587692] | 50 guideline questions; five models, each with and without retrieval | [PMC13465324](https://pmc.ncbi.nlm.nih.gov/articles/PMC13465324/) |
 | Duran et al., *Digital Health* 2026 [@pmid:42534267] | NotebookLM for orthopedic disability rating: 91% vs 68% accuracy | [PMC13420063](https://pmc.ncbi.nlm.nih.gov/articles/PMC13420063/) |
 | Seki et al., *Clinics and Practice* 2026 [@pmid:42645138] | NotebookLM classifying radiographs: agreement with dentists near zero | [PMC13511330](https://pmc.ncbi.nlm.nih.gov/articles/PMC13511330/) |
 | Basu and Huynh, *BMC Health Serv Res* 2026 [@pmid:42251377] | Systematic review of 44 hallucination-mitigation studies | [PMC13470931](https://pmc.ncbi.nlm.nih.gov/articles/PMC13470931/) |
@@ -460,81 +436,95 @@ are using:
 Make a new notebook, add the sources, and wait for each to finish processing.
 That wait is steps 1 to 3 of @fig-rag-pipeline happening.
 
-### Step 2: ask three questions and click every citation (10 minutes)
+### Step 2: make a brief, then check three sentences (15 minutes)
 
-Ask three questions you would want answered for journal club. One of them
-should be a question **you already know the answer to**, so you can judge the
-answer rather than accept it. For the ready-made set, use these:
+Ask the notebook for something you would really use:
 
-1. What did each paper measure, and what was its main result?
-2. Did retrieval work for all the models in the guideline study?
-3. Is NotebookLM accurate?
+```
+Make me a one-page journal-club brief from these four papers. For each
+paper: the question, the design, the main result with its numbers, and
+one limitation. End with where the papers agree and where they disagree.
+```
 
-For every citation in every answer, not a sample, click it. Read the
-highlighted passage plus one line above and one line below. Score each
-sentence-and-citation pair on [the appraisal chapter's](core-appraisal.qmd) scale (@tbl-scoring). **2** if the
-passage supports the sentence as written. **1** if the passage is real but the
-sentence is broader, narrower, or different. **0** if the cited passage does not exist, or the citation points at
-something other than what the sentence names. You are looking for a 1. There is usually at least one.
+If you used your own sources, change "four" to the number you added.
+
+Read the brief. It took seconds, and most of it will be right. Your job is to
+find out which parts.
+
+Pick three sentences you would say out loud at journal club: one with a
+number, one that compares papers, and one whose answer you already know. For
+the ready-made set, make that last one the sentence about the guideline
+study's main result; you know from the opening what the paper says. For each
+sentence, click its citation. Read the highlighted passage plus one line above
+and one line below. Then score it on the 2/1/0 scale from "Why grounded tools
+invent less". **2** if the passage supports the sentence as written. **1** if
+the passage is real but the sentence is broader, narrower, or different.
+**0** if the cited passage does not exist, or is about something other than
+what the sentence says.
+
+Then correct one sentence so that it says what its passage says. If all three
+scored 2, that is a real result: you have checked the sentences you will
+repeat. Note what made you trust them. Copy the corrected brief into a
+document you keep. That page is what you take to journal club.
 
 ### Step 3: ask what the sources disagree about (5 minutes)
 
-Ask a question your sources answer differently. For the ready-made set,
-question 3 above is it. One paper found NotebookLM raised accuracy from 68% to
-91% on a rating task done from a single written regulation. Another found its
+Ask a question your sources answer differently. For the ready-made set, ask:
+*Is NotebookLM accurate?* One paper found it raised accuracy from 68% to 91%
+on a rating task done from a single written regulation. Another found its
 agreement with dentists on radiographs was slight or worse. Watch what the
 tool does with that. Does it present both, with the task each one measured?
 Or does it produce a sentence like "NotebookLM shows promise but has
 limitations," which is true of everything and cites both?
 
-### Step 4: try to make it fabricate, then ask the chatbot (5 minutes)
+### Step 4: ask what the sources cannot answer, then ask the chatbot (5 minutes)
 
 Ask the notebook something its sources cannot support: a statistic that is
 not in them, a named trial that is not there, a population none of the papers
 studied. For the ready-made set: *What is the fabrication rate of NotebookLM
 on citations in cardiology?* No source contains that. A grounded tool should
-say so, give a cautious partial answer, or give a short, hedged answer.
+say so, or give a short answer that says what its sources do and do not
+cover.
 
-Now ask the identical question in your general chatbot tab. Do not prompt it
-carefully. Ask it the way you asked the notebook. Compare on one thing only:
-**can you check where each sentence came from?** The chatbot's answer may be
-better written and more useful. That is not the thing you are comparing.
+Now ask the identical question in ChatGPT Edu. Ask it the way you asked the
+notebook. Compare on one thing only: **can you check where each sentence came
+from?** The chatbot's answer may be better written and more useful. That is
+not the thing you are comparing.
 
-If your chatbot searched the web and cited pages, notice that this is a
+ChatGPT Edu searches the web, so it may answer with links. That is a
 different question about where the answer came from. The page is real.
-Whether it is evidence is [the appraisal chapter's](core-appraisal.qmd) job.
+Whether it is evidence is the subject of
+[Critical appraisal](core-appraisal.qmd).
 
 ### Record it
 
 ```
-Tool: NotebookLM / other: ____________     Date: __________
-Sources (3–5, with PMC IDs or titles):
-  1 ______________________________________
-  2 ______________________________________
-  3 ______________________________________
-  4 ______________________________________
-  5 ______________________________________
+Tool: Gemini Notebook / other: ____________     Date: __________
+Sources (with PMC IDs or titles): ______________________________________
 
-Q1 ____________________________________  citations clicked ___  scores: 2s __ 1s __ 0s __
-Q2 ____________________________________  citations clicked ___  scores: 2s __ 1s __ 0s __
-Q3 ____________________________________  citations clicked ___  scores: 2s __ 1s __ 0s __
+Three sentences I checked, with scores (2, 1, or 0):
+  1 ______________________________________________________  score __
+  2 ______________________________________________________  score __
+  3 ______________________________________________________  score __
 
-For the score-1 you found (or the closest to one): in one sentence, what did
-the tool say, and what does the passage say?
-________________________________________________________________________
+The sentence I corrected (or "all three matched", and why I trust them):
+  Before: ______________________________________________________________
+  After:  ______________________________________________________________
 
 Disagreement question: did the tool present both positions, or smooth them?
 ________________________________________________________________________
 
-Fabrication attempt. What you asked: __________________________________
+Question the sources cannot answer. What I asked: _____________________
   Notebook said: ________________________________________________________
   Chatbot said:  ________________________________________________________
-  Which one could you trace, sentence by sentence? _____________________
+  Which one could I trace, sentence by sentence? _______________________
 ```
 
-The score-1 sentence is the thing to keep from this exercise. "Three of
-twelve citations were stretched" is a number that will change next month.
-Being able to say *how* one was stretched is the skill.
+Keep the corrected brief. You know which of its sentences you have read
+against the paper, and you can say *how* any wrong one was stretched. That is
+the skill; a count like "three of twelve citations were stretched" will
+change next month. What you checked, how, and what you found is question 2
+of your [learning journal](../course/learning-journal.qmd).
 
 ## Check
 
@@ -544,58 +534,56 @@ Score yourself against this before moving on.
 |---|---|---|
 | The no-memory explanation | You can say what is re-sent each turn and why a new chat starts from zero, without the word "memory" | "It remembers the conversation" |
 | The no-learning statement | You can say what changes between turns (the context) and what does not (the model), and separate that from where your text is stored | "It learns from what you type" |
-| The pipeline | Six steps in order, and one sentence on what chunking does to a table | Fewer than six, or "it searches the documents" |
+| The pipeline | Six steps in order, and what each one does in a sentence | Fewer than six, or "it searches the documents" |
 | Why the citations are real | You can say why a citation from a grounded tool points at a passage, and why that is not the same as the model being careful | "It's more accurate" |
-| A scored set of citations | Every citation clicked; one score-1 sentence quoted beside its passage | Scores assigned by reading the answer alone |
+| Your brief | Three sentences clicked and scored, each beside its passage; one corrected, or a reason all three stand | Scores given by reading the brief alone |
 | The disagreement result | You can say whether the tool presented both sources or smoothed them, and quote the smoothing sentence if it did | "It handled it fine" |
-| The fabrication contrast | Both answers recorded; you can say which one you could trace and why the other reads better anyway | Only the notebook's answer |
+| The contrast with the chatbot | Both answers recorded; you can say which one you could trace and why the other reads better anyway | Only the notebook's answer |
 | The search limit | You can say in one sentence when a grounded notebook is not a literature search | "It's good for research" |
 
 ## What this changes for you
 
 *What does this change about how you'll practice?* Answer in writing before
 you close this chapter. Two specifics. First: the next time a summary with
-citations is put in front of you, from a notebook, an EHR tool, or a co-intern,
-what is the one-minute check you will do before repeating a sentence from it?
-Which of the failures in this chapter does that check catch? Second: go back
-to Monday. The five PDFs are in the notebook, the first sentence of its answer
-is on your draft slide, and journal club is Thursday. What do you change on
-the slide? What do you say when the chief asks how you prepared? What do you
-do with the two papers that disagree? One word is not an answer to either.
+citations is put in front of you, from a notebook, an EHR tool, or a
+co-intern, what is the one-minute check you will do before repeating a
+sentence from it? Which of the failures in this chapter does that check
+catch? Second: go back to Monday. The five PDFs are in the notebook, the first
+sentence of its answer is on your draft slide, and journal club is Thursday.
+What do you change on the slide? What do you say when the chief asks how you
+prepared? What do you do with the two papers that disagree? One word is not
+an answer to any of these.
 
 ## Go deeper
 
 **Papers**
 
-- The overgeneralization study, 10 models and 4,900 summaries [@pmid:40309181].
-  Its finding that newer models did worse is the "these numbers move" point
-  applied to reading rather than references.
-- The guideline-retrieval benchmark behind @fig-vollmer, whose pipeline was
-  released openly [@pmid:42587692], and the systematic review of ways to reduce
-  hallucination that compares retrieval with the other methods [@pmid:42251377].
+- The overgeneralization study, 10 models and 4,900 summaries
+  [@pmid:40309181]. It found newer models did worse than older ones.
+- The guideline-retrieval study behind @fig-vollmer, whose pipeline was
+  released openly [@pmid:42587692], and a systematic review that compares
+  retrieval with other ways to reduce made-up content [@pmid:42251377].
 - Two studies of NotebookLM itself: one where it helped [@pmid:42534267] and
   one where it was the wrong tool for an image task [@pmid:42645138]. Read
   them as a pair.
-- The dentistry comparison whose phrase, "avoided fabricated references but
-  still generated incorrect interpretations," is this chapter in nine words
-  [@pmid:41266194].
+- The dentistry comparison: retrieval systems "avoided fabricated references
+  but still generated incorrect interpretations" [@pmid:41266194].
 - "Lost in the middle" [@doi:10.1162/tacl_a_00638]. Researchers moved the one
   relevant document among many others. Models answered best when it sat at
   the start or the end of the context, and worse when it was in the middle.
   A long context window does not mean the model reads all of it well.
 - A two-day workshop for clinicians that limits citation generation to
-  NotebookLM and then makes participants check every one. It is honest that
-  whether this reduces fabrication was not tested [@pmid:42684317].
+  NotebookLM and then makes participants check every one. It says plainly
+  that whether this reduces fabrication was not tested [@pmid:42684317].
 
 **Talks**
 
 - [Grounding AI in real sources](https://talks.seandavis.net/archive/2025-10-07-rag-notebooklm-idpt-8079/):
-  the written article this chapter is built on, with the conversation shown as
-  raw text and the original shared-notebook exercise.
+  the written article this chapter is built on, with the conversation shown
+  as raw text.
 - [Word embeddings as the basis for LLMs](https://talks.seandavis.net/archive/2024-11-12-word-embeddings-basis-for-llms/):
-  what "similar meaning, nearby numbers" actually means, with an interactive
-  embedding projector, for anyone who wants to understand step 2 of the
-  pipeline in more detail.
+  what "similar meaning, nearby numbers" means, with an interactive embedding
+  projector.
 - [Prompt engineering](https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/):
-  ten rules with clinical examples, for students whose Step 2 questions came
-  back vague. [the prompting lab](enrichment-prompting-lab.qmd) is built on it.
+  ten rules with clinical examples, if your brief came back vague. The
+  [prompting lab](enrichment-prompting-lab.qmd) is built on it.
