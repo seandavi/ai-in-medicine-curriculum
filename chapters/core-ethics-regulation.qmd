@@ -200,7 +200,7 @@ documentation, these concerns "either do not arise or are easily mitigated"
 by the clinician reviewing, editing, and approving the draft. His reason: the
 source is the clinician's own visit [@pmid:40717487].
 
-Armitage's argument assumes that review happens, and that it works. Three
+Armitage's argument assumes that review happens, and that it works. Two
 pieces of evidence test that.
 
 **Review is uneven.** Besides the unedited notes in the pilot from the
@@ -215,28 +215,13 @@ replies. The authors read this as anchoring (sticking close to the first answer 
 see) and automation bias: the
 physicians might be adopting the draft's assessment, not just its wording
 [@pmid:38664108]. **Automation bias** is the habit of trusting a machine's
-suggestion more than it deserves.
+suggestion more than it deserves. A systematic review found that it grows
+with heavy workload and time pressure [@pmid:21685142]. Fourteen notes at
+6:40 p.m. is both.
 
-**Explanations did not reliably protect clinicians from a biased model.**
-This study is about diagnosis, not notes, but it tests a safeguard
-institutions often offer. ([The bias and equity
-chapter](core-bias-equity.qmd) uses the same study.) Jabbour and colleagues
-gave 457 hospitalists, nurse practitioners, and physician assistants written
-cases of acute respiratory failure. Baseline diagnostic accuracy was 73.0%. A
-standard AI model raised accuracy by 2.9 points; with an image-based
-explanation of its reasoning, by 4.4 points. A *systematically biased* model
-lowered accuracy by 11.3 points. Adding explanations to the biased model
-recovered 2.3 points. The confidence interval for that difference crossed
-zero, so the true recovery may be nothing [@pmid:38112814].
-
-![The Jabbour finding, redrawn from the paper's own numbers. Explanations
-helped a little when the model was right and did not significantly help when
-the model was wrong. Data from Jabbour et al., *JAMA* 2023;330:2275–2284;
-figure drawn for this chapter.](../images/jabbour-2023-explanations.svg){#fig-jabbour fig-alt="Bar chart of change in clinician diagnostic accuracy in percentage points from a 73.0% baseline. Standard AI model without explanation plus 2.9; with explanation plus 4.4; biased model without explanation minus 11.3; biased model with explanation minus 9.1. Whiskers show 95% confidence intervals; the two biased-model intervals overlap."}
-
-In this study, image-based explanations did not reliably reduce automation
-bias. Automation bias is a property of tired people under time pressure,
-which is what you will be at 6:40 p.m.
+Some institutions offer another safeguard: showing the model's reasoning. In
+one large study of diagnosis, that did not reliably protect clinicians from a
+biased model. The details are in [Go deeper](#do-explanations-help).
 
 So review is a duty, not a guarantee. One habit may help: decide the plan
 yourself before you read the draft's. McGaughey and colleagues propose that
@@ -594,6 +579,27 @@ why.
 
 Everything from here to the end of the chapter is optional and is not
 counted in the chapter's time.
+
+### Do explanations help?
+
+This study is about diagnosis, not notes, but it tests a safeguard
+institutions often offer: showing the model's reasoning. Jabbour and
+colleagues gave 457 hospitalists, nurse practitioners, and physician
+assistants written cases of acute respiratory failure. Baseline diagnostic
+accuracy was 73.0%. A standard AI model raised accuracy by 2.9 points; with an
+image-based explanation of its reasoning, by 4.4 points. A *systematically
+biased* model lowered accuracy by 11.3 points. Adding explanations to the
+biased model recovered 2.3 points. The confidence interval for that
+difference crossed zero, so the true recovery may be nothing
+[@pmid:38112814].
+
+![The Jabbour finding, redrawn from the paper's own numbers. Explanations
+helped a little when the model was right and did not significantly help when
+the model was wrong. Data from Jabbour et al., *JAMA* 2023;330:2275–2284;
+figure drawn for this chapter.](../images/jabbour-2023-explanations.svg){#fig-jabbour fig-alt="Bar chart of change in clinician diagnostic accuracy in percentage points from a 73.0% baseline. Standard AI model without explanation plus 2.9; with explanation plus 4.4; biased model without explanation minus 11.3; biased model with explanation minus 9.1. Whiskers show 95% confidence intervals; the two biased-model intervals overlap."}
+
+In this study, image-based explanations did not reliably reduce automation
+bias.
 
 ### Liability in more detail (optional)
 
