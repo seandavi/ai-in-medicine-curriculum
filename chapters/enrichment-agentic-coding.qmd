@@ -213,38 +213,38 @@ as good as the model's memory of the score, and a rule it leaves out leaves no
 trace. That is why you check it against MDCalc and the paper.
 
 The second row is where non-programmers are weakest. Medical students spent
-three hours building health apps by prompting. Every group produced a working
-prototype, and no group added any protection for the data the app collected.
-The authors' summary was that making it easier to build is not the same as
-making it easier to build safely [@pmid:42394077]. An editorial in the
+three hours building health apps by prompting. All three groups produced a
+working prototype, and none added any protection for the data the app
+collected. The authors concluded that easier building has to come with
+training in data security [@pmid:42394077]. An editorial in the
 laboratory medicine literature gives the pattern a name you will recognise
 from the wards, the illusion of competence. Code that is correctly written and
 looks professional is most convincing to the people least able to find its
 flaws. There is a real difference between code that runs and code that is
 safe to run on patients [@pmid:42695169].
 
-The third row is the one people notice least. A nursing research group used a coding agent
-to run a statistical analysis (a logistic regression) and checked every output
-against a published reference. The coefficients and *p* values matched. An
-error in one confidence interval was missed on first review and caught only
-on a second review [@pmid:42611917]. The tool was mostly right, which is the
-condition under which people stop checking.
+A tool that is mostly right is the hardest case. A nursing research group used
+a coding agent to run a statistical analysis (a logistic regression) and
+compared its output with a published reference. The coefficients and *p*
+values matched. An error in one confidence interval was missed on the first
+review and found only later [@pmid:42611917]. The tool was mostly right, which
+is the condition under which people stop checking.
 
 ### What "checked" looks like
 
 The counterexample is worth knowing because it shows the standard can be met. A
 cardiology group built a web calculator for three acute coronary syndrome risk
 scores, with ChatGPT writing the code. They then compared its output against
-226 registry patients whose scores had been computed independently. Agreement
-was exact (*r* = 1.000 for both scores that had a registry comparison), and
-the paper says so in the methods, with the registry named [@pmid:40462782].
-That is not a large study. It is not clinical validation, which would mean
-showing the tool helps patients, and the authors are careful to say so. It is
-what a *technical* check looks like: an outside source of truth, a fixed set
-of cases, and a written result.
+226 registry patients whose scores had been computed independently. They
+report complete agreement (*r* = 1.000 for both scores that had a registry
+comparison), with the registry named [@pmid:40462782]. That is not a large
+study. It is not clinical validation either, which would mean showing the tool
+helps patients; the authors say that further clinical validation is needed.
+It is what a *technical* check looks like: an outside source of truth, a fixed
+set of cases, and a written result.
 
-The resident's tool in the workroom had none of those. Yours, in thirty
-minutes, will have a small version of all three.
+The resident's tool in the workroom had none of those. Yours, in half an hour,
+will have a small version of all three.
 
 ### The named hazard
 
