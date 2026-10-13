@@ -205,20 +205,116 @@ in the window.
 That is the entire method. The model did not become honest. It was given the
 answer and asked to paraphrase it.
 
-### What chunking does to a table
+### Why grounded tools invent less
 
+Studies that check citations often score each one on a simple scale. **2**:
+the source supports the sentence. **1**: the source is real, but the sentence
+misdescribes it. **0**: the source does not exist as given. In one such study
+of spine-surgery questions, a tool that searches PubMed directly scored 2 on
+every citation. The general chatbots did worse, and the worst made up 26% of
+its references [@pmid:42232526]. The six steps above are the reason.
+
+The guideline study from the opening measured the same effect one model at a
+time [@pmid:42587692]. Five models answered 50 questions from a German
+guideline on oral cavity cancer, each with and without retrieval of that
+guideline. **Hallucination**, the field's word for made-up content stated as
+fact, fell from 42% to 4%. Citations that pointed at a real retrieved passage
+rose from none to between 51% and 89%, depending on the model.
+
+![What retrieval changes, and by how much. The guideline study compared six
+models; this figure shows the five that were each run with and without
+retrieval of the guideline, on 50 questions. Redrawn from the reported
+figures in Vollmer et al., *Diagnostics* 2026 (open access,
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)). The bar for
+citations that point at a real passage shows the range across models.](../images/retrieval-hallucination-vollmer-2026.svg){#fig-vollmer fig-alt="Bar chart with two pairs of bars. Content-level hallucination: 42 percent without retrieval, 4 percent with retrieval. Citations grounded in a retrieved passage: 0 percent without retrieval, 51 to 89 percent with retrieval."}
+
+The drop comes from how the tool is built, not from the tool being careful.
+The same paper found the *accuracy* gain from retrieval was large for the
+three weaker models. For the two strongest it was small and not statistically
+significant. The drop in made-up content, and the gain in checkable
+citations, held across all five [@pmid:42587692]. The authors add that the
+strong models may simply have been near the top of the scale already. The
+safer summary is this: grounding does not reliably make a model smarter. It
+makes it *checkable*.
+
+A grounded tool can also do something a general one does not: say it does
+not know. A guideline chatbot for lung cancer was asked about cancers its
+guideline did not cover. It "consistently declined to answer and indicated
+that the available information was insufficient" [@pmid:42611847]. A general
+chatbot, asked the same question, writes a paragraph. "I cannot find that in
+your sources" is the sentence that tells you the tool is doing what it
+claims. You can try this yourself in Step 4 of the Do.
+
+::: {.callout-note title="These numbers move"}
+Every rate above is one tool, one field, one month. The study that used the
+2/1/0 scale found the ranking of the general chatbots changed between question
+types [@pmid:42232526]. The overgeneralization study below found *newer*
+models did worse than older ones [@pmid:40309181]. When your own run in the Do
+disagrees with a number here, that is expected. The pipeline in
+@fig-rag-pipeline is the part that lasts.
+:::
+
+### The failure grounding does not fix
+
+Go back to the opening answer. Its sources are real, and its numbers are in
+the paper's Table 6. Its first sentence says retrieval "improved accuracy
+across all models." The paper says the gain was significant for three models
+and "small and not statistically significant for the already-strong bases."
+The answer's second sentence half-corrects this. But the first sentence is the
+one that goes on the slide.
+
+On the 2/1/0 scale this is a **score 1**: a real reference, described more
+broadly than it supports. It is the kind of error that grounding, because of
+how it is built, cannot catch. The pipeline guarantees that the text came from
+the passages. It does not guarantee that the model read the passages the way
+the authors meant them. A dentistry study put it this way: the retrieval
+systems "avoided fabricated references but still generated incorrect
+interpretations" [@pmid:41266194].
+
+The misreading usually goes one way. When 10 widely used models were asked to
+summarize scientific texts, most produced conclusions broader than the
+original, even when told to be accurate. Model-written summaries were nearly
+five times more likely than human-written ones to contain a broad
+generalization [@pmid:40309181]. "In this subgroup" becomes "in patients."
+"Was associated with" becomes "improves." "Not significant for the strong
+models" becomes "across all models." The summary reads better than the paper,
+and that is the problem.
+
+::: {.callout-tip title="Where the opening answer came from, and how to catch it" collapse="true" #specimen}
+**The run.** On 2026-09-07 the full text of Vollmer et al., *Diagnostics*
+2026 [@pmid:42587692] was given to a tool that answers only from the page it
+is given. That tool was a Claude model, the one behind the web-page reader in
+Claude Code. It was not Gemini Notebook. The question was the journal-club
+question from the opening: *did adding retrieval improve accuracy, and did it
+work for all the models?* The three sentences at the top of this chapter are
+its answer, word for word. A second run on a different paper
+[@pmid:42534267] produced a score-2 answer. That one kept the authors' own
+caution that the tool had not been tested at other sites. The misreading is
+not inevitable. It is common.
+
+**The check.** In a notebook, clicking the citation shows you the passage.
+Here, open the paper and find Table 6. Two of the five confidence intervals
+cross zero, which means the gain for those two models may be nothing. That is
+the whole check, and it takes less time than reading this paragraph. The
+general rule: for any sentence you are going to repeat, click its citation
+and read *one line above and one line below* the highlighted passage. The
+line below is where the "however" usually is.
+:::
+
+:::: {.callout-note collapse="true" title="If you have more time: what chunking does to a table"}
 Here is the step most explanations skip, and the one that produces the
 strangest errors. Take a results table in a paper you uploaded. It is a few
 lines of text. If the chunk boundary falls inside it, the tool stores
-something like this. The block below is an illustration built from the
-differences the guideline study reports; it is not a screenshot of any tool.
+something like this. The block below is an illustration built from Table 6
+of the guideline study and the sentence that describes it. The cut and the
+layout are made up; it is not a screenshot of any tool.
 
 ::: {.chunks}
-<pre class="chunk"><span class="lbl">chunk 7 of 23</span>... rated by three blinded specialists.
+<pre class="chunk"><span class="lbl">chunk 7 of 23</span>...
 
-Table 6. Judge accuracy by model, with and without retrieval (mean, 95% CI).
+Table 6. Within-model effect of guideline retrieval (automated judge).
 
-Model             Without   With    Difference
+Model             Base      +RAG    Δ accuracy (95% CI)
 Mistral Small     3.40      4.34    +0.94 (0.58–1.30)
 Qwen3-Next        3.52      4.38    +0.86 (0.50–1.22)</pre>
 <pre class="chunk"><span class="lbl">chunk 8 of 23</span>GPT-OSS-120B      3.62      4.34    +0.72 (0.36–1.08)
@@ -231,126 +327,18 @@ The gain was large for the weaker models and small and not statistically signifi
 Chunk 8 has the rows that matter for the question in the opening scenario.
 Chunk 8 has no column headings. When it is retrieved alone, the model sees
 five numbers per line and has to guess what they mean. When only chunk 7 is
-retrieved, the model sees the headings and the two rows where retrieval helped most. It never
-sees the sentence that qualifies them. Both chunks are real. Both citations
-will resolve. Neither is the table.
+retrieved, the model sees the headings and the two rows where retrieval
+helped most. It never sees the sentence that qualifies them. Both chunks are
+real. Both citations will resolve. Neither is the table.
 
 Nothing in the basic pipeline knows that a table is a table. Nothing knows
 that a figure legend belongs to a figure, or that "not statistically
 significant" three lines later applies to the number above it. Better tools
-add a page-layout step that tries to keep tables whole, but from the outside
-you cannot tell whether yours does, or how well. Rows of a table cut apart.
-A footnote separated from the value it qualifies. A "however" at the top of
-the next page. These are the retrieval tool's typical errors. They are errors
-of *reading*, made on a source that is real.
-
-### Why grounded tools fabricate less: the numbers
-
-[the appraisal chapter](core-appraisal.qmd) gave you the main result. On the 2/1/0 citation scale in
-@tbl-scoring (2, accurate: the source supports the sentence; 1,
-misrepresented: the source is real but misdescribed; 0, fabricated: the
-source does not exist as given), a tool that indexes PubMed produced
-no fabricated citations, while general chatbots
-fabricated between 2% and 26% [@pmid:42232526]. The steps above are the
-reason, and the same pattern repeats wherever it has been measured.
-
-In one study, six models answered 50 questions from a head-and-neck oncology
-guideline, with and without retrieval of that guideline. **Hallucination**,
-the field's word for made-up content stated as fact (here, claims that
-contradicted the guideline or invented specifics), fell from 42% to 4%. The share of citations that pointed at a real retrieved passage rose from
-0% to between 51% and 89%, depending on the model [@pmid:42587692]. In implant
-dentistry, two retrieval systems answered with 0% fabricated references. A
-general model fabricated 82% of its references and 86% of its statistics
-[@pmid:41266194]. A 2026 systematic review of 44 studies found retrieval was
-the most often tested way of reducing hallucination. It reported 30% to 50%
-reductions from retrieval alone [@pmid:42251377].
-
-![What retrieval changes, and by how much. Six language models answered 50
-questions from a clinical guideline, with and without retrieval of that
-guideline. Redrawn from the reported figures in Vollmer et al., *Diagnostics*
-2026 (open access, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)).
-The bar for citations that point at a real passage shows the range across models.](../images/retrieval-hallucination-vollmer-2026.svg){#fig-vollmer fig-alt="Bar chart with two pairs of bars. Content-level hallucination: 42 percent without retrieval, 4 percent with retrieval. Citations grounded in a retrieved passage: 0 percent without retrieval, 51 to 89 percent with retrieval."}
-
-The drop comes from how the tool is built, not from the tool being careful.
-The same paper found the *accuracy* gain from retrieval was large for weak
-models. For strong models it was small and not statistically significant. The
-drop in hallucination, and the gain in how checkable the answers were, held
-across all of them [@pmid:42587692]. The authors add that the strong models
-may simply have been near the top of the scale already, so read the accuracy
-result with care. The safer summary is this: grounding does not reliably make
-a model smarter. It makes it *checkable*.
-
-There is one more thing a grounded tool does that a general one cannot, and
-you will produce it yourself in the Do block. Asked a question its sources do
-not cover, a well-built grounded tool declines. A guideline chatbot for lung
-cancer was asked about cancers the guideline did not cover. It "consistently
-declined to answer and indicated that the available information was
-insufficient" [@pmid:42611847]. A general chatbot, asked the same question,
-writes a paragraph. "I cannot find that in your sources" is the sentence that
-tells you the tool is doing what it claims.
-
-::: {.callout-note title="These numbers move"}
-Every rate above is one tool, one field, one month. The study that used the
-2/1/0 scale found the ranking of the general chatbots changed between question
-types [@pmid:42232526]. The overgeneralization study below found *newer*
-models did worse than older ones [@pmid:40309181]. When your own run in the Do
-block disagrees with a number here, that is expected. The pipeline in
-@fig-rag-pipeline is the part that lasts.
-:::
-
-### The failure grounding does not fix
-
-Go back to the opening answer. Its sources are real. Its numbers are in Table
-6. Its first sentence says retrieval "improved accuracy across all models."
-The paper's own words are that the gain was "small and not statistically
-significant for the already-strong bases." The answer's second sentence
-half-corrects this. But the second sentence is not the one that goes on the
-slide.
-
-On the 2/1/0 scale this is a **score 1**: a real reference, but a wrong
-description of what it says. It is also the most common kind of error
-a grounded tool makes. And it is the kind that grounding, because of how it is
-built, cannot catch. The pipeline guarantees that the text came from the
-passages. It does not guarantee that the model read the passages the way the
-authors meant them. The dentistry study's phrasing is exact: the retrieval
-systems "avoided fabricated references but still generated incorrect
-interpretations" [@pmid:41266194].
-
-The misreading usually goes one way. When 10 widely used models were asked to
-summarize scientific texts, most produced conclusions broader than the
-original, even when told to be accurate. Some did this in 26% to 73% of cases.
-Model-written summaries were nearly five times more likely than human-written
-ones to contain a broad generalization (odds ratio 4.85, 95% CI 3.06 to 7.70)
-[@pmid:40309181]. "In this subgroup" becomes "in patients." "Was associated
-with" becomes "improves." "Not significant for the strong models" becomes
-"across all models." The summary reads better than the paper. That is exactly
-the problem.
-
-::: {.callout-tip title="One real specimen, and how to catch it" collapse="true" #specimen}
-**The run.** On 2026-09-07 the full text of Vollmer et al., *Diagnostics*
-2026 [@pmid:42587692] was given to a summarizing tool that answers only from
-the page it is given (the model behind the WebFetch tool in Claude Code, which
-the vendor does not name). The question was the journal-club question from
-the opening scenario: *did adding retrieval improve accuracy, and did it work
-for all the models?* The three-sentence answer is reproduced word for word at
-the top of this chapter. A second run on a different paper in the same session
-[@pmid:42534267] produced a score-2 answer. That one correctly carried the
-authors' own caution that the tool had not been tested at other sites. The
-misreading is not inevitable. It is common.
-
-**The check.** Click the citation on the first sentence. It takes you to Table 6.
-Two of the five confidence intervals cross zero, which means the gain for
-those two models may be nothing. That is the whole check, and
-it took less time than reading this paragraph. The general rule: for any
-sentence you are going to repeat, click its citation and read *one line above
-and one line below* the highlighted passage. The line below is where the
-"however" usually is.
-
-**Before the cohort.** Re-run the same question in NotebookLM with the PMC
-page as the source. Record the model and date. Replace this specimen if the
-live run gives a cleaner score 1. The point is not this tool. The point is
-that you can produce one yourself.
-:::
+add a page-layout step that tries to keep tables whole. From the outside you
+cannot tell whether yours does, or how well. Rows of a table cut apart, a
+footnote separated from its value, a "however" at the top of the next page:
+these are errors of *reading*, made on a source that is real.
+::::
 
 ### Three more things grounding cannot see
 
@@ -360,22 +348,22 @@ citation link will show you any of them.
 **The source set.** A confident summary of five weak papers is a confident
 summary of five weak papers, with perfect citations. Grounding moves the
 appraisal problem from the answer to the sources. If you want to trust the
-notebook, you have to trust what you put in it. That is [the appraisal
-chapter's](core-appraisal.qmd) job.
+notebook, you have to trust what you put in it. Judging the papers themselves
+is the subject of [Critical appraisal](core-appraisal.qmd).
 
 **What is missing.** A notebook cannot cite a paper it does not contain. It
 will not tell you that the trial that would change your mind was published
 last month and is not in your five PDFs. That is the difference between a
 grounded search and a systematic one, a search that tries to find every
-relevant paper. The tool is excellent for *reading a defined set of
+relevant paper. The tool is very good at *reading a defined set of
 documents*. It is the wrong tool for *what does the literature say*, because
 there the papers you failed to include are the ones that matter.
 
 **Disagreement.** When two sources disagree, retrieval pulls passages from
-both, and generation writes one paragraph. A frequent result is one
-blended answer that no source holds, with the disagreement smoothed away. Nobody has measured how often;
-you will test whether your tool does it in the Do block, with a pair of
-papers chosen because they disagree about the same tool.
+both, and generation writes one paragraph. The result can be one blended
+answer that no source holds, with the disagreement smoothed away. You will
+test whether your tool does this in Step 3 of the Do, with two papers chosen
+because they disagree about the same tool.
 
 ::: {.callout-important title="The practical rule"}
 A grounded tool fixes the reference. It helps you see where each sentence
@@ -393,15 +381,14 @@ part of it.
 presented by Marina Danilevsky (23 August 2023; 6 min 36 s).
 <https://www.youtube.com/watch?v=T-D1OfcDW1M>
 
-Six and a half minutes, nothing you need to know first, and the clearest
-whiteboard version of @fig-rag-pipeline that exists. Listen for the story
-about which planet has the most moons. The speaker's confident wrong answer
-is what happens when the model relies on what it learned in training, which
-was out of date. Her fix, going to look it up, is retrieval. Then notice what
-the video does not say. It presents retrieval as the answer to being wrong and
-out of date. It never mentions that the model can retrieve the right passage
-and misread it. That omission is what this chapter covers. Every vendor's sales
-presentation leaves it out too.
+Six and a half minutes, nothing you need to know first, and a whiteboard
+version of @fig-rag-pipeline. Listen for the story about which planet has the
+most moons. The speaker's confident wrong answer is what happens when the
+model relies on what it learned in training, which was out of date. Her fix,
+going to look it up, is retrieval. Then notice what the video does not say.
+It presents retrieval as the answer to being wrong and out of date. It never
+mentions that the model can retrieve the right passage and misread it. That
+gap is what this chapter covers.
 
 **Reading alternative.** The written article this chapter is built on,
 [Grounding AI in real sources](https://talks.seandavis.net/archive/2025-10-07-rag-notebooklm-idpt-8079/),
