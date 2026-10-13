@@ -62,12 +62,13 @@ fourteen notes to sign, and this one reads well.
 
 Read the highlighted sentence. This is the kind of error the published studies
 of these tools describe. It is not a slip in the transcript. It is a fluent,
-believable sentence that says the opposite of what the patient said. In a
-pilot at one academic health system, physicians reviewed 356 scribe-drafted
-notes. 18% contained an omission, 11.5% contained a made-up statement, and
-5.3% contained an error rated as a serious risk if not corrected. Across the
-notes the vendor tracked, 14.9% were left with no edits at all
-[@pmid:41996389].
+believable sentence that says the opposite of what the patient said. Errors
+like this are uncommon, which makes them easy to miss. In a pilot at one
+academic health system, physicians reviewed 356 scribe-drafted notes. Most,
+94.7%, had no significant error. But 18% left something out, 11.5% contained
+a made-up statement, and 5.3% had an error rated as a serious risk if not
+corrected. Across the notes the vendor tracked, 14.9% were left with no edits
+at all [@pmid:41996389].
 
 Three weeks later Mr. Alvarez is admitted with a stroke. The admitting team
 reads your note and believes he was taking his apixaban. The waiting room had
@@ -89,11 +90,16 @@ systemwide rollout of the Abridge scribe in February 2026 ([press
 release](https://www.businesswire.com/news/home/20260224659841/en/UCHealth-Partners-With-Abridge-to-Deploy-Enterprise-Grade-AI-Systemwide-Enhancing-Patient-and-Provider-Experience)).
 
 **It is your job to learn where these tools help your work, and you learn
-that by trying.** A scribe can save you some time, and the trials below
-suggest it does, modestly. It is also the clearest case where your signature goes on
-words a tool produced.
+that by trying.** Scribes help. In randomized trials, scribes lowered
+clinicians' exhaustion or burnout scores, and some cut the time spent on
+notes [@pmid:41625485; @pmid:41497288; @pmid:41729180]. In one of those
+trials, note time fell with no loss in note quality, diagnosis coding, or
+billing compliance [@pmid:41625485]. Most drafts are accurate, too: in the
+pilot above, 94.7% of notes had no significant error [@pmid:41996389]. Used
+well, a scribe saves you time and makes the work less draining.
 
-Most writing about this asks what you *risk*. This chapter asks what you
+A scribe is also the clearest case where your signature goes on words a tool
+produced. Most writing about this asks what you *risk*. This chapter asks what you
 *owe*: to the patient, to the next clinician, and to yourself. The two
 questions are easy to confuse. A review
 of 34 papers on digital health found that moral responsibility "is often
@@ -466,7 +472,8 @@ You are an ambient documentation tool in an outpatient clinic.
 Write a SOAP progress note from this visit transcript.
 ```
 
-Read it once, the way you would at 6:40 p.m.
+Read it once, the way you would at 6:40 p.m. Ask, then check: most of a good
+draft is right, and your job is to find out which parts.
 
 **3. Ask for a better draft (5 minutes).** Start a new chat, paste the
 conversation again, and try this:
