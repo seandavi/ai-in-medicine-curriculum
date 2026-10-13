@@ -130,16 +130,10 @@ Learn the parts, not fixed wording.
 
 : The five-part prompt. The last row is the one this chapter thinks most prompts leave out. {#tbl-scaffold}
 
-The first four rows come from a deck of ten prompting rules this course uses
-(see [Watch or listen](#watch-or-listen-optional)). Most of the other rules
-make Task and Format more precise: refine over several tries, break a big
-question into smaller ones, and show one or two examples of what you want.
-None of the ten is the fifth row. Models tend to produce a
-complete-looking answer from incomplete information. One likely reason is that
-complete-looking answers are what most of the text they learned from looks
-like. This chapter's claim
-is that asking them to name the gap instead is the most useful single line a
-clinician can add to a prompt. You will test that claim yourself in the Do.
+The first four rows are standard prompting advice. The fifth is this
+chapter's addition: models tend to fill a gap with a complete-looking answer,
+and asking them to name the gap instead is the most useful single line a
+clinician can add, a claim you will test yourself in the Do.
 
 ::: {.callout-tip title="If English is not your first language"}
 One 2026 study asked chatbots for references on spine surgery in two ways: as
@@ -168,24 +162,10 @@ the case contains. A prompt cannot supply the piece of history you left out.
 What a structured prompt *can* do is make the model show its reasoning, so
 that you can check it. When a Stanford study prompted GPT-4 to imitate styles
 of clinical reasoning, diagnostic accuracy did not change, but the reasoning
-became something a physician could read and judge [@pmid:38267608]. Studies
-that tested prompt templates directly are in Go deeper. Prompt effects on accuracy are real, but they differ from model to model and
-they are unstable. Better organisation is the effect that is reliable.
-
-```{mermaid}
-%%| label: fig-what-structure-changes
-%%| fig-cap: "What each element of a structured prompt changes. Four of the five act on organisation. The fifth, asking the model to name what is missing, is the only one that acts on the gap between the case and the answer. Context can also affect correctness through how the question is worded (see the callout above)."
-flowchart LR
-  accTitle: What each element of a structured prompt changes
-  accDescr: Role, Context, Task, and Format each point to one box, how the answer is organised. Uncertainty, meaning say what is missing, points to a separate box, whether the answer admits what it does not know. A dotted arrow runs from the organisation box to a box for whether the answer is correct, and its label says it does not touch correctness. A second dotted arrow runs from the admits-what-it-does-not-know box to that same correctness box, and its label says it helps you check.
-  R[Role] --> O[How the answer is organised]
-  C[Context] --> O
-  T[Task] --> O
-  F[Format] --> O
-  U[Uncertainty:<br/>say what is missing] --> G[Whether the answer<br/>admits what it does not know]
-  O -.->|does not touch| K[Whether the answer is correct]
-  G -.->|helps you check| K
-```
+became something a physician could read and judge [@pmid:38267608]. Prompt
+effects on accuracy are real, but they differ from model to model and they are
+unstable (studies in Go deeper). Better organisation is the effect that is
+reliable.
 
 ### The error in Sam's answer
 
@@ -197,7 +177,10 @@ low-probability group [@pmid:11453709]. Sam's patient has had surgery in the
 last four weeks, has a heart rate over 100, and has a swollen calf. On the
 Wells score, which MDCalc will calculate for you, she is not low probability.
 The right next step is imaging, not a D-dimer, because a positive D-dimer would
-only delay the scan. Both answers got this wrong. Only one of them put it in a
+only delay the scan. Newer pathways, such as a two-level Wells score ("PE
+likely" or "PE unlikely") or a D-dimer cutoff that rises with age, do not
+change this for Sam: she scores "PE likely", and she is under 50. Both answers
+got this wrong. Only one of them put it in a
 column headed "Next step" beside a column of supporting findings.
 
 That is why the neat answer needs more care, not less. **Automation bias** is
@@ -217,35 +200,13 @@ missing, then check the one claim the plan depends on before anything goes out
 with your name on it.
 :::
 
-### What the trials show about physicians using the tool
-
-How you use the answer matters too, not only how you ask. In a randomized
-trial of 50 physicians working through written cases, those given a language
-model scored no better than those without it. The model on its own, in an
-exploratory comparison, scored 16 points higher [@pmid:39466245]
-(@fig-goh-estimates). In a second trial by the same group, on management, 92
-physicians with the model scored 6.5 points higher than those without (95
-percent CI 2.7 to 10.2). The model alone scored about the same as them (no
-significant difference), and the physicians with the model also took about two
-minutes longer per case [@pmid:39910272].
-
-![Two estimates from the same randomized trial. Physicians with the model did
-no better than physicians without it; the model alone did. Redrawn for this
-chapter from the estimates reported in Goh et al., *JAMA Network Open* 2024
-[@pmid:39466245]; the data are the paper's, the drawing is this course's.](../images/goh-2024-redrawn.png){#fig-goh-estimates fig-alt="Dot-and-interval chart with two rows. Top row: physician plus LLM versus conventional resources, plus 2 percentage points, 95 percent confidence interval minus 4 to plus 8, crossing zero. Bottom row: LLM alone versus conventional resources, plus 16 points, interval 2 to 30, not crossing zero."}
-
 ## Watch or listen (optional)
-
-**The source deck.** [Prompt engineering](https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/),
-about fifteen slides, ten rules with clinical examples. Ten minutes. It is
-where the Role, Context, Task, and Format rows of @tbl-scaffold come from.
-Notice that none of the ten slides is the Uncertainty row.
 
 **Podcast.** *NEJM AI Grand Rounds*, "Medicine, Machines, and Magic: Dr.
 Jonathan Chen on Medical AI" (15 October 2025; 48 min).
 <https://ai-podcast.nejm.org/e/medicine-machines-and-magic-dr-jonathan-chen-on-medical-ai/>
-Chen is an author of both trials above, and senior author of the first. The first
-twenty minutes are enough.
+Chen led two of the first randomized trials of physicians using a chatbot
+(see Go deeper). The first twenty minutes are enough.
 
 ## Do
 
@@ -500,7 +461,6 @@ Score yourself against this before moving on.
 | Parts changed one at a time (objective 2) | One line each on what changing the context, the format, and the last line did | One run, no changes |
 | Two scored answers (objective 3) | Organisation and trap scored separately, the kind of trap named, and a one-sentence finding that names what changed and what did not | One overall impression of which answer was "better" |
 | One checked claim (objective 4) | A named calculator, guideline, or label, and a verdict | "It matched what I remembered", or a second chatbot |
-| The two trials (objective 5) | The direction of both trials, the model-alone result, and what that implies about where the weak point is | "Studies show AI helps doctors" or "studies show it doesn't" |
 
 ## What this changes for you
 
@@ -519,11 +479,26 @@ the source you would check it against.
 
 ## Go deeper
 
+**What the trials show about physicians using the tool**
+
+How you use the answer matters too, not only how you ask. In a randomized
+trial of 50 physicians working through written cases, those given a language
+model scored no better than those without it. The model on its own, in an
+exploratory comparison, scored 16 points higher [@pmid:39466245]
+(@fig-goh-estimates). In a second trial by the same group, on management, 92
+physicians with the model scored 6.5 points higher than those without (95
+percent CI 2.7 to 10.2). The model alone scored about the same as them (no
+significant difference), and the physicians with the model also took about two
+minutes longer per case [@pmid:39910272]. Read the discussion sections for
+the authors' own account of why the first trial showed no benefit.
+
+![Two estimates from the same randomized trial. Physicians with the model did
+no better than physicians without it; the model alone did. Redrawn for this
+chapter from the estimates reported in Goh et al., *JAMA Network Open* 2024
+[@pmid:39466245]; the data are the paper's, the drawing is this course's.](../images/goh-2024-redrawn.png){#fig-goh-estimates fig-alt="Dot-and-interval chart with two rows. Top row: physician plus LLM versus conventional resources, plus 2 percentage points, 95 percent confidence interval minus 4 to plus 8, crossing zero. Bottom row: LLM alone versus conventional resources, plus 16 points, interval 2 to 30, not crossing zero."}
+
 **Papers**
 
-- The randomized trials of physicians with a model: diagnosis [@pmid:39466245]
-  and management [@pmid:39910272]. Read the discussion sections for the
-  authors' own account of why the benefit did not appear.
 - A single-centre observational study in which pharmacists ran 50
   internal-medicine cases through ChatGPT and OpenEvidence, with and without a
   prompt template. The template made no significant difference to accuracy and
@@ -564,6 +539,9 @@ the source you would check it against.
 
 **Talks**
 
+- [Prompt engineering](https://talks.seandavis.net/archive/2024-10-17-prompt-engineering/),
+  ten rules with clinical examples, about fifteen slides. The Role, Context,
+  Task, and Format rows of @tbl-scaffold come from it.
 - [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/),
   for the attribution question that arises the first time a chatbot's table
-  ends up in something you hand in.
+  ends up in a presentation or a paper.
