@@ -138,20 +138,16 @@ I decided*. Both are made to people who will read it later.
 
 **The next clinician.** The admitting team met your note before they met Mr.
 Alvarez. Words in a note change how the next reader treats the patient. In a
-randomized study, 413 medical students and residents
-at one US academic center read a note about the same made-up patient, a
-28-year-old man with sickle cell disease. Half read it in neutral language
-and half in stigmatizing language. Those who read the stigmatizing version
-had more negative attitudes toward him. Residents who read it chose less
-aggressive treatment for his pain [@pmid:29374357]. That study was about
-tone. A false fact about a blood thinner is a more direct risk.
+randomized study, residents who read a stigmatizing note about a man with
+sickle cell disease chose less aggressive treatment for his pain
+[@pmid:29374357]. A false fact about a blood thinner is a more direct risk.
 
 **The patient.** Many patients can now read their own notes in the patient
-portal. One recent paper lists four jobs a note does: helping you reason,
-telling other clinicians what happened, meeting billing and legal
-requirements, and explaining care to a patient who reads it
-[@pmid:42258767]. Mr. Alvarez could read tonight that he "continues apixaban
-without bleeding complications", and wonder whether he should restart it.
+portal. One recent paper lists four jobs a note does [@pmid:42258767]. It
+helps you reason, tells other clinicians what happened, and meets billing and
+legal requirements. It also explains care to a patient who reads it. Mr.
+Alvarez could read tonight that he "continues apixaban without bleeding
+complications", and wonder whether he should restart it.
 
 **What the scribe actually writes.** A scribe is not a fast typist. One
 group of physicians argues that in the assessment and plan, ambient scribes "do not transcribe clinical reasoning but
@@ -166,18 +162,32 @@ stand behind. If you find an error after signing, add an addendum; do not
 quietly edit the signed note. If the error may have harmed him, you also owe
 him an honest explanation, through your institution's disclosure process.
 
+**The attestation line.** Many systems add a line to a drafted note saying it
+was drafted with ambient documentation and reviewed by you. If yours does,
+read what it says. It is an **attestation**, a statement in your name that
+something is true. If your institution's policy calls for such a line and the
+system does not add it, add it yourself.
+
 **Telling him a tool drafted it.** Should you tell a patient that AI drafted
 a note or message? Honesty may cost some trust. In two preregistered
-experiments, 2,280 participants rated identical advice in made-up scenarios
-as less reliable and less empathetic when it was labeled as from AI, or from
-a physician with AI, and were less willing to follow it [@pmid:39054373]. The
-American Medical Association's November 2024 policy says AI may not generate
-records or communications for a physician without that physician's "consent
-and final review", and that AI use in patient-facing content "should be
-disclosed or otherwise noted within the content" ([AMA, November
+experiments, 2,280 people read identical medical advice in made-up scenarios.
+When the advice was labeled as from AI, or from a physician with AI, they
+rated it less reliable and less empathetic. They were also less willing to
+follow it [@pmid:39054373]. The American Medical Association's November 2024
+policy says AI may not generate records or communications for a physician
+without that physician's "consent and final review". It also says AI use in
+patient-facing content "should be disclosed or otherwise noted within the
+content" ([AMA, November
 2024](https://www.ama-assn.org/system/files/ama-ai-principles.pdf)).
+
+Some states have their own rules. California, for example, requires a
+hospital, clinic, or physician's office that uses generative AI to write a
+patient message about clinical information to say so. The message must also tell the patient how to reach a
+person. The rule does not apply if a licensed clinician read and reviewed the
+message first (AB 3030, in force since January 2025)
+[VERIFY: AB 3030 summarized from the legislature's bill summary and law-firm alerts, not the statute's current text; other states' laws change often, and Colorado's AI Act (SB 24-205) was reported repealed and replaced by SB 26-189, effective 1 January 2027, by policy trackers only; checked 12 October 2026]{.verify}.
 How to say it is in [the patient communication
-chapter](core-patient-communication.qmd#the-portal-reply-say-a-tool-helped).
+chapter](core-patient-communication.qmd).
 
 ### Does review fix it?
 
