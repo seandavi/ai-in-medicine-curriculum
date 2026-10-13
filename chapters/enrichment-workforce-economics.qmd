@@ -1,7 +1,21 @@
 ---
 title: "Will AI take your job? Workforce and economics"
-subtitle: "AIM-7 · AIM-2 · AIM-X · about 90 minutes"
+subtitle: "About 60 minutes"
 ---
+
+::: {.callout-tip title="In short"}
+- **The idea.** In 2016 the most confident forecast in medicine said
+  radiology would disappear. It failed because it mistook a task for a job.
+  Four questions (tasks, generalization, liability, demand) let you judge any
+  forecast about your own specialty.
+- **What you do.** Ask ChatGPT Edu to apply the four questions to your
+  specialty and find studies of how its working day is spent, then check one
+  in PubMed.
+- **What you keep.** A three-line forecast for your specialty, with a number
+  and its source, to reread at the end of residency.
+- **Short on time?** Read "What actually happened" and "Why 'he was just
+  early' is not enough". Do Part A.
+:::
 
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will be able to:
@@ -9,10 +23,10 @@ By the end of this chapter you will be able to:
 1. Say what was predicted for radiology in 2016, what the original data (match
    tables and workforce studies) show happened through 2026, and why "he was
    just early" is not a good enough explanation.
-2. Ask four questions of the specialty you are entering (does the job break
-   into tasks, does the tool work outside the hospital that built it, who is
-   liable, and does demand grow), and grade a chatbot's forecast about that
-   specialty with the same four questions.
+2. Ask four questions of the specialty you are entering. Does the job break
+   into tasks? Does the tool work outside the hospital that built it? Who is
+   liable? Does demand grow? Then use the same questions to check a
+   chatbot's forecast about that specialty.
 3. Use the story of computer-aided detection in mammography to explain why
    a tool being adopted and a tool improving outcomes are separate questions.
 4. Explain why a tool can cut work inside one hospital while raising cost
@@ -23,14 +37,15 @@ By the end of this chapter you will be able to:
 6. Name the task in your intended specialty that a machine could most plausibly
    take over, estimate what fraction of the job it is, and say what would change
    your estimate.
+
+Course competencies: AIM-7 (workflow and systems), AIM-2 (critical
+appraisal), AIM-X (professional identity, the closing question).
 :::
 
-**Time.** About 25 minutes of reading, 20 minutes of watching, 35 minutes of
-doing, and 10 minutes for the check and the standing question. You need one
-chatbot and a browser. Your institution's ChatGPT Edu or Microsoft Copilot
-account is enough; swap in whatever your own school licenses. Nothing
-installs, nothing asks for a phone number, and nothing in this chapter
-touches a patient.
+**What you need.** Your university ChatGPT Edu or Copilot account and a
+browser. Nothing to install. Nothing in this chapter involves a patient. The
+time counts about 15 minutes of reading, a 2-minute clip, and about 35
+minutes of doing; the longer video and Go deeper are optional.
 
 ## The year everyone says radiology is over
 
@@ -589,7 +604,7 @@ into radiology, answer for your own specialty, with your Part B line 2 as the
 number. For the second half, name the observation that would make you change
 your forecast: a match statistic, a workforce projection, a BLS revision, a
 change in who signs the report. A forecast that nothing could prove wrong is
-not a forecast. It is a feeling.
+not a forecast.
 
 Then keep the sheet from Part B. Reread it at the end of residency. Every
 student who does this exercise has just made a confident forecast about a
@@ -597,28 +612,8 @@ medical specialty. So did a Nobel laureate, with better information than any
 of you, and he got the mechanism wrong. The point of writing it down is to be
 able to check.
 
-## Summary
-
-- The most confident job-elimination prediction in modern medicine has had twice
-  its five-year deadline. Radiology offered more positions in 2026 than
-  ever, filled 98.4 percent of them, and projects a larger workforce in 2055.
-- It failed because a task was mistaken for a job, not because the timeline
-  slipped. Four questions, task decomposition, generalization, liability, and
-  demand, tell the two apart.
-- Radiologists spend about a third of their time interpreting images. Most
-  physician jobs do not break neatly into tasks.
-- Mammography CAD was adopted at scale, raised biopsies without raising cancer
-  detection, made some readers worse, and disappeared once the payment stopped. Adoption
-  and outcomes are separate questions.
-- Scribes turn saved time into visits and RVUs. That is real, and it is not
-  cost reduction. Across the system, administrative AI may be raising costs
-  through bot wars.
-- Transcription −4 percent, coding +8, health information +16, in the same
-  department. The four questions explain the split, and the harm falls on the
-  lowest-paid of the three.
-- "Percent of what?" is a habit worth more than any of the three numbers.
-- Your uncle, and your chatbot, are forecasting a job from a task. Now you can
-  say why that is the mistake.
+Your forecast, and what would change it, can go into your week 4 piece,
+"what you will keep" (see the [learning journal](../course/learning-journal.qmd)).
 
 ## Go deeper
 
