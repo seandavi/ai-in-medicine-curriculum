@@ -1,14 +1,28 @@
 ---
 title: "Talking to patients about AI"
-subtitle: "AIM-6 · AIM-4 · about 70 minutes"
+subtitle: "About 60 minutes"
 ---
+
+::: {.callout-tip title="In short"}
+- **The idea.** Most conversations about an AI tool fit three sentences, in
+  order: what it did, what a person did, and who is responsible. When a
+  patient brings a chatbot's printout, say what is right first, ask what sent
+  her to it, then give a reason for each test you decline.
+- **What you do.** Write what you would say about the tool in the room, have
+  a chatbot point out your jargon, then practice the printout conversation
+  with a chatbot playing the patient.
+- **What you keep.** Your own sentences for a patient who asks about the tool
+  in the room, and the chatbot's notes on the order you spoke in.
+- **Short on time?** Read the opening, "The printout: say what is right
+  first", and "The three sentences". Then do Part B.
+:::
 
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will have:
 
-1. Written, and improved with a chatbot's help, what you will say when a
-   patient asks about a tool in the room: what they can refuse, what they
-   cannot, and what you do not know.
+1. Written what you will say when a patient asks about a tool in the room:
+   what they can refuse, what they cannot, and what you do not know. Then
+   improved it with a chatbot's help.
 2. Told a patient what an AI tool did, what a person did, and who is
    responsible, as three separate sentences.
 3. Practiced, with a chatbot playing the patient, answering someone who brings
@@ -16,13 +30,15 @@ By the end of this chapter you will have:
    down to them.
 4. Explained why text that raters call more empathetic can still persuade
    patients less than a person does.
-5. Kept a set of sentences you could say out loud, for example at your Friday small group.
+5. Kept a set of sentences you could say out loud, to a classmate or a
+   patient.
+
+Course competencies: AIM-6 (talking to patients), AIM-4 (ethics, law, and
+regulation).
 :::
 
-**Time.** About 70 minutes: 15 to 20 of reading, about 45 of doing, and five
-at the end. The podcast is optional. Use your university ChatGPT Edu or
-Microsoft Copilot account; any free chatbot also works. There is nothing to
-install, and nothing in this chapter involves a real patient.
+**What you need.** Your university ChatGPT Edu or Copilot account. Nothing to
+install. Made-up patients only. The podcast is optional.
 
 ## Two printed pages and a phone on the desk
 
