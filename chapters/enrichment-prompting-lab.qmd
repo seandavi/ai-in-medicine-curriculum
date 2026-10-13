@@ -1,7 +1,22 @@
 ---
 title: "Prompting lab: getting good answers, and knowing their limits"
-subtitle: "AIM-5 · AIM-2 · about 75 minutes"
+subtitle: "About 60 minutes"
 ---
+
+::: {.callout-tip title="In short"}
+- **The idea.** A few extra sentences in your prompt (who it is for, the
+  case, the task, the format, and "say what is missing") get you an answer
+  organised the way you think on rounds. That answer is faster to read and
+  easier to check. It is not always right, so you check the one claim the
+  plan depends on.
+- **What you do.** Build a prompt for a task you need this month and keep the
+  version that works. Then run one made-up case twice, bare and structured,
+  and score both.
+- **What you keep.** A five-part prompt template, saved in your "AI in
+  Medicine" project, and one sentence for question 2 of your learning journal.
+- **Short on time?** Read "Night float" and "The five-part prompt", then do
+  Part A (20 minutes). Part B can wait for later in the week.
+:::
 
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will have:
@@ -12,14 +27,15 @@ By the end of this chapter you will have:
    the structure improved and what it did not.
 4. Checked the one claim a plan depends on against a calculator, a guideline,
    or a drug label.
-5. Said what two randomized trials show about physicians who use a language
-   model.
+
+Course competencies: AIM-5 (clinical use), AIM-2 (critical appraisal).
 :::
 
-**Time.** About 75 minutes: 20 of reading and 55 of doing. The podcast is
-optional. Use your university ChatGPT Edu or Microsoft Copilot account; any
-free chatbot also works. There is nothing to install. Open a blank document
-before you start, for the template and the record you keep at the end.
+**What you need.** Your university ChatGPT Edu or Copilot account. Nothing to
+install. Made-up patients only. A blank document for notes. This chapter goes
+with Monday's talk, "Getting good answers": read it after the talk, or instead
+of it. The template you build here is the one to use for [Learn it with
+AI](../course/learn-with-ai.qmd) this week.
 
 ## Night float, 2:40 a.m.
 
@@ -500,16 +516,6 @@ you would say about typing a real patient into the phone.
 Second, name one task in your own work next week where you will use the
 template you kept. Then name the one claim in that task you would check, and
 the source you would check it against.
-
-## Summary
-
-- A five-part prompt (role, context, task, format, and "say what is missing")
-  reliably gets you a better-organised answer. Keep one as a template.
-- Structure does not reliably make the answer correct. Check the one claim the
-  plan depends on against a calculator, a guideline, or a label.
-- Write the case the way you would present it on rounds.
-- In two randomized trials, physicians with a model did not beat the model
-  alone. How you use the answer is part of the skill.
 
 ## Go deeper
 
