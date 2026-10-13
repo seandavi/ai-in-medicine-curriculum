@@ -112,8 +112,8 @@ patient or only makes you feel better.
 
 ### One problem, many cases
 
-Every well-documented case of an algorithm harming patients along racial
-lines in the last decade follows the same pattern. A quantity that mattered could
+Most well-documented cases of an algorithm harming patients along racial
+lines in the last decade follow the same pattern. A quantity that mattered could
 not be measured directly. Something that *could* be measured was used in its
 place. The swap made sense at the time. It was still wrong, and wrong in a way
 that followed existing inequity. Why? The measurable thing was measurable
@@ -162,20 +162,17 @@ multicenter cohort of 178 hospitals the figures were 17.0 and 6.2 percent.
 Black patients had nearly three times the rate of a dangerously low
 saturation that the device called normal.
 
-Two larger studies confirmed the pattern and followed it forward to a
-decision. Across 30,039 paired readings in Veterans Health Administration
-general wards, occult hypoxemia was more likely in Black than White patients
-[@pmid:35793817]. Among 1,216 patients with COVID-19 at Johns Hopkins, Fawzy
-and colleagues found occult hypoxemia in 28.5 percent of Black, 29.8 percent
-of Hispanic, and 30.2 percent of Asian patients, against 17.2 percent of
-White patients [@pmid:35639368]. Then they followed what happened next. Black
-patients had a 29 percent lower hazard of being recognized as eligible for
-COVID-19 treatments that depend on an oxygen threshold. (A hazard is roughly
-the rate at any given moment.) Among those eventually recognized, the median
-delay was one hour. And 451 patients never had their eligibility recognized
-at all, most of them Black. That is how a proxy becomes harm, step by
-step: a number that looked fine, a treatment threshold never reached on
-paper, a therapy given late or not at all.
+Fawzy and colleagues followed the pattern forward to a decision, in patients
+with COVID-19 at Johns Hopkins [@pmid:35639368]. Occult hypoxemia was more
+common in Black, Hispanic, and Asian patients than in White patients
+(@fig-occult). Then they followed what happened next. Black patients had a 29
+percent lower hazard of being recognized as eligible for COVID-19 treatments
+that depend on an oxygen threshold. (A hazard is roughly the rate at any given
+moment.) Black patients who were eventually recognized waited a median of one
+hour longer than White patients. And 451 patients never had their eligibility
+recognized at all, more than half of them Black. That is how a proxy becomes
+harm, step by step: a number that looked fine, a treatment threshold never
+reached on paper, a therapy given late or not at all.
 
 ![Occult hypoxemia by race across four cohorts. Redrawn from the published
 numbers in Sjoding et al. 2020 [@pmid:33326721], Valbuena et al. 2022
@@ -183,21 +180,14 @@ numbers in Sjoding et al. 2020 [@pmid:33326721], Valbuena et al. 2022
 "normal" oximeter reading differ between studies, so compare the bars within
 a cohort rather than across cohorts.](../images/occult-hypoxemia-by-race.svg){#fig-occult fig-alt="Grouped bar chart of occult hypoxemia rates in four cohorts. Michigan 2020: White 3.6 percent, Black 11.7 percent. 178 hospitals 2014 to 2015: White 6.2, Black 17.0. VA general care 2013 to 2019: White 15.6, Black 19.6, Hispanic 16.2. Johns Hopkins COVID-19: White 17.2, Black 28.5, Hispanic 29.8, Asian 30.2. In every cohort the Black bar is taller than the White bar."}
 
-**The fix, and its status today.** The FDA's 2013 guidance for pulse oximeter
-clearance asked manufacturers to include "at least 2 darkly pigmented
-subjects or 15% of your subject pool, whichever is larger" in a study of
-roughly ten volunteers. In January 2025 the agency issued a draft guidance.
-It proposes larger studies with a set spread of skin pigmentation, measured
-with an instrument rather than by asking the volunteer, and a statement on
-the label saying whether the device worked equally well across skin tones
-[@pmid:40042945]. The FDA's page for that guidance still carried the line
-"Draft. Not for implementation. Contains non-binding recommendations." when
-checked on 8 September 2026.
-A 2025 preprint tested 34 oximeters against the expected criteria. Only one
-of the 34 passed the draft FDA standard. Eleven devices overestimated
-saturation more in darkly pigmented participants than in lightly pigmented
-ones, while others did not [@pmid:40832401]. The pulse oximeter on your ward
-tonight is probably a device cleared under the 2013 rule.
+**The fix, and its status today.** A draft FDA guidance from January 2025
+proposes larger oximeter studies across a measured range of skin tones
+[@pmid:40042945]. As of 12 October 2026, the
+[FDA's page for it](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/pulse-oximeters-medical-purposes-non-clinical-and-clinical-performance-testing-labeling-and)
+still said "Draft. Not for implementation." A 2025 preprint tested 34
+oximeters, and one of the 34 passed the criteria the FDA was expected to adopt
+[@pmid:40832401]. The pulse oximeter on your ward tonight was probably cleared
+under the older 2013 guidance.
 
 This is the case where the bedside answer is encouraging. A saturation that
 does not match how hard a patient is breathing, how alert he is, or his
@@ -257,7 +247,7 @@ this group's share of the program by a factor of about two and a half.
 the score that triggers automatic enrollment, Black patients were
 substantially sicker than White patients. Panel B: the share of enrolled
 patients who were Black, as deployed and after the authors' correction.
-Redrawn from the numbers reported in Obermeyer et al. 2019
+Redrawn from the numbers in the full text of Obermeyer et al. 2019
 [@pmid:31649194].](../images/obermeyer-cost-vs-illness.svg){#fig-obermeyer fig-alt="Two bar charts. Panel A shows active chronic conditions at the 97th risk percentile: 3.8 for White patients and 4.8 for Black patients. Panel B shows the share of automatically enrolled patients who are Black: 17.7 percent when ranked on predicted cost, 46.5 percent when ranked on illness."}
 
 Now ask the bedside question. You are the primary care physician for one of
