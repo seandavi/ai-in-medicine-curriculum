@@ -126,16 +126,16 @@ the real thing cannot be measured. The **proxy problem** is the whole chapter
 in one sentence: *an algorithm is only as fair as the link between what it
 measures and what you hoped it measured, and that link can differ by group.*
 It is the first of the course's four recurring lessons, **proxies fail**,
-and this chapter is where that lesson is explained in full. [The
-foundations chapter](core-foundations.qmd) showed it in the eGFR, a stand-in for
-a filtration rate nobody measured.
+and this chapter is where that lesson is explained in full. If you read [How
+these systems work](core-foundations.qmd), you met it in the eGFR, a stand-in
+for a filtration rate nobody measured.
 
-You met an example of this in [the critical appraisal chapter](core-appraisal.qmd), without the
-name. There, a test-set score in an FDA clearance summary stood in for how
-well a tool works on patients. A study of 130 such summaries found that about
-half reported any clinical performance data at all [@pmid:33820998]. The proxy in that case was a test score standing in for
-"works on patients like mine". This chapter is the same failure with a
-different quantity standing in.
+Approval can be a stand-in too. "FDA-cleared" is easy to check, and "works on
+patients like mine" is not. An analysis of the 903 AI-enabled devices the FDA
+had authorized by August 2024 found a clinical performance study reported for
+about half of them [@pmid:40305017]. Fewer than a third of those studies gave
+results for women and men separately. Clearance answers a different question
+from the one you ask at the bedside.
 
 ### Case one: light standing in for oxygen
 
@@ -376,27 +376,6 @@ wrong model, even with the reasoning on screen. Institutional auditing by
 group and personal skepticism are both needed. Neither replaces the other.
 :::
 
-### Why this chapter does not teach you to fix the model
-
-There are technical fixes in the literature: giving some training examples
-more weight, training the model so it cannot tell groups apart, setting
-different cut-offs for different groups. They are real, and the fairness deck
-under Go deeper covers them. None of them would have fixed the Obermeyer
-algorithm. The target was wrong, and no amount of adjustment afterward
-fixes a wrong prediction target. That is a stronger point than a survey of
-methods would have been. It is why the question this chapter gives you is
-about the target and not the math.
-
-::: {.callout-note title="\"But it's FDA-cleared\""}
-The oximeter was. So were the chest radiograph tools. Clearance answers a
-different question from the one you are asking. [The critical appraisal
-chapter](core-appraisal.qmd) makes that case in full with the same 130 clearance summaries cited
-above [@pmid:33820998], and the FUTURE-AI checklist there gives fairness one
-row and one question for the vendor. This chapter is that row, in depth. If
-the two chapters are assigned in the same week, read the objection once and
-remember it.
-:::
-
 ## Watch or listen
 
 **Podcast.** *NEJM AI Grand Rounds*, "The Double-Edged Sword of AI, with Dr.
@@ -604,9 +583,12 @@ collects these in chat, and they are worth more than the table.
 **Talks**
 
 - [Fairness in machine learning for healthcare](https://talks.seandavis.net/archive/2024-11-05-ml-fairness/),
-  the deck this chapter was adapted from, including the technical fixes this
-  chapter deliberately left out and the reason they would not have fixed the
-  main case.
+  the deck this chapter was adapted from. It covers the technical fixes this
+  chapter leaves out, such as giving some training examples more weight or
+  setting different cut-offs for different groups. None of them would have
+  fixed the main case, because its prediction target was wrong. The deck also
+  opens with two thought experiments, an image search and a loan officer,
+  that show statistical and social bias without any medicine.
 - [AI and ML in an oncology service line](https://talks.seandavis.net/archive/2024-10-28-ai-ml-oncology-service-line/)
   for the institutional part of the answer: who audits, who monitors, and
   what "incorporate biography" means when race is standing in for exposure.
