@@ -139,28 +139,21 @@ from the one you ask at the bedside.
 
 ### Case one: light standing in for oxygen
 
-Start with the device from the opening. In this case the stand-in is a
-physical measurement, and there is a real sign at the bedside that something
-is wrong.
-
-A pulse oximeter does not measure oxygen. It measures the ratio of red to
-infrared light absorbed by a fingertip. It then converts that ratio into a
-saturation using a conversion curve. That curve was built by lowering the
-oxygen of healthy volunteers under controlled conditions and recording what
-the device saw. The proxy is light absorbance. The quantity that matters is
-arterial oxygen saturation. The two agree closely in the people the curve was
+Start with the device from the opening. Here the stand-in is a physical
+measurement, and there is a real sign at the bedside that something is wrong.
+The proxy is light absorbance. The quantity that matters is arterial oxygen
+saturation. The two agree closely in the people the conversion curve was
 built on.
 
 In December 2020, Sjoding and colleagues compared paired readings in two
-cohorts, meaning two groups of patients: a pulse oximeter value and an
-arterial blood gas drawn within ten minutes of each other [@pmid:33326721]. They looked for **occult
-hypoxemia**: an arterial saturation below 88 percent, which is low enough to
-change treatment, while the oximeter read 92 to 96 percent, which is
-reassuring. In the University of Michigan cohort it occurred in 11.7 percent
-of Black patients' readings and 3.6 percent of White patients'. In a
-multicenter cohort of 178 hospitals the figures were 17.0 and 6.2 percent.
-Black patients had nearly three times the rate of a dangerously low
-saturation that the device called normal.
+cohorts, meaning two groups of patients [@pmid:33326721]. Each pair was a
+pulse oximeter value and an arterial blood gas drawn within ten minutes of
+each other. They looked for **occult hypoxemia**: an arterial saturation below
+88 percent, which is low enough to change treatment, while the oximeter read
+92 to 96 percent, which is reassuring. In the University of Michigan cohort it
+occurred in 11.7 percent of Black patients' readings and 3.6 percent of White
+patients'. In both cohorts, Black patients had about three times the rate of
+a dangerously low saturation that the device called normal.
 
 Fawzy and colleagues followed the pattern forward to a decision, in patients
 with COVID-19 at Johns Hopkins [@pmid:35639368]. Occult hypoxemia was more
@@ -279,10 +272,7 @@ representation harm is a system that carries a demeaning or dismissive
 picture of a group, whether or not any resource is given or withheld. A model that
 repeats a debunked claim about Black patients' pain tolerance has harmed
 someone before any decision is made. Most of the cases below are allocation
-harms. At least one is not, and the exercise asks you to decide which. Asking
-who bears a harm, and whether they had any say in the tool, is the course's
-fourth recurring lesson, **who benefits, who bears the risk, who decides**,
-explained in [the ethics chapter](core-ethics-regulation.qmd).
+harms. At least one is not, and the exercise asks you to decide which.
 
 ### The cases in one table
 
@@ -313,13 +303,11 @@ its own checking.
 
 Three things to notice across the rows rather than in any one of them.
 
-**The proxies were all reasonable.** Cost is objective. Calibrating a device
-on the volunteers you have is how devices get built. Report text is the only
-label available at radiograph scale. Race entered clinical equations through
-observed population differences that someone was trying to account for. No
-one in these cases set out to build in inequity. That is why "just don't be
-biased" is not a strategy you can use, and asking what the model actually
-predicts is.
+**The proxies were all reasonable.** Cost is objective. Devices are
+calibrated on the volunteers available. Report text is the only label
+available at radiograph scale. No one in these cases set out to build in
+inequity. That is why "just don't be biased" is not a strategy, and asking
+what the model actually predicts is.
 
 **Fixing is slower and messier than finding.** Obermeyer is seven years old.
 The oximeter guidance is still a draft. Race-neutral spirometry is recommended
@@ -368,17 +356,14 @@ group and personal skepticism are both needed. Neither replaces the other.
 Ziad Obermeyer" (27 July 2023; 74 min).
 <https://ai-podcast.nejm.org/e/the-double-edged-sword-of-ai-with-dr-ziad-obermeyer/>
 
-The first author of the cost-for-need paper, interviewed by two physicians
-who build models. Listen for the phrase *task formulation*, his term for
-choosing what the model should predict. His argument is that this choice,
-made before any data are used, determines more about bias than anything
-done afterward. That is the proxy problem in the words of the person who
-documented it. Listen also for the second half of his title. He describes
-work where an algorithm, trained to predict the right target, *reduced* a disparity
-that clinicians had been producing. The first 25 minutes cover the first
-argument, and the rest is worth hearing if you have the time. The podcast is
-optional and not counted in the chapter's time. The episode is on Apple
-Podcasts, Spotify, and YouTube if the NEJM player does not load.
+Optional, and not counted in the chapter's time. The first author of the
+cost-for-need paper, interviewed by two physicians who build models. Listen
+for *task formulation*, his term for choosing what the model should predict.
+He argues that this choice, made before any data are used, matters more for
+bias than anything done afterward. In the second half he describes an
+algorithm, trained to predict the right target, that *reduced* a disparity
+clinicians had been producing. The first 25 minutes cover the main argument.
+The episode is also on Apple Podcasts, Spotify, and YouTube.
 
 ## Do
 
@@ -534,17 +519,13 @@ your journal, and it is worth bringing to your Friday group.
 
 **Papers**
 
-- The main case in full, with the extra analysis of other prediction targets
-  [@pmid:31649194]. Twelve pages, and the clearest example in the literature
-  of a fix that changes the question rather than adjusting the model.
-- The full catalog of race-adjusted algorithms, across cardiology,
-  nephrology, obstetrics, urology, and pulmonology [@pmid:32853499]. Read it
-  to see how many equations on your lab reports have a race term you never
-  noticed.
-- The spirometry contest as it stands: the ATS statement [@pmid:36973004]
-  and the modeling of who is reclassified [@pmid:38767252]. Together they are
-  the best available example of a fix whose costs and benefits go to
-  different people.
+- The main case in full, with the analysis of other prediction targets
+  [@pmid:31649194]: a fix that changes the question rather than the model.
+- The catalog of race-adjusted algorithms, across cardiology, nephrology,
+  obstetrics, urology, and pulmonology [@pmid:32853499].
+- The spirometry debate: the ATS statement [@pmid:36973004] and the
+  modeling of who is reclassified [@pmid:38767252], a fix whose costs and
+  benefits go to different people.
 - The oximeter regulatory story: the JAMA viewpoint on the draft guidance
   [@pmid:40042945] and the 34-device test against it [@pmid:40832401].
 - Clinicians and biased models, with explanations [@pmid:38112814]. The
@@ -558,11 +539,9 @@ your journal, and it is worth bringing to your Friday group.
 
 - [Fairness in machine learning for healthcare](https://talks.seandavis.net/archive/2024-11-05-ml-fairness/),
   the deck this chapter was adapted from. It covers the technical fixes this
-  chapter leaves out, such as giving some training examples more weight or
-  setting different cut-offs for different groups. None of them would have
-  fixed the main case, because its prediction target was wrong. The deck also
-  opens with two thought experiments, an image search and a loan officer,
-  that show statistical and social bias without any medicine.
+  chapter leaves out, such as setting different cut-offs for different
+  groups. None of them would have fixed the main case, because its
+  prediction target was wrong.
 - [AI and ML in an oncology service line](https://talks.seandavis.net/archive/2024-10-28-ai-ml-oncology-service-line/)
   for the institutional part of the answer: who audits, who monitors, and
   what "incorporate biography" means when race is standing in for exposure.
