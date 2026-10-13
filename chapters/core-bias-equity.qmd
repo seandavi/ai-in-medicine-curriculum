@@ -1,6 +1,6 @@
 ---
 title: "Bias and equity: the proxy problem"
-subtitle: "About 70 minutes"
+subtitle: "About 75 minutes"
 ---
 
 ::: {.callout-tip title="In short"}
@@ -42,7 +42,7 @@ Course competency: AIM-3 (bias and equity).
 
 **What you need.** Your university ChatGPT Edu or Copilot account, and a
 PubMed tab. Nothing to install. Made-up patients only. The time is about 20
-minutes of reading, 40 of doing, and 10 for the check and the closing
+minutes of reading, 45 of doing, and 10 for the check and the closing
 question. The podcast is an extra 25 minutes if you want it.
 
 ## The number on the monitor
@@ -430,7 +430,7 @@ Case: Care management risk score (Obermeyer et al. 2019)
 Questions 1 through 4 are lookups. Question 5 is the exercise. If you wrote a
 sentence there in under two minutes, go back.
 
-### Part B: a case from your specialty, found with AI (25 minutes)
+### Part B: a case from your specialty, found with AI (30 minutes)
 
 This part is a [Learn it with AI](../course/learn-with-ai.qmd) step. The
 chatbot does the first search in seconds. You check one result and turn it
@@ -479,7 +479,8 @@ radiograph AI. Any specialty: large language models.
 
 **4. One more question (2 minutes).** Ask the chatbot:
 *"What does `<the tool from your case>` predict, and what is it used to
-decide?"* Compare the answer with your worksheet line 1. Current models often name the stand-in.
+decide?"* Compare the answer with your worksheet line 1. Current models often
+name the stand-in.
 Check whether yours does, or whether it describes the tool as measuring the
 thing it was hoped to measure. One sentence in your notes is enough.
 
