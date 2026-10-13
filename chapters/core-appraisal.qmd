@@ -293,17 +293,15 @@ explains how that saved time turns into billing.
 
 ### "But it's FDA-cleared, isn't it fine?"
 
-Clearance answers a different question from the one a clinician is asking. Most
-cleared AI devices are radiology tools, so if you plan to go into radiology this
-section is about your daily work. An analysis of 130 FDA decision summaries for AI
-devices found clinical performance data reported for about half, and none at all
-for roughly a quarter. Well under a third of those with clinical data gave
-sex-specific results [@pmid:33820998]. A 2024 follow-up found the gap persists:
-many authorized tools have no published clinical validation [@pmid:39187696].
-A benchmark score standing in for performance on patients is the first of the
-course's four recurring lessons, **proxies fail**, in regulatory form.
-[The bias and equity chapter](core-bias-equity.qmd) explains that lesson in
-full.
+Clearance answers a different question from the one a clinician is asking.
+Most AI devices the FDA has authorized are radiology tools, so if you
+plan to go into radiology this section is about your daily work. An analysis
+of the 903 AI-enabled devices the FDA had authorized by August 2024 found a
+clinical performance study reported for about half of them (56 percent); a
+quarter (24 percent) said none was done. Fewer than a third of the clinical
+studies (29 percent) reported results for women and men separately
+[@pmid:40305017]. A test score standing in for performance on patients is a
+pattern [the bias and equity chapter](core-bias-equity.qmd) explains in full.
 
 ::: {.callout-important title="Cleared is not validated"}
 Clearance says the device is similar enough to one already on the market (the

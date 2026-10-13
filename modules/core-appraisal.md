@@ -297,13 +297,18 @@ gets oversold into a false one.
 
 ### "But it's FDA-cleared, isn't it fine?"
 
-Someone will ask, and if nobody does, ask it yourself. The answer is **Wu, Wu,
-Daneshjou et al., *Nat Med* 2021** — an analysis of 130 FDA decision summaries
-for medical AI devices which found that clinical performance data was reported
-for only about half, and roughly a quarter reported none at all. Among the
-summaries that did report clinical data, well under a third gave sex-specific
-results. A 2024 follow-up in the same journal, "Not all AI health tools with
-regulatory authorization are clinically validated," finds the gap persists.
+Someone will ask, and if nobody does, ask it yourself. The answer is
+**Windecker et al., *JAMA Netw Open* 2025** (pmid:40305017): of the 903
+AI-enabled devices the FDA had authorized by 31 August 2024, a clinical
+performance study was reported for 505 (55.9%), and 218 (24.1%) explicitly
+stated that none was done. Among the clinical studies, fewer than a third (145,
+28.7%) gave sex-specific data. (Corrected 2026-10-12: these figures were
+previously attributed to Wu et al., *Nat Med* 2021, pmid:33820998, an earlier
+analysis of 130 decision summaries whose PubMed record has no abstract. Do not
+use Wu for them.) An earlier *Nat Med* piece, "Not all AI health tools with
+regulatory authorization are clinically validated" (2024, pmid:39187696), makes
+the same point in its title; its PubMed record has no abstract, so cite it for
+nothing more specific.
 
 The point is not that clearance is worthless. It is that clearance answers a
 different question than the one a clinician is asking. Clearance speaks to
