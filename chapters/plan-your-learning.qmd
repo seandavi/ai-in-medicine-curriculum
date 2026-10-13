@@ -1,7 +1,20 @@
 ---
 title: "Plan your four weeks with ChatGPT: research first, then decide"
-subtitle: "AIM-5 · AIM-9 · AIM-X · about one hour"
+subtitle: "About one hour"
 ---
+
+::: {.callout-tip title="In short"}
+- **The idea.** Before you decide what to learn, ask ChatGPT what the field
+  expects, with sources. Then add what only you know: your specialty, how you
+  learn, and what worries you.
+- **What you do.** Ask ChatGPT to research what doctors in training should
+  know about AI, open two of its sources, let it interview you, and build
+  your plan.
+- **What you keep.** A plan for the four weeks, with one topic a week to
+  learn with AI, and a journal template.
+- **Short on time?** Read "The list you cannot finish", then do the setup and
+  steps 1, 3 and 4. That is the Thursday session.
+:::
 
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will have:
@@ -11,17 +24,21 @@ By the end of this chapter you will have:
 2. Asked ChatGPT to research what medical educators think doctors in training
    should know about AI, and checked two of its sources yourself.
 3. Worked with ChatGPT to turn that research, and your own goals and
-   background, into a plan for the four weeks.
+   background, into a plan for the four weeks, with one topic a week to learn
+   with AI.
 4. Saved the plan in a form you will use: a document, a spreadsheet, or
    slides, plus your journal template.
 5. Decided whether to share your plan with your classmates.
 6. Learned how to come back to the plan each week and change it.
+
+Course competencies: AIM-5 (clinical use), AIM-9 (research and scholarship),
+AIM-X (professional identity).
 :::
 
-**Time.** About 10 minutes of reading, 10 minutes of setup, and 40 minutes of
-doing. The training video is optional. This chapter is the Thursday hands-on
-session in week 1; if you miss the session, do it on your own. It is about
-you and your learning, so nothing in it involves a patient.
+**What you need.** A laptop and your university ChatGPT Edu or Copilot
+account. Nothing to install. Nothing in this chapter involves a patient. This
+chapter is the Thursday 15 October hands-on session; if you miss the session,
+do it on your own.
 
 ## The list you cannot finish
 
@@ -68,11 +85,11 @@ ChatGPT can search the web while it answers. When it does, it shows links to
 the pages it used. It usually searches on its own when a question needs
 current information; if an answer has no links, ask it to search.
 
-Links are not proof. A chatbot can attach a real link to a claim the page does
-not make, or describe a page that does not exist. So you open a few of its
-sources and read what they actually say. The [foundations
-chapter](core-foundations.qmd) explains why this happens; here you only need
-the habit.
+Ask, then check. Most of the links will be real and on topic, but a link is
+not proof. A chatbot can attach a real link to a claim the page does not make.
+So you open two of its sources and read what they actually say. The
+[foundations chapter](core-foundations.qmd) explains why this happens; here
+you only need the habit.
 
 ### You decide
 
@@ -83,6 +100,13 @@ asks whether AI wrote your note. Only you know that. A good plan uses both:
 the field's view, so you do not miss something important, and your own, so
 you actually follow it.
 
+### One topic a week, learned with AI
+
+The main hands-on work of the course is [Learn it with
+AI](../course/learn-with-ai.qmd): 2 to 4 hours a week, on your own, using AI
+to teach yourself a topic you choose. Your plan names that topic for each
+week. It can be the same topic all four weeks.
+
 ### A plan that changes
 
 The plan is a first draft. In week 2 a talk will interest you more than you
@@ -91,35 +115,13 @@ the plan back to ChatGPT and change it. Each week's [learning
 journal](../course/learning-journal.qmd) asks what you chose to learn and why,
 so the plan and the journal work together.
 
-## Watch or try
-
-OpenAI's training site has a guided practice, [Plan something from start to
-finish](https://learn.chatgpt.com/training/hands-on/work) (about 20 to 25
-minutes). It runs in your browser with sample data, so you do not need an
-account. You plan a team dinner in six steps. This chapter's Do uses the same
-six steps for your four weeks:
-
-| Step in the practice | What you do in this chapter |
-|---|---|
-| Prepare: gather your sources | Ask ChatGPT to research what doctors in training should know about AI |
-| Summarize | Group the research into themes and match them to the course |
-| Decide | Let ChatGPT interview you, then choose your goals |
-| Create | Make your plan and your journal template |
-| Share | Share a goal or your plan, if you want to |
-| Follow through | Come back to the plan each week and change it |
-
-: The six steps of the training practice, and what each one becomes here. {#tbl-steps}
-
-The practice uses **ChatGPT Work**, which can connect to email and files.
-Your university account may not have Work turned on. Everything in this
-chapter's Do works in an ordinary chat, so you do not need it.
-
 ## Set up ChatGPT
 
-Use your university account. At CU Anschutz that is **ChatGPT Edu**; the
+Use a laptop, not a phone: you will copy long prompts and open links side by
+side. Use your university account. At CU Anschutz that is **ChatGPT Edu**; the
 Canvas page "Get your ChatGPT Edu account" explains how to get it. If your
-account is not ready, use any free chatbot for today and move your work over
-later.
+ChatGPT Edu account is not ready, use your university Microsoft Copilot
+account today, and move your work over later.
 
 1. Go to [chatgpt.com](https://chatgpt.com) and sign in with your university
    email.
@@ -131,13 +133,19 @@ later.
    this course together, so you can come back to them.
 4. Start a new chat inside the project.
 
+No Projects in your account? Start a chat named AI in Medicine.
+
 ## Do: build your plan
+
+**In the session** (about 40 minutes): set up, then steps 1, 3 and 4. Step 2
+is optional. **After the session, before tonight's journal** (about 10
+minutes): steps 5 and 6. Step 7 is for the weeks ahead.
 
 Copy each prompt into the same chat, in order. Fill in the parts in brackets
 first. ChatGPT remembers what came earlier in the chat, so each step builds on
 the last.
 
-### 1. Prepare: gather what the field says (10 minutes)
+### 1. Prepare: gather what the field says (in the session, 10 minutes)
 
 ```
 I'm a fourth-year medical student applying in
@@ -160,7 +168,9 @@ Now **open two of the links.** Does the page exist? Does it say what ChatGPT
 said it says? Write down what you found. That is your check for question 2 of
 this week's [learning journal](../course/learning-journal.qmd).
 
-### 2. Summarize: find the themes (5 minutes)
+### 2. Summarize: find the themes (optional, 5 minutes)
+
+If you have time, ask for the themes. If not, go straight to step 3.
 
 ```
 Group what these sources say into 4 to 6 themes: the
@@ -170,14 +180,46 @@ that support it. Mark any theme that only one source
 supports.
 ```
 
-Then give ChatGPT the course. It cannot read this book's website, so the
-prompt below includes the list of chapters. Copy all of it.
+### 3. Decide: let it interview you (in the session, 10 minutes)
 
 ```
-Here is what my course offers. For each theme, which
-parts of the course cover it? Which themes does the
-course not cover?
+Now interview me, one question at a time, about what I
+want from this course: my background, what I have
+tried with AI so far, what worries me about it, how I
+learn best, and where AI might help my work as a
+resident.
 
+After about six questions, suggest 3 to 5 learning
+goals in my own words. Link each goal to a source or
+theme from the research, or say that it is mine alone.
+Then ask me what I want to change.
+```
+
+Answer each question in a sentence or two. There are no wrong answers. If you
+do not know what you want yet, say that; it is a useful answer.
+
+When ChatGPT suggests your goals, **make them yours.** Change anything that
+does not sound like you. Ask for a goal to be smaller, bigger, or more about
+your specialty. Keep going until you would be happy to show the goals to a
+colleague. A goal that is yours alone, with no source behind it, is fine.
+
+### 4. Create: make your plan (in the session, 10 minutes)
+
+ChatGPT cannot read this book's website, so the prompt below includes what
+the course offers. Copy all of it.
+
+```
+Turn my goals into a plan for the four weeks, using
+what my course offers (below). For each week, list
+the talks, chapters, or labs I will use, one topic I
+will learn with AI (2 to 4 hours, on my own), and how
+I will know it worked. Keep it to about 7.5 to 9.5
+hours a week, including sessions. Leave room to
+change it.
+Then tell me which of my goals the course does not
+cover, so I can learn them with AI.
+
+What my course offers:
 Week 1: How these systems work (how AI models learn,
   and why chatbots make things up). Thursday: this
   planning session.
@@ -194,50 +236,25 @@ Week 4: Ethics: what you owe when you sign a note
   drafted by AI. Also: Will AI take your job?; What AI
   costs the planet.
 Every week: talks, guest talks from clinicians in
-  several specialties, and a weekly learning journal.
+  several specialties, a Friday small group, and a
+  weekly learning journal.
+Every week, on my own: Learn it with AI, 2 to 4 hours
+  using AI to teach myself a topic I choose. This is
+  the main hands-on work of the course.
 ```
 
-The [preface](../index.qmd#the-chapters-week-by-week) has the same list with
-links to each chapter.
-
-### 3. Decide: let it interview you (10 minutes)
-
-```
-Now interview me, one question at a time, about what I
-want from this course: my background, what I have
-tried with AI so far, what worries me about it, how I
-learn best, and where AI might help my work as a
-resident.
-
-After about six questions, suggest 3 to 5 learning
-goals in my own words. Link each goal to a theme from
-the research, or say that it is mine alone. Then ask
-me what I want to change.
-```
-
-Answer each question in a sentence or two. There are no wrong answers. If you
-do not know what you want yet, say that; it is a useful answer.
-
-When ChatGPT suggests your goals, **make them yours.** Change anything that
-does not sound like you. Ask for a goal to be smaller, bigger, or more about
-your specialty. Keep going until you would be happy to show the goals to a
-colleague. A goal that is yours alone, with no source behind it, is fine.
-
-### 4. Create: make the plan and the journal template (10 minutes)
-
-```
-Turn my goals into a plan for the four weeks. For each
-week, list the chapters, talks, or labs I will use,
-one thing I will try with AI, and how I will know it
-worked. Keep it to about 8 to 10 hours a week,
-including live sessions. Leave room to change it.
-```
+The [syllabus](../course/syllabus.qmd) has the same list with links to each
+chapter.
 
 Ask for the plan in the form you will use: a table, a Word document, a
 spreadsheet, or a few slides. ChatGPT can make a file you download. If that
-does not work, copy the table into Word or Google Docs.
+does not work, copy the table into Word or Google Docs. Save it in a document
+you will keep, named "AI in Medicine plan". Your chat stays in the project, so
+you can come back to it.
 
-Then make your journal template in the same chat:
+### 5. Create: your journal template (after the session, 5 minutes)
+
+Before tonight's journal, make your journal template in the same chat:
 
 ```
 Using my goals, make a weekly learning journal
@@ -246,7 +263,7 @@ markdown template.
 
 It must include these five course questions:
 1. What I chose to learn, and why
-2. How AI helped, and where it got in the way
+2. How AI helped, and where it did not
    (including one time I felt I needed to check
    the AI: how I checked, and what I found)
 3. What surprised me
@@ -258,26 +275,26 @@ entry to my goals.
 ```
 
 Move, rename, or cut the extra headings until the template suits how you
-think. The five course questions stay.
+think. The five course questions stay. Add the template to your "AI in
+Medicine plan" document.
 
-Save both in a document you will keep, named "AI in Medicine plan". Your chat
-stays in the project, so you can come back to it.
-
-### 5. Share, if you want to (5 minutes)
+### 6. Share, if you want to (after the session, 5 minutes)
 
 Sharing is optional, and it helps. Hearing what classmates want from the
-course is often the most useful part of the hour, and it is how a group of
-students becomes a learning community. Three ways, from least to most:
+course is often the most useful part of the week, and it is how a group of
+students becomes a learning community. Some ways, from least to most:
 
-- Read one of your goals aloud in the session, or type it in the Zoom chat.
-- Post your plan, or one goal, in **#show-and-tell** on the course Discord.
+- Type one of your goals in the Zoom chat, if the session has time left.
+- Bring one goal to your Friday small group.
+- If you have joined the course Discord, post your plan, or one goal, in
+  **#show-and-tell**.
 - Put your plan in this week's learning journal, so you can look back at it in
   week 4.
 
 Share only what you are comfortable sharing. If you keep the plan private,
 that is fine.
 
-### 6. Follow through: come back each week
+### 7. Follow through: come back each week
 
 The plan is meant to change. Each week:
 
@@ -305,7 +322,8 @@ Look at your plan and ask:
 | The research is in it | You can say which theme or source led to each part, or that the part is yours alone |
 | You are in it | It mentions your specialty, how you learn, or what worries you, not only the course's topics |
 | You checked something | You opened two sources and know whether they said what ChatGPT said |
-| It fits | About 8 to 10 hours a week, with room to spare |
+| You learn with AI each week | Each week names one topic you will learn with AI, and why you chose it |
+| It fits | About 7.5 to 9.5 hours a week, as the syllabus says, with room to change |
 | It can change | You know when you will look at it again, and how |
 
 : What a good plan looks like. {#tbl-check}
@@ -316,20 +334,31 @@ Go back to Thursday morning and the list you could not finish. You still
 cannot do all of it. But you now know what the field thinks matters, which
 of those things the course covers, and which ones you care about.
 
-In your journal this week, answer two questions. What did the research show
-you that you would not have picked on your own? And what did you keep in your
-plan that no source told you to?
+Two of this week's [journal](../course/learning-journal.qmd) questions fit
+this session. For question 1, what you chose to learn and why, name one goal
+you kept that no source told you to. For question 3, what surprised you, say
+what the research showed you that you would not have picked on your own.
 
-## Three rules, every session
+## The rules
 
-1. **No patient information** in a chatbot unless your hospital has approved
-   that tool for it. See [patient information and AI
-   tools](../course/patient-information.qmd).
-2. **Make it yours.** Read what it gives you and change what does not fit.
-3. **You sign what you submit.** Whatever helped you write it, it is yours.
+The course has four rules:
+
+> Use your university ChatGPT Edu or Copilot account. Never put real patient
+> information into a course activity. Check what matters before you rely on
+> it. You sign the note.
+
+What counts as patient information is on [its own
+page](../course/patient-information.qmd).
 
 ## Go deeper
 
+- OpenAI, [Plan something from start to
+  finish](https://learn.chatgpt.com/training/hands-on/work) (about 20 to 25
+  minutes): a guided practice that runs in your browser with sample data, so
+  you do not need an account. You plan a team dinner in the same six steps
+  this chapter uses: prepare, summarize, decide, create, share, follow
+  through. It uses ChatGPT Work, which your account may not have; this
+  chapter's Do works in an ordinary chat.
 - OpenAI, [ChatGPT Training](https://learn.chatgpt.com/training): short
   walkthroughs on projects, documents and slides, and voice. Several use
   ChatGPT Work, which your account may not have.

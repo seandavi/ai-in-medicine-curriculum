@@ -1,6 +1,10 @@
 # Friday small groups {.unnumbered}
 
-[One hour every Friday, best effort, in one of four time slots · open discussion, led by you]{.subtitle .lead}
+[One hour every Friday, expected, in one of four time slots · open discussion, led by you]{.subtitle .lead}
+
+The Friday group is part of each week, along with your 3 hours of sessions.
+Sign up for one time slot in the Canvas Calendar each week; your group can
+change from week to week.
 
 Friday is an open discussion. You bring the topics: something AI helped you
 learn this week, something you caught it getting wrong, a question from a
@@ -12,5 +16,11 @@ try ideas and get them wrong.
 Leave out anything that could identify a patient (see [the patient information
 page](patient-information.qmd)).
 
+**Week 3 (October 30): bring your clinical stories.** Bring a situation where
+AI helped or hurt in patient care: one you saw, one you heard about, or one
+from the news. You lead the discussion. The co-directors join some of the
+groups.
+
 **Week 4 (November 6).** The last group is for your five-minute "what you will
-keep" presentations from the [learning journal](learning-journal.qmd).
+keep" presentations from the [learning journal](learning-journal.qmd). If you
+cannot come that day, submitting the piece in Canvas is enough.

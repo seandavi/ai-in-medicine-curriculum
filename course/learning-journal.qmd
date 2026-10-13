@@ -5,7 +5,11 @@
 The journal is a record of what you tried. Each week you set out to learn
 something with AI (see [Learn it with AI](learn-with-ai.qmd)), and the journal
 is where you write down how it went. It takes about 30 minutes. It is marked
-complete or incomplete, and it is what you bring to Friday's small group.
+complete or incomplete, and it gives you something to bring to Friday's small
+group.
+
+The course director reads your journal. Nobody else sees it unless you choose
+to share it. If an entry is a few days late, that is fine.
 
 ## Weeks 1 to 3: the entry
 
@@ -16,7 +20,7 @@ answers, and "it did not help" is a useful thing to write.
 1. What I chose to learn, and why
    The topic, and how it connects to the goals I wrote in week 1.
 
-2. How AI helped, and where it got in the way
+2. How AI helped, and where it did not
    Which tool I used and what I asked it to do.
    One time I felt I needed to check the AI: what made me want
    to check, how I checked, and what I found.
@@ -42,7 +46,7 @@ a form to fill in.
 1. *What I chose to learn.* "I wanted to learn how to ... because ..." "On my
    goals list I wrote ... This week I tried ..." "I am going into ..., so I
    picked ..."
-2. *How AI helped, and where it got in the way.* "It saved me time when ..."
+2. *How AI helped, and where it did not.* "It saved me time when ..."
    "I got a better answer once I ..." "It was no help with ..., because ..."
    For the check: "It told me ... I was not sure, because ... I looked it up
    in ... and found ..." If nothing made you doubt it, say why you trusted
@@ -62,9 +66,10 @@ you found: a paper, a video, a podcast, a news piece, a tool, a post. Aim for
 about three things a week, with at least one you found yourself. Anything
 related to AI counts, medical or not, so follow your own interest. For example,
 what do data centers really cost the places where they are built? Give the link
-so someone else can find it. This part is meant to be low-key. The course
-director uses your answers to improve the course, and the best finds go into
-the [starter resources](../appendix/resources.qmd) for future students.
+so someone else can find it. Keep this part short: one line each is enough.
+The course director uses your answers to improve the course, and the best
+finds go into the [starter resources](../appendix/resources.qmd) for future
+students.
 
 ## Week 4: what you will keep
 
@@ -75,13 +80,15 @@ No new topic. Write a short piece, roughly 300 to 500 words:
 - what you would tell an incoming intern who is nervous about these tools.
 
 Draw on your weeks 1 to 3 entries. Prepare a five-minute version for your
-Friday small group on November 6. Slides optional.
+Friday small group on November 6. Slides optional. If you cannot come that
+day, submitting the piece is enough.
 
 ## Submission
 
 In Canvas, as a text entry under that week's module, by Thursday night:
 October 15, 22, and 29, and November 5 for the week 4 piece.
-Plain text is fine.
+Plain text is fine. If the Canvas assignment differs from this page, follow
+Canvas.
 
 ## Using AI to write the journal
 
@@ -92,8 +99,8 @@ journals and residency programs now expect.
 
 **Optional: keep an AI-use ledger.** When you use AI to make something, such
 as slides for your week 4 talk, keep a ledger as you go. A ledger is a running
-list, one line per step, of what you did and what the AI did. Any chatbot
-works, including a free one, and nothing in it should be about a real patient.
+list, one line per step, of what you did and what the AI did. Use your
+university ChatGPT Edu or Copilot account, and keep real patients out of it.
 At the start of the chat, type:
 
 ```
