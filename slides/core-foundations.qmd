@@ -3,6 +3,13 @@ title: "How these systems work"
 subtitle: "From the eGFR on a chemistry panel to the next word"
 author: "AI in Medicine · Week 1 · AIM-1 and AIM-2 · 60 minutes live, about 60 minutes on your own"
 footer: "[The chapter for this session](../chapters/core-foundations.html) · AI in Medicine"
+filters:
+  - live-questions
+revealjs-plugins:
+  - live-questions
+live-questions:
+  server: https://live-questions.seandavis.net
+  session: idpt-2026-10-14-test   # change to idpt-2026-10-14 before class
 ---
 
 ## Three rules for every session {.center-v}
@@ -173,26 +180,7 @@ LIVE: Run this as the anonymous Zoom poll. Show the poll result before you press
 - Measuring GFR means **infusing a marker** the kidney filters and does nothing else with, such as iohexol, and timing how fast it clears.
 - That takes hours. It is **rarely done in routine care**.
 - The 57 was **computed** from creatinine, age, and sex.
-:::
-
-::: {.fragment .statement}
-Something turned three numbers into a kidney function.<br>You trusted it enough to clear her for contrast.
-:::
-
-::: notes
-Nobody measured her glomerular filtration rate. Measuring it means infusing a marker that the kidney filters and does nothing else with, such as iohexol, and timing how fast it clears. That takes hours, and it is rarely done in routine care.
-
-The fifty-seven was computed from three things the lab did have: her creatinine, her age, and her sex. Something turned those three numbers into a kidney function, and you trusted it enough to clear her for contrast.
-:::
-
-## Where did the equation come from? {.center-v}
-
-::: {.statement}
-Not from physiology.<br>It was **learned from data**.
-:::
-
-::: fragment
-A few thousand people did have their GFR measured. A computer was given their creatinine, age, and sex, and one instruction: *find the formula that best predicts the measured number.*
+- The equation was **learned from data**, not from physiology. A few thousand people did have their GFR measured. A computer was given their creatinine, age, and sex, and one instruction: *find the formula that best predicts the measured number.*
 :::
 
 ::: {.fragment .statement}
@@ -200,9 +188,11 @@ The eGFR is a **model**. *Remember her:* 45 kg, and a year of muscle loss.
 :::
 
 ::: notes
-So where did that equation come from? Not from the physiology of nephrons. It was learned from data.
+Nobody measured her glomerular filtration rate. Measuring it means infusing a marker that the kidney filters and does nothing else with, such as iohexol, and timing how fast it clears. That takes hours, and it is rarely done in routine care.
 
-A few thousand people did have their GFR measured. Their creatinine, age, and sex were given to a computer with one instruction: find the formula that best predicts the measured number.
+The fifty-seven was computed from three things the lab did have: her creatinine, her age, and her sex. Something turned those three numbers into a kidney function, and you trusted it enough to clear her for contrast.
+
+So where did that equation come from? Not from the physiology of nephrons. It was learned from data. A few thousand people did have their GFR measured. Their creatinine, age, and sex were given to a computer with one instruction: find the formula that best predicts the measured number.
 
 The eGFR is a model. It is the model you already trust most, and you have probably never asked what it was trained on.
 
@@ -307,22 +297,18 @@ LIVE: About two minutes. Move the sliders yourself and ask the room which way to
 ## Add a predictor
 
 ```{ojs}
-addRooms = 12
-// Made-up people. Women are built to have a lower GFR at the same creatinine; room number has no effect at all.
-// Each set has its own seed, so the two sets never depend on the order the cells run in.
-addPeople = (n, seed) => { let s = seed;
+// Made-up people. Women are built to have a lower GFR at the same creatinine.
+addPeople = { let s = 20261014;
   const rand = () => { s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s ^ (s >>> 15), 1 | s);
     t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
   const gauss = () => Math.sqrt(-2 * Math.log(1 - rand())) * Math.cos(2 * Math.PI * rand());
-  return Array.from({ length: n }, () => { const cr = 0.6 * Math.pow(4 / 0.6, rand()), fem = rand() < 0.5 ? 1 : 0, room = Math.floor(rand() * addRooms);
-    return { cr, fem, room, gfr: 80 * Math.pow(cr, -1.1) * (fem ? 0.78 : 1) * Math.exp(0.15 * gauss()) }; }); }
-addTrain = addPeople(40, 20261014)
-addTest = addPeople(40, 20261016)
-addRow = (p, useSex, useRoom) => { const row = [1, Math.log(p.cr)]; if (useSex) row.push(p.fem); if (useRoom) for (let k = 1; k < addRooms; k++) row.push(p.room === k ? 1 : 0); return row; }
+  return Array.from({ length: 40 }, () => { const cr = 0.6 * Math.pow(4 / 0.6, rand()), fem = rand() < 0.5 ? 1 : 0;
+    return { cr, fem, gfr: 80 * Math.pow(cr, -1.1) * (fem ? 0.78 : 1) * Math.exp(0.15 * gauss()) }; }); }
+addRow = (p, useSex) => useSex ? [1, Math.log(p.cr), p.fem] : [1, Math.log(p.cr)]
 // Least squares on the log scale (a straight-line fit): solve the normal equations.
-addFit = (data, useSex, useRoom) => {
-  const X = data.map(p => addRow(p, useSex, useRoom)), y = data.map(p => Math.log(p.gfr)), m = X[0].length;
-  const M = Array.from({ length: m }, (_, i) => [...Array.from({ length: m }, (_, j) => X.reduce((t, r) => t + r[i] * r[j], 0) + (i === j ? 1e-6 : 0)), X.reduce((t, r, k) => t + r[i] * y[k], 0)]);
+addFit = useSex => {
+  const X = addPeople.map(p => addRow(p, useSex)), y = addPeople.map(p => Math.log(p.gfr)), m = X[0].length;
+  const M = Array.from({ length: m }, (_, i) => [...Array.from({ length: m }, (_, j) => X.reduce((t, r) => t + r[i] * r[j], 0)), X.reduce((t, r, k) => t + r[i] * y[k], 0)]);
   for (let i = 0; i < m; i++) { let piv = i; for (let j = i + 1; j < m; j++) if (Math.abs(M[j][i]) > Math.abs(M[piv][i])) piv = j;
     [M[i], M[piv]] = [M[piv], M[i]];
     for (let j = i + 1; j < m; j++) { const f = M[j][i] / M[i][i]; for (let k = i; k <= m; k++) M[j][k] -= f * M[i][k]; } }
@@ -330,30 +316,29 @@ addFit = (data, useSex, useRoom) => {
   for (let i = m - 1; i >= 0; i--) { let t = M[i][m]; for (let j = i + 1; j < m; j++) t -= M[i][j] * w[j]; w[i] = t / M[i][i]; }
   return w;
 }
-addPredict = (w, p, useSex, useRoom) => Math.exp(addRow(p, useSex, useRoom).reduce((t, v, i) => t + v * w[i], 0))
-addScore = (w, data, useSex, useRoom) => ({
-  miss: data.reduce((t, p) => t + Math.abs(addPredict(w, p, useSex, useRoom) - p.gfr), 0) / data.length,
-  rss: data.reduce((t, p) => t + (Math.log(addPredict(w, p, useSex, useRoom)) - Math.log(p.gfr)) ** 2, 0) })
+addPredict = (w, p, useSex) => Math.exp(addRow(p, useSex).reduce((t, v, i) => t + v * w[i], 0))
+addScore = (w, useSex) => ({
+  miss: addPeople.reduce((t, p) => t + Math.abs(addPredict(w, p, useSex) - p.gfr), 0) / addPeople.length,
+  rss: addPeople.reduce((t, p) => t + (Math.log(addPredict(w, p, useSex)) - Math.log(p.gfr)) ** 2, 0) })
 ```
 
 :::: {.columns}
 ::: {.column width="56%"}
-<div class="illus-label">Illustrative data, made up. Women are built to have a lower GFR at the same creatinine; room number has no effect.</div>
+<div class="illus-label">Illustrative data, made up. Women are built to have a lower GFR at the same creatinine.</div>
 
 ```{ojs}
 {
   const W = 640, H = 400, l = 64, r = 14, t = 12, b = 54, ymax = 170;
   const X = cr => l + (cr - 0.5) / 3.5 * (W - l - r), Y = g => H - b - Math.min(g, ymax) / ymax * (H - b - t);
-  const w = addFit(addTrain, useSex, useRoom);
+  const w = addFit(useSex);
   const grid = Array.from({ length: 141 }, (_, i) => 0.5 + i * 0.025);
-  // Curves show the sex terms; room offsets are left at the first room.
-  const curve = fem => "M" + grid.map(c => `${X(c).toFixed(1)},${Y(addPredict(w, { cr: c, fem, room: 0 }, useSex, false)).toFixed(1)}`).join("L");
+  const curve = fem => "M" + grid.map(c => `${X(c).toFixed(1)},${Y(addPredict(w, { cr: c, fem }, useSex)).toFixed(1)}`).join("L");
   const dot = p => useSex ? (p.fem ? ink.terracotta : ink.teal) : ink.ink;
-  return html`<svg class="wchart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Forty made-up people, creatinine against measured GFR. ${useSex ? "Women and men have separate curves." : "One curve for everyone."} ${useRoom ? "Each room also has its own offset." : ""}">
+  return html`<svg class="wchart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Forty made-up people, creatinine against measured GFR. ${useSex ? "Women and men have separate curves." : "One curve for everyone."}">
     ${[0, 40, 80, 120, 160].map(v => `<line x1="${l}" x2="${W - r}" y1="${Y(v)}" y2="${Y(v)}" stroke="${ink.rule}"/><text x="${l - 8}" y="${Y(v) + 6}" fill="${ink.muted}" font-size="17" text-anchor="end">${v}</text>`).join("")}
     ${[1, 2, 3, 4].map(v => `<text x="${X(v)}" y="${H - b + 24}" fill="${ink.muted}" font-size="17" text-anchor="middle">${v}</text>`).join("")}
-    ${addTrain.map(p => `<line x1="${X(p.cr).toFixed(1)}" x2="${X(p.cr).toFixed(1)}" y1="${Y(p.gfr).toFixed(1)}" y2="${Y(addPredict(w, p, useSex, useRoom)).toFixed(1)}" stroke="${ink.muted}" stroke-width="2" opacity=".6"/>`).join("")}
-    ${addTrain.map(p => `<circle cx="${X(p.cr).toFixed(1)}" cy="${Y(p.gfr).toFixed(1)}" r="5" fill="${dot(p)}"/>`).join("")}
+    ${addPeople.map(p => `<line x1="${X(p.cr).toFixed(1)}" x2="${X(p.cr).toFixed(1)}" y1="${Y(p.gfr).toFixed(1)}" y2="${Y(addPredict(w, p, useSex)).toFixed(1)}" stroke="${ink.muted}" stroke-width="2" opacity=".6"/>`).join("")}
+    ${addPeople.map(p => `<circle cx="${X(p.cr).toFixed(1)}" cy="${Y(p.gfr).toFixed(1)}" r="5" fill="${dot(p)}"/>`).join("")}
     ${useSex ? `<path d="${curve(0)}" fill="none" stroke="${ink.teal}" stroke-width="4"/><path d="${curve(1)}" fill="none" stroke="${ink.terracotta}" stroke-width="4"/>` : `<path d="${curve(0)}" fill="none" stroke="${ink.teal}" stroke-width="4"/>`}
     <text x="${(l + W - r) / 2}" y="${H - 8}" fill="${ink.inkSoft}" font-size="18" text-anchor="middle">creatinine, mg/dL</text>
     <text x="22" y="${(t + H - b) / 2}" fill="${ink.inkSoft}" font-size="18" text-anchor="middle" transform="rotate(-90 22 ${(t + H - b) / 2})">measured GFR</text>
@@ -371,41 +356,37 @@ toggleInput = label => {
   return box;
 }
 viewof useSex = toggleInput("Add sex")
-viewof useRoom = toggleInput("Add room number")
 ```
 
 ```{ojs}
 {
-  const w = addFit(addTrain, useSex, useRoom);
-  const a = addScore(w, addTrain, useSex, useRoom), b = addScore(w, addTest, useSex, useRoom);
-  const numbers = 2 + (useSex ? 1 : 0) + (useRoom ? addRooms - 1 : 0);
+  const sc = addScore(addFit(useSex), useSex);
   return html`<div class="readout stack" role="status">
-    <div><span class="k">Numbers in the model: <b>${numbers}</b></span></div>
-    <div><span class="k">Fit to these 40 people, average miss: <b>${a.miss.toFixed(1)}</b></span></div>
-    <div><span class="k">Sum of squared misses (RSS): <b>${a.rss.toFixed(2)}</b></span></div>
-    <div><span class="k">Tested on 40 new people, average miss: <b>${b.miss.toFixed(1)}</b></span></div>
+    <div><span class="k">Numbers in the model: <b>${useSex ? 3 : 2}</b></span></div>
+    <div><span class="k">Average miss: <b>${sc.miss.toFixed(1)}</b> mL/min/1.73 m²</span></div>
+    <div><span class="k">Sum of squared misses (RSS): <b>${sc.rss.toFixed(2)}</b></span></div>
   </div>`;
 }
 ```
 
-[Misses in mL/min/1.73 m². The fit makes the RSS as small as it can, on a log scale. Dots: teal men, terracotta women. Thin lines: the miss for each person.]{.defn}
+[Dots: teal men, terracotta women. Thin lines: the miss for each person. The fit makes the RSS as small as it can, on a log scale.]{.defn}
+
+::: fragment
+**Fitting** with a second predictor is the same job: find the numbers that make the misses smallest.
+:::
 :::
 ::::
 
 ::: notes
 Now add a second predictor. The real eGFR equation uses sex as well as creatinine and age, so we do the same. Same made-up people, same idea, but now the equation can have a different level for women and men.
 
-Turn on "Add sex". The fit now gives each sex its own curve. Look at two numbers. The average miss on these forty people falls. The average miss on forty new people, whom the model has never seen, falls too. That is a real predictor doing real work: in this made-up data, women have a lower GFR at the same creatinine.
+PAUSE: 1 min. Turn on "Add sex" and watch the average miss and the RSS.
 
-Now turn on "Add room number". This is the number of the room the patient happened to be in. It has no connection to kidney function. Ask yourself: will the fit improve?
+The fit now gives each sex its own curve, and both numbers fall. In this made-up data, women have a lower GFR at the same creatinine, so a model that knows the sex can follow both groups. Statisticians call the sum of squared misses the RSS. The fit makes it as small as it can, so the RSS can only go down when a predictor is added. Whether the drop is real, or only a better fit to these forty people, is a different question, and the next section is about it.
 
-PAUSE: 2 min. Turn on "Add room number" and watch both numbers. Which one improves, and which one gets worse?
+The data are made up. The real equation has more terms, and it was fit to eight thousand two hundred fifty-four people whose GFR was measured.
 
-The miss on the forty people we fit falls again, because the equation now has twelve more numbers to bend toward them. The miss on the forty new people goes up. A predictor with no real connection still improves the fit to the people you used, and makes the model worse for the next patient. Statisticians call the sum of squared misses the RSS. The fit makes it as small as it can on the people it is given, so it can only go down when you add a predictor. That is why the number to trust is the one from new people, which is the next idea.
-
-The data are made up. The numbers on the right come from this one random sample of forty and forty. Run it many times and the pattern holds, though the sizes vary.
-
-LIVE: About two minutes. Before pressing "Add room number", ask the room to vote with a show of hands: better, worse, or the same for the new people? Then press it.
+LIVE: About one minute. Ask the room which way the average miss will move, then turn it on.
 :::
 
 ## [Part 1, continued]{.year} The loop every model comes from {.divider background-color="#173f45"}
@@ -509,43 +490,71 @@ Second, and only for a supervised model: does it give a category or a number? Th
 The difference matters for how you judge it. A regression is wrong by an amount. A classification is wrong by a kind, a miss or a false alarm. A miss costs the patient who was missed. A false alarm costs the staff who answer it, and the patient who is worked up for nothing.
 :::
 
-## Try it: sort four models
+## A model watches a heart ultrasound {.center-v}
 
-```{ojs}
-sorterRows = [
-  { model: "The eGFR", answer: "Supervised · regression",
-    why: "measured GFR is in the training data; the output is a number." },
-  { model: "An EHR sepsis alert", answer: "Supervised · classification",
-    why: "each case was labelled sepsis yes or no; the output is yes or no." },
-  { model: "Grouping 10,000 tumor profiles, no diagnoses attached", answer: "Unsupervised",
-    why: "there is no answer column; the tool finds groups on its own." },
-  { model: "A chatbot predicting the next word", answer: "Supervised · classification",
-    why: "the next word is already in the text, so nobody labels anything. Many textbooks call this self-supervised. The output is one word from a fixed list." }
-]
-sortChoices = ["Supervised · regression", "Supervised · classification", "Unsupervised"]
-{
-  const table = html`<table class="sorter"><thead><tr><th></th>${sortChoices.map(c => html`<th>${c}</th>`)}</tr></thead>
-    <tbody>${sorterRows.map((r, i) => html`<tr><td>${r.model}</td>${sortChoices.map((c, j) =>
-      html`<td><input type="radio" name="sort${i}" value="${j}" aria-label="${r.model}: ${c}"></td>`)}</tr>`)}</tbody></table>`;
-  const result = html`<div role="status"></div>`;
-  const check = html`<button class="w-btn" type="button">Check my answers</button>`;
-  check.onclick = () => {
-    const picks = sorterRows.map((r, i) => sortChoices[(table.querySelector(`input[name=sort${i}]:checked`) || {}).value]);
-    result.replaceChildren(html`<div class="fb compact ${picks.every((p, i) => p === sorterRows[i].answer) ? "ok" : "no"}">${sorterRows.map((r, i) =>
-      html`<div>${picks[i] === r.answer ? "✓" : "✗"} <b>${r.model}:</b> ${r.answer}, because ${r.why}</div>`)}</div>`);
-  };
-  return html`${table}${check}${result}`;
-}
-```
+::: {.poll #echo-ef prompt="A model watches a heart ultrasound video and reports an ejection fraction of 55%. What kind of model is it?"}
+A model watches a heart ultrasound video and reports **an ejection fraction of 55%**. What kind of model is it?
+
+- [x] Regression: it gives a number
+- [ ] Classification: it gives a category
+- [ ] Unsupervised: it finds groups, with no answer column
+:::
 
 ::: notes
-Now you try. Sort these four models with the two questions. The eGFR. A sepsis alert in the EHR. A tool that groups ten thousand tumor expression profiles into clusters, with no diagnoses attached. And a chatbot predicting the next word.
+Now you try, with the two questions from the last slide. First: does the training data contain the answer? Second: is the output a category or a number?
 
-PAUSE: 2 min. Pause here, pick an answer for each row, then press check.
+A model watches a heart ultrasound video and reports an ejection fraction of fifty-five percent. What kind of model is it?
 
-The last one is the surprise. A chatbot is trained with an answer for every case, and nobody had to label anything, because the next word is already sitting in the text. Many textbooks call this self-supervised learning, because the labels come from the text itself. That is why these models could be trained on so much of the internet.
+LIVE: Open the poll. Give the room about 45 seconds, then press A to reveal. Regression: the training data contain the answer, a measured ejection fraction, and the output is a number.
 
-LIVE: Give the room ninety seconds. Ask for the chatbot row in the chat, sent on your count, before you press check.
+PAUSE: 1 min. Pause here and pick an answer before you go on.
+
+This is the EchoNet-Dynamic model [@pmid:32269341]. The same model also says whether the heart failure has reduced ejection fraction, which is a yes or no. One system can give a number and a category. The type of problem depends on the output you ask for.
+:::
+
+## A model looks at a skin photo {.center-v}
+
+::: {.poll #skin-photo prompt="A model looks at a photo of a skin lesion and answers: benign nevus or melanoma. What kind of model is it?"}
+A model looks at a photo of a skin lesion and answers: **benign nevus or melanoma**. What kind of model is it?
+
+- [ ] Regression: it gives a number
+- [x] Classification: it gives a category
+- [ ] Unsupervised: it finds groups, with no answer column
+:::
+
+::: notes
+Same two questions. A model looks at a photo of a skin lesion and answers: benign nevus or melanoma. What kind of model is it?
+
+LIVE: Open the poll. About 30 seconds, then press A. Classification: every training image carried a diagnosis, and the output is one of two categories.
+
+PAUSE: 1 min. Pause here and pick an answer before you go on.
+
+This is the dermatology model from Stanford [@pmid:28117445]. A classification is wrong by a kind: it can call a melanoma benign, or a nevus malignant. Which of those costs more is a clinical question, and it is yours to answer.
+:::
+
+## Four fields, the same two questions {.smaller}
+
+| Field | The model reads | It gives | Type | What the authors reported |
+|---|---|---|---|---|
+| Cardiology | a heart ultrasound video | ejection fraction | **Regression** | average error 4.1 points at the same hospital, 6.0 at another health system [@pmid:32269341] |
+| Pediatrics | a hand X-ray | bone age in months | **Regression** | the best of 105 entries was off by 4.2 months on average, on 200 test X-rays [@pmid:30480490] |
+| Dermatology | a skin photo | benign or malignant | **Classification** | on par with 21 dermatologists, on biopsy-proven images [@pmid:28117445] |
+| Pathology | a lymph node slide | cancer present or absent | **Classification** | best entry AUC 0.994; the entries ranged from 0.556 to 0.994 [@pmid:29234806] |
+
+: {.big tbl-colwidths="[14,22,19,15,30]"}
+
+More of the same: an **ECG** rhythm classifier that matched cardiologists [@pmid:30617320]; **breast tumors grouped by gene expression**, with no diagnoses attached, which is unsupervised [@pmid:10963602]; and the diabetic retinopathy system from Tuesday [@pmid:31304320].
+
+::: notes
+Four fields, the same two questions. Read the Type column, then the last column.
+
+In cardiology, a model reads ultrasound video and gives a number, the ejection fraction. In pediatrics, a model reads a hand X-ray and gives a bone age in months. Both are regressions: they are wrong by an amount. In dermatology and pathology, a model reads an image and gives a category. Both are classifications: they are wrong by a kind.
+
+Now look at the last column, because the same lesson is in it. The cardiology model was off by four point one points at the hospital where it was built, and by six point zero at another health system. In the pathology challenge, the best entry scored zero point nine nine four on the area under the curve, and the worst scored zero point five five six, barely better than a coin flip. Results on the authors' own test data are the optimistic number. Ask where it was tested, and by whom.
+
+For the record, three more examples are listed under the table: an ECG rhythm classifier, tumor subtypes found without any diagnoses, and the diabetic retinopathy system from Tuesday. They are here so you can find the papers.
+
+LIVE: About one minute and a half. Do not read the table. Point at the Type column and then at the last column.
 :::
 
 ## Cases it has already seen prove nothing {.center-v}
@@ -754,6 +763,52 @@ Ask what it was *trained on*.<br>Ask what it was *tested on*, and by whom.<br>If
 That gives you another of the course's recurring lessons: the published number is the optimistic one.
 
 A model's performance on the cases it was built from is usually the best it will look. On new patients, especially from another hospital, it is usually lower. So ask three things of any model. What was it trained on? What was it tested on, and by whom? If the cases it was tested on are the cases it was trained on, you have not learned anything yet.
+:::
+
+## A neural network: the same loop, more dials
+
+```{ojs}
+nnLayers = [4, 5, 5, 1]
+nnDials = nnLayers.slice(1).reduce((t, n, i) => t + n * nnLayers[i], 0)
+```
+
+:::: {.columns}
+::: {.column width="54%"}
+```{ojs}
+{
+  const W = 640, H = 400, pad = 56, xs = nnLayers.map((_, i) => pad + i * (W - 2 * pad) / (nnLayers.length - 1));
+  const ys = (n) => Array.from({ length: n }, (_, k) => H / 2 + (k - (n - 1) / 2) * 58);
+  const lines = nnLayers.slice(1).map((n, i) => ys(nnLayers[i]).flatMap(y0 => ys(n).map(y1 =>
+    `<line x1="${xs[i]}" y1="${y0}" x2="${xs[i + 1]}" y2="${y1}" stroke="${ink.teal}" stroke-width="1.5" opacity=".45"/>`))).flat().join("");
+  const dots = nnLayers.map((n, i) => ys(n).map(y => `<circle cx="${xs[i]}" cy="${y}" r="14" fill="${i === 0 ? ink.ink : i === nnLayers.length - 1 ? ink.terracotta : "#fffaf0"}" stroke="${ink.ink}" stroke-width="2.5"/>`).join("")).join("");
+  const label = (x, t) => `<text x="${x}" y="${H - 12}" fill="${ink.inkSoft}" font-size="21" text-anchor="middle">${t}</text>`;
+  return html`<svg class="wchart" viewBox="0 0 ${W} ${H}" role="img" aria-label="A small neural network: four input units, two middle layers of five units each, and one output unit. Every line between units is a dial the fit can turn. ${nnDials} lines in all.">
+    ${lines}${dots}${label(xs[0], "inputs")}${label((xs[1] + xs[2]) / 2, "layers of simple units")}${label(xs[3], "output")}
+  </svg>`;
+}
+```
+
+[Illustrative. Every line is a dial. This toy network has **${nnDials}**; the networks behind the examples have far more.]{.defn}
+:::
+::: {.column width="46%"}
+::: {.incremental}
+- The **inputs** can be the raw pixels of an image. Nobody has to write down what to look for.
+- Each unit adds up what it receives, with its own dials, and passes the result on.
+- **Fitting** is the same loop: turn every dial until the misses on the training cases get smaller.
+:::
+:::
+::::
+
+::: notes
+Here is a neural network. It is the same loop you just saw, with a far bigger equation.
+
+On the left are the inputs. For an image, these can be the raw pixel values, so nobody has to decide in advance what to look for. In the middle are layers of simple units. Each unit adds up what it receives, with its own dials, and passes the result to the next layer. On the right is the output: a number, such as an ejection fraction, or a category, such as melanoma.
+
+Every line in this picture is a dial. This toy network has fifty. The networks behind the four examples have far more. Fitting is the loop you already know: turn every dial until the misses on the training cases get smaller. The word deep in deep learning means many layers.
+
+Everything from the last few slides still applies. A network with that many dials can memorize its training cases, so the test set matters even more. And what it learned depends on the people in its training data.
+
+LIVE: About one minute. Do not explain the arithmetic. The picture is for the idea of many dials, and the next section uses it for words.
 :::
 
 ## [Part 2]{.year} From tables to words {.divider background-color="#173f45"}
