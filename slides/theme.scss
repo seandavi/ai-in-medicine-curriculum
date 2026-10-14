@@ -670,6 +670,26 @@ $callout-color-warning: $gold;
   display: flex;
   gap: 2em;
 }
+// A readout with one line per number, and a large on/off checkbox for a widget.
+.reveal .readout.stack {
+  flex-direction: column;
+  gap: 0.15em;
+  font-size: 28px;
+  margin: 0.4em 0;
+}
+.reveal .w-toggle {
+  display: block;
+  font-size: 32px;
+  margin: 0.15em 0;
+  cursor: pointer;
+}
+.reveal .w-toggle input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+  vertical-align: -0.15em;
+  margin-right: 0.3em;
+  accent-color: $accent;
+}
 .reveal .readout .train {
   color: $ink;
 }
