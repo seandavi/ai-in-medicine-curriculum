@@ -32,7 +32,7 @@ the course survivable when a third of the class misses week two.
 |---|---|---|---|
 | `enrichment-agentic-coding` | [Agentic coding](../chapters/enrichment-agentic-coding.qmd) | 85 | AIM-5, AIM-2, AIM-4 |
 | `enrichment-prompting-lab` | [Prompting lab](../chapters/enrichment-prompting-lab.qmd) | 60 | AIM-5, AIM-2 |
-| `enrichment-workforce-economics` | [Will AI take your job?](../chapters/enrichment-workforce-economics.qmd) | 60 | AIM-7, AIM-2, AIM-X |
+| `enrichment-workforce-economics` | [Will AI take your job?](../chapters/enrichment-workforce-economics.qmd) | 70 | AIM-7, AIM-2, AIM-X |
 | `enrichment-environment` | [What AI costs the planet](../chapters/enrichment-environment.qmd) | 60 | AIM-3, AIM-2, AIM-7 |
 | `enrichment-rag-notebooklm` | [Grounding AI in real sources](../chapters/enrichment-rag-notebooklm.qmd) | 70 | AIM-1, AIM-2, AIM-9 |
 

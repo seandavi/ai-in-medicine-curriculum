@@ -1,6 +1,6 @@
 ---
 title: "Will AI take your job? Workforce and economics"
-subtitle: "About 60 minutes"
+subtitle: "About 70 minutes"
 execute:
   echo: false
 ---
@@ -12,8 +12,8 @@ execute:
   forecast about your own specialty.
 - **What you do.** Ask ChatGPT Edu to apply the four questions to your
   specialty and find studies of how its working day is spent, then check one
-  in PubMed. Look up how exposed health jobs are in one AI company's own
-  usage data.
+  in PubMed. Look up how much of each health job people were seen doing
+  with one AI company's chatbot.
 - **What you keep.** A three-line forecast for your specialty, with a number
   and its source, to reread at the end of residency.
 - **Short on time?** Read "What actually happened" and "Why 'he was just
@@ -50,8 +50,9 @@ appraisal), AIM-X (professional identity, the closing question).
 
 **What you need.** Your university ChatGPT Edu or Copilot account and a
 browser. Nothing to install. Nothing in this chapter involves a patient. The
-time counts about 20 minutes of reading, a 2-minute clip, and about 38
-minutes of doing; the longer video and Go deeper are optional.
+time counts about 22 minutes of reading, a 2-minute clip, about 38
+minutes of doing, and a few minutes to check yourself. The longer video, the
+"If you have more time" box, and Go deeper are optional.
 
 ## The year everyone says radiology is over
 
@@ -194,16 +195,17 @@ pie showData
     "Nonclinical" : 12.3
 ```
 
-The same question has now been asked of emergency medicine. Two emergency
-physicians combined six time-and-motion studies, the national list of
-activities a resident must be trusted to do alone, and the O\*NET task list
-into 14 categories of work. Then they judged what current AI could do with
-each. They placed AI replacement mainly in routine paper
-tasks: documentation, reviewing medical records, and running the
-department's operations. Those tasks take 20 to 40 percent of a shift. For
-the judgment-heavy work they judged that AI mostly helps rather than
-replaces, and for hands-on work it does little [@pmid:42687470]. This is two
-physicians' judgment, not a measurement, but it is the same move: break the
+The same question has now been asked of emergency medicine. A team led by
+Stanford emergency physicians combined six time-and-motion studies, the
+national list of activities a resident must be trusted to do alone, and
+O\*NET, the US government's list of the tasks in each job. That gave 14
+categories of work. Then two emergency physicians on the team judged what
+current AI could do with each. They placed AI replacement mainly in routine
+record and office tasks: documentation, reviewing medical records, and
+running the department's operations. Those tasks take 20 to 40 percent of a
+shift. For the judgment-heavy work they judged that AI mostly helps rather
+than replaces, and for hands-on work it does little [@pmid:42687470]. This
+is expert judgment, not a measurement, but it is the same method: break the
 job into tasks first.
 
 **2. Generalization: does it work at a hospital that did not build it?** A
@@ -373,9 +375,9 @@ Projected employment change, 2025 to 2035, for three health-information occupati
 What separates them is the same four questions, applied to non-physician
 work. Transcription is a single task a machine can be tested on. It works
 anywhere, because speech is speech. Nobody signs a transcript. And its demand
-is capped by the number of visits. Coding and health-information work fail the
-first test. The job is judgment about what a record means and what a payer
-will accept, and the bot wars above are *increasing* that work, not removing
+is capped by the number of visits. Coding and health-information work pass
+the first test only in part. Much of the job is judgment about what a record
+means and what a payer will accept, and the bot wars above are *increasing* that work, not removing
 it. The people whose jobs change first are your colleagues, and the harm is
 not spread evenly. Transcription pays less than the two occupations that are
 growing, so the displaced workers are the ones with the least money in reserve.
@@ -390,14 +392,15 @@ Everything so far asks whether a machine *could* do part of a job. In March
 2026 Anthropic, the company that makes the Claude chatbot, published a
 different number: what people were actually seen doing with Claude at
 work.[^anthropic] The two authors, Maxim Massenkoff and Peter McCrory,
-started from O\*NET, the US government's database of the tasks that make up
-each job. It lists about 18,000 tasks across about 800 occupations. For each
+started from O\*NET, the government's list of job tasks. It lists about
+18,000 tasks across about 800 occupations. For each
 task they asked two questions.
 
-- **Could a language model do it?** An earlier study had rated every
-  O\*NET task on whether a language model could do it at least twice as
-  fast [@doi:10.1126/science.adj0998]. Three of its four authors worked at
-  OpenAI, the company that makes ChatGPT.
+- **Could a language model do it?** A language model is the kind of AI
+  behind ChatGPT and Claude. An earlier study had rated every O\*NET task on
+  whether a language model could do it at least twice as fast
+  [@doi:10.1126/science.adj0998]. When it first appeared in 2023, three of
+  its four authors were at OpenAI, the company that makes ChatGPT.
 - **Was it seen being done?** The authors looked for the task in samples of
   people's work conversations with Claude, and in software that companies
   build on Claude, from August and November 2025. When Claude did the task
@@ -416,7 +419,7 @@ roughly the share of the job's working time spent on tasks seen in that use.
     <https://huggingface.co/datasets/Anthropic/EconomicIndex>, file
     `labor_market_impacts/job_exposure.csv`, released under CC BY.
 
-![Could do versus does, for 22 job categories. Blue: the share of each category's tasks that a language model could do at least twice as fast, from the earlier study's ratings. Red: the share seen in work use of Claude in August and November 2025, with assisted use counted half. Redrawn from Massenkoff and McCrory (2026), Figure 2. The values were read from the published chart to about one percentage point ([the values as a table](../data/anthropic-labor-market-2026/figure2-radar-digitized.csv)). Data are not copyrightable; drawing by the course, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).](../images/anthropic-2026-could-vs-does.svg){#fig-could-does fig-alt="Radar chart with 22 job categories around a circle. A large blue shape shows the share of tasks a language model could do; a much smaller red shape inside it shows the share seen in work use of Claude. Blue is highest for business and finance, computer and math (94 percent), management, office and admin (90 percent), and legal. Red is largest for computer and math (about a third), office and admin, business and finance, and sales. Healthcare practitioners: could 60 percent, seen 5 percent. Healthcare support: could 28 percent, seen 2 percent. Manual jobs such as construction and food service are low on both."}
+![Could do versus does, for 22 job categories. Blue: the share of each category's tasks that a language model could do at least twice as fast, from the earlier study's ratings. Red: the share seen in work use of Claude in August and November 2025, with assisted use counted half. Redrawn from Massenkoff and McCrory (2026), Figure 2. The values were read from the published chart to about one percentage point ([the values as a table](../data/anthropic-labor-market-2026/figure2-radar-digitized.csv)). Data are not copyrightable; drawing by the course, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).](../images/anthropic-2026-could-vs-does.svg){#fig-could-does fig-alt="Radar chart with 22 job categories around a circle. A large blue shape shows the share of tasks a language model could do; a much smaller red shape inside it shows the share seen in work use of Claude. Blue is highest for business and finance, computer and math (94 percent), management, office and admin (90 percent), and legal. Red is largest for computer and math (about a third), office and admin, business and finance, and sales. Healthcare practitioners: could 60 percent, seen 5 percent. Healthcare support: could 28 percent, seen close to zero. Manual jobs such as construction and food service are low on both."}
 
 The space between the two shapes in @fig-could-does is the paper's main
 finding. In computer and math jobs, a language model could do about 94
@@ -426,7 +429,8 @@ a model could do about 60 percent, and about 5 percent was seen.
 
 The authors give a medical example of that gap. The earlier study rated
 "Authorize drug refills and provide prescription information to pharmacies"
-as a task a language model alone could do. Anthropic has not seen Claude
+as a task a language model alone could make at least twice as fast.
+Anthropic has not seen Claude
 doing it. Among the reasons a possible task goes unused, the authors list
 "legal constraints" and "human verification steps". For a refill, that is
 the third of the four questions: someone signs the prescription, and the
@@ -434,21 +438,22 @@ law says who. A task can pass the first question and still stay with a
 person.
 
 The company released the score for every occupation (@fig-health-jobs).
-Medical records specialists scored 67 percent, the fourth highest of 756
-jobs. Medical transcriptionists scored 64 percent. Radiologists, the
+Medical records specialists, the job that includes medical coders, scored
+67 percent, the fourth highest of 756 jobs. Medical transcriptionists scored 64 percent. Radiologists, the
 specialty Hinton said to stop training, scored 20 percent. Forty of the 65
 jobs in the healthcare practitioner group scored zero, including family
 medicine physicians and psychiatrists. A zero means Claude was not seen
 doing enough of the job's tasks to count. It does not mean AI cannot help
 with them.
 
-![Observed exposure for selected health jobs: the share of each job's working time spent on tasks seen in work use of Claude, with assisted use counted half. The four records jobs are all the records jobs in the data; the eight clinical jobs were chosen to show the range. Jobs that keep records score far higher than jobs that treat patients. Data: Anthropic Economic Index, `job_exposure.csv`, released with Massenkoff and McCrory (2026) under CC BY ([a copy in this book](../data/anthropic-labor-market-2026/job_exposure.csv)). Drawing by the course, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).](../images/anthropic-2026-health-jobs.svg){#fig-health-jobs fig-alt="Horizontal bar chart of observed exposure. For comparison, computer programmers score 75 percent, the highest of all 756 jobs. Records and office work: medical records specialists 67 percent, medical transcriptionists 64, medical secretaries and administrative assistants 36, health information technologists and registrars 31. Clinicians: radiologists 20, pathologists 16, nurse practitioners 9, pharmacists 9, general internal medicine physicians 8, registered nurses 6, family medicine physicians 0, psychiatrists 0."}
+![Observed exposure for selected health jobs: the share of each job's working time spent on tasks seen in work use of Claude, with assisted use counted half. The four records and office jobs are the highest-scoring health jobs in the data; the eight clinical jobs were chosen to show the range. Jobs that keep records score far higher than jobs that treat patients. Data: Anthropic Economic Index, `job_exposure.csv`, released with Massenkoff and McCrory (2026) under CC BY ([a copy in this book](../data/anthropic-labor-market-2026/job_exposure.csv)). Drawing by the course, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).](../images/anthropic-2026-health-jobs.svg){#fig-health-jobs fig-alt="Horizontal bar chart of observed exposure. For comparison, computer programmers score 75 percent, the highest of all 756 jobs. Records and office work: medical records specialists 67 percent, medical transcriptionists 64, medical secretaries and administrative assistants 36, health information technologists and registrars 31. Clinicians: radiologists 20, pathologists 16, nurse practitioners 9, pharmacists 9, general internal medicine physicians 8, registered nurses 6, family medicine physicians 0, psychiatrists 0."}
 
 Now put these scores next to @tbl-bls. Medical records specialists and
 medical transcriptionists are almost equally exposed. The BLS expects
 records specialists to grow 8 percent and transcriptionists to shrink 4
 percent. Exposure counts the tasks a tool touches. It does not tell you
-whether the job will shrink. The four questions do that. Transcription
+whether the job will shrink. The four questions help you reason about
+that. Transcription
 demand is capped by the number of visits, and the bot wars are adding
 coding work. Across all jobs, the paper found only a weak link with the BLS
 projections. For every 10 percentage points more exposure, projected growth
@@ -460,9 +465,12 @@ transcription, coding and billing, scheduling, and interpreting. They
 concluded that "to date, most allied health workers' jobs with
 administrative/management roles have not been at risk of replacement by
 AI". They also heard that AI output has to be checked, and that checking
-takes staff time [@pmid:42612020].
+takes staff time. They warned that this could change: financial pressure on
+health systems could push them to use AI in place of staff
+[@pmid:42612020].
 
-**Has it cost jobs yet?** The authors compared unemployment among the most
+::: {.callout-note collapse="true" title="If you have more time: has AI cost jobs yet?"}
+The Anthropic authors compared unemployment among the most
 exposed quarter of workers with unemployment among workers whose jobs
 scored zero. Since ChatGPT was released in November 2022, the gap between
 the two groups has not changed by more than chance would explain. There is
@@ -471,16 +479,21 @@ occupations about 14 percent less often than in 2022. Older workers showed
 no such drop. The authors call the result "just barely
 statistically significant". The young people who were not hired may have
 stayed in other jobs or gone back to school. A Stanford team using payroll
-records found a clearer drop. Through July 2025, employment of workers aged
-22 to 25 in the most exposed jobs fell 13 percent compared with other
-workers.[^canaries] The same paper found the opposite for health aides
+records found a clearer drop. Its 2025 version ranked jobs by the earlier
+study's "could" ratings, not by observed use. Through July 2025, employment of
+workers aged 22 to 25 in the most exposed jobs fell 13 percent compared
+with other workers.[^canaries] In the authors' August 2026 update, with data
+through June 2026, the gap was 19 percent. It shrinks when the workers'
+education is taken into account, and it is smaller in national survey data.
+The 2025 paper found the opposite for health aides
 (nursing, psychiatric, and home health aides), which sit in the least
 exposed fifth of jobs. Employment of young health aides grew faster than
 that of older ones. The paper does not test why. One reading is the fourth
 question: demand for hands-on care keeps growing, and a language model
-cannot do that work. Residency positions are not what these studies measure. The young
-workers in them are more like the coders, scribes, and unit clerks you will
-work beside.
+cannot do that work. Residency positions are not what these studies
+measure. The young workers in them are more like the coders, scribes, and
+unit clerks you will work beside.
+:::
 
 [^canaries]: Erik Brynjolfsson, Bharat Chandar, and Ruyu Chen, *Canaries in
     the Coal Mine? Six Facts about the Recent Employment Effects of
@@ -488,28 +501,32 @@ work beside.
     August 2025, read from the
     [archived August 2025 version](https://web.archive.org/web/20250901000000id_/https://digitaleconomy.stanford.edu/wp-content/uploads/2025/08/Canaries_BrynjolfssonChandarChen.pdf)
     on 2026-10-16; the health-aide finding is on page 11. The payroll data
-    come from ADP, a payroll company. The authors posted a revised version in
-    August 2026 at the
+    come from ADP, a payroll company. The August 2026 revision, at the
     [same address](https://digitaleconomy.stanford.edu/wp-content/uploads/2025/08/Canaries_BrynjolfssonChandarChen.pdf),
-    so quote the version you read, with its date.
+    gives the 19 percent figure in its abstract and moves the health-aide
+    panel to appendix Figure B.5. It also notes that ADP's data hold fewer
+    health, education, and government workers than the national figures. Quote
+    the version you read, with its date.
 
 **Read it as you would read a trial run by the company that sells the
-drug.** Four things to notice.
+drug.** Five things to notice.
 
-1. The authors work for the company whose product they measured.
-2. It is one product. A clinician who uses ChatGPT, OpenEvidence, or a
-   scribe built into the electronic health record does not appear in
-   Claude's data.
+1. The authors work for the company whose product they measured. Both of
+   the paper's main findings, wide use of the product and no rise in
+   unemployment so far, are ones the company would welcome.
+2. It is one product. A clinician who uses ChatGPT, or a scribe built on
+   another company's model, does not appear in Claude's data.
 3. It is a company report, not a peer-reviewed paper.
 4. The authors warn that O\*NET can word the same activity differently for
    different jobs, and that this changes the score. So do not read much into
    small differences between specialties, such as 8 percent for general
    internal medicine and 0 for family medicine.
+5. This section, like most of this book, was drafted with Claude.
+   [The AI ledger](../appendix/ai-ledger.qmd) records what a person checked.
 
 On the other side, the authors published their method, the judgment calls
-they made, and the data, so anyone can check the numbers. You will do that
-in Part C. One more conflict to know about: this book was drafted with
-Claude, as [the AI ledger](../appendix/ai-ledger.qmd) records.
+they made, and the scores, so anyone can read the scores and see how they
+were made. You will look some up in Part C.
 
 ## Watch or listen
 
@@ -665,8 +682,11 @@ Medical records specialists         ______ %
 Health information technologists    ______ %
 ```
 
-Then look up the job closest to the specialty you are entering. If it
-scores zero, write one line on what that zero does and does not mean.
+Then look up the job closest to the specialty you are entering. Some
+specialties have no row, including emergency medicine, general surgery, and
+cardiology. Use the nearest job, such as "Physicians, All Other", and say
+which you used. If it scores zero, write one line on what that zero does and
+does not mean.
 
 ::: {.widget}
 ```{ojs}
@@ -690,9 +710,14 @@ Inputs.table(exposureQuery, {
 ```
 :::
 
+If the table does not load, open
+[the file](../data/anthropic-labor-market-2026/job_exposure.csv) in your
+browser. The table shows Anthropic's March 2026 release; the company says it
+will update the scores.
+
 **Step 3.** In two sentences, explain why the first occupation moves one way
-and the other two move the other way, even though two of the three score
-almost the same in Step 2. Use at least two of the four questions by name.
+and the other two move the other way. Two of the three scored almost the
+same in Step 2, so exposure alone cannot be the reason. Use at least two of the four questions by name.
 Then one more sentence: who bears the cost of the −4 percent, and what does
 that group look like compared with the +16 percent one?
 

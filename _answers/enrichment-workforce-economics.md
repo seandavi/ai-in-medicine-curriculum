@@ -72,7 +72,8 @@ projections; BLS revises every two years, so accept the live page over these):
 Expected explanation: transcription is one benchmarkable task (decomposition),
 generalizes well (speech is speech), carries no signature, and demand is
 capped by encounters. Coding and health-information work are judgment about
-what a record means and what a payer will accept (fails decomposition), and
+what a record means and what a payer will accept (passes decomposition only
+partly; Step 2 shows its tasks are among the most automated), and
 the payer–provider "bot wars" raise the volume of that work (demand). Any two
 factors named correctly meets.
 
@@ -163,11 +164,16 @@ cannot help, and it does not mean the job is safe.
   about one percentage point; see `data/anthropic-labor-market-2026/README.md`.
   The paper's text says Claude covers 33% of Computer & math tasks, but the
   chart reads 35.5%. The chapter says "about a third". Healthcare support's
-  "seen 2%" is in the zone where markers overlap; read it as "close to zero".
-- The Canaries paper is cited from the archived 26 August 2025 version.
-  According to the research agent (not checked by a person), the August 2026
-  revision at the same URL moves the health-aide panel to an appendix and
-  says ADP's payroll data under-sample health care.
+  observed value (0.019) is in the zone where markers overlap, so the figure
+  labels it "near 0%".
+- The Canaries paper is cited from the archived 26 August 2025 version (13%,
+  data through July 2025, health aides on p. 11). The August 2026 revision at
+  the same URL (checked by the agent on 2026-10-16, not by a person) gives
+  19% through June 2026 in its abstract. It says the pattern attenuates when
+  controlling for education and is weaker in national survey data, moves
+  the health-aide panel to appendix Figure B.5, and reports that ADP's
+  sample is light in education, health, and public administration (16%
+  against 24%).
 - Alain et al. (pmid:40446149): the abstract's average adoption rate
   (16.92%) does not match the paper's Table 3, according to the research
   agent. The chapter quotes only the 2.58% and 37.22% shares; do not quote
