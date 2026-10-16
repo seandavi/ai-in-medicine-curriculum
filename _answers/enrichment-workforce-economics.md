@@ -80,6 +80,30 @@ Who bears the cost: transcriptionists, median pay $40,410 (2025), versus
 $51,140 for records specialists and $68,020 for health information
 technologists. The displaced occupation is the lowest paid of the three.
 
+Step 2, observed exposure, from `data/anthropic-labor-market-2026/job_exposure.csv`
+(Anthropic, released 2026-03-05 with Massenkoff and McCrory, CC BY):
+
+| Occupation | Observed exposure | BLS 2025–35 |
+|---|---|---|
+| Medical transcriptionists | 64% (0.6365) | −4% |
+| Medical records specialists | 67% (0.6674), 4th of 756 jobs | +8% |
+| Health information technologists and medical registrars | 31% (0.3063) | +16% |
+
+The most exposed of the three is projected to grow, and the next most
+exposed to shrink. Step 3 meets if it says exposure counts the tasks a tool
+touches, not demand, and names demand (capped by visits vs. bot wars adding
+coding work) as what separates them.
+
+Own specialty: 40 of the 65 occupations in SOC group 29 score 0, including
+family medicine, psychiatry, pediatrics, anesthesiology and dermatology.
+Non-zero physician jobs: radiologists 20%, pathologists 16%, general
+internal medicine 8%, obstetrics and gynecology 7%, "physicians, all other"
+3%. Emergency medicine physicians, cardiologists and general surgeons have
+no row; the student should use the nearest one and say so. A good zero
+line: the job's tasks were not seen often enough in Claude work use to pass
+the authors' threshold. It is one product's data, so it does not mean AI
+cannot help, and it does not mean the job is safe.
+
 ## Check rows — reference answers
 
 - **Obj. 1.** 2016: "stop training radiologists now; within five years deep
@@ -108,6 +132,17 @@ technologists. The displaced occupation is the lowest paid of the three.
   six categories ($265.6B). Himmelstein 2014 (pmid:25201663): 25.3% of
   *hospital* expenditures. Woolhandler 2003 (pmid:12930930): $294.3B in
   1999, 31.0% of expenditures *after exclusions*.
+- **Obj. 7.** Blue in @fig-could-does: the share of a category's tasks a
+  language model could do at least twice as fast, from the task ratings of
+  Eloundou and colleagues (doi:10.1126/science.adj0998). Red: the share seen
+  in work-related Claude use (conversations and companies' software built on
+  Claude), August and November 2025, automated use counted in full and
+  assisted use half. Healthcare practitioners: could about 60%, seen about
+  5%. Opposite projections for two equally exposed jobs: see Part C. What a
+  score does not tell you: whether the job will shrink (demand), use of any
+  other product, anything about tasks below the usage threshold. Extra
+  credit for naming the conflict: the authors work for the company whose
+  product they measured, and it is not peer reviewed.
 
 ## Flags the tutor should know about
 
@@ -124,6 +159,22 @@ technologists. The displaced occupation is the lowest paid of the three.
 - The NYT 14 May 2025 URL returns 403 to non-browser clients; the headline,
   author, and date were confirmed from a repost and two trade summaries, the
   URL itself was not opened.
+- The radar values (@fig-could-does) were read off the published chart, to
+  about one percentage point; see `data/anthropic-labor-market-2026/README.md`.
+  The paper's text says Claude covers 33% of Computer & math tasks, but the
+  chart reads 35.5%. The chapter says "about a third". Healthcare support's
+  "seen 2%" is in the zone where markers overlap; read it as "close to zero".
+- The Canaries paper is cited from the archived 26 August 2025 version.
+  According to the research agent (not checked by a person), the August 2026
+  revision at the same URL moves the health-aide panel to an appendix and
+  says ADP's payroll data under-sample health care.
+- Alain et al. (pmid:40446149): the abstract's average adoption rate
+  (16.92%) does not match the paper's Table 3, according to the research
+  agent. The chapter quotes only the 2.58% and 37.22% shares; do not quote
+  the average.
+- Anthropic says it will update the measure periodically. If a newer
+  `job_exposure.csv` appears, replace the copy in `data/`, rerun
+  `scripts/figures_labor_market.py`, and update the numbers in the chapter.
 
 ## Instructor prep
 
