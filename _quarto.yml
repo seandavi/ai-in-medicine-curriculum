@@ -9,10 +9,12 @@ project:
   # robots.txt is copied to the site root as is; it points crawlers at the
   # sitemap. images/ copies every image into _book/images/, including ones
   # only the slide decks in slides/ use. The decks render into _book/slides/
-  # and link ../images/.
+  # and link ../images/. data/ holds open datasets a chapter reads in the
+  # browser (the workforce chapter's occupation lookup) or links to download.
   resources:
     - robots.txt
     - images/
+    - data/
   render:
     - index.qmd
     - chapters/

@@ -1,0 +1,23 @@
+soc_major,category,theoretical,observed,note
+11,Management,0.911,0.129,
+13,Business & finance,0.943,0.282,
+15,Computer & math,0.943,0.355,
+17,Architecture & engineering,0.848,0.047,
+19,Life & social sciences,0.770,0.101,
+21,Social services,0.505,0.041,
+23,Legal,0.889,0.202,
+25,Education & library,0.617,0.182,
+27,Arts & media,0.837,0.190,
+29,Healthcare practitioners,0.598,0.054,
+31,Healthcare support,0.285,0.019,close to zero; markers overlap at the centre
+33,Protective service,0.314,0.018,close to zero; markers overlap at the centre
+35,Food & serving,0.167,0.019,close to zero; markers overlap at the centre
+37,Grounds maintenance,0.041,0.014,close to zero; markers overlap at the centre
+39,Personal care,0.181,0.017,close to zero; markers overlap at the centre
+41,Sales,0.618,0.267,
+43,Office & admin,0.898,0.341,
+45,Agriculture,0.158,0.013,close to zero; markers overlap at the centre
+47,Construction,0.169,0.012,close to zero; markers overlap at the centre
+49,Installation & repair,0.184,0.013,close to zero; markers overlap at the centre
+51,Production,0.189,0.012,close to zero; markers overlap at the centre
+53,Transportation,0.123,0.010,close to zero; markers overlap at the centre
