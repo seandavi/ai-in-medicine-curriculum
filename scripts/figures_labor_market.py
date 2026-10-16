@@ -39,6 +39,11 @@ def pct(v: float) -> str:
     return f"{round(v * 100)}%"
 
 
+def seen_label(v: float) -> str:
+    """Below 0.03 the digitized markers overlap at the centre; say so."""
+    return "near 0%" if v < 0.03 else pct(v)
+
+
 def radar() -> str:
     rows = list(csv.DictReader((DATA / "figure2-radar-digitized.csv").open()))
     n = len(rows)
@@ -119,7 +124,7 @@ def radar() -> str:
             out.append(
                 f'<text x="{x:.1f}" y="{y:.1f}" text-anchor="{anchor}" font-weight="600" fill="{INK}">{name}'
                 f'<tspan x="{x:.1f}" dy="18" font-weight="400" fill="{INK}">could {pct(float(r["theoretical"]))}'
-                f" · seen {pct(float(r['observed']))}</tspan></text>"
+                f" · seen {seen_label(float(r['observed']))}</tspan></text>"
             )
         else:
             out.append(f'<text x="{x:.1f}" y="{y:.1f}" text-anchor="{anchor}" fill="{MUTED}">{name}</text>')
