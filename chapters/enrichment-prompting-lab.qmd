@@ -213,16 +213,27 @@ of the first. The first twenty minutes are enough.
 
 Made-up patients only. [What counts as patient information](../course/patient-information.qmd).
 
-Run every prompt in this Do in a **Temporary Chat, or a chat outside your
-course project**. ChatGPT can remember earlier chats and read what is in a
-project. A fresh chat keeps each comparison fair.
+Run every prompt in this Do in a **clean chat**, one that cannot see your
+other chats, your saved memories, or your course project. A clean chat keeps
+each comparison fair. In ChatGPT:
+
+1. Open a new chat, outside your course project, and select **Temporary**.
+2. Choose **Unpersonalized** before you send your first message. You cannot
+   change it once the chat has started.
+
+A temporary chat set to Personalized can use your saved memories and custom
+instructions, so it is not clean ([Temporary chat in
+ChatGPT](https://help.openai.com/en/articles/8914046-temporary-chat-faq),
+OpenAI help page, read 18 October 2026). If you do not see these options,
+your university may have set them for you. Then use a new chat outside your
+project, with memory turned off in Settings, under Personalization. In
+Copilot, start a new chat for each run.
 
 ### Part A: build a prompt that works (about 20 minutes)
 
 Pick something you will need in the next month: a topic you will present on
 rounds, a condition you want to explain to patients, or a question you expect
-at interviews. Fill in the brackets and run this in a Temporary Chat, or a
-chat outside your course project.
+at interviews. Fill in the brackets and run this in a clean chat.
 
 ```
 You are helping a fourth-year medical student going into [specialty].
@@ -236,8 +247,7 @@ Where you are unsure, or where guidelines differ or have changed
 recently, say so instead of picking one.
 ```
 
-Then change one part at a time, each in a new Temporary Chat, or a new chat
-outside your course project, and compare:
+Then change one part at a time, each in a new clean chat, and compare:
 
 1. Change the **context**: make the audience patients, or an attending.
 2. Change the **format**: a table, one paragraph, or three slides.
@@ -249,8 +259,8 @@ That is the start of your template.
 ### Part B: one case, two prompts (about 20 minutes)
 
 You will run one made-up case twice and score both answers. Use the same
-chatbot for both runs, each in its own Temporary Chat, or a chat outside your
-course project, so the second run cannot see the first.
+chatbot for both runs, each in its own clean chat, so the second run cannot
+see the first.
 
 #### Step 1. Pick a case (2 minutes)
 
@@ -305,8 +315,7 @@ Vital signs and neurological examination are normal.
 
 #### Step 2. The bare prompt (3 minutes)
 
-Paste the case into a Temporary Chat, or a chat outside your course project,
-with nothing but this in front of it:
+Paste the case into a clean chat, with nothing but this in front of it:
 
 > What's the diagnosis and what should I do?
 
@@ -316,8 +325,7 @@ questions are the answer; copy them and score them like any other reply.
 
 #### Step 3. The structured prompt (5 minutes)
 
-Open a second Temporary Chat, or another new chat outside your project. Here
-is the five-part template from
+Open a second clean chat. Here is the five-part template from
 @tbl-scaffold; fill in the case where marked.
 
 > You are assisting a physician preparing to present this case at morning
