@@ -42,13 +42,21 @@ result you get; if it gets it right, ask the room how they would know.
 
 No single right answer; the student's own topic. What to look for:
 
-- The template has all five parts. The fifth line is about what to do with
-  gaps or disagreement ("say so instead of picking one"), not "be accurate".
+- The template has all six parts. The Uncertainty line is about what to do
+  with gaps or disagreement ("say so instead of picking one"), not "be
+  accurate". The Done line names something the student can check the answer
+  against (a length, a must-have item, a test such as "I can answer these
+  questions"), not "be thorough".
+- The follow-up asks for evidence, missing information, or the other side
+  ("What would change your answer?"). "Are you sure?" does not count: it asks
+  for reassurance, and in one study it made correct answers worse more often
+  than it fixed wrong ones (Samsel 2026, pmid:42721584). Accept "it added
+  nothing" as an honest observation.
 - One line per change. Expected observations (from the design, not yet
   observed in a class run; record what students actually see): changing the audience to patients
   shortens sentences and drops jargon; changing to an attending adds evidence
   and nuance; format changes length and order but rarely content; deleting the
-  last line usually removes hedges and statements about guideline
+  uncertainty line usually removes hedges and statements about guideline
   disagreement, so the answer reads more confident without being better
   sourced. Accept any honest observation, including "nothing changed".
 - The kept template is the deliverable. A student who keeps it and names a
@@ -97,10 +105,11 @@ No single right answer; the student's own topic. What to look for:
 
 | Objective | Where assessed |
 |---|---|
-| 1 A kept five-part template | Part A and "What you keep" (saved in the ChatGPT project); Check row 1; "What this changes" part 2 |
+| 1 A kept six-part template | Part A and "What you keep" (saved in the ChatGPT project); Check row 1; "What this changes" part 2 |
 | 2 One part changed at a time | Part A; Check row 2 |
 | 3 Bare vs structured, organisation vs correctness | Part B Steps 2 to 4 and the one-sentence finding (journal question 2); Check row 3 |
 | 4 The claim the plan depends on, checked against a source | Part B Step 5 if time, or the student's own work that week (journal question 2); Check row 4; "What this changes" part 1 |
+| 5 A follow-up that asks for evidence, not reassurance | Part A last step; "What you keep" (the follow-up); Check row 5 |
 
 The two randomized trials (Goh 2024, pmid:39466245; Goh 2025, pmid:39910272)
 are now in Go deeper and not assessed. If a student brings them up: the first
