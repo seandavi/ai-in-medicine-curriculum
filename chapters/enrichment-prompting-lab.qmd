@@ -343,16 +343,19 @@ of the first. The first twenty minutes are enough.
 
 Made-up patients only. [What counts as patient information](../course/patient-information.qmd).
 
-Run every prompt in this Do in a **Temporary Chat, or a chat outside your
-course project**. ChatGPT can remember earlier chats and read what is in a
-project. A fresh chat keeps each comparison fair.
+Run every prompt in this Do in an **Unpersonalized Temporary Chat**. Open a
+Temporary Chat, then switch the menu at the top right from **Personalized**
+to **Unpersonalized**. Personalized is the default, and it lets the chat use
+your saved memory, plugins, and custom instructions. Unpersonalized ignores
+them, so each comparison is fair. Keep the **Thinking effort** setting
+(Instant, Medium, or High) the same for every run; Medium is the default.
 
 ### Part A: build a prompt that works (about 25 minutes)
 
 Pick something you will need in the next month: a topic you will present on
 rounds, a condition you want to explain to patients, or a question you expect
-at interviews. Fill in the brackets and run this in a Temporary Chat, or a
-chat outside your course project.
+at interviews. Fill in the brackets and run this in an Unpersonalized
+Temporary Chat.
 
 ```
 You are helping a fourth-year medical student going into [specialty].
@@ -368,8 +371,8 @@ Done when each point has one sentence on why it matters. Stop after
 the question; no introduction or summary.
 ```
 
-Then change one part at a time, each in a new Temporary Chat, or a new chat
-outside your course project, and compare:
+Then change one part at a time, each in a new Unpersonalized Temporary Chat,
+and compare:
 
 1. Change the **context**: make the audience patients, or an attending.
 2. Change the **format**: a table, one paragraph, or three slides.
@@ -386,8 +389,8 @@ against your top point." Write one line: did it add anything you would use?
 ### Part B: one case, two prompts (about 20 minutes)
 
 You will run one made-up case twice and score both answers. Use the same
-chatbot for both runs, each in its own Temporary Chat, or a chat outside your
-course project, so the second run cannot see the first.
+chatbot for both runs, each in its own Unpersonalized Temporary Chat, so the
+second run cannot see the first.
 
 #### Step 1. Pick a case (2 minutes)
 
@@ -442,8 +445,8 @@ Vital signs and neurological examination are normal.
 
 #### Step 2. The bare prompt (3 minutes)
 
-Paste the case into a Temporary Chat, or a chat outside your course project,
-with nothing but this in front of it:
+Paste the case into an Unpersonalized Temporary Chat, with nothing but this
+in front of it:
 
 > What's the diagnosis and what should I do?
 
@@ -453,8 +456,8 @@ questions are the answer; copy them and score them like any other reply.
 
 #### Step 3. The structured prompt (5 minutes)
 
-Open a second Temporary Chat, or another new chat outside your project. Here
-is the six-part template from
+Open a second Unpersonalized Temporary Chat. Here is the six-part template
+from
 @tbl-scaffold; fill in the case where marked.
 
 > You are assisting a physician preparing to present this case at morning
@@ -466,8 +469,8 @@ is the six-part template from
 > what is missing instead of assuming it. Done when every row has a next step
 > and you have said what is missing.
 
-Copy the answer word for word under *Structured*. Note the tool and, if it
-shows one, the model version.
+Copy the answer word for word under *Structured*. Note the tool and the
+Thinking effort setting you used.
 
 #### Step 4. Score both (10 minutes)
 
