@@ -29,7 +29,7 @@ By the end of this chapter you will be able to:
    longer sound like you.
 4. Say what the residency application rules allow, and write a one-line
    disclosure of how you used AI.
-5. Explain why an AI-detector score is not evidence that someone cheated, and
+5. Explain why an AI-detector score is not proof that someone cheated, and
    why rewriting tools sold to beat detectors do not solve your problem.
 
 Course competencies: AIM-4 (ethics, law, and regulation), AIM-5 (clinical
@@ -112,10 +112,11 @@ orthopaedics, 41 of 79 guesses, the sum of the paper's two counts
 So the reasons to write your own draft are different ones. Three of them have
 evidence behind them.
 
-- **Your piece sounds like everyone else's.** Readers may not spot AI, but
-  they do notice when every statement they read sounds the same.
-- **It feels less like yours, and you remember less of it.** That matters
-  when an interviewer asks about it.
+- **Your piece sounds like everyone else's.** Chatbot drafts make
+  statements more alike. The part that sets yours apart is the part only you
+  could write.
+- **It feels less like yours.** That matters when an interviewer asks you
+  about it.
 - **It can say things you do not believe.** The draft in the opening scenario
   added a "lifelong commitment" you never wrote.
 
@@ -157,12 +158,13 @@ say where it came from. In an earlier study of research abstracts, reviewers
 described the ones they suspected were machine-written as "vaguer and more
 formulaic" [@pmid:37100871].
 
-### It feels less like yours, and you remember less of it
+### It feels less like yours
 
 **Ownership** here means the sense that a piece of writing is yours: you made
 the choices in it, and you can explain and defend each sentence.
 
-In a pre-registered experiment, people wrote texts for their kind of job in
+In one experiment, planned and registered before any data were collected,
+people wrote texts for their kind of job in
 one of three ways. Some wrote alone. Some copied a chatbot's text. Some wrote
 a draft first and then used a chatbot to improve it. Copying lowered their sense of ownership, their
 confidence in their own ability, and how meaningful the work felt. Drafting
@@ -207,7 +209,7 @@ more often showed features of writers whose first language is not English
 Detectors are also easy to beat. Running AI text through a paraphrasing
 program dropped one detector's success rate from 70.3 percent to 4.6 percent
 [@doi:10.48550/arXiv.2303.13408]. A low detector score tells you little about
-who wrote a text, and a high one is not evidence that someone cheated.
+who wrote a text, and a high one is not proof that someone cheated.
 
 So do not judge your own writing, or a classmate's, by a detector score. And
 do not use a humanizer. It changes the words so a program cannot spot the
@@ -222,6 +224,8 @@ statement, but the final submission should represent your own work."
 ([AAMC, "Personal Statement"](https://students-residents.aamc.org/applying-residencies-eras/publication-chapters/personal-statement),
 checked 18 October 2026; the page refers to the 2027 ERAS season.) The same page says the
 statement "must be your own work and not the work of another author".
+Using a chatbot to correct your English is editing, which the rules allow.
+Check afterwards that the corrections did not also remove your details.
 
 Rules like this change. Read the current version for whatever you are
 applying to. Journals, conferences, and fellowship programs set their own
@@ -247,8 +251,7 @@ evidence first.
 
 ::: {.callout-important title="The one sentence"}
 Use the chatbot to interview you, criticize your draft, and proofread it.
-Write the core yourself: what readers remember is the part only you could
-have written.
+Write the core yourself, so that the details and the views in it are yours.
 :::
 
 ## Watch or listen (optional)
@@ -409,7 +412,7 @@ Score yourself against this before moving on.
 | A draft you wrote, improved with criticism (objective 2) | A three-line rubric, a draft of 100 to 250 words with at least two specific details from Step 2, and a revision you made yourself after the chatbot's criticism | A chatbot rewrite, lightly edited |
 | Two checks (objective 3) | The words searched and each one kept or changed for a reason; the voice check run in a new chat, and at least one sentence reread because of it | No checks, or the voice check treated as proof |
 | The rules and a disclosure (objective 4) | You can say what the AAMC allows in one sentence, and you have a disclosure line that names the tool and what it did | "AI is not allowed", or "AI was used" with no detail |
-| Detectors (objective 5) | One sentence on why a detector score is not evidence of cheating, naming who gets flagged unfairly | "Run it through a detector to be safe" |
+| Detectors (objective 5) | One sentence on why a detector score is not proof of cheating, naming who gets flagged unfairly | "Run it through a detector to be safe" |
 
 ## What this changes for you
 

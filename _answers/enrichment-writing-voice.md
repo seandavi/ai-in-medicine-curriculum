@@ -142,7 +142,7 @@ false positives fall on non-native writers.
 - Row 1: "Readers can't tell AI from human statements, so the reason to
   draft myself is not getting caught. It is that my statement would sound
   like everyone else's and feel less like mine."
-- Row 5: "A detector score is not evidence of cheating: detectors flag
+- Row 5: "A detector score is not proof of cheating: detectors flag
   writing by non-native English speakers as AI far more often, and
   paraphrasing defeats them."
 

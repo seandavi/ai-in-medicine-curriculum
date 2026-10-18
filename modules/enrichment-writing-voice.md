@@ -1,4 +1,4 @@
-# Enrichment module — Writing with AI and keeping your voice
+# Enrichment module: Writing with AI and keeping your voice
 
 **Format:** self-paced chapter, about 75 minutes, paired with a talk on
 professional writing with AI · **Prereq:** none
