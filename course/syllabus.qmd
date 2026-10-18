@@ -90,7 +90,8 @@ This is a starting plan, and topics may change. Canvas has the current one.
   live demonstration. Goes with the core chapter, the
   [prompting lab](../chapters/enrichment-prompting-lab.qmd).
 - Wednesday: **Professional work with AI: writing and beyond**, with
-  co-director Christina Olson.
+  co-director Christina Olson. Goes with the menu chapter
+  [Writing with AI and still sounding like you](../chapters/enrichment-writing-voice.qmd).
 
 **Week 3, October 26 to 30: AI and your patients**
 
@@ -127,8 +128,8 @@ week. The menu is there so you can follow what interests you.
 | Week | Core | Menu (choose one or more) |
 |---|---|---|
 | 1 · October 12 to 16 | [How these systems work](../chapters/core-foundations.qmd) (the live talks cover it) | No menu. Thursday's session works through [Plan your four weeks with ChatGPT](../chapters/plan-your-learning.qmd) |
-| 2 · October 19 to 23 | [Prompting lab](../chapters/enrichment-prompting-lab.qmd): getting good answers, and knowing their limits | [Critical appraisal](../chapters/core-appraisal.qmd), [Bias and equity](../chapters/core-bias-equity.qmd), [Grounding AI in real sources](../chapters/enrichment-rag-notebooklm.qmd) |
-| 3 · October 26 to 30 | [Talking to patients about AI](../chapters/core-patient-communication.qmd) | [Agentic coding](../chapters/enrichment-agentic-coding.qmd), the [scribe open lab](../appendix/open-labs.qmd) |
+| 2 · October 19 to 23 | [Prompting lab](../chapters/enrichment-prompting-lab.qmd): getting good answers, and knowing their limits | [Critical appraisal](../chapters/core-appraisal.qmd), [Bias and equity](../chapters/core-bias-equity.qmd), [Grounding AI in real sources](../chapters/enrichment-rag-notebooklm.qmd), [Writing with AI and still sounding like you](../chapters/enrichment-writing-voice.qmd) |
+| 3 · October 26 to 30 | [Talking to patients about AI](../chapters/core-patient-communication.qmd) | [Agentic coding](../chapters/enrichment-agentic-coding.qmd), the [scribe open lab](../appendix/open-labs.qmd), and [Writing with AI](../chapters/enrichment-writing-voice.qmd) if you did not get to it in week 2 |
 | 4 · November 2 to 6 | [Ethics: what you owe when you sign the note](../chapters/core-ethics-regulation.qmd) | [Will AI take your job?](../chapters/enrichment-workforce-economics.qmd), [What AI costs the planet](../chapters/enrichment-environment.qmd) |
 
 : Core chapter and menu. {#tbl-order}
