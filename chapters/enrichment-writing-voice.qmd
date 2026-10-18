@@ -1,0 +1,458 @@
+---
+title: "Writing with AI and still sounding like you"
+subtitle: "About 75 minutes"
+---
+
+::: {.callout-tip title="In short"}
+- **The idea.** A chatbot is a good interviewer, critic, and proofreader for
+  your writing. When it writes the first draft for you, the piece tends to
+  sound like everyone else's, and you feel less that it is yours. Write the
+  core yourself, then use the tool to make it better.
+- **What you do.** Take one real piece of writing you need (an email, an
+  abstract, an application paragraph). Let the chatbot interview you, write
+  the core yourself, ask it for criticism instead of a rewrite, and check the
+  result.
+- **What you keep.** A finished piece in your own words, a prompt that asks
+  for criticism instead of a rewrite, and a one-line disclosure you can reuse.
+- **Short on time?** Read "11:40 p.m., the last experience entry" and "Five
+  habits", then do Steps 1 to 4 of the Do (25 minutes).
+:::
+
+::: {.callout-note title="What you'll learn"}
+By the end of this chapter you will be able to:
+
+1. Say why "nobody can tell" is not a good reason to let a chatbot write your
+   first draft, and name what you lose when it does.
+2. Use a chatbot to interview you and to criticize a draft you wrote, on a
+   real piece of your own writing.
+3. Check a revised piece for common chatbot words and for sentences that no
+   longer sound like you.
+4. Say what the residency application rules allow, and write a one-line
+   disclosure of how you used AI.
+5. Explain why an AI-detector score is not evidence that someone cheated, and
+   why rewriting tools sold to beat detectors do not solve your problem.
+
+Course competencies: AIM-4 (ethics, law, and regulation), AIM-5 (clinical
+use), AIM-X (professional identity).
+:::
+
+**What you need.** Your university ChatGPT Edu or Copilot account. Nothing to
+install. One real piece of writing you need in the next month that is not
+about a patient. A blank document. This chapter goes with Wednesday's talk in
+week 2, "Professional work with AI: writing and beyond": read it after the
+talk, or instead of it. The time is about 12 minutes of reading, 18 of
+listening (optional), 35 to 40 of doing, and 5 to 10 for the Check and the
+last question.
+
+## 11:40 p.m., the last experience entry
+
+It is late, and you are finishing the last experience entry on your residency
+application. The experience is two years of Saturday mornings at a student-run
+free clinic. You ran the supply room. You know exactly what happened there,
+but every version you type sounds dull. So you paste your notes into a
+chatbot and ask it to write the entry.
+
+::: {.chat-pair}
+<div class="chat-pane">
+<div class="prompt">Turn my notes into a residency application experience entry, about 120 words. Notes: free clinic, 2 yrs, Saturday mornings. ran the supply room. glucose test strips ran out twice in January, people went home without a sugar check. made a paper log with a minimum count for each item, taught the first-years to use it. hasn't run out since. boring job but I liked it. what I learned: a lot of problems that look like people problems are really system problems.</div>
+<div class="reply">
+<p>Serving as Supply Coordinator at a student-run free clinic was a pivotal experience that underscored the critical importance of systems-level thinking in delivering equitable care. When I identified recurring shortages of glucose test strips, I spearheaded the development of a comprehensive inventory management system and fostered a culture of accountability among my peers. This initiative not only ensured seamless continuity of care, but also deepened my lifelong commitment to serving underserved communities. Ultimately, this experience showcased my leadership abilities and my passion for improving health systems.</p>
+</div>
+<div class="fine">Illustrative. Notes and reply written for this chapter; not a transcript of any real tool or real applicant.</div>
+</div>
+:::
+
+It reads well. It is the right length. The grammar is better than yours at
+this hour. But it does not sound like you, and you are not sure why.
+
+Look closer. Your best details are gone: the paper log, the first-years, "it
+hasn't run out since". Your one honest line, "boring job but I liked it", is
+gone. In their place are words you never use, like "pivotal" and
+"spearheaded". And one sentence says something you never said: a "lifelong
+commitment to serving underserved communities". That may be true of you. It
+was not in your notes.
+
+In three weeks an interviewer will read this entry aloud and say, "Tell me
+about that." Which version do you want to be answering for?
+
+**It is your job to learn where these tools help your work, and you learn that
+by trying.** If you would rather try first and read after, go to the [Do](#do)
+now.
+
+## Why this matters
+
+You will write for the rest of your career: emails to attendings, abstracts,
+fellowship applications, letters for students. A chatbot can help with all of
+it. It is quick at finding what is unclear, what is missing, and what is too
+long. The residency application rules allow it for brainstorming,
+proofreading, and editing (see "What the rules say", below).
+
+The risk is not that someone will catch you. In three blinded studies,
+faculty who read personal statements could not reliably tell which were
+written by ChatGPT (@fig-readers). In the largest, readers for medical school
+admissions gave the AI-written essays slightly *higher* scores than the
+human-written ones, 5.02 against 4.67 on a 7-point scale [@pmid:41051105].
+
+::: {#fig-readers}
+<div class="acc-bars" role="img" aria-label="Bar chart of how often readers correctly said whether a personal statement was written by a person or by ChatGPT. Orthopaedic surgery residency, 8 readers: 52 percent. Medical school admissions, 17 readers: 56 percent. Pediatrics residency, 4 readers: 59 percent. A dashed line at 50 percent marks a coin toss.">
+<div class="acc-row"><span class="lbl">Orthopaedic surgery residency, 8 readers</span><span class="track"><span class="bar" style="width:52%"></span><span class="val" style="left:52%">52%</span></span></div>
+<div class="acc-row"><span class="lbl">Medical school admissions, 17 readers</span><span class="track"><span class="bar" style="width:56%"></span><span class="val" style="left:56%">56%</span></span></div>
+<div class="acc-row"><span class="lbl">Pediatrics residency, 4 readers</span><span class="track"><span class="bar" style="width:59%"></span><span class="val" style="left:59%">59%</span></span></div>
+<div class="acc-row axis"><span class="lbl"></span><span class="track"><span style="left:0%">0%</span><span style="left:50%">50%</span><span style="left:100%">100%</span></span></div>
+</div>
+
+How often faculty readers correctly said whether a statement was written by a
+person or by ChatGPT. The dashed line at 50 percent is what a coin toss would
+score. Redrawn for this chapter from the papers' numbers:
+orthopaedics, 41 of 79 guesses, the sum of the paper's two counts
+[@pmid:42005879]; medical school admissions [@pmid:41051105]; pediatrics
+[@pmid:41584952]. The data are the papers'; the drawing is this course's.
+:::
+
+So the reasons to write your own draft are different ones. Three of them have
+evidence behind them.
+
+- **Your piece sounds like everyone else's.** Readers may not spot AI, but
+  they do notice when every statement they read sounds the same.
+- **It feels less like yours, and you remember less of it.** That matters
+  when an interviewer asks about it.
+- **It can say things you do not believe.** The draft in the opening scenario
+  added a "lifelong commitment" you never wrote.
+
+The next section takes these one at a time.
+
+## What happens when the chatbot writes the draft
+
+### Your writing starts to sound like everyone else's
+
+**Voice** here means the way your writing sounds like you: the details you
+notice, the words you choose, and how you put a sentence together.
+
+A chatbot writes the most likely next words. Ask it for a personal statement
+and you get something close to the average personal statement. Several
+studies show what that does across many writers.
+
+- One study looked at 62,132 residency personal statements from one US
+  academic center. A set of words linked to chatbots appeared in 27.9
+  percent of statements before 2024, and in 45.6 percent in 2024. Statements in 2024 also
+  used about three fewer first-person words ("I", "my", "me") each
+  [@pmid:42890249]. The study counted words; it did not prove who used a
+  chatbot.
+- When people wrote essays with an instruction-following model, essays by
+  different writers became more alike. The sameness came from the text the
+  model wrote. The text the writers wrote themselves stayed as varied as
+  before [@doi:10.48550/arXiv.2309.05196].
+- In a story-writing experiment, ideas from a chatbot made each writer's
+  story score higher, especially for the less creative writers. The stories
+  written with AI ideas were also more similar to each other
+  [@pmid:38996021].
+- Writers from India and the US wrote with AI suggestions. The Indian
+  writers' essays shifted toward American ways of writing, in what they said
+  and in how they said it [@doi:10.1145/3706598.3713564]. If English is not your first
+  language, the "polish" a chatbot adds may also remove what makes your
+  writing yours.
+
+Readers who see many applications notice the sameness, even when they cannot
+say where it came from. In an earlier study of research abstracts, reviewers
+described the ones they suspected were machine-written as "vaguer and more
+formulaic" [@pmid:37100871].
+
+### It feels less like yours, and you remember less of it
+
+**Ownership** here means the sense that a piece of writing is yours: you made
+the choices in it, and you can explain and defend each sentence.
+
+In a pre-registered experiment, people wrote texts for their kind of job in
+one of three ways. Some wrote alone. Some copied a chatbot's text. Some wrote
+a draft first and then used a chatbot to improve it. Copying lowered their sense of ownership, their
+confidence in their own ability, and how meaningful the work felt. Drafting
+first and then using the chatbot gave results close to writing alone
+[@doi:10.1038/s41598-026-42312-6].
+
+A second study gave AI help at different stages of short essays. Any help
+lowered ownership somewhat. Help with planning lowered it least. Help with
+writing the draft lowered it most [@doi:10.48550/arXiv.2604.11009]. The same
+study found that more AI help made the essays better. That trade is real, and
+the chapter does not pretend otherwise. You decide how much of it you want for
+each piece.
+
+There is also a practical test. If an interviewer reads one of your sentences
+aloud, can you explain it without looking? You can only do that easily for a
+sentence you chose.
+
+### It can say things you do not believe
+
+In an experiment with 1,506 people, a writing assistant was set up to favour
+one side of a question. People who wrote with it took that side more often in
+their writing, and later in a survey of their own views
+[@doi:10.1145/3544548.3581196]. That study was about opinion essays, not
+personal statements. Still, a "why this specialty" paragraph is an argument
+about yourself. Decide what you think before you ask the chatbot anything.
+
+## Detectors and "humanizers"
+
+An **AI detector** is a program that gives a score for how likely a text is
+to be machine-written. A **humanizer** is a tool sold to rewrite machine text
+so that detectors miss it.
+
+Detectors are not fair judges of writing. Seven detectors were run on 91
+essays written by people for an English-language test (TOEFL). On average,
+they labelled 61.3 percent of these human essays as AI-written. They scored
+essays by US eighth-graders correctly [@pmid:37521038]. Plain, predictable
+word choice reads to a detector as machine text. One surgery program ran its personal
+statements through two detectors. The statements that both tools flagged
+more often showed features of writers whose first language is not English
+[@pmid:40537315].
+
+Detectors are also easy to beat. Running AI text through a paraphrasing
+program dropped one detector's success rate from 70.3 percent to 4.6 percent
+[@doi:10.48550/arXiv.2303.13408]. A low detector score tells you little about
+who wrote a text, and a high one is not evidence that someone cheated.
+
+So do not judge your own writing, or a classmate's, by a detector score. And
+do not use a humanizer. It changes the words so a program cannot spot the
+machine, but the content is still the machine's. **The goal is to sound like
+you, not to pass as you.**
+
+## What the rules say
+
+The AAMC's guidance on the residency personal statement says: "The use of AI
+tools is acceptable for brainstorming, proofreading, or editing the personal
+statement, but the final submission should represent your own work."
+([AAMC, "Personal Statement"](https://students-residents.aamc.org/applying-residencies-eras/publication-chapters/personal-statement),
+checked 18 October 2026; the page refers to the 2027 ERAS season.) The same page says the
+statement "must be your own work and not the work of another author".
+
+Rules like this change. Read the current version for whatever you are
+applying to. Journals, conferences, and fellowship programs set their own
+rules, so read theirs too.
+When you are not sure, a one-line disclosure costs you almost nothing. This
+book keeps its own: the [AI ledger](../appendix/ai-ledger.qmd) records where
+AI was used to build the course and who checked it.
+
+## Five habits
+
+These habits come from the studies above. They are listed with the strongest
+evidence first.
+
+| Habit | Why |
+|---|---|
+| **1. Write the core yourself, then ask for criticism or editing.** | Drafting first kept ownership close to writing alone; copying the chatbot's draft lowered it [@doi:10.1038/s41598-026-42312-6]. This is also the use the AAMC allows. |
+| **2. Keep the details only you have, in the first person.** | The sameness comes from text the model writes, not text you write [@doi:10.48550/arXiv.2309.05196]. Your details are the part no one else could have written. |
+| **3. Cut the words chatbots overuse.** | "Delve", "underscore", and "showcase" rose sharply in 2024 abstracts; "pivotal", "intricate", "realm", and "meticulous" are others the same paper names [@pmid:40601754]. Some of these words are fine. Keep one only if you would say it out loud. |
+| **4. If the chatbot edits, show it your own writing and ask for small changes.** | Examples of your writing help a model copy your style, but only partly. Its writing still drifted toward a general, average tone [@doi:10.48550/arXiv.2509.14543]. Accept or reject them line by line. |
+| **5. Decide what you think before you prompt.** | A one-sided assistant moved people's written opinions [@doi:10.1145/3544548.3581196]. Settle your argument, then ask for help saying it. |
+
+: Five habits for writing with AI, strongest evidence first. {#tbl-habits}
+
+::: {.callout-important title="The one sentence"}
+Use the chatbot to interview you, criticize your draft, and proofread it.
+Write the core yourself: what readers remember is the part only you could
+have written.
+:::
+
+## Watch or listen (optional)
+
+**Video podcast.** *The Podcast by KevinMD*, "What you lose when AI writes
+your residency personal statement", with Kathleen Muldoon, a coach and
+professor (KevinMD, 1 September 2026; 18 min; automatic captions on YouTube).
+<https://kevinmd.com/2026/09/she-spent-weeks-on-her-personal-statement-then-someone-asked-why-she-didnt-use-ai-podcast.html>
+Listen for her argument that the value of a personal statement is what you
+learn about yourself while you write it. Listen also for where she thinks AI
+help is fine. She also mentions detectors flagging non-native English writers;
+compare what she says with the study above.
+
+## Do
+
+No patient information. If your piece mentions a patient, replace that
+passage with `[patient story]` before you paste anything. The chatbot does not
+need it to help you. [What counts as patient
+information](../course/patient-information.qmd).
+
+Work in **one chat** for Steps 2 to 4, so the chatbot keeps your answers in
+view. Use a new chat for Step 5.
+
+### Step 1. Pick a piece and say what "done" means (5 minutes)
+
+Choose one real piece of writing you need in the next month. Good choices:
+
+- a thank-you email to a program after an interview;
+- the abstract for a project or poster;
+- a paragraph for a scholarship, award, or away-rotation application;
+- one of your residency application entries, rewritten as the answer you
+  would give if an interviewer asked about it.
+
+Before you open the chatbot, write three lines:
+
+```
+Who reads it:          __________________________________
+The one thing they
+should know about me:  __________________________________
+If asked about it,
+I would say:           __________________________________
+```
+
+This is your rubric. You will judge every later version against it, not
+against how polished it sounds.
+
+### Step 2. Let the chatbot interview you (5 minutes)
+
+Paste this, with your own details in the brackets:
+
+```
+I am a fourth-year medical student writing [what the piece is] for
+[who reads it]. Do not write any part of it. Instead, ask me five
+questions, one at a time, that help me remember specific details:
+what I saw, what I did, what changed, and what I would do
+differently. Wait for my answer before asking the next question.
+```
+
+Answer in plain, quick sentences. Typos are fine. A good question can bring
+back a detail you had forgotten. Copy the best
+details into your document.
+
+### Step 3. Write the core yourself (10 minutes)
+
+Close the chat window or look away from it. In your document, write the core
+of the piece: 100 to 250 words, in the first person, with at least two of the
+details from Step 2. Do not aim for polish. Aim for true and specific.
+
+### Step 4. Ask for criticism, not a rewrite (5 to 10 minutes)
+
+Back in the same chat, paste your draft with this prompt:
+
+```
+Here is my draft and my rubric. Do not rewrite it. Instead:
+1. Point to the two sentences that are least clear, and say why.
+2. Name anything a reader would want to know that is missing.
+3. Point to any sentence that sounds generic, like it could be in
+   anyone's application.
+4. Check grammar and spelling, and list the fixes.
+Rubric: [paste your three lines from Step 1]
+Draft: [paste your draft]
+```
+
+Read the criticism. Then revise the draft **yourself**. Take the fixes you
+agree with. Ignore the ones that would make it sound less like you. If you
+want the chatbot to edit after all, use the prompt in the box below.
+
+::: {.callout-note collapse="true" title="If you have more time: a light edit in your own style"}
+Find something you wrote before you used chatbots: an old essay, a long
+email, a reflection from a course. Then try this in the same chat:
+
+```
+Here is a sample of my own writing, so you can see how I write.
+[paste your sample]
+Now edit my draft below. Change as little as possible: fix errors
+and the two least clear sentences, and keep my words wherever they
+work. Show each change as "before -> after" so I can accept or
+reject it.
+[paste your draft]
+```
+
+Accept or reject each change one at a time. A sample of your writing helps
+the model copy your style, but only partly [@doi:10.48550/arXiv.2509.14543],
+so you will still reject some.
+:::
+
+### Step 5. Two checks (5 minutes)
+
+**Check the words.** Search your revised piece for "delve", "underscore",
+"showcase", "pivotal", "intricate", "realm", and "meticulous". Also search
+for the words that stood out in the opening scenario: "foster", "seamless",
+and "spearhead". For each one you find, ask: would I say this word out loud
+to a friend? If not, use the plainer word.
+
+**Check the voice.** Open a **new chat**, so it cannot see your earlier work.
+Paste your older writing sample (or any piece you wrote yourself) and your
+revised piece, then ask:
+
+```
+Here are two short pieces of writing, A and B. Could the same person
+have written both? Point to the sentences in B that sound least like
+A, and say why.
+```
+
+This is a rough check, not a measurement. No study has tested whether it
+works. Use it only to find sentences worth reading again yourself. If it
+names a sentence, decide whether that sentence is yours. If it says both
+pieces sound like the same writer, that does not prove anything either.
+
+### Step 6. Write a one-line disclosure (2 minutes)
+
+Write one sentence that says what AI did and what you did. For example:
+
+> I wrote this myself. I used ChatGPT to ask me questions while I planned it
+> and to point out unclear sentences and spelling errors.
+
+Keep it with the piece. Some places will ask for it. Where none is asked
+for, it is still the honest account if anyone wants to know.
+
+### What you keep
+
+- **Your finished piece**, in your own words, judged against your three-line
+  rubric.
+- **Your criticism prompt** from Step 4, saved in your "AI in Medicine"
+  project, so you can paste it next time.
+- **Your disclosure line.**
+- **One sentence for question 2 of your [learning
+  journal](../course/learning-journal.qmd):** where the chatbot helped, where
+  you overruled it, and what the two checks found.
+
+## Check
+
+Score yourself against this before moving on.
+
+| You have | Meets | Falls short |
+|---|---|---|
+| A reason for drafting yourself (objective 1) | One sentence on why "readers can't tell" does not settle it, naming at least one of sameness, ownership, or views you do not hold | "So I don't get caught" |
+| A draft you wrote, improved with criticism (objective 2) | A three-line rubric, a draft of 100 to 250 words with at least two specific details from Step 2, and a revision you made yourself after the chatbot's criticism | A chatbot rewrite, lightly edited |
+| Two checks (objective 3) | The words searched and each one kept or changed for a reason; the voice check run in a new chat, and at least one sentence reread because of it | No checks, or the voice check treated as proof |
+| The rules and a disclosure (objective 4) | You can say what the AAMC allows in one sentence, and you have a disclosure line that names the tool and what it did | "AI is not allowed", or "AI was used" with no detail |
+| Detectors (objective 5) | One sentence on why a detector score is not evidence of cheating, naming who gets flagged unfairly | "Run it through a detector to be safe" |
+
+## What this changes for you
+
+*What does this change about how you'll practice?* Write it down before you
+close the chapter. Two specifics.
+
+First, go back to 11:40 p.m. and the free clinic entry. Write the first two
+sentences of the entry you would submit now, in your own words, using the
+details the chatbot dropped. Then answer the interviewer who reads it aloud
+and says, "Tell me about that." You should be able to answer without looking.
+
+Second, name the next piece of writing you will do with a chatbot. Which
+steps will you keep? The interview, writing the core yourself, the criticism
+prompt, the checks, or the disclosure.
+
+## Go deeper
+
+**Papers**
+
+- The three blinded studies in @fig-readers: orthopaedic surgery residency
+  [@pmid:42005879], pediatrics residency [@pmid:41584952], and medical school
+  admissions, where a detector named the author correctly 91 percent of the
+  time but the authors still judged its false positives too high to use
+  [@pmid:41051105].
+- How much of the biomedical literature now shows chatbot vocabulary. At
+  least 13.5 percent of 2024 PubMed abstracts did, a lower bound, and up to
+  40 percent in some groups of journals [@pmid:40601754].
+- Brain activity and memory in people writing essays with and without a
+  chatbot. People who wrote with a chatbot struggled to quote their own
+  essays. This is a **preprint, not yet peer-reviewed**, with small groups,
+  and its methods have been criticized; treat it as a question, not an answer
+  [@doi:10.48550/arXiv.2506.08872].
+- Rewriting to beat detectors, and a way to catch it that does not depend on
+  the text's style [@doi:10.48550/arXiv.2303.13408].
+
+**Listen**
+
+- *The Podcast by KevinMD*, the episode above, if you skipped it.
+
+**Talks**
+
+- Wednesday's week 2 talk, "Professional work with AI: writing and beyond",
+  with co-director Christina Olson. The recording is in Canvas.
+- [AI in medical education](https://talks.seandavis.net/archive/2024-10-23-ai-in-medical-education/),
+  for the attribution question that comes up the first time a chatbot helps
+  with a presentation or a paper.
