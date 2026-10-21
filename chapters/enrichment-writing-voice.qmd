@@ -146,13 +146,15 @@ readers, about two-thirds preferred detailed disclosures to a one-line label
 **Ideas first.** Experienced writers who use AI well get the ideas clear
 first: what they think, and what the reader should take away. After that, a
 chatbot can do a lot. It can build a detailed outline, research the
-background that frames it, and even write a first draft to rework. The course
-director often writes this way. What goes wrong is asking for a draft before
-the ideas are yours. Then the chatbot supplies the ideas, and you get its
+background that frames it, and even write a first draft to rework.
+@fig-workflow is how the course director writes. What goes wrong is asking
+for a draft before the ideas are yours. Then the chatbot supplies the ideas, and you get its
 average piece, with views you may not hold. There is a trade-off even when
 the ideas are yours: the more of the draft a chatbot writes, the less the
 piece tends to feel like yours [@doi:10.48550/arXiv.2604.11009]. You decide
 how much help to take for each piece, and you say what you chose.
+
+![How the course director writes with AI, when the piece's rules allow it. The first row gets to clear ideas: an interview if there is a rubric, a rough scope if not, then research, summarizing, and refining until the ideas are clear. Only then does drafting start. Persona reviews send the draft back to editing, and the last step is a section saying how AI was used. Drawn for this course.](../images/writing-workflow.svg){#fig-workflow fig-alt="Flowchart in two rows. Row one: a decision, rubric given? Yes leads to AI interviews you for the details; no leads to a rough scope in an AI chat. Both lead to research, then summarize and refine, then a checkpoint, the ideas are clear, which loops back to refine if not yet. Row two: draft, perhaps in sections; edit, you and AI on the same file; fine-tune display and format; AI review, often with personas, which loops back to editing when it has feedback; write how AI was used. A legend colours each step by who leads: mostly you, together, or mostly AI."}
 
 **The rules for the piece decide the rest.** The AAMC's guidance on the
 residency personal statement says: "The use of AI tools is acceptable for
