@@ -136,12 +136,20 @@ uploaded as a single SKILL.md). The chapter's excerpts are from that run.
 - **Step 8 v2 and v3.** Every change typed by the student; the two lines on
   what changed and where they overruled the chatbot are the deliverable. The
   word search is a decision per word, not zero words.
-- **Step 9 voice check.** A heuristic, nothing more. No study has tested
-  whether a chatbot can judge "same author". Credit a student who rereads a
-  flagged sentence and keeps it because it is theirs. Do not credit "the AI
-  said it sounds like me, so it's fine".
-- **Step 10 disclosure.** Names the tool and what it did. "AI was used" does
-  not meet it.
+- **Step 9 reader check.** Run in an Unpersonalized Temporary Chat so the
+  skill and memory are off. The finding is whether what the "reader" learned
+  matches the one thing in the rubric. Credit a student who rereads a named
+  sentence and keeps it because it is true and theirs. The read-aloud check
+  is the stronger one: every sentence explainable without looking.
+- **Step 10 disclosure.** Names the tool and what it did at each step, and
+  what the student did. "AI was used" does not meet it. The point is
+  transparency, not hiding: the chapter cites the ICMJE (describe how AI was
+  used; nondisclosure may be misconduct), GAIDeT, and the trust-cost studies
+  (disclosing costs some trust; being exposed costs more).
+- **AI-draft variation.** Allowed only where the piece's rules allow it (not
+  ERAS). The ideas, as three to five points in the student's words, come
+  before the outline; the student checks the links; v2 and v3 are the
+  student's; the disclosure says the chatbot wrote the first draft.
 
 ## Objectives to activities
 
@@ -158,9 +166,9 @@ uploaded as a single SKILL.md). The chapter's excerpts are from that run.
 - Row 3: "Without a reason it kept its point and asked what the sentence
   added. When I told it the minimum count came from two weeks of our busiest
   use, it agreed that detail should go in, and said why."
-- Row 5: "Readers can't tell AI from human statements, so the reason to
-  draft myself is not getting caught. It is that my statement would sound
-  like everyone else's and feel less like mine. The AAMC allows AI for
+- Row 5: "Whether readers can tell is not the point. The piece has to be
+  right for its reader and something I can answer for, and I say exactly how
+  AI helped. The ICMJE asks authors to describe how they used AI. The AAMC allows AI for
   brainstorming, proofreading, and editing. A detector score is not proof:
   detectors flag non-native English writers far more often, and paraphrasing
   defeats them."

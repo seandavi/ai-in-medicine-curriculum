@@ -78,7 +78,7 @@ appendix.
 - Menu: [Critical appraisal](chapters/core-appraisal.qmd),
   [Bias and equity](chapters/core-bias-equity.qmd),
   [Grounding AI in real sources](chapters/enrichment-rag-notebooklm.qmd),
-  [Writing with AI and still sounding like you](chapters/enrichment-writing-voice.qmd).
+  [Writing with AI, but for humans](chapters/enrichment-writing-voice.qmd).
 
 **Week 3, AI and your patients**
 
@@ -115,7 +115,7 @@ professional identity, the closing question.
 | [Critical appraisal](chapters/core-appraisal.qmd) | ● | ● | | ● | ○ | | ○ | | ● | ○ |
 | [Bias and equity](chapters/core-bias-equity.qmd) | | ○ | ● | | | | | ○ | ○ | ○ |
 | [Grounding AI in real sources](chapters/enrichment-rag-notebooklm.qmd) | ● | ● | | ○ | ○ | | | | ● | ○ |
-| [Writing with AI and still sounding like you](chapters/enrichment-writing-voice.qmd) | | ○ | ○ | ● | ● | | | | | ● |
+| [Writing with AI, but for humans](chapters/enrichment-writing-voice.qmd) | | ○ | ○ | ● | ● | | | | | ● |
 | **Week 3** | | | | | | | | | | |
 | [Talking to patients about AI](chapters/core-patient-communication.qmd) (core) | | ○ | | ● | ○ | ● | | | | ○ |
 | [Agentic coding](chapters/enrichment-agentic-coding.qmd) | ○ | ● | | ● | ● | | ○ | | | ○ |
