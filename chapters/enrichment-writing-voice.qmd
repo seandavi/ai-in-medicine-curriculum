@@ -241,7 +241,7 @@ listed here so you know where each thing lives.
 |---|---|---|
 | 1. Write your rubric | Your own document | Say what "done" means before you open the chatbot |
 | 2. Make a writing project | **Projects**, with **Instructions** and **Sources** | Hold everything about this one piece: the rules for the chatbot, your rubric, your old writing |
-| 3. Add the feedback skill | **Customize > Skills** | A way of working you reuse on any piece: feedback, not a rewrite |
+| 3. Add the feedback skill | **Customize > Skills** | A way of working you reuse on any piece: feedback first, a rewrite only when you ask |
 | 4. Interview | A chat in the project, **Medium** thinking | Bring back the details only you know |
 | 5. Write v0 | Your own document | The core, in your words |
 | 6. Feedback (v1) | The same chat | Find what is unclear, missing, generic, or wrong |
@@ -360,13 +360,17 @@ used.
 **Project settings**. Paste this into **Instructions** and click **Save**:
 
 ```
-This project is for one piece of my writing. I write the drafts.
-Help me by interviewing me, giving feedback, and checking spelling
-and grammar. Do not write or rewrite the piece unless I ask for one
-specific small change. Judge every version against the source
-called Rubric. Keep my words and my details, and never add facts or
-feelings I did not give you. Answer in plain English, briefly.
+This project is for one piece of my writing. The ideas and the
+details are mine. Help me by interviewing me, giving feedback,
+checking spelling and grammar, and drafting or rewriting when I ask,
+using only the ideas and details I have given you. Mark anything you
+add with [ADDED]. Judge every version against the source called
+Rubric. Answer in plain English, briefly.
 ```
+
+These instructions let ChatGPT draft from your ideas when you ask. For the
+worked example you write v0 yourself anyway, because the AAMC wants the
+final residency statement to be your own work.
 
 If you have a style you want kept, add a line for it, for example: `My
 style: I use contractions and dashes. Keep them.` Students in this course
@@ -391,7 +395,7 @@ reads each skill's short description and uses the skill by itself when your
 request matches it. Unlike project instructions, a skill works in every
 project and every chat.
 
-This course's skill gives feedback on a draft without rewriting it. It
+This course's skill gives feedback on a draft first. It rewrites only when you ask, and only from your ideas. It
 reviews the draft against five points (Accurate, Aligned, Appropriate, Tone,
 Unbiased), the editing checklist from the week 2 writing talk, and against
 your rubric. It quotes the words it means, lists common chatbot words, asks
@@ -440,7 +444,7 @@ Paste this:
 
 ```
 I'm writing the piece described in the Rubric source. Don't write
-any of it. Interview me instead: ask me one question at a time,
+it yet. Interview me first: ask me one question at a time,
 five in all, that help me remember specific details: what I saw,
 what I did, what changed, and what I'd do differently. Wait for my
 answer before the next question.
@@ -657,11 +661,8 @@ a chatbot to write a first draft. This is the short version; the stretch
 exercise below has the full one, with research. Keep Steps 1 to 4, replace Step 5, and keep
 the rest.
 
-1. **Let the project draft.** Your project Instructions from Step 2 forbid
-   drafting. Open **⋯ > Project settings**. Replace `I write the drafts.`
-   with `I decide the ideas. You may outline, research, and draft from my
-   points when I ask.` Delete the sentence that starts `Do not write or
-   rewrite`. Click **Save**.
+1. **Your project already allows this.** The Step 2 instructions let ChatGPT
+   draft when you ask, from your ideas only.
 2. **Get the ideas clear.** After the interview in Step 4, write, in your own
    words, the three to five points the piece must make. These are the ideas;
    they stay yours.
@@ -740,7 +741,7 @@ English, briefly.
 
 ```
 I've been asked for [the piece] by [who]. I don't know my position
-yet. Don't write anything. Ask me up to seven questions, one at a
+yet. Don't write anything yet. Ask me up to seven questions, one at a
 time, to scope it: who reads it, what they need to decide or do,
 length and format, limits, and what success looks like.
 ```
@@ -856,7 +857,7 @@ you ask for it.
    editor**. (In a chat, the **+** menu also has **Template Creator**.)
 2. **Name:** for example `abstract-feedback`. **Description:** say when to use
    it, for example: `Use when I ask for feedback on a conference abstract I
-   wrote. Never rewrites it.`
+   wrote. Feedback first; rewrite only when I ask, from my ideas.`
 3. **Instructions:** start from the writing-feedback skill's text. Add the
    rules for this kind of piece: the word limit, the required sections, what
    reviewers score, and what the reader wants from it.
