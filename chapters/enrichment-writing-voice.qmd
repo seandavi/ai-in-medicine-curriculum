@@ -11,7 +11,7 @@ subtitle: "About 75 minutes, plus an optional stretch"
   exactly how you used it.
 - **What you do.** Follow one worked example in ChatGPT Edu, step by step: a
   project for the piece, a feedback skill, an interview, your own draft,
-  feedback, a pushback, your revision, a persona review, and a disclosure. Then
+  feedback, a pushback, your revision, a reader check, and a disclosure. Then
   do the same with a piece of your own.
 - **What you keep.** A finished piece with every version saved, a writing
   project you can reuse, the feedback skill, and a disclosure that says what
@@ -32,7 +32,7 @@ By the end of this chapter you will be able to:
    wrote, without a rewrite.
 3. Push back on the feedback and tell a reasoned change of mind from giving
    in.
-4. Keep every version, review the last one with reader personas, and write a
+4. Keep every version, check the last one with a reader, and write a
    disclosure that says exactly what AI did.
 5. Explain why the goal is writing that is right for its reader and for you,
    not writing that hides AI use; what residency applications and medical
@@ -169,7 +169,7 @@ something easy to follow. So the rubric below says what your reader wants,
 and every review in the Do checks the draft against it, not against whether
 it "sounds like AI".
 
-![How the course director writes with AI, when the piece's rules allow it. The first row ends with clear ideas: an interview if there is a rubric, a rough plan if not, then research, summarizing, and refining until the ideas are clear. Only then does drafting start. Persona reviews send the draft back to editing, and the last step is a section saying how AI was used. Drawn for this course.](../images/writing-workflow.svg){#fig-workflow fig-alt="Flowchart in two rows. Row one: a decision, rubric given? Yes leads to AI interviews you for the details; no leads to a rough scope in an AI chat. Both lead to research, then summarize and refine, then a checkpoint, the ideas are clear, which loops back to refine if not yet. Row two: draft, perhaps in sections; edit, you and AI on the same file; fine-tune display and format; AI review, often with personas, which loops back to editing when it has feedback; write how AI was used. A legend colours each step by who leads: mostly you, together, or mostly AI."}
+![How the course director writes with AI, when the piece's rules allow it. The first row ends with clear ideas: an interview if there is a rubric, a rough plan if not, then research, summarizing, and refining until the ideas are clear. Only then does drafting start. Review from the reader's side sends the draft back to editing, and the last step is a section saying how AI was used. Drawn for this course.](../images/writing-workflow.svg){#fig-workflow fig-alt="Flowchart in two rows. Row one: a decision, rubric given? Yes leads to AI interviews you for the details; no leads to a rough scope in an AI chat. Both lead to research, then summarize and refine, then a checkpoint, the ideas are clear, which loops back to refine if not yet. Row two: draft, perhaps in sections; edit, you and AI on the same file; fine-tune display and format; AI review from the reader's side, which loops back to editing when it has feedback; write how AI was used. A legend colours each step by who leads: mostly you, together, or mostly AI."}
 
 **The rules for the piece decide the rest.** The AAMC's guidance on the
 residency personal statement says: "The use of AI tools is acceptable for
@@ -247,7 +247,7 @@ listed here so you know where each thing lives.
 | 6. Feedback (v1) | The same chat | Find what is unclear, missing, generic, or wrong |
 | 7. Push back | The same chat | Check that the feedback holds up |
 | 8. Revise (v2) and edit (v3) | Your own document | Every change is yours; note what you changed |
-| 9. Persona review | Personas from the project chat; reviews in an **Unpersonalized Temporary Chat** | Readers you describe find what you cannot see; their feedback goes back to editing |
+| 9. Reader check | A real person who stands in for your reader, or the skill again | What actually came across, compared with your rubric; feedback goes back to editing |
 | 10. Disclose | Your own document | Say exactly what AI did at each step, and what you did |
 
 : Where each step lives. The project holds the piece, the skill holds the method, and the prompt holds today's request. {#tbl-method}
@@ -593,57 +593,30 @@ Where the chatbot helped / where I overruled it: _____________
 Those two lines are the point of saving versions. They show you what the
 tool is good for in your writing, and what it is not.
 
-### Step 9. Review it with personas, then edit (15 to 20 minutes)
+### Step 9. Read it as your reader would (10 minutes)
 
-A **persona** is a short, specific description of one reader: who they are,
-what they already know, what they look for, what would make them stop
-reading, and the question they would ask. You ask a chatbot to read your
-draft *as* that person. It is not the real reader, but it finds problems you
-cannot see in your own writing. This book is reviewed the same way, against
-six [review personas](../appendix/personas.qmd).
+The test is what a reader takes away. A real person is the best check you
+have.
 
-**Make the personas.** Back in your project chat, paste:
+**Ask one person.** Pick someone who could stand in for your reader: a
+classmate, a resident, a friend who reads applications. Send them v3 with
+one question:
 
 ```
-From the Rubric source, describe three different readers of this
-piece, as personas. For each: a role, what they already know, what
-they want from this piece, what would make them stop reading, and one question
-they would ask the writer. Describe them by role and what they look
-for, not by age, gender, race, or nationality. Make them differ from
-each other. Under 80 words each.
+In one sentence, what did you learn about me from this? Which
+sentence would you ask me about?
 ```
 
-Read them. Fix any that do not match the kind of reader you know, such as
-program directors or reviewers in general. Do not describe a real,
-identifiable person. They are your readers, so you decide.
+No patient information goes to them either. If what they learned is not
+the one thing in your rubric, that is the edit to make. If they would ask
+about a sentence you cannot explain, fix that sentence.
 
-**Run each review in a clean chat.** Click **New chat** in the left sidebar,
-outside your project. Click **Temporary chat** at the top right, then
-**Personalized** at the top, and choose **Unpersonalized**. ChatGPT says this
-chat "will ignore memory, plugins, and custom instructions", which should
-include the feedback skill, so only the persona speaks. If the reply looks
-like skill feedback, start another Temporary Chat.
-Paste:
+**If no one is free,** paste v3 back into your project chat and ask for
+feedback again (Step 6). The skill starts with what came across. Compare
+that with your rubric's "What they want" line.
 
-```
-You are this reader: [paste one persona].
-Read the piece below as that person would. Say the two or three
-ideas you took away, and whether it gave you what you wanted from
-it. Then the sentence you would ask about, the sentence that tells
-you least, and where you would stop reading, if anywhere. Do not
-rewrite it.
-
-[paste your v3]
-```
-
-**Compare what came across with what you meant.** If the ideas a persona
-took away are not the ones in your rubric, or it did not get what it wanted,
-that is the edit to make.
-
-**Feedback goes back to editing.** For each point you agree with, edit v3
-yourself, then run the next persona. Stop when the personas only question
-things you already chose to keep. A persona is a rough check, not a
-measurement; it only finds sentences worth another look.
+**Feedback goes back to editing.** Edit v3 yourself for each point you agree
+with.
 
 **Last, your own check.** Read v3 aloud, one sentence at a time. Could you
 explain each one to an interviewer without looking? Is it true? Would you
@@ -854,11 +827,9 @@ helps. Do not change my wording.
 **Goal:** a version that holds up for its readers.
 
 First run the feedback skill (Step 6 of the Do): `Here is my draft. Can you
-give me feedback on it?` Then run a persona review (Step 9). For the
-proposal, try a clerkship director, a nurse who precepts students, and a
-skeptical attending. For the handout, try a nervous third-year student and
-the resident who will supervise them. Describe them by role, not by age,
-gender, race, or nationality.
+give me feedback on it?` Then do the reader check (Step 9) with a real person:
+for the proposal, someone who knows the clerkship; for the handout, a
+third-year student.
 
 **Check:** every point you agreed with goes back to Stage 5 and is edited
 in. Stop when the reviews only question things you chose to keep.
@@ -871,32 +842,31 @@ in. Stop when the reviews only question things you chose to keep.
 > questions; I wrote the rubric. It found sources; I opened each one and
 > kept five. I wrote the three points and answered its objections. It
 > drafted each section from my points; I edited every paragraph. It
-> reviewed the draft as three reader personas, and I made four changes.
+> reviewed the draft, and a classmate read it; I made four changes.
 
 ### Optional: build your own skill
 
-You have now run a persona review several times. A prompt you keep reusing
-is a good candidate for a **skill**.
+The feedback skill from Step 3 works on any piece. If you write one kind of
+piece often, such as abstracts, a skill for that kind can hold its rules.
 
-**Goal:** a persona-review skill of your own that runs when you ask for it.
+**Goal:** a feedback skill of your own for one kind of piece, which runs when
+you ask for it.
 
 1. Click the **Plugins** icon (Step 3), then **Skills > Add > Create with
    editor**. (In a chat, the **+** menu also has **Template Creator**.)
-2. **Name:** `persona-review`. **Description:** say when to use it, for
-   example: `Use when I ask for a persona review of a draft. Reviews it as
-   readers described by role, and never rewrites it.`
-3. **Instructions:** start from the Step 9 prompts. Add the rules you want:
-   describe readers by role, not by age, gender, race, nationality, or as
-   real people; propose the personas and wait for my OK before reviewing;
-   quote the sentence each point is about; do not rewrite.
+2. **Name:** for example `abstract-feedback`. **Description:** say when to use
+   it, for example: `Use when I ask for feedback on a conference abstract I
+   wrote. Never rewrites it.`
+3. **Instructions:** start from the writing-feedback skill's text. Add the
+   rules for this kind of piece: the word limit, the required sections, what
+   reviewers score, and what the reader wants from it.
 4. Click **Create**.
 
-**Check:** in a project chat, ask for "a persona review of my draft". Does
-your skill run? If the feedback skill answers instead, say `Use the
-persona-review skill.` Does it keep to your rules? Change the instructions
-and try again. A skill runs in a normal chat, not an Unpersonalized one, so
-your project's instructions can colour its reviews. A skill you write is a set of instructions under your name, so read
-it again before you share it with anyone.
+**Check:** in a project chat, ask for feedback on an abstract. Does your skill
+run? If the general feedback skill answers instead, say `Use the
+abstract-feedback skill.` Does it keep to your rules? Change the instructions
+and try again. A skill you write is a set of instructions under your name,
+so read it again before you share it with anyone.
 
 ### What you keep from the stretch
 
@@ -904,7 +874,7 @@ it again before you share it with anyone.
   opened or to your own point.
 - **A list of the sources you kept**, and why.
 - **A section on how AI was used**, stage by stage.
-- **Optional: your own persona-review skill.**
+- **Optional: your own feedback skill for one kind of piece.**
 
 ## Check
 
@@ -915,7 +885,7 @@ Score yourself against this before moving on.
 | A writing project (objective 1) | Project-only memory, your instructions, and your rubric as a source | One long chat with no rubric |
 | Feedback on your own draft (objective 2) | A v0 you wrote, and feedback that quotes your words and does not rewrite them | A chatbot rewrite, lightly edited |
 | A pushback test (objective 3) | You disagreed once without a reason and once with one, and you can say how the feedback changed each time | No pushback, or a change of mind you accepted without asking why |
-| Versions and persona review (objective 4) | v0 to v3 saved; at least two persona reviews run in an Unpersonalized Temporary Chat, with the points you agreed with edited in; each sentence read aloud | Only the final version, or reviews with no edits after them |
+| Versions and reader check (objective 4) | v0 to v3 saved; one reader's one-sentence takeaway compared with your rubric, and the edits it led to; each sentence read aloud | Only the final version, or no one read it |
 | Stretch, if you did it | Points you can state, with their objections answered, without looking; every claim traced to a source you opened or to your own point; review feedback edited in; a stage-by-stage disclosure | A polished draft whose points you cannot defend |
 | What changed, and the disclosure (objective 4) | Two lines on what you changed and why; a disclosure that names the tool and what it did at each step | "AI was used" |
 | The reasons and the rules (objective 5) | One sentence on why the goal is a piece that is right for its reader and for you, not one that hides AI use; what the AAMC allows and what the ICMJE asks; why a detector score is not proof | "So no one can tell", or "AI is not allowed" |

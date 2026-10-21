@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" font-family="Source Sans Pro, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
 <title id="t">How I write with AI</title>
-<desc id="d">Flowchart. Is there a rubric? If yes, AI interviews you for the details; if no, set a rough scope in an AI chat. Then research, then summarize and refine, until the ideas are clear. Then draft, perhaps in sections; edit with you and the AI on the same file; fine-tune the format; AI review, often with personas, whose feedback goes back to editing; and last, write the section on how AI was used. Boxes are coloured by who leads: mostly you, together, or mostly AI.</desc>
+<desc id="d">Flowchart. Is there a rubric? If yes, AI interviews you for the details; if no, set a rough scope in an AI chat. Then research, then summarize and refine, until the ideas are clear. Then draft, perhaps in sections; edit with you and the AI on the same file; fine-tune the format; AI review from the reader&#8217;s side, whose feedback goes back to editing; and last, write the section on how AI was used. Boxes are coloured by who leads: mostly you, together, or mostly AI.</desc>
 <defs><marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#173f45"/></marker></defs>
 <rect width="1600" height="760" fill="#ffffff"/>
 <polygon points="40,130.0 132,61.0 224,130.0 132,199.0" fill="#ffffff" stroke="#173f45" stroke-width="3"/>
@@ -47,8 +47,8 @@
 <text x="800.0" y="502.0" text-anchor="middle" font-size="24" font-weight="600" fill="#ffffff">display and format</text>
 <rect x="972.4000000000001" y="420" width="276.8" height="120" rx="14" fill="#dfe9ec" stroke="#173f45" stroke-width="2"/>
 <text x="986.4000000000001" y="446" font-size="18" font-weight="700" fill="#1d2b2f" opacity="0.75">7</text>
-<text x="1110.8000000000002" y="474.0" text-anchor="middle" font-size="24" font-weight="600" fill="#1d2b2f">AI review,</text>
-<text x="1110.8000000000002" y="502.0" text-anchor="middle" font-size="24" font-weight="600" fill="#1d2b2f">often with personas</text>
+<text x="1110.8000000000002" y="474.0" text-anchor="middle" font-size="24" font-weight="600" fill="#1d2b2f">AI review, from</text>
+<text x="1110.8000000000002" y="502.0" text-anchor="middle" font-size="24" font-weight="600" fill="#1d2b2f">the reader&#x27;s side</text>
 <rect x="1283.2" y="420" width="276.8" height="120" rx="14" fill="#173f45" stroke="#173f45" stroke-width="2"/>
 <text x="1297.2" y="446" font-size="18" font-weight="700" fill="#ffffff" opacity="0.75">8</text>
 <text x="1421.6000000000001" y="474.0" text-anchor="middle" font-size="24" font-weight="600" fill="#ffffff">Write how</text>
@@ -59,7 +59,7 @@
 <line x1="1249.2" y1="480.0" x2="1279.2" y2="480.0" stroke="#173f45" stroke-width="3" marker-end="url(#head)"/>
 <path d="M1490,190 L1490,310 L178.4,310 L178.4,416" fill="none" stroke="#173f45" stroke-width="3" marker-end="url(#head)"/>
 <path d="M1110.8000000000002,540 L1110.8000000000002,576 L489.20000000000005,576 L489.20000000000005,544" fill="none" stroke="#173f45" stroke-width="3" marker-end="url(#head)"/>
-<text x="800.0" y="602" text-anchor="middle" font-size="20" font-style="italic" fill="#173f45">persona feedback: back to editing</text>
+<text x="800.0" y="602" text-anchor="middle" font-size="20" font-style="italic" fill="#173f45">review feedback: back to editing</text>
 <text x="40" y="736" font-size="22" font-weight="700" fill="#1d2b2f">Who leads:</text>
 <rect x="175" y="714" width="34" height="28" rx="6" fill="#173f45" stroke="#173f45" stroke-width="2"/>
 <text x="219" y="736" font-size="22" fill="#1d2b2f">mostly you</text>
