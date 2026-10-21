@@ -13,6 +13,8 @@ project:
   resources:
     - robots.txt
     - images/
+    # Files students download, such as the writing-feedback skill.
+    - downloads/
   render:
     - index.qmd
     - chapters/
