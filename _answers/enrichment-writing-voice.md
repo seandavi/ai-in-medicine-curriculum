@@ -154,6 +154,17 @@ uploaded as a single SKILL.md). The chapter's excerpts are from that run.
   before the outline; the student checks the links; v2 and v3 are the
   student's; the disclosure says the chatbot wrote the first draft.
 
+- **Stretch (optional).** Not run in ChatGPT Edu before publishing; the
+  stages use features confirmed to exist on 2026-10-21 (Projects, Sources,
+  Deep research and Documents in the + menu, Create with editor, Template
+  Creator) but their behaviour in this exercise was not tested. The
+  checkpoint is Stage 3: a student who can state each point and answer its
+  strongest objection without looking has met it. Look for [ADDED] tags
+  resolved in Stage 5, sources the student actually opened, and a
+  stage-by-stage disclosure. For the optional skill, credit a student who
+  changed the instructions after testing, and who kept the rules about
+  describing readers by role.
+
 ## Objectives to activities
 
 | Objective | Where assessed |
