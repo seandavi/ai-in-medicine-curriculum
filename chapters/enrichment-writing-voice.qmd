@@ -45,7 +45,7 @@ real piece of writing you need in the next month that is not about a patient,
 or none: the worked example works on its own. A blank document for your
 versions. This chapter goes with week 2's Wednesday talk on professional
 writing and the optional hands-on session that afternoon. About 15 minutes of
-reading and about 65 of doing. Doing it again with your own piece is a second
+reading and about 70 of doing. Doing it again with your own piece is a second
 session.
 
 ::: {.callout-note title="On Copilot or a personal ChatGPT account?"}
@@ -96,6 +96,7 @@ who read personal statements could not reliably tell which were written by
 ChatGPT (@fig-readers). In the largest, readers for medical school
 admissions gave the AI-written essays slightly *higher* scores than the
 human-written ones, 5.02 against 4.67 on a 7-point scale [@pmid:41051105].
+That does not make an AI-written statement allowed; the rules are below.
 
 ::: {#fig-readers}
 <div class="acc-bars" role="img" aria-label="Bar chart of how often readers correctly said whether a personal statement was written by a person or by ChatGPT. Orthopaedic surgery residency, 8 readers: 52 percent. Medical school admissions, 17 readers: 56 percent. Pediatrics residency, 4 readers: 59 percent. A dashed line at 50 percent marks a coin toss.">
@@ -113,10 +114,11 @@ orthopaedics, 41 of 79 guesses, the sum of the paper's two counts
 [@pmid:41584952]. The data are the papers'; the drawing is this course's.
 :::
 
-Readers in a study of professional writers could not tell AI-assisted work
-from solo work either, and they were positive about writers trying the tools
-[@doi:10.1145/3711020]. So this chapter is not about hiding AI use. It is
-about the two people the writing is for.
+In a study of professional creative writers, 30 readers surveyed online
+could not tell AI-assisted work from solo work either. They showed less
+concern about co-writing with AI than the writers did
+[@doi:10.1145/3711020]. This chapter is not about hiding AI use. It is about
+the two people the writing is for.
 
 - **Your reader needs it to be right and specific.** A generic piece tells a
   reader little. In 62,132 residency personal statements from one US center,
@@ -127,7 +129,7 @@ about the two people the writing is for.
   that the writing was theirs; writing a draft first and then using the
   chatbot kept it close to writing alone [@doi:10.1038/s41598-026-42312-6].
   The professional writers in the study above described authenticity as
-  coming from how they wrote, not from whether a reader could spot the AI
+  coming more from how they wrote than from the finished text
   [@doi:10.1145/3711020]. And a chatbot draft can say things you do not
   believe, like the "lifelong commitment" above.
 
@@ -138,23 +140,23 @@ paper, and says that not disclosing it may be treated as misconduct
 checked 21 October 2026). One proposed format, GAIDeT, lists the specific
 tasks handed to AI and the person who checked them, instead of "we used
 ChatGPT" [@pmid:40781729]. Being open has a cost. In 13 experiments, people
-who disclosed AI use were trusted somewhat less, but being exposed by someone
-else cost more [@doi:10.1016/j.obhdp.2025.104405]. In a small study of news
-readers, about two-thirds preferred detailed disclosures to a one-line label
+who disclosed AI use were trusted less. Being exposed by someone else cost
+more [@doi:10.1016/j.obhdp.2025.104405]. In a study of 40 news readers,
+detailed disclosures lowered trust, while one-line labels did not. Even so,
+about two-thirds of the readers preferred the detailed version
 [@doi:10.1145/3805689.3812386]. Be specific, and let your reader judge.
 
-**Ideas first.** Experienced writers who use AI well get the ideas clear
-first: what they think, and what the reader should take away. After that, a
+**Ideas first.** The course director gets the ideas clear first: what to
+say, and what the reader should take away (@fig-workflow). After that, a
 chatbot can do a lot. It can build a detailed outline, research the
-background that frames it, and even write a first draft to rework.
-@fig-workflow is how the course director writes. What goes wrong is asking
-for a draft before the ideas are yours. Then the chatbot supplies the ideas, and you get its
-average piece, with views you may not hold. There is a trade-off even when
+background that frames it, and even write a first draft to rework. What
+goes wrong is asking for a draft before the ideas are yours. Then the chatbot
+supplies the ideas. You get its average piece, with views you may not hold. There is a trade-off even when
 the ideas are yours: the more of the draft a chatbot writes, the less the
 piece tends to feel like yours [@doi:10.48550/arXiv.2604.11009]. You decide
 how much help to take for each piece, and you say what you chose.
 
-![How the course director writes with AI, when the piece's rules allow it. The first row gets to clear ideas: an interview if there is a rubric, a rough scope if not, then research, summarizing, and refining until the ideas are clear. Only then does drafting start. Persona reviews send the draft back to editing, and the last step is a section saying how AI was used. Drawn for this course.](../images/writing-workflow.svg){#fig-workflow fig-alt="Flowchart in two rows. Row one: a decision, rubric given? Yes leads to AI interviews you for the details; no leads to a rough scope in an AI chat. Both lead to research, then summarize and refine, then a checkpoint, the ideas are clear, which loops back to refine if not yet. Row two: draft, perhaps in sections; edit, you and AI on the same file; fine-tune display and format; AI review, often with personas, which loops back to editing when it has feedback; write how AI was used. A legend colours each step by who leads: mostly you, together, or mostly AI."}
+![How the course director writes with AI, when the piece's rules allow it. The first row ends with clear ideas: an interview if there is a rubric, a rough plan if not, then research, summarizing, and refining until the ideas are clear. Only then does drafting start. Persona reviews send the draft back to editing, and the last step is a section saying how AI was used. Drawn for this course.](../images/writing-workflow.svg){#fig-workflow fig-alt="Flowchart in two rows. Row one: a decision, rubric given? Yes leads to AI interviews you for the details; no leads to a rough scope in an AI chat. Both lead to research, then summarize and refine, then a checkpoint, the ideas are clear, which loops back to refine if not yet. Row two: draft, perhaps in sections; edit, you and AI on the same file; fine-tune display and format; AI review, often with personas, which loops back to editing when it has feedback; write how AI was used. A legend colours each step by who leads: mostly you, together, or mostly AI."}
 
 **The rules for the piece decide the rest.** The AAMC's guidance on the
 residency personal statement says: "The use of AI tools is acceptable for
@@ -549,7 +551,8 @@ have not run out since. It was a boring job, and I liked it.
 **v3: your own final edit.** Read v2 out loud. Change anything you would not
 say. Then look for words that make writing read as generic, because they
 turn up everywhere: *delve, underscore, showcase, pivotal, intricate, realm,
-meticulous, foster, seamless, spearhead, passion, journey*. Keep a word only
+meticulous, foster, seamless, spearhead, passion, passionate, journey,
+tapestry*. Keep a word only
 if it is the word you mean. Paste the result under **v3**.
 
 Under v3, write two lines:
@@ -562,7 +565,7 @@ Where the chatbot helped / where I overruled it: _____________
 Those two lines are the point of saving versions. They show you what the
 tool is good for in your writing, and what it is not.
 
-### Step 9. Review it with personas, then edit (10 minutes)
+### Step 9. Review it with personas, then edit (15 to 20 minutes)
 
 A **persona** is a short, specific description of one reader: who they are,
 what they already know, what they look for, what would make them stop
@@ -575,19 +578,23 @@ six [review personas](../appendix/personas.qmd).
 
 ```
 From the Rubric source, describe three different readers of this
-piece, as personas. For each: a name and role, what they already
-know, what they look for, what would make them stop reading, and one
-question they would ask the writer. Make them differ from each other.
-Under 80 words each.
+piece, as personas. For each: a role, what they already know, what
+they look for, what would make them stop reading, and one question
+they would ask the writer. Describe them by role and what they look
+for, not by age, gender, race, or nationality. Make them differ from
+each other. Under 80 words each.
 ```
 
-Read them. Fix any that do not match readers you know: a program director
-you have met, a reviewer you have read. They are your readers, so you decide.
+Read them. Fix any that do not match the kind of reader you know, such as
+program directors or reviewers in general. Do not describe a real,
+identifiable person. They are your readers, so you decide.
 
-**Run each review in a clean chat.** Click **Temporary chat** at the top
-right, then click **Personalized** at the top and choose **Unpersonalized**.
-The chat now ignores your memory, plugins (add-on tools), and custom
-instructions, including the feedback skill, so only the persona speaks.
+**Run each review in a clean chat.** Click **New chat** in the left sidebar,
+outside your project. Click **Temporary chat** at the top right, then
+**Personalized** at the top, and choose **Unpersonalized**. ChatGPT says this
+chat "will ignore memory, plugins, and custom instructions", which should
+include the feedback skill, so only the persona speaks. If the reply looks
+like skill feedback, start another Temporary Chat.
 Paste:
 
 ```
@@ -601,8 +608,8 @@ Do not rewrite it.
 ```
 
 **Feedback goes back to editing.** For each point you agree with, edit v3
-yourself, then run the next persona. Stop when the personas only raise
-points you have decided to keep. A persona is a rough check, not a
+yourself, then run the next persona. Stop when the personas only question
+things you already chose to keep. A persona is a rough check, not a
 measurement; it only finds sentences worth another look.
 
 **Last, your own check.** Read v3 aloud, one sentence at a time. Could you
@@ -624,8 +631,9 @@ which feedback to use and made every change myself.
 
 Where it goes depends on the piece. For a journal article, follow the
 journal's rules; the ICMJE asks for it in the cover letter and in the paper.
-For an application, include it where the application asks. Anywhere else,
-keep it with the piece, ready for anyone who asks. This book does the same:
+For an application, include it where the application asks. If it does not
+ask, keep it with your versions, ready for an interviewer who does. Anywhere
+else, keep it with the piece, ready for anyone who asks. This book does the same:
 its [AI ledger](../appendix/ai-ledger.qmd) records what AI did for each
 chapter and who checked it.
 
@@ -639,12 +647,18 @@ installed, so skip Step 3.
 ### When the rules allow an AI draft
 
 For a paper, a newsletter piece, or a teaching handout, the rules may allow
-a chatbot to write a first draft. Change Steps 4 and 5, and keep the rest.
+a chatbot to write a first draft. Keep Steps 1 to 4, replace Step 5, and keep
+the rest.
 
-1. **Get the ideas clear.** Do Steps 1 and 4 as written. Then write, in your
-   own words, the three to five points the piece must make. These are the
-   ideas; they stay yours.
-2. **Ask for an outline, then check it.**
+1. **Let the project draft.** Your project Instructions from Step 2 forbid
+   drafting. Open **⋯ > Project settings**. Replace `I write the drafts.`
+   with `I decide the ideas. You may outline, research, and draft from my
+   points when I ask.` Delete the sentence that starts `Do not write or
+   rewrite`. Click **Save**.
+2. **Get the ideas clear.** After the interview in Step 4, write, in your own
+   words, the three to five points the piece must make. These are the ideas;
+   they stay yours.
+3. **Ask for an outline, then check it.**
 
    ```
    Here are the points this piece must make: [your points].
@@ -655,10 +669,18 @@ a chatbot to write a first draft. Change Steps 4 and 5, and keep the rest.
    ```
 
    Open the links. Cut what is wrong. Add or drop points yourself.
-3. **Ask for a first draft from your outline.** Save it as **v0 (AI draft)**.
-4. **Carry on from Step 6.** Feedback, pushback, then v2 and v3 in your own
+4. **Ask for a first draft from your outline.**
+
+   ```
+   Write a first draft of the piece from the outline above. Use only
+   my points and the sources I kept. Mark any sentence where you
+   added a claim I did not give you.
+   ```
+
+   Save it as **v0 (AI draft)**.
+5. **Carry on from Step 6.** Feedback, pushback, then v2 and v3 in your own
    hands. In Step 9, check hardest for sentences you would not say.
-5. **Say so in Step 10.** For example: "ChatGPT Edu built the outline from my
+6. **Say so in Step 10.** For example: "ChatGPT Edu built the outline from my
    points, found background sources, which I checked, and wrote a first
    draft. I revised every paragraph."
 
@@ -682,7 +704,8 @@ Score yourself against this before moving on.
 | A writing project (objective 1) | Project-only memory, your instructions, and your rubric as a source | One long chat with no rubric |
 | Feedback on your own draft (objective 2) | A v0 you wrote, and feedback that quotes your words and does not rewrite them | A chatbot rewrite, lightly edited |
 | A pushback test (objective 3) | You disagreed once without a reason and once with one, and you can say how the feedback changed each time | No pushback, or a change of mind you accepted without asking why |
-| Versions, checks, and disclosure (objective 4) | v0 to v3 saved, at least two persona reviews run in an Unpersonalized Temporary Chat with the agreed points edited in, each sentence read aloud, two lines on what you changed, and a disclosure that names the tool and what it did at each step | Only the final version, or "AI was used" |
+| Versions and persona review (objective 4) | v0 to v3 saved; at least two persona reviews run in an Unpersonalized Temporary Chat, with the points you agreed with edited in; each sentence read aloud | Only the final version, or reviews with no edits after them |
+| What changed, and the disclosure (objective 4) | Two lines on what you changed and why; a disclosure that names the tool and what it did at each step | "AI was used" |
 | The reasons and the rules (objective 5) | One sentence on why the goal is a piece that is right for its reader and for you, not one that hides AI use; what the AAMC allows and what the ICMJE asks; why a detector score is not proof | "So no one can tell", or "AI is not allowed" |
 
 ## What this changes for you
@@ -715,8 +738,8 @@ disclosure?
   some groups of journals [@pmid:40601754].
 - What authenticity means to professional writers who co-write with AI:
   their process and their sense of self, more than the text. Readers could
-  not tell the AI-assisted work apart and did not mind it
-  [@doi:10.1145/3711020].
+  not tell the AI-assisted work apart and showed less concern about it than
+  the writers [@doi:10.1145/3711020].
 - Saying how you used AI: the GAIDeT taxonomy for listing the tasks handed to
   AI [@pmid:40781729]; 13 experiments on the trust cost of disclosing, and
   the larger cost of being exposed [@doi:10.1016/j.obhdp.2025.104405]; and
