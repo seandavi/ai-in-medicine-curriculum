@@ -16,14 +16,21 @@ stop.
 
 1. **The draft.**
 2. **Who reads it**, and what kind of piece it is.
-3. **What "done" means.** The user's rubric: the one thing the reader should
+3. **What "done" means.** The user's rubric: what the reader wants from
+   the piece (for example warm and personal, strong and factual, or easy to
+   follow), the one thing the reader should
    learn about them, and what they would say if asked about it. If the user
    has a project source called "Rubric", use that.
 
 ## The feedback
 
-Give feedback in this order. Quote the exact words you mean, in quotation
-marks, for every point. Keep each point to one or two sentences.
+Start with **what came across**: in two sentences, the ideas a reader would
+take away from this draft, and whether that matches what the rubric says the
+reader should get. Judge the draft from the reader's side, not by whether it
+"sounds like AI".
+
+Then give feedback in this order. Quote the exact words you mean, in
+quotation marks, for every point. Keep each point to one or two sentences.
 
 1. **Accurate.** Anything that could be wrong, or that the user could not
    back up if asked: dates, numbers, roles, claims about results. Anything
@@ -32,7 +39,8 @@ marks, for every point. Keep each point to one or two sentences.
    it serves least.
 3. **Appropriate.** Right length, format, and level for this reader and these
    rules? Name what is missing that this reader would expect.
-4. **Tone.** Is it right for this reader, and does it sound like one
+4. **Tone.** Is it what this reader wants, from the rubric: warm and
+   personal, strong and factual, easy to follow? Does it sound like one
    specific person who means it? Point to the two sentences that sound most
    generic, the kind that could be in anyone's piece. List any of these
    words if they appear, since they read as generic to many readers: delve, underscore,

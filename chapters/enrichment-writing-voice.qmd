@@ -157,7 +157,17 @@ goes wrong is asking for a draft before the ideas are yours. Then the chatbot
 supplies the ideas. You get its average piece, with views you may not hold. There is a trade-off even when
 the ideas are yours: the more of the draft a chatbot writes, the less the
 piece tends to feel like yours [@doi:10.48550/arXiv.2604.11009]. You decide
-how much help to take for each piece, and you say what you chose.
+how much help to take for each piece, and you say what you chose. Stuck at a
+blank page? A rough first draft from your own notes can get you moving, as
+long as the ideas in it are yours.
+
+**Review from the reader's side.** Whoever drafted it, the test is the
+reader. Did the ideas you meant come across, with the impact you wanted? A
+personal statement's reader wants something warm and personal. An abstract's
+reader wants something strong and factual. A patient letter's reader wants
+something easy to follow. So the rubric below says what your reader wants,
+and every review in the Do checks the draft against it, not against whether
+it "sounds like AI".
 
 ![How the course director writes with AI, when the piece's rules allow it. The first row ends with clear ideas: an interview if there is a rubric, a rough plan if not, then research, summarizing, and refining until the ideas are clear. Only then does drafting start. Persona reviews send the draft back to editing, and the last step is a section saying how AI was used. Drawn for this course.](../images/writing-workflow.svg){#fig-workflow fig-alt="Flowchart in two rows. Row one: a decision, rubric given? Yes leads to AI interviews you for the details; no leads to a rough scope in an AI chat. Both lead to research, then summarize and refine, then a checkpoint, the ideas are clear, which loops back to refine if not yet. Row two: draft, perhaps in sections; edit, you and AI on the same file; fine-tune display and format; AI review, often with personas, which loops back to editing when it has feedback; write how AI was used. A legend colours each step by who leads: mostly you, together, or mostly AI."}
 
@@ -267,7 +277,9 @@ you have no piece of your own today, the example alone is enough.
 No patient information. If your piece mentions a patient, replace that
 passage with `[patient story]` before you paste anything. The chatbot does not
 need it to help you. [What counts as patient
-information](../course/patient-information.qmd).
+information](../course/patient-information.qmd). Your CV and unpublished
+results are not patient information, but they are yours: use ChatGPT Edu,
+not a personal account.
 
 Open a blank document now and type four headings: **v0**, **v1 feedback**,
 **v2**, **v3**. You will paste each version under its heading, so you can
@@ -282,6 +294,8 @@ it sounds. Copy this and fill it in:
 ```
 What I am writing:   ____________________________________
 Who reads it:        ____________________________________
+What they want:      ____________________________________
+  (warm and personal? strong and factual? easy to follow?)
 The one thing they
 should know about me: ____________________________________
 If asked about it,
@@ -297,6 +311,8 @@ What I am writing: the experience entry for my residency
   application (ERAS) about the student-run free clinic supply
   room. About 120 words.
 Who reads it: residency program faculty reading many applications.
+What they want: to meet a specific person, quickly; warm and
+  concrete, not polished and general.
 The one thing they should know about me: I notice when a problem
   is really a system problem, and I fix it in a way other people
   can keep using.
@@ -351,6 +367,10 @@ specific small change. Judge every version against the source
 called Rubric. Keep my words and my details, and never add facts or
 feelings I did not give you. Answer in plain English, briefly.
 ```
+
+If you have a style you want kept, add a line for it, for example: `My
+style: I use contractions and dashes. Keep them.` Students in this course
+found a line like this kept their style in light edits.
 
 **Add your rubric as a source.** Click the **Sources** tab, then **Add
 sources**, then **Paste text**. Type `Rubric` as the title, paste your
@@ -440,7 +460,8 @@ else. When we ran this, the first question was:
 :::
 
 Notice that it found the free clinic in your **Rubric** source without being
-told. Answer in plain, quick sentences; typos are fine. When a question brings
+told. Answer in plain, quick sentences; typos are fine. Or click **Dictate**,
+the microphone next to the box, and just talk. When a question brings
 back a detail you had forgotten, copy it into your document.
 
 ### Step 5. Write v0 yourself (10 minutes)
@@ -556,7 +577,11 @@ say. Then look for words that make writing read as generic, because they
 turn up everywhere: *delve, underscore, showcase, pivotal, intricate, realm,
 meticulous, foster, seamless, spearhead, passion, passionate, journey,
 tapestry*. Keep a word only
-if it is the word you mean. Paste the result under **v3**.
+if it is the word you mean. If there is a word or character limit, count it
+yourself in your word processor. Chatbots often report that they hit a count
+when they have not. Then reread the whole piece. If you change anything,
+reread it again from the top. You are done when you read it all the way
+through without making an edit. Paste the result under **v3**.
 
 Under v3, write two lines:
 
@@ -582,7 +607,7 @@ six [review personas](../appendix/personas.qmd).
 ```
 From the Rubric source, describe three different readers of this
 piece, as personas. For each: a role, what they already know, what
-they look for, what would make them stop reading, and one question
+they want from this piece, what would make them stop reading, and one question
 they would ask the writer. Describe them by role and what they look
 for, not by age, gender, race, or nationality. Make them differ from
 each other. Under 80 words each.
@@ -602,13 +627,18 @@ Paste:
 
 ```
 You are this reader: [paste one persona].
-Read the piece below as that person would. Say what you learned
-about the writer, the sentence you would ask about, the sentence
-that tells you least, and where you would stop reading, if anywhere.
-Do not rewrite it.
+Read the piece below as that person would. Say the two or three
+ideas you took away, and whether it gave you what you wanted from
+it. Then the sentence you would ask about, the sentence that tells
+you least, and where you would stop reading, if anywhere. Do not
+rewrite it.
 
 [paste your v3]
 ```
+
+**Compare what came across with what you meant.** If the ideas a persona
+took away are not the ones in your rubric, or it did not get what it wanted,
+that is the edit to make.
 
 **Feedback goes back to editing.** For each point you agree with, edit v3
 yourself, then run the next persona. Stop when the personas only question
