@@ -138,16 +138,13 @@ uploaded as a single SKILL.md). The chapter's excerpts are from that run.
   word search is a decision per word, not zero words.
 - **Reader-centred review (added 2026-10-21 after the morning talk).**
   The rubric's "What they want" line is the standard every review checks
-  against. Credit a student whose edits came from a persona taking away the
+  against. Credit a student whose edits came from a reader taking away the
   wrong idea, not from "sounds like AI".
-- **Step 9 persona review.** Personas generated in the project chat from the
-  Rubric, then edited by the student to match real readers. Each review runs
-  in an Unpersonalized Temporary Chat so the skill and memory are off. The
-  deliverable is the edits made because of the reviews, not the reviews
-  themselves; feedback goes back to editing (the course director's workflow
-  figure). Credit a student who rejects a persona's point and says why. The
-  read-aloud check is the stronger one: every sentence explainable without
-  looking. The book's own six review personas are the worked example.
+- **Step 9 reader check.** A real person who stands in for the reader gives a
+  one-sentence takeaway; the student compares it with the rubric and edits.
+  If no one is free, the feedback skill's "what came across" stands in. The
+  persona review was removed on 2026-10-21 because the evidence that it helps
+  is thin (small user studies only). The read-aloud check stays.
 - **Step 10 disclosure.** Names the tool and what it did at each step, and
   what the student did. "AI was used" does not meet it. The point is
   transparency, not hiding: the chapter cites the ICMJE (describe how AI was
