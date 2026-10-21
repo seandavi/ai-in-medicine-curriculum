@@ -13,6 +13,8 @@ project:
   resources:
     - robots.txt
     - images/
+    # Files students download, such as the writing-feedback skill.
+    - downloads/
   render:
     - index.qmd
     - chapters/
@@ -57,6 +59,7 @@ book:
         - chapters/core-appraisal.qmd
         - chapters/core-bias-equity.qmd
         - chapters/enrichment-rag-notebooklm.qmd
+        - chapters/enrichment-writing-voice.qmd
     - part: "Week 3 · AI and your patients"
       chapters:
         - chapters/core-patient-communication.qmd

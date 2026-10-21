@@ -95,3 +95,14 @@
 .hbar .bar.neg + .val { transform: translate(-110%, -50%); }
 .hbar.axis .track { height: 1.2em; font-size: .8em; opacity: .75; }
 .hbar.axis .track span { position: absolute; transform: translateX(-50%); }
+/* enrichment-writing-voice: how often readers named the author of a personal statement, as bars on a 0 to 100 percent track with a dashed line at 50 percent (a coin toss). Positions are percent of the track. */
+.acc-bars { max-width: 640px; margin: 1.2em auto; font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif; font-size: .9em; }
+.acc-row { display: grid; grid-template-columns: minmax(8em, 15em) 1fr; align-items: center; gap: .6em; margin: .35em 0; }
+.acc-row .lbl { text-align: right; line-height: 1.2; }
+.acc-row .track { position: relative; height: 1.8em; margin-right: 2.8em; }
+.acc-row .track::after { content: ""; position: absolute; left: 50%; top: -.2em; bottom: -.2em; border-left: 1.5px dashed currentColor; opacity: .6; }
+.acc-row .bar { position: absolute; left: 0; top: .2em; bottom: .2em; background: #4a90c2; border-radius: 2px; }
+.acc-row .val { position: absolute; top: 50%; transform: translate(.3em, -50%); white-space: nowrap; font-weight: 600; }
+.acc-row.axis .track { height: 1.2em; font-size: .8em; opacity: .75; }
+.acc-row.axis .track::after { content: none; }
+.acc-row.axis .track span { position: absolute; transform: translateX(-50%); white-space: nowrap; }

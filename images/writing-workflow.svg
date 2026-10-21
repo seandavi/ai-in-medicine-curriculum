@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" font-family="Source Sans Pro, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">How I write with AI</title>
+<desc id="d">Flowchart. Is there a rubric? If yes, AI interviews you for the details; if no, set a rough scope in an AI chat. Then research, then summarize and refine, until the ideas are clear. Then draft, perhaps in sections; edit with you and the AI on the same file; fine-tune the format; AI review, often with personas, whose feedback goes back to editing; and last, write the section on how AI was used. Boxes are coloured by who leads: mostly you, together, or mostly AI.</desc>
+<defs><marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#173f45"/></marker></defs>
+<rect width="1600" height="760" fill="#ffffff"/>
+<polygon points="40,130.0 132,61.0 224,130.0 132,199.0" fill="#ffffff" stroke="#173f45" stroke-width="3"/>
+<text x="132" y="126.0" text-anchor="middle" font-size="22" font-weight="700" fill="#173f45">Rubric</text>
+<text x="132" y="152.0" text-anchor="middle" font-size="22" font-weight="700" fill="#173f45">given?</text>
+<rect x="300" y="20" width="250" height="95" rx="14" fill="#dfe9ec" stroke="#173f45" stroke-width="2"/>
+<text x="425.0" y="61.5" text-anchor="middle" font-size="24" font-weight="600" fill="#1d2b2f">AI interviews you</text>
+<text x="425.0" y="89.5" text-anchor="middle" font-size="24" font-weight="600" fill="#1d2b2f">for the details</text>
+<rect x="300" y="145" width="250" height="95" rx="14" fill="#c77d2e" stroke="#173f45" stroke-width="2"/>
+<text x="425.0" y="186.5" text-anchor="middle" font-size="24" font-weight="600" fill="#ffffff">Rough scope</text>
+<text x="425.0" y="214.5" text-anchor="middle" font-size="24" font-weight="600" fill="#ffffff">in an AI chat</text>
+<text x="216" y="62" font-size="20" font-style="italic" font-weight="700" fill="#173f45">yes</text>
+<text x="224" y="220" font-size="20" font-style="italic" font-weight="700" fill="#173f45">no</text>
+<path d="M224,130.0 L270,130.0 L270,68 L296,68" fill="none" stroke="#173f45" stroke-width="3" marker-end="url(#head)"/>
+<path d="M270,130.0 L270,192 L296,192" fill="none" stroke="#173f45" stroke-width="3" marker-end="url(#head)"/>
+<rect x="640" y="70" width="240" height="120" rx="14" fill="#dfe9ec" stroke="#173f45" stroke-width="2"/>
+<text x="654" y="96" font-size="18" font-weight="700" fill="#1d2b2f" opacity="0.75">1</text>
+<text x="760.0" y="138.0" text-anchor="middle" font-size="24" font-weight="600" fill="#1d2b2f">Research</text>
+<path d="M550,68 L590,68 L590,130.0 L636,130.0" fill="none" stroke="#173f45" stroke-width="3" marker-end="url(#head)"/>
+<path d="M550,192 L590,192 L590,130.0" fill="none" stroke="#173f45" stroke-width="3" marker-end="url(#head)"/>
+<rect x="940" y="70" width="260" height="120" rx="14" fill="#c77d2e" stroke="#173f45" stroke-width="2"/>
+<text x="954" y="96" font-size="18" font-weight="700" fill="#ffffff" opacity="0.75">2</text>
+<text x="1070.0" y="124.0" text-anchor="middle" font-size="24" font-weight="600" fill="#ffffff">Summarize</text>
+<text x="1070.0" y="152.0" text-anchor="middle" font-size="24" font-weight="600" fill="#ffffff">and refine</text>
+<line x1="880" y1="130.0" x2="936" y2="130.0" stroke="#173f45" stroke-width="3" marker-end="url(#head)"/>
+<rect x="1260" y="70" width="300" height="120" rx="14" fill="#173f45" stroke="#173f45" stroke-width="2"/>
+<text x="1274" y="96" font-size="18" font-weight="700" fill="#ffffff" opacity="0.75">3 · checkpoint</text>
+<text x="1410.0" y="124.0" text-anchor="middle" font-size="24" font-weight="600" fill="#ffffff">The ideas</text>
+<text x="1410.0" y="152.0" text-anchor="middle" font-size="24" font-weight="600" fill="#ffffff">are clear</text>
+<line x1="1200" y1="130.0" x2="1256" y2="130.0" stroke="#173f45" stroke-width="3" marker-end="url(#head)"/>
+<path d="M1410,190 L1410,230 L1070,230 L1070,194" fill="none" stroke="#173f45" stroke-width="3" marker-end="url(#head)"/>
+<text x="1180.0" y="256" text-anchor="middle" font-size="20" font-style="italic" fill="#173f45">not yet: back to refine</text>
+<rect x="40.0" y="420" width="276.8" height="120" rx="14" fill="#c77d2e" stroke="#173f45" stroke-width="2"/>
+<text x="54.0" y="446" font-size="18" font-weight="700" fill="#ffffff" opacity="0.75">4</text>
+<text x="178.4" y="474.0" text-anchor="middle" font-size="24" font-weight="600" fill="#ffffff">Draft,</text>
+<text x="178.4" y="502.0" text-anchor="middle" font-size="24" font-weight="600" fill="#ffffff">perhaps in sections</text>
+<rect x="350.8" y="420" width="276.8" height="120" rx="14" fill="#c77d2e" stroke="#173f45" stroke-width="2"/>
+<text x="364.8" y="446" font-size="18" font-weight="700" fill="#ffffff" opacity="0.75">5</text>
+<text x="489.20000000000005" y="474.0" text-anchor="middle" font-size="24" font-weight="600" fill="#ffffff">Edit: you and AI</text>
+<text x="489.20000000000005" y="502.0" text-anchor="middle" font-size="24" font-weight="600" fill="#ffffff">on the same file</text>
+<rect x="661.6" y="420" width="276.8" height="120" rx="14" fill="#c77d2e" stroke="#173f45" stroke-width="2"/>
+<text x="675.6" y="446" font-size="18" font-weight="700" fill="#ffffff" opacity="0.75">6</text>
+<text x="800.0" y="474.0" text-anchor="middle" font-size="24" font-weight="600" fill="#ffffff">Fine-tune</text>
+<text x="800.0" y="502.0" text-anchor="middle" font-size="24" font-weight="600" fill="#ffffff">display and format</text>
+<rect x="972.4000000000001" y="420" width="276.8" height="120" rx="14" fill="#dfe9ec" stroke="#173f45" stroke-width="2"/>
+<text x="986.4000000000001" y="446" font-size="18" font-weight="700" fill="#1d2b2f" opacity="0.75">7</text>
+<text x="1110.8000000000002" y="474.0" text-anchor="middle" font-size="24" font-weight="600" fill="#1d2b2f">AI review,</text>
+<text x="1110.8000000000002" y="502.0" text-anchor="middle" font-size="24" font-weight="600" fill="#1d2b2f">often with personas</text>
+<rect x="1283.2" y="420" width="276.8" height="120" rx="14" fill="#173f45" stroke="#173f45" stroke-width="2"/>
+<text x="1297.2" y="446" font-size="18" font-weight="700" fill="#ffffff" opacity="0.75">8</text>
+<text x="1421.6000000000001" y="474.0" text-anchor="middle" font-size="24" font-weight="600" fill="#ffffff">Write how</text>
+<text x="1421.6000000000001" y="502.0" text-anchor="middle" font-size="24" font-weight="600" fill="#ffffff">AI was used</text>
+<line x1="316.8" y1="480.0" x2="346.8" y2="480.0" stroke="#173f45" stroke-width="3" marker-end="url(#head)"/>
+<line x1="627.6" y1="480.0" x2="657.6" y2="480.0" stroke="#173f45" stroke-width="3" marker-end="url(#head)"/>
+<line x1="938.4000000000001" y1="480.0" x2="968.4000000000001" y2="480.0" stroke="#173f45" stroke-width="3" marker-end="url(#head)"/>
+<line x1="1249.2" y1="480.0" x2="1279.2" y2="480.0" stroke="#173f45" stroke-width="3" marker-end="url(#head)"/>
+<path d="M1490,190 L1490,310 L178.4,310 L178.4,416" fill="none" stroke="#173f45" stroke-width="3" marker-end="url(#head)"/>
+<path d="M1110.8000000000002,540 L1110.8000000000002,576 L489.20000000000005,576 L489.20000000000005,544" fill="none" stroke="#173f45" stroke-width="3" marker-end="url(#head)"/>
+<text x="800.0" y="602" text-anchor="middle" font-size="20" font-style="italic" fill="#173f45">persona feedback: back to editing</text>
+<text x="40" y="736" font-size="22" font-weight="700" fill="#1d2b2f">Who leads:</text>
+<rect x="175" y="714" width="34" height="28" rx="6" fill="#173f45" stroke="#173f45" stroke-width="2"/>
+<text x="219" y="736" font-size="22" fill="#1d2b2f">mostly you</text>
+<rect x="385" y="714" width="34" height="28" rx="6" fill="#c77d2e" stroke="#173f45" stroke-width="2"/>
+<text x="429" y="736" font-size="22" fill="#1d2b2f">together</text>
+<rect x="595" y="714" width="34" height="28" rx="6" fill="#dfe9ec" stroke="#173f45" stroke-width="2"/>
+<text x="639" y="736" font-size="22" fill="#1d2b2f">mostly AI</text>
+<text x="1560" y="736" text-anchor="end" font-size="20" fill="#1d2b2f" opacity="0.7">The ideas are yours before any drafting starts.</text>
+</svg>
