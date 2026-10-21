@@ -10,11 +10,11 @@ subtitle: "About 75 minutes, plus an optional stretch"
   clear first, use the tool for the help the piece's rules allow, and say
   exactly how you used it.
 - **What you do.** Follow one worked example in ChatGPT Edu, step by step: a
-  project for the piece, a feedback skill, an interview, your own draft,
+  setup block in one chat, a feedback skill, an interview, your own draft,
   feedback, a pushback, your revision, a reader check, and a disclosure. Then
   do the same with a piece of your own.
-- **What you keep.** A finished piece with every version saved, a writing
-  project you can reuse, the feedback skill, and a disclosure that says what
+- **What you keep.** A finished piece with every version saved, a setup
+  block you can reuse, the feedback skill, and a disclosure that says what
   AI did at each step.
 - **Short on time?** Read "11:40 p.m., the last experience entry", then do
   Steps 1 to 7 of the Do with your own piece (45 minutes).
@@ -26,8 +26,8 @@ subtitle: "About 75 minutes, plus an optional stretch"
 ::: {.callout-note title="What you'll learn"}
 By the end of this chapter you will be able to:
 
-1. Set up a ChatGPT Edu project for one piece of writing, with instructions
-   and your rubric as a source.
+1. Set up one ChatGPT Edu chat for a piece of writing, with your rules and
+   your rubric.
 2. Add a skill to your account and use it to get feedback on a draft you
    wrote, without a rewrite.
 3. Push back on the feedback and tell a reasoned change of mind from giving
@@ -53,10 +53,9 @@ session.
 
 ::: {.callout-note title="On Copilot or a personal ChatGPT account?"}
 The screens below are ChatGPT Edu at CU Anschutz, checked on 21 October 2026.
-Other accounts may not have **Projects** or **Skills**. Without them, do every
-step in one chat, paste your rubric at the top, and paste the text of the
-feedback skill (Step 3) before your draft. The method is the same; you just
-repeat the setup each time.
+Other accounts may not have **Skills**. Without them, paste the text of the
+feedback skill (Step 3) into your setup block. Everything else works the same
+in any chat.
 :::
 
 ## 11:40 p.m., the last experience entry
@@ -240,20 +239,20 @@ listed here so you know where each thing lives.
 | Step | Where in ChatGPT Edu | Its job |
 |---|---|---|
 | 1. Write your rubric | Your own document | Say what "done" means before you open the chatbot |
-| 2. Make a writing project | **Projects**, with **Instructions** and **Sources** | Hold everything about this one piece: the rules for the chatbot, your rubric, your old writing |
+| 2. Set up one chat | **New chat**, **Medium** thinking, a pasted setup block | Hold everything about this one piece: the rules for the chatbot and your rubric |
 | 3. Add the feedback skill | **Customize > Skills** | A way of working you reuse on any piece: feedback first, a rewrite only when you ask |
-| 4. Interview | A chat in the project, **Medium** thinking | Bring back the details only you know |
-| 5. Write v0 | Your own document | The core, in your words |
-| 6. Feedback (v1) | The same chat | Find what is unclear, missing, generic, or wrong |
+| 4. Interview | The same chat | Bring back the details only you know |
+| 5. Write v0 | Your own Word file | The core, in your words |
+| 6. Feedback (v1) | The same chat, your file attached | Find what is unclear, missing, generic, or wrong |
 | 7. Push back | The same chat | Check that the feedback holds up |
 | 8. Revise (v2) and edit (v3) | Your own document | Every change is yours; note what you changed |
 | 9. Reader check | A real person who stands in for your reader, or the skill again | What actually came across, compared with your rubric; feedback goes back to editing |
 | 10. Disclose | Your own document | Say exactly what AI did at each step, and what you did |
 
-: Where each step lives. The project holds the piece, the skill holds the method, and the prompt holds today's request. {#tbl-method}
+: Where each step lives. The setup block holds the piece, the skill holds the method, and the prompt holds today's request. {#tbl-method}
 
 The rule in the caption answers a question students ask: where do
-instructions go? Facts and rules about *this piece* go in the project. A
+instructions go? Facts and rules about *this piece* go in the setup block. A
 method you will use on *every piece* goes in a skill. What you want *right
 now* goes in the prompt.
 
@@ -281,9 +280,11 @@ information](../course/patient-information.qmd). Your CV and unpublished
 results are not patient information, but they are yours: use ChatGPT Edu,
 not a personal account.
 
-Open a blank document now and type four headings: **v0**, **v1 feedback**,
-**v2**, **v3**. You will paste each version under its heading, so you can
-compare them at the end.
+Keep every version as its own file: `entry-v0.docx`, `entry-v2.docx`,
+`entry-v3.docx`, plus the feedback (v1) pasted into a notes file. You can
+compare any two in Word with **Review > Compare**. If you ask ChatGPT to edit
+a file, it gives you back a new file to download; save that as the next
+version too.
 
 ### Step 1. Write your rubric (5 minutes)
 
@@ -329,71 +330,54 @@ Rules: AAMC: AI is acceptable for brainstorming, proofreading, or
 The **Done when** line matters most. It is what tells you, and the chatbot,
 when to stop.
 
-### Step 2. Make a project for the piece (5 minutes)
+### Step 2. Start one chat, and set it up (5 minutes)
 
-A **project** keeps the chats, files, and instructions for one piece of work
-together. You set it up once; every chat in it starts with your rules and
-your rubric already loaded.
-
-**Create it.**
+Everything for this piece happens in **one chat**, so ChatGPT keeps your rules
+and your rubric in view the whole time.
 
 1. Go to [chatgpt.com](https://chatgpt.com). Check that the bottom left says
    **CU - Anschutz (Edu)**.
-2. In the left sidebar, point at **Projects** and click the **+** next to it.
-3. Name the project for the piece: `Free clinic entry`.
-4. Click **Default memory** and change it to **Project-only memory**.
-5. Click **Create project**.
-
-You should see the project page: the name at the top, a box that says *New
-chat in Free clinic entry*, and two tabs, **Chats** and **Sources**.
-
-::: {.callout-note title="Why project-only memory?"}
-With **Default memory**, the project can use what ChatGPT remembers from your
-other chats, and the other way round. For a piece of writing, that mixes in
-things you did not choose. **Project-only memory** keeps this project to
-itself. It also turns off the project's access to your ChatGPT **Space** (where
-ChatGPT keeps files you have uploaded), so only what you add below can be
-used.
-:::
-
-**Add instructions.** Click **⋯** at the top right of the project page, then
-**Project settings**. Paste this into **Instructions** and click **Save**:
+2. Click **New chat**. Next to the box where you type, it says **Instant** or
+   **Medium**. Click it and move the **Thinking effort** slider to
+   **Medium**. Instant is fast but less careful.
+3. Paste this setup block, with your rubric from Step 1 at the bottom, and
+   send it:
 
 ```
-This project is for one piece of my writing. The ideas and the
-details are mine. Help me by interviewing me, giving feedback,
-checking spelling and grammar, and drafting or rewriting when I ask,
-using only the ideas and details I have given you. Mark anything you
-add with [ADDED]. Judge every version against the source called
-Rubric. Answer in plain English, briefly.
-```
+For this chat, I'm working on one piece of my writing. The ideas
+and the details are mine. Help me by interviewing me, giving
+feedback, checking spelling and grammar, and drafting or rewriting
+when I ask, using only the ideas and details I have given you. Mark
+anything you add with [ADDED]. Judge every version against my rubric
+below. Answer in plain English, briefly. Reply "Ready" for now.
 
-These instructions let ChatGPT draft from your ideas when you ask. For the
-worked example you write v0 yourself anyway, because the AAMC wants the
-final residency statement to be your own work.
+My rubric:
+[paste your rubric from Step 1]
+```
 
 If you have a style you want kept, add a line for it, for example: `My
 style: I use contractions and dashes. Keep them.` Students in this course
 found a line like this kept their style in light edits.
 
-**Add your rubric as a source.** Click the **Sources** tab, then **Add
-sources**, then **Paste text**. Type `Rubric` as the title, paste your
-rubric from Step 1 as the text, and click **Save**. You should see
-**Rubric.txt** in the list.
+You should see a short "Ready". The setup lets ChatGPT draft from your ideas
+when you ask. For the worked example you write v0 yourself anyway, because
+the AAMC wants the final residency statement to be your own work.
 
-::: {.callout-tip title="Instructions or sources?"}
-**Instructions** tell ChatGPT how to behave in every chat in the project.
-**Sources** are material it can look things up in when they seem relevant.
-Put rules in instructions and reference material in sources. Your rubric is
-both, so the instructions name it.
+::: {.callout-tip title="Coming back to this piece later? Use a project"}
+A chat can get long and start forgetting its early parts. If you will work on
+a piece over several days, a **project** keeps the setup for you: in the left
+sidebar, click the **+** next to **Projects**, choose **Project-only memory**
+(so your other chats stay out), paste the setup block into **⋯ > Project
+settings > Instructions**, and start each session with a new chat inside it.
+For one sitting, a plain chat is simpler.
 :::
 
 ### Step 3. Add the feedback skill (5 minutes)
 
 A **skill** is a saved set of instructions for one kind of task. ChatGPT
 reads each skill's short description and uses the skill by itself when your
-request matches it. Unlike project instructions, a skill works in every
-project and every chat.
+request matches it. Unlike a setup block, a skill works in every chat
+without pasting.
 
 This course's skill gives feedback on a draft first. It rewrites only when you ask, and only from your ideas. It
 reviews the draft against five points (Accurate, Aligned, Appropriate, Tone,
@@ -423,8 +407,8 @@ it.
 
 ::: {.callout-note collapse="false" title="No Skills in your account, or want to make your own?"}
 **No Skills?** Open `SKILL.md`, copy everything below the second `---` line,
-and paste it into your project's **Instructions** under what is already
-there. It will work in this project only.
+and paste it into your chat after the setup block. It will work in that chat
+only.
 
 **Make your own.** On the **Skills** page, **Add** also offers **Create with
 editor** (a name, a description of when to use it, and the instructions) and
@@ -435,15 +419,10 @@ than this one. For manuscripts and grants, see scriptorium in Go deeper.
 
 ### Step 4. Let ChatGPT interview you (10 minutes)
 
-In the left sidebar, click **Free clinic entry**, then click in the box that
-says *New chat in Free clinic entry*. Next to it, it says **Instant**. Click it and move the **Thinking effort** slider to
-**Medium**. New chats in a project start at Instant, which is fast but less
-careful.
-
-Paste this:
+In the same chat, paste this:
 
 ```
-I'm writing the piece described in the Rubric source. Don't write
+I'm writing the piece described in my rubric. Don't write
 it yet. Interview me first: ask me one question at a time,
 five in all, that help me remember specific details: what I saw,
 what I did, what changed, and what I'd do differently. Wait for my
@@ -463,14 +442,13 @@ else. When we ran this, the first question was:
 </div>
 :::
 
-Notice that it found the free clinic in your **Rubric** source without being
-told. Answer in plain, quick sentences; typos are fine. Or click **Dictate**,
+Notice that it found the free clinic in your rubric without being told. Answer in plain, quick sentences; typos are fine. Or click **Dictate**,
 the microphone next to the box, and just talk. When a question brings
 back a detail you had forgotten, copy it into your document.
 
 ### Step 5. Write v0 yourself (10 minutes)
 
-Look away from the chat. In your document, under **v0**, write the core of
+Look away from the chat. In Word (or any document), write the core of
 the piece: 100 to 250 words, in the first person, with at least two details
 from the interview. Aim for true and specific, not polished.
 
@@ -492,12 +470,11 @@ It is good, and it is not done. Keep reading before you judge it.
 
 ### Step 6. Ask for feedback: v1 (5 minutes)
 
-Back in the same chat, paste your v0 after one line:
+Save it as a file, for example `entry-v0.docx`. Back in the same chat, click
+**+ > Add files** to attach it, and send it with one line:
 
 ```
-Here is my first draft (v0). Can you give me feedback on it?
-
-[paste your v0]
+Here is my first draft (v0), attached. Can you give me feedback on it?
 ```
 
 You do not have to name the skill. Asking for feedback on your own draft is
@@ -524,7 +501,7 @@ Here is part of what came back for the worked example (shortened):
 Read this as a list of places to look, not a list of orders. Here it found
 two real problems: the last sentence claims more than the story shows, and
 "anything" is bigger than what you know. It also told you which line to
-keep. Paste the feedback under **v1 feedback**.
+keep. Paste the feedback into your notes file as **v1 feedback**.
 
 ### Step 7. Push back once (5 minutes)
 
@@ -559,7 +536,7 @@ pressure, trust its praise less from now on.
 
 ### Step 8. Revise, then make your own final edit: v2 and v3 (10 minutes)
 
-**v2: revise yourself.** In your document, rewrite v0 under **v2**. Take the
+**v2: revise yourself.** Save a copy of v0 as `entry-v2.docx` and revise it. Take the
 points you agree with. Ignore the ones that would make it sound less like you.
 Do not paste the chatbot's wording. The worked example's v2 keeps the boring
 job, fixes "anything", and answers the interview question instead of claiming
@@ -585,9 +562,9 @@ if it is the word you mean. If there is a word or character limit, count it
 yourself in your word processor. Chatbots often report that they hit a count
 when they have not. Then reread the whole piece. If you change anything,
 reread it again from the top. You are done when you read it all the way
-through without making an edit. Paste the result under **v3**.
+through without making an edit. Save it as `entry-v3.docx`.
 
-Under v3, write two lines:
+In your notes file, write two lines:
 
 ```
 What I changed from v0, and why: ____________________________
@@ -615,7 +592,7 @@ No patient information goes to them either. If what they learned is not
 the one thing in your rubric, that is the edit to make. If they would ask
 about a sentence you cannot explain, fix that sentence.
 
-**If no one is free,** paste v3 back into your project chat and ask for
+**If no one is free,** attach v3 in the same chat and ask for
 feedback again (Step 6). The skill starts with what came across. Compare
 that with your rubric's "What they want" line.
 
@@ -651,7 +628,7 @@ chapter and who checked it.
 
 Go back to Step 1 with a piece you need: a thank-you email after an
 interview, an abstract, a scholarship paragraph, or one of your own
-experience entries. Make a new project for it (Step 2). The skill is already
+experience entries. Start a new chat with its own setup block (Step 2). The skill is already
 installed, so skip Step 3.
 
 ### When the rules allow an AI draft
@@ -661,8 +638,8 @@ a chatbot to write a first draft. This is the short version; the stretch
 exercise below has the full one, with research. Keep Steps 1 to 4, replace Step 5, and keep
 the rest.
 
-1. **Your project already allows this.** The Step 2 instructions let ChatGPT
-   draft when you ask, from your ideas only.
+1. **Your setup block already allows this.** It lets ChatGPT draft when you
+   ask, from your ideas only.
 2. **Get the ideas clear.** After the interview in Step 4, write, in your own
    words, the three to five points the piece must make. These are the ideas;
    they stay yours.
@@ -670,7 +647,7 @@ the rest.
 
    ```
    Here are the points this piece must make: [your points].
-   Build a detailed outline for the piece in the Rubric source.
+   Build a detailed outline for the piece in my rubric.
    Search for background that frames these points, with links.
    Do not add points I did not give you; list any you think are
    missing separately, with your reason.
@@ -696,7 +673,7 @@ the rest.
 
 - **Your finished piece**, with v0 to v3 and your two lines on what you
   changed.
-- **A writing project** with your rubric, ready for the next draft.
+- **Your setup block** with your rubric, ready for the next draft.
 - **The feedback skill**, in every chat from now on.
 - **Your disclosure**, specific to this piece.
 - **One sentence for question 2 of your [learning
@@ -724,15 +701,15 @@ than one sitting.
 
 No patient information. Any example in your piece is made up.
 
-**Set up.** Make a new project for the piece (Step 2), with project-only
-memory. This time the chatbot may draft, so use these instructions:
+**Set up.** Over two hours or more, a project helps: make one with
+**Project-only memory** (the tip in Step 2) and paste this into its
+**Instructions**. In one sitting, paste it at the top of a new chat instead.
 
 ```
-This project is for one piece of my writing. I decide the ideas.
-You may interview me, research, outline, and draft from my points
-when I ask. Mark any claim I did not give you with [ADDED]. Judge
-every version against the source called Rubric. Answer in plain
-English, briefly.
+This is one piece of my writing. I decide the ideas. You may
+interview me, research, outline, and draft from my points when I
+ask. Mark any claim I did not give you with [ADDED]. Judge every
+version against my rubric. Answer in plain English, briefly.
 ```
 
 ### Stage 1. Scope it
@@ -764,8 +741,8 @@ open or check.
 For a bigger question, **Deep research** is also in the **+** menu.
 
 **Check:** open every link you plan to keep. Delete any source that does
-not say what the chatbot said it says. Add the ones you keep to **Sources**,
-as a summary you wrote or as the file itself.
+not say what the chatbot said it says. Keep a list of the ones you keep, each
+with a summary in your own words, and paste that list into the chat.
 
 ### Stage 3. Get the ideas clear
 
@@ -793,8 +770,8 @@ point. Do not draft yet.
 **Goal:** a first draft, v0, built from your points.
 
 ```
-Draft [the first section] from my points and the sources in this
-project. Use only my points. Mark any claim I did not give you with
+Draft [the first section] from my points and the sources I
+pasted. Use only my points. Mark any claim I did not give you with
 [ADDED].
 ```
 
@@ -863,7 +840,7 @@ you ask for it.
    reviewers score, and what the reader wants from it.
 4. Click **Create**.
 
-**Check:** in a project chat, ask for feedback on an abstract. Does your skill
+**Check:** in a new chat, ask for feedback on an abstract. Does your skill
 run? If the general feedback skill answers instead, say `Use the
 abstract-feedback skill.` Does it keep to your rules? Change the instructions
 and try again. A skill you write is a set of instructions under your name,
@@ -883,7 +860,7 @@ Score yourself against this before moving on.
 
 | You have | Meets | Falls short |
 |---|---|---|
-| A writing project (objective 1) | Project-only memory, your instructions, and your rubric as a source | One long chat with no rubric |
+| A set-up chat (objective 1) | Medium thinking and a setup block with your rules and your rubric | A chat with no rubric |
 | Feedback on your own draft (objective 2) | A v0 you wrote, and feedback that quotes your words and does not rewrite them | A chatbot rewrite, lightly edited |
 | A pushback test (objective 3) | You disagreed once without a reason and once with one, and you can say how the feedback changed each time | No pushback, or a change of mind you accepted without asking why |
 | Versions and reader check (objective 4) | v0 to v3 saved; one reader's one-sentence takeaway compared with your rubric, and the edits it led to; each sentence read aloud | Only the final version, or no one read it |
@@ -903,7 +880,7 @@ without looking.
 
 Second, name the next piece of writing you will do with a chatbot. Are the
 ideas clear yet? What do its rules allow? Which steps will you keep: the
-rubric, the project, the interview, writing v0 yourself or an AI draft from
+rubric, the setup block, the interview, writing v0 yourself or an AI draft from
 your outline, the feedback skill, the pushback, the checks, and the
 disclosure?
 
