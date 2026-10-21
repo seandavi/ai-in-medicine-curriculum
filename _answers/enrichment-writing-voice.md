@@ -136,11 +136,14 @@ uploaded as a single SKILL.md). The chapter's excerpts are from that run.
 - **Step 8 v2 and v3.** Every change typed by the student; the two lines on
   what changed and where they overruled the chatbot are the deliverable. The
   word search is a decision per word, not zero words.
-- **Step 9 reader check.** Run in an Unpersonalized Temporary Chat so the
-  skill and memory are off. The finding is whether what the "reader" learned
-  matches the one thing in the rubric. Credit a student who rereads a named
-  sentence and keeps it because it is true and theirs. The read-aloud check
-  is the stronger one: every sentence explainable without looking.
+- **Step 9 persona review.** Personas generated in the project chat from the
+  Rubric, then edited by the student to match real readers. Each review runs
+  in an Unpersonalized Temporary Chat so the skill and memory are off. The
+  deliverable is the edits made because of the reviews, not the reviews
+  themselves; feedback goes back to editing (the course director's workflow
+  figure). Credit a student who rejects a persona's point and says why. The
+  read-aloud check is the stronger one: every sentence explainable without
+  looking. The book's own six review personas are the worked example.
 - **Step 10 disclosure.** Names the tool and what it did at each step, and
   what the student did. "AI was used" does not meet it. The point is
   transparency, not hiding: the chapter cites the ICMJE (describe how AI was

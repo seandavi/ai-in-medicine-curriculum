@@ -11,7 +11,7 @@ subtitle: "About 75 minutes"
   exactly how you used it.
 - **What you do.** Follow one worked example in ChatGPT Edu, step by step: a
   project for the piece, a feedback skill, an interview, your own draft,
-  feedback, a pushback, your revision, a reader check, and a disclosure. Then
+  feedback, a pushback, your revision, a persona review, and a disclosure. Then
   do the same with a piece of your own.
 - **What you keep.** A finished piece with every version saved, a writing
   project you can reuse, the feedback skill, and a disclosure that says what
@@ -29,7 +29,7 @@ By the end of this chapter you will be able to:
    wrote, without a rewrite.
 3. Push back on the feedback and tell a reasoned change of mind from giving
    in.
-4. Keep every version, read the last one as your reader would, and write a
+4. Keep every version, review the last one with reader personas, and write a
    disclosure that says exactly what AI did.
 5. Explain why the goal is writing that is right for its reader and for you,
    not writing that hides AI use; what residency applications and medical
@@ -45,7 +45,7 @@ real piece of writing you need in the next month that is not about a patient,
 or none: the worked example works on its own. A blank document for your
 versions. This chapter goes with week 2's Wednesday talk on professional
 writing and the optional hands-on session that afternoon. About 15 minutes of
-reading and about 60 of doing. Doing it again with your own piece is a second
+reading and about 65 of doing. Doing it again with your own piece is a second
 session.
 
 ::: {.callout-note title="On Copilot or a personal ChatGPT account?"}
@@ -232,7 +232,7 @@ listed here so you know where each thing lives.
 | 6. Feedback (v1) | The same chat | Find what is unclear, missing, generic, or wrong |
 | 7. Push back | The same chat | Check that the feedback holds up |
 | 8. Revise (v2) and edit (v3) | Your own document | Every change is yours; note what you changed |
-| 9. Reader check | **Temporary Chat**, **Unpersonalized** | A first reading from a chat that knows nothing about you |
+| 9. Persona review | Personas from the project chat; reviews in an **Unpersonalized Temporary Chat** | Readers you describe find what you cannot see; their feedback goes back to editing |
 | 10. Disclose | Your own document | Say exactly what AI did at each step, and what you did |
 
 : Where each step lives. The project holds the piece, the skill holds the method, and the prompt holds today's request. {#tbl-method}
@@ -562,35 +562,52 @@ Where the chatbot helped / where I overruled it: _____________
 Those two lines are the point of saving versions. They show you what the
 tool is good for in your writing, and what it is not.
 
-### Step 9. Read it as your reader would (5 minutes)
+### Step 9. Review it with personas, then edit (10 minutes)
 
-Two checks: one for your reader, one for you.
+A **persona** is a short, specific description of one reader: who they are,
+what they already know, what they look for, what would make them stop
+reading, and the question they would ask. You ask a chatbot to read your
+draft *as* that person. It is not the real reader, but it finds problems you
+cannot see in your own writing. This book is reviewed the same way, against
+six [review personas](../appendix/personas.qmd).
 
-**For your reader.** A first reading is more useful from a chat that knows
-nothing about you.
-
-1. Click **Temporary chat** at the top right of ChatGPT. It will not appear
-   in your history.
-2. At the top, click **Personalized** and choose **Unpersonalized**. The chat
-   will now ignore your memory, plugins (add-on tools), and custom
-   instructions, including the skill.
-3. Paste this, then your v3:
+**Make the personas.** Back in your project chat, paste:
 
 ```
-Read the piece below as [who reads it, from your rubric] would.
-In two sentences, what do you learn about the writer? Which sentence
-would you ask the writer about? Which sentence tells you the least?
+From the Rubric source, describe three different readers of this
+piece, as personas. For each: a name and role, what they already
+know, what they look for, what would make them stop reading, and one
+question they would ask the writer. Make them differ from each other.
+Under 80 words each.
+```
+
+Read them. Fix any that do not match readers you know: a program director
+you have met, a reviewer you have read. They are your readers, so you decide.
+
+**Run each review in a clean chat.** Click **Temporary chat** at the top
+right, then click **Personalized** at the top and choose **Unpersonalized**.
+The chat now ignores your memory, plugins (add-on tools), and custom
+instructions, including the feedback skill, so only the persona speaks.
+Paste:
+
+```
+You are this reader: [paste one persona].
+Read the piece below as that person would. Say what you learned
+about the writer, the sentence you would ask about, the sentence
+that tells you least, and where you would stop reading, if anywhere.
+Do not rewrite it.
 
 [paste your v3]
 ```
 
-If what it learned is not the one thing in your rubric, the piece is not done
-yet. This is a rough check, not a measurement: a chatbot is not your reader.
-Use it to find sentences worth another look.
+**Feedback goes back to editing.** For each point you agree with, edit v3
+yourself, then run the next persona. Stop when the personas only raise
+points you have decided to keep. A persona is a rough check, not a
+measurement; it only finds sentences worth another look.
 
-**For you.** Read v3 aloud, one sentence at a time. For each one, ask: could
-I explain this to an interviewer without looking? Is it true? Would I say it
-this way? Change any sentence that fails.
+**Last, your own check.** Read v3 aloud, one sentence at a time. Could you
+explain each one to an interviewer without looking? Is it true? Would you
+say it this way?
 
 ### Step 10. Say exactly how you used AI (5 minutes)
 
@@ -665,7 +682,7 @@ Score yourself against this before moving on.
 | A writing project (objective 1) | Project-only memory, your instructions, and your rubric as a source | One long chat with no rubric |
 | Feedback on your own draft (objective 2) | A v0 you wrote, and feedback that quotes your words and does not rewrite them | A chatbot rewrite, lightly edited |
 | A pushback test (objective 3) | You disagreed once without a reason and once with one, and you can say how the feedback changed each time | No pushback, or a change of mind you accepted without asking why |
-| Versions, checks, and disclosure (objective 4) | v0 to v3 saved, the reader check run in an Unpersonalized Temporary Chat, each sentence read aloud, two lines on what you changed, and a disclosure that names the tool and what it did at each step | Only the final version, or "AI was used" |
+| Versions, checks, and disclosure (objective 4) | v0 to v3 saved, at least two persona reviews run in an Unpersonalized Temporary Chat with the agreed points edited in, each sentence read aloud, two lines on what you changed, and a disclosure that names the tool and what it did at each step | Only the final version, or "AI was used" |
 | The reasons and the rules (objective 5) | One sentence on why the goal is a piece that is right for its reader and for you, not one that hides AI use; what the AAMC allows and what the ICMJE asks; why a detector score is not proof | "So no one can tell", or "AI is not allowed" |
 
 ## What this changes for you
