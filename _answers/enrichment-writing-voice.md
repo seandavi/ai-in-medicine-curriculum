@@ -136,6 +136,10 @@ uploaded as a single SKILL.md). The chapter's excerpts are from that run.
 - **Step 8 v2 and v3.** Every change typed by the student; the two lines on
   what changed and where they overruled the chatbot are the deliverable. The
   word search is a decision per word, not zero words.
+- **Reader-centred review (added 2026-10-21 after the morning talk).**
+  The rubric's "What they want" line is the standard every review checks
+  against. Credit a student whose edits came from a persona taking away the
+  wrong idea, not from "sounds like AI".
 - **Step 9 persona review.** Personas generated in the project chat from the
   Rubric, then edited by the student to match real readers. Each review runs
   in an Unpersonalized Temporary Chat so the skill and memory are off. The
