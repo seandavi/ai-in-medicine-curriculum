@@ -19,8 +19,8 @@ subtitle: "About 75 minutes, plus an optional stretch"
 - **Short on time?** Read "11:40 p.m., the last experience entry", then do
   Steps 1 to 7 of the Do with your own piece (45 minutes).
 - **Want more?** The optional stretch runs the whole workflow on a vaguer
-  problem, with research, an AI draft, reviews, and a skill you build
-  yourself (about 90 minutes).
+  problem, with research, an AI draft, and reviews, and, if you like, a skill
+  you build yourself (about two hours).
 :::
 
 ::: {.callout-note title="What you'll learn"}
@@ -703,10 +703,11 @@ the rest.
 
 Most real writing starts vaguer than an application entry. Someone asks for
 "a proposal" or "a handout", and you do not yet know what you think. This
-exercise runs the whole workflow in @fig-workflow, including an AI draft,
-because the rules for these pieces allow one. It is guided, not step by
+exercise runs the whole workflow in @fig-workflow, including an AI draft.
+Pieces like these often allow one, but ask whoever asked for the piece, and
+put the answer on your rubric's Rules line. It is guided, not step by
 step: each stage has a goal, a prompt to start from, and a check before you
-move on. How you get there is up to you. Plan on about 90 minutes, over more
+move on. How you get there is up to you. Plan on about two hours, over more
 than one sitting.
 
 **Pick one problem.**
@@ -730,7 +731,7 @@ every version against the source called Rubric. Answer in plain
 English, briefly.
 ```
 
-### 1. Scope it
+### Stage 1. Scope it
 
 **Goal:** a rubric you wrote yourself. Nobody gave you one, so you make it.
 
@@ -741,12 +742,13 @@ time, to scope it: who reads it, what they need to decide or do,
 length and format, limits, and what success looks like.
 ```
 
-**Check:** write the rubric from Step 1 yourself, using your answers, and add
-it as the **Rubric** source.
+**Check:** write the rubric yourself from your answers, using the template in
+Step 1 of the Do. Change "about me" to "from this piece". Add it as the
+**Rubric** source.
 
-### 2. Research
+### Stage 2. Research
 
-**Goal:** four to eight sources you have opened and read.
+**Goal:** four to six sources you have opened and read.
 
 ```
 Find [what you need: policies, guidance, evidence, teaching
@@ -755,14 +757,13 @@ date, and one sentence on what it says. Mark anything you could not
 open or check.
 ```
 
-For a bigger question, try **Deep research** in the **+** menu. It takes
-longer and returns a report with sources.
+For a bigger question, **Deep research** is also in the **+** menu.
 
 **Check:** open every link you plan to keep. Delete any source that does
 not say what the chatbot said it says. Add the ones you keep to **Sources**,
-as a pasted summary or an uploaded file.
+as a summary you wrote or as the file itself.
 
-### 3. Get the ideas clear
+### Stage 3. Get the ideas clear
 
 **Goal:** three to five points in your own words, each with an answer to
 its strongest objection. This is the checkpoint in @fig-workflow.
@@ -783,7 +784,7 @@ each? Which of my points do my sources not support?
 objection without looking? If not, go back to research or change the
 point. Do not draft yet.
 
-### 4. Draft, in sections
+### Stage 4. Draft, in sections
 
 **Goal:** a first draft, v0, built from your points.
 
@@ -794,11 +795,10 @@ project. Use only my points. Mark any claim I did not give you with
 ```
 
 Draft one section at a time, and read each one before asking for the next.
-If your account has **Documents** in the **+** menu, you can keep the draft
-there, so you and ChatGPT work on the same file. Otherwise, keep it in your
-own document.
+If your account has **Documents** in the **+** menu, you can try keeping the
+draft there. Otherwise, keep it in your own document.
 
-### 5. Edit together
+### Stage 5. Edit together
 
 **Goal:** v1 and v2, where every sentence is one you would sign.
 
@@ -806,10 +806,11 @@ Edit it yourself first. Then ask for small, named changes: `Cut section 2 to
 120 words without losing [point].` or `Make this paragraph plainer for a
 third-year student.`
 
-**Check:** no **[ADDED]** tag is left unresolved. Every claim traces to a
-source you opened or to your own point.
+**Check:** no **[ADDED]** tag is left unresolved. The tag can be missed, so
+read for claims yourself. Every claim traces to a source you opened or to
+your own point.
 
-### 6. Fine-tune the format
+### Stage 6. Polish the format
 
 **Goal:** one page a busy reader can scan.
 
@@ -818,7 +819,7 @@ Suggest a one-page layout for this: headings, and a table if it
 helps. Do not change my wording.
 ```
 
-### 7. Review, then back to editing
+### Stage 7. Review, then back to editing
 
 **Goal:** a version that holds up for its readers.
 
@@ -832,7 +833,7 @@ gender, race, or nationality.
 **Check:** every point you agreed with goes back to Stage 5 and is edited
 in. Stop when the reviews only question things you chose to keep.
 
-### 8. Say how AI was used
+### Stage 8. Say how AI was used
 
 **Goal:** a short section at the end, stage by stage. For example:
 
@@ -849,20 +850,22 @@ is a good candidate for a **skill**.
 
 **Goal:** a persona-review skill of your own that runs when you ask for it.
 
-1. Go to **Customize > Skills > Add > Create with editor**. (In a chat, the
-   **+** menu also has **Template Creator**, which turns a prompt into a
-   skill.)
+1. Click the **Plugins** icon (Step 3), then **Skills > Add > Create with
+   editor**. (In a chat, the **+** menu also has **Template Creator**.)
 2. **Name:** `persona-review`. **Description:** say when to use it, for
    example: `Use when I ask for a persona review of a draft. Reviews it as
    readers described by role, and never rewrites it.`
 3. **Instructions:** start from the Step 9 prompts. Add the rules you want:
    describe readers by role, not by age, gender, race, nationality, or as
-   real people; quote the sentence each point is about; do not rewrite.
+   real people; propose the personas and wait for my OK before reviewing;
+   quote the sentence each point is about; do not rewrite.
 4. Click **Create**.
 
 **Check:** in a project chat, ask for "a persona review of my draft". Does
-your skill run? Does it keep to your rules? Change the instructions and try
-again. A skill you write is a set of instructions under your name, so read
+your skill run? If the feedback skill answers instead, say `Use the
+persona-review skill.` Does it keep to your rules? Change the instructions
+and try again. A skill runs in a normal chat, not an Unpersonalized one, so
+your project's instructions can colour its reviews. A skill you write is a set of instructions under your name, so read
 it again before you share it with anyone.
 
 ### What you keep from the stretch
