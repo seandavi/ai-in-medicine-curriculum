@@ -11,13 +11,13 @@ subtitle: "About 75 minutes, plus an optional stretch"
   exactly how you used it.
 - **What you do.** Follow one worked example in ChatGPT Edu, step by step: a
   setup block in one chat, a feedback skill, an interview, your own draft,
-  feedback, a pushback, your revision, a reader check, and a disclosure. Then
+  a feedback-and-edit loop, a final edit, a reader check, and a disclosure. Then
   do the same with a piece of your own.
 - **What you keep.** A finished piece with every version saved, a setup
   block you can reuse, the feedback skill, and a disclosure that says what
   AI did at each step.
 - **Short on time?** Read "11:40 p.m., the last experience entry", then do
-  Steps 1 to 7 of the Do with your own piece (45 minutes).
+  Steps 1 to 6 of the Do with your own piece (45 minutes).
 - **Want more?** The optional stretch runs the whole workflow on a vaguer
   problem, with research, an AI draft, and reviews, and, if you like, a skill
   you build yourself (about two hours).
@@ -28,13 +28,11 @@ By the end of this chapter you will be able to:
 
 1. Set up one ChatGPT Edu chat for a piece of writing, with your rules and
    your rubric.
-2. Add a skill to your account and use it to get feedback on a draft you
-   wrote, without a rewrite.
-3. Push back on the feedback and tell a reasoned change of mind from giving
-   in.
-4. Keep every version, check the last one with a reader, and write a
+2. Add a skill to your account and use it in a loop: feedback, an edit (by
+   you or by the AI), re-upload, until your rubric is met.
+3. Keep every version, check the last one with a reader, and write a
    disclosure that says exactly what AI did.
-5. Explain why the goal is writing that is right for its reader and for you,
+4. Explain why the goal is writing that is right for its reader and for you,
    not writing that hides AI use; what residency applications and medical
    journals ask for; and why a detector score is not proof that someone
    cheated.
@@ -243,11 +241,10 @@ listed here so you know where each thing lives.
 | 3. Add the feedback skill | **Customize > Skills** | A way of working you reuse on any piece: feedback first, a rewrite only when you ask |
 | 4. Interview | The same chat | Bring back the details only you know |
 | 5. Write v0 | Your own Word file | The core, in your words |
-| 6. Feedback (v1) | The same chat, your file attached | Find what is unclear, missing, generic, or wrong |
-| 7. Push back | The same chat | Check that the feedback holds up |
-| 8. Revise (v2) and edit (v3) | Your own document | Every change is yours; note what you changed |
-| 9. Reader check | A real person who stands in for your reader, or the skill again | What actually came across, compared with your rubric; feedback goes back to editing |
-| 10. Disclose | Your own document | Say exactly what AI did at each step, and what you did |
+| 6. The loop | The same chat, each version attached | Feedback, then an edit by you or by the AI, then re-upload, until done |
+| 7. Final edit | Your own Word file | Your hands last; note what you changed |
+| 8. Reader check | A real person who stands in for your reader, or the skill again | What actually came across, compared with your rubric; feedback goes back to editing |
+| 9. Disclose | Your own document | Say exactly what AI did at each step, and what you did |
 
 : Where each step lives. The setup block holds the piece, the skill holds the method, and the prompt holds today's request. {#tbl-method}
 
@@ -281,7 +278,7 @@ results are not patient information, but they are yours: use ChatGPT Edu,
 not a personal account.
 
 Keep every version as its own file: `entry-v0.docx`, `entry-v2.docx`,
-`entry-v3.docx`, plus the feedback (v1) pasted into a notes file. You can
+and so on, plus the feedback pasted into a notes file. You can
 compare any two in Word with **Review > Compare**. If you ask ChatGPT to edit
 a file, it gives you back a new file to download; save that as the next
 version too.
@@ -468,7 +465,7 @@ for improving health systems for every patient.
 
 It is good, and it is not done. Keep reading before you judge it.
 
-### Step 6. Ask for feedback: v1 (5 minutes)
+### Step 6. The loop: feedback, edit, re-upload (15 to 20 minutes)
 
 Save it as a file, for example `entry-v0.docx`. Back in the same chat, click
 **+ > Add files** to attach it, and send it with one line:
@@ -503,44 +500,31 @@ two real problems: the last sentence claims more than the story shows, and
 "anything" is bigger than what you know. It also told you which line to
 keep. Paste the feedback into your notes file as **v1 feedback**.
 
-### Step 7. Push back once (5 minutes)
+**Now edit, either way.**
 
-Chatbots tend to agree with you. A feedback tool that drops its point as soon
-as you object is not much use. So test it once: disagree with its strongest
-point **without a real reason**. A weak one, like "programs want to see
-passion", is fine.
+- **Ask the AI to edit.** Name the points you agree with, and ask for the
+  file back:
 
-```
-I disagree. [Quote the sentence it criticized most] is my strongest
-line. You agree it should stay, right?
-```
+  ```
+  Make these changes and give me back the edited .docx: fix
+  "anything" to what I know, and cut the last sentence. Change
+  nothing else. Mark anything you add with [ADDED].
+  ```
 
-In the worked example, we defended the "passion" sentence. You should see it
-keep its point and explain why. It may also ask you what the sentence adds.
-That happened here:
+  ChatGPT returns a new file to download (tested on 21 October 2026). Open it
+  and check every change.
+- **Or edit it yourself.** Open your file in Word and make the changes.
 
-::: {.chat-pair}
-<div class="chat-pane">
-<div class="prompt">I disagree. The last sentence is my strongest line. Programs want to see passion. You agree it should stay, right?</div>
-<div class="reply">
-<p>I agree that residency programs want to see passion. But I still recommend cutting the last sentence. [...] "It was a boring job, and I liked it." demonstrates something more distinctive: you genuinely enjoyed doing the unglamorous work needed to improve a system. [...] What does the final sentence communicate about you that you think the preceding sentences don't?</p>
-</div>
-<div class="fine">Excerpt from the same test run. The skill tells the model to change its feedback only for a reason or a fact it did not have.</div>
-</div>
-:::
+Save the result as the next version, for example `entry-v2.docx`.
 
-Now try the other way: give it a real reason or a fact it did not have, and
-see whether it changes its mind and says why. A good reviewer, human or not,
-changes its view for a reason and not for pressure. If yours gives in to
-pressure, trust its praise less from now on.
+**Then re-upload and ask again.** Attach the new file with **+ > Add files**:
+`Here is v2, attached. Can you give me feedback on it?` Keep going round:
+feedback, edit, re-upload. **Stop** when the feedback only questions things
+you have chosen to keep, and your rubric's **Done when** line is met. Take the
+points you agree with, and ignore the rest; you decide.
 
-### Step 8. Revise, then make your own final edit: v2 and v3 (10 minutes)
-
-**v2: revise yourself.** Save a copy of v0 as `entry-v2.docx` and revise it. Take the
-points you agree with. Ignore the ones that would make it sound less like you.
-Do not paste the chatbot's wording. The worked example's v2 keeps the boring
-job, fixes "anything", and answers the interview question instead of claiming
-passion:
+After one pass, the worked example's v2 kept the boring job, fixed
+"anything", and answered the interview question instead of claiming passion:
 
 ```
 For two years I ran the supply room at our student-run free clinic
@@ -553,7 +537,9 @@ the first-years to check it at the end of every shift. The strips
 have not run out since. It was a boring job, and I liked it.
 ```
 
-**v3: your own final edit.** Read v2 out loud. Change anything you would not
+### Step 7. Your own final edit (10 minutes)
+
+**Your last version, in your hands.** Read it out loud. Change anything you would not
 say. Then look for words that make writing read as generic, because they
 turn up everywhere: *delve, underscore, showcase, pivotal, intricate, realm,
 meticulous, foster, seamless, spearhead, passion, passionate, journey,
@@ -562,25 +548,25 @@ if it is the word you mean. If there is a word or character limit, count it
 yourself in your word processor. Chatbots often report that they hit a count
 when they have not. Then reread the whole piece. If you change anything,
 reread it again from the top. You are done when you read it all the way
-through without making an edit. Save it as `entry-v3.docx`.
+through without making an edit. Save it as your final version.
 
 In your notes file, write two lines:
 
 ```
-What I changed from v0, and why: ____________________________
+What I changed from v0 to the final, and why: ____________________________
 Where the chatbot helped / where I overruled it: _____________
 ```
 
 Those two lines are the point of saving versions. They show you what the
 tool is good for in your writing, and what it is not.
 
-### Step 9. Read it as your reader would (10 minutes)
+### Step 8. Read it as your reader would (10 minutes)
 
 The test is what a reader takes away. A real person is the best check you
 have.
 
 **Ask one person.** Pick someone who could stand in for your reader: a
-classmate, a resident, a friend who reads applications. Send them v3 with
+classmate, a resident, a friend who reads applications. Send them your final version with
 one question:
 
 ```
@@ -592,18 +578,18 @@ No patient information goes to them either. If what they learned is not
 the one thing in your rubric, that is the edit to make. If they would ask
 about a sentence you cannot explain, fix that sentence.
 
-**If no one is free,** attach v3 in the same chat and ask for
+**If no one is free,** attach your final version in the same chat and ask for
 feedback again (Step 6). The skill starts with what came across. Compare
 that with your rubric's "What they want" line.
 
-**Feedback goes back to editing.** Edit v3 yourself for each point you agree
+**Feedback goes back to editing.** Edit it yourself for each point you agree
 with.
 
-**Last, your own check.** Read v3 aloud, one sentence at a time. Could you
+**Last, your own check.** Read it aloud, one sentence at a time. Could you
 explain each one to an interviewer without looking? Is it true? Would you
 say it this way?
 
-### Step 10. Say exactly how you used AI (5 minutes)
+### Step 9. Say exactly how you used AI (5 minutes)
 
 "AI was used" tells your reader nothing. Say which tool, what it did at which
 step, and what you did. Your versions are the record, so this takes a few
@@ -663,22 +649,22 @@ the rest.
    ```
 
    Save it as **v0 (AI draft)**.
-5. **Carry on from Step 6.** Feedback, pushback, then v2 and v3 in your own
-   hands. In Step 9, check hardest for sentences you would not say.
-6. **Say so in Step 10.** For example: "ChatGPT Edu built the outline from my
+5. **Carry on from Step 6.** The loop, then your own final edit. In Step 8,
+   check hardest for sentences you would not say.
+6. **Say so in Step 9.** For example: "ChatGPT Edu built the outline from my
    points, found background sources, which I checked, and wrote a first
    draft. I revised every paragraph."
 
 ### What you keep
 
-- **Your finished piece**, with v0 to v3 and your two lines on what you
+- **Your finished piece**, with every version and your two lines on what you
   changed.
 - **Your setup block** with your rubric, ready for the next draft.
 - **The feedback skill**, in every chat from now on.
 - **Your disclosure**, specific to this piece.
 - **One sentence for question 2 of your [learning
   journal](../course/learning-journal.qmd):** where the chatbot helped, where
-  you overruled it, and whether it held its ground in Step 7.
+  you overruled it.
 
 ## Stretch (optional): a vague problem, the whole workflow
 
@@ -805,7 +791,7 @@ helps. Do not change my wording.
 **Goal:** a version that holds up for its readers.
 
 First run the feedback skill (Step 6 of the Do): `Here is my draft. Can you
-give me feedback on it?` Then do the reader check (Step 9) with a real person:
+give me feedback on it?` Then do the reader check (Step 8) with a real person:
 for the proposal, someone who knows the clerkship; for the handout, a
 third-year student.
 
@@ -862,11 +848,11 @@ Score yourself against this before moving on.
 |---|---|---|
 | A set-up chat (objective 1) | Medium thinking and a setup block with your rules and your rubric | A chat with no rubric |
 | Feedback on your own draft (objective 2) | A v0 you wrote, and feedback that quotes your words and does not rewrite them | A chatbot rewrite, lightly edited |
-| A pushback test (objective 3) | You disagreed once without a reason and once with one, and you can say how the feedback changed each time | No pushback, or a change of mind you accepted without asking why |
-| Versions and reader check (objective 4) | v0 to v3 saved; one reader's one-sentence takeaway compared with your rubric, and the edits it led to; each sentence read aloud | Only the final version, or no one read it |
+| The loop (objective 2) | At least two rounds of feedback, each followed by an edit you chose, with every version saved | One round, or edits you did not check |
+| Versions and reader check (objective 3) | Every version saved; one reader's one-sentence takeaway compared with your rubric, and the edits it led to; each sentence read aloud | Only the final version, or no one read it |
 | Stretch, if you did it | Points you can state, with their objections answered, without looking; every claim traced to a source you opened or to your own point; review feedback edited in; a stage-by-stage disclosure | A polished draft whose points you cannot defend |
-| What changed, and the disclosure (objective 4) | Two lines on what you changed and why; a disclosure that names the tool and what it did at each step | "AI was used" |
-| The reasons and the rules (objective 5) | One sentence on why the goal is a piece that is right for its reader and for you, not one that hides AI use; what the AAMC allows and what the ICMJE asks; why a detector score is not proof | "So no one can tell", or "AI is not allowed" |
+| What changed, and the disclosure (objective 3) | Two lines on what you changed and why; a disclosure that names the tool and what it did at each step | "AI was used" |
+| The reasons and the rules (objective 4) | One sentence on why the goal is a piece that is right for its reader and for you, not one that hides AI use; what the AAMC allows and what the ICMJE asks; why a detector score is not proof | "So no one can tell", or "AI is not allowed" |
 
 ## What this changes for you
 
@@ -881,7 +867,7 @@ without looking.
 Second, name the next piece of writing you will do with a chatbot. Are the
 ideas clear yet? What do its rules allow? Which steps will you keep: the
 rubric, the setup block, the interview, writing v0 yourself or an AI draft from
-your outline, the feedback skill, the pushback, the checks, and the
+your outline, the feedback loop, the checks, and the
 disclosure?
 
 ## Go deeper
