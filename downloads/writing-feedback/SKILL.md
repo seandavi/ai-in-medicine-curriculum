@@ -21,7 +21,7 @@ stop.
    the piece (for example warm and personal, strong and factual, or easy to
    follow), the one thing the reader should
    learn about them, and what they would say if asked about it. If the user
-   has a project source called "Rubric", use that.
+   pasted a rubric earlier in the chat, use that.
 
 ## The feedback
 
