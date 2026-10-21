@@ -10,14 +10,15 @@ subtitle: "About 75 minutes, plus an optional stretch"
   clear first, use the tool for the help the piece's rules allow, and say
   exactly how you used it.
 - **What you do.** Follow one worked example in ChatGPT Edu, step by step: a
-  setup block in one chat, a feedback skill, an interview, your own draft,
-  a feedback-and-edit loop, a final edit, a reader check, and a disclosure. Then
+  setup block in one chat, a first draft (from your research or your own
+  document), four review passes one aspect at a time, a skill made from a
+  review that works, a final edit, a reader check, and a disclosure. Then
   do the same with a piece of your own.
 - **What you keep.** A finished piece with every version saved, a setup
-  block you can reuse, the feedback skill, and a disclosure that says what
+  block you can reuse, a review skill of your own, and a disclosure that says what
   AI did at each step.
 - **Short on time?** Read "11:40 p.m., the last experience entry", then do
-  Steps 1 to 6 of the Do with your own piece (45 minutes).
+  Steps 1 to 4 of the Do with your own piece (45 minutes).
 - **Want more?** The optional stretch runs the whole workflow on a vaguer
   problem, with research, an AI draft, and reviews, and, if you like, a skill
   you build yourself (about two hours).
@@ -28,8 +29,9 @@ By the end of this chapter you will be able to:
 
 1. Set up one ChatGPT Edu chat for a piece of writing, with your rules and
    your rubric.
-2. Add a skill to your account and use it in a loop: feedback, an edit (by
-   you or by the AI), re-upload, until your rubric is met.
+2. Review a draft one aspect at a time (ideas, accuracy, tone and bias,
+   grammar), fix what you agree with after each, and save a review that
+   works as a skill.
 3. Keep every version, check the last one with a reader, and write a
    disclosure that says exactly what AI did.
 4. Explain why the goal is writing that is right for its reader and for you,
@@ -51,8 +53,8 @@ session.
 
 ::: {.callout-note title="On Copilot or a personal ChatGPT account?"}
 The screens below are ChatGPT Edu at CU Anschutz, checked on 21 October 2026.
-Other accounts may not have **Skills**. Without them, paste the text of the
-feedback skill (Step 3) into your setup block. Everything else works the same
+Other accounts may not have **Skills**. Without them, keep your review
+prompts in a document and paste them as you need them. Everything else works the same
 in any chat.
 :::
 
@@ -238,15 +240,14 @@ listed here so you know where each thing lives.
 |---|---|---|
 | 1. Write your rubric | Your own document | Say what "done" means before you open the chatbot |
 | 2. Set up one chat | **New chat**, **Medium** thinking, a pasted setup block | Hold everything about this one piece: the rules for the chatbot and your rubric |
-| 3. Add the feedback skill | **Customize > Skills** | A way of working you reuse on any piece: feedback first, a rewrite only when you ask |
-| 4. Interview | The same chat | Bring back the details only you know |
-| 5. Write v0 | Your own Word file | The core, in your words |
-| 6. The loop | The same chat, each version attached | Feedback, then an edit by you or by the AI, then re-upload, until done |
-| 7. Final edit | Your own Word file | Your hands last; note what you changed |
-| 8. Reader check | A real person who stands in for your reader, or the skill again | What actually came across, compared with your rubric; feedback goes back to editing |
-| 9. Disclose | Your own document | Say exactly what AI did at each step, and what you did |
+| 3. A first draft | Research and an AI draft from your points, or your own Word file | Get the ideas down; for ERAS, your own document |
+| 4. Review passes | The same chat, each version attached | Ideas, accuracy, tone and bias, grammar: one at a time, fixing after each |
+| 5. Make a skill | **Plugins > Skills** | Save a review prompt that works, so it runs in every chat |
+| 6. Final edit | Your own Word file | Your hands last; note what you changed |
+| 7. Reader check | A real person who stands in for your reader, or the ideas review again | What actually came across, compared with your rubric; feedback goes back to editing |
+| 8. Disclose | Your own document | Say exactly what AI did at each step, and what you did |
 
-: Where each step lives. The setup block holds the piece, the skill holds the method, and the prompt holds today's request. {#tbl-method}
+: Where each step lives. The setup block holds the piece, a skill holds a review you repeat, and the prompt holds today's request. {#tbl-method}
 
 The rule in the caption answers a question students ask: where do
 instructions go? Facts and rules about *this piece* go in the setup block. A
@@ -369,19 +370,186 @@ settings > Instructions**, and start each session with a new chat inside it.
 For one sitting, a plain chat is simpler.
 :::
 
-### Step 3. Add the feedback skill (5 minutes)
+### Step 3. Get a first draft, two ways (10 minutes)
+
+The ideas are yours before any drafting starts. Then get a first draft one of
+two ways.
+
+**A. Research, then let the AI draft.** For a proposal, a handout, a paper,
+or a newsletter piece, where the rules allow it. Get the ideas clear first:
+write, in your own words, the three to five points the piece must make. Then:
+
+```
+Here are the points this piece must make: [your points]. Search
+for background that frames them, with links, and build an outline.
+Don't add points I didn't give you; list any you think are missing
+separately, with your reason.
+```
+
+Open the links and cut what is wrong. Then:
+
+```
+Draft the piece in my rubric from the outline above. Use only my
+points and the sources I kept. Mark anything you add with [ADDED].
+Give me the draft as a .docx.
+```
+
+The stretch exercise at the end of the chapter takes this path in full.
+
+**B. Start from your own document.** A draft you already have, or one you
+write now. **For a residency application, use B**: the AAMC wants the final
+statement to be your own work. The worked example takes this path.
+
+If you are starting from nothing, let ChatGPT interview you first. In the
+same chat, paste:
+
+In the same chat, paste this:
+
+```
+I'm writing the piece described in my rubric. Don't write
+it yet. Interview me first: ask me one question at a time,
+five in all, that help me remember specific details: what I saw,
+what I did, what changed, and what I'd do differently. Wait for my
+answer before the next question.
+```
+
+You should see one question, about the piece in your rubric, and nothing
+else. When we ran this, the first question was:
+
+::: {.chat-pair}
+<div class="chat-pane">
+<div class="reply">
+<p><strong>Question 1 of 5: What you saw</strong></p>
+<p>Think back to when the glucose strips ran out at the student-run free clinic. What did you actually see or hear that first made you realize there was a problem? Describe the specific moment as you remember it.</p>
+</div>
+<div class="fine">From a test run in ChatGPT Edu on 21 October 2026, with the worked example's rubric. Your questions will differ.</div>
+</div>
+:::
+
+Notice that it found the free clinic in your rubric without being told. Answer in plain, quick sentences; typos are fine. Or click **Dictate**,
+the microphone next to the box, and just talk. When a question brings
+back a detail you had forgotten, copy it into your document.
+
+Then write v0. Look away from the chat. In Word (or any document), write the core of
+the piece: 100 to 250 words, in the first person, with at least two details
+from the interview. Aim for true and specific, not polished.
+
+The worked example's v0:
+
+```
+For two years I ran the supply room at our student-run free clinic
+on Saturday mornings. In January we ran out of glucose test strips
+twice, and both times a patient with diabetes went home without a
+sugar check. It wasn't that people were careless; nobody knew how
+many strips we had left. I made a paper log, taped it to the cabinet
+with a minimum count for each item, and taught the first-years to
+check it at the end of every shift. We haven't run out of anything
+since. It was a boring job, and I liked it. It showed me my passion
+for improving health systems for every patient.
+```
+
+It is good, and it is not done. Keep reading before you judge it.
+
+Save it as `entry-v0.docx`. Attach it with **+ > Add files**, and send:
+
+```
+Here is my first draft (v0), attached. Don't change it yet.
+```
+
+### Step 4. Review one thing at a time (20 minutes)
+
+Do not ask "is this good?" Ask about one thing at a time, and after each
+review, fix what you agree with. One aspect per prompt gets sharper feedback
+than "make it better".
+
+| Pass | Ask | Then |
+|---|---|---|
+| **1 · Ideas** | Does this make the points in my rubric, for this reader? What is missing or off-point? | Fix, or ask it to |
+| **2 · Accuracy** | List every claim I could not back up if asked: numbers, roles, "always", "lifelong". | Fix, or ask it to |
+| **3 · Tone and bias** | Is the tone what this reader wants? Is there wording that stereotypes patients or colleagues? | Fix, or ask it to |
+| **4 · Grammar** | Spelling, grammar, and the two least clear sentences, as before -> after. | Accept or reject each |
+
+: Four review passes, in order. These cover the five-point editing checklist from the week 2 writing talk (Accurate, Aligned, Appropriate, Tone, Unbiased). {#tbl-passes}
+
+**Grammar goes last**, because the fixes in the first three passes rewrite
+sentences.
+
+**Run a pass.** In the same chat, paste the question for the pass, for
+example:
+
+```
+Ideas review: does the attached draft make the points in my rubric,
+for this reader? What is missing or off-point? Quote the words you
+mean. Don't rewrite anything yet.
+```
+
+Here is part of the ideas review for the worked example (shortened):
+
+::: {.chat-pair}
+<div class="chat-pane">
+<div class="reply">
+<p><strong>1. Accuracy</strong><br>"We haven't run out of anything since." The Rubric only establishes that the glucose strips haven't run out again. Can you support the broader claim about <em>anything</em>?</p>
+<p><strong>2. Alignment with the Rubric</strong><br>Weakest alignment: "It showed me my passion for improving health systems for every patient." The Rubric asks readers to recognize your practical approach to fixing systems. This sentence makes a broad claim rather than adding evidence of that approach.</p>
+<p><strong>4. Tone</strong><br>[...] This sounds like a general application statement. "Passion" and "every patient" could appear in many applicants' essays. By contrast, "It was a boring job, and I liked it." is distinctive.</p>
+<p><strong>One interview question.</strong> How did you decide what minimum count to put on the paper log, and what made that number useful?</p>
+</div>
+<div class="fine">Excerpt from a test run in ChatGPT Edu on 21 October 2026, Medium thinking, with the writing-feedback skill. Your feedback will differ.</div>
+</div>
+:::
+
+
+Read this as a list of places to look, not a list of orders. Here it found
+two real problems: the last sentence claims more than the story shows, and
+"anything" is bigger than what you know. It also said which line to keep.
+
+**Fix what you agree with, either way.**
+
+- **Ask the AI.** Name the points:
+
+  ```
+  Make these changes and give me back the edited .docx: [the points
+  you agree with]. Change nothing else. Mark anything you add with
+  [ADDED].
+  ```
+
+  ChatGPT returns a new file to download (tested on 21 October 2026). Open it
+  and check every change.
+- **Or edit it yourself** in Word.
+
+Save the result as the next version, re-attach it, and run the next pass.
+After the ideas pass, the worked example's v2 kept the boring job, fixed
+"anything", and answered the interview question instead of claiming
+passion:
+
+```
+For two years I ran the supply room at our student-run free clinic
+on Saturday mornings. In January we ran out of glucose test strips
+twice, and both times a patient with diabetes went home without a
+sugar check. Nobody was careless; nobody knew how many strips we
+had left. I made a paper log, taped it to the cabinet with a minimum
+count for each item, set at two weeks of our busiest use, and taught
+the first-years to check it at the end of every shift. The strips
+have not run out since. It was a boring job, and I liked it.
+```
+
+### Step 5. Turn a review that works into a skill (5 minutes)
 
 A **skill** is a saved set of instructions for one kind of task. ChatGPT
 reads each skill's short description and uses the skill by itself when your
 request matches it. Unlike a setup block, a skill works in every chat
-without pasting.
+without pasting. When one of your review prompts gives you feedback you would
+want every time, save it as a skill.
 
-This course's skill gives feedback on a draft first. It rewrites only when you ask, and only from your ideas. It
-reviews the draft against five points (Accurate, Aligned, Appropriate, Tone,
-Unbiased), the editing checklist from the week 2 writing talk, and against
-your rubric. It quotes the words it means, lists common chatbot words, asks
-you one question an interviewer might ask, and keeps its feedback unless you
-give it a reason to change.
+**Make your own.** Click the **Plugins** icon in the narrow bar on the far
+left, then **Skills > Add > Create with editor**. Give it a name (for example
+`ideas-review`), a description of when to use it (`Use when I ask for an
+ideas review of a draft`), and your prompt as the instructions. Click
+**Create**. Next time, ask for an ideas review and it runs by itself. In a
+chat, the **+** menu also has **Template Creator**.
+
+**Or start from an example.** This course's `writing-feedback` skill puts
+the five-point checklist and your rubric into one skill. It gives feedback
+first and rewrites only when you ask.
 
 1. Download the skill:
    [writing-feedback SKILL.md](../downloads/writing-feedback/SKILL.md){download="SKILL.md"}.
@@ -414,130 +582,7 @@ which turns a prompt you keep reusing into a skill. Skills can be much larger
 than this one. For manuscripts and grants, see scriptorium in Go deeper.
 :::
 
-### Step 4. Let ChatGPT interview you (10 minutes)
-
-In the same chat, paste this:
-
-```
-I'm writing the piece described in my rubric. Don't write
-it yet. Interview me first: ask me one question at a time,
-five in all, that help me remember specific details: what I saw,
-what I did, what changed, and what I'd do differently. Wait for my
-answer before the next question.
-```
-
-You should see one question, about the piece in your rubric, and nothing
-else. When we ran this, the first question was:
-
-::: {.chat-pair}
-<div class="chat-pane">
-<div class="reply">
-<p><strong>Question 1 of 5: What you saw</strong></p>
-<p>Think back to when the glucose strips ran out at the student-run free clinic. What did you actually see or hear that first made you realize there was a problem? Describe the specific moment as you remember it.</p>
-</div>
-<div class="fine">From a test run in ChatGPT Edu on 21 October 2026, with the worked example's rubric. Your questions will differ.</div>
-</div>
-:::
-
-Notice that it found the free clinic in your rubric without being told. Answer in plain, quick sentences; typos are fine. Or click **Dictate**,
-the microphone next to the box, and just talk. When a question brings
-back a detail you had forgotten, copy it into your document.
-
-### Step 5. Write v0 yourself (10 minutes)
-
-Look away from the chat. In Word (or any document), write the core of
-the piece: 100 to 250 words, in the first person, with at least two details
-from the interview. Aim for true and specific, not polished.
-
-The worked example's v0:
-
-```
-For two years I ran the supply room at our student-run free clinic
-on Saturday mornings. In January we ran out of glucose test strips
-twice, and both times a patient with diabetes went home without a
-sugar check. It wasn't that people were careless; nobody knew how
-many strips we had left. I made a paper log, taped it to the cabinet
-with a minimum count for each item, and taught the first-years to
-check it at the end of every shift. We haven't run out of anything
-since. It was a boring job, and I liked it. It showed me my passion
-for improving health systems for every patient.
-```
-
-It is good, and it is not done. Keep reading before you judge it.
-
-### Step 6. The loop: feedback, edit, re-upload (15 to 20 minutes)
-
-Save it as a file, for example `entry-v0.docx`. Back in the same chat, click
-**+ > Add files** to attach it, and send it with one line:
-
-```
-Here is my first draft (v0), attached. Can you give me feedback on it?
-```
-
-You do not have to name the skill. Asking for feedback on your own draft is
-what its description says, so ChatGPT uses it. You should see feedback under
-five headings (their wording may vary), each quoting your words. Then come
-the two least clear sentences, spelling and grammar fixes, and one interview
-question. It should not offer a new version. If it rewrites your draft
-instead, add: `Use the writing feedback skill.`
-
-Here is part of what came back for the worked example (shortened):
-
-::: {.chat-pair}
-<div class="chat-pane">
-<div class="reply">
-<p><strong>1. Accuracy</strong><br>"We haven't run out of anything since." The Rubric only establishes that the glucose strips haven't run out again. Can you support the broader claim about <em>anything</em>?</p>
-<p><strong>2. Alignment with the Rubric</strong><br>Weakest alignment: "It showed me my passion for improving health systems for every patient." The Rubric asks readers to recognize your practical approach to fixing systems. This sentence makes a broad claim rather than adding evidence of that approach.</p>
-<p><strong>4. Tone</strong><br>[...] This sounds like a general application statement. "Passion" and "every patient" could appear in many applicants' essays. By contrast, "It was a boring job, and I liked it." is distinctive.</p>
-<p><strong>One interview question.</strong> How did you decide what minimum count to put on the paper log, and what made that number useful?</p>
-</div>
-<div class="fine">Excerpt from a test run in ChatGPT Edu on 21 October 2026, Medium thinking, with the writing-feedback skill. Your feedback will differ.</div>
-</div>
-:::
-
-Read this as a list of places to look, not a list of orders. Here it found
-two real problems: the last sentence claims more than the story shows, and
-"anything" is bigger than what you know. It also told you which line to
-keep. Paste the feedback into your notes file as **v1 feedback**.
-
-**Now edit, either way.**
-
-- **Ask the AI to edit.** Name the points you agree with, and ask for the
-  file back:
-
-  ```
-  Make these changes and give me back the edited .docx: fix
-  "anything" to what I know, and cut the last sentence. Change
-  nothing else. Mark anything you add with [ADDED].
-  ```
-
-  ChatGPT returns a new file to download (tested on 21 October 2026). Open it
-  and check every change.
-- **Or edit it yourself.** Open your file in Word and make the changes.
-
-Save the result as the next version, for example `entry-v2.docx`.
-
-**Then re-upload and ask again.** Attach the new file with **+ > Add files**:
-`Here is v2, attached. Can you give me feedback on it?` Keep going round:
-feedback, edit, re-upload. **Stop** when the feedback only questions things
-you have chosen to keep, and your rubric's **Done when** line is met. Take the
-points you agree with, and ignore the rest; you decide.
-
-After one pass, the worked example's v2 kept the boring job, fixed
-"anything", and answered the interview question instead of claiming passion:
-
-```
-For two years I ran the supply room at our student-run free clinic
-on Saturday mornings. In January we ran out of glucose test strips
-twice, and both times a patient with diabetes went home without a
-sugar check. Nobody was careless; nobody knew how many strips we
-had left. I made a paper log, taped it to the cabinet with a minimum
-count for each item, set at two weeks of our busiest use, and taught
-the first-years to check it at the end of every shift. The strips
-have not run out since. It was a boring job, and I liked it.
-```
-
-### Step 7. Your own final edit (10 minutes)
+### Step 6. Your own final edit (10 minutes)
 
 **Your last version, in your hands.** Read it out loud. Change anything you would not
 say. Then look for words that make writing read as generic, because they
@@ -560,7 +605,7 @@ Where the chatbot helped / where I overruled it: _____________
 Those two lines are the point of saving versions. They show you what the
 tool is good for in your writing, and what it is not.
 
-### Step 8. Read it as your reader would (10 minutes)
+### Step 7. Read it as your reader would (10 minutes)
 
 The test is what a reader takes away. A real person is the best check you
 have.
@@ -578,9 +623,9 @@ No patient information goes to them either. If what they learned is not
 the one thing in your rubric, that is the edit to make. If they would ask
 about a sentence you cannot explain, fix that sentence.
 
-**If no one is free,** attach your final version in the same chat and ask for
-feedback again (Step 6). The skill starts with what came across. Compare
-that with your rubric's "What they want" line.
+**If no one is free,** attach your final version in the same chat and run the
+ideas review again (Step 4). Compare what came across with your rubric's
+"What they want" line.
 
 **Feedback goes back to editing.** Edit it yourself for each point you agree
 with.
@@ -589,7 +634,7 @@ with.
 explain each one to an interviewer without looking? Is it true? Would you
 say it this way?
 
-### Step 9. Say exactly how you used AI (5 minutes)
+### Step 8. Say exactly how you used AI (5 minutes)
 
 "AI was used" tells your reader nothing. Say which tool, what it did at which
 step, and what you did. Your versions are the record, so this takes a few
@@ -614,53 +659,15 @@ chapter and who checked it.
 
 Go back to Step 1 with a piece you need: a thank-you email after an
 interview, an abstract, a scholarship paragraph, or one of your own
-experience entries. Start a new chat with its own setup block (Step 2). The skill is already
-installed, so skip Step 3.
-
-### When the rules allow an AI draft
-
-For a paper, a newsletter piece, or a teaching handout, the rules may allow
-a chatbot to write a first draft. This is the short version; the stretch
-exercise below has the full one, with research. Keep Steps 1 to 4, replace Step 5, and keep
-the rest.
-
-1. **Your setup block already allows this.** It lets ChatGPT draft when you
-   ask, from your ideas only.
-2. **Get the ideas clear.** After the interview in Step 4, write, in your own
-   words, the three to five points the piece must make. These are the ideas;
-   they stay yours.
-3. **Ask for an outline, then check it.**
-
-   ```
-   Here are the points this piece must make: [your points].
-   Build a detailed outline for the piece in my rubric.
-   Search for background that frames these points, with links.
-   Do not add points I did not give you; list any you think are
-   missing separately, with your reason.
-   ```
-
-   Open the links. Cut what is wrong. Add or drop points yourself.
-4. **Ask for a first draft from your outline.**
-
-   ```
-   Write a first draft of the piece from the outline above. Use only
-   my points and the sources I kept. Mark any sentence where you
-   added a claim I did not give you.
-   ```
-
-   Save it as **v0 (AI draft)**.
-5. **Carry on from Step 6.** The loop, then your own final edit. In Step 8,
-   check hardest for sentences you would not say.
-6. **Say so in Step 9.** For example: "ChatGPT Edu built the outline from my
-   points, found background sources, which I checked, and wrote a first
-   draft. I revised every paragraph."
+experience entries. Start a new chat with its own setup block (Step 2). Any
+skill you saved in Step 5 is already there.
 
 ### What you keep
 
 - **Your finished piece**, with every version and your two lines on what you
   changed.
 - **Your setup block** with your rubric, ready for the next draft.
-- **The feedback skill**, in every chat from now on.
+- **A review prompt that works, saved as a skill**, in every chat from now on.
 - **Your disclosure**, specific to this piece.
 - **One sentence for question 2 of your [learning
   journal](../course/learning-journal.qmd):** where the chatbot helped, where
@@ -790,8 +797,8 @@ helps. Do not change my wording.
 
 **Goal:** a version that holds up for its readers.
 
-First run the feedback skill (Step 6 of the Do): `Here is my draft. Can you
-give me feedback on it?` Then do the reader check (Step 8) with a real person:
+First run the four review passes (Step 4 of the Do), fixing after each. Then do
+the reader check (Step 7) with a real person:
 for the proposal, someone who knows the clerkship; for the handout, a
 third-year student.
 
@@ -810,13 +817,13 @@ in. Stop when the reviews only question things you chose to keep.
 
 ### Optional: build your own skill
 
-The feedback skill from Step 3 works on any piece. If you write one kind of
+The skills from Step 5 work on any piece. If you write one kind of
 piece often, such as abstracts, a skill for that kind can hold its rules.
 
 **Goal:** a feedback skill of your own for one kind of piece, which runs when
 you ask for it.
 
-1. Click the **Plugins** icon (Step 3), then **Skills > Add > Create with
+1. Click the **Plugins** icon (Step 5), then **Skills > Add > Create with
    editor**. (In a chat, the **+** menu also has **Template Creator**.)
 2. **Name:** for example `abstract-feedback`. **Description:** say when to use
    it, for example: `Use when I ask for feedback on a conference abstract I
@@ -847,8 +854,8 @@ Score yourself against this before moving on.
 | You have | Meets | Falls short |
 |---|---|---|
 | A set-up chat (objective 1) | Medium thinking and a setup block with your rules and your rubric | A chat with no rubric |
-| Feedback on your own draft (objective 2) | A v0 you wrote, and feedback that quotes your words and does not rewrite them | A chatbot rewrite, lightly edited |
-| The loop (objective 2) | At least two rounds of feedback, each followed by an edit you chose, with every version saved | One round, or edits you did not check |
+| Review passes (objective 2) | All four passes run in order, grammar last, each followed by fixes you chose, with every version saved | One "make it better" pass, or fixes you did not check |
+| A skill (objective 2) | One review prompt saved as a skill, and tested once | No skill, or one you did not read |
 | Versions and reader check (objective 3) | Every version saved; one reader's one-sentence takeaway compared with your rubric, and the edits it led to; each sentence read aloud | Only the final version, or no one read it |
 | Stretch, if you did it | Points you can state, with their objections answered, without looking; every claim traced to a source you opened or to your own point; review feedback edited in; a stage-by-stage disclosure | A polished draft whose points you cannot defend |
 | What changed, and the disclosure (objective 3) | Two lines on what you changed and why; a disclosure that names the tool and what it did at each step | "AI was used" |

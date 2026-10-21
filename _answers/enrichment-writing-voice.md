@@ -110,6 +110,14 @@ The Do was run end to end in a CU Anschutz ChatGPT Edu account on
 2026-10-21 (Medium thinking, project-only memory, the writing-feedback skill
 uploaded as a single SKILL.md). The chapter's excerpts are from that run.
 
+- **Restructured 2026-10-21 (author's direction).** Steps are now: 1 rubric,
+  2 one chat with a setup block, 3 a first draft (A: research and an AI draft
+  from the student's points; B: the student's own document, required for
+  ERAS), 4 four review passes in order (ideas, accuracy, tone and bias,
+  grammar last), fixing after each, 5 a review prompt that works saved as a
+  skill (the writing-feedback skill is the example), 6 final edit, 7 reader
+  check, 8 disclosure. Notes below on older step numbers still apply to the
+  matching content.
 - **Step 1 rubric.** Specific. "Program faculty; that I fix systems so they
   stay fixed; I'd talk about the strip log" is good. "Admissions; that I'm
   passionate; my passion" is the generic answer the chapter moves away from;
