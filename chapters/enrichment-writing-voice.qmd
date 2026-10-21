@@ -635,6 +635,8 @@ yourself, the feedback skill, the pushback, or the checks?
   not ChatGPT. Its [case study](https://seandavi.github.io/scriptorium/concepts/case-study/)
   shows real output. Written by the course director.
 
+![One scriptorium skill, citation-audit, run on a made-up manuscript paragraph. Each row is one claim, the citation behind it, how well the citation supports it, and a recommendation. It adds no citations and changes no prose; the author decides. Screenshot of the [scriptorium case study](https://seandavi.github.io/scriptorium/concepts/case-study/), Sean Davis, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); cropped, with the site's menus hidden.](../images/scriptorium-citation-audit.png){#fig-scriptorium fig-alt="A table with five rows and the columns Claim, Citation, Strength, Assessment, and Recommendation. Example row: the claim 'Our findings extend the existing literature on bariatric-surgery outcomes' cites thompson2021, rated 'Weak fit', because the cited paper is a narrative review that does not address the pattern the paragraph claims to extend; the recommendation is to cite a primary cohort study or soften the framing."}
+
 **Listen**
 
 - *The Podcast by KevinMD*, the episode above, if you skipped it.

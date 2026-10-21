@@ -106,45 +106,64 @@ false positives fall on non-native writers.
 
 ## The Do: what to look for
 
-- **Step 1 rubric.** Three lines, specific. "Program director; that I fix
-  systems; I'd talk about the strip log" is good. "Admissions; that I'm
-  passionate; my passion" is the generic answer the chapter is trying to
-  move away from; push for a concrete detail.
-- **Step 2 interview.** Expected from the design: the chatbot asks good
-  follow-up questions and, sometimes, offers a draft anyway despite "do not
-  write any part of it". If it does, the student should ignore the draft.
-- **Step 3.** The draft is the student's. 100 to 250 words, first person,
-  two details from Step 2. Rough is fine.
-- **Step 4.** The deliverable is the student's own revision. A student who
-  pastes a chatbot rewrite and edits lightly has not met objective 2; the
-  Check says so.
-- **Step 5, words.** The finding is a decision per word, not zero words.
-  "Crucial" in an abstract can be fine. "Delve" rarely is.
-- **Step 5, voice check.** A heuristic, nothing more. No study has tested
+The Do was run end to end in a CU Anschutz ChatGPT Edu account on
+2026-10-21 (Medium thinking, project-only memory, the writing-feedback skill
+uploaded as a single SKILL.md). The chapter's excerpts are from that run.
+
+- **Step 1 rubric.** Specific. "Program faculty; that I fix systems so they
+  stay fixed; I'd talk about the strip log" is good. "Admissions; that I'm
+  passionate; my passion" is the generic answer the chapter moves away from;
+  push for a concrete detail. The Done when line is the one that matters.
+- **Step 2 project.** Project-only memory chosen at creation (it also turns
+  off Space access). Instructions saved; Rubric.txt listed under Sources. A
+  student without Projects keeps one chat and pastes the rubric first.
+- **Step 3 skill.** Expected: "writing feedback" under Installed. If a student
+  has no Skills page, the fallback is the skill text in project instructions.
+  Credit a student who reads the SKILL.md before uploading it.
+- **Step 4 interview.** In the test run the first question named the free
+  clinic from the Rubric source unprompted. Project chats start at Instant;
+  check the student moved to Medium.
+- **Step 5 v0.** The student's own, 100 to 250 words, first person, two
+  details from the interview. Rough is fine.
+- **Step 6 feedback.** The skill should fire without being named. Expected:
+  five headings with quotes, two least clear sentences, spelling fixes, one
+  interview question, and no rewrite. If the chatbot offers a rewrite anyway,
+  the student ignores it.
+- **Step 7 pushback.** In the test run the skill held its point on the
+  "passion" sentence and asked what it added. The finding a student should
+  report is how the feedback changed with and without a reason. A chatbot
+  that gives in to pressure is a real result, not a failure of the student.
+- **Step 8 v2 and v3.** Every change typed by the student; the two lines on
+  what changed and where they overruled the chatbot are the deliverable. The
+  word search is a decision per word, not zero words.
+- **Step 9 voice check.** A heuristic, nothing more. No study has tested
   whether a chatbot can judge "same author". Credit a student who rereads a
   flagged sentence and keeps it because it is theirs. Do not credit "the AI
   said it sounds like me, so it's fine".
-- **Step 6, disclosure.** Names the tool and what it did. "AI was used" does
+- **Step 10 disclosure.** Names the tool and what it did. "AI was used" does
   not meet it.
 
 ## Objectives to activities
 
 | Objective | Where assessed |
 |---|---|
-| 1 Why "readers can't tell" does not settle it | Why this matters, @fig-readers; Check row 1 |
-| 2 Chatbot as interviewer and critic, core by the student | Do Steps 1 to 4; Check row 2 |
-| 3 Words and voice checked | Do Step 5; Check row 3 |
-| 4 Rules and a disclosure | What the rules say; Do Step 6; Check row 4 |
-| 5 Detectors and humanizers | Detectors and "humanizers"; Check row 5 |
+| 1 A writing project | Do Step 2; Check row 1 |
+| 2 Feedback from a skill, no rewrite | Do Steps 3, 5, 6; Check row 2 |
+| 3 Pushback | Do Step 7; Check row 3 |
+| 4 Versions and checks | Do Steps 8 and 9; Check row 4 |
+| 5 Reasons, rules, detectors | Why this matters, @fig-readers, the evidence callout; Check row 5 |
 
 ## Model Check answers
 
-- Row 1: "Readers can't tell AI from human statements, so the reason to
+- Row 3: "Without a reason it kept its point and asked what the sentence
+  added. When I told it the minimum count came from two weeks of our busiest
+  use, it agreed that detail should go in, and said why."
+- Row 5: "Readers can't tell AI from human statements, so the reason to
   draft myself is not getting caught. It is that my statement would sound
-  like everyone else's and feel less like mine."
-- Row 5: "A detector score is not proof of cheating: detectors flag
-  writing by non-native English speakers as AI far more often, and
-  paraphrasing defeats them."
+  like everyone else's and feel less like mine. The AAMC allows AI for
+  brainstorming, proofreading, and editing. A detector score is not proof:
+  detectors flag non-native English writers far more often, and paraphrasing
+  defeats them."
 
 ## Questions students may ask
 
