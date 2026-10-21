@@ -131,23 +131,18 @@ uploaded as a single SKILL.md). The chapter's excerpts are from that run.
   five headings with quotes, two least clear sentences, spelling fixes, one
   interview question, and no rewrite. If the chatbot offers a rewrite anyway,
   the student ignores it.
-- **Step 7 pushback.** In the test run the skill held its point on the
-  "passion" sentence and asked what it added. The finding a student should
-  report is how the feedback changed with and without a reason. A chatbot
-  that gives in to pressure is a real result, not a failure of the student.
-- **Step 8 v2 and v3.** Every change typed by the student; the two lines on
-  what changed and where they overruled the chatbot are the deliverable. The
-  word search is a decision per word, not zero words.
-- **Reader-centred review (added 2026-10-21 after the morning talk).**
-  The rubric's "What they want" line is the standard every review checks
-  against. Credit a student whose edits came from a reader taking away the
-  wrong idea, not from "sounds like AI".
-- **Step 9 reader check.** A real person who stands in for the reader gives a
+- **Step 6 loop.** Feedback, then an edit by the student or by the AI (the
+  AI returns a new .docx; tested 2026-10-21), re-upload, repeat. Credit
+  points the student chose not to take, with a reason. The pushback step
+  was removed on 2026-10-21.
+- **Step 7 final edit.** The student's own pass: read aloud, generic words,
+  counts checked by hand, reread until no edits.
+- **Step 8 reader check.** A real person who stands in for the reader gives a
   one-sentence takeaway; the student compares it with the rubric and edits.
   If no one is free, the feedback skill's "what came across" stands in. The
   persona review was removed on 2026-10-21 because the evidence that it helps
   is thin (small user studies only). The read-aloud check stays.
-- **Step 10 disclosure.** Names the tool and what it did at each step, and
+- **Step 9 disclosure.** Names the tool and what it did at each step, and
   what the student did. "AI was used" does not meet it. The point is
   transparency, not hiding: the chapter cites the ICMJE (describe how AI was
   used; nondisclosure may be misconduct), GAIDeT, and the trust-cost studies
@@ -174,7 +169,7 @@ uploaded as a single SKILL.md). The chapter's excerpts are from that run.
 |---|---|
 | 1 A set-up chat | Do Step 2; Check row 1 |
 | 2 Feedback from a skill, no rewrite | Do Steps 3, 5, 6; Check row 2 |
-| 3 Pushback | Do Step 7; Check row 3 |
+| 2 The loop | Do Step 6; Check row 2 |
 | 4 Versions and checks | Do Steps 8 and 9; Check row 4 |
 | 5 Reasons, rules, detectors | Why this matters, @fig-readers, the evidence callout; Check row 5 |
 
