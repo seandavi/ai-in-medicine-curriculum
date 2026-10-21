@@ -114,14 +114,16 @@ uploaded as a single SKILL.md). The chapter's excerpts are from that run.
   stay fixed; I'd talk about the strip log" is good. "Admissions; that I'm
   passionate; my passion" is the generic answer the chapter moves away from;
   push for a concrete detail. The Done when line is the one that matters.
-- **Step 2 project.** Project-only memory chosen at creation (it also turns
-  off Space access). Instructions saved; Rubric.txt listed under Sources. A
-  student without Projects keeps one chat and pastes the rubric first.
+- **Step 2 setup.** Changed 2026-10-21 from a project to one plain chat with a
+  pasted setup block (rules plus rubric) at Medium thinking; projects are an
+  optional tip for multi-day work. Tested the same day: an uploaded .docx was
+  edited and returned as a new file in a plain chat, and edited twice in a
+  project chat, with both edits kept.
 - **Step 3 skill.** Expected: "writing feedback" under Installed. If a student
-  has no Skills page, the fallback is the skill text in project instructions.
+  has no Skills page, the fallback is the skill text pasted after the setup block.
   Credit a student who reads the SKILL.md before uploading it.
 - **Step 4 interview.** In the test run the first question named the free
-  clinic from the Rubric source unprompted. Project chats start at Instant;
+  clinic from the rubric unprompted. Chats may start at Instant;
   check the student moved to Medium.
 - **Step 5 v0.** The student's own, 100 to 250 words, first person, two
   details from the interview. Rough is fine.
@@ -170,7 +172,7 @@ uploaded as a single SKILL.md). The chapter's excerpts are from that run.
 
 | Objective | Where assessed |
 |---|---|
-| 1 A writing project | Do Step 2; Check row 1 |
+| 1 A set-up chat | Do Step 2; Check row 1 |
 | 2 Feedback from a skill, no rewrite | Do Steps 3, 5, 6; Check row 2 |
 | 3 Pushback | Do Step 7; Check row 3 |
 | 4 Versions and checks | Do Steps 8 and 9; Check row 4 |
