@@ -39,9 +39,9 @@ Course competencies: AIM-1 (foundations), AIM-2 (critical appraisal), AIM-9
 (research and scholarship).
 :::
 
-**What you need.** A Google account for Gemini Notebook (a personal Gmail
-account works; see "Getting in" in the Do), and your university ChatGPT Edu or
-Copilot account in a second tab. Nothing to install. Made-up patients only.
+**What you need.** A personal Gmail account for Gemini Notebook, which does
+not work with CU credentials (see "Getting in" in the Do), and your university
+ChatGPT Edu or Copilot account in a second tab. Nothing to install. Made-up patients only.
 The time is about 15 minutes of reading, 7 of video, 35 to 40 of doing, and
 10 for the check and the closing question.
 
@@ -381,13 +381,11 @@ Your sources here are published papers, so nothing about a patient goes in.
 ::: {.callout-tip title="Getting in"}
 Gemini Notebook runs in the browser at
 [notebook.google](https://notebook.google/); the old NotebookLM address
-redirects there. It is free with a Google account, and a personal Gmail
-account works. Making a *new*
+redirects there. It is free with a Google account. **It does not work with
+CU credentials, so sign in with a personal Gmail account.** Making a *new*
 Google account may ask for a phone number; if you will not give one, use the
-no-Google path below. If you sign in with a school Google account and the
-tool is missing or will not load, your school has turned it off. Do not spend
-time on it; switch to a personal account
-[VERIFY: nobody has yet run this Do in Gemini Notebook with a CU account; confirm it loads before students try]{.verify}.
+no-Google path below. At another school, the same may be true: if the tool is
+missing or will not load with your school account, switch to a personal one.
 
 **Limits.** Google's
 [plans page](https://support.google.com/notebooklm/answer/16213268) lists
@@ -559,6 +557,10 @@ an answer to any of these.
 
 ## Go deeper
 
+**More practice.** [Ask your own sources](../appendix/open-labs.qmd#ask-your-own-sources-a-notebook-for-this-week-next-week-and-your-next-rotation),
+an open lab, runs the same routine on the week 3 and week 4 chapters and
+papers, then helps you plan a notebook of your own.
+
 **Papers**
 
 - The overgeneralization study, 10 models and 4,900 summaries
@@ -575,6 +577,21 @@ an answer to any of these.
   relevant document among many others. Models answered best when it sat at
   the start or the end of the context, and worse when it was in the middle.
   A long context window does not mean the model reads all of it well.
+- The 2020 paper that introduced retrieval-augmented generation (RAG)
+  models ([arXiv 2005.11401](https://arxiv.org/abs/2005.11401)). Its authors
+  list showing where an answer came from as one of the problems that
+  retrieval was meant to help with.
+- Retrieval by meaning instead of by shared words: it put the right passage
+  in the top 20 results 9 to 19 percentage points more often than keyword
+  search [@doi:10.18653/v1/2020.emnlp-main.550]. The embeddings talk under
+  Talks explains the idea.
+- How often AI citations hold up. In four generative search engines, 51.5%
+  of sentences were fully supported by their citations, and 74.5% of
+  citations supported the sentence they were attached to
+  [@doi:10.18653/v1/2023.findings-emnlp.467].
+- The same question for medical answers. The best tool tested, GPT-4o with
+  web search, gave answers fully supported by the sources it cited about 55%
+  of the time [@pmid:40240349].
 - A two-day workshop for clinicians that limits citation generation to
   NotebookLM and then makes participants check every one. It says plainly
   that whether this reduces fabrication was not tested [@pmid:42684317].
