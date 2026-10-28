@@ -37,6 +37,7 @@ enough: [the patient information page](../course/patient-information.qmd).
 | [Hear it, draft it, check it](#hear-it-draft-it-check-it-a-scribe-from-the-inside) | watched a scribe mishear a visit and a model invent part of the note | 60 min | Ready |
 | [Your case in a second tool, and the other three](#your-case-in-a-second-tool-and-the-other-three) | run your prompting-lab case in a second tool, then tried the three cases you did not pick | 60 min | Ready, builds on Part B of [the prompting lab](../chapters/enrichment-prompting-lab.qmd) |
 | [A study guide that cites its sources](#a-study-guide-that-cites-its-sources) | built a notebook from papers you chose and caught what it adds | 45 min | Ready, in [the grounding chapter](../chapters/enrichment-rag-notebooklm.qmd) |
+| [Ask your own sources](#ask-your-own-sources-a-notebook-for-this-week-next-week-and-your-next-rotation) | built a notebook from a week's chapter and papers, checked what it told you, and planned a notebook of your own | 75 min | Ready |
 | [Build a calculator, then break it](#build-a-calculator-then-break-it) | built a working clinical tool in an hour and found what is wrong with it | 60 min | Ready, in [the agentic coding chapter](../chapters/enrichment-agentic-coding.qmd) |
 | [Draw me a doctor](#draw-me-a-doctor) | counted who an image model pictures when you ask for a doctor, a nurse, a surgeon | 30 min | Idea |
 | [The patient who talks back](#the-patient-who-talks-back) | practised a hard conversation with a chatbot playing the patient | 45 min | Ready, in [talking to patients](../chapters/core-patient-communication.qmd#part-b-practice-patient) |
@@ -195,6 +196,199 @@ NotebookLM), ask it questions, and
 check each answer against the paper it cites. You will see what grounding in
 your own sources fixes, and what it does not. Written out in full in [the
 grounding chapter](../chapters/enrichment-rag-notebooklm.qmd).
+
+## Ask your own sources: a notebook for this week, next week, and your next rotation
+
+You have read the chapters and heard the talks. This lab is a different way
+into the same material. You put a week's chapter and its papers into Gemini
+Notebook (formerly NotebookLM), ask them questions, and check each answer
+against the passage it cites. It was written for Watch and do on Wednesday,
+October 28, 2026, and it works on your own at any time.
+
+Gemini Notebook answers from the documents you give it, and each sentence of
+an answer links to the passage it came from. [The grounding
+chapter](../chapters/enrichment-rag-notebooklm.qmd) explains how that works,
+and what it does not fix. This lab is the practice. It ends with the part you
+will use after the course: a notebook of your own, for any question where the
+answer has to come from sources you chose.
+
+**Time.** About 75 minutes. **You need** a personal Gmail account. Gemini
+Notebook does not work with CU credentials, so sign in with Gmail, not your
+university login. Making a new Google account may ask for a phone number.
+Your university ChatGPT Edu or Copilot account in a second tab is optional,
+for Part C. Nothing installs.
+
+No patient information. Every source here is a published paper or a chapter
+of this book. A personal Gmail account is not covered for patient care, so
+nothing from a rotation goes into a notebook, as a source or in a question.
+[What counts as patient information](../course/patient-information.qmd).
+
+### Part A: build a notebook (15 minutes)
+
+Choose one of the two source sets below. Week 3 uses the papers from the
+October 28 talk on how patients, the public, and physicians see AI. Week 4
+uses next week's chapters, so it is also a way to preview them.
+
+1. Open [notebook.google](https://notebook.google/), sign in with your Gmail
+   account, and create a new notebook.
+2. Add each source in your set. For a paper, open its PMC page, download the
+   PDF, and upload it. A PDF brings in the whole paper, tables included. For a
+   chapter of this book, add its web address as a website source. If a chapter
+   does not import, open it, select all the text, copy it, and add it as
+   copied text.
+3. Open each source in the notebook and check that the whole text is there.
+
+**Week 3: how patients, the public, and physicians see AI**
+
+| Source | What it is |
+|---|---|
+| [Talking to patients about AI](../chapters/core-patient-communication.qmd), this book | The week 3 core chapter. Web address: `https://aim.seandavis.net/chapters/core-patient-communication.html` |
+| Cavalier et al., *JAMA Network Open*, 2025 [@pmid:40067301]; [PMC11897835](https://pmc.ncbi.nlm.nih.gov/articles/PMC11897835/) | A survey of 1,455 members of a Duke patient advisory panel. Replies were drafted by AI or by a person, with and without saying which |
+| Owens et al., *JAMA Network Open*, 2026 [@pmid:42412426]; [PMC13343239](https://pmc.ncbi.nlm.nih.gov/articles/PMC13343239/) | Interviews with 40 of those patients about AI-drafted portal messages |
+| Busch et al., *JAMA Network Open*, 2025 [@pmid:40493367]; [PMC12152705](https://pmc.ncbi.nlm.nih.gov/articles/PMC12152705/) | A survey of 13,806 hospital patients at 74 hospitals in 43 countries |
+| Saasouh et al., *Frontiers in Anesthesiology*, 2025 [@doi:10.3389/fanes.2025.1676819]; [full text](https://www.frontiersin.org/journals/anesthesiology/articles/10.3389/fanes.2025.1676819/full) | An online survey of 382 physicians and 760 patients in the United States |
+
+: Week 3 sources. These studies asked different people in different ways, so keep track of who was asked. {tbl-colwidths="[45,55]"}
+
+**Week 4: who gains from a scribe, who pays, and who answers for it**
+
+| Source | What it is |
+|---|---|
+| [Ethics: what you owe when you sign the note](../chapters/core-ethics-regulation.qmd), this book | The week 4 core chapter. Web address: `https://aim.seandavis.net/chapters/core-ethics-regulation.html` |
+| [Will AI take your job?](../chapters/enrichment-workforce-economics.qmd), this book | A week 4 menu chapter. Web address: `https://aim.seandavis.net/chapters/enrichment-workforce-economics.html` |
+| [What AI costs the planet](../chapters/enrichment-environment.qmd), this book | A week 4 menu chapter. Web address: `https://aim.seandavis.net/chapters/enrichment-environment.html` |
+| Rotenstein et al., *JAMA*, 2026 [@pmid:41920565]; [PMC13044793](https://pmc.ncbi.nlm.nih.gov/articles/PMC13044793/) | 8,581 clinicians at five academic health systems: what changed in EHR time and visits after scribe adoption |
+| Lukac et al., *NEJM AI*, 2025 [@pmid:41497288]; [PMC12768499](https://pmc.ncbi.nlm.nih.gov/articles/PMC12768499/) | A randomized trial of two scribe products in 238 outpatient physicians |
+| Elsworth et al., 2025; [arXiv 2508.15734](https://arxiv.org/abs/2508.15734) | Google's own measurement of the energy and water used by one Gemini text prompt |
+
+: Week 4 sources. Three chapters, two scribe studies, and one report from the company that makes the model. {tbl-colwidths="[45,55]"}
+
+### Part B: ask, then check three sentences (20 minutes)
+
+Start with a question the sources can answer. Paste the prompt for your set
+into the chat.
+
+Week 3:
+
+```
+Using only these sources, where do patients and physicians agree about AI in
+patient care, and where do they disagree? For each point, say which study it
+comes from, who was asked, and how they were asked.
+```
+
+Week 4:
+
+```
+Using only these sources, should a hospital adopt an ambient AI scribe?
+Separate what the studies measured from what they did not measure.
+Say who produced each number.
+```
+
+Most of a good answer is right. Your job is to find out which parts. Pick
+three sentences that matter: a number, a claim about "patients" or
+"physicians" in general, and anything that surprised you. Check each one the
+way the grounding chapter shows: click the citation, read a line above and a
+line below, and ask whether the sentence is narrower or broader than the
+passage.
+
+| Sentence | Source and passage | Your call |
+|---|---|---|
+| 1 | | Supported / broader than the source / not in the source |
+| 2 | | Supported / broader than the source / not in the source |
+| 3 | | Supported / broader than the source / not in the source |
+
+::: {.self-check}
+A notebook writes: "A large international survey found that patients trust AI
+in health care." The citation opens a real passage in Busch et al.: 57.6% of
+respondents had a positive general view of AI in health care. What is wrong
+with the sentence?
+
+- The citation was made up
+- [The sentence is broader than the study]{.correct}
+- Nothing: the passage supports it
+
+::: {.explain}
+The passage is real and the number is right. But the same abstract says
+"fewer than half of the participants expressed positive attitudes regarding
+all items pertaining to trust in AI", and 72.9% preferred decisions led by a
+physician, even if that meant slightly lower accuracy. A positive general view
+is not trust. These were also hospital patients who chose to answer, not
+patients in general. Nothing was invented, and only reading the passage shows
+what is wrong.
+:::
+:::
+
+### Part C: ask what the sources cannot answer (10 minutes)
+
+Now ask a question your sources do not cover.
+
+- Week 3: *How do patients at CU Anschutz feel about AI-drafted portal
+  messages?*
+- Week 4: *What would an ambient scribe cost our hospital per clinician per
+  year, and what is its carbon footprint?*
+
+The notebook may say the sources do not answer this, which is the right
+answer. If it gives an answer anyway, click its citations. Is each number in a
+source, or was it put together from pieces? Then ask the same question in
+ChatGPT Edu or Copilot. It can search the web, so it may find something. If it
+does, where did the answer come from, and would you repeat it to a colleague?
+
+### Part D: make something you will use (15 minutes)
+
+The Studio panel turns your sources into other forms: a study guide,
+flashcards, a quiz, a mind map, a slide deck, an infographic, or an Audio
+Overview, which is a podcast-style conversation about the sources. Make one
+you will use this week.
+
+- Week 3: flashcards or a quiz, before Friday's small group, where you bring
+  clinical stories.
+- Week 4: an Audio Overview of next week's chapters, to listen to before
+  Monday's talk.
+
+Most outputs let you add your own instructions before you generate. Say who it
+is for and what it must keep, for example: *for a fourth-year medical student;
+say who was asked in each study; do not generalize beyond them.* A Video
+Overview can take more than 30 minutes to generate ([Google: Video
+Overviews](https://support.google.com/gemininotebook/answer/16454555)), so
+leave that one for later.
+
+Do not count on a Studio output to link each sentence to its passage, the way
+a chat answer does. Pick one claim from what you made, and find it in the
+sources yourself.
+
+### Part E: your own notebook (10 minutes)
+
+The routine you just used works for any question where the answer has to come
+from documents you chose, and not from whatever a chatbot finds on the web.
+Some places it fits in the next year:
+
+- A guideline for your next rotation. Load the guideline, the evidence review
+  behind it, a guideline from another organization, and a patient handout,
+  then ask where they disagree and which is newer. For breast cancer screening
+  that is the USPSTF recommendation [@pmid:38687503], its evidence review
+  [@pmid:38687490], the American Cancer Society guideline [@pmid:26501536],
+  which starts at a different age and is nine years older, and the [NCI
+  patient summary](https://www.cancer.gov/types/breast/patient/breast-screening-pdq).
+- This week's [Learn it with AI](../course/learn-with-ai.qmd) topic: the
+  papers and notes you are learning from.
+- A drug you prescribe often: its FDA label from
+  [DailyMed](https://dailymed.nlm.nih.gov/dailymed/) and the trial that led to
+  its approval.
+- Your own notes: a lecture or a review sheet you wrote, turned into a quiz.
+- A residency program's published curriculum or handbook, before an interview
+  or before your first day.
+
+Use a chatbot with web search instead when you do not have the sources yet. A
+notebook is not a literature search: it only knows what you put in it. And
+patient information never goes into a notebook on a personal account.
+
+Write one sentence: a task you will use a notebook for in the next month, and
+the three to five sources you would put in it. Bring it to your Friday group.
+
+### Keep it
+
+Your notebook stays in your Google account. Keep the three sentences you
+checked, and the task you wrote down.
 
 ## Build a calculator, then break it
 
